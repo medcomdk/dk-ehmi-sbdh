@@ -840,6 +840,8 @@ Det følgende afspejler DokumentDelingsServicen på NSP's behov for XDS-metadata
 
 Dette scope gælder kun for MedCom meddelelser ikke MedCom kvitteringer, da de ikke deles via DokumentDelingsServicen. 
 
+Dette scope gælder ikke for den primære udveksling mellem Afsender og Modtager. 
+
 <br/>
 
 #### 5.3.1.1	SBDH BusinessScope/Scope for XDS-Metadata
