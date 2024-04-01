@@ -14,7 +14,7 @@ Description: "An example profile of the Patient resource."
 * identifier[maskedCPR].type = 
 * name 1..* MS
 
-Instance: PatientExample
+Instance: SbdhPatientExample
 InstanceOf: SbdhPatient
 Description: "An example of a patient with a license to krill."
 * identifier[maskedCPR].value = "f06c1ac8-6096-5178-a380-2831d2456986"
