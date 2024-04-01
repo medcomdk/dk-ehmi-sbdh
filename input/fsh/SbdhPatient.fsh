@@ -9,7 +9,7 @@ Description: "An example profile of the Patient resource."
   maskedCPR 1..1
 * identifier[maskedCPR] 1..1
 //* Identifier[maskedCPR].value obeys uuid
-* identifier[maskedCPR].use = #official
+* identifier[maskedCPR].use = #secondary
 * identifier[maskedCPR].system = "urn:oid:1.2.208.176.1.2"
 * name 1..* MS
 
