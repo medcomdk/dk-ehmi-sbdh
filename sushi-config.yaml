@@ -84,7 +84,7 @@ dependencies:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  ehmi SBDH: 
+  ehmiSBDH: 
     SBDH – indledning: ehmiSBDH.html
     SBDH – generelle elementer: ehmiSBDH.html#sbdh--generelle-elementer
     SBDH – standardbusinessdocument: ehmiSBDH.html#standardbusinessdocument
