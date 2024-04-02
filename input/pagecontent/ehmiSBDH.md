@@ -1772,7 +1772,7 @@ ExceptionMessage eksempel
 
 <br/>
 
-## 5.5	SBDH BinaryContent – den indeholdte meddelelse
+## 6.	SBDH BinaryContent – den indeholdte meddelelse
 
 BinaryContent er en SBDH 1.2 udvidelse, der giver mulighed for at wrappe specifikt indhold i SBDH og base64-encode det. MimeType tydeliggør indholdet, og hvad modtager kan forvente af base64-decodingen.
 Udfaldsrum for mimeType er:
