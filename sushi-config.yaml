@@ -95,12 +95,12 @@ menu:
     ehmiSBDH BS - reliable-messaging: ehmiSBDH.html#sbdh-businessscope--reliable-messaging
     ehmiSBDH Binary Content: ehmiSBDH.html#sbdh-binarycontent--den-indeholdte-meddelelse
     References: references.html
-  sbdh schemas: 
+  sbdh xsd schemas: 
     StandardBusinessDocumentHeader: ehmiSBDH_StandardBusinessDocumentHeader.xsd.html
     Partner: ehmiSBDH_Partner.xsd.html
     DocumentIdentification: ehmiSBDH_DocumentIdentification.xsd.html
-    BusinessScope.xsd: ehmiSBDH_BusinessScope.xsd.html
-    BinaryContentType.xsd: ehmiSBDH_BinaryContentType.xsd.html
+    BusinessScope: ehmiSBDH_BusinessScope.xsd.html
+    BinaryContentType: ehmiSBDH_BinaryContentType.xsd.html
     ebbp-signals-2.0.4: ehmiSBDH_ebbp-signals-2.0.4.xsd.html
   Artifacts: artifacts.html
 
