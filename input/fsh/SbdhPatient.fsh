@@ -17,7 +17,7 @@ Instance: SbdhPatientExample
 InstanceOf: SbdhPatient
 Description: "An example of a patient with a license to krill."
 * identifier[maskedCPR].value = "f06c1ac8-6096-5178-a380-2831d2456986"
-* identifier[maskedCPR].use = #official
+* identifier[maskedCPR].use = #secondary
 * identifier[maskedCPR].system = "urn:oid:1.2.208.176.1.2"
 * name[official]
   * given[0] = "James"
