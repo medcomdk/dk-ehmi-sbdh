@@ -85,15 +85,15 @@ dependencies:
 menu:
   Home: index.html
   ehmiSBDH: 
-    SBDH – indledning: ehmiSBDH.html
-    SBDH – generelle elementer: ehmiSBDH.html#sbdh--generelle-elementer
-    SBDH – standardbusinessdocument: ehmiSBDH.html#standardbusinessdocument
-    SBDH – fast definerede generelle elementer: ehmiSBDH.html#sbdh--fast-definerede-generelle-elementer
-    ehmiSBDH BS - Generel eDelivery meddelelseskommunikation: ehmiSBDH.html#sbdh-businessscopes
-    ehmiSBDH BS - Sundhedsmeddelelseskommunikation: ehmiSBDH.html#sbdh-businessscope--sundhedsmeddelelseskommunikation
-    ehmiSBDH BS - xds-metadata: ehmiSBDH.html#sbdh-businessscope--xds-metadata
-    ehmiSBDH BS - reliable-messaging: ehmiSBDH.html#sbdh-businessscope--reliable-messaging
-    ehmiSBDH Binary Content: ehmiSBDH.html#sbdh-binarycontent--den-indeholdte-meddelelse
+    EHMI SBDH: ehmiSBDH.html
+#    SBDH – generelle elementer: ehmiSBDH.html#sbdh--generelle-elementer
+#    SBDH – standardbusinessdocument: ehmiSBDH.html#standardbusinessdocument
+#    SBDH – fast definerede generelle elementer: ehmiSBDH.html#sbdh--fast-definerede-generelle-elementer
+#    ehmiSBDH BS - Generel eDelivery meddelelseskommunikation: ehmiSBDH.html#sbdh-businessscopes
+#    ehmiSBDH BS - Sundhedsmeddelelseskommunikation: ehmiSBDH.html#sbdh-businessscope--sundhedsmeddelelseskommunikation
+#    ehmiSBDH BS - xds-metadata: ehmiSBDH.html#sbdh-businessscope--xds-metadata
+#    ehmiSBDH BS - reliable-messaging: ehmiSBDH.html#sbdh-businessscope--reliable-messaging
+#    ehmiSBDH Binary Content: ehmiSBDH.html#sbdh-binarycontent--den-indeholdte-meddelelse
     References: references.html
   sbdh xsd schemas: 
     StandardBusinessDocumentHeader: ehmiSBDH_StandardBusinessDocumentHeader.xsd.html
