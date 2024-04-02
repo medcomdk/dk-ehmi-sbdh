@@ -3,7 +3,8 @@
 // SUSHI will look for definitions in any file using the .fsh ending.
 
 Profile: SbdhPatient
-Parent: MedComCorePatient
+Parent: XDSSourcePatient
+// MedComCorePatient
 Description: "An example profile of the Patient resource."
 * identifier contains 
   maskedCPR 1..1
@@ -24,7 +25,8 @@ Description: "An example of a patient with a license to krill."
 * name[official]
   * given[0] = "James"
   * family = "Pond"
-
+* gender = #male
+* birthDate = "1991-04-04"
 
 Profile: EhmiMaskedCPR
 Parent: Identifier
