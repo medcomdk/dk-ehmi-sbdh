@@ -4,6 +4,8 @@
 
 ## Indledning
 
+<br/>
+
 The EHMI Standard Business Document Header (ehmiSBDH) is a customized version of the PEPPOL SBDDH.
 
 It is developed to
@@ -59,7 +61,7 @@ BinaryContent er elementet som indeholder en base64-encodet meddelelse eller kvi
 
 <br/>
 
-![EHMI StandardBusinessDocument](/images/ehmiSBDH_Document.png)
+![EHMI StandardBusinessDocument](ehmiSBDH_Document.png)
 
 <br/>
 
@@ -84,6 +86,8 @@ SBDH har en struktur, der overordnet er delt ind i følgende elementer:
 
 #### 4.2.1	SBDH for en MedCom meddelelse og en MedCom kvittering
 
+<br/>
+
 I en SBDH for en MedCom meddelelse og en MedCom kvittering kan følgende metadata indgå:
 -	Generelle SBDH metadata
 -	Metadata for eDelivery generel meddelelseskommunikation
@@ -95,6 +99,8 @@ I en SBDH for en MedCom meddelelse og en MedCom kvittering kan følgende metadat
 
 #### 4.2.2	SBDH for en EHMI EnvelopeReceipt 
 
+<br/>
+
 I en SBDH for en EHMI EnvelopeReceipt er der følgende metadata:
 -	Generelle SBDH metadata
 -	Metadata for eDelivery generel meddelelseskommunikation
@@ -105,11 +111,13 @@ I en SBDH for en EHMI EnvelopeReceipt er der følgende metadata:
 
 ### 4.3	SBDH – Fast definerede generelle elementer
 
+<br/>
+
 SBDH’s generelle elementer er illustreret i nedenstående figur.
 
 <br/>
 
-![EHMI StandardBusinessDocument](/images/ehmiSBDH_Header.png)
+![EHMI StandardBusinessDocument](ehmiSBDH_Header.png)
 
 <br/>
 
@@ -125,6 +133,8 @@ Hvor de fleste elementer har almindeligt fokus på meddelelsesudveksling generel
 
 #### 4.3.1	HeaderVersion
 
+<br/>
+
 Altid 
 
     <HeaderVersion>1.0</HeaderVersion>
@@ -133,11 +143,15 @@ Altid
 
 #### 4.3.2	Sender
 
+<br/>
+
 Sender indeholder i EHMI kun det mandatory element Identifier.
 
 <br/>
 
 ##### 4.3.2.1	Identifier
+
+<br/>
 
 Indeholder attributten Authority, som jf. [Policy_identifiers], POLICY 6 Numeric Codes for Issuing Agencies, altid har værdien: "iso6523-actorid-upis"
  
@@ -157,6 +171,8 @@ o	Værdien efter 0088: afspejler GLN-nummeret.
 
 Hvis MedCom meddelelsen er af typen FHIR, da altid på følgende form:
 
+<br/>
+
    <Sender>
         <Identifier Authority="iso6523-actorid-upis">    
             Bundle.entry[0].resource.sender.reference.resolve().identifier.where(system = 'https://www.gs1.org/gln').value
@@ -166,6 +182,8 @@ Hvis MedCom meddelelsen er af typen FHIR, da altid på følgende form:
 <br/>
 
 ##### 4.3.2.1.2	Sender eksempel
+
+<br/>
 
 Uanset meddelelsestype vil det altid munde ud i følgende Sender/Identifier, hvor værdien efter 0088: selvfølgelig vil variere.
 
@@ -179,11 +197,15 @@ Uanset meddelelsestype vil det altid munde ud i følgende Sender/Identifier, hvo
 
 ##### 4.3.3	Receiver
 
+<br/>
+
 Receiver indeholder i EHMI kun det mandatory element Identifier.
 
 <br/>
 
 ##### 4.3.3.1	Identifier
+
+<br/>
 
 Indeholder attributten Authority, som jf. [Policy_identifiers], POLICY 6 Numeric Codes for Issuing Agencies, altid har værdien: "iso6523-actorid-upis"
  Identifier repræsenterer GLN for modtager, hvor 
@@ -200,6 +222,8 @@ o	Værdien efter 0088: afspejler GLN-nummeret.
 
 ##### 4.3.3.1.1	Hvis MedCom meddelelsen er af typen FHIR 
 
+<br/>
+
 Hvis MedCom meddelelsen er af typen FHIR, da altid på følgende form:
 
     <Receiver>
@@ -211,6 +235,8 @@ Hvis MedCom meddelelsen er af typen FHIR, da altid på følgende form:
 <br/>
 
 ##### 4.3.3.1.2	Receiver eksempel:
+
+<br/>
 
 Uanset meddelelsestype vil det altid munde ud i følgende Receiver/Identifier, hvor værdien efter 0088: selvfølgelig vil variere.
 
@@ -236,6 +262,8 @@ o	Edifact (beskrives I en senere version af standarden)
 
 ###### 4.3.4.1.1	Hvis MedCom meddelelsen er af typen FHIR 
 
+<br/>
+
 Hvis MedCom meddelelsen er en OIOXML, da altid på følgende form:
 
     <DocumentInformation>
@@ -244,7 +272,12 @@ Hvis MedCom meddelelsen er en OIOXML, da altid på følgende form:
         </Standard>
     </DocumentInformation>
 
+<br/>
+
 Meddelelseseksempel: 
+
+<br/>
+
     <DocumentInformation>
         <Standard>homecareobservation-message</Standard>
     </DocumentInformation>
@@ -252,6 +285,8 @@ Meddelelseseksempel:
 <br/>
 
 ###### 4.3.4.1.2	Hvis MedCom meddelelsen er af typen EHMI EnvelopeReceipt
+
+<br/>
 
 Altid 
 
@@ -263,7 +298,12 @@ Altid
         …
     </DocumentInformation>
 
+<br/>
+
 SBDH-envelope eksempel:
+
+<br/>
+
     <DocumentInformation>
         …
         <Standard>ebbp-signals</Standard>
@@ -274,7 +314,11 @@ SBDH-envelope eksempel:
 
 ##### 4.3.4.2	TypeVersion
 
+<br/>
+
 Er den indeholdte meddelelses version på formen
+
+<br/>
 
     <DocumentInformation>
         …
@@ -286,6 +330,8 @@ Er den indeholdte meddelelses version på formen
 
 ###### 4.3.4.2.1	Hvis MedCom meddelelsen er af typen FHIR 
 
+<br/>
+
 Hvis MedCom meddelelsen er af typen FHIR, da altid på følgende form:
 
     <DocumentInformation>
@@ -296,8 +342,12 @@ Hvis MedCom meddelelsen er af typen FHIR, da altid på følgende form:
         …
     </DocumentInformation>
 
+<br/>
+
 Meddelelseseksempel:
-    
+
+<br/>
+
     <DocumentInformation>
 	    …
         <TypeVersion>1.0</TypeVersion>
@@ -308,6 +358,8 @@ Hvis den indeholdte meddelelse er af typen EHMI EnvelopeReceipt
 
 Altid 
 
+<br/>
+
     <DocumentInformation>
         …
         <TypeVersion>
@@ -316,7 +368,11 @@ Altid
         …
     </DocumentInformation>
 
+<br/>
+
 EHMI EnvelopeReceipt eksempel:
+
+<br/>
 
     <DocumentInformation>
         …
@@ -328,11 +384,16 @@ EHMI EnvelopeReceipt eksempel:
 
 ##### 4.3.4.3	InstanceIdentifier 
 
+<br/>
+
 InstanceIdentifier vil blive genereret af den afsendende MSH og er uanset om det er en meddelelse eller en EHMI EnvelopeReceipt genereret.
 
     <InstanceIdentifier>[generated UUID]</InstanceIdentifier>	
 
 Eksempel:
+
+<br/>
+
     <!-- [generated UUID] -->	
     <DocumentInformation>
     	…
@@ -344,7 +405,11 @@ Eksempel:
 
 ##### 4.3.4.4	Type
 
+<br/>
+
 Meddelelse:
+
+<br/>
 
     <DocumentInformation>
         …
@@ -356,6 +421,8 @@ Meddelelse:
 
 ###### 4.3.4.4.1	Hvis MedCom meddelelsen er af typen FHIR 
 
+<br/>
+
 Hvis MedCom meddelelsen er en FHIR, da altid på følgende form:
 
     <DocumentInformation>
@@ -364,7 +431,11 @@ Hvis MedCom meddelelsen er en FHIR, da altid på følgende form:
         …
     </DocumentInformation>
 
+<br/>
+
 Meddelelseseksempel:
+
+<br/>
 
     <DocumentInformation>
         …
@@ -376,11 +447,15 @@ Meddelelseseksempel:
 
 ###### 4.3.4.4.2	Hvis meddelelsen er af typen EHMI EnvelopeReceipt:
 
+<br/>
+
     <DocumentInformation>
         …
         <Type>[Kvitteringstype]</Type>
         …
     </DocumentInformation>
+
+<br/>
 
 Kvitteringstype har følgende udfaldsrum:
 Udfaldsrum for disse ebXML Business Process Signals er:
@@ -388,7 +463,11 @@ o	ReceiptAcknowledgement
 o	ReceiptException
 o	AcceptanceAcknowledgement (OBS! bruges ikke i produktionspiloten)
 
+<br/>
+
 Envelope Kvitteringseksempel:
+
+<br/>
 
     <DocumentInformation>
         …
@@ -400,7 +479,11 @@ Envelope Kvitteringseksempel:
 
 ##### 4.3.4.5	MultipleType
 
+<br/>
+
 Altid false: 
+
+<br/>
 
     <DocumentInformation>
         …
@@ -481,7 +564,7 @@ Scopene DOCUMENTID og PROCESSID er i PEPPOL fast definerede scopes, som sikrer e
 
 <br/>
 
-![EHMI StandardBusinessDocument](/images/ehmiSBDH_BusinessScopesPeppol.png)
+![EHMI StandardBusinessDocument](ehmiSBDH_BusinessScopesPeppol.png)
 
 <br/>
 
@@ -569,7 +652,7 @@ Altid
 
 <br/>
 
-![EHMI StandardBusinessDocument](/images/ehmiSBDH_BusinessScopesMetadata.png)
+![EHMI StandardBusinessDocument](ehmiSBDH_BusinessScopesMetadata.png)
 
 <br/>
 
@@ -652,7 +735,7 @@ RECEIVERID for MedCom FHIR meddelelser - eksempel:
 
 <br/>
 
-![EHMI StandardBusinessDocument](/images/ehmiSBDH_BusinessScopesMetadata.png)
+![EHMI StandardBusinessDocument](ehmiSBDH_BusinessScopesMetadata.png)
 
 <br/>
 
@@ -861,7 +944,7 @@ ORIGINALENVELOPEIDENTIFIER eksempel:
 
 <br/>
 
-![EHMI StandardBusinessDocument](/images/ehmiSBDH_BusinessScopesXdsMetadata.png)
+![EHMI StandardBusinessDocument](ehmiSBDH_BusinessScopesXdsMetadata.png)
 
 <br/>
 
@@ -922,7 +1005,7 @@ CorrelationInformation bruges til at binde meddelelse og kvittering sammen. I pi
 
 <br/>
 
-![EHMI StandardBusinessDocument](/images/ehmiSBDH_ReceiptAckowledgementRequest.png)
+![EHMI StandardBusinessDocument](ehmiSBDH_ReceiptAckowledgementRequest.png)
 
 <br/>
 
@@ -1170,7 +1253,7 @@ Altid
 
 <br/>
 
-![EHMI StandardBusinessDocument](/images/ehmiSBDH_ReceiptAckowledgementResponse.png)
+![EHMI StandardBusinessDocument](ehmiSBDH_ReceiptAckowledgementResponse.png)
 
 <br/>
 
@@ -1421,7 +1504,7 @@ Indlejret i en SBDH ReceiptAcknowledgement er også en ebBP-signal, som i princi
 
 <br/>
 
-![EHMI StandardBusinessDocument](/images/ehmiSBDH_ReceiptAckowledgement.png)
+![EHMI StandardBusinessDocument](ehmiSBDH_ReceiptAckowledgement.png)
 
 <br/>
 
@@ -1567,7 +1650,7 @@ A Receipt Exception typical signals an error condition in a Business Activity wh
 
 <br/>
 
-![EHMI StandardBusinessDocument](/images/ehmiSBDH_ReceiptAckowledgementException.png)
+![EHMI StandardBusinessDocument](ehmiSBDH_ReceiptAckowledgementException.png)
 
 <br/>
 
