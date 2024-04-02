@@ -98,7 +98,7 @@ SBDH’s generelle elementer er illustreret i nedenstående figur.
 
 <br/>
 
-<p><img src="ehmiSBDH_Header.png" alt="EHMI StandardBusinessDocument" /><br/>
+<img src="ehmiSBDH_Header.png" alt="EHMI StandardBusinessDocument" /><br/>
 
 <br/>
 
@@ -545,7 +545,7 @@ Scopene DOCUMENTID og PROCESSID er i PEPPOL fast definerede scopes, som sikrer e
 
 <br/>
 
-<p><img src="ehmiSBDH_BusinessScopesPeppol.png" alt="EHMI StandardBusinessDocument" /><br/>
+<img src="ehmiSBDH_BusinessScopesPeppol.png" alt="EHMI StandardBusinessDocument" /><br/>
 
 <br/>
 
@@ -633,7 +633,7 @@ Altid
 
 <br/>
 
-<p><img src="ehmiSBDH_BusinessScopesMetadata.png" alt="EHMI StandardBusinessDocument" /><br/>
+<img src="ehmiSBDH_BusinessScopesMetadata.png" alt="EHMI StandardBusinessDocument" /><br/>
 
 <br/>
 
@@ -716,7 +716,7 @@ RECEIVERID for MedCom FHIR meddelelser - eksempel:
 
 <br/>
 
-<p><img src="ehmiSBDH_BusinessScopesMetadata.png" alt="EHMI StandardBusinessDocument" /><br/>
+<img src="ehmiSBDH_BusinessScopesMetadata.png" alt="EHMI StandardBusinessDocument" /><br/>
 
 <br/>
 
@@ -925,7 +925,7 @@ ORIGINALENVELOPEIDENTIFIER eksempel:
 
 <br/>
 
-<p><img src="ehmiSBDH_BusinessScopesXdsMetadata.png" alt="EHMI StandardBusinessDocument" /><br/>
+<img src="ehmiSBDH_BusinessScopesXdsMetadata.png" alt="EHMI StandardBusinessDocument" /><br/>
 
 <br/>
 
@@ -986,7 +986,7 @@ CorrelationInformation bruges til at binde meddelelse og kvittering sammen. I pi
 
 <br/>
 
-<p><img src="ehmiSBDH_ReceiptAckowledgementRequest.png" alt="EHMI StandardBusinessDocument" /><br/>
+<img src="ehmiSBDH_ReceiptAckowledgementRequest.png" alt="EHMI StandardBusinessDocument" /><br/>
 
 <br/>
 
@@ -1234,7 +1234,7 @@ Altid
 
 <br/>
 
-<p><img src="ehmiSBDH_ReceiptAckowledgementResponse.png" alt="EHMI StandardBusinessDocument" /><br/>
+<img src="ehmiSBDH_ReceiptAckowledgementResponse.png" alt="EHMI StandardBusinessDocument" /><br/>
 
 <br/>
 
@@ -1485,7 +1485,7 @@ Indlejret i en SBDH ReceiptAcknowledgement er også en ebBP-signal, som i princi
 
 <br/>
 
-<p><img src="ehmiSBDH_ReceiptAckowledgement.png" alt="EHMI StandardBusinessDocument" /><br/>
+<img src="ehmiSBDH_ReceiptAckowledgement.png" alt="EHMI StandardBusinessDocument" /><br/>
 
 <br/>
 
@@ -1631,7 +1631,7 @@ A Receipt Exception typical signals an error condition in a Business Activity wh
 
 <br/>
 
-<p><img src="ehmiSBDH_ReceiptAckowledgementException.png" alt="EHMI StandardBusinessDocument" /><br/>
+<img src="ehmiSBDH_ReceiptAckowledgementException.png" alt="EHMI StandardBusinessDocument" /><br/>
 
 <br/>
 
