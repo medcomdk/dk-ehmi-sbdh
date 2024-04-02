@@ -101,7 +101,7 @@ menu:
     DocumentIdentification: ehmiSBDH_DocumentIdentification.xsd.html
     BusinessScope.xsd: ehmiSBDH_BusinessScope.xsd.html
     BinaryContentType.xsd: ehmiSBDH_BinaryContentType.xsd.html
-    ebbp-signals-2.0.4: ebbp-signals-2.0.4.xsd.html
+    ebbp-signals-2.0.4: ehmiSBDH_ebbp-signals-2.0.4.xsd.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
