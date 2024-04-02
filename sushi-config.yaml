@@ -86,14 +86,14 @@ menu:
   Home: index.html
   ehmi SBDH: 
     SBDH – indledning: ehmiSBDH.html
-    SBDH – generelle elementer: ehmiSBDH.html#4-sbdh--generelle-elementer
-    SBDH – standardbusinessdocument: ehmiSBDH.html#42-standardbusinessdocument
-    SBDH – fast definerede generelle elementer: ehmiSBDH.html#43-sbdh--fast-definerede-generelle-elementer
-    ehmiSBDH BS - Generel eDelivery meddelelseskommunikation: ehmiSBDH.html#5-sbdh-businessscopes
-    ehmiSBDH BS - Sundhedsmeddelelseskommunikation: ehmiSBDH.html#52-sbdh-businessscope--sundhedsmeddelelseskommunikation
-    ehmiSBDH BS - xds-metadata: ehmiSBDH.html#53-sbdh-businessscope--xds-metadata
-    ehmiSBDH BS - reliable-messaging: ehmiSBDH.html#54-sbdh-businessscope--reliable-messaging
-    ehmiSBDH Binary Content: ehmiSBDH.html#55-sbdh-binarycontent--den-indeholdte-meddelelse
+    SBDH – generelle elementer: ehmiSBDH.html#sbdh--generelle-elementer
+    SBDH – standardbusinessdocument: ehmiSBDH.html#standardbusinessdocument
+    SBDH – fast definerede generelle elementer: ehmiSBDH.html#sbdh--fast-definerede-generelle-elementer
+    ehmiSBDH BS - Generel eDelivery meddelelseskommunikation: ehmiSBDH.html#sbdh-businessscopes
+    ehmiSBDH BS - Sundhedsmeddelelseskommunikation: ehmiSBDH.html#sbdh-businessscope--sundhedsmeddelelseskommunikation
+    ehmiSBDH BS - xds-metadata: ehmiSBDH.html#sbdh-businessscope--xds-metadata
+    ehmiSBDH BS - reliable-messaging: ehmiSBDH.html#sbdh-businessscope--reliable-messaging
+    ehmiSBDH Binary Content: ehmiSBDH.html#sbdh-binarycontent--den-indeholdte-meddelelse
     references: references.html
   Artifacts: artifacts.html
 
