@@ -95,6 +95,13 @@ menu:
     ehmiSBDH BS - reliable-messaging: ehmiSBDH.html#sbdh-businessscope--reliable-messaging
     ehmiSBDH Binary Content: ehmiSBDH.html#sbdh-binarycontent--den-indeholdte-meddelelse
     References: references.html
+  sbdh schemas: 
+    StandardBusinessDocumentHeader: ehmiSBDH_StandardBusinessDocumentHeader.xsd.html
+    Partner: ehmiSBDH_Partner.xsd.html
+    DocumentIdentification: ehmiSBDH_DocumentIdentification.xsd.html
+    BusinessScope.xsd: ehmiSBDH_BusinessScope.xsd.html
+    MedCom-BinaryContentType.xsd: ehmiSBDH_MedCom-EDN-Business-Message-Envelope-1.2.xsd.html
+    ebbp-signals-2.0.4: ebbp-signals-2.0.4.xsd.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮

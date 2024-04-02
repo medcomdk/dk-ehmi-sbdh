@@ -11,6 +11,7 @@ The EHMI Standard Business Document Header (ehmiSBDH) is a customized version of
 It is developed to
 
 - suit the direct messaging of clinical content in EHMI
+- handle reliable messaging at the eDelivery network level like VANSenvelope in the VANS network
 - handle the XDS Metadata that is needed when MedCom Messages are exchanged as “documents” in the XDS Framework
 - serve the ground for EDS Delivery Status
 - serve the ground for EHMI Statistics of message exchange
@@ -21,9 +22,9 @@ It is developed to
 
 ## SBDH – Generelle elementer 
 
-<br/>
-
 ### Generelt
+
+<br/>
 
 StandardBusinessDocumentHeader (SBDH) er en konvolutspecifikation udstedt af GS1 og profileret til anvendelse i PEPPOL. Den understøttes af eDelivery's Access Points (AP) ift. AS4 protokollen. Vi følger i EHMI konventionerne, som er udlagt i PEPPOLs profilering, men udvider den også til at kunne passe på sundhedsområdet. SBDH er dog ingenting uden en omgivende container, kaldet StandardBusinessDocument (SBD).
 
