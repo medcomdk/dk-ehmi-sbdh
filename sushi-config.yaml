@@ -85,7 +85,18 @@ dependencies:
 menu:
   Home: index.html
   ehmi SBDH: 
-    ehmiSBDH: ehmiSBDH.html
+    ehmiSBDH: 
+      SBDH – Generelle elementer: 
+        indledning: ehmiSBDH.html
+        generelle elementer: ehmiSBDH.html#4-sbdh--generelle-elementer
+        standardbusinessdocument: html#42-standardbusinessdocument
+        fast definerede generelle elementer: ehmiSBDH.html#43-sbdh--fast-definerede-generelle-elementer
+      ehmiSBDH BusinessScope:
+        Generel eDelivery meddelelseskommunikation: ehmiSBDH.html#5-sbdh-businessscopes
+        Sundhedsmeddelelseskommunikation: ehmiSBDH.html#52-sbdh-businessscope--sundhedsmeddelelseskommunikation
+        xds-metadata: ehmiSBDH.html#53-sbdh-businessscope--xds-metadata
+        reliable-messaging: ehmiSBDH.html#54-sbdh-businessscope--reliable-messaging
+      ehmiSBDH Binary Content: ehmiSBDH.html#55-sbdh-binarycontent--den-indeholdte-meddelelse
     references: references.html
   Artifacts: artifacts.html
 
