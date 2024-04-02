@@ -48,6 +48,8 @@ StandardBusinessDocumentHeader (SBDH) er en konvolutspecifikation udstedt af GS1
 
 ### 4.2	StandardBusinessDocument
 
+<br/>
+
 StandardBusinessDocument er som nævnt SBDHs omgivende container, og er en wrapper rundt om SBDH, og indeholder kun to elementer:
 -	StandardBusinessDocumentHeader
 -	BinaryContent (base64-encodet)
@@ -55,12 +57,20 @@ StandardBusinessDocument er som nævnt SBDHs omgivende container, og er en wrapp
 Selvom StandardBusinessDocument, som sådan er konvolutten, bruges termen SBDH generelt om hele konvolutten, da det er dette indhold som er særligt interessant i meddelelsesudvekslingen.
 BinaryContent er elementet som indeholder en base64-encodet meddelelse eller kvittering for en afsendt SBDH.
 
+<br/>
+
+![EHMI StandardBusinessDocument](../images/ehmiSBDH_Document.png)
+
+<br/>
+
 Indholdet i SBDH er for en stor dels vedkommende bestemt af hvorledes
 -	de samme informationer registreres i EER
 -	de samme informationer registreres i SMP
 -	sammenhængen er til DokumentDelingServicen DDS 
 -	sammenhængen er til EHMI EnvelopeReceipt
 -	de samme informationer registreres i EDS
+
+<br/>
 
 SBDH har en struktur, der overordnet er delt ind i følgende elementer:
 -	HeaderVersion
@@ -96,7 +106,13 @@ I en SBDH for en EHMI EnvelopeReceipt er der følgende metadata:
 ### 4.3	SBDH – Fast definerede generelle elementer
 
 SBDH’s generelle elementer er illustreret i nedenstående figur.
- 
+
+<br/>
+
+![EHMI StandardBusinessDocument](../images/ehmiSBDH_Header.png)
+
+<br/>
+
 BusinessScope har dog fået sit eget kapitel, da det afviger markant fra de øvrige.
 I det følgende præsenteres de generelle SBDH elementer for de foreløbigt 2 meddelelsestyper, som EHMI opererer med:
 -	FHIR
@@ -463,7 +479,10 @@ I det følgende gennemgås de i de logiske sammenhænge, som de optræder i.
 I eDelivery kommunikationen udgør SBDH’ens Scope struktur med de to typer, DOCUMENTID og PROCESSID, den direkte sammenhæng til SMP’ens DOCUMENTID og PROCESSID. Ydermere inkluderer sammenhængen også de allerede gennemgåede elementer i afsnittet om Receiver. I det følgende beskrives netop disse to Type elementer i SBDH’ens overordnede BusinessScope struktur.
 Scopene DOCUMENTID og PROCESSID er i PEPPOL fast definerede scopes, som sikrer en unik relation til SMP. DOCUMENTID og PROCESSID anvendes i EHMI med samme præcision som i PEPPOL, så der sikres en ensartethed i, hvordan man udtrykker værdierne på tværs af PEPPOL og EHMI. DOCUMENTID og PROCESSID bruges af AP’erne sammen med modtagers Receiver/Identifier til at slå modtagers eDelivery adresse op i SMP med et unikt respons som resultat.
 
- 
+<br/>
+
+![EHMI StandardBusinessDocument](../images/ehmiSBDH_BusinessScopesPeppol.png)
+
 <br/>
 
 #### 5.1.2	DOCUMENTID
@@ -547,7 +566,11 @@ Altid
 <br/>
 
 #### 5.2.1	Scope – message metadata - who
- 
+
+<br/>
+
+![EHMI StandardBusinessDocument](../images/ehmiSBDH_BusinessScopesMetadata.png)
+
 <br/>
 
 ##### 5.2.1.1	PATIENTID
@@ -626,7 +649,11 @@ RECEIVERID for MedCom FHIR meddelelser - eksempel:
 <br/>
 
 #### 5.2.2	Scope – message metadata - what
- 
+
+<br/>
+
+![EHMI StandardBusinessDocument](../images/ehmiSBDH_BusinessScopesMetadata.png)
+
 <br/>
 
 ##### 5.2.2.1	MESSAGEIDENTIFIER
@@ -831,7 +858,11 @@ ORIGINALENVELOPEIDENTIFIER eksempel:
 <br/>
 
 ### 5.3	SBDH BusinessScope – XDS-Metadata
- 
+
+<br/>
+
+![EHMI StandardBusinessDocument](../images/ehmiSBDH_BusinessScopesXdsMetadata.png)
+
 <br/>
 
 #### 5.3.1	Dokumentdeling XDS-Metadata
@@ -888,7 +919,13 @@ CorrelationInformation bruges til at binde meddelelse og kvittering sammen. I pi
 <br/>
 
 #### 5.4.1	Reliable messaging - BusinessService Request
- 
+
+<br/>
+
+![EHMI StandardBusinessDocument](../images/ehmiSBDH_ReceiptAckowledgementRequest.png)
+
+<br/>
+
 I det følgende er dette sat op som det ønskes i piloten.
 
 <br/>
@@ -1131,6 +1168,11 @@ Altid
 
 #### 5.4.2	Reliable messaging - BusinessService Response
 
+<br/>
+
+![EHMI StandardBusinessDocument](../images/ehmiSBDH_ReceiptAckowledgementResponse.png)
+
+<br/>
 
 I det følgende er dette sat op som det ønskes i piloten.
 
@@ -1360,22 +1402,28 @@ Altid
 <br/>
 
 #### 5.4.3	SBDH ReceiptAcknowledgement
+
+<br/>
+
 SBDH ReceiptAcknowledgement anvendes som positiv transportkvittering, og for at modtager af kvitteringen nemt kan korrelere meddelelse med originalkuverten, kan modtager checke på hhv. 
 •	Sender
-o	Identifier (GLN-nummer for afsender) 
+    o	Identifier (GLN-nummer for afsender) 
 •	Receiver
-o	Identifier (GLN-nummer for modtager) 
+    o	Identifier (GLN-nummer for modtager) 
 •	Scope
-o	SENDERID (SORID for afsender)
-o	RECEIVERID (SORID for modtager)
-o	CorrelationInformation
+    o	SENDERID (SORID for afsender)
+    o	RECEIVERID (SORID for modtager)
+    o	CorrelationInformation
+
 	RequestingDocumentInstanceIdentifier
 
 Indlejret i en SBDH ReceiptAcknowledgement er også en ebBP-signal, som i princippet indeholder de samme informationer, men som det ikke er nødvendigt at checke, når det er en ReceiptAcknowledgement.
 
+<br/>
 
+![EHMI StandardBusinessDocument](../images/ehmiSBDH_ReceiptAckowledgement.png)
 
- 
+<br/>
 
 The Receipt Acknowledgement Business Signal signals that a message has been properly received by the Receiver MSH software component. Legible means that it has passed structure/schema validity check. The content of the receipt and the legibility of a business message MUST be reviewed prior to the processing of the Requesting or Responding Business Document or the evaluation of condition expressions in the message's Business Documents or Document Envelope. Condition Expressions are expressions that evaluate to true or false. [ebXMLbp] 
 
@@ -1504,6 +1552,9 @@ ToPartyInfo eksempel
 <br/>
 
 #### 5.4.4	Receipt Exception
+
+<br/>
+
 A  Receipt Exception signals an error condition in the management of a Business Transaction. This Business Signal is returned to the initiating activity that originated the request. This exception MUST terminate the Business Transaction. These errors deal with the mechanisms of message exchange such as verification, validation, authentication, and authorization and will occur up to message acceptance. Typically, the rules and constraints applied to the message will have only dealt with the well-formedness of the message.
 
 A receipt exception terminates the Business Transaction. The following are receipt exceptions:
@@ -1513,10 +1564,16 @@ A receipt exception terminates the Business Transaction. The following are recei
 •	Sequence exceptions. The order or type of a Business Document or Business Signal is incorrect.
 
 A Receipt Exception typical signals an error condition in a Business Activity which requires a transaction to be terminated, i.e. receipt of a business message with a Business Document that has failed. (From [ebXMLbp] page 77)
- 
+
+<br/>
+
+![EHMI StandardBusinessDocument](../images/ehmiSBDH_ReceiptAckowledgementException.png)
+
 <br/>
 
 ###### 5.4.4.1.1	OriginalMessageIdentifier
+
+<br/>
 
 Som 7.4.3.1.1
 
