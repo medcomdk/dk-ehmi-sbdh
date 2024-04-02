@@ -84,7 +84,9 @@ dependencies:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  ehmi SBDH: ehmiSBDH.html
+  ehmi SBDH: 
+    ehmiSBDH: ehmiSBDH.html
+    references: references.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
