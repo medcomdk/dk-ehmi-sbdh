@@ -94,7 +94,7 @@ menu:
     ehmiSBDH BS - xds-metadata: ehmiSBDH.html#sbdh-businessscope--xds-metadata
     ehmiSBDH BS - reliable-messaging: ehmiSBDH.html#sbdh-businessscope--reliable-messaging
     ehmiSBDH Binary Content: ehmiSBDH.html#sbdh-binarycontent--den-indeholdte-meddelelse
-    references: references.html
+    References: references.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
