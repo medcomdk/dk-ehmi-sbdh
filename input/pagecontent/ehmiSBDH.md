@@ -137,8 +137,8 @@ Sender indeholder i EHMI kun det mandatory element Identifier.
 Indeholder attributten Authority, som jf. [Policy_identifiers], POLICY 6 Numeric Codes for Issuing Agencies, altid har værdien: "iso6523-actorid-upis"
  
 Identifier repræsenterer GLN for afsender, hvor 
-o	Værdien 0088: afspejler at typen er GLN.
-o	Værdien efter 0088: afspejler GLN-nummeret.
+- Værdien 0088: afspejler at typen er GLN.
+- Værdien efter 0088: afspejler GLN-nummeret.
 
     `    <Sender>
             <Identifier Authority="iso6523-actorid-upis">    
@@ -190,8 +190,8 @@ Receiver indeholder i EHMI kun det mandatory element Identifier.
 
 Indeholder attributten Authority, som jf. [Policy_identifiers], POLICY 6 Numeric Codes for Issuing Agencies, altid har værdien: "iso6523-actorid-upis"
  Identifier repræsenterer GLN for modtager, hvor 
-o	Værdien 0088: afspejler at typen er GLN-typenummeret.
-o	Værdien efter 0088: afspejler GLN-nummeret.
+- Værdien 0088: afspejler at typen er GLN-typenummeret.
+- Værdien efter 0088: afspejler GLN-nummeret.
 
     <Receiver>
         <Identifier Authority="iso6523-actorid-upis">    
@@ -234,10 +234,10 @@ Uanset meddelelsestype vil det altid munde ud i følgende Receiver/Identifier, h
 ##### Standard
 
 Vi opererer med 4 type standarder, som har hvert sit prefix ifm. standarden
-o	FHIR 
-o	ebxml
-o	OIOXML (beskrives I en senere version af standarden)
-o	Edifact (beskrives I en senere version af standarden)
+- FHIR 
+- ebxml
+- OIOXML (beskrives I en senere version af standarden)
+- Edifact (beskrives I en senere version af standarden)
 
 <br/>
 
@@ -440,9 +440,9 @@ Meddelelseseksempel:
 
 Kvitteringstype har følgende udfaldsrum:
 Udfaldsrum for disse ebXML Business Process Signals er:
-o	ReceiptAcknowledgement
-o	ReceiptException
-o	AcceptanceAcknowledgement (OBS! bruges ikke i produktionspiloten)
+- ReceiptAcknowledgement
+- ReceiptException
+- AcceptanceAcknowledgement (OBS! bruges ikke i produktionspiloten)
 
 <br/>
 
@@ -1471,13 +1471,13 @@ Altid
 
 SBDH ReceiptAcknowledgement anvendes som positiv transportkvittering, og for at modtager af kvitteringen nemt kan korrelere meddelelse med originalkuverten, kan modtager checke på hhv. 
 •	Sender
-    o	Identifier (GLN-nummer for afsender) 
+    - Identifier (GLN-nummer for afsender) 
 •	Receiver
-    o	Identifier (GLN-nummer for modtager) 
+    - Identifier (GLN-nummer for modtager) 
 •	Scope
-    o	SENDERID (SORID for afsender)
-    o	RECEIVERID (SORID for modtager)
-    o	CorrelationInformation
+    - SENDERID (SORID for afsender)
+    - RECEIVERID (SORID for modtager)
+    - CorrelationInformation
 
 	RequestingDocumentInstanceIdentifier
 
