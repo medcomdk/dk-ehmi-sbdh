@@ -59,7 +59,7 @@ BinaryContent er elementet som indeholder en base64-encodet meddelelse eller kvi
 
 <br/>
 
-![EHMI StandardBusinessDocument](../images/ehmiSBDH_Document.png)
+![EHMI StandardBusinessDocument](/images/ehmiSBDH_Document.png)
 
 <br/>
 
@@ -109,7 +109,7 @@ SBDH’s generelle elementer er illustreret i nedenstående figur.
 
 <br/>
 
-![EHMI StandardBusinessDocument](../images/ehmiSBDH_Header.png)
+![EHMI StandardBusinessDocument](/images/ehmiSBDH_Header.png)
 
 <br/>
 
@@ -481,7 +481,7 @@ Scopene DOCUMENTID og PROCESSID er i PEPPOL fast definerede scopes, som sikrer e
 
 <br/>
 
-![EHMI StandardBusinessDocument](../images/ehmiSBDH_BusinessScopesPeppol.png)
+![EHMI StandardBusinessDocument](/images/ehmiSBDH_BusinessScopesPeppol.png)
 
 <br/>
 
@@ -569,7 +569,7 @@ Altid
 
 <br/>
 
-![EHMI StandardBusinessDocument](../images/ehmiSBDH_BusinessScopesMetadata.png)
+![EHMI StandardBusinessDocument](/images/ehmiSBDH_BusinessScopesMetadata.png)
 
 <br/>
 
@@ -652,7 +652,7 @@ RECEIVERID for MedCom FHIR meddelelser - eksempel:
 
 <br/>
 
-![EHMI StandardBusinessDocument](../images/ehmiSBDH_BusinessScopesMetadata.png)
+![EHMI StandardBusinessDocument](/images/ehmiSBDH_BusinessScopesMetadata.png)
 
 <br/>
 
@@ -861,7 +861,7 @@ ORIGINALENVELOPEIDENTIFIER eksempel:
 
 <br/>
 
-![EHMI StandardBusinessDocument](../images/ehmiSBDH_BusinessScopesXdsMetadata.png)
+![EHMI StandardBusinessDocument](/images/ehmiSBDH_BusinessScopesXdsMetadata.png)
 
 <br/>
 
@@ -922,7 +922,7 @@ CorrelationInformation bruges til at binde meddelelse og kvittering sammen. I pi
 
 <br/>
 
-![EHMI StandardBusinessDocument](../images/ehmiSBDH_ReceiptAckowledgementRequest.png)
+![EHMI StandardBusinessDocument](/images/ehmiSBDH_ReceiptAckowledgementRequest.png)
 
 <br/>
 
@@ -1170,7 +1170,7 @@ Altid
 
 <br/>
 
-![EHMI StandardBusinessDocument](../images/ehmiSBDH_ReceiptAckowledgementResponse.png)
+![EHMI StandardBusinessDocument](/images/ehmiSBDH_ReceiptAckowledgementResponse.png)
 
 <br/>
 
@@ -1421,7 +1421,7 @@ Indlejret i en SBDH ReceiptAcknowledgement er også en ebBP-signal, som i princi
 
 <br/>
 
-![EHMI StandardBusinessDocument](../images/ehmiSBDH_ReceiptAckowledgement.png)
+![EHMI StandardBusinessDocument](/images/ehmiSBDH_ReceiptAckowledgement.png)
 
 <br/>
 
@@ -1567,7 +1567,7 @@ A Receipt Exception typical signals an error condition in a Business Activity wh
 
 <br/>
 
-![EHMI StandardBusinessDocument](../images/ehmiSBDH_ReceiptAckowledgementException.png)
+![EHMI StandardBusinessDocument](/images/ehmiSBDH_ReceiptAckowledgementException.png)
 
 <br/>
 
