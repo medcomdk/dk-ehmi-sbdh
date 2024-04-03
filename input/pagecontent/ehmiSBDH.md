@@ -1775,6 +1775,8 @@ ExceptionMessage eksempel
 
 ## SBDH BinaryContent – den indeholdte meddelelse
 
+<br/>
+
 BinaryContent er en SBDH 1.2 udvidelse, der giver mulighed for at wrappe specifikt indhold i SBDH og base64-encode det. MimeType tydeliggør indholdet, og hvad modtager kan forvente af base64-decodingen.
 Udfaldsrum for mimeType er:
 -	text/xml
@@ -1792,4 +1794,22 @@ Encoding vil i piloten have følgende udfaldsrum for MedCom meddelelserne, som a
 
 Encoding vil i piloten have følgende udfaldsrum for ReceiptAcknowledgement og ReceiptException:
 -	"UTF-8"
+
+## SBDH xsd schemas
+
+<br/>
+
+Alle SBDH xsd-filer kan findes via download-siden, men et overblik over, hvad de vigtigst indeholder kan ses her:
+
+(all files opens in new window)
+<br/>
+
+- <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_StandardBusinessDocumentHeader.xsd.html" target="_blank">Ehmi SBDH StandardBusinessDocumentHeader Xsd</a>
+- <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_Partner.xsd.html" target="_blank">Ehmi SBDH Partner Xsd</a>
+- <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_DocumentIdentification.xsd.html" target="_blank">Ehmi SBDH DocumentIdentification Xsd</a>
+- <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_BusinessScope.xsd.html" target="_blank">Ehmi SBDH BusinessScope Xsd</a>
+- <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_BinaryContentType.xsd.html" target="_blank">Ehmi SBDH BinaryContentType Xsd</a>
+- <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_ebbp-signals-2.0.4.xsd.html" target="_blank">Ehmi SBDH Ebbp-Signals 2.0.4 Xsd</a>
+
+<br/>
 
