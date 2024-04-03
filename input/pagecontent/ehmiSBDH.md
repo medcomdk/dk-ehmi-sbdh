@@ -1799,7 +1799,7 @@ Encoding vil i piloten have følgende udfaldsrum for ReceiptAcknowledgement og R
 
 <br/>
 
-Alle SBDH xsd-filer kan findes via download-siden, men et overblik over, hvad de vigtigst indeholder kan ses her:
+Alle SBDH xsd-filer kan findes via [download-siden](downloads.html), men et overblik over, hvad de vigtigst indeholder kan ses her:
 
 (all files opens in new window)
 <br/>

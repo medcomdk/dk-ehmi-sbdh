@@ -1,5 +1,9 @@
 The following sections lists various links and artifacts that may be useful during development
 
+### Downloads of xsd schemas for ehmiSBDH
+- [ehmiSBDH.zip](ehmiSBDH.zip)
+
+
 ### Tools, frameworks and supported programming languages
 - See [https://hl7.org/fhir/R4/downloads.html](https://hl7.org/fhir/R4/downloads.html)
 
