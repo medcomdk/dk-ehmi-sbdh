@@ -5,7 +5,8 @@
 Profile: SbdhPatient
 Parent: XDSSourcePatient
 // MedComCorePatient
-Description: "An example profile of the Patient resource."
+Description: "An example profile of the Patient resource.
+"
 * identifier contains 
   maskedCPR 1..1
 * identifier[maskedCPR] only EhmiMaskedCPR
@@ -30,7 +31,19 @@ Description: "An example of a patient with a license to krill."
 
 Profile: EhmiMaskedCPR
 Parent: Identifier
-Description: "UUIDv5 masked CPR-identifier making the cpr a UUID"
+Description: 
+"""
+UUIDv5 masked CPR-identifier making the cpr a UUID
+Patientens CPR nummer maskeres i visninger på samme måde som sundhedsarbejders identiteter er maskeret af SDS, med UUID version 5 . Namespace for maskering med UUID version 5 er jf. https://www.ietf.org/rfc/rfc4122.txt Appendix C, uuid_t NameSpace_OID, ns:OID ('""'6ba7b812-9dad-11d1-80b4-00c04fd430c8'""'). Dette er også anvendt af SDS på NSP ifm. Beregning af pseudonymer (se https://www.nspop.dk/pages/viewpage.action?pageId=220266653#id-3.(C)Pseudonymiseringidatakildertilborgervendtebrugergr%C3%A6nsefladesystemer-C-Beregningafpseudonymer)
+
+Input til generatoren skal være patients cpr nummer.
+CPR nummeret kan være af typen:
+
+https://hl7.dk/fhir/core/2.2.0/StructureDefinition-dk-core-cpr-identifier.html 
+
+eller
+
+https://medcomfhir.dk/ig/core/2.3.0/StructureDefinition-medcom-core-ecpr-identifier.html """
 * use = #secondary
 * system = "urn:oid:1.2.208.176.1.200"
 * value 1..

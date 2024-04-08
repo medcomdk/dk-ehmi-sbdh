@@ -1,6 +1,6 @@
 # DK-EHMI-SBDH
 
-The EHMI Standard Business Document Header (ehmiSBDH) is a customized version of the PEPPOL SBDDH.
+The EHMI Standard Business Document Header (ehmiSBDH) is a customized version of the PEPPOL SBDH.
 
 It is developed to
 

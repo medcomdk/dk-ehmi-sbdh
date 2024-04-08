@@ -6,7 +6,7 @@
 
 <br/>
 
-The EHMI Standard Business Document Header (ehmiSBDH) is a customized version of the PEPPOL SBDDH.
+The EHMI Standard Business Document Header (ehmiSBDH) is a customized version of the PEPPOL SBDH.
 
 It is developed to
 
@@ -141,11 +141,13 @@ Identifier repræsenterer GLN for afsender, hvor
 - Værdien 0088: afspejler at typen er GLN.
 - Værdien efter 0088: afspejler GLN-nummeret.
 
-    `    <Sender>
-            <Identifier Authority="iso6523-actorid-upis">    
-                “0088:”+[GLN-nummer]
-            </Identifier>
-        </Sender>
+<br/>
+
+    <Sender>
+        <Identifier Authority="iso6523-actorid-upis">    
+            “0088:”+[GLN-nummer]
+        </Identifier>
+    </Sender>
 
 <br/>
 
@@ -193,6 +195,9 @@ Indeholder attributten Authority, som jf. [Policy_identifiers], POLICY 6 Numeric
  Identifier repræsenterer GLN for modtager, hvor 
 - Værdien 0088: afspejler at typen er GLN-typenummeret.
 - Værdien efter 0088: afspejler GLN-nummeret.
+
+
+<br/>
 
     <Receiver>
         <Identifier Authority="iso6523-actorid-upis">    
@@ -272,6 +277,8 @@ Meddelelseseksempel:
 
 Altid 
 
+<br/>
+
     <DocumentInformation>
         …
         <Standard>
@@ -335,6 +342,8 @@ Meddelelseseksempel:
         <TypeVersion>1.0</TypeVersion>
         …
     </DocumentInformation>
+
+<br/>
 
 Hvis den indeholdte meddelelse er af typen EHMI EnvelopeReceipt 
 
@@ -479,6 +488,8 @@ Altid false:
 
 Altid på formen: [YYYY-MM-DD]T[TT-MM-SS]+[offset-to-UTC]
 
+<br/>
+
     <DocumentInformation>
         …
         <CreationDateAndTime>
@@ -487,7 +498,11 @@ Altid på formen: [YYYY-MM-DD]T[TT-MM-SS]+[offset-to-UTC]
         …
     </DocumentInformation>
 
+<br/>
+
 Eksempel:
+
+<br/>
 
     <DocumentInformation>
         …
@@ -511,6 +526,8 @@ Eksempel:
 <br/>
 
 ##### DocumentInformation samlet kvitteringseksempel
+
+<br/>
 
     <DocumentIdentification>
         <Standard>ebbp-signals</Standard>
@@ -552,12 +569,16 @@ Scopene DOCUMENTID og PROCESSID er i PEPPOL fast definerede scopes, som sikrer e
 
 #### DOCUMENTID
 
+<br/>
+
 Værdien i InstanceIdentifier er identisk med den tilsvarende SMP-registrering.
 Værdierne hentes fra MedComs standardkatalog og er her repræsenteret ved de værdier, som angiver typen af meddelelsen. Se bogmærke: [DKEDEL_DT_CodeList]
 
 <br/>
 
 ##### DOCUMENTID  for MedCom FHIR Meddelelser
+
+<br/>
 
     <Scope> 
         <Type>DOCUMENTID</Type> 
@@ -567,7 +588,11 @@ Værdierne hentes fra MedComs standardkatalog og er her repræsenteret ved de v�
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
+<br/>
+
 MedCom FHIR Meddelelseseksempel 
+
+<br/>
 
     <Scope> 
         <Type>DOCUMENTID</Type> 
@@ -581,6 +606,8 @@ MedCom FHIR Meddelelseseksempel
 
 ##### DOCUMENTID for EHMI EnvelopeReceipt
 
+<br/>
+
     <Scope> 
         <Type>DOCUMENTID</Type> 
         <InstanceIdentifier>
@@ -589,8 +616,12 @@ MedCom FHIR Meddelelseseksempel
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
+<br/>
+
 DOCUMENTID EHMI EnvelopeReceipt eksempel:
-    
+
+<br/>
+
     <Scope> 
         <Type>DOCUMENTID</Type> 
         <InstanceIdentifier>
@@ -603,6 +634,8 @@ DOCUMENTID EHMI EnvelopeReceipt eksempel:
 
 #### PROCESSID
 
+<br/>
+
 Værdien i InstanceIdentifier er identisk med den tilsvarende ProcessId SMP-registrering .
 I 4-corner modellen  sendes SDN-emergence-registreringen med til SMP, så afsenders AP kan slå endelig modtager, også kaldet finalreceipient op korrekt i SMP.
 
@@ -613,8 +646,12 @@ I 4-corner modellen  sendes SDN-emergence-registreringen med til SMP, så afsend
         </InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
-	
+
+<br/>
+
 PROCESSID for SDN Eksempel
+
+<br/>
 
 Altid
 
@@ -640,17 +677,14 @@ Altid
 
 ##### PATIENTID
 
-Patientens CPR nummer indgår som identifier til brug for EDS Forsendelsesstatus og XDS-metadata. Patientens CPR nummer er maskeret på samme måde som sundhedsarbejders identiteter er maskeret af SDS, med UUID version 5 . Namespace for maskering med UUID version 5 er jf. https://www.ietf.org/rfc/rfc4122.txt Appendix C, uuid_t NameSpace_OID, ns:OID ("6ba7b812-9dad-11d1-80b4-00c04fd430c8”). Dette er også anvendt af SDS på NSP ifm. Beregning af pseudonymer (se https://www.nspop.dk/pages/viewpage.action?pageId=220266653#id-3.(C)Pseudonymiseringidatakildertilborgervendtebrugergr%C3%A6nsefladesystemer-C-Beregningafpseudonymer)
-Input til generatoren skal være patients cpr nummer.
-CPR nummeret kan være af typen:
-https://hl7.dk/fhir/core/2.2.0/StructureDefinition-dk-core-cpr-identifier.html 
-eller
-https://medcomfhir.dk/ig/core/2.3.0/StructureDefinition-medcom-core-ecpr-identifier.html 
+Patientens CPR nummer indgår som identifier til brug for EDS Forsendelsesstatus og XDS-metadata. 
+
+<br/>
 
     <Scope>
         <Type>PATIENTID</Type>
         <InstanceIdentifier>
-            UUIDv5-maskeret([Bundle.entry.resource.ofType(Patient).identifier.where(system=’urn:oid:1.2.208.176.1.2’).value])
+            [Bundle.entry.resource.ofType(Patient).identifier.where(system=’urn:oid:1.2.208.176.1.2’).value]
         </InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
