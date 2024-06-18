@@ -1,3 +1,4 @@
+/*
 // This is a simple example of a FSH file.
 // This file can be renamed, and additional FSH files can be added.
 // SUSHI will look for definitions in any file using the .fsh ending.
@@ -56,3 +57,4 @@ Description: "General UUID expression"
 Severity: #error
 Expression: "value.matches('[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}')"
 
+*/
