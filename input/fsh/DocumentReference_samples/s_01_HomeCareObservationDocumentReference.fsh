@@ -1,4 +1,4 @@
-Instance: instanceHomeCareObservationDocumentReference
+/*Instance: instanceHomeCareObservationDocumentReference
 InstanceOf: HomeCareObservationDocumentReference
 Usage: #example
 //* meta.profile = "https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/homecare-observation-documentreference"
@@ -33,7 +33,7 @@ Usage: #example
 * context.facilityType = urn:oid:2.16.840.1.113883.6.96#550621000005101 "hjemmesygeplejeenhed"
 * context.practiceSetting = urn:oid:2.16.840.1.113883.6.96#658161000005107 "hjemmesygepleje"
 * context.sourcePatientInfo = Reference(instanceXDSSourcePatient)
-
+*/
 Instance: instanceXDSAuthorPerson
 InstanceOf: Practitioner
 Usage: #inline
