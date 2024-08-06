@@ -1,5 +1,5 @@
 // Define the extensions for the Standard Business Document Header
-
+/*
 Extension: HeaderVersion
 Id: header-version
 Title: "Header Version"
@@ -81,3 +81,4 @@ Description: "Document identification details"
     type 1..1 MS and
     instanceIdentifier 1..1 MS and
     creationDateAndTime 1..1 MS
+*/

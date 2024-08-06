@@ -33,7 +33,7 @@ Usage: #example
 * context.facilityType = urn:oid:2.16.840.1.113883.6.96#550621000005101 "hjemmesygeplejeenhed"
 * context.practiceSetting = urn:oid:2.16.840.1.113883.6.96#658161000005107 "hjemmesygepleje"
 * context.sourcePatientInfo = Reference(instanceXDSSourcePatient)
-*/
+
 Instance: instanceXDSAuthorPerson
 InstanceOf: Practitioner
 Usage: #inline
@@ -63,6 +63,7 @@ Usage: #inline
 * name[official].given[+] = "Test"
 * gender = #female
 * birthDate = "1991-02-02"
+*/
 /*
 // Metadata instance
 Instance: instanceHomeCareObservationDocumentReference
