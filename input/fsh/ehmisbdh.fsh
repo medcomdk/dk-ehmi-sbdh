@@ -1,3 +1,4 @@
+/*
 Profile: StandardBusinessDocumentHeader
 Parent: Basic
 Title: "Standard Business Document Header"
@@ -124,7 +125,7 @@ Description: "Document identification details"
     type 1..1 MS and
     instanceIdentifier 1..1 MS and
     creationDateAndTime 1..1 MS
-
+*/
 /*Profile: EhmiSBDH
 Parent: Bundle
 Description: "An example profile of the Basic resource."
