@@ -5,7 +5,6 @@ Title: "Header Version"
 Description: "Header version of the Standard Business Document Header"
 * value[x] only string
 
-/*
 Extension: Identifier
 Id: identifier
 Title: "Identifier"
@@ -81,4 +80,3 @@ Description: "Document identification details"
     type 1..1 MS and
     instanceIdentifier 1..1 MS and
     creationDateAndTime 1..1 MS
-*/
