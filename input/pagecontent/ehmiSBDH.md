@@ -130,7 +130,7 @@ Always
 
 <br/>
 
-Sender indeholder i EHMI kun det mandatory element Identifier.
+Sender contains only the mandatory element Identifier.
 
 <br/>
 
@@ -138,25 +138,26 @@ Sender indeholder i EHMI kun det mandatory element Identifier.
 
 <br/>
 
-Indeholder attributten Authority, som jf. [Policy_identifiers], POLICY 6 Numeric Codes for Issuing Agencies, Always har værdien: "iso6523-actorid-upis"
- 
-Identifier repræsenterer GLN for afsender, hvor 
-- Værdien 0088: afspejler at typen er GLN.
-- Værdien efter 0088: afspejler GLN-nummeret.
+Contains the attribute Authority, which according to [Policy_identifiers], POLICY 6 Numeric Codes for Issuing Agencies, always has the value: "iso6523-actorid-upis"
+
+Identifier represents GLN of sender where
+
+- The value 0088: reflects that the type is GLN.
+- The value after 0088: reflects the GLN number.
 
 <br/>
 
     <Sender>
         <Identifier Authority="iso6523-actorid-upis">    
-            “0088:”+[GLN-nummer]
+            “0088:”+[GLN-number]
         </Identifier>
     </Sender>
 
 <br/>
 
-##### Hvis MedCom meddelelsen er af typen FHIR 
+##### If the MedCom message is of type FHIR 
 
-Hvis MedCom meddelelsen er af typen FHIR, da Always på følgende form:
+If the MedCom message is of type FHIR, then always in the following format:
 
 <br/>
 
@@ -168,11 +169,11 @@ Hvis MedCom meddelelsen er af typen FHIR, da Always på følgende form:
 
 <br/>
 
-##### Sender eksempel
+##### Sender example
 
 <br/>
 
-Uanset meddelelsestype vil det Always munde ud i følgende Sender/Identifier, hvor værdien efter 0088: selvfølgelig vil variere.
+Regardless of the message type, it will always result in the following Sender/Identifier, where the value after 0088: will of course vary.
 
     <Sender>
         <Identifier Authority="iso6523-actorid-upis">
@@ -186,7 +187,7 @@ Uanset meddelelsestype vil det Always munde ud i følgende Sender/Identifier, hv
 
 <br/>
 
-Receiver indeholder i EHMI kun det mandatory element Identifier.
+Receiver contains only the mandatory element Identifier.
 
 <br/>
 
@@ -194,27 +195,28 @@ Receiver indeholder i EHMI kun det mandatory element Identifier.
 
 <br/>
 
-Indeholder attributten Authority, som jf. [Policy_identifiers], POLICY 6 Numeric Codes for Issuing Agencies, Always har værdien: "iso6523-actorid-upis"
- Identifier repræsenterer GLN for modtager, hvor 
-- Værdien 0088: afspejler at typen er GLN-typenummeret.
-- Værdien efter 0088: afspejler GLN-nummeret.
+Contains the attribute Authority, which according to [Policy_identifiers], POLICY 6 Numeric Codes for Issuing Agencies, always has the value: "iso6523-actorid-upis"
 
+Identifier represents GLN of sender where
+
+- The value 0088: reflects that the type is GLN.
+- The value after 0088: reflects the GLN number.
 
 <br/>
 
     <Receiver>
         <Identifier Authority="iso6523-actorid-upis">    
-            “0088:”+[GLN-nummer]
+            “0088:”+[GLN-number]
         </Identifier>
     </Receiver>' 
 
 <br/>
 
-##### Hvis MedCom meddelelsen er af typen FHIR 
+##### If the MedCom message is of type FHIR 
 
 <br/>
 
-Hvis MedCom meddelelsen er af typen FHIR, da Always på følgende form:
+If the MedCom message is of type FHIR, then always in the following format:
 
     <Receiver>
         <Identifier Authority="iso6523-actorid-upis">    
@@ -224,11 +226,11 @@ Hvis MedCom meddelelsen er af typen FHIR, da Always på følgende form:
 
 <br/>
 
-##### Receiver eksempel:
+##### Receiver example:
 
 <br/>
 
-Uanset meddelelsestype vil det Always munde ud i følgende Receiver/Identifier, hvor værdien efter 0088: selvfølgelig vil variere.
+Regardless of the message type, it will always result in the following Receiver/Identifier, where the value after 0088: will of course vary.
 
     <Receiver>
         <Identifier Authority="iso6523-actorid-upis">0088:5790000201389    </Identifier>
@@ -242,19 +244,20 @@ Uanset meddelelsestype vil det Always munde ud i følgende Receiver/Identifier, 
 
 ##### Standard
 
-Vi opererer med 4 type standarder, som har hvert sit prefix ifm. standarden
+EHMI operates with 4 types of standards, each of which has its own prefix according to the standard
+
 - FHIR 
 - ebxml
-- OIOXML (beskrives I en senere version af standarden)
-- Edifact (beskrives I en senere version af standarden)
+- OIOXML (described in a later version of the standard)
+- Edifact (described in a later version of the standard)
 
 <br/>
 
-###### Hvis MedCom meddelelsen er af typen FHIR 
+###### If the MedCom message is of type FHIR 
 
 <br/>
 
-Hvis MedCom meddelelsen er en OIOXML, da Always på følgende form:
+If the MedCom message is of type FHIR, then always in the following format:
 
     <DocumentInformation>
         <Standard>
@@ -264,7 +267,7 @@ Hvis MedCom meddelelsen er en OIOXML, da Always på følgende form:
 
 <br/>
 
-Meddelelseseksempel: 
+Message example: 
 
 <br/>
 
@@ -274,7 +277,7 @@ Meddelelseseksempel:
 
 <br/>
 
-###### Hvis MedCom meddelelsen er af typen EHMI EnvelopeReceipt
+###### If the MedCom message is of type EHMI EnvelopeReceipt
 
 <br/>
 
@@ -292,7 +295,7 @@ Always
 
 <br/>
 
-SBDH-envelope eksempel:
+SBDH-envelope example:
 
 <br/>
 
@@ -308,23 +311,23 @@ SBDH-envelope eksempel:
 
 <br/>
 
-Er den indeholdte meddelelses version på formen
+Is the contained message version on the form
 
 <br/>
 
     <DocumentInformation>
         …
-        <TypeVersion>[Sti til typeversionen]</TypeVersion>
+        <TypeVersion>[Path to the type version]</TypeVersion>
         …
     </DocumentInformation>
 
 <br/>
 
-###### Hvis MedCom meddelelsen er af typen FHIR 
+###### If the MedCom message is of type FHIR 
 
 <br/>
 
-Hvis MedCom meddelelsen er af typen FHIR, da Always på følgende form:
+If the MedCom message is of type FHIR, then always in the following format:
 
     <DocumentInformation>
         …
@@ -336,7 +339,7 @@ Hvis MedCom meddelelsen er af typen FHIR, da Always på følgende form:
 
 <br/>
 
-Meddelelseseksempel:
+Message example:
 
 <br/>
 
@@ -364,7 +367,7 @@ Always
 
 <br/>
 
-EHMI EnvelopeReceipt eksempel:
+EHMI EnvelopeReceipt example:
 
 <br/>
 
@@ -384,7 +387,7 @@ InstanceIdentifier vil blive genereret af den afsendende MSH og er uanset om det
 
     <InstanceIdentifier>[generated UUID]</InstanceIdentifier>	
 
-Eksempel:
+example:
 
 <br/>
 
@@ -413,7 +416,7 @@ Meddelelse:
 
 <br/>
 
-###### Hvis MedCom meddelelsen er af typen FHIR 
+###### If the MedCom message is of type FHIR 
 
 <br/>
 
@@ -427,7 +430,7 @@ Hvis MedCom meddelelsen er en FHIR, da Always på følgende form:
 
 <br/>
 
-Meddelelseseksempel:
+Message example:
 
 <br/>
 
@@ -459,7 +462,7 @@ Udfaldsrum for disse ebXML Business Process Signals er:
 
 <br/>
 
-Envelope Kvitteringseksempel:
+Envelope Kvitteringsexample:
 
 <br/>
 
@@ -503,7 +506,7 @@ Always på formen: [YYYY-MM-DD]T[TT-MM-SS]+[offset-to-UTC]
 
 <br/>
 
-Eksempel:
+example:
 
 <br/>
 
@@ -515,7 +518,7 @@ Eksempel:
 
 <br/>
 
-##### DocumentInformation samlet meddelelseseksempel
+##### DocumentInformation samlet Message example
 
     <DocumentIdentification>
 	    <Standard>homecareobservation-message</Standard>
@@ -528,7 +531,7 @@ Eksempel:
 
 <br/>
 
-##### DocumentInformation samlet kvitteringseksempel
+##### DocumentInformation samlet kvitteringsexample
 
 <br/>
 
@@ -593,7 +596,7 @@ Værdierne hentes fra MedComs standardkatalog og er her repræsenteret ved de v�
 
 <br/>
 
-MedCom FHIR Meddelelseseksempel 
+MedCom FHIR Message example 
 
 <br/>
 
@@ -621,7 +624,7 @@ MedCom FHIR Meddelelseseksempel
 
 <br/>
 
-DOCUMENTID EHMI EnvelopeReceipt eksempel:
+DOCUMENTID EHMI EnvelopeReceipt example:
 
 <br/>
 
@@ -652,7 +655,7 @@ I 4-corner modellen  sendes SDN-emergence-registreringen med til SMP, så afsend
 
 <br/>
 
-PROCESSID for SDN Eksempel
+PROCESSID for SDN example
 
 <br/>
 
@@ -680,7 +683,7 @@ Always
 
 ##### PATIENTID
 
-Patientens CPR nummer indgår som identifier til brug for EDS Forsendelsesstatus og XDS-metadata. 
+Patientens CPR number indgår som identifier til brug for EDS Forsendelsesstatus og XDS-metadata. 
 
 <br/>
 
@@ -692,7 +695,7 @@ Patientens CPR nummer indgår som identifier til brug for EDS Forsendelsesstatus
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-PATIENTID for MedCom FHIR meddelelser - eksempel:
+PATIENTID for MedCom FHIR meddelelser - example:
 
     <Scope>
         <Type>PATIENTID</Type>
@@ -717,7 +720,7 @@ SENDERID for MedCom FHIR meddelelser:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-SENDERID for MedCom FHIR meddelelser - eksempel:
+SENDERID for MedCom FHIR meddelelser - example:
 
     <Scope>
 	    <Type>SENDERID</Type> 
@@ -740,7 +743,7 @@ RECEIVERID for MedCom FHIR meddelelser:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-RECEIVERID for MedCom FHIR meddelelser - eksempel:
+RECEIVERID for MedCom FHIR meddelelser - example:
 
     <Scope>
 	    <Type>RECEIVERID</Type> 
@@ -771,7 +774,7 @@ MESSAGEIDENTIFIER er den indeholdte meddelelses MessageHeader.id, bl.a. til brug
     </Scope>
 
 
-MESSAGEIDENTIFIER eksempel:
+MESSAGEIDENTIFIER example:
 
     <Scope>
 	    <Type>MESSAGEIDENTIFIER</Type> 
@@ -781,7 +784,7 @@ MESSAGEIDENTIFIER eksempel:
 
 <br/>
 
-###### Hvis MedCom meddelelsen er af typen EHMI EnvelopeReceipt
+###### If the MedCom message is of type EHMI EnvelopeReceipt
 
     <Scope>
 	    <Type>MESSAGEIDENTIFIER</Type> 
@@ -792,7 +795,7 @@ MESSAGEIDENTIFIER eksempel:
     </Scope>
 
 
-MESSAGEIDENTIFIER eksempel:
+MESSAGEIDENTIFIER example:
 
     <Scope>
 	    <Type>MESSAGEIDENTIFIER</Type> 
@@ -816,7 +819,7 @@ MESSAGEENVELOPEIDENTIFIER er den indeholdte meddelelses Bundle.id, bl.a. til bru
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-MESSAGEENVELOPEIDENTIFIER eksempel:
+MESSAGEENVELOPEIDENTIFIER example:
     
     <Scope>
 	    <Type>MESSAGEENVELOPEIDENTIFIER</Type> 
@@ -843,7 +846,7 @@ Er kun relevant når SBD/SBDH/DocumentInformation/Standard.value = “ebbp-signa
          <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-ORIGINALMESSAGEIDENTIFIER eksempel:
+ORIGINALMESSAGEIDENTIFIER example:
 
     <Scope>
 	    <Type>ORIGINALMESSAGEIDENTIFIER</Type> 
@@ -869,7 +872,7 @@ Er kun relevant når SBD/SBDH/DocumentInformation/Standard.value = “ebbp-signa
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-ORIGINALMESSAGEENVELOPEIDENTIFIER eksempel:
+ORIGINALMESSAGEENVELOPEIDENTIFIER example:
 
     <Scope>
 	    <Type>ORIGINALMESSAGEENVELOPEIDENTIFIER</Type> 
@@ -895,7 +898,7 @@ Er kun relevant når SBD/SBDH/DocumentInformation/Standard.value = “ebbp-signa
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-ORIGINALMESSAGESTANDARD eksempel:
+ORIGINALMESSAGESTANDARD example:
 
     <Scope>
 	    <Type>ORIGINALMESSAGESTANDARD</Type> 
@@ -920,7 +923,7 @@ Er kun relevant når SBD/SBDH/DocumentInformation/Standard.value = “ebbp-signa
     </Scope>
 
 
-ORIGINALMESSAGEVERSION eksempel:
+ORIGINALMESSAGEVERSION example:
 
     <Scope>
 	    <Type>ORIGINALMESSAGEVERSION</Type> 
@@ -946,7 +949,7 @@ Er kun relevant når SBD/SBDH/DocumentInformation/Standard.value = “ebbp-signa
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-ORIGINALENVELOPEIDENTIFIER eksempel:
+ORIGINALENVELOPEIDENTIFIER example:
     
     <Scope>
 	    <Type>ORIGINALMESSAGEIDENTIFIER</Type> 
@@ -991,7 +994,7 @@ Always FHIR DocumentReference for den pågældende meddelelsestype med tilhøren
 
 <br/>
 
-#### XDS-Metadata (eksempel på encoded value)
+#### XDS-Metadata (example på encoded value)
 
 [TBD]
 
@@ -1060,7 +1063,7 @@ RequestingDocumentCreationDateTime er tidspunktet for original meddelelsens afse
         …
     <CorrelationInformation>
 
-Eksempel:
+example:
 
     <CorrelationInformation>
         <RequestingDocumentCreationDateTime>
@@ -1083,7 +1086,7 @@ RequestingDocumentInstanceIdentifier er originalkuvertens identifier = DocumentI
         …
     <CorrelationInformation>
 
-Eksempel:
+example:
 
     <CorrelationInformation>
         …
@@ -1106,7 +1109,7 @@ ExpectedResponseDateTime udtrykker den forventede tid, der max går indtil en SB
         </ExpectedResponseDateTime>
     <CorrelationInformation>
 
-Eksempel:
+example:
 
     <CorrelationInformation>
         …
@@ -1117,7 +1120,7 @@ Eksempel:
 
 <br/>
 
-##### CorrelationInformation samlet eksempel
+##### CorrelationInformation samlet example
 
     <CorrelationInformation>
 	    <RequestingDocumentCreationDateTime>
@@ -1207,7 +1210,7 @@ Always
 
 <br/>
 
-##### SBDH BusinessServices - Request eksempel
+##### SBDH BusinessServices - Request example
 
     <BusinessService>
         <BusinessServiceName>
@@ -1228,7 +1231,7 @@ Always
 
 <br/>
 
-##### Reliable messaging - BusinessService Request samlet eksempel
+##### Reliable messaging - BusinessService Request samlet example
 
     <BusinessScope>
         <Scope>
@@ -1311,7 +1314,7 @@ RequestingDocumentCreationDateTime er tidspunktet for originalkuvertens afsendel
 
 <br/>
 
-##### RequestingDocumentCreationDateTime eksempel
+##### RequestingDocumentCreationDateTime example
 
     <CorrelationInformation>
 		    <RequestingDocumentCreationDateTime>
@@ -1336,7 +1339,7 @@ RequestingSBDH/RequestingDocumentInstanceIdentifier
 
 <br/>
 
-##### RequestingDocumentInstanceIdentifier eksempel
+##### RequestingDocumentInstanceIdentifier example
 
     <CorrelationInformation>
 …
@@ -1354,7 +1357,7 @@ ExpectedResponseDateTime udelades i en SBDH ReceiptAcknowledgement
 
 <br/>
 
-##### CorrelationInformation samlet eksempel
+##### CorrelationInformation samlet example
 
     <CorrelationInformation>
 	    <RequestingDocumentCreationDateTime>
@@ -1455,7 +1458,7 @@ Always
 
 <br/>
 
-###### SBDH BusinessServices - Response eksempel
+###### SBDH BusinessServices - Response example
 
     <BusinessService>
         <BusinessServiceName>
@@ -1471,7 +1474,7 @@ Always
 
 <br/>
 
-###### Reliable messaging - BusinessService Response samlet eksempel
+###### Reliable messaging - BusinessService Response samlet example
     
     <BusinessScope>
         <Scope>
@@ -1509,9 +1512,9 @@ Always
 
 SBDH ReceiptAcknowledgement anvendes som positiv transportkvittering, og for at modtager af kvitteringen nemt kan korrelere meddelelse med originalkuverten, kan modtager checke på hhv. 
 •	Sender
-    - Identifier (GLN-nummer for afsender) 
+    - Identifier (GLN-number for afsender) 
 •	Receiver
-    - Identifier (GLN-nummer for modtager) 
+    - Identifier (GLN-number for modtager) 
 •	Scope
     - SENDERID (SORID for afsender)
     - RECEIVERID (SORID for modtager)
@@ -1539,7 +1542,7 @@ Samme datatype som SBDH.DocumentIdentification.InstanceIdentifier
         [RequestingSBDH/DocumentIdentification/InstanceIdentifier]
     </bpssignal:OriginalMessageIdentifier>		
 
-OriginalMessageIdentifier eksempel
+OriginalMessageIdentifier example
     
     <bpssignal:OriginalMessageIdentifier>
         9a6ff822-08de-5a6f-9670-9fa4b9d2f0dc
@@ -1555,7 +1558,7 @@ Samme datatype som SBDH/BusinessScope/Scope(DOCUMENTID)/InstanceIdentifier
         [RequestingSBDH/BusinessScope/Scope(DOCUMENTID)/InstanceIdentifier]
     </bpssignal:OriginalDocumentIdentifier>
 
-OriginalDocumentIdentifier eksempel
+OriginalDocumentIdentifier example
 
     <bpssignal:OriginalDocumentIdentifier>
         urn:dk:healthcare:prod:messaging:medcom: fhir:structuredefinition:[Bundle/MessageHeader/eventCoding/code.value ]#urn:dk:medcom:fhir:[Bundle/MessageHeader/definition/[value of MessageDefinition version-part]]
@@ -1571,7 +1574,7 @@ Always på formen: [YYYY-MM-DD]T[tt:mm:ss]+[offset-to-UTC]
         [RequestingSBDH/DocumentIdentification/CreationDateAndTime]
     </bpssignal:OriginalMessageDateTime>
 
-OriginalMessageDateTime eksempel
+OriginalMessageDateTime example
 
     <bpssignal:OriginalMessageDateTime>
         2024-03-01T16:19:00+01:00
@@ -1587,7 +1590,7 @@ Always på formen: [YYYY-MM-DD]T[tt:mm:ss]+[offset-to-UTC]
         [RespondingSBDH.DocumentIdentification.CreationDateAndTime]
     </bpssignal:ThisMessageDateTime>
 
-ThisMessageDateTime eksempel
+ThisMessageDateTime example
 
     <bpssignal:ThisMessageDateTime>
         2024-03-01T16:19:10+01.00
@@ -1601,7 +1604,7 @@ ThisMessageDateTime eksempel
         [RequestingSBDH:Receiver.Identifier]
     </bpssignal:FromPartyInfo>
 
-FromPartyInfo eksempel
+FromPartyInfo example
 
     <bpssignal:FromPartyInfo type=”iso6523-actorid-upis”>
         0088:5790000201389
@@ -1615,7 +1618,7 @@ FromPartyInfo eksempel
         [RequestingSBDH:Sender.Identifier]
     </bpssignal:ToPartyInfo> 
 
-ToPartyInfo eksempel
+ToPartyInfo example
 
     <bpssignal:ToPartyInfo type=”iso6523-actorid-upis”>
         0088:5790000121526
@@ -1624,7 +1627,7 @@ ToPartyInfo eksempel
  
 <br/>
 
-##### Samlet SBDH ReceiptAcknowledgement eksempel
+##### Samlet SBDH ReceiptAcknowledgement example
 
     <bpssignal:ReceiptAcknowledgement xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bpssignal="http://docs.oasis-open.org/ebxml-bp/ebbp-signals-2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/ebxml-bp/ebbp-signals-2.0 http://docs.oasis-open.org/ebxml-bp/2.0.4/ebbp-signals-2.0.4.xsd">
         <bpssignal:OriginalMessageIdentifier>
@@ -1721,7 +1724,7 @@ Indholdet defineres overordnet som en ReceiptException, men derudover er det mod
         </bpssignal:ReceiptException>
     </bpssignal:ExceptionType>
 
-ExceptionType eksempel
+ExceptionType example
 
     <bpssignal:ExceptionType>
         <bpssignal:ReceiptException>
@@ -1739,7 +1742,7 @@ Se ExceptionType
         [Reason]
     </bpssignal:Reason>
 
-Reason eksempel
+Reason example
 
     <bpssignal:Reason>
         Internal error
@@ -1754,7 +1757,7 @@ Se ExceptionType
         [ExceptionMessage]
     </bpssignal:ExceptionMessage>
 
-ExceptionMessage eksempel
+ExceptionMessage example
 
     <bpssignal:ExceptionMessage>
         javax.xml.bind.UnmarshalException 
@@ -1765,7 +1768,7 @@ ExceptionMessage eksempel
  
 <br/>
 
-##### Samlet Receipt Acknowledgement  Exception eksempel
+##### Samlet Receipt Acknowledgement  Exception example
 
     <?xml version="1.0" encoding="UTF-8"?>
     <bpssignal:Exception xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
