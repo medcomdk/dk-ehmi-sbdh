@@ -9,7 +9,7 @@ Extension: Identifier
 Id: identifier
 Title: "Identifier"
 Description: "Identifier for the sender or receiver"
-* value[x] only string
+* value[x] only Identifier
 
 Extension: Contact
 Id: contact
@@ -36,8 +36,8 @@ Id: sender
 Title: "Sender"
 Description: "Sender information"
 * extension contains
-    identifier 1..1 MS and
-    contactInformation 1..1 MS
+    Identifier 1..1 MS and
+    contactInformation 0..1 MS
 
 Extension: Receiver
 Id: receiver
@@ -45,7 +45,7 @@ Title: "Receiver"
 Description: "Receiver information"
 * extension contains
     identifier 1..1 MS and
-    contactInformation 1..1 MS
+    contactInformation 0..1 MS
 
 Extension: Standard
 Id: standard
