@@ -1,11 +1,11 @@
 // Define the extensions for the Standard Business Document Header
-/*
 Extension: HeaderVersion
 Id: header-version
 Title: "Header Version"
 Description: "Header version of the Standard Business Document Header"
 * value[x] only string
 
+/*
 Extension: Identifier
 Id: identifier
 Title: "Identifier"
