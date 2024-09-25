@@ -1,13 +1,25 @@
-Profile: StandardBusinessDocument
+Profile: EhmiStandardBusinessDocumentHeader
 Parent: Basic
-Title: "Standard Business Document"
-Description: "Profile for Standard Business Document Header as per the provided XSD."
+Title: "EHMI Standard Business Document Header"
+Description: "Profile for EHMI Standard Business Document Header."
 * extension contains HeaderVersion named HeaderVersion 1..1 MS 
 * extension[HeaderVersion].valueString 1..1
-* extension[HeaderVersion].valueString = "HeaderVersion"
+* extension[HeaderVersion].valueString = "1.0"
 * extension contains Sender named Sender 1..1 MS 
+//* extension[Sender].valueString 0..1
+//* extension[Sender].valueString = "1.0"
 * extension contains Receiver named Receiver 1..1 MS 
+//* extension[Receiver].valueString 0..1
 * extension contains DocumentIdentification named DocumentIdentification 1..1 MS 
+//* extension[DocumentIdentification].valueString 0..1
+
+/*
+Instance: StandardBusinessDocument-instance
+InstanceOf: StandardBusinessDocument
+Title: "EHMI Standard Business Document Instance"
+Description: "Profile for Standard Business Document Header as per the provided XSD."
+* extension[HeaderVersion].valueString = "1.0"
+*/
 
 /*
 Extension: HeaderVersion
