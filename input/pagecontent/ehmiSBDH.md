@@ -2,7 +2,7 @@
 
 <br/>
 
-## Indledning
+## Introduction
 
 <br/>
 
@@ -20,13 +20,13 @@ It is developed to
 
 <br/>
 
-## SBDH – Generelle elementer 
+## SBDH – General elements
 
-### Generelt
+### General
 
 <br/>
 
-StandardBusinessDocumentHeader (SBDH) er en konvolutspecifikation udstedt af GS1 og profileret til anvendelse i PEPPOL. Den understøttes af eDelivery's Access Points (AP) ift. AS4 protokollen. Vi følger i EHMI konventionerne, som er udlagt i PEPPOLs profilering, men udvider den også til at kunne passe på sundhedsområdet. SBDH er dog ingenting uden en omgivende container, kaldet StandardBusinessDocument (SBD).
+The StandardBusinessDocumentHeader (SBDH) is an envelope specification issued by GS1 and profiled for use in PEPPOL. It is supported by eDelivery's Access Points (AP) according to the AS4 protocol. We follow the EHMI conventions, which are laid out in PEPPOL's profiling, but also extend it to be able to take care of the health area. However, SBDH is nothing without a surrounding container, called StandardBusinessDocument (SBD).
 
 <br/>
 
@@ -34,12 +34,12 @@ StandardBusinessDocumentHeader (SBDH) er en konvolutspecifikation udstedt af GS1
 
 <br/>
 
-StandardBusinessDocument er som nævnt SBDHs omgivende container, og er en wrapper rundt om SBDH, og indeholder kun to elementer:
--	StandardBusinessDocumentHeader
--	BinaryContent (base64-encodet)
+StandardBusinessDocument is, as mentioned, SBDH's surrounding container, and is a wrapper around SBDH, and contains only two elements:
 
-Selvom StandardBusinessDocument, som sådan er konvolutten, bruges termen SBDH generelt om hele konvolutten, da det er dette indhold som er særligt interessant i meddelelsesudvekslingen.
-BinaryContent er elementet som indeholder en base64-encodet meddelelse eller kvittering for en afsendt SBDH.
+- DefaultBusinessDocumentHeader
+- BinaryContent (base64 encoded)
+
+Although the StandardBusinessDocument, as such, is the envelope, the term SBDH is generally used for the entire envelope, since it is this content that is of particular interest in the message exchange. BinaryContent is the element that contains a base64-encoded message or acknowledgment for a sent SBDH.
 
 <br/>
 
@@ -47,16 +47,18 @@ BinaryContent er elementet som indeholder en base64-encodet meddelelse eller kvi
 
 <br/>
 
-Indholdet i SBDH er for en stor dels vedkommende bestemt af hvorledes
--	de samme informationer registreres i EER
--	de samme informationer registreres i SMP
--	sammenhængen er til DokumentDelingServicen DDS 
--	sammenhængen er til EHMI EnvelopeReceipt
--	de samme informationer registreres i EDS
+The content of SBDH is largely determined by how
+
+- the same information is registered in EER
+- the same information is registered in SMP
+- the context is to NSP DokumentDelingService, DDS
+- the context is for EHMI EnvelopeReceipt
+- the same information is registered in EDS
 
 <br/>
 
-SBDH har en struktur, der overordnet er delt ind i følgende elementer:
+SBDH has a structure that is generally divided into the following elements:
+
 -	HeaderVersion
 -	Sender
 -	Receiver
@@ -66,28 +68,30 @@ SBDH har en struktur, der overordnet er delt ind i følgende elementer:
 
 <br/>
 
-#### SBDH for en MedCom meddelelse og en MedCom kvittering
+#### SBDH for a MedCom Message and a MedCom Acknowledgement
 
 <br/>
 
-I en SBDH for en MedCom meddelelse og en MedCom kvittering kan følgende metadata indgå:
--	Generelle SBDH metadata
--	Metadata for eDelivery generel meddelelseskommunikation
--	Metadata for sundhedsmeddelelseskommunikation
--	XDS Metadata for Dokumentdeling
--	Metadata for Reliable messaging - BusinessService Request
+In an SBDH for a MedCom Message and a MedCom Acknowledgement, the following metadata can be included:
+
+- General SBDH metadata
+- Metadata for eDelivery general message communications
+- Health Message Communication Metadata
+- XDS Metadata for Document Sharing
+- Metadata for Reliable messaging - BusinessService Request
 
 <br/>
 
-#### SBDH for en EHMI EnvelopeReceipt 
+#### SBDH for an EHMI EnvelopeReceipt 
 
 <br/>
 
-I en SBDH for en EHMI EnvelopeReceipt er der følgende metadata:
--	Generelle SBDH metadata
--	Metadata for eDelivery generel meddelelseskommunikation
--	Metadata for sundhedsmeddelelseskommunikation
--	Metadata for Reliable messaging - BusinessService Response
+In an SBDH for an EHMI EnvelopeReceipt there is the following metadata:
+
+- General SBDH metadata
+- Metadata for eDelivery general message communications
+- Health Message Communication Metadata
+- Metadata for Reliable messaging - BusinessService Response
 
 <br/>
 
