@@ -9,7 +9,7 @@ Extension: Identifier
 Id: identifier
 Title: "Identifier"
 Description: "Identifier for the sender or receiver"
-* value[x] only Identifier
+* value[x] only string
 
 Extension: Contact
 Id: contact
