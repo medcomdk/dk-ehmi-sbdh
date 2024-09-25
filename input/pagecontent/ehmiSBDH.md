@@ -95,11 +95,11 @@ In an SBDH for an EHMI EnvelopeReceipt there is the following metadata:
 
 <br/>
 
-### SBDH – Fast definerede generelle elementer
+### SBDH – general fixed defined elements
 
 <br/>
 
-SBDH’s generelle elementer er illustreret i nedenstående figur.
+SBDH's general elements are illustrated in the figure below.
 
 <br/>
 
@@ -107,13 +107,12 @@ SBDH’s generelle elementer er illustreret i nedenstående figur.
 
 <br/>
 
-BusinessScope har dog fået sit eget kapitel, da det afviger markant fra de øvrige.
-I det følgende præsenteres de generelle SBDH elementer for de foreløbigt 2 meddelelsestyper, som EHMI opererer med:
+BusinessScope has, however, been given its own chapter, as it differs significantly from the others. In the following, the general SBDH elements are presented for the provisionally 2 message types that EHMI operates with:
+
 -	FHIR
 -	EHMI EnvelopeReceipt 
 
-Hvor det er relevant, vil de generelle elementer være opdelt i underafsnit, der beskriver stien til værdien for det pågældende element i de respektive meddelelsestyper.
-Hvor de fleste elementer har almindeligt fokus på meddelelsesudveksling generelt og samspillet med SMP, giver særligt BusinessScope et sundhedsorienteret aftryk i specifikationen.
+Where applicable, the general elements will be divided into subsections that describe the path to the value of that element in the respective message types. Where most elements have a general focus on message exchange in general and the interaction with SMP, BusinessScope in particular gives a health-oriented imprint in the specification.
 
 <br/>
 
@@ -121,7 +120,7 @@ Hvor de fleste elementer har almindeligt fokus på meddelelsesudveksling generel
 
 <br/>
 
-Altid 
+Always 
 
     <HeaderVersion>1.0</HeaderVersion>
 
@@ -139,7 +138,7 @@ Sender indeholder i EHMI kun det mandatory element Identifier.
 
 <br/>
 
-Indeholder attributten Authority, som jf. [Policy_identifiers], POLICY 6 Numeric Codes for Issuing Agencies, altid har værdien: "iso6523-actorid-upis"
+Indeholder attributten Authority, som jf. [Policy_identifiers], POLICY 6 Numeric Codes for Issuing Agencies, Always har værdien: "iso6523-actorid-upis"
  
 Identifier repræsenterer GLN for afsender, hvor 
 - Værdien 0088: afspejler at typen er GLN.
@@ -157,7 +156,7 @@ Identifier repræsenterer GLN for afsender, hvor
 
 ##### Hvis MedCom meddelelsen er af typen FHIR 
 
-Hvis MedCom meddelelsen er af typen FHIR, da altid på følgende form:
+Hvis MedCom meddelelsen er af typen FHIR, da Always på følgende form:
 
 <br/>
 
@@ -173,7 +172,7 @@ Hvis MedCom meddelelsen er af typen FHIR, da altid på følgende form:
 
 <br/>
 
-Uanset meddelelsestype vil det altid munde ud i følgende Sender/Identifier, hvor værdien efter 0088: selvfølgelig vil variere.
+Uanset meddelelsestype vil det Always munde ud i følgende Sender/Identifier, hvor værdien efter 0088: selvfølgelig vil variere.
 
     <Sender>
         <Identifier Authority="iso6523-actorid-upis">
@@ -195,7 +194,7 @@ Receiver indeholder i EHMI kun det mandatory element Identifier.
 
 <br/>
 
-Indeholder attributten Authority, som jf. [Policy_identifiers], POLICY 6 Numeric Codes for Issuing Agencies, altid har værdien: "iso6523-actorid-upis"
+Indeholder attributten Authority, som jf. [Policy_identifiers], POLICY 6 Numeric Codes for Issuing Agencies, Always har værdien: "iso6523-actorid-upis"
  Identifier repræsenterer GLN for modtager, hvor 
 - Værdien 0088: afspejler at typen er GLN-typenummeret.
 - Værdien efter 0088: afspejler GLN-nummeret.
@@ -215,7 +214,7 @@ Indeholder attributten Authority, som jf. [Policy_identifiers], POLICY 6 Numeric
 
 <br/>
 
-Hvis MedCom meddelelsen er af typen FHIR, da altid på følgende form:
+Hvis MedCom meddelelsen er af typen FHIR, da Always på følgende form:
 
     <Receiver>
         <Identifier Authority="iso6523-actorid-upis">    
@@ -229,7 +228,7 @@ Hvis MedCom meddelelsen er af typen FHIR, da altid på følgende form:
 
 <br/>
 
-Uanset meddelelsestype vil det altid munde ud i følgende Receiver/Identifier, hvor værdien efter 0088: selvfølgelig vil variere.
+Uanset meddelelsestype vil det Always munde ud i følgende Receiver/Identifier, hvor værdien efter 0088: selvfølgelig vil variere.
 
     <Receiver>
         <Identifier Authority="iso6523-actorid-upis">0088:5790000201389    </Identifier>
@@ -255,7 +254,7 @@ Vi opererer med 4 type standarder, som har hvert sit prefix ifm. standarden
 
 <br/>
 
-Hvis MedCom meddelelsen er en OIOXML, da altid på følgende form:
+Hvis MedCom meddelelsen er en OIOXML, da Always på følgende form:
 
     <DocumentInformation>
         <Standard>
@@ -279,7 +278,7 @@ Meddelelseseksempel:
 
 <br/>
 
-Altid 
+Always 
 
 <br/>
 
@@ -325,7 +324,7 @@ Er den indeholdte meddelelses version på formen
 
 <br/>
 
-Hvis MedCom meddelelsen er af typen FHIR, da altid på følgende form:
+Hvis MedCom meddelelsen er af typen FHIR, da Always på følgende form:
 
     <DocumentInformation>
         …
@@ -351,7 +350,7 @@ Meddelelseseksempel:
 
 Hvis den indeholdte meddelelse er af typen EHMI EnvelopeReceipt 
 
-Altid 
+Always 
 
 <br/>
 
@@ -418,7 +417,7 @@ Meddelelse:
 
 <br/>
 
-Hvis MedCom meddelelsen er en FHIR, da altid på følgende form:
+Hvis MedCom meddelelsen er en FHIR, da Always på følgende form:
 
     <DocumentInformation>
         …
@@ -476,7 +475,7 @@ Envelope Kvitteringseksempel:
 
 <br/>
 
-Altid false: 
+Always false: 
 
 <br/>
 
@@ -490,7 +489,7 @@ Altid false:
 
 ##### CreationDateAndTime
 
-Altid på formen: [YYYY-MM-DD]T[TT-MM-SS]+[offset-to-UTC]
+Always på formen: [YYYY-MM-DD]T[TT-MM-SS]+[offset-to-UTC]
 
 <br/>
 
@@ -551,7 +550,7 @@ Eksempel:
 ## SBDH BusinessScopes 
 
 SBDH BusinessScopes er SBDH’s name-value pair konstruktion karakteriseret ved identifier. 
-Name er udtrykt ved Type-elementet og value er udtrykt ved InstanceIdentifier. Disse to skifter for hvert scope, mens Identifieren i EHMI sammenhæng altid er den samme: dk-medcom-messaging
+Name er udtrykt ved Type-elementet og value er udtrykt ved InstanceIdentifier. Disse to skifter for hvert scope, mens Identifieren i EHMI sammenhæng Always er den samme: dk-medcom-messaging
 I det følgende gennemgås de i de logiske sammenhænge, som de optræder i.
 
 <br/>
@@ -657,7 +656,7 @@ PROCESSID for SDN Eksempel
 
 <br/>
 
-Altid
+Always
 
     <Scope> 
 	    <Type>PROCESSID</Type> 
@@ -980,7 +979,7 @@ Dette scope gælder ikke for den primære udveksling mellem Afsender og Modtager
 
 #### SBDH BusinessScope/Scope for XDS-Metadata
 
-Altid FHIR DocumentReference for den pågældende meddelelsestype med tilhørende variable for at kunne identificere f.eks. patient og organisation
+Always FHIR DocumentReference for den pågældende meddelelsestype med tilhørende variable for at kunne identificere f.eks. patient og organisation
 
     <Scope>
 	    <Type>XDS-METADATA</Type> 
@@ -1035,7 +1034,7 @@ I det følgende er dette sat op som det ønskes i piloten.
 
 ##### EHMI-SBDH-ReceiptAcknowledgement- - Request
 
-I et EHMI-SBDH-ReceiptAcknowledgement- - Request er scope altid dette:
+I et EHMI-SBDH-ReceiptAcknowledgement- - Request er scope Always dette:
     <Scope>
 	    <Type>EHMI-SBDH-ReceiptAcknowledgement</Type>
 	    <InstanceIdentifier>Request</InstanceIdentifier>
@@ -1140,7 +1139,7 @@ Eksempel:
 
 ###### BusinessServiceName
 
-Altid 
+Always 
 
     <BusinessServiceName>
         EHMI-SBDH-ReceiptAcknowledgement-Request
@@ -1283,7 +1282,7 @@ I det følgende er dette sat op som det ønskes i piloten.
 
 ##### EHMI-SBDH-ReceiptAcknowledgement - Response
 
-I et EHMI-SBDH-ReceiptAcknowledgement - Response er scope altid dette:
+I et EHMI-SBDH-ReceiptAcknowledgement - Response er scope Always dette:
 
     <Scope>
 	    <Type>EHMI-SBDH-ReceiptAcknowledgement</Type>
@@ -1374,7 +1373,7 @@ ExpectedResponseDateTime udelades i en SBDH ReceiptAcknowledgement
 
 ###### BusinessServiceName
 
-Altid 
+Always 
 
     <BusinessServiceName>
         EHMI-SBDH-ReceiptAcknowledgement-Response
@@ -1384,14 +1383,14 @@ Altid
 
 ###### ServiceTransaction – TypeOfServiceTransaction
 
-Altid
+Always
     TypeOfServiceTransaction=”RespondingServiceTransaction”
 
 <br/>
 
 ###### ServiceTransaction – IsNonRepudiationRequired
 
-Altid
+Always
 
     IsNonRepudiationRequired=”false” 
 
@@ -1399,7 +1398,7 @@ Altid
 
 ###### ServiceTransaction – IsAuthenticationRequired
 
-Altid
+Always
 
     IsAuthenticationRequired=”false” 
 
@@ -1407,7 +1406,7 @@ Altid
 
 ###### ServiceTransaction – IsNonRepudiationOfReceiptRequired
 
-Altid
+Always
 
     IsNonRepudiationOfReceiptRequired=”false” 
 
@@ -1415,28 +1414,28 @@ Altid
 
 ###### ServiceTransaction – IsIntelligibleCheckRequired
 
-Altid
+Always
     IsIntelligibleCheckRequired=”false” 
 
 <br/>
 
 ###### ServiceTransaction – IsApplicationErrorResponseRequested
 
-Altid
+Always
     IsApplicationErrorResponseRequested=”false” 
 
 <br/>
 
 ###### ServiceTransaction – TimeToAcknowledgeReceipt
 
-Altid
+Always
     TimeToAcknowledgeReceipt=”0” (ms)
 
 <br/>
 
 ###### ServiceTransaction – TimeToAcknowledgeAcceptance
 
-Altid
+Always
 
     TimeToAcknowledgeAcceptance=”0” (=bruges pt ikke)
 
@@ -1444,14 +1443,14 @@ Altid
 
 ###### 0	ServiceTransaction – TimeToPerform
 
-Altid
+Always
     TimeToPerform=”0” (=bruges pt ikke)
 
 <br/>
 
 ###### ServiceTransaction - Recurrence
 
-Altid
+Always
     Recurrence=”0” (=bruges pt ikke)
 
 <br/>
@@ -1566,7 +1565,7 @@ OriginalDocumentIdentifier eksempel
 
 ###### OriginalMessageDateTime
 
-Altid på formen: [YYYY-MM-DD]T[tt:mm:ss]+[offset-to-UTC] 
+Always på formen: [YYYY-MM-DD]T[tt:mm:ss]+[offset-to-UTC] 
 
     <bpssignal:OriginalMessageDateTime>
         [RequestingSBDH/DocumentIdentification/CreationDateAndTime]
@@ -1582,7 +1581,7 @@ OriginalMessageDateTime eksempel
 
 ###### ThisMessageDateTime
 
-Altid på formen: [YYYY-MM-DD]T[tt:mm:ss]+[offset-to-UTC]
+Always på formen: [YYYY-MM-DD]T[tt:mm:ss]+[offset-to-UTC]
 
     <bpssignal:ThisMessageDateTime>
         [RespondingSBDH.DocumentIdentification.CreationDateAndTime]
