@@ -1,3 +1,17 @@
+Profile: StandardBusinessDocument
+Parent: Basic
+Title: "Standard Business Document"
+Description: "Profile for Standard Business Document Header as per the provided XSD."
+* extension contains HeaderVersion named HeaderVersion 1..1 MS 
+* extension[HeaderVersion].valueString 1..1
+* extension[HeaderVersion].valueString = "HeaderVersion"
+
+/*
+Extension: HeaderVersion
+* value[x] only string
+//* valueString = "Header version of the standard business document."
+*/
+
 /*
 Profile: StandardBusinessDocumentHeader
 Parent: Basic
