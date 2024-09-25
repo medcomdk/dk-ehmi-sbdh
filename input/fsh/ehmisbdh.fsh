@@ -5,6 +5,9 @@ Description: "Profile for Standard Business Document Header as per the provided 
 * extension contains HeaderVersion named HeaderVersion 1..1 MS 
 * extension[HeaderVersion].valueString 1..1
 * extension[HeaderVersion].valueString = "HeaderVersion"
+* extension contains Sender named Sender 1..1 MS 
+* extension contains Receiver named Receiver 1..1 MS 
+* extension contains DocumentIdentification named DocumentIdentification 1..1 MS 
 
 /*
 Extension: HeaderVersion
