@@ -57,8 +57,8 @@ Id: contact-information
 Title: "Contact Information"
 Description: "Contact information including contact name and email address"
 * extension contains
-    contact named Contact 1..1 MS 
-    and emailAddress named EmailAddress 0..1 MS 
+    Contact named Contact 1..1 MS 
+    and EmailAddress named EmailAddress 0..1 MS 
 /*
     and faxNumber 0..1 MS 
     and TelephoneNumber 0..1 MS 
@@ -83,9 +83,9 @@ Id: document-identification
 Title: "Document Identification"
 Description: "Document identification details"
 * extension contains
-    standard named Standard 1..1 MS 
-    and typeVersion named TypeVersion 1..1 MS
-    and type named Type 1..1 MS 
+    Standard named Standard 1..1 MS 
+    and TypeVersion named TypeVersion 1..1 MS
+    and Type named Type 1..1 MS 
     and uuid-instance-identifier named InstanceIdentifier 1..1 MS
     and sbdh-date-and-time named creationDateAndTime 1..1 MS
 
