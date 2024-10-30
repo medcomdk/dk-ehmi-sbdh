@@ -44,7 +44,7 @@ Although the StandardBusinessDocument, as such, is the envelope, the term SBDH i
 <br/>
 
 <!--img src="ehmiSBDH_Document.png" alt="EHMI StandardBusinessDocument" /><br/-->
-<img src="ClassSbdBasic.png" alt="EHMI StandardBusinessDocument" /><br/>
+<img src="ClassSbdBasic.png" alt="EHMI StandardBusinessDocument" style="width:100%;height:auto;margin:100px,20px"/><br/>
 
 <br/>
 
