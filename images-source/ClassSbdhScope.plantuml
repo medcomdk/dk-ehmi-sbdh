@@ -1,0 +1,19 @@
+@startuml SBD
+
+hide empty members
+
+class Scope
+{
+    String Type
+    String InstanceIdentifier
+    String Identifier
+}
+
+class "Scope" as Scope <<BusinessScope Element>>
+class "CorrelationInformation" as CorrelationInformation <<Scope Element>>
+class "BusinessService" as BusinessService <<Scope Element>>
+
+Scope "1" *-- "0..1" CorrelationInformation
+Scope "1" *-- "0..1" BusinessService
+
+@enduml

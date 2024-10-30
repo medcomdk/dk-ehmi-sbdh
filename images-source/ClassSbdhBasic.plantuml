@@ -1,0 +1,52 @@
+@startuml SBD
+
+class HeaderVersion
+{
+    String HeaderVersion
+}
+
+class Sender
+{
+    String Identifier
+    String Authority
+}
+
+class Receiver
+{
+    String Identifier
+    String Authority
+}
+
+class DocumentInformation
+{
+    String Standard
+    String TypeVersion
+    String InstanceIdentifier
+    String Type
+    String MultipleType
+    String CreationDateAndTime
+}
+
+class BusinessScope
+{
+    Class Scope
+}
+
+class "StandardBusinessDocumentHeader" as SBDH <<SBD Header (SBDH)>>
+class "HeaderVersion" as HeaderVersion <<SBDH element>>
+class "Sender" as Sender <<SBDH element>>
+class "Receiver" as Receiver <<SBDH element>>
+class "DocumentInformation" as DocumentInformation <<SBDH element>>
+class "Manifest" as Manifest <<SBDH element>>
+class "BusinessScope" as BusinessScope <<SBDH element>>
+
+
+SBDH "1" *-- "1" HeaderVersion 
+SBDH "1" *-- "1" Sender 
+SBDH "1" *-- "1" Receiver 
+SBDH "1" *-- "1" DocumentInformation 
+SBDH "0" *-- "0" Manifest 
+SBDH "1" *-- "1" BusinessScope 
+
+
+@enduml

@@ -1,0 +1,21 @@
+@startuml SBD
+
+hide empty members
+
+class BusinessScope
+{
+}
+
+class Scope
+{
+    String Type
+    String InstanceIdentifier
+    String Identifier
+}
+
+class "BusinessScope" as BusinessScope <<SBDH Element>>
+class "Scope" as Scope <<BusinessScope Element>>
+
+BusinessScope "1" *-- "0..*" Scope
+
+@enduml
