@@ -974,9 +974,7 @@ Always FHIR DocumentReference for the relevant message type with associated vari
     </Scope>
 
 <br/>
-* As [DocumentReference-structure] can't be referenced in the above xml-snippet, you can find the structure to be included here:
-
-<a href="DocumentReference-instanceHomeCareObservationDocumentReference.xml" target="_blank">[DocumentReference-structure]</a>
+* As [DocumentReference-structure] can't be referenced in the above xml-snippet, you can find the example of the structure to be included here: <a href="DocumentReference-instanceHomeCareObservationDocumentReference.xml" target="_blank">[DocumentReference-structure]</a>
 
 ### Reliable messaging 
 
