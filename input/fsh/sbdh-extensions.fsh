@@ -1,4 +1,19 @@
-// Define the extensions for the Standard Business Document Header
+/* Define the extensions for the Standard Business Document Header
+Profile: EhmiSbdhPartner
+Parent: Basic
+Title: "EHMI Standard Business Document Header Partner"
+Description: "Profile for EHMI Standard Business Document Header Partner"
+* extension contains PartnerIdentification 1..1 MS 
+* extension contains contactInformation 1..1 MS 
+
+Profile: Sender
+Parent: EhmiSbdhPartner
+Title: "EHMI Standard Business Document Header Partner"
+
+Profile: Receiver
+Parent: EhmiSbdhPartner
+Title: "EHMI Standard Business Document Header Partner"
+*/
 
 // HeaderVersion element
 Extension: HeaderVersion
@@ -8,7 +23,7 @@ Description: "Header version of the Standard Business Document Header"
 * value[x] only string
 //* value[x] only string
 
-// Partner element
+//Partner element
 Extension: Partner
 Id: partner
 Title: "Partner"

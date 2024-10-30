@@ -1,4 +1,3 @@
-/*
 Instance: instanceHomeCareObservationDocumentReference
 InstanceOf: HomeCareObservationDocumentReference
 Usage: #example
@@ -12,7 +11,7 @@ Usage: #example
 * extension[=].valueString = "1.1.0"
 * masterIdentifier.system = "urn:ietf:rfc:3986"
 * masterIdentifier.value = "urn:uuid:fe27d893-6b9e-4e3d-91b0-72d033ce5c07"
-* identifier.valueString = "12c2deaf-389a-4f7d-8133-60b24c75cd7f"
+* identifier.value = "12c2deaf-389a-4f7d-8133-60b24c75cd7f"
 * status = #current
 * docStatus = #final
 * type = urn:oid:2.16.840.1.113883.6.1#55188-7 "Patient data Document"
@@ -48,7 +47,7 @@ InstanceOf: DkCoreOrganization
 Usage: #inline
 //* meta.profile = "http://hl7.dk/fhir/core/StructureDefinition/dk-core-organization"
 //* identifier.system = "urn:oid:1.2.208.176.1.1"
-* identifier.valueString = "61741000016007"
+* identifier.value = "61741000016007"
 * name = "Lægerne Hasseris Bymidte"
 
 Instance: instanceXDSSourcePatient
@@ -57,7 +56,7 @@ InstanceOf: https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/xds-sour
 Usage: #inline
 //* meta.profile = "https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/xds-source-patient"
 //* identifier.system = "urn:oid:1.2.208.176.1.2"
-* identifier.valueString = "0201919990"
+* identifier.value = "0201919990"
 * name[official].use = #official
 * name[official].family = "Lauridsen"
 * name[official].given[0] = "Else"
@@ -65,6 +64,7 @@ Usage: #inline
 * gender = #female
 * birthDate = "1991-02-02"
 
+/*
 // Metadata instance
 Instance: instanceHomeCareObservationDocumentReference
 //Instance: 77787891-083a-4d19-9e56-423e7a223e31

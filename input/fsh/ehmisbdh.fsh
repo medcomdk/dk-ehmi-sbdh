@@ -4,9 +4,9 @@ Title: "EHMI Standard Business Document Header"
 Description: "Profile for EHMI Standard Business Document Header."
 * extension contains HeaderVersion named HeaderVersion 1..1 MS 
 * extension[HeaderVersion].valueString 1..1
-* extension[HeaderVersion].valueString = "1.0"
+//* extension[HeaderVersion].valueString = "1.0"
 * extension contains Partner named Sender 1..1 MS 
-//* extension[Sender].valueString 0..1
+//* extension[Sender].Identifier 1..1
 //* extension[Sender].valueString = "1.0"
 * extension contains Partner named Receiver 1..1 MS 
 //* extension[Receiver].valueString 0..1
@@ -14,6 +14,12 @@ Description: "Profile for EHMI Standard Business Document Header."
 //* extension[DocumentIdentification].valueString 0..1
 
 /*
+Instance: ehmiSBDH
+InstanceOf: EhmiStandardBusinessDocumentHeader
+* extension[HeaderVersion].valueString = "1.0"
+* Sender.extension[Identifier].valueString = "x"
+* Receiver.extension[Identifier].valueString = "y"
+
 Instance: StandardBusinessDocument-instance
 InstanceOf: StandardBusinessDocument
 Title: "EHMI Standard Business Document Instance"
@@ -188,3 +194,4 @@ Description: "An example profile of the Basic resource."
 //* code = #adminact
 
 */
+
