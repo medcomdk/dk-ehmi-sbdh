@@ -83,9 +83,9 @@ Id: document-identification
 Title: "Document Identification"
 Description: "Document identification details"
 * extension contains
-    standard 1..1 MS 
-    and typeVersion 1..1 MS
-    and type 1..1 MS 
+    standard named Standard 1..1 MS 
+    and typeVersion named TypeVersion 1..1 MS
+    and type named Type 1..1 MS 
     and uuid-instance-identifier named InstanceIdentifier 1..1 MS
     and sbdh-date-and-time named creationDateAndTime 1..1 MS
 
@@ -111,7 +111,7 @@ Extension: UUIDInstanceIdentifier
 Id: uuid-instance-identifier
 Title: "UUID Instance Identifier"
 Description: "UUID instance identifier"
-* value[x] only string
+* value[x] only uuid
 //* value[x] only valueUuid
 
 Extension: SbdhDateAndTime
