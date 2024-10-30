@@ -1,4 +1,5 @@
-/*Instance: instanceHomeCareObservationDocumentReference
+/*
+Instance: instanceHomeCareObservationDocumentReference
 InstanceOf: HomeCareObservationDocumentReference
 Usage: #example
 //* meta.profile = "https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/homecare-observation-documentreference"
@@ -63,8 +64,7 @@ Usage: #inline
 * name[official].given[+] = "Test"
 * gender = #female
 * birthDate = "1991-02-02"
-*/
-/*
+
 // Metadata instance
 Instance: instanceHomeCareObservationDocumentReference
 //Instance: 77787891-083a-4d19-9e56-423e7a223e31

@@ -5,10 +5,10 @@ Description: "Profile for EHMI Standard Business Document Header."
 * extension contains HeaderVersion named HeaderVersion 1..1 MS 
 * extension[HeaderVersion].valueString 1..1
 * extension[HeaderVersion].valueString = "1.0"
-* extension contains Sender named Sender 1..1 MS 
+* extension contains Partner named Sender 1..1 MS 
 //* extension[Sender].valueString 0..1
 //* extension[Sender].valueString = "1.0"
-* extension contains Receiver named Receiver 1..1 MS 
+* extension contains Partner named Receiver 1..1 MS 
 //* extension[Receiver].valueString 0..1
 * extension contains DocumentIdentification named DocumentIdentification 1..1 MS 
 //* extension[DocumentIdentification].valueString 0..1
