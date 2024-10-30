@@ -47,7 +47,7 @@ InstanceOf: DkCoreOrganization
 Usage: #inline
 //* meta.profile = "http://hl7.dk/fhir/core/StructureDefinition/dk-core-organization"
 //* identifier.system = "urn:oid:1.2.208.176.1.1"
-* identifier.value = "61741000016007"
+* identifier[SOR-ID].value = "61741000016007"
 * name = "Lægerne Hasseris Bymidte"
 
 Instance: instanceXDSSourcePatient
