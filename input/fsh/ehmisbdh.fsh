@@ -1,5 +1,5 @@
 Profile: EhmiStandardBusinessDocumentHeader
-Parent: Basic
+Parent: DomainResource
 Title: "EHMI Standard Business Document Header"
 Description: "Profile for EHMI Standard Business Document Header."
 * extension contains HeaderVersion named HeaderVersion 1..1 MS 
