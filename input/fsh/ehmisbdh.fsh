@@ -1,5 +1,5 @@
 Profile: EhmiStandardBusinessDocumentHeader
-Parent: Resource
+Parent: Basic
 Title: "EHMI Standard Business Document Header"
 Description: "Profile for EHMI Standard Business Document Header."
 * extension contains HeaderVersion named HeaderVersion 1..1 MS 
@@ -12,14 +12,26 @@ Description: "Profile for EHMI Standard Business Document Header."
 //* extension[Receiver].valueString 0..1
 * extension contains DocumentIdentification named DocumentIdentification 1..1 MS 
 //* extension[DocumentIdentification].valueString 0..1
+* identifier 0..0
+* subject 0..0
+* created 0..0
+* author 0..0
 
-/*
 Instance: ehmiSBDH
 InstanceOf: EhmiStandardBusinessDocumentHeader
+* code = #transfer
 * extension[HeaderVersion].valueString = "1.0"
-* Sender.extension[Identifier].valueString = "x"
-* Receiver.extension[Identifier].valueString = "y"
+* extension[Sender].extension[PartnerIdentifier].valueString = "Sender-GLN"
+* extension[Sender].extension[Authority].valueString = "GLN-Authority"
+* extension[Receiver].extension[PartnerIdentifier].valueString = "Receiver-GLN"
+* extension[Receiver].extension[Authority].valueString = "GLN-Authority"
+* extension[DocumentIdentification].extension[Standard].valueString = "HCO"
+* extension[DocumentIdentification].extension[Type].valueString = "Bundle"
+* extension[DocumentIdentification].extension[TypeVersion].valueString = "HCOv1"
+* extension[DocumentIdentification].extension[uuid-instance-identifier].valueUuid = "uuid"
+* extension[DocumentIdentification].extension[sbdh-date-and-time].valueDateTime = "2025-01-01"
 
+/*
 Instance: StandardBusinessDocument-instance
 InstanceOf: StandardBusinessDocument
 Title: "EHMI Standard Business Document Instance"
