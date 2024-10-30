@@ -2,24 +2,6 @@
 
 <br/>
 
-## Introduction
-
-<br/>
-
-The EHMI Standard Business Document Header (ehmiSBDH) is a customized version of the PEPPOL SBDH.
-
-It is developed to
-
-- suit the direct messaging of clinical content in EHMI
-- handle reliable messaging at the eDelivery network level like VANSenvelope in the VANS network
-- handle the XDS Metadata that is needed when MedCom Messages are exchanged as “documents” in the XDS Framework
-- serve the ground for EDS Delivery Status
-- serve the ground for EHMI Statistics of message exchange
-
-[TBD]
-
-<br/>
-
 ## EHMI SBDH – General elements
 
 The StandardBusinessDocumentHeader (SBDH) is an envelope specification issued by GS1 and profiled for use in PEPPOL. It is supported by eDelivery's Access Points (AP) according to the AS4 protocol. We follow the EHMI conventions, which are laid out in PEPPOL's profiling, but also extend it to be able to take care of the health area. However, SBDH is nothing without a surrounding container, called StandardBusinessDocument (SBD).
@@ -545,7 +527,7 @@ SBDH BusinessScopes is the SBDH's name-value pair construction characterized by 
 
 <img src="ClassSbdhBusinessScopeBasic.png" alt="EHMI SBDH BusinessScope"  style="float:right;width:30%;height:auto;margin:30px,30px"/><br/>
 
-### General eDelivery message communication
+### eDelivery message communication
 
 <br/>
 
@@ -983,17 +965,18 @@ Always FHIR DocumentReference for the relevant message type with associated vari
 
 #### XDS-Metadata (example på encoded value)
 
-[TBD]
-
     <Scope>
 	    <Type>XDS-METADATA</Type> 
 	        <InstanceIdentifier>
-                <[CDATA: <a href="DocumentReference-instanceHomeCareObservationDocumentReference.xml" target="_blank">[DocumentReference-structure]</a>]>
+                <[CDATA: [DocumentReference-structure*]]>
             </InstanceIdentifier>
 	    <Identifier>dk-medcom-DocumentReference</Identifier>
     </Scope>
 
 <br/>
+* As [DocumentReference-structure] can't be referenced in the above xml-snippet, you can find the structure to be included here:
+
+<a href="DocumentReference-instanceHomeCareObservationDocumentReference.xml" target="_blank">[DocumentReference-structure]</a>
 
 ### Reliable messaging 
 
