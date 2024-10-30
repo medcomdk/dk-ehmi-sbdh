@@ -1,4 +1,4 @@
-# ehmiSBDH
+# EHMI Standard Business Document Header
 
 <br/>
 
@@ -20,11 +20,7 @@ It is developed to
 
 <br/>
 
-## SBDH – General elements
-
-### General
-
-<br/>
+## EHMI SBDH – General elements
 
 The StandardBusinessDocumentHeader (SBDH) is an envelope specification issued by GS1 and profiled for use in PEPPOL. It is supported by eDelivery's Access Points (AP) according to the AS4 protocol. We follow the EHMI conventions, which are laid out in PEPPOL's profiling, but also extend it to be able to take care of the health area. However, SBDH is nothing without a surrounding container, called StandardBusinessDocument (SBD).
 
@@ -71,8 +67,6 @@ SBDH has a structure that is generally divided into the following elements:
 
 #### SBDH for a MedCom Message and a MedCom Acknowledgement
 
-<br/>
-
 In an SBDH for a MedCom Message and a MedCom Acknowledgement, the following metadata can be included:
 
 - General SBDH metadata
@@ -85,8 +79,6 @@ In an SBDH for a MedCom Message and a MedCom Acknowledgement, the following meta
 
 #### SBDH for an EHMI EnvelopeReceipt 
 
-<br/>
-
 In an SBDH for an EHMI EnvelopeReceipt there is the following metadata:
 
 - General SBDH metadata
@@ -96,9 +88,7 @@ In an SBDH for an EHMI EnvelopeReceipt there is the following metadata:
 
 <br/>
 
-### SBDH – general fixed defined elements
-
-<br/>
+### SBDH – general fixed elements
 
 SBDH's general elements are illustrated in the figure below.
 
@@ -120,8 +110,6 @@ Where applicable, the general elements will be divided into subsections that des
 
 #### HeaderVersion
 
-<br/>
-
 Always 
 
     <HeaderVersion>1.0</HeaderVersion>
@@ -132,8 +120,8 @@ Always
 
 <br/>
 
-Sender contains only the mandatory element Identifier.
-
+ehmiSBDH Sender contains only the mandatory element Identifier.
+ 
 <br/>
 
 ##### Identifier
@@ -189,7 +177,7 @@ Regardless of the message type, it will always result in the following Sender/Id
 
 <br/>
 
-Receiver contains only the mandatory element Identifier.
+ehmiSBDH Receiver contains only the mandatory element Identifier.
 
 <br/>
 
@@ -249,7 +237,7 @@ Regardless of the message type, it will always result in the following Receiver/
 EHMI operates with 4 types of standards, each of which has its own prefix according to the standard
 
 - FHIR 
-- ebxml
+- eb
 - OIOXML (described in a later version of the standard)
 - Edifact (described in a later version of the standard)
 
@@ -557,7 +545,7 @@ SBDH BusinessScopes is the SBDH's name-value pair construction characterized by 
 
 <img src="ClassSbdhBusinessScopeBasic.png" alt="EHMI SBDH BusinessScope"  style="float:right;width:30%;height:auto;margin:30px,30px"/><br/>
 
-### BusinessScope for general eDelivery message communication
+### General eDelivery message communication
 
 <br/>
 
@@ -667,7 +655,7 @@ Always
 
 <br/>
 
-### SBDH BusinessScope – health message communication
+### Health message communication
 
 <br/>
 
@@ -961,7 +949,7 @@ ORIGINALENVELOPEIDENTIFIER example:
 
 <br/>
 
-### SBDH BusinessScope – XDS-Metadata
+### XDS-Metadata
 
 <br/>
 
@@ -997,9 +985,17 @@ Always FHIR DocumentReference for the relevant message type with associated vari
 
 [TBD]
 
+    <Scope>
+	    <Type>XDS-METADATA</Type> 
+	        <InstanceIdentifier>
+                <[CDATA: <a href="DocumentReference-instanceHomeCareObservationDocumentReference.xml" target="_blank">[DocumentReference-structure]</a>]>
+            </InstanceIdentifier>
+	    <Identifier>dk-medcom-DocumentReference</Identifier>
+    </Scope>
+
 <br/>
 
-### SBDH BusinessScope – Reliable messaging 
+### Reliable messaging 
 
 Reliable messaging is triggered by a request for the degree of reliable messaging desired from the sender, which is done using SBDH's BusinessService in the BusinessScope element.
 
