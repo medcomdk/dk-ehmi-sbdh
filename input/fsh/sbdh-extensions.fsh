@@ -57,8 +57,8 @@ Id: contact-information
 Title: "Contact Information"
 Description: "Contact information including contact name and email address"
 * extension contains
-    contact 1..1 MS 
-    and emailAddress 0..1 MS 
+    contact named Contact 1..1 MS 
+    and emailAddress named EmailAddress 0..1 MS 
 /*
     and faxNumber 0..1 MS 
     and TelephoneNumber 0..1 MS 
