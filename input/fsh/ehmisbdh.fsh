@@ -2,8 +2,8 @@
 
 Profile: EhmiStandardBusinessDocument
 Parent: Basic
-Title: "EHMI Standard Business Document Header"
-Description: "Profile for EHMI Standard Business Document Header."
+Title: "EHMI Standard Business Document"
+Description: "Profile for EHMI Standard Business Document"
 * extension contains EhmiStandardBusinessDocumentHeaderExt named EhmiStandardBusinessDocumentHeader 1..1 MS 
 * extension contains EhmiStandardBusinessDocumentBinaryContent named EhmiStandardBusinessDocumentBinaryContent 1..1 MS 
 * identifier 0..0
@@ -39,6 +39,8 @@ extension contains HeaderVersion named HeaderVersion 1..1 MS
 
 Instance: ehmiSBD
 InstanceOf: EhmiStandardBusinessDocument
+Title: "EHMI Standard Business Document"
+Description: "Profile for EHMI Standard Business Document"
 * extension[EhmiStandardBusinessDocumentHeader].extension[HeaderVersion].valueString = "1.0"
 * extension[EhmiStandardBusinessDocumentHeader].extension[SbdhSender].extension[PartnerIdentifier].valueString = "Sender-GLN"
 * extension[EhmiStandardBusinessDocumentHeader].extension[SbdhSender].extension[Authority].valueString = "iso6523-actorid-upis"
@@ -53,6 +55,8 @@ InstanceOf: EhmiStandardBusinessDocument
 
 Instance: ehmiSBDH
 InstanceOf: EhmiStandardBusinessDocumentHeader
+Title: "EHMI Standard Business Document Header"
+Description: "Profile for EHMI Standard Business Document Header."
 * extension[EhmiStandardBusinessDocumentHeader].extension[HeaderVersion].valueString = "1.0"
 * extension[EhmiStandardBusinessDocumentHeader].extension[SbdhSender].extension[PartnerIdentifier].valueString = "Sender-GLN"
 * extension[EhmiStandardBusinessDocumentHeader].extension[SbdhSender].extension[Authority].valueString = "iso6523-actorid-upis"
