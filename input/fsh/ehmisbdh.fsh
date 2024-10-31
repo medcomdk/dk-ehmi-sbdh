@@ -1,5 +1,59 @@
 //https://build.fhir.org/ig/medcomdk/dk_HomeCareObservations/branches/MessageDefinition-QA/Bundle-401cbc36-db1e-4fe0-bf90-6df331dde179.xml
 
+Profile: EhmiStandardBusinessDocumentBundle
+Parent: Bundle
+Title: "EHMI Standard Business Document Bundle"
+Description: "Profile for EHMI Standard Business Document Bundle"
+* type = #collection
+
+Profile: EhmiStandardBusinessDocumentHeaderBundle
+Parent: Bundle
+Title: "EHMI Standard Business Document Header Bundle"
+Description: "Profile for EHMI Standard Business Document Header Bundle"
+* type = #collection
+
+Profile: EhmiStandardBusinessDocumentHeaderBusinessScopeBundle
+Parent: Bundle
+Title: "EHMI Standard Business Document Header BusinessScope Bundle"
+Description: "Profile for EHMI Standard Business Document Header BusinessScope Bundle"
+* type = #collection
+
+Profile: EhmiStandardBusinessDocumentBinaryJson
+Parent: Binary
+Title: "EHMI Standard Business Document Binary"
+Description: "Profile for EHMI Standard Business Document Binary"
+* contentType 1..1 MS
+* contentType = #fhir+json
+* data 1..1 MS
+
+Instance: ehmiSBDBundle
+InstanceOf: EhmiStandardBusinessDocumentBundle
+Title: "EHMI Standard Business Document Bundle"
+Description: "Profile for EHMI Standard Business Document Bundle"
+* entry[+].fullUrl = "Bundle/ehmiSBDHBundle"
+* entry[=].resource = ehmiSBDHBundle
+* entry[+].fullUrl = "Binary/ehmiSBDBinaryJson"
+* entry[=].resource = ehmiSBDBinaryJson
+
+Instance: ehmiSBDHBundle
+InstanceOf: EhmiStandardBusinessDocumentHeaderBundle
+Title: "EHMI Standard Business Document Header Bundle"
+Description: "Profile for EHMI Standard Business Document Header Bundle"
+* entry[+].fullUrl = "Bundle/ehmiSBDHBusinessScopeBundle"
+* entry[=].resource = ehmiSBDHBusinessScopeBundle
+
+Instance: ehmiSBDHBusinessScopeBundle
+InstanceOf: EhmiStandardBusinessDocumentHeaderBusinessScopeBundle
+Title: "EHMI Standard Business Document Header BusinessScope Bundle"
+Description: "Profile for EHMI Standard Business Document Header BusinessScope Bundle"
+
+Instance: ehmiSBDBinaryJson
+InstanceOf: EhmiStandardBusinessDocumentBinaryJson
+Title: "EHMI Standard Business Document Binary"
+Description: "Profile for EHMI Standard Business Document Binary"
+* contentType = #fhir+json
+* data = "Base64Binary gryf"
+
 Profile: EhmiStandardBusinessDocument
 Parent: Basic
 Title: "EHMI Standard Business Document"
