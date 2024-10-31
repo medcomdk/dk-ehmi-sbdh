@@ -142,7 +142,7 @@ Id: businessScope
 Title: "BusinessScope"
 Description: "BusinessScope"
 * extension contains
-    scope 1..* MS 
+    Scope named Scope 0..* MS 
 
 Extension: Scope
 Id: scope
