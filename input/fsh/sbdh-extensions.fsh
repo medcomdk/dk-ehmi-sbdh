@@ -40,6 +40,22 @@ Description: "Identifier for the sender or receiver"
     PartnerIdentifier named Identifier 1..1 MS and
     Authority named Authority 1..1 MS
 
+Extension: SbdhSender
+Id: sbdhSender
+Title: "sbdhSender Identification"
+Description: "Identifier for the sbdhSender"
+* extension contains
+    PartnerIdentifier named Identifier 1..1 MS and
+    Authority named Authority 1..1 MS
+
+Extension: SbdhReceiver
+Id: sbdhReceiver
+Title: "sbdhReceiver Identification"
+Description: "Identifier for the sbdhReceiver"
+* extension contains
+    PartnerIdentifier named Identifier 1..1 MS and
+    Authority named Authority 1..1 MS
+
 Extension: PartnerIdentifier
 Id: partnerIdentifier
 Title: "PartnerIdentifier"
