@@ -1,14 +1,31 @@
+//https://build.fhir.org/ig/medcomdk/dk_HomeCareObservations/branches/MessageDefinition-QA/Bundle-401cbc36-db1e-4fe0-bf90-6df331dde179.xml
+
+Profile: EhmiStandardBusinessDocument
+Parent: Basic
+Title: "EHMI Standard Business Document Header"
+Description: "Profile for EHMI Standard Business Document Header."
+* extension contains EhmiStandardBusinessDocumentHeaderExt named EhmiStandardBusinessDocumentHeader 1..1 MS 
+* extension contains EhmiStandardBusinessDocumentBinaryContent named EhmiStandardBusinessDocumentBinaryContent 1..1 MS 
+
 Profile: EhmiStandardBusinessDocumentHeader
 Parent: Basic
 Title: "EHMI Standard Business Document Header"
 Description: "Profile for EHMI Standard Business Document Header."
-* extension contains HeaderVersion named HeaderVersion 1..1 MS 
+* extension contains EhmiStandardBusinessDocumentHeaderExt named EhmiStandardBusinessDocumentHeader 1..1 MS 
+/* 
+extension contains HeaderVersion named HeaderVersion 1..1 MS 
 * extension[HeaderVersion].valueString 1..1
-//* extension[HeaderVersion].valueString = "1.0"
 * extension contains SbdhSender named Sender 1..1
 * extension contains SbdhReceiver named Receiver 1..1
 * extension contains DocumentIdentification named DocumentIdentification 1..1 MS 
 * extension contains BusinessScope named BusinessScope 0..1 MS 
+*/
+/* BusinessScope.Scope ^slicing.discriminator.type = #value
+* BusinessScope.Scope ^slicing.discriminator.path = "$this"
+* BusinessScope.Scope ^slicing.rules = #open // allow other codes
+* BusinessScope.Scope contains
+
+ */   
 * identifier 0..0
 * subject 0..0
 * created 0..0
@@ -17,16 +34,16 @@ Description: "Profile for EHMI Standard Business Document Header."
 
 Instance: ehmiSBDH
 InstanceOf: EhmiStandardBusinessDocumentHeader
-* extension[HeaderVersion].valueString = "1.0"
-* extension[SbdhSender].extension[PartnerIdentifier].valueString = "Sender-GLN"
-* extension[SbdhSender].extension[Authority].valueString = "iso6523-actorid-upis"
-* extension[SbdhReceiver].extension[PartnerIdentifier].valueString = "Receiver-GLN"
-* extension[SbdhReceiver].extension[Authority].valueString = "iso6523-actorid-upis"
-* extension[DocumentIdentification].extension[Standard].valueString = "HomeCareObservation"
-* extension[DocumentIdentification].extension[Type].valueString = "Bundle"
-* extension[DocumentIdentification].extension[TypeVersion].valueString = "HomeCareObservation.v1"
-* extension[DocumentIdentification].extension[uuid-instance-identifier].valueUuid = "urn:uuid:1d9b1528-2448-40f5-9191-977872320527"
-* extension[DocumentIdentification].extension[sbdh-date-and-time].valueDateTime = "2025-01-01"
+* extension[EhmiStandardBusinessDocumentHeader].extension[HeaderVersion].valueString = "1.0"
+* extension[EhmiStandardBusinessDocumentHeader].extension[SbdhSender].extension[PartnerIdentifier].valueString = "Sender-GLN"
+* extension[EhmiStandardBusinessDocumentHeader].extension[SbdhSender].extension[Authority].valueString = "iso6523-actorid-upis"
+* extension[EhmiStandardBusinessDocumentHeader].extension[SbdhReceiver].extension[PartnerIdentifier].valueString = "Receiver-GLN"
+* extension[EhmiStandardBusinessDocumentHeader].extension[SbdhReceiver].extension[Authority].valueString = "iso6523-actorid-upis"
+* extension[EhmiStandardBusinessDocumentHeader].extension[DocumentIdentification].extension[Standard].valueString = "HomeCareObservation"
+* extension[EhmiStandardBusinessDocumentHeader].extension[DocumentIdentification].extension[Type].valueString = "Bundle"
+* extension[EhmiStandardBusinessDocumentHeader].extension[DocumentIdentification].extension[TypeVersion].valueString = "HomeCareObservation.v1"
+* extension[EhmiStandardBusinessDocumentHeader].extension[DocumentIdentification].extension[uuid-instance-identifier].valueUuid = "urn:uuid:1d9b1528-2448-40f5-9191-977872320527"
+* extension[EhmiStandardBusinessDocumentHeader].extension[DocumentIdentification].extension[sbdh-date-and-time].valueDateTime = "2025-01-01"
 
 /*
 Instance: StandardBusinessDocument-instance
