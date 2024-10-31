@@ -6,6 +6,11 @@ Title: "EHMI Standard Business Document Header"
 Description: "Profile for EHMI Standard Business Document Header."
 * extension contains EhmiStandardBusinessDocumentHeaderExt named EhmiStandardBusinessDocumentHeader 1..1 MS 
 * extension contains EhmiStandardBusinessDocumentBinaryContent named EhmiStandardBusinessDocumentBinaryContent 1..1 MS 
+* identifier 0..0
+* subject 0..0
+* created 0..0
+* author 0..0
+* code = #transfer 
 
 Profile: EhmiStandardBusinessDocumentHeader
 Parent: Basic
@@ -31,6 +36,20 @@ extension contains HeaderVersion named HeaderVersion 1..1 MS
 * created 0..0
 * author 0..0
 * code = #transfer 
+
+Instance: ehmiSBD
+InstanceOf: EhmiStandardBusinessDocument
+* extension[EhmiStandardBusinessDocumentHeader].extension[HeaderVersion].valueString = "1.0"
+* extension[EhmiStandardBusinessDocumentHeader].extension[SbdhSender].extension[PartnerIdentifier].valueString = "Sender-GLN"
+* extension[EhmiStandardBusinessDocumentHeader].extension[SbdhSender].extension[Authority].valueString = "iso6523-actorid-upis"
+* extension[EhmiStandardBusinessDocumentHeader].extension[SbdhReceiver].extension[PartnerIdentifier].valueString = "Receiver-GLN"
+* extension[EhmiStandardBusinessDocumentHeader].extension[SbdhReceiver].extension[Authority].valueString = "iso6523-actorid-upis"
+* extension[EhmiStandardBusinessDocumentHeader].extension[DocumentIdentification].extension[Standard].valueString = "HomeCareObservation"
+* extension[EhmiStandardBusinessDocumentHeader].extension[DocumentIdentification].extension[Type].valueString = "Bundle"
+* extension[EhmiStandardBusinessDocumentHeader].extension[DocumentIdentification].extension[TypeVersion].valueString = "HomeCareObservation.v1"
+* extension[EhmiStandardBusinessDocumentHeader].extension[DocumentIdentification].extension[uuid-instance-identifier].valueUuid = "urn:uuid:1d9b1528-2448-40f5-9191-977872320527"
+* extension[EhmiStandardBusinessDocumentHeader].extension[DocumentIdentification].extension[sbdh-date-and-time].valueDateTime = "2025-01-01"
+* extension[EhmiStandardBusinessDocumentBinaryContent].valueString = "Base64(HCO Message)"
 
 Instance: ehmiSBDH
 InstanceOf: EhmiStandardBusinessDocumentHeader
