@@ -7,25 +7,21 @@ Description: "Profile for EHMI Standard Business Document Header."
 //* extension[HeaderVersion].valueString = "1.0"
 * extension contains SbdhSender named Sender 1..1
 * extension contains SbdhReceiver named Receiver 1..1
-//* extension[Sender].Identifier 1..1
-//* extension[Sender].valueString = "1.0"
-//* extension contains Partner named Receiver 1..1 MS 
-//* extension[Receiver].valueString 0..1
 * extension contains DocumentIdentification named DocumentIdentification 1..1 MS 
-//* extension[DocumentIdentification].valueString 0..1
+* extension contains BusinessScope named BusinessScope 0..1 MS 
 * identifier 0..0
 * subject 0..0
 * created 0..0
 * author 0..0
+* code = #transfer 
 
 Instance: ehmiSBDH
 InstanceOf: EhmiStandardBusinessDocumentHeader
-* code = #transfer
 * extension[HeaderVersion].valueString = "1.0"
-* extension[Sender].extension[PartnerIdentifier].valueString = "Sender-GLN"
-* extension[Sender].extension[Authority].valueString = "iso6523-actorid-upis"
-* extension[Receiver].extension[PartnerIdentifier].valueString = "Receiver-GLN"
-* extension[Receiver].extension[Authority].valueString = "iso6523-actorid-upis"
+* extension[SbdhSender].extension[PartnerIdentifier].valueString = "Sender-GLN"
+* extension[SbdhSender].extension[Authority].valueString = "iso6523-actorid-upis"
+* extension[SbdhReceiver].extension[PartnerIdentifier].valueString = "Receiver-GLN"
+* extension[SbdhReceiver].extension[Authority].valueString = "iso6523-actorid-upis"
 * extension[DocumentIdentification].extension[Standard].valueString = "HomeCareObservation"
 * extension[DocumentIdentification].extension[Type].valueString = "Bundle"
 * extension[DocumentIdentification].extension[TypeVersion].valueString = "HomeCareObservation.v1"
