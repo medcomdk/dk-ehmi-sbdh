@@ -5,10 +5,11 @@ Description: "Profile for EHMI Standard Business Document Header."
 * extension contains HeaderVersion named HeaderVersion 1..1 MS 
 * extension[HeaderVersion].valueString 1..1
 //* extension[HeaderVersion].valueString = "1.0"
-* extension contains Partner named Sender 1..1 MS 
+* extension contains SbdhSender named Sender 1..1
+* extension contains SbdhReceiver named Receiver 1..1
 //* extension[Sender].Identifier 1..1
 //* extension[Sender].valueString = "1.0"
-* extension contains Partner named Receiver 1..1 MS 
+//* extension contains Partner named Receiver 1..1 MS 
 //* extension[Receiver].valueString 0..1
 * extension contains DocumentIdentification named DocumentIdentification 1..1 MS 
 //* extension[DocumentIdentification].valueString 0..1
@@ -22,13 +23,13 @@ InstanceOf: EhmiStandardBusinessDocumentHeader
 * code = #transfer
 * extension[HeaderVersion].valueString = "1.0"
 * extension[Sender].extension[PartnerIdentifier].valueString = "Sender-GLN"
-* extension[Sender].extension[Authority].valueString = "GLN-Authority"
+* extension[Sender].extension[Authority].valueString = "iso6523-actorid-upis"
 * extension[Receiver].extension[PartnerIdentifier].valueString = "Receiver-GLN"
-* extension[Receiver].extension[Authority].valueString = "GLN-Authority"
-* extension[DocumentIdentification].extension[Standard].valueString = "HCO"
+* extension[Receiver].extension[Authority].valueString = "iso6523-actorid-upis"
+* extension[DocumentIdentification].extension[Standard].valueString = "HomeCareObservation"
 * extension[DocumentIdentification].extension[Type].valueString = "Bundle"
-* extension[DocumentIdentification].extension[TypeVersion].valueString = "HCOv1"
-* extension[DocumentIdentification].extension[uuid-instance-identifier].valueUuid = "uuid"
+* extension[DocumentIdentification].extension[TypeVersion].valueString = "HomeCareObservation.v1"
+* extension[DocumentIdentification].extension[uuid-instance-identifier].valueUuid = "urn:uuid:1d9b1528-2448-40f5-9191-977872320527"
 * extension[DocumentIdentification].extension[sbdh-date-and-time].valueDateTime = "2025-01-01"
 
 /*
