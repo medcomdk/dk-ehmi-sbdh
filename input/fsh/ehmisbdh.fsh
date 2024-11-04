@@ -168,7 +168,7 @@ InstanceOf: EhmiStandardBusinessDocumentBinaryJson
 Title: "EHMI Standard Business Document Binary"
 Description: "Profile for EHMI Standard Business Document Binary"
 * contentType = #fhir+json
-* data = "HomeCareObservation Base64Binary"
+* data = "Base64Binary gryf"
 
 /*
 Profile: EhmiStandardBusinessDocument
