@@ -27,8 +27,8 @@ Title: "EHMI Standard Business Document Header"
 Description: "Profile for EHMI Standard Business Document Header."
 * extension contains HeaderVersion named HeaderVersion 1..1 MS 
 * extension[HeaderVersion].valueString 1..1
-* extension contains SbdhSender named Sender 1..1
-* extension contains SbdhReceiver named Receiver 1..1
+//* extension contains SbdhSender named Sender 1..1
+//* extension contains SbdhReceiver named Receiver 1..1
 * extension contains DocumentIdentification named DocumentIdentification 1..1 MS 
 * extension contains BusinessScope named BusinessScope 0..1 MS 
 
