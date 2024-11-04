@@ -12,11 +12,68 @@ Title: "EHMI Standard Business Document Header Bundle"
 Description: "Profile for EHMI Standard Business Document Header Bundle"
 * type = #collection
 
+Profile: EhmiStandardBusinessDocumentHeaderDocumentIdentificationBundle
+Parent: Bundle
+Title: "EHMI Standard Business Document Header DocumentIdentification Bundle"
+Description: "Profile for EHMI Standard Business Document Header DocumentIdentification Bundle"
+* type = #collection
+
+Profile: PartnerIdentification
+Parent: Endpoint
+Title: "Partner"
+Description: "Partner information"
+* status = #active
+* identifier.type 1..1
+//* identifier.type.coding.code = "iso6523-actorid-upis"
+* identifier.system = "http://gs1.org/gln"
+* identifier.id = "iso6523-actorid-upis"
+* identifier.value 1..1
+* connectionType = #hl7-fhir-msg //eDelivery
+* name 0..0
+* contact 0..1
+* managingOrganization 0..0
+* period 0..0
+* payloadMimeType 0..0
+* payloadType.coding.code = #ehmiMessage
+
+Profile: EhmiSbdhSender
+Parent: PartnerIdentification
+Title: "SbdhSender Partner"
+Description: "SbdhSender Partner information"
+
+Profile: EhmiSbdhReceiver
+Parent: PartnerIdentification
+Title: "SbdhReceiver Partner"
+Description: "SbdhReceiver Partner information"
+
+
 Profile: EhmiStandardBusinessDocumentHeaderBusinessScopeBundle
 Parent: Bundle
 Title: "EHMI Standard Business Document Header BusinessScope Bundle"
 Description: "Profile for EHMI Standard Business Document Header BusinessScope Bundle"
 * type = #collection
+
+Profile: EhmiSBDHScope
+Parent: Basic
+Title: "EHMI Standard Business Document Header Scope structure"
+Description: "Profile for EHMI Standard Business Document Header Scope structure"
+/* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "$this"
+* identifier ^slicing.rules = #open // allow other codes
+* identifier contains
+    Identifier 1..1 and 
+    InstanceIdentifier 1..1 
+* identifier[Identifier].*/
+/* identifier.type MS
+* identifier.system MS
+* identifier.value MS*/
+* identifier.type MS
+* identifier.value MS
+* code.coding.code MS
+* code.coding.system MS
+* subject 0..0
+* created 0..0
+* author 0..0
 
 Profile: EhmiStandardBusinessDocumentBinaryJson
 Parent: Binary
@@ -39,21 +96,81 @@ Instance: ehmiSBDHBundle
 InstanceOf: EhmiStandardBusinessDocumentHeaderBundle
 Title: "EHMI Standard Business Document Header Bundle"
 Description: "Profile for EHMI Standard Business Document Header Bundle"
+* entry[+].fullUrl = "Bundle/ehmiSBDHDocumentIdentificationBundle"
+* entry[=].resource = ehmiSBDHDocumentIdentificationBundle
+
+Instance: ehmiSBDHDocumentIdentificationBundle
+InstanceOf: EhmiStandardBusinessDocumentHeaderDocumentIdentificationBundle
+Title: "EHMI Standard Business Document Header DocumentIdentification Bundle"
+Description: "Profile for EHMI Standard Business Document Header DocumentIdentification Bundle"
+* entry[+].fullUrl = "Endpoint/ehmiSbdhSender"
+* entry[=].resource = ehmiSbdhSender
+* entry[+].fullUrl = "Endpoint/ehmiSbdhReceiver"
+* entry[=].resource = ehmiSbdhReceiver
 * entry[+].fullUrl = "Bundle/ehmiSBDHBusinessScopeBundle"
 * entry[=].resource = ehmiSBDHBusinessScopeBundle
+
+Instance: ehmiSbdhSender
+InstanceOf: EhmiSbdhSender
+Title: "EHMI Standard Business Document Header DocumentIdentification EhmiSbdhSender"
+Description: "Profile for EHMI Standard Business Document Header DocumentIdentification EhmiSbdhSender"
+* status = #active
+* identifier.type = #GLN
+* identifier.system = "http://gs1.org/gln"
+* identifier.id = "iso6523-actorid-upis"
+* identifier.value = "GLN12345"
+* connectionType = #hl7-fhir-msg //eDelivery
+* payloadType.coding.code = #ehmiMessage
+* address = "http://sender.dk/gln12345"
+
+Instance: ehmiSbdhReceiver
+InstanceOf: EhmiSbdhReceiver
+Title: "EHMI Standard Business Document Header DocumentIdentification EhmiSbdhReceiver"
+Description: "Profile for EHMI Standard Business Document Header DocumentIdentification EhmiSbdhReceiver"
+* status = #active
+* identifier.type = #GLN
+* identifier.system = "http://gs1.org/gln"
+* identifier.id = "iso6523-actorid-upis"
+* identifier.value = "GLN67890"
+* connectionType = #hl7-fhir-msg //eDelivery
+* payloadType.coding.code = #ehmiMessage
+* address = "http://receiver.dk/gln67890"
 
 Instance: ehmiSBDHBusinessScopeBundle
 InstanceOf: EhmiStandardBusinessDocumentHeaderBusinessScopeBundle
 Title: "EHMI Standard Business Document Header BusinessScope Bundle"
 Description: "Profile for EHMI Standard Business Document Header BusinessScope Bundle"
+* entry[+].fullUrl = "Basic/ehmiSBDHScopeDocumentId"
+* entry[=].resource = ehmiSBDHScopeDocumentId
+* entry[+].fullUrl = "Basic/ehmiSBDHScopeProcessId"
+* entry[=].resource = ehmiSBDHScopeProcessId
+
+Instance: ehmiSBDHScopeDocumentId
+InstanceOf: EhmiSBDHScope
+Title: "EHMI Standard Business Document Header Scope structure for DOCUMENTID"
+Description: "Profile for EHMI Standard Business Document Header Scope structure"
+* code = #urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:3.0
+* identifier.type.coding.code = #DOCUMENTID
+* identifier.value = "dk-medcom-messaging"
+* code.coding.system = "dk-medcom-messaging"
+
+Instance: ehmiSBDHScopeProcessId
+InstanceOf: EhmiSBDHScope
+Title: "EHMI Standard Business Document Header Scope structure for PROCESSID"
+Description: "Profile for EHMI Standard Business Document Header Scope structure"
+* code = #sdn-emergence
+* identifier.type.coding.code = #PROCESSID
+* identifier.value = "dk-medcom-messaging"
+* code.coding.system = "dk-medcom-messaging"
 
 Instance: ehmiSBDBinaryJson
 InstanceOf: EhmiStandardBusinessDocumentBinaryJson
 Title: "EHMI Standard Business Document Binary"
 Description: "Profile for EHMI Standard Business Document Binary"
 * contentType = #fhir+json
-* data = "Base64Binary gryf"
+* data = "HomeCareObservation Base64Binary"
 
+/*
 Profile: EhmiStandardBusinessDocument
 Parent: Basic
 Title: "EHMI Standard Business Document"
@@ -83,8 +200,8 @@ extension contains HeaderVersion named HeaderVersion 1..1 MS
 * BusinessScope.Scope ^slicing.discriminator.path = "$this"
 * BusinessScope.Scope ^slicing.rules = #open // allow other codes
 * BusinessScope.Scope contains
-
- */   
+*/   
+/*
 * identifier 0..0
 * subject 0..0
 * created 0..0
@@ -121,7 +238,7 @@ Description: "Profile for EHMI Standard Business Document Header."
 * extension[EhmiStandardBusinessDocumentHeader].extension[DocumentIdentification].extension[TypeVersion].valueString = "HomeCareObservation.v1"
 * extension[EhmiStandardBusinessDocumentHeader].extension[DocumentIdentification].extension[uuid-instance-identifier].valueUuid = "urn:uuid:1d9b1528-2448-40f5-9191-977872320527"
 * extension[EhmiStandardBusinessDocumentHeader].extension[DocumentIdentification].extension[sbdh-date-and-time].valueDateTime = "2025-01-01"
-
+*/
 /*
 Instance: StandardBusinessDocument-instance
 InstanceOf: StandardBusinessDocument
