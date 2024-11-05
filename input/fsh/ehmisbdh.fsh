@@ -125,12 +125,13 @@ Description: "Profile for EHMI Standard Business Document Header DocumentInforma
 /* identifier.type MS
 * identifier.system MS
 * identifier.value MS*/
-* identifier.type MS
-* identifier.value MS
-* code.coding.code MS
-* code.coding.system MS
+* identifier.type MS SU
+* identifier.value MS SU
+* code.coding.code MS SU
+* code.coding.version MS SU 
+* code.coding.system MS SU
 * subject 0..0
-* created 1..1
+* created 1..1 SU
 * author 0..0
 
 Instance: ehmiSBDHDocumentInformation
@@ -138,7 +139,7 @@ InstanceOf: EhmiSBDHDocumentInformation
 Title: "EHMI Standard Business Document Header Scope structure for DocumentInformation"
 Description: "Instance for EHMI Standard Business Document Header DocumentInformation structure"
 * code = #HomeCareObservation
-* code.coding.display = "Kommunale Prøvesvar"
+* code.coding.display = "HomeCareObservation"
 * code.coding.version = "2.0"
 * identifier.type.coding.code = #Bundle
 * identifier.type.coding.display = "Bundle"
