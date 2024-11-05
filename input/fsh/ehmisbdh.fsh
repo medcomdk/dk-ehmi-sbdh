@@ -130,19 +130,45 @@ Instance: ehmiSBDHBusinessScopeBundle
 InstanceOf: EhmiStandardBusinessDocumentHeaderBusinessScopeBundle
 Title: "EHMI Standard Business Document Header BusinessScope Bundle"
 Description: "Profile for EHMI Standard Business Document Header BusinessScope Bundle"
+// Peppol scopes
 * entry[+].fullUrl = "Basic/ehmiSBDHScopeDocumentId"
 * entry[=].resource = ehmiSBDHScopeDocumentId
 * entry[+].fullUrl = "Basic/ehmiSBDHScopeProcessId"
 * entry[=].resource = ehmiSBDHScopeProcessId
+// MedCom Message scopes
 * entry[+].fullUrl = "Basic/ehmiSBDHScopePatientId"
 * entry[=].resource = ehmiSBDHScopePatientId
 * entry[+].fullUrl = "Basic/ehmiSBDHScopeSenderId"
 * entry[=].resource = ehmiSBDHScopeSenderId
 * entry[+].fullUrl = "Basic/ehmiSBDHScopeReceiverId"
 * entry[=].resource = ehmiSBDHScopeReceiverId
+* entry[+].fullUrl = "Basic/ehmiSBDHScopeReceiverId"
+* entry[=].resource = ehmiSBDHScopeReceiverId
+* entry[+].fullUrl = "Basic/ehmiSBDHScopeMessageIdentifier"
+* entry[=].resource = ehmiSBDHScopeMessageIdentifier
+* entry[+].fullUrl = "Basic/ehmiSBDHScopeMessageEnvelopeIdentifier"
+* entry[=].resource = ehmiSBDHScopeMessageEnvelopeIdentifier
+* entry[+].fullUrl = "Basic/ehmiSBDHScopeOriginalMessageIdentifier"
+* entry[=].resource = ehmiSBDHScopeOriginalMessageIdentifier
+* entry[+].fullUrl = "Basic/ehmiSBDHScopeOriginalMessageEnvelopeIdentifier"
+* entry[=].resource = ehmiSBDHScopeOriginalMessageEnvelopeIdentifier
+* entry[+].fullUrl = "Basic/ehmiSBDHScopeOriginalMessageStandard"
+* entry[=].resource = ehmiSBDHScopeOriginalMessageStandard
+* entry[+].fullUrl = "Basic/ehmiSBDHScopeOriginalMessageVersion"
+* entry[=].resource = ehmiSBDHScopeOriginalMessageVersion
+// XDS Metadata scopes
+* entry[+].fullUrl = "Basic/ehmiSBDHScopeXdsMetadata"
+* entry[=].resource = ehmiSBDHScopeXdsMetadata
+
+//MESSAGEIDENTIFIER
+//MESSAGEENVELOPEIDENTIFIER
+//ORIGINALMESSAGEIDENTIFIER
+//ORIGINALMESSAGEENVELOPEIDENTIFIER
+//ORIGINALMESSAGESTANDARD
+//ORIGINALMESSAGEVERSION
+//XDS-Metadata [CDATA: [DocumentReference-structure*]]
 
 // PEPPOL scope instances
-
 Instance: ehmiSBDHScopeDocumentId
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for DOCUMENTID"
@@ -189,6 +215,70 @@ Description: "Profile for EHMI Standard Business Document Header Scope structure
 * identifier.type.coding.code = #RECEIVERID
 * identifier.value = "dk-medcom-messaging"
 * code.coding.system = "dk-medcom-messaging"
+
+Instance: ehmiSBDHScopeMessageIdentifier
+InstanceOf: EhmiSBDHScope
+Title: "EHMI Standard Business Document Header Scope structure for MESSAGEIDENTIFIER"
+Description: "Profile for EHMI Standard Business Document Header Scope structure"
+* code = #Msg1234567890
+* identifier.type.coding.code = #MESSAGEIDENTIFIER
+* identifier.value = "dk-medcom-messaging"
+* code.coding.system = "dk-medcom-messaging"
+
+Instance: ehmiSBDHScopeMessageEnvelopeIdentifier
+InstanceOf: EhmiSBDHScope
+Title: "EHMI Standard Business Document Header Scope structure for MESSAGEENVELOPEIDENTIFIER"
+Description: "Profile for EHMI Standard Business Document Header Scope structure"
+* code = #Env12345678901
+* identifier.type.coding.code = #MESSAGEENVELOPEIDENTIFIER
+* identifier.value = "dk-medcom-messaging"
+* code.coding.system = "dk-medcom-messaging"
+
+Instance: ehmiSBDHScopeOriginalMessageIdentifier
+InstanceOf: EhmiSBDHScope
+Title: "EHMI Standard Business Document Header Scope structure for ORIGINALMESSAGEIDENTIFIER"
+Description: "Profile for EHMI Standard Business Document Header Scope structure"
+* code = #Msg1234567890
+* identifier.type.coding.code = #ORIGINALMESSAGEIDENTIFIER
+* identifier.value = "dk-medcom-messaging"
+* code.coding.system = "dk-medcom-messaging"
+
+Instance: ehmiSBDHScopeOriginalMessageEnvelopeIdentifier
+InstanceOf: EhmiSBDHScope
+Title: "EHMI Standard Business Document Header Scope structure for ORIGINALMESSAGEIDENTIFIER"
+Description: "Profile for EHMI Standard Business Document Header Scope structure"
+* code = #Env12345678901
+* identifier.type.coding.code = #ORIGINALMESSAGEIDENTIFIER
+* identifier.value = "dk-medcom-messaging"
+* code.coding.system = "dk-medcom-messaging"
+
+Instance: ehmiSBDHScopeOriginalMessageStandard
+InstanceOf: EhmiSBDHScope
+Title: "EHMI Standard Business Document Header Scope structure for ORIGINALMESSAGESTANDARD"
+Description: "Profile for EHMI Standard Business Document Header Scope structure"
+* code = #HomeCareObservation
+* identifier.type.coding.code = #ORIGINALMESSAGESTANDARD
+* identifier.value = "dk-medcom-messaging"
+* code.coding.system = "dk-medcom-messaging"
+
+Instance: ehmiSBDHScopeOriginalMessageVersion
+InstanceOf: EhmiSBDHScope
+Title: "EHMI Standard Business Document Header Scope structure for ORIGINALMESSAGEVERSION"
+Description: "Profile for EHMI Standard Business Document Header Scope structure"
+* code = #2.0
+* identifier.type.coding.code = #ORIGINALMESSAGEVERSION
+* identifier.value = "dk-medcom-messaging"
+* code.coding.system = "dk-medcom-messaging"
+
+// XDS Metadata scopes
+Instance: ehmiSBDHScopeXdsMetadata
+InstanceOf: EhmiSBDHScope
+Title: "EHMI Standard Business Document Header Scope structure for XDS-Metadata"
+Description: "Profile for EHMI Standard Business Document Header Scope structure"
+* code = #CDATA:DocumentReference-structure
+* identifier.type.coding.code = #XDS-Metadata
+* identifier.value = "dk-medcom-DocumentReference"
+* code.coding.system = "dk-medcom-DocumentReference"
 
 Profile: EhmiStandardBusinessDocumentBinaryJson
 Parent: Binary
