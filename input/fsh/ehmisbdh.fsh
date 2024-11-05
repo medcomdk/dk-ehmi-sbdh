@@ -143,7 +143,7 @@ Profile: EhmiStandardBusinessDocumentHeaderDocumentInformationBundle
 Parent: EhmiSBDBundleTemplate
 Title: "EHMI Standard Business Document Header DocumentInformation Bundle"
 Description: "Profile for EHMI Standard Business Document Header DocumentInformation Bundle"
-* type = #collection
+* entry[+].fullUrl = "Bundle/ehmiSBDHDocumentInformation"
 
 Instance: ehmiSBDHDocumentInformationBundle
 InstanceOf: EhmiStandardBusinessDocumentHeaderDocumentInformationBundle
