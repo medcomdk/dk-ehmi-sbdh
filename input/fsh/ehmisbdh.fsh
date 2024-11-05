@@ -42,7 +42,25 @@ Profile: EhmiStandardBusinessDocumentHeaderBundle
 Parent: EhmiSBDBundleTemplate
 Title: "EHMI Standard Business Document Header Bundle"
 Description: "Profile for EHMI Standard Business Document Header Bundle"
-* type = #collection
+* entry ^slicing.discriminator.type = #value
+* entry ^slicing.discriminator.path = "$this"
+* entry ^slicing.rules = #open // allow other codes
+* entry contains
+    EhmiSbdhHeaderVersion 1..1 and 
+    EhmiSbdhSender 1..1 and
+    EhmiSbdhReceiver 1..1 and
+    EhmiSBDHDocumentInformationBundle 1..1 and
+    EhmiSBDHBusinessScopeBundle 1..1
+* entry[EhmiSbdhHeaderVersion].fullUrl = "Endpoint/EhmiSbdhHeaderVersion"
+//* entry[EhmiSbdhHeaderVersion].resource = EhmiSbdhHeaderVersion
+* entry[EhmiSbdhSender].fullUrl = "Endpoint/EhmiSbdhSender"
+//* entry[EhmiSbdhSender].resource = EhmiSbdhSender
+* entry[EhmiSbdhReceiver].fullUrl = "Endpoint/EhmiSbdhReceiver"
+//* entry[EhmiSbdhReceiver].resource = EhmiSbdhReceiver
+* entry[EhmiSBDHDocumentInformationBundle].fullUrl = "Bundle/EhmiSBDHDocumentInformationBundle"
+//* entry[EhmiSBDHDocumentInformationBundle].resource = EhmiSBDHDocumentInformationBundle
+* entry[EhmiSBDHBusinessScopeBundle].fullUrl = "Bundle/EhmiSBDHBusinessScopeBundle"
+//* entry[EhmiSBDHBusinessScopeBundle].resource = EhmiSBDHBusinessScopeBundle
 
 Instance: ehmiSBDHBundle
 InstanceOf: EhmiStandardBusinessDocumentHeaderBundle
