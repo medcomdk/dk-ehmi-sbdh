@@ -25,25 +25,25 @@ Instance: ehmiSBDHBundle
 InstanceOf: EhmiStandardBusinessDocumentHeaderBundle
 Title: "EHMI Standard Business Document Header Bundle"
 Description: "Profile for EHMI Standard Business Document Header Bundle"
-* entry[+].fullUrl = "Bundle/ehmiSBDHDocumentIdentificationBundle"
-* entry[=].resource = ehmiSBDHDocumentIdentificationBundle
-
-Profile: EhmiStandardBusinessDocumentHeaderDocumentIdentificationBundle
-Parent: Bundle
-Title: "EHMI Standard Business Document Header DocumentIdentification Bundle"
-Description: "Profile for EHMI Standard Business Document Header DocumentIdentification Bundle"
-* type = #collection
-
-Instance: ehmiSBDHDocumentIdentificationBundle
-InstanceOf: EhmiStandardBusinessDocumentHeaderDocumentIdentificationBundle
-Title: "EHMI Standard Business Document Header DocumentIdentification Bundle"
-Description: "Profile for EHMI Standard Business Document Header DocumentIdentification Bundle"
+* entry[+].fullUrl = "Endpoint/ehmiSbdhHeaderVersion"
+* entry[=].resource = ehmiSbdhHeaderVersion
 * entry[+].fullUrl = "Endpoint/ehmiSbdhSender"
 * entry[=].resource = ehmiSbdhSender
 * entry[+].fullUrl = "Endpoint/ehmiSbdhReceiver"
 * entry[=].resource = ehmiSbdhReceiver
+* entry[+].fullUrl = "Bundle/ehmiSBDHDocumentInformationBundle"
+* entry[=].resource = ehmiSBDHDocumentInformationBundle
 * entry[+].fullUrl = "Bundle/ehmiSBDHBusinessScopeBundle"
 * entry[=].resource = ehmiSBDHBusinessScopeBundle
+
+Instance: ehmiSbdhHeaderVersion
+InstanceOf: EhmiSBDHScope
+Title: "EHMI Standard Business Document Header Scope structure for HeaderVersion"
+Description: "Profile for EHMI Standard Business Document Header Scope structure"
+* code = #1.0
+* identifier.type.coding.code = #HeaderVersion
+* identifier.value = "dk-medcom-messaging"
+* code.coding.system = "dk-medcom-messaging"
 
 Profile: PartnerIdentification
 Parent: Endpoint
@@ -69,12 +69,12 @@ Description: "SbdhSender Partner information"
 
 Instance: ehmiSbdhSender
 InstanceOf: EhmiSbdhSender
-Title: "EHMI Standard Business Document Header DocumentIdentification EhmiSbdhSender"
-Description: "Profile for EHMI Standard Business Document Header DocumentIdentification EhmiSbdhSender"
+Title: "EHMI Standard Business Document Header EhmiSbdhSender"
+Description: "Profile for EHMI Standard Business Document Header EhmiSbdhSender"
 * status = #active
-* identifier.type = #GLN
+* identifier.type = #iso6523-actorid-upis
 * identifier.system = "http://gs1.org/gln"
-* identifier.id = "iso6523-actorid-upis"
+//* identifier.id = "iso6523-actorid-upis"
 * identifier.value = "GLN12345"
 * connectionType = #hl7-fhir-msg //eDelivery
 * payloadType.coding.code = #ehmiMessage
@@ -87,16 +87,65 @@ Description: "SbdhReceiver Partner information"
 
 Instance: ehmiSbdhReceiver
 InstanceOf: EhmiSbdhReceiver
-Title: "EHMI Standard Business Document Header DocumentIdentification EhmiSbdhReceiver"
-Description: "Profile for EHMI Standard Business Document Header DocumentIdentification EhmiSbdhReceiver"
+Title: "EHMI Standard Business Document Header EhmiSbdhReceiver"
+Description: "Profile for EHMI Standard Business Document Header EhmiSbdhReceiver"
 * status = #active
-* identifier.type = #GLN
+* identifier.type = #iso6523-actorid-upis
 * identifier.system = "http://gs1.org/gln"
-* identifier.id = "iso6523-actorid-upis"
+//* identifier.id = "iso6523-actorid-upis"
 * identifier.value = "GLN67890"
 * connectionType = #hl7-fhir-msg //eDelivery
 * payloadType.coding.code = #ehmiMessage
 * address = "http://receiver.dk/gln67890"
+
+Profile: EhmiStandardBusinessDocumentHeaderDocumentInformationBundle
+Parent: Bundle
+Title: "EHMI Standard Business Document Header DocumentInformation Bundle"
+Description: "Profile for EHMI Standard Business Document Header DocumentInformation Bundle"
+* type = #collection
+
+Instance: ehmiSBDHDocumentInformationBundle
+InstanceOf: EhmiStandardBusinessDocumentHeaderDocumentInformationBundle
+Title: "EHMI Standard Business Document Header DocumentInformation Bundle"
+Description: "Profile for EHMI Standard Business Document Header DocumentInformation Bundle"
+* entry[+].fullUrl = "Bundle/ehmiSBDHDocumentInformation"
+* entry[=].resource = ehmiSBDHDocumentInformation
+
+Profile: EhmiSBDHDocumentInformation
+Parent: Basic
+Title: "EHMI Standard Business Document Header DocumentInformation structure"
+Description: "Profile for EHMI Standard Business Document Header DocumentInformation structure"
+/* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "$this"
+* identifier ^slicing.rules = #open // allow other codes
+* identifier contains
+    Identifier 1..1 and 
+    InstanceIdentifier 1..1 
+* identifier[Identifier].*/
+/* identifier.type MS
+* identifier.system MS
+* identifier.value MS*/
+* identifier.type MS
+* identifier.value MS
+* code.coding.code MS
+* code.coding.system MS
+* subject 0..0
+* created 1..1
+* author 0..0
+
+Instance: ehmiSBDHDocumentInformation
+InstanceOf: EhmiSBDHDocumentInformation
+Title: "EHMI Standard Business Document Header Scope structure for DocumentInformation"
+Description: "Instance for EHMI Standard Business Document Header DocumentInformation structure"
+* code = #HomeCareObservation
+* code.coding.display = "Kommunale Prøvesvar"
+* code.coding.version = "2.0"
+* identifier.type.coding.code = #Bundle
+* identifier.type.coding.display = "Bundle"
+* identifier.value = "urn:uuid:3a140c15-50fd-4a59-9300-4fa8a9d454ec"
+//* code.coding.system = "dk-medcom-messaging"
+* created.extension.valueDateTime = 2024-11-01T12:37:00+02:00
+* created.extension.url = "urn:medcom.dk"
 
 Profile: EhmiStandardBusinessDocumentHeaderBusinessScopeBundle
 Parent: Bundle
@@ -159,14 +208,6 @@ Description: "Profile for EHMI Standard Business Document Header BusinessScope B
 // XDS Metadata scopes
 * entry[+].fullUrl = "Basic/ehmiSBDHScopeXdsMetadata"
 * entry[=].resource = ehmiSBDHScopeXdsMetadata
-
-//MESSAGEIDENTIFIER
-//MESSAGEENVELOPEIDENTIFIER
-//ORIGINALMESSAGEIDENTIFIER
-//ORIGINALMESSAGEENVELOPEIDENTIFIER
-//ORIGINALMESSAGESTANDARD
-//ORIGINALMESSAGEVERSION
-//XDS-Metadata [CDATA: [DocumentReference-structure*]]
 
 // PEPPOL scope instances
 Instance: ehmiSBDHScopeDocumentId
