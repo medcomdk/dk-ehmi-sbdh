@@ -147,14 +147,14 @@ Description: "Profile for EHMI Standard Business Document Header DocumentInforma
 * entry ^slicing.discriminator.path = "$this"
 * entry ^slicing.rules = #open // allow other codes
 * entry contains
-    EhmiSBDHDocumentInformation 0..1
-* entry[EhmiSBDHDocumentInformation].fullUrl = "Basic/EhmiSBDHDocumentInformation"
+    EhmiSBDHDocumentInformation 1..1
+//* entry[EhmiSBDHDocumentInformation].fullUrl = "Basic/EhmiSBDHDocumentInformation"
 
 Instance: ehmiSBDHDocumentInformationBundle
 InstanceOf: EhmiStandardBusinessDocumentHeaderDocumentInformationBundle
 Title: "EHMI Standard Business Document Header DocumentInformation Bundle"
 Description: "Profile for EHMI Standard Business Document Header DocumentInformation Bundle"
-//* entry[EhmiSBDHDocumentInformation].fullUrl = "Basic/ehmiSBDHDocumentInformation"
+* entry[EhmiSBDHDocumentInformation].fullUrl = "Basic/ehmiSBDHDocumentInformation"
 
 Profile: EhmiSBDHDocumentInformation
 Parent: Basic
