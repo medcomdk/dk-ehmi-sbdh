@@ -2,8 +2,8 @@
 
 Profile: EhmiSBDBundleTemplate
 Parent: Bundle
-Title: "EHMI Standard Business Document Bundle"
-Description: "Profile for EHMI Standard Business Document Bundle"
+Title: "EHMI Standard Business Document Bundle Template"
+Description: "Template for EHMI Standard Business Document Bundle"
 * type = #collection
 * link 0..0
 * entry.response 0..0
@@ -143,29 +143,23 @@ Profile: EhmiStandardBusinessDocumentHeaderDocumentInformationBundle
 Parent: EhmiSBDBundleTemplate
 Title: "EHMI Standard Business Document Header DocumentInformation Bundle"
 Description: "Profile for EHMI Standard Business Document Header DocumentInformation Bundle"
-* entry[+].fullUrl = "Bundle/ehmiSBDHDocumentInformation"
+* entry ^slicing.discriminator.type = #value
+* entry ^slicing.discriminator.path = "$this"
+* entry ^slicing.rules = #open // allow other codes
+* entry contains
+    EhmiSBDHDocumentInformation 0..1
+* entry[EhmiSBDHDocumentInformation].fullUrl = "Basic/EhmiSBDHDocumentInformation"
 
 Instance: ehmiSBDHDocumentInformationBundle
 InstanceOf: EhmiStandardBusinessDocumentHeaderDocumentInformationBundle
 Title: "EHMI Standard Business Document Header DocumentInformation Bundle"
 Description: "Profile for EHMI Standard Business Document Header DocumentInformation Bundle"
-* entry[+].fullUrl = "Bundle/ehmiSBDHDocumentInformation"
-* entry[=].resource = ehmiSBDHDocumentInformation
+//* entry[EhmiSBDHDocumentInformation].fullUrl = "Basic/ehmiSBDHDocumentInformation"
 
 Profile: EhmiSBDHDocumentInformation
 Parent: Basic
 Title: "EHMI Standard Business Document Header DocumentInformation structure"
 Description: "Profile for EHMI Standard Business Document Header DocumentInformation structure"
-/* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "$this"
-* identifier ^slicing.rules = #open // allow other codes
-* identifier contains
-    Identifier 1..1 and 
-    InstanceIdentifier 1..1 
-* identifier[Identifier].*/
-/* identifier.type MS
-* identifier.system MS
-* identifier.value MS*/
 * identifier.type MS SU
 * identifier.value MS SU
 * code.coding.code MS SU
