@@ -6,11 +6,27 @@ Title: "EHMI Standard Business Document Bundle"
 Description: "Profile for EHMI Standard Business Document Bundle"
 * type = #collection
 
+Instance: ehmiSBDBundle
+InstanceOf: EhmiStandardBusinessDocumentBundle
+Title: "EHMI Standard Business Document Bundle"
+Description: "Profile for EHMI Standard Business Document Bundle"
+* entry[+].fullUrl = "Bundle/ehmiSBDHBundle"
+* entry[=].resource = ehmiSBDHBundle
+* entry[+].fullUrl = "Binary/ehmiSBDBinaryJson"
+* entry[=].resource = ehmiSBDBinaryJson
+
 Profile: EhmiStandardBusinessDocumentHeaderBundle
 Parent: Bundle
 Title: "EHMI Standard Business Document Header Bundle"
 Description: "Profile for EHMI Standard Business Document Header Bundle"
 * type = #collection
+
+Instance: ehmiSBDHBundle
+InstanceOf: EhmiStandardBusinessDocumentHeaderBundle
+Title: "EHMI Standard Business Document Header Bundle"
+Description: "Profile for EHMI Standard Business Document Header Bundle"
+* entry[+].fullUrl = "Bundle/ehmiSBDHDocumentIdentificationBundle"
+* entry[=].resource = ehmiSBDHDocumentIdentificationBundle
 
 Profile: EhmiStandardBusinessDocumentHeaderDocumentIdentificationBundle
 Parent: Bundle
@@ -18,13 +34,23 @@ Title: "EHMI Standard Business Document Header DocumentIdentification Bundle"
 Description: "Profile for EHMI Standard Business Document Header DocumentIdentification Bundle"
 * type = #collection
 
+Instance: ehmiSBDHDocumentIdentificationBundle
+InstanceOf: EhmiStandardBusinessDocumentHeaderDocumentIdentificationBundle
+Title: "EHMI Standard Business Document Header DocumentIdentification Bundle"
+Description: "Profile for EHMI Standard Business Document Header DocumentIdentification Bundle"
+* entry[+].fullUrl = "Endpoint/ehmiSbdhSender"
+* entry[=].resource = ehmiSbdhSender
+* entry[+].fullUrl = "Endpoint/ehmiSbdhReceiver"
+* entry[=].resource = ehmiSbdhReceiver
+* entry[+].fullUrl = "Bundle/ehmiSBDHBusinessScopeBundle"
+* entry[=].resource = ehmiSBDHBusinessScopeBundle
+
 Profile: PartnerIdentification
 Parent: Endpoint
 Title: "Partner"
 Description: "Partner information"
 * status = #active
 * identifier.type 1..1
-//* identifier.type.coding.code = "iso6523-actorid-upis"
 * identifier.system = "http://gs1.org/gln"
 * identifier.id = "iso6523-actorid-upis"
 * identifier.value 1..1
@@ -41,11 +67,36 @@ Parent: PartnerIdentification
 Title: "SbdhSender Partner"
 Description: "SbdhSender Partner information"
 
+Instance: ehmiSbdhSender
+InstanceOf: EhmiSbdhSender
+Title: "EHMI Standard Business Document Header DocumentIdentification EhmiSbdhSender"
+Description: "Profile for EHMI Standard Business Document Header DocumentIdentification EhmiSbdhSender"
+* status = #active
+* identifier.type = #GLN
+* identifier.system = "http://gs1.org/gln"
+* identifier.id = "iso6523-actorid-upis"
+* identifier.value = "GLN12345"
+* connectionType = #hl7-fhir-msg //eDelivery
+* payloadType.coding.code = #ehmiMessage
+* address = "http://sender.dk/gln12345"
+
 Profile: EhmiSbdhReceiver
 Parent: PartnerIdentification
 Title: "SbdhReceiver Partner"
 Description: "SbdhReceiver Partner information"
 
+Instance: ehmiSbdhReceiver
+InstanceOf: EhmiSbdhReceiver
+Title: "EHMI Standard Business Document Header DocumentIdentification EhmiSbdhReceiver"
+Description: "Profile for EHMI Standard Business Document Header DocumentIdentification EhmiSbdhReceiver"
+* status = #active
+* identifier.type = #GLN
+* identifier.system = "http://gs1.org/gln"
+* identifier.id = "iso6523-actorid-upis"
+* identifier.value = "GLN67890"
+* connectionType = #hl7-fhir-msg //eDelivery
+* payloadType.coding.code = #ehmiMessage
+* address = "http://receiver.dk/gln67890"
 
 Profile: EhmiStandardBusinessDocumentHeaderBusinessScopeBundle
 Parent: Bundle
@@ -75,67 +126,6 @@ Description: "Profile for EHMI Standard Business Document Header Scope structure
 * created 0..0
 * author 0..0
 
-Profile: EhmiStandardBusinessDocumentBinaryJson
-Parent: Binary
-Title: "EHMI Standard Business Document Binary"
-Description: "Profile for EHMI Standard Business Document Binary"
-* contentType 1..1 MS
-* contentType = #fhir+json
-* data 1..1 MS
-
-Instance: ehmiSBDBundle
-InstanceOf: EhmiStandardBusinessDocumentBundle
-Title: "EHMI Standard Business Document Bundle"
-Description: "Profile for EHMI Standard Business Document Bundle"
-* entry[+].fullUrl = "Bundle/ehmiSBDHBundle"
-* entry[=].resource = ehmiSBDHBundle
-* entry[+].fullUrl = "Binary/ehmiSBDBinaryJson"
-* entry[=].resource = ehmiSBDBinaryJson
-
-Instance: ehmiSBDHBundle
-InstanceOf: EhmiStandardBusinessDocumentHeaderBundle
-Title: "EHMI Standard Business Document Header Bundle"
-Description: "Profile for EHMI Standard Business Document Header Bundle"
-* entry[+].fullUrl = "Bundle/ehmiSBDHDocumentIdentificationBundle"
-* entry[=].resource = ehmiSBDHDocumentIdentificationBundle
-
-Instance: ehmiSBDHDocumentIdentificationBundle
-InstanceOf: EhmiStandardBusinessDocumentHeaderDocumentIdentificationBundle
-Title: "EHMI Standard Business Document Header DocumentIdentification Bundle"
-Description: "Profile for EHMI Standard Business Document Header DocumentIdentification Bundle"
-* entry[+].fullUrl = "Endpoint/ehmiSbdhSender"
-* entry[=].resource = ehmiSbdhSender
-* entry[+].fullUrl = "Endpoint/ehmiSbdhReceiver"
-* entry[=].resource = ehmiSbdhReceiver
-* entry[+].fullUrl = "Bundle/ehmiSBDHBusinessScopeBundle"
-* entry[=].resource = ehmiSBDHBusinessScopeBundle
-
-Instance: ehmiSbdhSender
-InstanceOf: EhmiSbdhSender
-Title: "EHMI Standard Business Document Header DocumentIdentification EhmiSbdhSender"
-Description: "Profile for EHMI Standard Business Document Header DocumentIdentification EhmiSbdhSender"
-* status = #active
-* identifier.type = #GLN
-* identifier.system = "http://gs1.org/gln"
-* identifier.id = "iso6523-actorid-upis"
-* identifier.value = "GLN12345"
-* connectionType = #hl7-fhir-msg //eDelivery
-* payloadType.coding.code = #ehmiMessage
-* address = "http://sender.dk/gln12345"
-
-Instance: ehmiSbdhReceiver
-InstanceOf: EhmiSbdhReceiver
-Title: "EHMI Standard Business Document Header DocumentIdentification EhmiSbdhReceiver"
-Description: "Profile for EHMI Standard Business Document Header DocumentIdentification EhmiSbdhReceiver"
-* status = #active
-* identifier.type = #GLN
-* identifier.system = "http://gs1.org/gln"
-* identifier.id = "iso6523-actorid-upis"
-* identifier.value = "GLN67890"
-* connectionType = #hl7-fhir-msg //eDelivery
-* payloadType.coding.code = #ehmiMessage
-* address = "http://receiver.dk/gln67890"
-
 Instance: ehmiSBDHBusinessScopeBundle
 InstanceOf: EhmiStandardBusinessDocumentHeaderBusinessScopeBundle
 Title: "EHMI Standard Business Document Header BusinessScope Bundle"
@@ -144,6 +134,14 @@ Description: "Profile for EHMI Standard Business Document Header BusinessScope B
 * entry[=].resource = ehmiSBDHScopeDocumentId
 * entry[+].fullUrl = "Basic/ehmiSBDHScopeProcessId"
 * entry[=].resource = ehmiSBDHScopeProcessId
+* entry[+].fullUrl = "Basic/ehmiSBDHScopePatientId"
+* entry[=].resource = ehmiSBDHScopePatientId
+* entry[+].fullUrl = "Basic/ehmiSBDHScopeSenderId"
+* entry[=].resource = ehmiSBDHScopeSenderId
+* entry[+].fullUrl = "Basic/ehmiSBDHScopeReceiverId"
+* entry[=].resource = ehmiSBDHScopeReceiverId
+
+// PEPPOL scope instances
 
 Instance: ehmiSBDHScopeDocumentId
 InstanceOf: EhmiSBDHScope
@@ -162,6 +160,43 @@ Description: "Profile for EHMI Standard Business Document Header Scope structure
 * identifier.type.coding.code = #PROCESSID
 * identifier.value = "dk-medcom-messaging"
 * code.coding.system = "dk-medcom-messaging"
+
+// PEPPOL scope instances
+
+Instance: ehmiSBDHScopePatientId
+InstanceOf: EhmiSBDHScope
+Title: "EHMI Standard Business Document Header Scope structure for PATIENTID"
+Description: "Profile for EHMI Standard Business Document Header Scope structure"
+* code = #0101910227
+* identifier.type.coding.code = #PATIENTID
+* identifier.value = "dk-medcom-messaging"
+* code.coding.system = "dk-medcom-messaging"
+
+Instance: ehmiSBDHScopeSenderId
+InstanceOf: EhmiSBDHScope
+Title: "EHMI Standard Business Document Header Scope structure for SENDERID"
+Description: "Profile for EHMI Standard Business Document Header Scope structure"
+* code = #SOR1170101
+* identifier.type.coding.code = #SENDERID
+* identifier.value = "dk-medcom-messaging"
+* code.coding.system = "dk-medcom-messaging"
+
+Instance: ehmiSBDHScopeReceiverId
+InstanceOf: EhmiSBDHScope
+Title: "EHMI Standard Business Document Header Scope structure for RECEIVERID"
+Description: "Profile for EHMI Standard Business Document Header Scope structure"
+* code = #SOR1170102
+* identifier.type.coding.code = #RECEIVERID
+* identifier.value = "dk-medcom-messaging"
+* code.coding.system = "dk-medcom-messaging"
+
+Profile: EhmiStandardBusinessDocumentBinaryJson
+Parent: Binary
+Title: "EHMI Standard Business Document Binary"
+Description: "Profile for EHMI Standard Business Document Binary"
+* contentType 1..1 MS
+* contentType = #fhir+json
+* data 1..1 MS
 
 Instance: ehmiSBDBinaryJson
 InstanceOf: EhmiStandardBusinessDocumentBinaryJson
