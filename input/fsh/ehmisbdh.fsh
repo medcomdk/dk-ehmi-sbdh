@@ -143,11 +143,12 @@ Profile: EhmiStandardBusinessDocumentHeaderDocumentInformationBundle
 Parent: EhmiSBDBundleTemplate
 Title: "EHMI Standard Business Document Header DocumentInformation Bundle"
 Description: "Profile for EHMI Standard Business Document Header DocumentInformation Bundle"
-* entry ^slicing.discriminator.type = #value
+/* entry ^slicing.discriminator.type = #value
 * entry ^slicing.discriminator.path = "$this"
 * entry ^slicing.rules = #open // allow other codes
 * entry contains
     EhmiSBDHDocumentInformation 1..1
+*/
 //* entry[EhmiSBDHDocumentInformation].fullUrl = "Basic/EhmiSBDHDocumentInformation"
 
 Instance: ehmiSBDHDocumentInformationBundle
