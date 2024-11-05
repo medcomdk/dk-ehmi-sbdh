@@ -1,10 +1,33 @@
 //https://build.fhir.org/ig/medcomdk/dk_HomeCareObservations/branches/MessageDefinition-QA/Bundle-401cbc36-db1e-4fe0-bf90-6df331dde179.xml
 
-Profile: EhmiStandardBusinessDocumentBundle
+Profile: EhmiSBDBundleTemplate
 Parent: Bundle
 Title: "EHMI Standard Business Document Bundle"
 Description: "Profile for EHMI Standard Business Document Bundle"
 * type = #collection
+* link 0..0
+* entry.response 0..0
+* entry.request 0..0
+* entry.search 0..0
+* entry.extension 0..0
+* entry.modifierExtension 0..0
+* entry.link 0..0
+* signature 0..0
+
+Profile: EhmiStandardBusinessDocumentBundle
+Parent: EhmiSBDBundleTemplate
+Title: "EHMI Standard Business Document Bundle"
+Description: "Profile for EHMI Standard Business Document Bundle"
+* entry ^slicing.discriminator.type = #value
+* entry ^slicing.discriminator.path = "$this"
+* entry ^slicing.rules = #open // allow other codes
+* entry contains
+    ehmiSBDHBundle 1..1 and 
+    ehmiSBDBinaryJson 1..1 
+* entry[ehmiSBDHBundle].fullUrl = "Bundle/EhmiStandardBusinessDocumentBundle"
+* entry[ehmiSBDHBundle].resource = EhmiStandardBusinessDocumentBundle
+* entry[ehmiSBDBinaryJson].fullUrl = "Binary/EhmiStandardBusinessDocumentBinaryJson"
+//* entry[ehmiSBDBinaryJson].resource = EhmiStandardBusinessDocumentBinaryJson
 
 Instance: ehmiSBDBundle
 InstanceOf: EhmiStandardBusinessDocumentBundle
@@ -16,7 +39,7 @@ Description: "Profile for EHMI Standard Business Document Bundle"
 * entry[=].resource = ehmiSBDBinaryJson
 
 Profile: EhmiStandardBusinessDocumentHeaderBundle
-Parent: Bundle
+Parent: EhmiSBDBundleTemplate
 Title: "EHMI Standard Business Document Header Bundle"
 Description: "Profile for EHMI Standard Business Document Header Bundle"
 * type = #collection
@@ -99,7 +122,7 @@ Description: "Profile for EHMI Standard Business Document Header EhmiSbdhReceive
 * address = "http://receiver.dk/gln67890"
 
 Profile: EhmiStandardBusinessDocumentHeaderDocumentInformationBundle
-Parent: Bundle
+Parent: EhmiSBDBundleTemplate
 Title: "EHMI Standard Business Document Header DocumentInformation Bundle"
 Description: "Profile for EHMI Standard Business Document Header DocumentInformation Bundle"
 * type = #collection
@@ -149,7 +172,7 @@ Description: "Instance for EHMI Standard Business Document Header DocumentInform
 * created.extension.url = "urn:medcom.dk"
 
 Profile: EhmiStandardBusinessDocumentHeaderBusinessScopeBundle
-Parent: Bundle
+Parent: EhmiSBDBundleTemplate
 Title: "EHMI Standard Business Document Header BusinessScope Bundle"
 Description: "Profile for EHMI Standard Business Document Header BusinessScope Bundle"
 * type = #collection
@@ -549,7 +572,7 @@ Description: "Document identification details"
     creationDateAndTime 1..1 MS
 */
 /*Profile: EhmiSBDH
-Parent: Bundle
+Parent: EhmiSBDBundleTemplate
 Description: "An example profile of the Basic resource."
 //* type = #collection
 * type = #batch
