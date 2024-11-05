@@ -13,7 +13,7 @@ Title: "EHMI Standard Business Document Header Partner"
 Profile: Receiver
 Parent: EhmiSbdhPartner
 Title: "EHMI Standard Business Document Header Partner"
-*/
+
 
 Extension: EhmiStandardBusinessDocumentBinaryContent
 Id: ehmiStandardBusinessDocumentBinaryContent
@@ -96,7 +96,7 @@ Description: "Contact information including contact name and email address"
     and faxNumber 0..1 MS 
     and TelephoneNumber 0..1 MS 
     and ContactTypeIdentifier 0..1 MS
-*/
+/
 
 Extension: Contact
 Id: contact
