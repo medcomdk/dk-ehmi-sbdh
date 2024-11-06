@@ -186,7 +186,7 @@ Description: "Instance for EHMI Standard Business Document Header DocumentInform
 * identifier.value = "urn:uuid:3a140c15-50fd-4a59-9300-4fa8a9d454ec"
 //* code.coding.system = "dk-medcom-messaging"
 * created.extension.valueDateTime = 2024-11-01T12:37:00+02:00
-* created.extension.url = "urn:medcom.dk"
+* created.extension.url = "http://medcom.dk"
 
 Profile: EhmiStandardBusinessDocumentHeaderBusinessScopeBundle
 Parent: EhmiSBDBundleTemplate
