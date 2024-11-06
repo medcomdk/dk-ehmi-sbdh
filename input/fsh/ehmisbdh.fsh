@@ -171,6 +171,7 @@ Description: "Profile for EHMI Standard Business Document Header DocumentInforma
 * code.coding.system MS SU
 * subject 0..0
 * created 1..1 SU
+* created.extension.valueDateTime 1..1
 * author 0..0
 
 Instance: ehmiSBDHDocumentInformation
