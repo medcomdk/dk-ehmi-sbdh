@@ -24,18 +24,18 @@ Description: "Profile for EHMI Standard Business Document Bundle"
 * entry contains
     ehmiSBDHBundle 1..1 and 
     ehmiSBDBinaryJson 1..1 
-* entry[ehmiSBDHBundle].fullUrl = "Bundle/EhmiStandardBusinessDocumentBundle"
+* entry[ehmiSBDHBundle].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Bundle/EhmiStandardBusinessDocumentBundle"
 * entry[ehmiSBDHBundle].resource = EhmiStandardBusinessDocumentBundle
-* entry[ehmiSBDBinaryJson].fullUrl = "Binary/EhmiStandardBusinessDocumentBinaryJson"
+* entry[ehmiSBDBinaryJson].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Binary/EhmiStandardBusinessDocumentBinaryJson"
 //* entry[ehmiSBDBinaryJson].resource = EhmiStandardBusinessDocumentBinaryJson
 
 Instance: ehmiSBDBundle
 InstanceOf: EhmiStandardBusinessDocumentBundle
 Title: "EHMI Standard Business Document Bundle"
 Description: "Profile for EHMI Standard Business Document Bundle"
-* entry[+].fullUrl = "Bundle/ehmiSBDHBundle"
+* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Bundle/ehmiSBDHBundle"
 * entry[=].resource = ehmiSBDHBundle
-* entry[+].fullUrl = "Binary/ehmiSBDBinaryJson"
+* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Binary/ehmiSBDBinaryJson"
 * entry[=].resource = ehmiSBDBinaryJson
 
 Profile: EhmiStandardBusinessDocumentHeaderBundle
@@ -51,30 +51,30 @@ Description: "Profile for EHMI Standard Business Document Header Bundle"
     EhmiSbdhReceiver 1..1 and
     EhmiSBDHDocumentInformationBundle 1..1 and
     EhmiSBDHBusinessScopeBundle 1..1
-* entry[EhmiSbdhHeaderVersion].fullUrl = "Endpoint/EhmiSbdhHeaderVersion"
+* entry[EhmiSbdhHeaderVersion].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Endpoint/EhmiSbdhHeaderVersion"
 //* entry[EhmiSbdhHeaderVersion].resource = EhmiSbdhHeaderVersion
-* entry[EhmiSbdhSender].fullUrl = "Endpoint/EhmiSbdhSender"
+* entry[EhmiSbdhSender].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Endpoint/EhmiSbdhSender"
 //* entry[EhmiSbdhSender].resource = EhmiSbdhSender
-* entry[EhmiSbdhReceiver].fullUrl = "Endpoint/EhmiSbdhReceiver"
+* entry[EhmiSbdhReceiver].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Endpoint/EhmiSbdhReceiver"
 //* entry[EhmiSbdhReceiver].resource = EhmiSbdhReceiver
-* entry[EhmiSBDHDocumentInformationBundle].fullUrl = "Bundle/EhmiSBDHDocumentInformationBundle"
+* entry[EhmiSBDHDocumentInformationBundle].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Bundle/EhmiSBDHDocumentInformationBundle"
 //* entry[EhmiSBDHDocumentInformationBundle].resource = EhmiSBDHDocumentInformationBundle
-* entry[EhmiSBDHBusinessScopeBundle].fullUrl = "Bundle/EhmiSBDHBusinessScopeBundle"
+* entry[EhmiSBDHBusinessScopeBundle].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Bundle/EhmiSBDHBusinessScopeBundle"
 //* entry[EhmiSBDHBusinessScopeBundle].resource = EhmiSBDHBusinessScopeBundle
 
 Instance: ehmiSBDHBundle
 InstanceOf: EhmiStandardBusinessDocumentHeaderBundle
 Title: "EHMI Standard Business Document Header Bundle"
 Description: "Profile for EHMI Standard Business Document Header Bundle"
-* entry[+].fullUrl = "Endpoint/ehmiSbdhHeaderVersion"
+* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Endpoint/ehmiSbdhHeaderVersion"
 * entry[=].resource = ehmiSbdhHeaderVersion
-* entry[+].fullUrl = "Endpoint/ehmiSbdhSender"
+* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Endpoint/ehmiSbdhSender"
 * entry[=].resource = ehmiSbdhSender
-* entry[+].fullUrl = "Endpoint/ehmiSbdhReceiver"
+* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Endpoint/ehmiSbdhReceiver"
 * entry[=].resource = ehmiSbdhReceiver
-* entry[+].fullUrl = "Bundle/ehmiSBDHDocumentInformationBundle"
+* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Bundle/ehmiSBDHDocumentInformationBundle"
 * entry[=].resource = ehmiSBDHDocumentInformationBundle
-* entry[+].fullUrl = "Bundle/ehmiSBDHBusinessScopeBundle"
+* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Bundle/ehmiSBDHBusinessScopeBundle"
 * entry[=].resource = ehmiSBDHBusinessScopeBundle
 
 Instance: ehmiSbdhHeaderVersion
@@ -150,14 +150,14 @@ Description: "Profile for EHMI Standard Business Document Header DocumentInforma
 * entry contains
     EhmiSBDHDocumentInformation 1..1
 */
-//* entry[EhmiSBDHDocumentInformation].fullUrl = "Basic/EhmiSBDHDocumentInformation"
+//* entry[EhmiSBDHDocumentInformation].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/EhmiSBDHDocumentInformation"
 
 Instance: ehmiSBDHDocumentInformationBundle
 InstanceOf: EhmiStandardBusinessDocumentHeaderDocumentInformationBundle
 Title: "EHMI Standard Business Document Header DocumentInformation Bundle"
 Description: "Profile for EHMI Standard Business Document Header DocumentInformation Bundle"
-//* entry[EhmiSBDHDocumentInformation].fullUrl = "Basic/ehmiSBDHDocumentInformation"
-* entry[+].fullUrl = "Basic/EhmiSBDHDocumentInformation"
+//* entry[EhmiSBDHDocumentInformation].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/ehmiSBDHDocumentInformation"
+* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/EhmiSBDHDocumentInformation"
 * entry[=].resource = ehmiSBDHDocumentInformation
 
 Profile: EhmiSBDHDocumentInformation
@@ -221,33 +221,33 @@ InstanceOf: EhmiStandardBusinessDocumentHeaderBusinessScopeBundle
 Title: "EHMI Standard Business Document Header BusinessScope Bundle"
 Description: "Profile for EHMI Standard Business Document Header BusinessScope Bundle"
 // Peppol scopes
-* entry[+].fullUrl = "Basic/ehmiSBDHScopeDocumentId"
+* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/ehmiSBDHScopeDocumentId"
 * entry[=].resource = ehmiSBDHScopeDocumentId
-* entry[+].fullUrl = "Basic/ehmiSBDHScopeProcessId"
+* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/ehmiSBDHScopeProcessId"
 * entry[=].resource = ehmiSBDHScopeProcessId
 // MedCom Message scopes
-* entry[+].fullUrl = "Basic/ehmiSBDHScopePatientId"
+* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/ehmiSBDHScopePatientId"
 * entry[=].resource = ehmiSBDHScopePatientId
-* entry[+].fullUrl = "Basic/ehmiSBDHScopeSenderId"
+* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/ehmiSBDHScopeSenderId"
 * entry[=].resource = ehmiSBDHScopeSenderId
-* entry[+].fullUrl = "Basic/ehmiSBDHScopeReceiverId"
+* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/ehmiSBDHScopeReceiverId"
 * entry[=].resource = ehmiSBDHScopeReceiverId
-* entry[+].fullUrl = "Basic/ehmiSBDHScopeReceiverId"
+* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/ehmiSBDHScopeReceiverId"
 * entry[=].resource = ehmiSBDHScopeReceiverId
-* entry[+].fullUrl = "Basic/ehmiSBDHScopeMessageIdentifier"
+* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/ehmiSBDHScopeMessageIdentifier"
 * entry[=].resource = ehmiSBDHScopeMessageIdentifier
-* entry[+].fullUrl = "Basic/ehmiSBDHScopeMessageEnvelopeIdentifier"
+* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/ehmiSBDHScopeMessageEnvelopeIdentifier"
 * entry[=].resource = ehmiSBDHScopeMessageEnvelopeIdentifier
-* entry[+].fullUrl = "Basic/ehmiSBDHScopeOriginalMessageIdentifier"
+* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/ehmiSBDHScopeOriginalMessageIdentifier"
 * entry[=].resource = ehmiSBDHScopeOriginalMessageIdentifier
-* entry[+].fullUrl = "Basic/ehmiSBDHScopeOriginalMessageEnvelopeIdentifier"
+* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/ehmiSBDHScopeOriginalMessageEnvelopeIdentifier"
 * entry[=].resource = ehmiSBDHScopeOriginalMessageEnvelopeIdentifier
-* entry[+].fullUrl = "Basic/ehmiSBDHScopeOriginalMessageStandard"
+* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/ehmiSBDHScopeOriginalMessageStandard"
 * entry[=].resource = ehmiSBDHScopeOriginalMessageStandard
-* entry[+].fullUrl = "Basic/ehmiSBDHScopeOriginalMessageVersion"
+* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/ehmiSBDHScopeOriginalMessageVersion"
 * entry[=].resource = ehmiSBDHScopeOriginalMessageVersion
 // XDS Metadata scopes
-* entry[+].fullUrl = "Basic/ehmiSBDHScopeXdsMetadata"
+* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/ehmiSBDHScopeXdsMetadata"
 * entry[=].resource = ehmiSBDHScopeXdsMetadata
 
 // PEPPOL scope instances
