@@ -140,9 +140,10 @@ Description: "Profile for EHMI Standard Business Document Header EhmiSbdhReceive
 * address = "http://receiver.dk/gln67890"
 
 Profile: EhmiStandardBusinessDocumentHeaderDocumentInformationBundle
-Parent: EhmiSBDBundleTemplate
+Parent: Bundle
 Title: "EHMI Standard Business Document Header DocumentInformation Bundle"
 Description: "Profile for EHMI Standard Business Document Header DocumentInformation Bundle"
+* type = #collection
 /* entry ^slicing.discriminator.type = #value
 * entry ^slicing.discriminator.path = "$this"
 * entry ^slicing.rules = #open // allow other codes
@@ -155,7 +156,9 @@ Instance: ehmiSBDHDocumentInformationBundle
 InstanceOf: EhmiStandardBusinessDocumentHeaderDocumentInformationBundle
 Title: "EHMI Standard Business Document Header DocumentInformation Bundle"
 Description: "Profile for EHMI Standard Business Document Header DocumentInformation Bundle"
-* entry[EhmiSBDHDocumentInformation].fullUrl = "Basic/ehmiSBDHDocumentInformation"
+//* entry[EhmiSBDHDocumentInformation].fullUrl = "Basic/ehmiSBDHDocumentInformation"
+* entry[+].fullUrl = "Basic/EhmiSBDHDocumentInformation"
+* entry[=].resource = ehmiSBDHDocumentInformation
 
 Profile: EhmiSBDHDocumentInformation
 Parent: Basic
