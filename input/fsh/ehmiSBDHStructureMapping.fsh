@@ -1,3 +1,4 @@
+/*
 Alias: Bundle = http://hl7.org/fhir/StructureDefinition/Bundle
 Alias: SBDH = http://example.org/StructureDefinition/SBDH
 
@@ -49,3 +50,4 @@ Description: "StructureMap for transforming ehmiSBDBundle to SBDH format."
 * group[0].rule[3].source[0].element = "value"
 * group[0].rule[3].target[0].context = "target"
 * group[0].rule[3].target[0].element = "ReceiverIdentifier"
+*/
