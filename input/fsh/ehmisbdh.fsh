@@ -178,7 +178,7 @@ InstanceOf: EhmiSBDHDocumentInformation
 Title: "EHMI Standard Business Document Header Scope structure for DocumentInformation"
 Description: "Instance for EHMI Standard Business Document Header DocumentInformation structure"
 * code = #HomeCareObservation
-* code.coding.display = "HomeCareObservation"
+* code.coding.display = "HomeCareObservation|2.0"
 * code.coding.version = "2.0"
 * identifier.type.coding.code = #Bundle
 * identifier.type.coding.display = "Bundle"
