@@ -19,12 +19,12 @@ Parent: EhmiSBDBundleTemplate
 Title: "EHMI Standard Business Document Bundle"
 Description: "Profile for EHMI Standard Business Document Bundle"
 * entry ^slicing.discriminator.type = #value
-* entry ^slicing.discriminator.path = "$this"
+* entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open // allow other codes
 * entry contains
     ehmiSBDHBundle 1..1 and 
     ehmiSBDBinaryJson 1..1 
-* entry[ehmiSBDHBundle].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Bundle/EhmiStandardBusinessDocumentBundle"
+* entry[ehmiSBDHBundle].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Bundle/ehmiStandardBusinessDocumentBundle"
 * entry[ehmiSBDHBundle].resource = EhmiStandardBusinessDocumentBundle
 * entry[ehmiSBDBinaryJson].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Binary/EhmiStandardBusinessDocumentBinaryJson"
 //* entry[ehmiSBDBinaryJson].resource = EhmiStandardBusinessDocumentBinaryJson
@@ -43,7 +43,7 @@ Parent: EhmiSBDBundleTemplate
 Title: "EHMI Standard Business Document Header Bundle"
 Description: "Profile for EHMI Standard Business Document Header Bundle"
 * entry ^slicing.discriminator.type = #value
-* entry ^slicing.discriminator.path = "$this"
+* entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open // allow other codes
 * entry contains
     EhmiSbdhHeaderVersion 1..1 and 
@@ -51,15 +51,15 @@ Description: "Profile for EHMI Standard Business Document Header Bundle"
     EhmiSbdhReceiver 1..1 and
     EhmiSBDHDocumentInformationBundle 1..1 and
     EhmiSBDHBusinessScopeBundle 1..1
-* entry[EhmiSbdhHeaderVersion].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Endpoint/EhmiSbdhHeaderVersion"
+* entry[EhmiSbdhHeaderVersion].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/ehmiSbdhHeaderVersion"
 //* entry[EhmiSbdhHeaderVersion].resource = EhmiSbdhHeaderVersion
-* entry[EhmiSbdhSender].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Endpoint/EhmiSbdhSender"
+* entry[EhmiSbdhSender].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Endpoint/ehmiSbdhSender"
 //* entry[EhmiSbdhSender].resource = EhmiSbdhSender
-* entry[EhmiSbdhReceiver].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Endpoint/EhmiSbdhReceiver"
+* entry[EhmiSbdhReceiver].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Endpoint/ehmiSbdhReceiver"
 //* entry[EhmiSbdhReceiver].resource = EhmiSbdhReceiver
-* entry[EhmiSBDHDocumentInformationBundle].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Bundle/EhmiSBDHDocumentInformationBundle"
+* entry[EhmiSBDHDocumentInformationBundle].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Bundle/ehmiSBDHDocumentInformationBundle"
 //* entry[EhmiSBDHDocumentInformationBundle].resource = EhmiSBDHDocumentInformationBundle
-* entry[EhmiSBDHBusinessScopeBundle].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Bundle/EhmiSBDHBusinessScopeBundle"
+* entry[EhmiSBDHBusinessScopeBundle].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Bundle/ehmiSBDHBusinessScopeBundle"
 //* entry[EhmiSBDHBusinessScopeBundle].resource = EhmiSBDHBusinessScopeBundle
 
 Instance: ehmiSBDHBundle
@@ -145,19 +145,19 @@ Title: "EHMI Standard Business Document Header DocumentInformation Bundle"
 Description: "Profile for EHMI Standard Business Document Header DocumentInformation Bundle"
 * type = #collection
 /* entry ^slicing.discriminator.type = #value
-* entry ^slicing.discriminator.path = "$this"
+* entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open // allow other codes
 * entry contains
     EhmiSBDHDocumentInformation 1..1
 */
-//* entry[EhmiSBDHDocumentInformation].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/EhmiSBDHDocumentInformation"
+//* entry[EhmiSBDHDocumentInformation].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/ehmiSBDHDocumentInformation"
 
 Instance: ehmiSBDHDocumentInformationBundle
 InstanceOf: EhmiStandardBusinessDocumentHeaderDocumentInformationBundle
 Title: "EHMI Standard Business Document Header DocumentInformation Bundle"
 Description: "Profile for EHMI Standard Business Document Header DocumentInformation Bundle"
 //* entry[EhmiSBDHDocumentInformation].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/ehmiSBDHDocumentInformation"
-* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/EhmiSBDHDocumentInformation"
+* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/ehmiSBDHDocumentInformation"
 * entry[=].resource = ehmiSBDHDocumentInformation
 
 Profile: EhmiSBDHDocumentInformation
@@ -193,21 +193,27 @@ Parent: EhmiSBDBundleTemplate
 Title: "EHMI Standard Business Document Header BusinessScope Bundle"
 Description: "Profile for EHMI Standard Business Document Header BusinessScope Bundle"
 * type = #collection
+* entry ^slicing.discriminator.type = #value
+* entry ^slicing.discriminator.path = "resource"
+* entry ^slicing.rules = #open // allow other codes
+* entry contains
+    ehmiSBDHScopeDocumentId 1..1 and 
+    ehmiSBDHScopeProcessId 1..1 and 
+    ehmiSBDHScopePatientId 1..1 and 
+    ehmiSBDHScopeSenderId 1..1 and 
+    ehmiSBDHScopeReceiverId 1..1 and 
+    ehmiSBDHScopeMessageIdentifier 1..1 and 
+    ehmiSBDHScopeMessageEnvelopeIdentifier 1..1 and 
+    ehmiSBDHScopeOriginalMessageIdentifier 1..1 and 
+    ehmiSBDHScopeOriginalMessageEnvelopeIdentifier 1..1 and 
+    ehmiSBDHScopeOriginalMessageStandard 1..1 and 
+    ehmiSBDHScopeOriginalMessageVersion 1..1 and 
+    ehmiSBDHScopeXdsMetadata 1..1
 
 Profile: EhmiSBDHScope
 Parent: Basic
 Title: "EHMI Standard Business Document Header Scope structure"
 Description: "Profile for EHMI Standard Business Document Header Scope structure"
-/* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "$this"
-* identifier ^slicing.rules = #open // allow other codes
-* identifier contains
-    Identifier 1..1 and 
-    InstanceIdentifier 1..1 
-* identifier[Identifier].*/
-/* identifier.type MS
-* identifier.system MS
-* identifier.value MS*/
 * identifier.type MS
 * identifier.value MS
 * code.coding.code MS
@@ -230,8 +236,6 @@ Description: "Profile for EHMI Standard Business Document Header BusinessScope B
 * entry[=].resource = ehmiSBDHScopePatientId
 * entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/ehmiSBDHScopeSenderId"
 * entry[=].resource = ehmiSBDHScopeSenderId
-* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/ehmiSBDHScopeReceiverId"
-* entry[=].resource = ehmiSBDHScopeReceiverId
 * entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/ehmiSBDHScopeReceiverId"
 * entry[=].resource = ehmiSBDHScopeReceiverId
 * entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Basic/ehmiSBDHScopeMessageIdentifier"
