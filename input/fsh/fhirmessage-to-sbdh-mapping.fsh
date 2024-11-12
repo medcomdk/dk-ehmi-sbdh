@@ -92,11 +92,11 @@ Usage: #definition
 * group[=].rule[=].target.transform = #copy
 * group[=].rule[+].name = "InstanceIdentifier"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.defaultValueUuid = "2be1a947-8ebd-496f-ac1a-7eef6b2cfe18"
+* group[=].rule[=].source.defaultValueString = "2be1a947-8ebd-496f-ac1a-7eef6b2cfe18"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.id = "InstanceIdentifier/value"
-* group[=].rule[=].target.transform = #uuid
+* group[=].rule[=].target.transform = #create
 * group[=].rule[+].name = "Type"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueCode = #Bundle
