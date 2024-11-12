@@ -112,7 +112,8 @@ Usage: #definition
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "CreationDateAndTime/value"
 * group[=].rule[=].target.transform = #copy
-//BusinessScope
+//BusinessScopes
+//BusinessScopeEdeliveryMessageCommunication
 * group[+].name = "BusinessScopeEdeliveryMessageCommunication"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
@@ -165,7 +166,16 @@ Usage: #definition
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[PROCESSID]/Identifier"
 * group[=].rule[=].target.transform = #create
-// Health message communication - PATIENTID 
+//BusinessScope - Health message communication
+//PATIENTID 
+* group[+].name = "BusinessScopeHealthMessageCommunication"
+* group[=].typeMode = #none
+* group[=].input[0].name = "source"
+* group[=].input[=].type = "MedComMessagingMessage"
+* group[=].input[=].mode = #source
+* group[=].input[+].name = "target"
+* group[=].input[=].type = "sbdhBusinessScope"
+* group[=].input[=].mode = #target
 * group[=].rule[+].name = "ScopePatientIdType"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "PATIENTID"
@@ -231,7 +241,140 @@ Usage: #definition
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[RECEIVERID]/Identifier"
 * group[=].rule[=].target.transform = #create
+// Health message communication - MESSAGEIDENTIFIER
+* group[=].rule[+].name = "ScopeMessageIdentiferType"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "MESSAGEIDENTIFIER"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "Scope[MESSAGEIDENTIFIER]/Type"
+* group[=].rule[=].target.transform = #create
+* group[=].rule[+].name = "ScopeMessageIdentiferInstanceIdentifier"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.entry[0].resource.id)"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "Scope[MESSAGEIDENTIFIER]/InstanceIdentifier"
+* group[=].rule[=].target.transform = #copy
+* group[=].rule[+].name = "ScopeMessageIdentiferIdentifier"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "dk-medcom-messaging"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "Scope[MESSAGEIDENTIFIER]/Identifier"
+* group[=].rule[=].target.transform = #create
+// Health message communication - MESSAGEENVELOPEIDENTIFIER
+* group[=].rule[+].name = "ScopeMessageEnvelopeIdentiferType"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "MESSAGEENVELOPEIDENTIFIER"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "Scope[MESSAGEENVELOPEIDENTIFIER]/Type"
+* group[=].rule[=].target.transform = #create
+* group[=].rule[+].name = "ScopeMessageEnvelopeIdentiferInstanceIdentifier"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.id)"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "Scope[MESSAGEENVELOPEIDENTIFIER]/InstanceIdentifier"
+* group[=].rule[=].target.transform = #copy
+* group[=].rule[+].name = "ScopeMessageEnvelopeIdentiferIdentifier"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "dk-medcom-messaging"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "Scope[MESSAGEENVELOPEIDENTIFIER]/Identifier"
+* group[=].rule[=].target.transform = #create
+// Health message communication - ORIGINALMESSAGEIDENTIFIER
+* group[=].rule[+].name = "ScopeOriginalMessageIdentiferType"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "ORIGINALMESSAGEIDENTIFIER"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "Scope[ORIGINALMESSAGEIDENTIFIER]/Type"
+* group[=].rule[=].target.transform = #create
+* group[=].rule[+].name = "ScopeOriginalMessageIdentiferInstanceIdentifier"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.id)"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "Scope[ORIGINALMESSAGEIDENTIFIER]/InstanceIdentifier"
+* group[=].rule[=].target.transform = #copy
+* group[=].rule[+].name = "ScopeOriginalMessageIdentiferIdentifier"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "dk-medcom-messaging"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "Scope[ORIGINALMESSAGEIDENTIFIER]/Identifier"
+* group[=].rule[=].target.transform = #create
+// Health message communication - ORIGINALENVELOPEIDENTIFIER
+* group[=].rule[+].name = "ScopeOriginalEnvelopeIdentiferType"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "ORIGINALENVELOPEIDENTIFIER"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "Scope[ORIGINALENVELOPEIDENTIFIER]/Type"
+* group[=].rule[=].target.transform = #create
+* group[=].rule[+].name = "ScopeOriginalEnvelopeIdentiferInstanceIdentifier"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.id)"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "Scope[ORIGINALENVELOPEIDENTIFIER]/InstanceIdentifier"
+* group[=].rule[=].target.transform = #copy
+* group[=].rule[+].name = "ScopeOriginalEnvelopeIdentiferIdentifier"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "dk-medcom-messaging"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "Scope[ORIGINALENVELOPEIDENTIFIER]/Identifier"
+* group[=].rule[=].target.transform = #create
 
+/*
+ORIGINALMESSAGESTANDARD 
+ORIGINALMESSAGEVERSION
+
+//XDS-METADATA
+XDS-METADATA
+
+//Group: Reliable messaging
+ReceiptAcknowledgement- - Request
+//CorrelationInformation 
+CorrelationInformation - RequestingDocumentCreationDateTime
+CorrelationInformation - RequestingDocumentInstanceIdentifier
+CorrelationInformation - ExpectedResponseDateTime
+//SBDH BusinessServices - Request
+BusinessServiceName
+ServiceTransaction – TypeOfServiceTransaction
+IsNonRepudiationRequired
+IsAuthenticationRequired
+IsNonRepudiationOfReceiptRequired
+IsIntelligibleCheckRequired
+IsApplicationErrorResponseRequested
+TimeToAcknowledgeReceipt
+TimeToAcknowledgeAcceptance
+TimeToPerform
+Recurrence
+
+//Group: EHMI-ReceiptAcknowledgement - Response
+//CorrelationInformation 
+CorrelationInformation - RequestingDocumentCreationDateTime
+CorrelationInformation - RequestingDocumentInstanceIdentifier
+CorrelationInformation - ExpectedResponseDateTime
+//SBDH BusinessServices - Response
+BusinessServiceName
+ServiceTransaction – TypeOfServiceTransaction
+IsNonRepudiationRequired
+IsAuthenticationRequired
+IsNonRepudiationOfReceiptRequired
+IsIntelligibleCheckRequired
+IsApplicationErrorResponseRequested
+TimeToAcknowledgeReceipt
+TimeToAcknowledgeAcceptance
+TimeToPerform
+Recurrence
+
+//Group: EHMI ReceiptAcknowledgement
 
 /* group[=].rule[+].name = "Identifier.Authority"
 * group[=].rule[=].source.context = "source"
