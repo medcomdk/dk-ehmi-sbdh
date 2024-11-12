@@ -113,7 +113,7 @@ Usage: #definition
 * group[=].rule[=].target.element = "CreationDateAndTime/value"
 * group[=].rule[=].target.transform = #copy
 //BusinessScope
-* group[+].name = "BusinessScope - eDelivery message communication"
+* group[+].name = "BusinessScopeEdeliveryMessageCommunication"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
 * group[=].input[=].type = "MedComMessagingMessage"
@@ -122,21 +122,21 @@ Usage: #definition
 * group[=].input[=].type = "sbdhBusinessScope"
 * group[=].input[=].mode = #target
 // DOCUMENTID
-* group[=].rule[+].name = "Scope[DOCUMENTID-Type]"
+* group[=].rule[+].name = "ScopeDocumentType"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "DOCUMENTID"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[DOCUMENTID]/Type"
 * group[=].rule[=].target.transform = #create
-* group[=].rule[+].name = "Scope[DOCUMENTID-InstanceIdentifier]"
+* group[=].rule[+].name = "ScopeDocumentInstanceIdentifier"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "MedComMessagingHeader/id"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[DOCUMENTID]/InstanceIdentifier"
 * group[=].rule[=].target.transform = #copy
-* group[=].rule[+].name = "Scope[DOCUMENTID-Identifier]"
+* group[=].rule[+].name = "ScopeDocumentIdentifier"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "dk-medcom-messaging"
 * group[=].rule[=].target.context = "target"
@@ -144,21 +144,21 @@ Usage: #definition
 * group[=].rule[=].target.element = "Scope[DOCUMENTID]/Identifier"
 * group[=].rule[=].target.transform = #create
 // PROCESSID
-* group[=].rule[+].name = "Scope[PROCESSID-Type]"
+* group[=].rule[+].name = "ScopeProcessIdType"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "PROCESSID"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[PROCESSID]/Type"
 * group[=].rule[=].target.transform = #create
-* group[=].rule[+].name = "Scope[PROCESSID-InstanceIdentifier]"
+* group[=].rule[+].name = "ScopeProcessIdInstanceIdentifier"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "sdn-emergence"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[PROCESSID]/InstanceIdentifier"
 * group[=].rule[=].target.transform = #create
-* group[=].rule[+].name = "Scope[PROCESSID-Identifier]"
+* group[=].rule[+].name = "ScopeProcessIdIdentifier"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "dk-medcom-messaging"
 * group[=].rule[=].target.context = "target"
@@ -166,21 +166,21 @@ Usage: #definition
 * group[=].rule[=].target.element = "Scope[PROCESSID]/Identifier"
 * group[=].rule[=].target.transform = #create
 // Health message communication - PATIENTID 
-* group[=].rule[+].name = "Scope[PATIENTID-Type]"
+* group[=].rule[+].name = "ScopePatientIdType"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "PATIENTID"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[PATIENTID]/Type"
 * group[=].rule[=].target.transform = #create
-* group[=].rule[+].name = "Scope[PATIENTID-InstanceIdentifier]"
+* group[=].rule[+].name = "ScopePatientIdInstanceIdentifier"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.entry.resource.ofType(Patient).identifier)"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[PATIENTID]/InstanceIdentifier"
 * group[=].rule[=].target.transform = #copy
-* group[=].rule[+].name = "Scope[PATIENTID-Identifier]"
+* group[=].rule[+].name = "ScopePatientIdIdentifier"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "dk-medcom-messaging"
 * group[=].rule[=].target.context = "target"
@@ -188,21 +188,21 @@ Usage: #definition
 * group[=].rule[=].target.element = "Scope[PATIENTID]/Identifier"
 * group[=].rule[=].target.transform = #create
 // Health message communication - SENDERID
-* group[=].rule[+].name = "Scope[SENDERID-Type]"
+* group[=].rule[+].name = "ScopeSenderIdType"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "SENDERID"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[SENDERID]/Type"
 * group[=].rule[=].target.transform = #create
-* group[=].rule[+].name = "Scope[SENDERID-InstanceIdentifier]"
+* group[=].rule[+].name = "ScopeSenderIdInstanceIdentifier"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.entry.resource.ofType(SenderOrganization).identifier[SOR-ID].value)"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[SENDERID]/InstanceIdentifier"
 * group[=].rule[=].target.transform = #copy
-* group[=].rule[+].name = "Scope[SENDERID-Identifier]"
+* group[=].rule[+].name = "ScopeSenderIdIdentifier"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "dk-medcom-messaging"
 * group[=].rule[=].target.context = "target"
@@ -210,21 +210,21 @@ Usage: #definition
 * group[=].rule[=].target.element = "Scope[SENDERID]/Identifier"
 * group[=].rule[=].target.transform = #create
 // Health message communication - RECEIVERID
-* group[=].rule[+].name = "Scope[RECEIVERID-Type]"
+* group[=].rule[+].name = "ScopeReceiverIdType"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "RECEIVERID"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[RECEIVERID]/Type"
 * group[=].rule[=].target.transform = #create
-* group[=].rule[+].name = "Scope[RECEIVERID-InstanceIdentifier]"
+* group[=].rule[+].name = "ScopeReceiverIdInstanceIdentifier"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.entry.resource.ofType(ReceiverOrganization).identifier[SOR-ID].value)"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[RECEIVERID]/InstanceIdentifier"
 * group[=].rule[=].target.transform = #copy
-* group[=].rule[+].name = "Scope[RECEIVERID-Identifier]"
+* group[=].rule[+].name = "ScopeReceiverIdIdentifier"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "dk-medcom-messaging"
 * group[=].rule[=].target.context = "target"
