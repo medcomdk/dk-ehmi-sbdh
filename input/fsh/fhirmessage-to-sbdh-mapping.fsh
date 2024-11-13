@@ -329,9 +329,30 @@ Usage: #definition
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[ORIGINALENVELOPEIDENTIFIER]/Identifier"
 * group[=].rule[=].target.transform = #create
+// Health message communication - ORIGINALMESSAGESTANDARD
+* group[=].rule[+].name = "ScopeOriginalEnvelopeIdentiferType"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "ORIGINALMESSAGESTANDARD"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "Scope[ORIGINALMESSAGESTANDARD]/Type"
+* group[=].rule[=].target.transform = #create
+* group[=].rule[+].name = "ScopeOriginalEnvelopeIdentiferInstanceIdentifier"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.id)"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "Scope[ORIGINALMESSAGESTANDARD]/InstanceIdentifier"
+* group[=].rule[=].target.transform = #copy
+* group[=].rule[+].name = "ScopeOriginalEnvelopeIdentiferIdentifier"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "dk-medcom-messaging"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "Scope[ORIGINALMESSAGESTANDARD]/Identifier"
+* group[=].rule[=].target.transform = #create
 
 /*
-ORIGINALMESSAGESTANDARD 
 ORIGINALMESSAGEVERSION
 
 //XDS-METADATA
