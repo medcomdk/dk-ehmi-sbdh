@@ -168,7 +168,6 @@ Usage: #definition
 * group[=].rule[=].target.element = "Scope[PROCESSID]/Identifier"
 * group[=].rule[=].target.transform = #create
 //BusinessScope - Health message communication
-//PATIENTID 
 * group[+].name = "BusinessScopeHealthMessageCommunication"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
@@ -177,6 +176,7 @@ Usage: #definition
 * group[=].input[+].name = "target"
 * group[=].input[=].type = "sbdhBusinessScope"
 * group[=].input[=].mode = #target
+//PATIENTID 
 * group[=].rule[+].name = "ScopePatientIdType"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "PATIENTID"
@@ -374,7 +374,15 @@ Usage: #definition
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[ORIGINALMESSAGEVERSION]/Identifier"
 * group[=].rule[=].target.transform = #create
-//XDS-METADATA 
+//BusinessScope - XDS-METADATA 
+* group[+].name = "BusinessScopeXdsMetadata"
+* group[=].typeMode = #none
+* group[=].input[0].name = "source"
+* group[=].input[=].type = "MedComMessagingMessage"
+* group[=].input[=].mode = #source
+* group[=].input[+].name = "target"
+* group[=].input[=].type = "sbdhBusinessScope"
+* group[=].input[=].mode = #target
 * group[=].rule[+].name = "ScopeXdsMetadataType"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "XDS-METADATA"
