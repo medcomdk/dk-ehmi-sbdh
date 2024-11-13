@@ -331,33 +331,72 @@ Usage: #definition
 * group[=].rule[=].target.element = "Scope[ORIGINALENVELOPEIDENTIFIER]/Identifier"
 * group[=].rule[=].target.transform = #create
 // Health message communication - ORIGINALMESSAGESTANDARD
-* group[=].rule[+].name = "ScopeOriginalEnvelopeIdentiferType"
+* group[=].rule[+].name = "ScopeOriginalMessageStandardType"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "ORIGINALMESSAGESTANDARD"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[ORIGINALMESSAGESTANDARD]/Type"
 * group[=].rule[=].target.transform = #create
-* group[=].rule[+].name = "ScopeOriginalEnvelopeIdentiferInstanceIdentifier"
+* group[=].rule[+].name = "ScopeOriginalMessageStandardInstanceIdentifier"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.id)"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[ORIGINALMESSAGESTANDARD]/InstanceIdentifier"
 * group[=].rule[=].target.transform = #copy
-* group[=].rule[+].name = "ScopeOriginalEnvelopeIdentiferIdentifier"
+* group[=].rule[+].name = "ScopeOriginalMessageStandardIdentifier"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "dk-medcom-messaging"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[ORIGINALMESSAGESTANDARD]/Identifier"
 * group[=].rule[=].target.transform = #create
-
+// Health message communication - ORIGINALMESSAGEVERSION
+* group[=].rule[+].name = "ScopeOriginalMessageVersionType"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "ORIGINALMESSAGEVERSION"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "Scope[ORIGINALMESSAGEVERSION]/Type"
+* group[=].rule[=].target.transform = #create
+* group[=].rule[+].name = "ScopeOriginalMessageVersionInstanceIdentifier"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.id)"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "Scope[ORIGINALMESSAGEVERSION]/InstanceIdentifier"
+* group[=].rule[=].target.transform = #copy
+* group[=].rule[+].name = "ScopeOriginalMessageVersionIdentifier"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "dk-medcom-messaging"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "Scope[ORIGINALMESSAGEVERSION]/Identifier"
+* group[=].rule[=].target.transform = #create
+//XDS-METADATA 
+* group[=].rule[+].name = "ScopeXdsMetadataType"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "XDS-METADATA"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "Scope[XDS-METADATA]/Type"
+* group[=].rule[=].target.transform = #create
+* group[=].rule[+].name = "ScopeXdsMetadataInstanceIdentifier"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.id)"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "Scope[XDS-METADATA]/InstanceIdentifier"
+* group[=].rule[=].target.transform = #copy
+* group[=].rule[+].name = "ScopeXdsMetadataIdentifier"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "dk-medcom-messaging"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "Scope[XDS-METADATA]/Identifier"
+* group[=].rule[=].target.transform = #create
 /*
-ORIGINALMESSAGEVERSION
-
-//XDS-METADATA
-XDS-METADATA
 
 //Group: Reliable messaging
 ReceiptAcknowledgement- - Request
