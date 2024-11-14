@@ -131,5 +131,4 @@ A ehmiSBDHEnvelopeAcknowledgement consists of the following elements (see <a hre
 
 | Links for Reliable Messaging|
 |:---|
-|[Reliable Messaging in general](020_Governance-for-Reliable-Messaging-in-general.md)|
-|[Reliable Messaging in MedCom FHIR Messaging](043_Reliable_Messaging-FHIR.md)|
+|[Reliable Messaging in general](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/FHIRMessages_NetworkEnvelopes_EN.html)|
