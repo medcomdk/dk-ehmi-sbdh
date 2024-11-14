@@ -32,8 +32,9 @@ dependencies:
   medcom.fhir.dk.terminology: 1.5.0
   dk.ehmi.terminology: current
   dk.ehmi.eer: current
-  medcom.fhir.dk.xds.metadata: current
+  #medcom.fhir.dk.xds.metadata: current
   medcom.fhir.dk.ihe.xds.metadata: current
+  medcom.fhir.dk.xdsmetadata: current
 #
 #     id: mcode
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
