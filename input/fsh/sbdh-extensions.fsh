@@ -2,7 +2,7 @@
 Profile: EhmiSbdhPartner
 Parent: Basic
 Title: "EHMI Standard Business Document Header Partner"
-Description: "Profile for EHMI Standard Business Document Header Partner"
+Description: "Profile for EHMI SBDH Partner"
 * extension contains PartnerIdentification 1..1 MS 
 * extension contains contactInformation 1..1 MS 
 
