@@ -1,15 +1,15 @@
 # Reliable Messaging using ehmiSBDHEnvelope
 
 **Table of contents**
-* [1 Different Reliable Messaging scenarios using ehmiSBDHEnvelope](#1-different-reliable-messaging-scenarios-using-vansenvelope)
-    * [1.1 Scenario #1 - Normally successful unsolicited ehmiSBDHEnvelope or request ehmiSBDHEnvelope flow with ehmiSBDHEnvelopeAcknowledgement request ](#11-scenario-1---normally-successful-unsolicited-vansenvelope-or-request-vansenvelope-flow-with-vansenvelopeacknowledgement-request)
-    * [1.2 Scenario #2 - Duplicate of an unchanged ehmiSBDHEnvelope with a positive ehmiSBDHEnvelopeAcknowledgement request ](#12-scenario-2---duplicate-of-an-unchanged-vansenvelope-with-a-positive-vansenvelopeacknowledgement-request)
-    * [1.3 Scenario #3 - (Re) Sending Unchanged ehmiSBDHEnvelope ](#13-scenario-3---re-sending-unchanged-vansenvelope)
-    * [1.4 Scenario #4 - ehmiSBDHEnvelope is sent normally, but ehmiSBDHEnvelopeAcknowledgement is lost along the way](#14-scenario-4---vansenvelope-is-sent-normally-but-vansenvelopeacknowledgement-is-lost-along-the-way)
+* [1 Different Reliable Messaging scenarios using ehmiSBDHEnvelope](#1-different-reliable-messaging-scenarios-using-ehmisbdhenvelope)
+    * [1.1 Scenario #1 - Normally successful unsolicited ehmiSBDHEnvelope or request ehmiSBDHEnvelope flow with ehmiSBDHEnvelopeAcknowledgement request](#11-scenario-1---normally-successful-unsolicited-ehmiSBDHEnvelope-or-request-ehmiSBDHEnvelope-flow-with-ehmiSBDHEnvelopeacknowledgement-request)
+    * [1.2 Scenario #2 - Duplicate of an unchanged ehmiSBDHEnvelope with a positive ehmiSBDHEnvelopeAcknowledgement request ](#12-scenario-2---duplicate-of-an-unchanged-ehmiSBDHEnvelope-with-a-positive-ehmiSBDHEnvelopeacknowledgement-request)
+    * [1.3 Scenario #3 - (Re) Sending Unchanged ehmiSBDHEnvelope ](#13-scenario-3---re-sending-unchanged-ehmiSBDHEnvelope)
+    * [1.4 Scenario #4 - ehmiSBDHEnvelope is sent normally, but ehmiSBDHEnvelopeAcknowledgement is lost along the way](#14-scenario-4---ehmiSBDHEnvelope-is-sent-normally-but-ehmiSBDHEnvelopeacknowledgement-is-lost-along-the-way)
     * [1.5 Scenario #5 - (Re-) Sending Modified Message ](#15-scenario-5---re--sending-modified-message)
-* [2 VansEnvelope Reliable Messaging Elements](#2-vansenvelope-reliable-messaging-elements)
-    * [2.2 VansEnvelope Reliable Messaging Message Elements](#22-vansenvelope-reliable-messaging-message-elements)
-    * [2.3 VansEnvelope ehmiSBDHEnvelopeAcknowledgement Reliable Messaging Elements](#23-vansenvelope-vansenvelopeacknowledgement-reliable-messaging-elements)
+* [2 ehmiSBDHEnvelope Reliable Messaging Elements](#2-ehmiSBDHEnvelope-reliable-messaging-elements)
+    * [2.2 ehmiSBDHEnvelope Reliable Messaging Message Elements](#22-ehmiSBDHEnvelope-reliable-messaging-message-elements)
+    * [2.3 ehmiSBDHEnvelope ehmiSBDHEnvelopeAcknowledgement Reliable Messaging Elements](#23-ehmiSBDHEnvelope-ehmiSBDHEnvelopeacknowledgement-reliable-messaging-elements)
 <br><br>
 
 
@@ -20,7 +20,7 @@ Reliable Messaging in ehmiSBDHEnvelope follows the principles laid out in [Relia
 The Reliable Messaging Model and how the flow is laid out using ehmiSBDHEnvelope is shown in <a href="#Fig1">Figure 1</a>. 
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="../images/reliable-messaging-vansenvelope_1160x625.png" target="_blank"> <img src="../images/reliable-messaging-vansenvelope_1160x625.png" alt="reliable messaging principle" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig1"></a>
+<a href="reliable-messaging-ehmiSBDHEnvelope_1160x625.png" target="_blank"> <img src="reliable-messaging-ehmiSBDHEnvelope_1160x625.png" alt="reliable messaging principle" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig1"></a>
 <figcaption text-align="left"><b>Figure 1: Reliable Messaging - ehmiSBDHEnvelope </b></figcaption>
 </figure>
 <br>
@@ -93,22 +93,22 @@ If the content of the Message content part is changed, the ehmiSBDHEnvelope is c
 
 Resubmissions **SHALL** always be done manually.
 
-## 2 VansEnvelope Reliable Messaging Elements
+## 2 ehmiSBDHEnvelope Reliable Messaging Elements
 
-### 2.2 VansEnvelope Reliable Messaging Message Elements
+### 2.2 ehmiSBDHEnvelope Reliable Messaging Message Elements
 
-A VansEnvelope consists of the following elements (see <a href="#Fig2">Figure 2</a>.):
+A ehmiSBDHEnvelope consists of the following elements (see <a href="#Fig2">Figure 2</a>.):
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="../images/vansenvelope_schema-reliable.png" target="_blank"> <img src="../images/vansenvelope_schema-reliable.png" alt="vansenvelope_schema-reliable" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig2"></a>
+<a href="ehmiSBDHEnvelope_schema-reliable.png" target="_blank"> <img src="ehmiSBDHEnvelope_schema-reliable.png" alt="ehmiSBDHEnvelope_schema-reliable" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig2"></a>
 <figcaption text-align="left"><b>Figure 2: Reliable Messaging - reliable ehmiSBDHEnvelope tables </b></figcaption>
 </figure>
 <br>
 
-A VansEnvelope's Reliable Messaging part can be found in the ehmiSBDHEnvelope/Message/MetaInformation/Transport/Type-element, which is shown in <a href="#Fig3">Figure 3</a>.:
+A ehmiSBDHEnvelope's Reliable Messaging part can be found in the ehmiSBDHEnvelope/Message/MetaInformation/Transport/Type-element, which is shown in <a href="#Fig3">Figure 3</a>.:
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="../images/vansenvelope_schema-reliable-type.png" target="_blank"> <img src="../images/vansenvelope_schema-reliable-type.png" alt="vansenvelope_schema-reliable" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig3"></a>
+<a href="ehmiSBDHEnvelope_schema-reliable-type.png" target="_blank"> <img src="ehmiSBDHEnvelope_schema-reliable-type.png" alt="ehmiSBDHEnvelope_schema-reliable" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig3"></a>
 <figcaption text-align="left"><b>Figure 3: Reliable Messaging - reliable ehmiSBDHEnvelope type </b></figcaption>
 </figure>
 <br>
@@ -117,14 +117,14 @@ Reliable Messaging in ehmiSBDHEnvelope is the default mode but can explicitly be
 
 In FHIR Messaging, this element **SHALL** be "reliable" or left in default mode.
 
-### 2.3 VansEnvelope ehmiSBDHEnvelopeAcknowledgement Reliable Messaging Elements
+### 2.3 ehmiSBDHEnvelope ehmiSBDHEnvelopeAcknowledgement Reliable Messaging Elements
 
 When "reliable", the receiver of the ehmiSBDHEnvelope **SHALL** send a ehmiSBDHEnvelopeAcknowledgement return to the original Sender.
 
 A ehmiSBDHEnvelopeAcknowledgement consists of the following elements (see <a href="#Fig4">Figure 4</a>.):
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="../images/vansenvelope_schema-acknowledgement.png" target="_blank"> <img src="../images/vansenvelope_schema-acknowledgement.png" alt="vansenvelope_schema-acknowledgement" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig4"></a>
+<a href="ehmiSBDHEnvelope_schema-acknowledgement.png" target="_blank"> <img src="ehmiSBDHEnvelope_schema-acknowledgement.png" alt="ehmiSBDHEnvelope_schema-acknowledgement" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig4"></a>
 <figcaption text-align="left"><b>Figure 4: Reliable Messaging - reliable ehmiSBDHEnvelope acknowledgement </b></figcaption>
 </figure>
 <br>
