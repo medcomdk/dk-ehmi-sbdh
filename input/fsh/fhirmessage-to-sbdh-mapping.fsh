@@ -404,6 +404,36 @@ Usage: #definition
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[XDS-METADATA]/Identifier"
 * group[=].rule[=].target.transform = #create
+//Group: Reliable messaging
+* group[+].name = "BusinessScopeSbdhReliableMessaging"
+* group[=].typeMode = #none
+* group[=].input[0].name = "source"
+* group[=].input[=].type = "MedComMessagingMessage"
+* group[=].input[=].mode = #source
+* group[=].input[+].name = "target"
+* group[=].input[=].type = "sbdhBusinessScope"
+* group[=].input[=].mode = #target
+* group[=].rule[+].name = "ScopeXdsMetadataType"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "XDS-METADATA"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "Scope[XDS-METADATA]/Type"
+* group[=].rule[=].target.transform = #create
+* group[=].rule[+].name = "ScopeXdsMetadataInstanceIdentifier"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.id)"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "Scope[XDS-METADATA]/InstanceIdentifier"
+* group[=].rule[=].target.transform = #copy
+* group[=].rule[+].name = "ScopeXdsMetadataIdentifier"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "dk-medcom-messaging"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "Scope[XDS-METADATA]/Identifier"
+* group[=].rule[=].target.transform = #create
 /*
 
 //Group: Reliable messaging
