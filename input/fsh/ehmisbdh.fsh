@@ -87,7 +87,8 @@ Instance: ehmiSbdhHeaderVersion
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for HeaderVersion"
 Description: "Profile for EHMI SBDH Scope structure"
-//* code = #transfer
+* code = #transfer
+* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 * identifier.type.coding.code = #HeaderVersion
 * identifier.value = "1.0"
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
@@ -268,6 +269,8 @@ Instance: ehmiSBDHScopeDocumentId
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for DOCUMENTID"
 Description: "Profile for EHMI SBDH Scope structure"
+* code = #transfer
+* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 * identifier.type.coding.code = #DOCUMENTID
 * identifier.value = "urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:3.0"
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
@@ -276,9 +279,10 @@ Instance: ehmiSBDHScopeProcessId
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for PROCESSID"
 Description: "Profile for EHMI SBDH Scope structure"
+* code = #transfer
+* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 * identifier.value = "sdn-emergence"
 * identifier.type.coding.code = #PROCESSID
-//* identifier.value = "dk-medcom-messaging"
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 
 // PEPPOL scope instances
@@ -287,81 +291,90 @@ Instance: ehmiSBDHScopePatientId
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for PATIENTID"
 Description: "Profile for EHMI SBDH Scope structure"
+* code = #transfer
+* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 * identifier.value = "0101910227"
 * identifier.type.coding.code = #PATIENTID
-//* identifier.value = "dk-medcom-messaging"
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 
 Instance: ehmiSBDHScopeSenderId
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for SENDERID"
 Description: "Profile for EHMI SBDH Scope structure"
+* code = #transfer
+* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 * identifier.value = "SOR1170101"
 * identifier.type.coding.code = #SENDERID
-//* identifier.value = "dk-medcom-messaging"
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 
 Instance: ehmiSBDHScopeReceiverId
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for RECEIVERID"
 Description: "Profile for EHMI SBDH Scope structure"
+* code = #transfer
+* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 * identifier.value = "SOR1170102"
 * identifier.type.coding.code = #RECEIVERID
-//* identifier.value = "dk-medcom-messaging"
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 
 Instance: ehmiSBDHScopeMessageIdentifier
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for MESSAGEIDENTIFIER"
 Description: "Profile for EHMI SBDH Scope structure"
+* code = #transfer
+* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 * identifier.value = "Msg1234567890"
 * identifier.type.coding.code = #MESSAGEIDENTIFIER
-//* identifier.value = "dk-medcom-messaging"
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 
 Instance: ehmiSBDHScopeMessageEnvelopeIdentifier
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for MESSAGEENVELOPEIDENTIFIER"
 Description: "Profile for EHMI SBDH Scope structure"
+* code = #transfer
+* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 * identifier.value = "Env12345678901"
 * identifier.type.coding.code = #MESSAGEENVELOPEIDENTIFIER
-//* identifier.value = "dk-medcom-messaging"
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 
 Instance: ehmiSBDHScopeOriginalMessageIdentifier
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for ORIGINALMESSAGEIDENTIFIER"
 Description: "Profile for EHMI SBDH Scope structure"
+* code = #transfer
+* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 * identifier.value = "Msg1234567890"
 * identifier.type.coding.code = #ORIGINALMESSAGEIDENTIFIER
-//* identifier.value = "dk-medcom-messaging"
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 
 Instance: ehmiSBDHScopeOriginalMessageEnvelopeIdentifier
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for ORIGINALMESSAGEENVELOPEIDENTIFIER"
 Description: "Profile for EHMI SBDH Scope structure"
+* code = #transfer
+* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 * identifier.value = "Env12345678901"
 * identifier.type.coding.code = #ORIGINALMESSAGEENVELOPEIDENTIFIER
-//* identifier.value = "dk-medcom-messaging"
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 
 Instance: ehmiSBDHScopeOriginalMessageStandard
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for ORIGINALMESSAGESTANDARD"
 Description: "Profile for EHMI SBDH Scope structure"
+* code = #transfer
+* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 * identifier.value = "HomeCareObservation"
 * identifier.type.coding.code = #ORIGINALMESSAGESTANDARD
-//* identifier.value = "dk-medcom-messaging"
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 
 Instance: ehmiSBDHScopeOriginalMessageVersion
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for ORIGINALMESSAGEVERSION"
 Description: "Profile for EHMI SBDH Scope structure"
+* code = #transfer
+* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 * identifier.value = "2.0"
 * identifier.type.coding.code = #ORIGINALMESSAGEVERSION
-//* identifier.value = "dk-medcom-messaging"
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 
 // XDS Metadata scopes
@@ -369,6 +382,8 @@ Instance: ehmiSBDHScopeXdsMetadata
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for XDS-Metadata"
 Description: "Profile for EHMI SBDH Scope structure"
+* code = #transfer
+* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 * identifier.value = "CDATA:DocumentReference-structure"
 * identifier.type.coding.code = #XDS-Metadata
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
