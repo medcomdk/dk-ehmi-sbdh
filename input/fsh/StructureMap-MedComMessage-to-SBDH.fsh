@@ -1,4 +1,4 @@
-Instance: MedComMessage2Sbdh-transform
+/*Instance: MedComMessage2Sbdh-transform
 InstanceOf: StructureMap
 Usage: #definition
 * url = "http://hl7.org/fhir/StructureMap/MedComMessage2Sbdh-transform"
