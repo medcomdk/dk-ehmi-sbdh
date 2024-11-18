@@ -1,7 +1,7 @@
 Instance: Sbdh2EhmiDeliveryStatus-transform
 InstanceOf: StructureMap
 Usage: #definition
-* url = "http://hl7.org/fhir/StructureMap/fhirmsg2sbdh-transform"
+* url = "http://hl7.org/fhir/StructureMap/Sbdh2EhmiDeliveryStatus-transform"
 * name = "Transform from a FHIR Messsage to an ehmiSBDH Envelope"
 * title = "Transformation specification of a FHIR Messsage to an ehmiSBDH Envelope"
 * status = #draft
