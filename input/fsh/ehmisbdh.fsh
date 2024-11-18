@@ -79,7 +79,7 @@ Description: "Profile for EHMI SBDH Bundle"
 * entry[EhmiSbdhReceiver].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Endpoint/ehmiSbdhReceiver"
 * entry[EhmiSbdhReceiver].resource = ehmiSbdhReceiver
 * entry[EhmiSBDHDocumentInformationBundle].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Bundle/ehmiSBDHDocumentInformationBundle"
-* entry[EhmiSBDHDocumentInformationBundle].resource = ehmiSBDHDocumentInformationBundle
+* entry[EhmiSBDHDocumentInformationBundle].resource = EhmiStandardBusinessDocumentHeaderDocumentInformationBundle
 * entry[EhmiSBDHBusinessScopeBundle].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Bundle/ehmiSBDHBusinessScopeBundle"
 * entry[EhmiSBDHBusinessScopeBundle].resource = ehmiSBDHBusinessScopeBundle
 
@@ -227,7 +227,7 @@ Description: "Profile for EHMI SBDH Scope structure"
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 * identifier.value 1..1 MS
 * code = #transfer (exactly)
-* code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
+//* code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * subject 0..0
 * created 0..0
 * author 0..0
