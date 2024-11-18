@@ -20,7 +20,7 @@ Parent: EhmiSbdBundleTemplate
 Title: "EHMI Standard Business Document Bundle"
 Description: "Profile for EHMI Standard Business Document Bundle"
 * entry ^slicing.discriminator.type = #value
-* entry ^slicing.discriminator.path = "id"
+* entry ^slicing.discriminator.path = id
 * entry ^slicing.rules = #closed // allow other codes
 * entry contains
     ehmiSBDHBundle 1..1 and 
@@ -48,7 +48,7 @@ Title: "EHMI Standard Business Document Header Bundle"
 Description: "Profile for EHMI Standard Business Document Header Bundle"
 * id = "EhmiStandardBusinessDocumentHeaderBundle"
 * entry ^slicing.discriminator.type = #value
-* entry ^slicing.discriminator.path = "id"
+* entry ^slicing.discriminator.path = id
 * entry ^slicing.rules = #open // allow other codes
 * entry contains
     EhmiSbdhHeaderVersion 1..1 and 
@@ -153,7 +153,7 @@ Description: "Profile for EHMI SBDH DocumentInformation Bundle"
 * id = "EhmiStandardBusinessDocumentHeaderDocumentInformationBundle"
 * type = #collection
 /* entry ^slicing.discriminator.type = #value
-* entry ^slicing.discriminator.path = "resource"
+* entry ^slicing.discriminator.path = resource
 * entry ^slicing.rules = #open // allow other codes
 * entry contains
     EhmiSBDHDocumentInformation 1..1
@@ -203,7 +203,7 @@ Description: "Profile for EHMI SBDH BusinessScope Bundle"
 * id = "EhmiStandardBusinessDocumentHeaderBusinessScopeBundle"
 * type = #collection
 * entry ^slicing.discriminator.type = #value
-* entry ^slicing.discriminator.path = "resource"
+* entry ^slicing.discriminator.path = resource
 * entry ^slicing.rules = #open // allow other codes
 * entry contains
     ehmiSBDHScopeDocumentId 1..1 and 
@@ -227,7 +227,7 @@ Description: "Profile for EHMI SBDH Scope structure"
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 * identifier.value 1..1 MS
 * code = #transfer (exactly)
-* code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type" (exactly)
+* code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * subject 0..0
 * created 0..0
 * author 0..0
