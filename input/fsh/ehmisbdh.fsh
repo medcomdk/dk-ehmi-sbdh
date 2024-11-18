@@ -46,7 +46,7 @@ Profile: EhmiStandardBusinessDocumentHeaderBundle
 Parent: EhmiSbdBundleTemplate
 Title: "EHMI Standard Business Document Header Bundle"
 Description: "Profile for EHMI Standard Business Document Header Bundle"
-* id = EhmiStandardBusinessDocumentHeaderBundle
+* id = "EhmiStandardBusinessDocumentHeaderBundle"
 * entry ^slicing.discriminator.type = #value
 * entry ^slicing.discriminator.path = id
 * entry ^slicing.rules = #open // allow other codes
@@ -71,7 +71,7 @@ Instance: ehmiSBDHBundle
 InstanceOf: EhmiStandardBusinessDocumentHeaderBundle
 Title: "EHMI Standard Business Document Header Bundle"
 Description: "Profile for EHMI SBDH Bundle"
-* id = EhmiStandardBusinessDocumentHeaderBundle
+* id = "EhmiStandardBusinessDocumentHeaderBundle"
 //* entry[EhmiSbdhHeaderVersion].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Endpoint/ehmiSbdhHeaderVersion"
 * entry[EhmiSbdhHeaderVersion].resource = ehmiSbdhHeaderVersion
 * entry[EhmiSbdhSender].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Endpoint/ehmiSbdhSender"
@@ -103,12 +103,14 @@ Description: "Partner information"
 * identifier.id = "iso6523-actorid-upis"
 * identifier.value 1..1
 * connectionType = #hl7-fhir-msg //eDelivery
+* connectionType.system = "http://hl7.org/fhir/ValueSet/endpoint-connection-type"
 * name 0..0
 * contact 0..1
 * managingOrganization 0..0
 * period 0..0
 * payloadMimeType 0..0
 * payloadType.coding.code = #ehmiMessage
+* payloadType.coding.system = $EhmiSbdhEmdpointPayloadTypeCS
 
 Profile: EhmiSbdhSender
 Parent: PartnerIdentification
@@ -150,7 +152,7 @@ Profile: EhmiStandardBusinessDocumentHeaderDocumentInformationBundle
 Parent: Bundle
 Title: "EHMI Standard Business Document Header DocumentInformation Bundle"
 Description: "Profile for EHMI SBDH DocumentInformation Bundle"
-* id = EhmiStandardBusinessDocumentHeaderDocumentInformationBundle
+* id = "EhmiStandardBusinessDocumentHeaderDocumentInformationBundle"
 * type = #collection
 /* entry ^slicing.discriminator.type = #value
 * entry ^slicing.discriminator.path = resource
@@ -200,7 +202,7 @@ Profile: EhmiStandardBusinessDocumentHeaderBusinessScopeBundle
 Parent: EhmiSbdBundleTemplate
 Title: "EHMI Standard Business Document Header BusinessScope Bundle"
 Description: "Profile for EHMI SBDH BusinessScope Bundle"
-* id = EhmiStandardBusinessDocumentHeaderBusinessScopeBundle
+* id = "EhmiStandardBusinessDocumentHeaderBusinessScopeBundle"
 * type = #collection
 * entry ^slicing.discriminator.type = #value
 * entry ^slicing.discriminator.path = resource
@@ -402,7 +404,7 @@ Instance: ehmiSBDBinaryJson
 InstanceOf: EhmiStandardBusinessDocumentBinaryJson
 Title: "EHMI Standard Business Document JSON Binary"
 Description: "Instance for EHMI Standard Business Document JSON Binary"
-* id = EhmiStandardBusinessDocumentBinaryJson
+* id = "EhmiStandardBusinessDocumentBinaryJson"
 * contentType = #application/fhir+json
 * data = "QmFzZTY0QmluYXJ5SnNvbkdyeWY="
 
@@ -419,7 +421,7 @@ Instance: ehmiSBDBinaryXml
 InstanceOf: EhmiStandardBusinessDocumentBinaryXml
 Title: "EHMI Standard Business Document XML Binary"
 Description: "Instance for EHMI Standard Business Document XML Binary"
-* id = EhmiStandardBusinessDocumentBinaryXml
+* id = "EhmiStandardBusinessDocumentBinaryXml"
 * contentType = #application/fhir+xml
 * data = "QmFzZTY0QmluYXJ5WG1sR3J5Zg=="
 
