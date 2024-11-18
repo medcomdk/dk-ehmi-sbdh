@@ -393,6 +393,7 @@ Profile: EhmiStandardBusinessDocumentBinaryJson
 Parent: Binary
 Title: "EHMI Standard Business Document JSON Binary"
 Description: "Profile for EHMI Standard Business Document JSON Binary"
+* id 1..1 MS
 * contentType 1..1 MS
 * contentType = #application/fhir+json
 * data 1..1 MS
@@ -401,6 +402,7 @@ Instance: ehmiSBDBinaryJson
 InstanceOf: EhmiStandardBusinessDocumentBinaryJson
 Title: "EHMI Standard Business Document JSON Binary"
 Description: "Instance for EHMI Standard Business Document JSON Binary"
+* id = "EhmiStandardBusinessDocumentBinaryJson"
 * contentType = #application/fhir+json
 * data = "QmFzZTY0QmluYXJ5SnNvbkdyeWY="
 
@@ -408,6 +410,7 @@ Profile: EhmiStandardBusinessDocumentBinaryXml
 Parent: Binary
 Title: "EHMI Standard Business Document XML Binary"
 Description: "Profile for EHMI Standard Business Document XML Binary"
+* id 1..1 MS
 * contentType 1..1 MS
 * contentType = #application/fhir+xml
 * data 1..1 MS
@@ -416,6 +419,7 @@ Instance: ehmiSBDBinaryXml
 InstanceOf: EhmiStandardBusinessDocumentBinaryXml
 Title: "EHMI Standard Business Document XML Binary"
 Description: "Instance for EHMI Standard Business Document XML Binary"
+* id = "EhmiStandardBusinessDocumentBinaryXml"
 * contentType = #application/fhir+xml
 * data = "QmFzZTY0QmluYXJ5WG1sR3J5Zg=="
 
