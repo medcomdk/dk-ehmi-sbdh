@@ -87,6 +87,7 @@ Instance: ehmiSbdhHeaderVersion
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for HeaderVersion"
 Description: "Profile for EHMI SBDH Scope structure"
+//* code = #transfer
 * identifier.type.coding.code = #HeaderVersion
 * identifier.value = "1.0"
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
@@ -221,9 +222,9 @@ Profile: EhmiSBDHScope
 Parent: Basic
 Title: "EHMI Standard Business Document Header Scope structure"
 Description: "Profile for EHMI SBDH Scope structure"
-* identifier.type.coding.code MS
-* identifier.type.coding.system MS
-* identifier.value MS
+* identifier.type.coding.code 1..1
+* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
+* identifier.value 1..1 MS
 * code = #transfer (exactly)
 * code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type" (exactly)
 * subject 0..0
