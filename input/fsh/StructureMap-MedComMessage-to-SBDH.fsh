@@ -1,7 +1,7 @@
 Instance: MedComMessage2Sbdh-transform
 InstanceOf: StructureMap
 Usage: #definition
-* url = "http://hl7.org/fhir/StructureMap/fhirmsg2sbdh-transform"
+* url = "http://hl7.org/fhir/StructureMap/MedComMessage2Sbdh-transform"
 * name = "Transform from a MedCom FHIR Messsage to an ehmiSBDH Envelope"
 * title = "Transformation specification of a MedCom FHIR Messsage to an ehmiSBDH Envelope"
 * status = #draft
@@ -13,7 +13,7 @@ Usage: #definition
 * group[0].name = "HeaderVersion"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
-* group[=].input[=].type = "MedComMessagingMessage"
+* group[=].input[=].type = "medcom-messaging-message"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
 * group[=].input[=].type = "ehmiSbdh"
@@ -28,14 +28,14 @@ Usage: #definition
 * group[+].name = "Sender"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
-* group[=].input[=].type = "MedComMessagingOrganization"
+* group[=].input[=].type = "medcom-messaging-organization"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
 * group[=].input[=].type = "SbdhSender"
 * group[=].input[=].mode = #target
 * group[=].rule[0].name = "Identifier.value"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "MedComMessagingOrganization[Sender]/identifier[EAN-ID]/value"
+* group[=].rule[=].source.element = "medcom-messaging-organization[Sender]/identifier[EAN-ID]/value"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "SbdhSender/identifier/value"
@@ -50,14 +50,14 @@ Usage: #definition
 * group[+].name = "Receiver"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
-* group[=].input[=].type = "MedComMessagingOrganization"
+* group[=].input[=].type = "medcom-messaging-organization"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
 * group[=].input[=].type = "SbdhReceiver"
 * group[=].input[=].mode = #target
 * group[=].rule[+].name = "Identifier.value"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "MedComMessagingOrganization[Receiver]/identifier[EAN-ID]/value"
+* group[=].rule[=].source.element = "medcom-messaging-organization[Receiver]/identifier[EAN-ID]/value"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "SbdhReceiver/identifier/value"
