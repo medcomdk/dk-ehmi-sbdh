@@ -1,4 +1,4 @@
-Instance: Sbdh2DocumentReference-transform
+/*Instance: Sbdh2DocumentReference-transform
 InstanceOf: StructureMap
 Usage: #definition
 * url = "http://hl7.org/fhir/StructureMap/Sbdh2DocumentReference-transform"
