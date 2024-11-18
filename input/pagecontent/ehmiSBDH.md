@@ -556,7 +556,7 @@ The value in InstanceIdentifier is identical to the corresponding SMP record. Th
     <Scope> 
         <Type>DOCUMENTID</Type> 
         <InstanceIdentifier>
-            urn:dk:healthcare:prod:messaging:medcom:fhir:structuredefinition:[Bundle/MessageHeader/eventCoding/code.value ]#urn:dk:medcom:fhir:[Bundle/MessageHeader/definition/[value of MessageDefinition version-part]]
+            urn:dk:healthcare:prod:messaging:medcom:fhir:structuredefinition:[Bundle/MessageHeader/eventCoding/code.value]#urn:dk:medcom:fhir:[Bundle/MessageHeader/definition/[value of MessageDefinition version-part]]
         </InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
@@ -570,7 +570,7 @@ MedCom FHIR Message example
     <Scope> 
         <Type>DOCUMENTID</Type> 
         <InstanceIdentifier>
-            urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation# urn:dk:medcom:fhir:homecareobservation:3.0
+            urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:3.0
         </InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
@@ -1549,7 +1549,7 @@ Same datatype as SBDH/BusinessScope/Scope(DOCUMENTID)/InstanceIdentifier
 OriginalDocumentIdentifier example
 
     <bpssignal:OriginalDocumentIdentifier>
-        urn:dk:healthcare:prod:messaging:medcom: fhir:structuredefinition:[Bundle/MessageHeader/eventCoding/code.value ]#urn:dk:medcom:fhir:[Bundle/MessageHeader/definition/[value of MessageDefinition version-part]]
+        urn:dk:healthcare:prod:messaging:medcom: fhir:structuredefinition:[Bundle/MessageHeader/eventCoding/code.value]#urn:dk:medcom:fhir:[Bundle/MessageHeader/definition/[value of MessageDefinition version-part]]
     </bpssignal:OriginalDocumentIdentifier>
 
 <br/>
@@ -1621,7 +1621,7 @@ ToPartyInfo example
             9a6ff82208de-5a6f-9670-9fa4b9d2f0dh
         </bpssignal:OriginalMessageIdentifier>
         <bpssignal:OriginalDocumentIdentifier>
-            urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation# urn:dk:medcom:fhir:homecareobservation:3.0
+            urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:3.0
         </bpssignal:OriginalDocumentIdentifier>
         <bpssignal:OriginalMessageDateTime>
             2024-03-01T16:19:00+01:00
@@ -1768,7 +1768,7 @@ ExceptionMessage example
             9a6ff82208de-5a6f-9670-9fa4b9d2f0dh
         </bpssignal:OriginalMessageIdentifier>
         <bpssignal:OriginalDocumentIdentifier>
-            urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation# urn:dk:medcom:fhir:homecareobservation:3.0
+            urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:3.0
         </bpssignal:OriginalDocumentIdentifier>
         <bpssignal:OriginalMessageDateTime>
             2024-03-01T16:19:00+01:00
