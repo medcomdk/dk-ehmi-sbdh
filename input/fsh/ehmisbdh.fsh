@@ -225,7 +225,7 @@ Description: "Profile for EHMI SBDH Scope structure"
 * identifier.type.coding.system MS
 * identifier.value MS
 * code = #transfer (exactly)
-//* code.coding.system MS
+* code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type" (exactly)
 * subject 0..0
 * created 0..0
 * author 0..0
@@ -370,8 +370,8 @@ Title: "EHMI Standard Business Document Header Scope structure for XDS-Metadata"
 Description: "Profile for EHMI SBDH Scope structure"
 * identifier.value = "CDATA:DocumentReference-structure"
 * identifier.type.coding.code = #XDS-Metadata
-//* identifier.value = "dk-medcom-DocumentReference"
-* code.coding.system = "dk-medcom-DocumentReference"
+* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
+//* code.coding.system = "dk-medcom-DocumentReference"
 
 Profile: EhmiStandardBusinessDocumentBinaryJson
 Parent: Binary
