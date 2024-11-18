@@ -88,7 +88,7 @@ InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for HeaderVersion"
 Description: "Profile for EHMI SBDH Scope structure"
 * code = #transfer
-* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
+* code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.type.coding.code = #HeaderVersion
 * identifier.value = "1.0"
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
@@ -270,7 +270,7 @@ InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for DOCUMENTID"
 Description: "Profile for EHMI SBDH Scope structure"
 * code = #transfer
-* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
+* code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.type.coding.code = #DOCUMENTID
 * identifier.value = "urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:3.0"
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
@@ -280,7 +280,7 @@ InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for PROCESSID"
 Description: "Profile for EHMI SBDH Scope structure"
 * code = #transfer
-* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
+* code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.value = "sdn-emergence"
 * identifier.type.coding.code = #PROCESSID
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
@@ -292,7 +292,7 @@ InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for PATIENTID"
 Description: "Profile for EHMI SBDH Scope structure"
 * code = #transfer
-* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
+* code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.value = "0101910227"
 * identifier.type.coding.code = #PATIENTID
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
@@ -302,7 +302,7 @@ InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for SENDERID"
 Description: "Profile for EHMI SBDH Scope structure"
 * code = #transfer
-* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
+* code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.value = "SOR1170101"
 * identifier.type.coding.code = #SENDERID
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
@@ -312,7 +312,7 @@ InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for RECEIVERID"
 Description: "Profile for EHMI SBDH Scope structure"
 * code = #transfer
-* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
+* code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.value = "SOR1170102"
 * identifier.type.coding.code = #RECEIVERID
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
@@ -322,7 +322,7 @@ InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for MESSAGEIDENTIFIER"
 Description: "Profile for EHMI SBDH Scope structure"
 * code = #transfer
-* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
+* code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.value = "Msg1234567890"
 * identifier.type.coding.code = #MESSAGEIDENTIFIER
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
@@ -332,7 +332,7 @@ InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for MESSAGEENVELOPEIDENTIFIER"
 Description: "Profile for EHMI SBDH Scope structure"
 * code = #transfer
-* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
+* code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.value = "Env12345678901"
 * identifier.type.coding.code = #MESSAGEENVELOPEIDENTIFIER
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
@@ -342,7 +342,7 @@ InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for ORIGINALMESSAGEIDENTIFIER"
 Description: "Profile for EHMI SBDH Scope structure"
 * code = #transfer
-* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
+* code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.value = "Msg1234567890"
 * identifier.type.coding.code = #ORIGINALMESSAGEIDENTIFIER
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
@@ -352,7 +352,7 @@ InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for ORIGINALMESSAGEENVELOPEIDENTIFIER"
 Description: "Profile for EHMI SBDH Scope structure"
 * code = #transfer
-* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
+* code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.value = "Env12345678901"
 * identifier.type.coding.code = #ORIGINALMESSAGEENVELOPEIDENTIFIER
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
@@ -362,7 +362,7 @@ InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for ORIGINALMESSAGESTANDARD"
 Description: "Profile for EHMI SBDH Scope structure"
 * code = #transfer
-* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
+* code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.value = "HomeCareObservation"
 * identifier.type.coding.code = #ORIGINALMESSAGESTANDARD
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
@@ -372,7 +372,7 @@ InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for ORIGINALMESSAGEVERSION"
 Description: "Profile for EHMI SBDH Scope structure"
 * code = #transfer
-* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
+* code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.value = "2.0"
 * identifier.type.coding.code = #ORIGINALMESSAGEVERSION
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
@@ -383,7 +383,7 @@ InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for XDS-Metadata"
 Description: "Profile for EHMI SBDH Scope structure"
 * code = #transfer
-* identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
+* code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.value = "CDATA:DocumentReference-structure"
 * identifier.type.coding.code = #XDS-Metadata
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
