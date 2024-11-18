@@ -1,21 +1,6 @@
 # Reliable Messaging using ehmiSBDHEnvelope
 
-**Table of contents**
-* [1 Different Reliable Messaging scenarios using ehmiSBDHEnvelope](#1-different-reliable-messaging-scenarios-using-ehmisbdhenvelope)
-    * [1.1 Scenario #1 - Normally successful unsolicited ehmiSBDHEnvelope or request ehmiSBDHEnvelope flow with ehmiSBDHEnvelopeAcknowledgement request](#11-scenario-1---normally-successful-unsolicited-ehmiSBDHEnvelope-or-request-ehmiSBDHEnvelope-flow-with-ehmiSBDHEnvelopeacknowledgement-request)
-    * [1.2 Scenario #2 - Duplicate of an unchanged ehmiSBDHEnvelope with a positive ehmiSBDHEnvelopeAcknowledgement request ](#12-scenario-2---duplicate-of-an-unchanged-ehmiSBDHEnvelope-with-a-positive-ehmiSBDHEnvelopeacknowledgement-request)
-    * [1.3 Scenario #3 - (Re) Sending Unchanged ehmiSBDHEnvelope ](#13-scenario-3---re-sending-unchanged-ehmiSBDHEnvelope)
-    * [1.4 Scenario #4 - ehmiSBDHEnvelope is sent normally, but ehmiSBDHEnvelopeAcknowledgement is lost along the way](#14-scenario-4---ehmiSBDHEnvelope-is-sent-normally-but-ehmiSBDHEnvelopeacknowledgement-is-lost-along-the-way)
-    * [1.5 Scenario #5 - (Re-) Sending Modified Message ](#15-scenario-5---re--sending-modified-message)
-* [2 ehmiSBDHEnvelope Reliable Messaging Elements](#2-ehmiSBDHEnvelope-reliable-messaging-elements)
-    * [2.2 ehmiSBDHEnvelope Reliable Messaging Message Elements](#22-ehmiSBDHEnvelope-reliable-messaging-message-elements)
-    * [2.3 ehmiSBDHEnvelope ehmiSBDHEnvelopeAcknowledgement Reliable Messaging Elements](#23-ehmiSBDHEnvelope-ehmiSBDHEnvelopeacknowledgement-reliable-messaging-elements)
-<br><br>
-
-
-
-
-Reliable Messaging in ehmiSBDHEnvelope follows the principles laid out in [Reliable Messaging in general](/assets/documents/020_Governance-for-Reliable-Messaging-in-general.md)
+Reliable Messaging in ehmiSBDHEnvelope follows the principles laid out in <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/FHIRMessages_NetworkEnvelopes_EN.html" target="_blank">Reliable Messaging in general</a>
 
 The Reliable Messaging Model and how the flow is laid out using ehmiSBDHEnvelope is shown in <a href="#Fig1">Figure 1</a>. 
 
@@ -34,7 +19,7 @@ When Reliable Messaging is implemented, the Receiver **SHALL** check the incomin
 | MessageIdentifier has already been received, but EnvelopeIdentifier is new | The original ehmiSBDHEnvelopeAcknowledgement has been lost (failed to return to the request issuer) and thus the previously received Message in a ehmiSBDHEnvelope has been resubmitted with a new EnvelopeIdentifier for processing again. The original ehmiSBDHEnvelopeAcknowledgement **SHALL** be resent|
 | The EnvelopeIdentifier has already been received, but the MessageIdentifier is new | This is an error - EnvelopeIdentifier values **SHALL** never be reused. Receiver **MAY** return a Negative ehmiSBDHEnvelopeAcknowledgement|
 
-## 1 Different Reliable Messaging scenarios using ehmiSBDHEnvelope
+## Different Reliable Messaging scenarios using ehmiSBDHEnvelope
 
 This section provides a description of the different types of Reliable Messaging scenarios.
 
@@ -44,13 +29,13 @@ This section provides a description of the different types of Reliable Messaging
 - Scenario #4 - ehmiSBDHEnvelope is sent normally, ehmiSBDHEnvelopeAcknowledgement is lost along the way
 - Scenario #5 - (Re-)Sending Modified ehmiSBDHEnvelope
 
-### 1.1 Scenario #1 - Normally successful unsolicited ehmiSBDHEnvelope or request ehmiSBDHEnvelope flow with ehmiSBDHEnvelopeAcknowledgement request 
+### Scenario #1 - Normally successful unsolicited ehmiSBDHEnvelope or request ehmiSBDHEnvelope flow with ehmiSBDHEnvelopeAcknowledgement request 
 
 An unsolicited  ehmiSBDHEnvelope is sent with a new request for a positive ehmiSBDHEnvelopeAcknowledgement from the Sending System to a Receiving System.
 
 The Receiving System **SHALL** always send a positive ehmiSBDHEnvelopeAcknowledgement to the Sending System.
 
-### 1.2 Scenario #2 - Duplicate of an unchanged ehmiSBDHEnvelope with a positive ehmiSBDHEnvelopeAcknowledgement request 
+### Scenario #2 - Duplicate of an unchanged ehmiSBDHEnvelope with a positive ehmiSBDHEnvelopeAcknowledgement request 
 
 Duplication of an unchanged ehmiSBDHEnvelope can be done in one of the following ways:
 
@@ -69,7 +54,7 @@ If the Sending System of the ehmiSBDHEnvelope has received ehmiSBDHEnvelopeAckno
 
 The Sending System **SHALL** never display multiple instances of the same ehmiSBDHEnvelopeAcknowledgement in a ehmiSBDHEnvelope summary but **SHALL** log in a system log that ehmiSBDHEnvelopeAcknowledgement of a duplicate has taken place.
 
-### 1.3 Scenario #3 - (Re) Sending Unchanged ehmiSBDHEnvelope 
+### Scenario #3 - (Re) Sending Unchanged ehmiSBDHEnvelope 
 
 Correct retransmission of message A.
 
@@ -81,21 +66,21 @@ The ehmiSBDHEnvelope **SHALL** be sent and ehmiSBDHEnvelopeAcknowledged as a com
 
 Re-dispatches **SHALL** always be done manually and **SHOULD** be in accordance with the normal response time for the specific ehmiSBDHEnvelope flow.
 
-### 1.4 Scenario #4 - ehmiSBDHEnvelope is sent normally, but ehmiSBDHEnvelopeAcknowledgement is lost along the way 
+### Scenario #4 - ehmiSBDHEnvelope is sent normally, but ehmiSBDHEnvelopeAcknowledgement is lost along the way 
 
 Like in Scenario #1, but where ehmiSBDHEnvelopeAcknowledgement is lost along the way from the Sending System to the Receiving System.
 
 The shipping pattern is like Scenario #3.
 
-### 1.5 Scenario #5 - (Re-) Sending Modified Message 
+### Scenario #5 - (Re-) Sending Modified Message 
 
 If the content of the Message content part is changed, the ehmiSBDHEnvelope is considered a completely new ehmiSBDHEnvelope and consequently change of both EnvelopeIdentifier, MessageIdentifier and timestamp **SHALL** be made if relevant.
 
 Resubmissions **SHALL** always be done manually.
 
-## 2 ehmiSBDHEnvelope Reliable Messaging Elements
+## ehmiSBDHEnvelope Reliable Messaging Elements
 
-### 2.2 ehmiSBDHEnvelope Reliable Messaging Message Elements
+### ehmiSBDHEnvelope Reliable Messaging Message Elements
 
 A ehmiSBDHEnvelope consists of the following elements (see <a href="#Fig2">Figure 2</a>.):
 
@@ -117,7 +102,7 @@ Reliable Messaging in ehmiSBDHEnvelope is the default mode but can explicitly be
 
 In FHIR Messaging, this element **SHALL** be "reliable" or left in default mode.
 
-### 2.3 ehmiSBDHEnvelope ehmiSBDHEnvelopeAcknowledgement Reliable Messaging Elements
+### ehmiSBDHEnvelope ehmiSBDHEnvelopeAcknowledgement Reliable Messaging Elements
 
 When "reliable", the receiver of the ehmiSBDHEnvelope **SHALL** send a ehmiSBDHEnvelopeAcknowledgement return to the original Sender.
 
@@ -129,6 +114,6 @@ A ehmiSBDHEnvelopeAcknowledgement consists of the following elements (see <a hre
 </figure>
 <br>
 
-| Links for Reliable Messaging|
-|:---|
-|[Reliable Messaging in general](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/FHIRMessages_NetworkEnvelopes_EN.html)|
+## Links for Reliable Messaging|
+<a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/FHIRMessages_NetworkEnvelopes_EN.html" target="_blank">Reliable Messaging in general</a>
+
