@@ -226,7 +226,7 @@ Description: "Profile for EHMI SBDH Scope structure"
 * identifier.type.coding.code 1..1
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 * identifier.value 1..1 MS
-* code = #transfer (exactly)
+//* code = #transfer (exactly)
 //* code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * subject 0..0
 * created 0..0
