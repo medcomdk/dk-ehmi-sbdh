@@ -19,8 +19,8 @@ Parent: EhmiSbdBundleTemplate
 Title: "EHMI Standard Business Document Bundle"
 Description: "Profile for EHMI Standard Business Document Bundle"
 * entry ^slicing.discriminator.type = #value
-* entry ^slicing.discriminator.path = "resource"
-* entry ^slicing.rules = #open // allow other codes
+* entry ^slicing.discriminator.path = "fullurl"
+* entry ^slicing.rules = #closed // allow other codes
 * entry contains
     ehmiSBDHBundle 1..1 and 
     ehmiSBDBinaryJson 1..1 
@@ -33,10 +33,10 @@ Instance: ehmiSBDBundle
 InstanceOf: EhmiStandardBusinessDocumentBundle
 Title: "EHMI Standard Business Document Bundle"
 Description: "Profile for EHMI Standard Business Document Bundle"
-* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Bundle/ehmiSBDHBundle"
-* entry[=].resource = ehmiSBDHBundle
-* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Binary/ehmiSBDBinaryJson"
-* entry[=].resource = ehmiSBDBinaryJson
+* entry[ehmiSBDHBundle].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Bundle/ehmiSBDHBundle"
+* entry[ehmiSBDHBundle].resource = ehmiSBDHBundle
+* entry[ehmiSBDBinaryJson].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Binary/ehmiSBDBinaryJson"
+* entry[ehmiSBDBinaryJson].resource = ehmiSBDBinaryJson
 
 Profile: EhmiStandardBusinessDocumentHeaderBundle
 Parent: EhmiSbdBundleTemplate
@@ -66,16 +66,16 @@ Instance: ehmiSBDHBundle
 InstanceOf: EhmiStandardBusinessDocumentHeaderBundle
 Title: "EHMI Standard Business Document Header Bundle"
 Description: "Profile for EHMI SBDH Bundle"
-* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Endpoint/ehmiSbdhHeaderVersion"
-* entry[=].resource = ehmiSbdhHeaderVersion
-* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Endpoint/ehmiSbdhSender"
-* entry[=].resource = ehmiSbdhSender
-* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Endpoint/ehmiSbdhReceiver"
-* entry[=].resource = ehmiSbdhReceiver
-* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Bundle/ehmiSBDHDocumentInformationBundle"
-* entry[=].resource = ehmiSBDHDocumentInformationBundle
-* entry[+].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Bundle/ehmiSBDHBusinessScopeBundle"
-* entry[=].resource = ehmiSBDHBusinessScopeBundle
+* entry[ehmiSbdhHeaderVersion].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Endpoint/ehmiSbdhHeaderVersion"
+* entry[ehmiSbdhHeaderVersion].resource = ehmiSbdhHeaderVersion
+* entry[ehmiSbdhSender].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Endpoint/ehmiSbdhSender"
+* entry[ehmiSbdhSender].resource = ehmiSbdhSender
+* entry[ehmiSbdhReceiver].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Endpoint/ehmiSbdhReceiver"
+* entry[ehmiSbdhReceiver].resource = ehmiSbdhReceiver
+* entry[hmiSBDHDocumentInformationBundle].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Bundle/ehmiSBDHDocumentInformationBundle"
+* entry[hmiSBDHDocumentInformationBundle].resource = ehmiSBDHDocumentInformationBundle
+* entry[ehmiSBDHBusinessScopeBundle].fullUrl = "http://medcomehmi.dk/ig/ehmi-sbdh/Bundle/ehmiSBDHBusinessScopeBundle"
+* entry[ehmiSBDHBusinessScopeBundle].resource = ehmiSBDHBusinessScopeBundle
 
 Instance: ehmiSbdhHeaderVersion
 InstanceOf: EhmiSBDHScope
