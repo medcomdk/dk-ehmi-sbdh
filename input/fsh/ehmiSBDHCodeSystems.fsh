@@ -1,6 +1,6 @@
 Alias: $EhmiSbdhCS = ehmi-sbdh-cs
 Alias: $EhmiSbdhVS = ehmi-sbdh-vs
-Alias: $EhmiSbdhMedComMessagingCS = dk-medcom-messaging-cs
+Alias: $EhmiSbdhMedComMessagingCS = dk-medcom-messaging
 Alias: $EhmiSbdhMedComMessagingVS = dk-medcom-messaging-vs
 
 CodeSystem: EhmiSbdhCS
@@ -28,9 +28,9 @@ Description: "VS containing codes for EHMI SBDH Messaging Types"
 //* include codes from system http://terminology.hl7.org/CodeSystem/audit-entity-type
 
 CodeSystem: EhmiSbdhMedComMessagingCS
-Id: dk-medcom-messaging-cs
+Id: dk-medcom-messaging
 Title: "EHMI Messaging Codes for SBDH CS"
-Description: "dk-medcom-messaging-cs for the EHMI Messaging Infrastructure"
+Description: "dk-medcom-messaging for the EHMI Messaging Infrastructure"
 * ^version  =  "1.0.0"
 * ^status  =  #active
 * ^date  =  "2024-11-01"
