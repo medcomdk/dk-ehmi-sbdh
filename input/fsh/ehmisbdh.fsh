@@ -50,7 +50,7 @@ Description: "Profile for EHMI Standard Business Document Header Bundle"
 * id = "EhmiStandardBusinessDocumentHeaderBundle"
 * entry ^slicing.discriminator.type = #value
 * entry ^slicing.discriminator.path = id
-* entry ^slicing.rules = #open // allow other codes
+* entry ^slicing.rules = #closed // allow other codes
 * entry contains
     EhmiSbdhHeaderVersion 1..1 and 
     EhmiSbdhSender 1..1 and
