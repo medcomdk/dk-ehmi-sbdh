@@ -1,12 +1,12 @@
 Instance: Sbdh2DocumentReference-transform
 InstanceOf: StructureMap
 Usage: #definition
-* url = "http://medcomehmi.dk/ig/ehmi-sbdh/StructureMap/Sbdh2DocumentReference-transform"
+* url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/Sbdh2DocumentReference-transform"
 * name = "Transform from a FHIR Messsage to an ehmiSBDH Envelope"
 * title = "Transformation specification of a FHIR Messsage to an ehmiSBDH Envelope"
 * status = #draft
 * description = "Transform from a FHIR Messsage to an ehmiSBDH Envelope"
-* structure[+].url = "http://medcomehmi.dk/ig/ehmi-sbdh/StructureDefinition/EhmiStandardBusinessDocumentBundle"
+* structure[+].url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureDefinition/EhmiStandardBusinessDocumentBundle"
 * structure[=].mode = #source
 * structure[0].url = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-message"
 * structure[=].mode = #target

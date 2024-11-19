@@ -17,7 +17,7 @@ Usage: #example
 * identifier[SOR-ID].value = "61741000016007"
 * identifier[SOR-ID].system = "urn:oid:1.2.208.176.1.1"
 * name = "Lægerne Hasseris Bymidte"
-* identifier.url = "http://medcomehmi.dk/ig/ehmi-sbdh/StructureDefinition/identifier"
+* identifier.url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureDefinition/identifier"
 
 Instance: instanceXDSSourcePatient
 //Instance: 37628912-7816-47a3-acd8-396b610be142

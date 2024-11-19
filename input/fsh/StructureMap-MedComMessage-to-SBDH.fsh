@@ -1,14 +1,14 @@
 Instance: MedComMessage2Sbdh-transform
 InstanceOf: StructureMap
 Usage: #definition
-* url = "http://medcomehmi.dk/ig/ehmi-sbdh/StructureMap/MedComMessage2Sbdh-transform"
+* url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedComMessage2Sbdh-transform"
 * name = "Transform from a MedCom FHIR Messsage to an ehmiSBDH Envelope"
 * title = "Transformation specification of a MedCom FHIR Messsage to an ehmiSBDH Envelope"
 * status = #draft
 * description = "Transform from a MedCom FHIR Messsage to an ehmiSBDH Envelope"
 * structure[0].url = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-message"
 * structure[=].mode = #source
-* structure[+].url = "http://medcomehmi.dk/ig/ehmi-sbdh/StructureDefinition/EhmiStandardBusinessDocumentBundle"
+* structure[+].url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureDefinition/EhmiStandardBusinessDocumentBundle"
 * structure[=].mode = #target
 * group[0].name = "HeaderVersion"
 * group[=].typeMode = #none
