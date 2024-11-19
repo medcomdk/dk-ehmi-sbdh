@@ -84,18 +84,18 @@ Resubmissions **SHALL** always be done manually.
 
 A ehmiSBDHEnvelope consists of the following elements (see <a href="#Fig2">Figure 2</a>.):
 
-<figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
+<!--figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="ehmiSBDHEnvelope_schema-reliable.png" target="_blank"> <img src="ehmiSBDHEnvelope_schema-reliable.png" alt="ehmiSBDHEnvelope_schema-reliable" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig2"></a>
 <figcaption text-align="left"><b>Figure 2: Reliable Messaging - reliable ehmiSBDHEnvelope tables </b></figcaption>
-</figure>
+</figure-->
 <br>
 
 A ehmiSBDHEnvelope's Reliable Messaging part can be found in the ehmiSBDHEnvelope/Message/MetaInformation/Transport/Type-element, which is shown in <a href="#Fig3">Figure 3</a>.:
 
-<figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
+<!--figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="ehmiSBDHEnvelope_schema-reliable-type.png" target="_blank"> <img src="ehmiSBDHEnvelope_schema-reliable-type.png" alt="ehmiSBDHEnvelope_schema-reliable" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig3"></a>
 <figcaption text-align="left"><b>Figure 3: Reliable Messaging - reliable ehmiSBDHEnvelope type </b></figcaption>
-</figure>
+</figure-->
 <br>
 
 Reliable Messaging in ehmiSBDHEnvelope is the default mode but can explicitly be turned on and off by setting the ehmiSBDHEnvelope/Message/MetaInformation/Transport/Type-element to "reliable" or "unreliable".
@@ -108,10 +108,10 @@ When "reliable", the receiver of the ehmiSBDHEnvelope **SHALL** send a ehmiSBDHE
 
 A ehmiSBDHEnvelopeAcknowledgement consists of the following elements (see <a href="#Fig4">Figure 4</a>.):
 
-<figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
+<!--figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="ehmiSBDHEnvelope_schema-acknowledgement.png" target="_blank"> <img src="ehmiSBDHEnvelope_schema-acknowledgement.png" alt="ehmiSBDHEnvelope_schema-acknowledgement" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig4"></a>
 <figcaption text-align="left"><b>Figure 4: Reliable Messaging - reliable ehmiSBDHEnvelope acknowledgement </b></figcaption>
-</figure>
+</figure-->
 <br>
 
 ## Links for Reliable Messaging|
