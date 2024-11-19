@@ -15,7 +15,7 @@ Usage: #definition
 * group[0].name = "HeaderVersion"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
-* group[=].input[=].type = "medcom-messaging-message"
+* group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
 * group[=].input[=].type = "ehmiSbdh"
@@ -30,17 +30,18 @@ Usage: #definition
 * group[+].name = "Sender"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
-* group[=].input[=].type = "medcom-messaging-organization"
+* group[=].input[=].type = "Organization"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
 * group[=].input[=].type = "SbdhSender"
 * group[=].input[=].mode = #target
-* group[=].rule[0].name = "Identifier.value"
+* group[=].rule[0].name = "Identifier-value"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "medcom-messaging-organization[Sender]/identifier[EAN-ID]/value"
+* group[=].rule[=].source.element = "“0088:”+[Bundle.entry[0].resource.destination.receiver.reference.resolve().identifier.where(system = 'https://www.gs1.org/gln').value]"
+//* group[=].rule[=].source.element = "medcom-messaging-organization[Sender]/identifier[EAN-ID]/value"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
-* group[=].rule[=].target.element = "SbdhSender/identifier/value"
+* group[=].rule[=].target.element = "SbdhSender/identifier"
 * group[=].rule[=].target.transform = #copy
 * group[=].rule[+].name = "Identifier.Authority"
 * group[=].rule[=].source.context = "source"
