@@ -5,7 +5,7 @@ Reliable Messaging in ehmiSBDHEnvelope follows the principles laid out in <a hre
 The Reliable Messaging Model and how the flow is laid out using ehmiSBDHEnvelope is shown in <a href="#Fig1">Figure 1</a>. 
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="reliable-messaging-ehmiSBDHEnvelope_1160x625.png" target="_blank"> <img src="reliable-messaging-ehmiSBDHEnvelope_1160x625.png" alt="reliable messaging principle" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig1"></a>
+<a href="reliable-messaging-ehmiSBDHEnvelope_1160x625.png" target="_blank"> <img src="reliable-messaging-ehmiSBDHEnvelope_1160x625.png" alt="reliable messaging principle" style="width:80%; height:auto; margin-left:5%; margin-right:15%; margin-top:5%; margin-bottom:5%;" id="Fig1"></a>
 <figcaption text-align="left"><b>Figure 1: Reliable Messaging - ehmiSBDHEnvelope </b></figcaption>
 </figure>
 <br>
@@ -82,7 +82,7 @@ Resubmissions **SHALL** always be done manually.
 
 ### ehmiSBDHEnvelope Reliable Messaging Message Elements
 
-A ehmiSBDHEnvelope consists of the following elements (see <a href="#Fig2">Figure 2</a>.):
+A ehmiSBDHEnvelope consists of the following elements (see <!--a href="#Fig2"-->Figure 2</a>):
 
 <!--figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="ehmiSBDHEnvelope_schema-reliable.png" target="_blank"> <img src="ehmiSBDHEnvelope_schema-reliable.png" alt="ehmiSBDHEnvelope_schema-reliable" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig2"></a>
@@ -90,7 +90,7 @@ A ehmiSBDHEnvelope consists of the following elements (see <a href="#Fig2">Figur
 </figure-->
 <br>
 
-A ehmiSBDHEnvelope's Reliable Messaging part can be found in the ehmiSBDHEnvelope/Message/MetaInformation/Transport/Type-element, which is shown in <a href="#Fig3">Figure 3</a>.:
+A ehmiSBDHEnvelope's Reliable Messaging part can be found in the ehmiSBDHEnvelope/Message/MetaInformation/Transport/Type-element, which is shown in <!--a href="#Fig3"-->Figure 3</a>:
 
 <!--figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="ehmiSBDHEnvelope_schema-reliable-type.png" target="_blank"> <img src="ehmiSBDHEnvelope_schema-reliable-type.png" alt="ehmiSBDHEnvelope_schema-reliable" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig3"></a>
@@ -106,7 +106,7 @@ In FHIR Messaging, this element **SHALL** be "reliable" or left in default mode.
 
 When "reliable", the receiver of the ehmiSBDHEnvelope **SHALL** send a ehmiSBDHEnvelopeAcknowledgement return to the original Sender.
 
-A ehmiSBDHEnvelopeAcknowledgement consists of the following elements (see <a href="#Fig4">Figure 4</a>.):
+A ehmiSBDHEnvelopeAcknowledgement consists of the following elements (see <!--a href="#Fig4"-->Figure 4</a>):
 
 <!--figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="ehmiSBDHEnvelope_schema-acknowledgement.png" target="_blank"> <img src="ehmiSBDHEnvelope_schema-acknowledgement.png" alt="ehmiSBDHEnvelope_schema-acknowledgement" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig4"></a>
@@ -115,5 +115,5 @@ A ehmiSBDHEnvelopeAcknowledgement consists of the following elements (see <a hre
 <br>
 
 ## Links for Reliable Messaging|
-<a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/FHIRMessages_NetworkEnvelopes_EN.html" target="_blank">Reliable Messaging in general</a>
+<a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/FHIRMessages_NetworkEnvelopes_EN.html" target="_blank">MedComs desciption of Reliable Messaging in general in MedComs FHIR governance</a>
 
