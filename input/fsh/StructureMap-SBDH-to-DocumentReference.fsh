@@ -1,4 +1,4 @@
-/*Instance: Sbdh2DocumentReference-transform
+Instance: Sbdh2DocumentReference-transform
 InstanceOf: StructureMap
 Usage: #definition
 * url = "http://hl7.org/fhir/StructureMap/Sbdh2DocumentReference-transform"
@@ -434,8 +434,8 @@ Usage: #definition
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[XDS-METADATA]/Identifier"
 * group[=].rule[=].target.transform = #create
-/*
 
+/*
 //Group: Reliable messaging
 ReceiptAcknowledgement- - Request
 //CorrelationInformation 
