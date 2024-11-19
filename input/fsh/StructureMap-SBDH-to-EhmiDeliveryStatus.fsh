@@ -1,5 +1,7 @@
 Instance: Sbdh2EhmiDeliveryStatus-transform
 InstanceOf: StructureMap
+Title: "Transformation specification of an ehmiSBDH Envelope to a EHMI Delivery Status structure"
+Description: "Transformation specification of an ehmiSBDH Envelope to a EHMI Delivery Status structure"
 Usage: #definition
 * url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/Sbdh2EhmiDeliveryStatus-transform"
 * name = "Transform from a FHIR Messsage to an ehmiSBDH Envelope"
