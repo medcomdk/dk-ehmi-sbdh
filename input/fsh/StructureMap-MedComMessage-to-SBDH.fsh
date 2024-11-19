@@ -1,5 +1,7 @@
 Instance: MedComMessage2Sbdh-transform
 InstanceOf: StructureMap
+Title: "Transformation specification of a MedCom FHIR Messsage to an ehmiSBDH Envelope"
+Description: "Transformation specification of a MedCom FHIR Messsage to an ehmiSBDH Envelope"
 Usage: #definition
 * url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedComMessage2Sbdh-transform"
 * name = "Transform from a MedCom FHIR Messsage to an ehmiSBDH Envelope"
