@@ -1,5 +1,7 @@
 Instance: Sbdh2DocumentReference-transform
 InstanceOf: StructureMap
+Title: "Transformation specification of an ehmiSBDH Envelope to a DocumentReference"
+Description: "Transformation specification of an ehmiSBDH Envelope to a DocumentReference"
 Usage: #definition
 * url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/Sbdh2DocumentReference-transform"
 * name = "Transform from a FHIR Messsage to an ehmiSBDH Envelope"
