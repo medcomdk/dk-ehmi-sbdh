@@ -1,8 +1,7 @@
-/*
 Instance: Sbdh2EhmiDeliveryStatus-transform
 InstanceOf: StructureMap
 Usage: #definition
-* url = "http://hl7.org/fhir/StructureMap/Sbdh2EhmiDeliveryStatus-transform"
+* url = "http://medcomehmi.dk/ig/ehmi-sbdh/StructureMap/Sbdh2EhmiDeliveryStatus-transform"
 * name = "Transform from a FHIR Messsage to an ehmiSBDH Envelope"
 * title = "Transformation specification of a FHIR Messsage to an ehmiSBDH Envelope"
 * status = #draft
@@ -435,8 +434,9 @@ Usage: #definition
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[XDS-METADATA]/Identifier"
 * group[=].rule[=].target.transform = #create
-/*
 
+
+/*
 //Group: Reliable messaging
 ReceiptAcknowledgement- - Request
 //CorrelationInformation 
