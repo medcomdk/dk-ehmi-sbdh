@@ -4,7 +4,7 @@ Title: "Transformation specification of a MedCom FHIR Messsage to an ehmiSBDH En
 Description: "Transformation specification of a MedCom FHIR Messsage to an ehmiSBDH Envelope"
 Usage: #definition
 * url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedComMessage2Sbdh-transform"
-* name = "Transform from a MedCom FHIR Messsage to an ehmiSBDH Envelope"
+* name = "MedComMessage2SbdhTransform"
 * title = "Transformation specification of a MedCom FHIR Messsage to an ehmiSBDH Envelope"
 * status = #draft
 * description = "Transform from a MedCom FHIR Messsage to an ehmiSBDH Envelope"
@@ -22,11 +22,13 @@ Usage: #definition
 * group[=].input[=].mode = #target
 * group[=].rule[0].name = "HeaderVersion"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.defaultValueCode = #iso6523-actorid-upis
+//* group[=].rule[=].source.defaultValueCode = #iso6523-actorid-upis
+* group[=].rule[=].source.variable = "HeaderVersion"
+* group[=].rule[=].source.variable.value = "1.0"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "HeaderVersion"
-* group[=].rule[=].target.transform = #create
+* group[=].rule[=].target.transform = #copy
 * group[+].name = "Sender"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
@@ -35,21 +37,22 @@ Usage: #definition
 * group[=].input[+].name = "target"
 * group[=].input[=].type = "SbdhSender"
 * group[=].input[=].mode = #target
-* group[=].rule[0].name = "Identifier-value"
+* group[=].rule[0].name = "IdentifierValue"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "“0088:”+[Bundle.entry[0].resource.destination.receiver.reference.resolve().identifier.where(system = 'https://www.gs1.org/gln').value]"
+* group[=].rule[=].source.element = "'0088:'+[Bundle.entry[0].resource.destination.receiver.reference.resolve().identifier.where(system = 'https://www.gs1.org/gln').value]"
 //* group[=].rule[=].source.element = "medcom-messaging-organization[Sender]/identifier[EAN-ID]/value"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "SbdhSender/identifier"
 * group[=].rule[=].target.transform = #copy
-* group[=].rule[+].name = "Identifier.Authority"
+* group[=].rule[+].name = "IdentifierAuthority"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.defaultValueCode = #iso6523-actorid-upis
+//* group[=].rule[=].source.defaultValueCode = #iso6523-actorid-upis
+* group[=].rule[=].source.variable = "iso6523-actorid-upis"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "SbdhSender/identifier@Authority"
-* group[=].rule[=].target.transform = #create
+* group[=].rule[=].target.transform = #copy
 * group[+].name = "Receiver"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
