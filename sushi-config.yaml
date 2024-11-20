@@ -30,11 +30,13 @@ dependencies:
   medcom.fhir.dk.core: 2.3.0
   medcom.fhir.dk.messaging: 2.1.0
   medcom.fhir.dk.terminology: 1.5.0
-  dk.ehmi.terminology: current
-  dk.ehmi.eer: current
+  dk.ehmi.terminology: dev
+  dk.ehmi.eer: dev
   #medcom.fhir.dk.xds.metadata: current
-  medcom.fhir.dk.ihe.xds.metadata: current
-  medcom.fhir.dk.xdsmetadata: current
+  #medcom.fhir.dk.ihe.xds.metadata: current
+  medcom.fhir.dk.xdsmetadata: dev
+  medcom.fhir.dk.document: dev
+  medcom.fhir.dk.ihe.xds.metadata: dev
 #
 #     id: mcode
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
