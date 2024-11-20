@@ -1,5 +1,5 @@
 Instance: instanceHomeCareObservationDocumentReference
-InstanceOf: HomeCareObservationDocumentReference
+InstanceOf: https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/homecare-observation-documentreference
 Usage: #example
 //* meta.profile = "https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/homecare-observation-documentreference"
 * contained[0] = instanceXDSAuthorPerson
@@ -35,14 +35,14 @@ Usage: #example
 * context.sourcePatientInfo = Reference(instanceXDSSourcePatient)
 
 Instance: instanceXDSAuthorPerson
-InstanceOf: Practitioner
+InstanceOf: http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-practitioner
 Usage: #inline
 //* meta.profile = "https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/xds-author-person"
 * name.family = "Andersen"
 * name.given = "Sidsel"
 
 Instance: instanceDkCoreOrganization
-InstanceOf: DkCoreOrganization
+InstanceOf: http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-organization
 //InstanceOf: Organization
 Usage: #inline
 //* meta.profile = "http://hl7.dk/fhir/core/StructureDefinition/dk-core-organization"
@@ -52,11 +52,11 @@ Usage: #inline
 
 Instance: instanceXDSSourcePatient
 //InstanceOf: Patient
-InstanceOf: https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/xds-source-patient
+InstanceOf: http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-patient
 Usage: #inline
 //* meta.profile = "https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/xds-source-patient"
 //* identifier.system = "urn:oid:1.2.208.176.1.2"
-* identifier.value = "0201919990"
+* identifier[cpr].value = "0201919990"
 * name[official].use = #official
 * name[official].family = "Lauridsen"
 * name[official].given[0] = "Else"
