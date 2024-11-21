@@ -1,6 +1,6 @@
 # Reliable Messaging using ehmiSBDHEnvelope
 
-Reliable Messaging in ehmiSBDHEnvelope follows the principles laid out in <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/FHIRMessages_NetworkEnvelopes_EN.html" target="_blank">Reliable Messaging in general</a>
+Reliable Messaging in ehmiSBDHEnvelope follows the principles laid out in <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/020_Governance-for-Reliable-Messaging-in-general.html" target="_blank">Reliable Messaging in general</a>
 
 The Reliable Messaging Model and how the flow is laid out using ehmiSBDHEnvelope is shown in <a href="#Fig1">Figure 1</a>
 
