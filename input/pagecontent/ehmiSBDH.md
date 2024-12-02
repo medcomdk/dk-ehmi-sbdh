@@ -22,7 +22,7 @@ Although the StandardBusinessDocument, as such, is the envelope, the term SBDH i
 <br/>
 
 <!--img src="ehmiSBDH_Document.png" alt="EHMI StandardBusinessDocument" /><br/-->
-<img src="ClassSbdBasic.png" alt="EHMI StandardBusinessDocument" style="float:right;width:50%;height:auto;margin:30px,100px"/><br/>
+<img src="ClassSbdBasic.png" alt="EHMI StandardBusinessDocument" style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:15px; margin-bottom:15px;"/><br/>
 
 <br/>
 
@@ -77,7 +77,7 @@ SBDH's general elements are illustrated in the figure below.
 <br/>
 
 <!--img src="ehmiSBDH_Header.png" alt="EHMI StandardBusinessDocument" /><br/-->
-<img src="ClassSbdhBasic.png" alt="EHMI StandardBusinessDocument"  style="float:right;width:80%;height:auto;margin:30px,200px"/><br/>
+<img src="ClassSbdhBasic.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:15px; margin-bottom:15px;"/><br/>
 
 <br/>
 
@@ -525,7 +525,7 @@ example:
 SBDH BusinessScopes is the SBDH's name-value pair construction characterized by an identifier. Name is expressed by the Type element and value is expressed by the InstanceIdentifier. These two change for each scope, while the Identifier in the EHMI context is always the same: dk-medcom-messaging. In the following, they are reviewed in the logical contexts in which they appear.
 <br/>
 
-<img src="ClassSbdhBusinessScopeBasic.png" alt="EHMI SBDH BusinessScope"  style="float:right;width:30%;height:auto;margin:30px,30px"/><br/>
+<img src="ClassSbdhBusinessScopeBasic.png" alt="EHMI SBDH BusinessScope"  style="width:30%;height:auto;margin-left:35%; margin-right:35%; margin-top:15px; margin-bottom:15px;"/><br/>
 
 ### eDelivery message communication
 
