@@ -425,26 +425,26 @@ Usage: #definition
 * group[=].input[+].name = "target"
 * group[=].input[=].type = "sbdhBusinessScope"
 * group[=].input[=].mode = #target
-* group[=].rule[+].name = "ScopeXdsMetadataType"
+* group[=].rule[+].name = "ScopeReceiptAcknowledgement"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.defaultValueString = "XDS-METADATA"
+* group[=].rule[=].source.defaultValueString = "ReceiptAcknowledgement"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
-* group[=].rule[=].target.element = "Scope[XDS-METADATA]/Type"
+* group[=].rule[=].target.element = "Scope[ReceiptAcknowledgement]/Type"
 * group[=].rule[=].target.transform = #create
-* group[=].rule[+].name = "ScopeXdsMetadataInstanceIdentifier"
+* group[=].rule[+].name = "ScopeReceiptAcknowledgementInstanceIdentifier"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.id)"
+* group[=].rule[=].source.defaultValueString = "sdn-emergence"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
-* group[=].rule[=].target.element = "Scope[XDS-METADATA]/InstanceIdentifier"
-* group[=].rule[=].target.transform = #copy
-* group[=].rule[+].name = "ScopeXdsMetadataIdentifier"
+* group[=].rule[=].target.element = "Scope[ReceiptAcknowledgement]/InstanceIdentifier"
+* group[=].rule[=].target.transform = #create
+* group[=].rule[+].name = "ScopeReceiptAcknowledgementIdentifier"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "dk-medcom-messaging"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
-* group[=].rule[=].target.element = "Scope[XDS-METADATA]/Identifier"
+* group[=].rule[=].target.element = "Scope[ReceiptAcknowledgement]/Identifier"
 * group[=].rule[=].target.transform = #create
 
 /*
