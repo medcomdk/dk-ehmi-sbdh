@@ -22,7 +22,7 @@ Although the StandardBusinessDocument, as such, is the envelope, the term SBDH i
 <br/>
 
 <!--img src="ehmiSBDH_Document.png" alt="EHMI StandardBusinessDocument" /><br/-->
-<img src="ClassSbdBasic.png" alt="EHMI StandardBusinessDocument" style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:15px; margin-bottom:15px;"/><br/>
+<img src="ClassSbdBasic.png" alt="EHMI StandardBusinessDocument" style="width:50%;height:auto;margin-left:25%; margin-right:25%; margin-top:30px; margin-bottom:30px;"/><br/>
 
 <br/>
 
@@ -77,7 +77,7 @@ SBDH's general elements are illustrated in the figure below.
 <br/>
 
 <!--img src="ehmiSBDH_Header.png" alt="EHMI StandardBusinessDocument" /><br/-->
-<img src="ClassSbdhBasic.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:15px; margin-bottom:15px;"/><br/>
+<img src="ClassSbdhBasic.png" alt="EHMI StandardBusinessDocument"  style="width:80%;height:auto;margin-left:20%; margin-right:20%; margin-top:30px; margin-bottom:30px;"/><br/>
 
 <br/>
 
@@ -525,7 +525,7 @@ example:
 SBDH BusinessScopes is the SBDH's name-value pair construction characterized by an identifier. Name is expressed by the Type element and value is expressed by the InstanceIdentifier. These two change for each scope, while the Identifier in the EHMI context is always the same: dk-medcom-messaging. In the following, they are reviewed in the logical contexts in which they appear.
 <br/>
 
-<img src="ClassSbdhBusinessScopeBasic.png" alt="EHMI SBDH BusinessScope"  style="width:30%;height:auto;margin-left:35%; margin-right:35%; margin-top:15px; margin-bottom:15px;"/><br/>
+<img src="ClassSbdhBusinessScopeBasic.png" alt="EHMI SBDH BusinessScope"  style="width:30%;height:auto;margin-left:35%; margin-right:35%; margin-top:30px; margin-bottom:30px;"/><br/>
 
 ### eDelivery message communication
 
@@ -537,7 +537,7 @@ In the eDelivery communication, the SBDH's Scope structure with the two types, D
 
 <br/>
 
-<img src="ehmiSBDH_BusinessScopesPeppol.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:15px; margin-bottom:15px;"/><br/>
+<img src="ehmiSBDH_BusinessScopesPeppol.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><br/>
 
 <br/>
 
@@ -645,7 +645,7 @@ Always
 
 <br/>
 
-<img src="ehmiSBDH_BusinessScopesMetadata.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:15px; margin-bottom:15px;"/><br/>
+<img src="ehmiSBDH_BusinessScopesMetadata.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><br/>
 
 <br/>
 
@@ -727,7 +727,7 @@ RECEIVERID for MedCom FHIR messages - example:
 
 <br/>
 
-<img src="ehmiSBDH_BusinessScopesMetadata.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:15px; margin-bottom:15px;"/><br/>
+<img src="ehmiSBDH_BusinessScopesMetadata.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><br/>
 
 <br/>
 
@@ -935,7 +935,7 @@ ORIGINALENVELOPEIDENTIFIER example:
 
 <br/>
 
-<img src="ehmiSBDH_BusinessScopesXdsMetadata.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:15px; margin-bottom:15px;"/><br/>
+<img src="ehmiSBDH_BusinessScopesXdsMetadata.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><br/>
 
 <br/>
 
@@ -1001,13 +1001,13 @@ CorrelationInformation is used to tie a message and its receipt together. All el
 
 <br/>
 
-<img src="ClassSbdhBusinessScopeComplex.png" alt="EHMI SBDH BusinessScope Complex"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:15px; margin-bottom:15px;"/><br/>
+<img src="ClassSbdhBusinessScopeComplex.png" alt="EHMI SBDH BusinessScope Complex"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><br/>
 
 #### Reliable messaging - BusinessService Request
 
 <br/>
 
-<img src="ehmiSBDH_ReceiptAckowledgementRequest.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:15px; margin-bottom:15px;"/><br/>
+<img src="ehmiSBDH_ReceiptAckowledgementRequest.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><br/>
 
 <br/>
 
@@ -1256,7 +1256,7 @@ Always
 
 <br/>
 
-<img src="ehmiSBDH_ReceiptAckowledgementResponse.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:15px; margin-bottom:15px;"/><br/>
+<img src="ehmiSBDH_ReceiptAckowledgementResponse.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><br/>
 
 <br/>
 
@@ -1514,7 +1514,7 @@ Embedded in an SBDH ReceiptAcknowledgement is also an ebBP signal, which in prin
 
 <br/>
 
-<img src="ehmiSBDH_ReceiptAckowledgement.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:15px; margin-bottom:15px;"/><br/>
+<img src="ehmiSBDH_ReceiptAckowledgement.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><br/>
 
 <br/>
 
@@ -1659,7 +1659,7 @@ A Receipt Exception typical signals an error condition in a Business Activity wh
 
 <br/>
 
-<img src="ehmiSBDH_ReceiptAckowledgementException.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:15px; margin-bottom:15px;"/><br/>
+<img src="ehmiSBDH_ReceiptAckowledgementException.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><br/>
 
 <br/>
 
