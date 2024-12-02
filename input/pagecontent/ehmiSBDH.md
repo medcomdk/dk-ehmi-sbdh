@@ -1001,13 +1001,13 @@ CorrelationInformation is used to tie a message and its receipt together. All el
 
 <br/>
 
-<img src="ClassSbdhBusinessScopeComplex.png" alt="EHMI SBDH BusinessScope Complex"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><br/>
+<img src="ClassSbdhBusinessScopeComplex.png" alt="EHMI SBDH BusinessScope Complex"  style="width:60%;height:auto;margin-left:5%; margin-right:35%; margin-top:30px; margin-bottom:30px;"/><br/>
 
 #### Reliable messaging - BusinessService Request
 
 <br/>
 
-<img src="ehmiSBDH_ReceiptAckowledgementRequest.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><br/>
+<img src="ehmiSBDH_ReceiptAckowledgementRequest.png" alt="ehmiSBDH_ReceiptAckowledgementRequest"  style="width:80%;height:auto;margin-left:5%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><br/>
 
 <br/>
 
@@ -1256,7 +1256,7 @@ Always
 
 <br/>
 
-<img src="ehmiSBDH_ReceiptAckowledgementResponse.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><br/>
+<img src="ehmiSBDH_ReceiptAckowledgementResponse.png" alt="ehmiSBDH_ReceiptAckowledgementResponse"  style="width:80%;height:auto;margin-left:5%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><br/>
 
 <br/>
 
