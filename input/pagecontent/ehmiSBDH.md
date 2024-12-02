@@ -77,7 +77,7 @@ SBDH's general elements are illustrated in the figure below.
 <br/>
 
 <!--img src="ehmiSBDH_Header.png" alt="EHMI StandardBusinessDocument" /><br/-->
-<img src="ClassSbdhBasic.png" alt="EHMI StandardBusinessDocument"  style="width:80%;height:auto;margin-left:20%; margin-right:20%; margin-top:30px; margin-bottom:30px;"/><br/>
+<img src="ClassSbdhBasic.png" alt="EHMI StandardBusinessDocument"  style="width:80%;height:auto;margin-left:0%; margin-right:20%; margin-top:30px; margin-bottom:30px;"/><br/>
 
 <br/>
 
