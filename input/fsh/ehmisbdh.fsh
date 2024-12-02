@@ -1,5 +1,6 @@
 //https://build.fhir.org/ig/medcomdk/dk_HomeCareObservations/branches/MessageDefinition-QA/Bundle-401cbc36-db1e-4fe0-bf90-6df331dde179.xml
 
+/*
 Profile: EhmiSbdBundleTemplate
 Parent: Bundle
 Title: "EHMI Standard Business Document Bundle Template"
@@ -166,6 +167,7 @@ Description: "Profile for EHMI SBDH DocumentInformation Bundle"
 */
 //* entry[EhmiSBDHDocumentInformation].fullUrl = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/Basic/ehmiSBDHDocumentInformation"
 
+/*
 Instance: ehmiSBDHDocumentInformationBundle
 InstanceOf: EhmiStandardBusinessDocumentHeaderDocumentInformationBundle
 Title: "EHMI Standard Business Document Header DocumentInformation Bundle"
@@ -673,4 +675,3 @@ Description: "An example profile of the Basic resource."
 //* code = #adminact
 
 */
-
