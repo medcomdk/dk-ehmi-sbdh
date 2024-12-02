@@ -34,8 +34,8 @@ dependencies:
   dk.ehmi.eer: dev
   #medcom.fhir.dk.xds.metadata: current
   #medcom.fhir.dk.ihe.xds.metadata: current
-  medcom.fhir.dk.xdsmetadata: dev
-  medcom.fhir.dk.document: dev
+  medcom.fhir.dk.xdsmetadata: current
+  medcom.fhir.dk.document: current
   medcom.fhir.dk.ihe.xds.metadata: dev
 #
 #     id: mcode
