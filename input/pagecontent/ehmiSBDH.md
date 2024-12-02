@@ -1001,7 +1001,7 @@ CorrelationInformation is used to tie a message and its receipt together. All el
 
 <br/>
 
-<img src="ClassSbdhBusinessScopeComplex.png" alt="EHMI SBDH BusinessScope Complex"  style="width:70%;height:auto;margin:100px,15%"/><br/>
+<img src="ClassSbdhBusinessScopeComplex.png" alt="EHMI SBDH BusinessScope Complex"  style="width:70%;height:auto;margin-left:5%; margin-right:15%; margin-top:15px; margin-bottom:15px;"/><br/>
 
 #### Reliable messaging - BusinessService Request
 
