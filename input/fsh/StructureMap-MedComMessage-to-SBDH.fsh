@@ -481,13 +481,93 @@ Usage: #definition
 * group[=].input[+].name = "target"
 * group[=].input[=].type = "sbdhBusinessScopeBusinessServices"
 * group[=].input[=].mode = #target
-// CorrelationInformation - ExpectedResponseDateTime
-* group[=].rule[+].name = "CorrelationInformationExpectedResponseDateTime"
+// BusinessService - ReceiptAcknowledgement Request
+* group[=].rule[+].name = "BusinessServiceReceiptAcknowledgementRequest"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.defaultValueString = "ExpectedResponseDateTime"
+* group[=].rule[=].source.defaultValueString = "EHMI-ReceiptAcknowledgement-Request"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
-* group[=].rule[=].target.element = "CorrelationInformation/ExpectedResponseDateTime"
+* group[=].rule[=].target.element = "BusinessService/ServiceName"
+* group[=].rule[=].target.transform = #create
+// BusinessService - ServiceTransaction - TypeOfServiceTransaction
+* group[=].rule[+].name = "ServiceTransactionTypeOfServiceTransaction"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "RequestingServiceTransaction"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "BusinessService/ServiceTransaction/TypeOfServiceTransaction"
+* group[=].rule[=].target.transform = #create
+// BusinessService - ServiceTransaction - IsNonRepudiationRequired
+* group[=].rule[+].name = "ServiceTransactionIsNonRepudiationRequired"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "false"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "BusinessService/ServiceTransaction/IsNonRepudiationRequired"
+* group[=].rule[=].target.transform = #create
+// BusinessService - ServiceTransaction - IsAuthenticationRequired
+* group[=].rule[+].name = "ServiceTransactionIsAuthenticationRequired"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "false"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "BusinessService/ServiceTransaction/IsAuthenticationRequired"
+* group[=].rule[=].target.transform = #create
+// BusinessService - ServiceTransaction - IsNonRepudiationOfReceiptRequired
+* group[=].rule[+].name = "ServiceTransactionIsNonRepudiationOfReceiptRequired"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "false"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "BusinessService/ServiceTransaction/IsNonRepudiationOfReceiptRequired"
+* group[=].rule[=].target.transform = #create
+// BusinessService - ServiceTransaction - IsIntelligibleCheckRequired
+* group[=].rule[+].name = "ServiceTransactionIsIntelligibleCheckRequired"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "false"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "BusinessService/ServiceTransaction/IsIntelligibleCheckRequired"
+* group[=].rule[=].target.transform = #create
+// BusinessService - ServiceTransaction - IsApplicationErrorResponseRequested
+* group[=].rule[+].name = "ServiceTransactionIsApplicationErrorResponseRequested"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "false"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "BusinessService/ServiceTransaction/IsApplicationErrorResponseRequested"
+* group[=].rule[=].target.transform = #create
+// BusinessService - ServiceTransaction - TimeToAcknowledgeReceipt
+* group[=].rule[+].name = "ServiceTransactionTimeToAcknowledgeReceipt"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "300000"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "BusinessService/ServiceTransaction/TimeToAcknowledgeReceipt"
+* group[=].rule[=].target.transform = #create
+// BusinessService - ServiceTransaction - TimeToAcknowledgeAcceptance
+* group[=].rule[+].name = "ServiceTransactionTimeToAcknowledgeAcceptance"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "0"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "BusinessService/ServiceTransaction/TimeToAcknowledgeAcceptance"
+* group[=].rule[=].target.transform = #create
+// BusinessService - ServiceTransaction - TimeToPerform
+* group[=].rule[+].name = "ServiceTransactionTimeToPerform"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "0"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "BusinessService/ServiceTransaction/TimeToPerform"
+* group[=].rule[=].target.transform = #create
+// BusinessService - ServiceTransaction - Recurrence
+* group[=].rule[+].name = "ServiceTransactionRecurrence"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "0"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "BusinessService/ServiceTransaction/Recurrence"
 * group[=].rule[=].target.transform = #create
 
 /*
