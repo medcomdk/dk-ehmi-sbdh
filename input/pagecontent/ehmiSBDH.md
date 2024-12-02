@@ -537,7 +537,7 @@ In the eDelivery communication, the SBDH's Scope structure with the two types, D
 
 <br/>
 
-<img src="ehmiSBDH_BusinessScopesPeppol.png" alt="EHMI StandardBusinessDocument"  style="width:100%;height:auto;margin:30px,100px"/><br/>
+<img src="ehmiSBDH_BusinessScopesPeppol.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:15px; margin-bottom:15px;"/><br/>
 
 <br/>
 
@@ -645,7 +645,7 @@ Always
 
 <br/>
 
-<img src="ehmiSBDH_BusinessScopesMetadata.png" alt="EHMI StandardBusinessDocument"  style="width:100%;height:auto;margin:30px,100px"/><br/>
+<img src="ehmiSBDH_BusinessScopesMetadata.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:15px; margin-bottom:15px;"/><br/>
 
 <br/>
 
@@ -727,7 +727,7 @@ RECEIVERID for MedCom FHIR messages - example:
 
 <br/>
 
-<img src="ehmiSBDH_BusinessScopesMetadata.png" alt="EHMI StandardBusinessDocument"  style="width:100%;height:auto;margin:30px,100px"/><br/>
+<img src="ehmiSBDH_BusinessScopesMetadata.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:15px; margin-bottom:15px;"/><br/>
 
 <br/>
 
@@ -935,7 +935,7 @@ ORIGINALENVELOPEIDENTIFIER example:
 
 <br/>
 
-<img src="ehmiSBDH_BusinessScopesXdsMetadata.png" alt="EHMI StandardBusinessDocument"  style="width:100%;height:auto;margin:30px,100px"/><br/>
+<img src="ehmiSBDH_BusinessScopesXdsMetadata.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:15px; margin-bottom:15px;"/><br/>
 
 <br/>
 
@@ -1001,13 +1001,13 @@ CorrelationInformation is used to tie a message and its receipt together. All el
 
 <br/>
 
-<img src="ClassSbdhBusinessScopeComplex.png" alt="EHMI SBDH BusinessScope Complex"  style="width:70%;height:auto;margin-left:5%; margin-right:15%; margin-top:15px; margin-bottom:15px;"/><br/>
+<img src="ClassSbdhBusinessScopeComplex.png" alt="EHMI SBDH BusinessScope Complex"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:15px; margin-bottom:15px;"/><br/>
 
 #### Reliable messaging - BusinessService Request
 
 <br/>
 
-<img src="ehmiSBDH_ReceiptAckowledgementRequest.png" alt="EHMI StandardBusinessDocument"  style="width:100%;height:auto;margin:30px,100px"/><br/>
+<img src="ehmiSBDH_ReceiptAckowledgementRequest.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:15px; margin-bottom:15px;"/><br/>
 
 <br/>
 
@@ -1256,7 +1256,7 @@ Always
 
 <br/>
 
-<img src="ehmiSBDH_ReceiptAckowledgementResponse.png" alt="EHMI StandardBusinessDocument"  style="width:100%;height:auto;margin:30px,100px"/><br/>
+<img src="ehmiSBDH_ReceiptAckowledgementResponse.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:15px; margin-bottom:15px;"/><br/>
 
 <br/>
 
@@ -1514,7 +1514,7 @@ Embedded in an SBDH ReceiptAcknowledgement is also an ebBP signal, which in prin
 
 <br/>
 
-<img src="ehmiSBDH_ReceiptAckowledgement.png" alt="EHMI StandardBusinessDocument"  style="width:100%;height:auto;margin:30px,100px"/><br/>
+<img src="ehmiSBDH_ReceiptAckowledgement.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:15px; margin-bottom:15px;"/><br/>
 
 <br/>
 
@@ -1659,7 +1659,7 @@ A Receipt Exception typical signals an error condition in a Business Activity wh
 
 <br/>
 
-<img src="ehmiSBDH_ReceiptAckowledgementException.png" alt="EHMI StandardBusinessDocument"  style="width:100%;height:auto;margin:30px,100px"/><br/>
+<img src="ehmiSBDH_ReceiptAckowledgementException.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:15px; margin-bottom:15px;"/><br/>
 
 <br/>
 
