@@ -481,6 +481,14 @@ Usage: #definition
 * group[=].input[+].name = "target"
 * group[=].input[=].type = "sbdhBusinessScopeBusinessServices"
 * group[=].input[=].mode = #target
+// CorrelationInformation - ExpectedResponseDateTime
+* group[=].rule[+].name = "CorrelationInformationExpectedResponseDateTime"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "ExpectedResponseDateTime"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "CorrelationInformation/ExpectedResponseDateTime"
+* group[=].rule[=].target.transform = #create
 
 /*
 //SBDH BusinessServices - Request
