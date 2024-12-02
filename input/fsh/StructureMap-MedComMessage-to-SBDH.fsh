@@ -423,18 +423,19 @@ Usage: #definition
 * group[=].input[=].type = "MedComMessagingMessage"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-* group[=].input[=].type = "sbdhBusinessScope"
+* group[=].input[=].type = "sbdhBusinessScopeReliableMessaging"
 * group[=].input[=].mode = #target
+//* group[=].rule[+].name = "ScopeReceiptAcknowledgement"
 * group[=].rule[+].name = "ScopeReceiptAcknowledgement"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.defaultValueString = "ReceiptAcknowledgement"
+* group[=].rule[=].source.defaultValueString = "EHMI-ReceiptAcknowledgement"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[ReceiptAcknowledgement]/Type"
 * group[=].rule[=].target.transform = #create
 * group[=].rule[+].name = "ScopeReceiptAcknowledgementInstanceIdentifier"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.defaultValueString = "sdn-emergence"
+* group[=].rule[=].source.defaultValueString = "Request"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[ReceiptAcknowledgement]/InstanceIdentifier"
@@ -446,15 +447,42 @@ Usage: #definition
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[ReceiptAcknowledgement]/Identifier"
 * group[=].rule[=].target.transform = #create
+// CorrelationInformation - RequestingDocumentCreationDateTime
+* group[=].rule[+].name = "CorrelationInformationRequestingDocumentCreationDateTime"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "RequestingDocumentCreationDateTime"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "CorrelationInformation/RequestingDocumentCreationDateTime"
+* group[=].rule[=].target.transform = #create
+// CorrelationInformation - RequestingDocumentInstanceIdentifier
+* group[=].rule[+].name = "CorrelationInformationRequestingDocumentInstanceIdentifier"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "RequestingDocumentInstanceIdentifier"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "CorrelationInformation/RequestingDocumentInstanceIdentifier"
+* group[=].rule[=].target.transform = #create
+// CorrelationInformation - ExpectedResponseDateTime
+* group[=].rule[+].name = "CorrelationInformationExpectedResponseDateTime"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "ExpectedResponseDateTime"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
+* group[=].rule[=].target.element = "CorrelationInformation/ExpectedResponseDateTime"
+* group[=].rule[=].target.transform = #create
+
+//Group: BusinessServices - Request
+* group[+].name = "BusinessServicesRequest"
+* group[=].typeMode = #none
+* group[=].input[0].name = "source"
+* group[=].input[=].type = "MedComMessagingMessage"
+* group[=].input[=].mode = #source
+* group[=].input[+].name = "target"
+* group[=].input[=].type = "sbdhBusinessScopeBusinessServices"
+* group[=].input[=].mode = #target
 
 /*
-
-//Group: Reliable messaging
-ReceiptAcknowledgement- - Request
-//CorrelationInformation 
-CorrelationInformation - RequestingDocumentCreationDateTime
-CorrelationInformation - RequestingDocumentInstanceIdentifier
-CorrelationInformation - ExpectedResponseDateTime
 //SBDH BusinessServices - Request
 BusinessServiceName
 ServiceTransaction – TypeOfServiceTransaction
