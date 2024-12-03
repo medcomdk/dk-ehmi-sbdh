@@ -1,3 +1,4 @@
+/*
 Alias: $EhmiSbdhEmdpointPayloadTypeCS = ehmi-sbdh-endpoint-payloadType
 Alias: $EhmiSbdhEmdpointPayloadTypeVS = ehmi-sbdh-endpoint-payloadType-vs
 Alias: $EhmiSbdhMedComMessagingCS = dk-medcom-messaging
@@ -60,3 +61,4 @@ Description: "VS containing codes for EHMI SBDH Messaging Types"
 * ^date  =  "2024-11-01"
 * ^experimental = false
 * include codes from system $EhmiSbdhMedComMessagingCS
+*/
