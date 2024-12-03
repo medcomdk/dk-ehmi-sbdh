@@ -1,5 +1,5 @@
 //https://build.fhir.org/ig/medcomdk/dk_HomeCareObservations/branches/MessageDefinition-QA/Bundle-401cbc36-db1e-4fe0-bf90-6df331dde179.xml
-
+/*
 
 Profile: EhmiSbdBundleTemplate
 Parent: Bundle
