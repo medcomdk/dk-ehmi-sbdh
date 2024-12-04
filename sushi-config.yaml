@@ -98,6 +98,7 @@ menu:
 #    ehmiSBDH BS - xds-metadata: ehmiSBDH.html#sbdh-businessscope--xds-metadata
 #    ehmiSBDH BS - reliable-messaging: ehmiSBDH.html#sbdh-businessscope--reliable-messaging
 #    ehmiSBDH Binary Content: ehmiSBDH.html#sbdh-binarycontent--den-indeholdte-meddelelse
+    EHMI EnvelopeReceipt: ehmiEnvelopeReceipt.html
     Reliable Messaging SBDH: ReliableMessagingSBDH.html
     References: references.html
   ehmiSBDH schemas: 
@@ -108,12 +109,12 @@ menu:
     BinaryContentType: ehmiSBDH_BinaryContentType.xsd.html
     ebbp-signals-2.0.4: ehmiSBDH_ebbp-signals-2.0.4.xsd.html
   SBDH original schemas: 
-    StandardBusinessDocumentHeader: ehmiSBDH_StandardBusinessDocumentHeader.xsd.html
-    Partner: ehmiSBDH_Partner.xsd.html
-    DocumentIdentification: ehmiSBDH_DocumentIdentification.xsd.html
-    BusinessScope: ehmiSBDH_BusinessScope.xsd.html
-    BinaryContentType: ehmiSBDH_BinaryContentType.xsd.html
-    ebbp-signals-2.0.4: ehmiSBDH_ebbp-signals-2.0.4.xsd.html
+    StandardBusinessDocumentHeader: SBDH_StandardBusinessDocumentHeader.xsd.html
+    Partner: SBDH_Partner.xsd.html
+    DocumentIdentification: SBDH_DocumentIdentification.xsd.html
+    BusinessScope: SBDH_BusinessScope.xsd.html
+    BinaryContentType: SBDH_BinaryContentType.xsd.html
+    ebbp-signals-2.0.4: SBDH_ebbp-signals-2.0.4.xsd.html
   Artifacts: artifacts.html
   Downloads: downloads.html
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
