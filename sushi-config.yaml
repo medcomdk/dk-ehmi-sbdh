@@ -26,7 +26,7 @@ publisher:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  hl7.terminology.r4: 5.5.0
+#  hl7.terminology.r4: 5.5.0
   hl7.fhir.dk.core: 2.0.0
   medcom.fhir.dk.core: 2.3.0
   medcom.fhir.dk.messaging: 2.1.0
@@ -98,16 +98,16 @@ menu:
 #    ehmiSBDH BS - xds-metadata: ehmiSBDH.html#sbdh-businessscope--xds-metadata
 #    ehmiSBDH BS - reliable-messaging: ehmiSBDH.html#sbdh-businessscope--reliable-messaging
 #    ehmiSBDH Binary Content: ehmiSBDH.html#sbdh-binarycontent--den-indeholdte-meddelelse
-#    EHMI EnvelopeReceipt: ehmiEnvelopeReceipt.html
-#    Reliable Messaging SBDH: ehmiSBDHReliableMessaging.html
+    EHMI EnvelopeReceipt: ehmiEnvelopeReceipt.html
+    Reliable Messaging SBDH: ehmiSBDHReliableMessaging.html
     References: references.html
-#  ehmiSBDH schemas: 
-#    StandardBusinessDocumentHeader: ehmiSBDH_StandardBusinessDocumentHeader.xsd.html
-#    Partner: ehmiSBDH_Partner.xsd.html
-#    DocumentIdentification: ehmiSBDH_DocumentIdentification.xsd.html
-#    BusinessScope: ehmiSBDH_BusinessScope.xsd.html
-#    BinaryContentType: ehmiSBDH_BinaryContentType.xsd.html
-#    ebbp-signals-2.0.4: ehmiSBDH_ebbp-signals-2.0.4.xsd.html
+  ehmiSBDH schemas: 
+    StandardBusinessDocumentHeader: ehmiSBDH_StandardBusinessDocumentHeader.xsd.html
+    Partner: ehmiSBDH_Partner.xsd.html
+    DocumentIdentification: ehmiSBDH_DocumentIdentification.xsd.html
+    BusinessScope: ehmiSBDH_BusinessScope.xsd.html
+    BinaryContentType: ehmiSBDH_BinaryContentType.xsd.html
+    ebbp-signals-2.0.4: ehmiSBDH_ebbp-signals-2.0.4.xsd.html
 #  SBDH original schemas: 
 #    StandardBusinessDocumentHeader: SBDH_StandardBusinessDocumentHeader.xsd.html
 #    Partner: SBDH_Partner.xsd.html
