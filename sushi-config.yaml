@@ -9,7 +9,7 @@ name: DK EHMI SBDH IG
 title: "DK EHMI SBDH IG"
 description: The DK EHMI SBDH IG
 status: draft # draft | active | retired | unknown
-version: 0.9.0
+version: 0.91.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -99,7 +99,7 @@ menu:
 #    ehmiSBDH BS - reliable-messaging: ehmiSBDH.html#sbdh-businessscope--reliable-messaging
 #    ehmiSBDH Binary Content: ehmiSBDH.html#sbdh-binarycontent--den-indeholdte-meddelelse
 #    EHMI EnvelopeReceipt: ehmiEnvelopeReceipt.html
-    Reliable Messaging SBDH: ehmiSBDHReliableMessaging.html
+#    Reliable Messaging SBDH: ehmiSBDHReliableMessaging.html
     References: references.html
 #  ehmiSBDH schemas: 
 #    StandardBusinessDocumentHeader: ehmiSBDH_StandardBusinessDocumentHeader.xsd.html
