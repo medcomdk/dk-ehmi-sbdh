@@ -1,4 +1,4 @@
-# EHMI Standard Business Document Header
+# EHMI Standard Business Document Header (ehmiSBDH)
 
 ## Introduction
 
@@ -24,6 +24,8 @@ ehmiSBDH can therefore be send and delivered through the eDelivery Network in EH
 ehmiSBDH wraps the bidirectional message with clinical content between the Message Service Handlers (MSH) and serve as a neutral container for whatever MedCom Message, that is being send. If it is a FHIR, OIOXml or Edifact message, SBDH can wrap it and due to extensive extraction of metadata from the message also serve the ground for 
 - handling ehmiSBDH Acknowledgements
 - handling of the secondary exchange of data through the national Danish XDS Framework
+
+### ehmiSBDH Acknowledgements
 
 ## ehmiSBDH in relation to EDS Delivery Status:
 
