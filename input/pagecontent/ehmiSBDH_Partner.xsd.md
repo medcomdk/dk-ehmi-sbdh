@@ -1,6 +1,6 @@
 # ehmiSBDH profile of SBDH Partner
 
-<a href="https://github.com/medcomdk/dk-ehmi-sbdh/blob/v0.90.1-beta.1/input/pagecontent/ehmiSBDH/ehmiPartner.xsd" target="_blank">Link to the raw xsd</a>
+<a href="https://github.com/medcomdk/dk-ehmi-sbdh/blob/v0.90.1-beta.1/input/pagecontent/ehmiSBDH/ehmiPartner.xsd" target="_blank">Link to the raw xsd (opens in a new window)</a>
 
     <?xml version="1.0"?>
     <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
