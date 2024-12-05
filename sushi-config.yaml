@@ -106,7 +106,7 @@ menu:
     Partner: ehmiSBDH_Partner.xsd.html
     DocumentIdentification: ehmiSBDH_DocumentIdentification.xsd.html
     BusinessScope: ehmiSBDH_BusinessScope.xsd.html
-    BinaryContentType: ehmiSBDH_BinaryContentType.xsd.html
+    BinaryContentType: ehmiEDN-Business-Message-Envelope-1.2.xsd.html
     ebbp-signals-2.0.4: ehmiSBDH_ebbp-signals-2.0.4.xsd.html
   SBDH original schemas: 
     StandardBusinessDocumentHeader: SBDH_StandardBusinessDocumentHeader.xsd.html
