@@ -1,6 +1,6 @@
 # ehmiSBDH profile of SBDH StandardBusinessDocumentHeader
 
-[Link to the raw xsd](ehmiStandardBusinessDocumentHeader.xsd)
+[Link to the raw xsd](https://github.com/medcomdk/dk-ehmi-sbdh/blob/v0.90.1-beta.1/input/pagecontent/ehmiSBDH/ehmiStandardBusinessDocumentHeader.xsd)
 
 	<?xml version="1.0"?>
 	<xs:schema targetNamespace="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" xmlns:bc="http://peppol.eu/xsd/ticc/envelope/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
