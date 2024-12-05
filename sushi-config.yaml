@@ -108,8 +108,8 @@ menu:
     BusinessScope: ehmiSBDH_BusinessScope.xsd.html
     BinaryContentType: ehmiSBDH_BinaryContentType.xsd.html
     ebbp-signals-2.0.4: ehmiSBDH_ebbp-signals-2.0.4.xsd.html
-#  SBDH original schemas: 
-#    StandardBusinessDocumentHeader: SBDH_StandardBusinessDocumentHeader.xsd.html
+  SBDH original schemas: 
+    StandardBusinessDocumentHeader: SBDH_StandardBusinessDocumentHeader.xsd.html
 #    Partner: SBDH_Partner.xsd.html
 #    DocumentIdentification: SBDH_DocumentIdentification.xsd.html
 #    BusinessScope: SBDH_BusinessScope.xsd.html
