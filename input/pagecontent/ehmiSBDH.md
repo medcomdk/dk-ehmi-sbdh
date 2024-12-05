@@ -1493,6 +1493,8 @@ Always
 
 <br/>
 
+<!--
+
 #### EHMI ReceiptAcknowledgement
 
 <br/>
@@ -1799,7 +1801,8 @@ ExceptionMessage example
     </bpssignal:Exception>
  
 <br/>
-
+ -->
+ 
 ## SBDH BinaryContent – the contained message
 
 <br/>
