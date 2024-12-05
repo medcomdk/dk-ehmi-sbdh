@@ -14,7 +14,7 @@
 				<xs:element name="HeaderVersion" type="xs:string" fixed="1.0"/>
 				<xs:element name="Sender" type="ehmiPartner" minOccurs="1" maxOccurs="1"/>
 				<xs:element name="Receiver" type="ehmiPartner" minOccurs="1" maxOccurs="1"/>
-				<xs:element name="DocumentIdentification" type="DocumentIdentification"/>
+				<xs:element name="DocumentIdentification" type="ehmiDocumentIdentification"/>
 				<xs:element name="Manifest" type="Manifest" minOccurs="0" maxOccurs="0"/>
 				<xs:element name="BusinessScope" type="BusinessScope" minOccurs="1" maxOccurs="1"/>
 			</xs:sequence>
