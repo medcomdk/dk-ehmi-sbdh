@@ -5,6 +5,8 @@ The ehmiEnvelopeReceipt is the receipt mechanism for the ehmiSBDH.
 - EHMI ReceiptAcknowledgement
 - EHMI ReceiptException
 
+<br>
+
 **EHMI ReceiptAcknowledgement**
 
 The EHMI Receipt Acknowledgement Business Signal signals that a message has been properly received by the Receiver MSH software component. Legible means that it has passed structure/schema validity check. The content of the receipt and the legibility of a business message MUST be reviewed prior to the processing of the Requesting or Responding Business Document or the evaluation of condition expressions in the message's Business Documents or Document Envelope. Condition Expressions are expressions that evaluate to true or false. [ebXMLbp] 
