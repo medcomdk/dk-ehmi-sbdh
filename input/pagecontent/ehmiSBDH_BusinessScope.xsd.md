@@ -7,7 +7,7 @@
 	<xs:schema targetNamespace="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" elementFormDefault="qualified" attributeFormDefault="unqualified">
 		<xs:complexType name="BusinessScope">
 			<xs:sequence>
-				<xs:element name="Scope" type="Scope" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Scope" type="Scope" minOccurs="0" maxOccurs="6"/>
 			</xs:sequence>
 		</xs:complexType>
 		<xs:complexType name="Scope">
@@ -18,43 +18,72 @@
 		</xs:complexType>
 		<xs:group name="ScopeAttributes">
 			<xs:sequence>
-				<xs:element name="Type" type="xs:string"/>
+				<xs:element name="Type" type="ehmiScopeType"/>
 				<xs:element name="InstanceIdentifier" type="xs:string"/>
-				<xs:element name="Identifier" type="xs:string" minOccurs="0"/>
+				<xs:element name="Identifier" type="ehmiScopeIdentifierType" minOccurs="1" default="dk-medcom-messaging"/>
 			</xs:sequence>
 		</xs:group>
 		<xs:element name="ScopeInformation" type="xs:anyType" abstract="true"/>
 		<xs:element name="CorrelationInformation" type="CorrelationInformation" substitutionGroup="ScopeInformation"/>
 		<xs:complexType name="CorrelationInformation">
 			<xs:sequence>
-				<xs:element name="RequestingDocumentCreationDateTime" type="xs:dateTime" minOccurs="0"/>
-				<xs:element name="RequestingDocumentInstanceIdentifier" type="xs:string" minOccurs="0"/>
-				<xs:element name="ExpectedResponseDateTime" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="RequestingDocumentCreationDateTime" type="xs:dateTime" minOccurs="1"/>
+				<xs:element name="RequestingDocumentInstanceIdentifier" type="xs:string" minOccurs="1"/>
+				<xs:element name="ExpectedResponseDateTime" type="xs:dateTime" minOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 		<xs:element name="BusinessService" type="BusinessService" substitutionGroup="ScopeInformation"/>
 		<xs:complexType name="BusinessService">
 			<xs:sequence>
-				<xs:element name="BusinessServiceName" type="xs:string" minOccurs="0"/>
-				<xs:element name="ServiceTransaction" type="ServiceTransaction" minOccurs="0"/>
+				<xs:element name="BusinessServiceName" type="BusinessServiceNameType" minOccurs="1"/>
+				<xs:element name="ServiceTransaction" type="ServiceTransaction" minOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 		<xs:complexType name="ServiceTransaction">
 			<xs:attribute name="TypeOfServiceTransaction" type="TypeOfServiceTransaction" use="optional"/>
-			<xs:attribute name="IsNonRepudiationRequired" type="xs:string"/>
-			<xs:attribute name="IsAuthenticationRequired" type="xs:string"/>
-			<xs:attribute name="IsNonRepudiationOfReceiptRequired" type="xs:string"/>
-			<xs:attribute name="IsIntelligibleCheckRequired" type="xs:string"/>
-			<xs:attribute name="IsApplicationErrorResponseRequested" type="xs:string"/>
-			<xs:attribute name="TimeToAcknowledgeReceipt" type="xs:string"/>
-			<xs:attribute name="TimeToAcknowledgeAcceptance" type="xs:string"/>
-			<xs:attribute name="TimeToPerform" type="xs:string"/>
-			<xs:attribute name="Recurrence" type="xs:string"/>
+			<xs:attribute name="IsNonRepudiationRequired" type="xs:string" fixed="false"/>
+			<xs:attribute name="IsAuthenticationRequired" type="xs:string" fixed="false"/>
+			<xs:attribute name="IsNonRepudiationOfReceiptRequired" type="xs:string" fixed="false"/>
+			<xs:attribute name="IsIntelligibleCheckRequired" type="xs:string" fixed="false"/>
+			<xs:attribute name="IsApplicationErrorResponseRequested" type="xs:string" fixed="false"/>
+			<xs:attribute name="TimeToAcknowledgeReceipt" type="xs:string" fixed="300000"/>
+			<xs:attribute name="TimeToAcknowledgeAcceptance" type="xs:string" fixed="0"/>
+			<xs:attribute name="TimeToPerform" type="xs:string" fixed="0"/>
+			<xs:attribute name="Recurrence" type="xs:string" fixed="0"/>
 		</xs:complexType>
 		<xs:simpleType name="TypeOfServiceTransaction">
 			<xs:restriction base="xs:string">
 				<xs:enumeration value="RequestingServiceTransaction"/>
 				<xs:enumeration value="RespondingServiceTransaction"/>
 			</xs:restriction>
+		</xs:simpleType>
+		<xs:simpleType name="BusinessServiceNameType">
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="EHMI-ReceiptAcknowledgement-Request"/>
+				<xs:enumeration value="EHMI-ReceiptAcknowledgement-Response"/>
+			</xs:restriction>
+		</xs:simpleType>
+		<xs:simpleType name="ehmiScopeIdentifierType">
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="dk-medcom-messaging"/>
+				<xs:enumeration value="dk-medcom-DocumentReference"/>
+			</xs:restriction>
+		</xs:simpleType>
+		<xs:simpleType name="ehmiScopeType">
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="DOCUMENTID"/>
+				<xs:enumeration value="PROCESSID"/>
+				<xs:enumeration value="PATIENTID"/>
+				<xs:enumeration value="SENDERID"/>
+				<xs:enumeration value="RECEIVERID"/>
+				<xs:enumeration value="MESSAGEIDENTIFIER"/>
+	<!--
+				<xs:enumeration value="SENDERID"/>
+				<xs:enumeration value="SENDERID"/>
+				<xs:enumeration value="SENDERID"/>
+				<xs:enumeration value="SENDERID"/>
+				<xs:enumeration value="SENDERID"/>
+	-->
+				</xs:restriction>
 		</xs:simpleType>
 	</xs:schema>
