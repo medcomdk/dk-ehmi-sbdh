@@ -4,7 +4,7 @@
      xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
      elementFormDefault="qualified" attributeFormDefault="unqualified">
 
-  <xs:complexType name="DocumentIdentification">
+  <xs:complexType name="ehmiDocumentIdentification">
     <xs:sequence>
       <xs:element name="Standard" type="DocumentInformationStandardType"/>
       <xs:element name="TypeVersion" type="xs:string"/>
