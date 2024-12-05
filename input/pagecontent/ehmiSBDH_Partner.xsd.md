@@ -1,3 +1,7 @@
+# ehmiSBDH profile of SBDH StandardBusinessDocumentHeader
+
+[Link to the raw xsd](https://github.com/medcomdk/dk-ehmi-sbdh/blob/v0.90.1-beta.1/input/pagecontent/ehmiSBDH/ehmiPartner.xsd)
+
   <?xml version="1.0"?>
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
       targetNamespace="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
