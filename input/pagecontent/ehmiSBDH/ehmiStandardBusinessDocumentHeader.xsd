@@ -4,7 +4,7 @@
 	<xs:include schemaLocation="ehmiPartner.xsd"/>
 	<xs:include schemaLocation="Manifest.xsd"/>
 	<xs:include schemaLocation="ehmiBusinessScope.xsd"/>
-	<xs:import schemaLocation="ehmiEDN-Business-Message-Envelope-1.2-20241203.xsd" namespace="http://peppol.eu/xsd/ticc/envelope/1.0"/>
+	<xs:import schemaLocation="ehmiEDN-Business-Message-Envelope-1.2.xsd" namespace="http://peppol.eu/xsd/ticc/envelope/1.0"/>
 	<xs:complexType name="StandardBusinessDocumentHeader">
 		<xs:sequence>
 			<xs:element name="HeaderVersion" type="xs:string" fixed="1.0"/>
