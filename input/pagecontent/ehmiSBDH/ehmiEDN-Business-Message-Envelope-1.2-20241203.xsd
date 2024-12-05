@@ -8,8 +8,7 @@
   <xs:complexType name="BinaryContentType">
     <xs:simpleContent>
       <xs:extension base="xs:base64Binary">
-        <!--xs:attribute name="mimeType" type="xs:token" use="required"/-->
-        <xs:attribute name="mimeType">
+        <xs:attribute name="mimeType" use="required">
           <xs:simpleType>
             <xs:restriction base="xs:string">
               <xs:enumeration value="application/fhir+json"/>
@@ -21,14 +20,3 @@
       </xs:extension>
    </xs:simpleContent>
   </xs:complexType>
-  <!-- 
-  <xs:element name="TextContent" type="TextContentType"/>
-   -->
-  <xs:complexType name="TextContentType">
-    <xs:simpleContent>
-      <xs:extension base="xs:string">
-        <xs:attribute name="mimeType" type="xs:token" use="required"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
- </xs:schema>
