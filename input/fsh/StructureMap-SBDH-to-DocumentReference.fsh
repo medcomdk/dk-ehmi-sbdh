@@ -3,7 +3,7 @@ InstanceOf: StructureMap
 Title: "Transformation specification of a Medcom FHIR Message and an ehmiSBDH Envelope to a DocumentReference"
 Description: "Transformation specification of a Medcom FHIR Message and an ehmiSBDH Envelope to a DocumentReference"
 Usage: #definition
-* url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/Sbdh2DocumentReference-transform"
+* url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedComMessagingMessage2MedComDocumentReference-transform"
 * name = "Transformation specification of a Medcom FHIR Message and an ehmiSBDH Envelope to a DocumentReference"
 * title = "Transformation specification of a Medcom FHIR Message and an ehmiSBDH Envelope to a DocumentReference"
 * status = #draft
