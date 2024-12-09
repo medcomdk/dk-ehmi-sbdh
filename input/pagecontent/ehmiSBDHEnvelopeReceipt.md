@@ -7,8 +7,6 @@ The ehmiSBDHEnvelopeReceipt is the receipt mechanism for the ehmiSBDH.
 - EHMI ReceiptAcknowledgement
 - EHMI ReceiptException
 
-<br>
-
 **EHMI ReceiptAcknowledgement**
 
 The EHMI Receipt Acknowledgement Business Signal signals that a message has been properly received by the Receiver MSH software component. Legible means that it has passed structure/schema validity check. The content of the receipt and the legibility of a business message MUST be reviewed prior to the processing of the Requesting or Responding Business Document or the evaluation of condition expressions in the message's Business Documents or Document Envelope. Condition Expressions are expressions that evaluate to true or false. [ebXMLbp] 
@@ -23,14 +21,9 @@ A receipt exception terminates the Business Transaction. The following are recei
 - Signature exceptions. Business Documents are not signed for non-repudiation when required.
 - Sequence exceptions. The order or type of a Business Document or Business Signal is incorrect.
 
-A Receipt Exception typical signals an error condition in a Business Activity which requires a transaction to be terminated, i.e. receipt of a business message with a Business Document that has failed. (From [ebXMLbp] page 77)
-
-<br>
-
-<br>
+A Receipt Exception typically signals an error condition in a Business Activity which requires a transaction to be terminated, i.e. receipt of a business message with a Business Document that has failed. (From [ebXMLbp] page 77)
 
 ## EHMI ReceiptAcknowledgement (ebBP signal message)
-<br>
 
 EHMI ReceiptAcknowledgement is used as a positive transport receipt, and so that the recipient of the receipt can easily correlate the message with the original envelope, the recipient can check for the following elements:
 
@@ -47,11 +40,7 @@ EHMI ReceiptAcknowledgement is used as a positive transport receipt, and so that
 
 Contained as a BinaryContent in an EHMI SBDH ReceiptAcknowledgement is also an ebBP signal, which in principle contains the same information, but which does not need to be checked when it is a ReceiptAcknowledgement.
 
-<br>
-
 <img src="ehmiSBDH_ReceiptAckowledgement.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><br>
-
-<br>
 
 ##### OriginalMessageIdentifier
 
@@ -67,8 +56,6 @@ OriginalMessageIdentifier example
         9a6ff822-08de-5a6f-9670-9fa4b9d2f0dc
     </bpssignal:OriginalMessageIdentifier>		
 
-<br>
-
 ###### OriginalDocumentIdentifier
 
 Same datatype as SBDH/BusinessScope/Scope(DOCUMENTID)/InstanceIdentifier
@@ -82,8 +69,6 @@ OriginalDocumentIdentifier example
     <bpssignal:OriginalDocumentIdentifier>
         urn:dk:healthcare:prod:messaging:medcom: fhir:structuredefinition:[Bundle/MessageHeader/eventCoding/code.value]#urn:dk:medcom:fhir:[Bundle/MessageHeader/definition/[value of MessageDefinition version-part]]
     </bpssignal:OriginalDocumentIdentifier>
-
-<br>
 
 ###### OriginalMessageDateTime
 
@@ -99,8 +84,6 @@ OriginalMessageDateTime example
         2024-03-01T16:19:00+01:00
     </bpssignal:OriginalMessageDateTime>
 
-<br>
-
 ###### ThisMessageDateTime
 
 Always in this format: [YYYY-MM-DD]T[tt:mm:ss]+[offset-to-UTC]
@@ -115,8 +98,6 @@ ThisMessageDateTime example
         2024-03-01T16:19:10+01.00
     </bpssignal:ThisMessageDateTime>
 
-<br>
-
 ###### FromPartyInfo
  
     <bpssignal:FromPartyInfo type=[RequestingSBDH:Receiver.Identifier@Authority]>
@@ -129,8 +110,6 @@ FromPartyInfo example
         0088:5790000201389
     </bpssignal:FromPartyInfo>
 
-<br>
-
 ###### ToPartyInfo
 
     <bpssignal:ToPartyInfo type=[RequestingSBDH:Sender.Identifier@Authority]>
@@ -142,8 +121,6 @@ ToPartyInfo example
     <bpssignal:ToPartyInfo type=”iso6523-actorid-upis”>
         0088:5790000121526
     </bpssignal:ToPartyInfo>
-
-<br>
 
 ##### Overall EHMI ReceiptAcknowledgement example
 
@@ -171,54 +148,33 @@ ToPartyInfo example
         </bpssignal:CollaborationIdentifier>
     </bpssignal:ReceiptAcknowledgement>
 
-
-<br>
-
 ### Receipt Exception ()
-
-<br>
 
 <img src="ehmiSBDH_ReceiptAckowledgementException.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><br>
 
-<br>
-
 ###### OriginalMessageIdentifier
 
-<br>
-
 As 7.4.3.1.1
-
-<br>
 
 ###### OriginalDocumentIdentifier
 
 As 7.4.3.1.2
 
-<br>
-
 ###### OriginalMessageDateTime
 
 As 7.4.3.1.3 
-
-<br>
 
 ###### ThisMessageDateTime
 
 As 7.4.3.1.4 
 
-<br>
-
 ###### FromPartyInfo
 
 As 7.4.3.1.5 
 
-<br>
-
 ###### ToPartyInfo
 
 As 7.4.3.1.6
-
-<br>
 
 ###### ExceptionType
 
@@ -238,8 +194,6 @@ ExceptionType example
         </bpssignal:ReceiptException>
     </bpssignal:ExceptionType>
 
-<br>
-
 ###### Reason
 
 See ExceptionType
@@ -253,8 +207,6 @@ Reason example
     <bpssignal:Reason>
         Internal error
     </bpssignal:Reason>
-
-<br>
 
 ###### ExceptionMessage
 
@@ -271,9 +223,6 @@ ExceptionMessage example
         - with linked exception:
         [org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 21; The end-tag for element type "ns3:Sender" must end with a '&gt;' delimiter.]
     </bpssignal:ExceptionMessage>
-
- 
-<br>
 
 ##### Overall EHMI Receipt Acknowledgement  Exception example
 
@@ -316,4 +265,3 @@ ExceptionMessage example
             Element type "StandardBusinessDocumentHeader" must be followed by either attribute specifications, ">" or "/>".
         </bpssignal:ExceptionMessage>
     </bpssignal:Exception>
-
