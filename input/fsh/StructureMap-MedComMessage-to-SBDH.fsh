@@ -146,7 +146,7 @@ Usage: #definition
 * group[=].rule[=].target.transform = #create
 * group[=].rule[+].name = "ScopeDocumentInstanceIdentifier"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "Bundle/id"
+* group[=].rule[=].source.element = "Bundle.id"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[DOCUMENTID]/InstanceIdentifier"
