@@ -16,7 +16,7 @@ When Reliable Messaging is implemented, the Receiver **SHALL** check the incomin
 |:----------------------------------------------------------------|:---------------------------|
 | Both EnvelopeIdentifier and MessageIdentifier have not been received       | This is the normal case, and the message **SHALL** be processed            |
 | Both EnvelopeIdentifier and MessageIdentifier have already been received   | The original ehmiSBDHEnvelope server may either reprocess the message, or reject the message|
-| MessageIdentifier has already been received, but EnvelopeIdentifier is new | The original ehmiSBDHEnvelopeReceipt has been lost (failed to return to the request issuer) and thus the previously received Message in a ehmiSBDHEnvelope has been resubmitted with a new EnvelopeIdentifier for processing again. The original ehmiSBDHEnvelopeReceipt **SHALL** be resent|
+| MessageIdentifier has already been received, but EnvelopeIdentifier is new | The original ehmiSBDHEnvelopeReceipt has been lost (failed to return to the request issuer) and thus the previously received Message in An ehmiSBDHEnvelope has been resubmitted with a new EnvelopeIdentifier for processing again. The original ehmiSBDHEnvelopeReceipt **SHALL** be resent|
 | The EnvelopeIdentifier has already been received, but the MessageIdentifier is new | This is an error - EnvelopeIdentifier values **SHALL** never be reused. Receiver **MAY** return a Negative ehmiSBDHEnvelopeReceipt|
 
 ## Different Reliable Messaging scenarios using ehmiSBDHEnvelope
@@ -39,7 +39,7 @@ The Receiving MSH **SHALL** always send a positive ehmiSBDHEnvelopeReceipt to th
 
 Duplication of an unchanged ehmiSBDHEnvelope can be done in one of the following ways:
 
-- An error may have occurred in the flow from the Sending MSH to the Receiving MSH with subsequent duplication of a ehmiSBDHEnvelope in scenario 1a.
+- An error may have occurred in the flow from the Sending MSH to the Receiving MSH with subsequent duplication of An ehmiSBDHEnvelope in scenario 1a.
 - The Sending MSH may inadvertently send a duplicate of ehmiSBDHEnvelope
 
 The ehmiSBDHEnvelopes are completely identical and as a consequence, the ehmiSBDHEnvelope with request for positive ehmiSBDHEnvelopeReceipt arrives at the Receiving MSH more than once.
@@ -48,11 +48,11 @@ The Receiving MSH **SHALL** ignore the contents of the duplicate instances of th
 
 A positive ehmiSBDHEnvelopeReceipt may not be sent first and then a negative ehmiSBDHEnvelopeReceipt or vice versa.
 
-The Receiving MSH **SHALL** never display several instances of a ehmiSBDHEnvelope in a ehmiSBDHEnvelope overview, but **SHALL** log in a system log that reception of a duplicate ehmiSBDHEnvelope has taken place.
+The Receiving MSH **SHALL** never display several instances of An ehmiSBDHEnvelope in An ehmiSBDHEnvelope overview, but **SHALL** log in a system log that reception of a duplicate ehmiSBDHEnvelope has taken place.
 
-If the Sending MSH of the ehmiSBDHEnvelope has received ehmiSBDHEnvelopeReceipt already after the Receiving MSH's ehmiSBDHEnvelopeReceipt of a ehmiSBDHEnvelope's first instance, the Sending MSH **SHALL** similarly ignore the duplicate instances of the ehmiSBDHEnvelopeReceipt.
+If the Sending MSH of the ehmiSBDHEnvelope has received ehmiSBDHEnvelopeReceipt already after the Receiving MSH's ehmiSBDHEnvelopeReceipt of An ehmiSBDHEnvelope's first instance, the Sending MSH **SHALL** similarly ignore the duplicate instances of the ehmiSBDHEnvelopeReceipt.
 
-The Sending MSH **SHALL** never display multiple instances of the same ehmiSBDHEnvelopeReceipt in a ehmiSBDHEnvelope summary but **SHALL** log in a system log that ehmiSBDHEnvelopeReceipt of a duplicate has taken place.
+The Sending MSH **SHALL** never display multiple instances of the same ehmiSBDHEnvelopeReceipt in An ehmiSBDHEnvelope summary but **SHALL** log in a system log that ehmiSBDHEnvelopeReceipt of a duplicate has taken place.
 
 ### Scenario #3 - (Re) Sending Unchanged ehmiSBDHEnvelope 
 
@@ -82,7 +82,7 @@ Resubmissions **SHALL** always be done manually.
 
 ### ehmiSBDHEnvelope Reliable Messaging Message Elements
 
-A ehmiSBDHEnvelope consists of the following elements (see <!--a href="#Fig2"-->Figure 2</a>):
+<!-- An ehmiSBDHEnvelope consists of the following elements (see <!--a href="#Fig2"Figure 2</a>):-->
 
 <!--figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="ehmiSBDHEnvelope_schema-reliable.png" target="_blank"> <img src="ehmiSBDHEnvelope_schema-reliable.png" alt="ehmiSBDHEnvelope_schema-reliable" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig2"></a>
@@ -90,7 +90,7 @@ A ehmiSBDHEnvelope consists of the following elements (see <!--a href="#Fig2"-->
 </figure-->
 <br>
 
-A ehmiSBDHEnvelope's Reliable Messaging part can be found in the ehmiSBDHEnvelope/Message/MetaInformation/Transport/Type-element, which is shown in <!--a href="#Fig3"-->Figure 3</a>:
+An ehmiSBDHEnvelope's Reliable Messaging part can be found in the ehmiSBDHEnvelope/Message/MetaInformation/Transport/Type-element, which is shown in <!--a href="#Fig3"-->Figure 3</a>:
 
 <!--figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="ehmiSBDHEnvelope_schema-reliable-type.png" target="_blank"> <img src="ehmiSBDHEnvelope_schema-reliable-type.png" alt="ehmiSBDHEnvelope_schema-reliable" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig3"></a>
@@ -104,9 +104,9 @@ In FHIR Messaging, this element **SHALL** be "reliable" or left in default mode.
 
 ### ehmiSBDHEnvelope ehmiSBDHEnvelopeReceipt Reliable Messaging Elements
 
-When "reliable", the receiver of the ehmiSBDHEnvelope **SHALL** send a ehmiSBDHEnvelopeReceipt return to the original Sender.
+When "reliable", the receiver of the ehmiSBDHEnvelope **SHALL** send An ehmiSBDHEnvelopeReceipt return to the original Sender.
 
-A ehmiSBDHEnvelopeReceipt consists of the following elements (see <!--a href="#Fig4"-->Figure 4</a>):
+An ehmiSBDHEnvelopeReceipt consists of the following elements (see <!--a href="#Fig4"-->Figure 4</a>):
 
 <!--figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="ehmiSBDHEnvelope_schema-acknowledgement.png" target="_blank"> <img src="ehmiSBDHEnvelope_schema-acknowledgement.png" alt="ehmiSBDHEnvelope_schema-acknowledgement" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig4"></a>
