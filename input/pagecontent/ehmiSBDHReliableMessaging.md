@@ -90,7 +90,7 @@ Resubmissions **SHALL** always be done manually.
 </figure-->
 <br>
 
-An ehmiSBDHEnvelope's Reliable Messaging part can be found in the ehmiSBDHEnvelope/-element, which is shown in <!--a href="#Fig3"-->Figure 3</a>:
+An ehmiSBDHEnvelope's Reliable Messaging part can be found in the ehmiSBDHEnvelope/-element, which is shown in [ehmiSBDHEnvelope's Reliable Messaging part](ehmiSBDH.md#reliable-messaging) <!--a href="#Fig3"-->Figure 3</a>:
 
 <!--figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="ehmiSBDHEnvelope_schema-reliable-type.png" target="_blank"> <img src="ehmiSBDHEnvelope_schema-reliable-type.png" alt="ehmiSBDHEnvelope_schema-reliable" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig3"></a>
