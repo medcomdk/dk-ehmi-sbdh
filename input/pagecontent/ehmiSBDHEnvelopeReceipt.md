@@ -314,6 +314,4 @@ ExceptionMessage example
             Element type "StandardBusinessDocumentHeader" must be followed by either attribute specifications, ">" or "/>".
         </bpssignal:ExceptionMessage>
     </bpssignal:Exception>
- 
-<br>
 
