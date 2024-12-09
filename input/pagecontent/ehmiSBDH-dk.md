@@ -1,10 +1,10 @@
 # ehmiSBDH
 
-<br/>
+<br>
 
 ## Indledning
 
-<br/>
+<br>
 
 The EHMI Standard Business Document Header (ehmiSBDH) is a customized version of the PEPPOL SBDH.
 
@@ -18,21 +18,21 @@ It is developed to
 
 [TBD]
 
-<br/>
+<br>
 
 ## SBDH – Generelle elementer 
 
 ### Generelt
 
-<br/>
+<br>
 
 StandardBusinessDocumentHeader (SBDH) er en konvolutspecifikation udstedt af GS1 og profileret til anvendelse i PEPPOL. Den understøttes af eDelivery's Access Points (AP) ift. AS4 protokollen. Vi følger i EHMI konventionerne, som er udlagt i PEPPOLs profilering, men udvider den også til at kunne passe på sundhedsområdet. SBDH er dog ingenting uden en omgivende container, kaldet StandardBusinessDocument (SBD).
 
-<br/>
+<br>
 
 ### StandardBusinessDocument
 
-<br/>
+<br>
 
 StandardBusinessDocument er som nævnt SBDHs omgivende container, og er en wrapper rundt om SBDH, og indeholder kun to elementer:
 -	StandardBusinessDocumentHeader
@@ -41,11 +41,11 @@ StandardBusinessDocument er som nævnt SBDHs omgivende container, og er en wrapp
 Selvom StandardBusinessDocument, som sådan er konvolutten, bruges termen SBDH generelt om hele konvolutten, da det er dette indhold som er særligt interessant i meddelelsesudvekslingen.
 BinaryContent er elementet som indeholder en base64-encodet meddelelse eller kvittering for en afsendt SBDH.
 
-<br/>
+<br>
 
-<img src="ehmiSBDH_Document.png" alt="EHMI StandardBusinessDocument" /><br/>
+<img src="ehmiSBDH_Document.png" alt="EHMI StandardBusinessDocument" /><br>
 
-<br/>
+<br>
 
 Indholdet i SBDH er for en stor dels vedkommende bestemt af hvorledes
 -	de samme informationer registreres i EER
@@ -54,7 +54,7 @@ Indholdet i SBDH er for en stor dels vedkommende bestemt af hvorledes
 -	sammenhængen er til EHMI EnvelopeReceipt
 -	de samme informationer registreres i EDS
 
-<br/>
+<br>
 
 SBDH har en struktur, der overordnet er delt ind i følgende elementer:
 -	HeaderVersion
@@ -64,11 +64,11 @@ SBDH har en struktur, der overordnet er delt ind i følgende elementer:
 -	Manifest
 -	BusinessScope
 
-<br/>
+<br>
 
 #### SBDH for en MedCom meddelelse og en MedCom kvittering
 
-<br/>
+<br>
 
 I en SBDH for en MedCom meddelelse og en MedCom kvittering kan følgende metadata indgå:
 -	Generelle SBDH metadata
@@ -77,11 +77,11 @@ I en SBDH for en MedCom meddelelse og en MedCom kvittering kan følgende metadat
 -	XDS Metadata for Dokumentdeling
 -	Metadata for Reliable messaging - BusinessService Request
 
-<br/>
+<br>
 
 #### SBDH for en EHMI EnvelopeReceipt 
 
-<br/>
+<br>
 
 I en SBDH for en EHMI EnvelopeReceipt er der følgende metadata:
 -	Generelle SBDH metadata
@@ -89,19 +89,19 @@ I en SBDH for en EHMI EnvelopeReceipt er der følgende metadata:
 -	Metadata for sundhedsmeddelelseskommunikation
 -	Metadata for Reliable messaging - BusinessService Response
 
-<br/>
+<br>
 
 ### SBDH – Fast definerede generelle elementer
 
-<br/>
+<br>
 
 SBDH’s generelle elementer er illustreret i nedenstående figur.
 
-<br/>
+<br>
 
-<img src="ehmiSBDH_Header.png" alt="EHMI StandardBusinessDocument" /><br/>
+<img src="ehmiSBDH_Header.png" alt="EHMI StandardBusinessDocument" /><br>
 
-<br/>
+<br>
 
 BusinessScope har dog fået sit eget kapitel, da det afviger markant fra de øvrige.
 I det følgende præsenteres de generelle SBDH elementer for de foreløbigt 2 meddelelsestyper, som EHMI opererer med:
@@ -111,29 +111,29 @@ I det følgende præsenteres de generelle SBDH elementer for de foreløbigt 2 me
 Hvor det er relevant, vil de generelle elementer være opdelt i underafsnit, der beskriver stien til værdien for det pågældende element i de respektive meddelelsestyper.
 Hvor de fleste elementer har almindeligt fokus på meddelelsesudveksling generelt og samspillet med SMP, giver særligt BusinessScope et sundhedsorienteret aftryk i specifikationen.
 
-<br/>
+<br>
 
 #### HeaderVersion
 
-<br/>
+<br>
 
 Altid 
 
     <HeaderVersion>1.0</HeaderVersion>
 
-<br/>
+<br>
 
 #### Sender
 
-<br/>
+<br>
 
 Sender indeholder i EHMI kun det mandatory element Identifier.
 
-<br/>
+<br>
 
 ##### Identifier
 
-<br/>
+<br>
 
 Indeholder attributten Authority, som jf. [Policy_identifiers], POLICY 6 Numeric Codes for Issuing Agencies, altid har værdien: "iso6523-actorid-upis"
  
@@ -141,7 +141,7 @@ Identifier repræsenterer GLN for afsender, hvor
 - Værdien 0088: afspejler at typen er GLN.
 - Værdien efter 0088: afspejler GLN-nummeret.
 
-<br/>
+<br>
 
     <Sender>
         <Identifier Authority="iso6523-actorid-upis">    
@@ -149,13 +149,13 @@ Identifier repræsenterer GLN for afsender, hvor
         </Identifier>
     </Sender>
 
-<br/>
+<br>
 
 ##### Hvis MedCom meddelelsen er af typen FHIR 
 
 Hvis MedCom meddelelsen er af typen FHIR, da altid på følgende form:
 
-<br/>
+<br>
 
    <Sender>
         <Identifier Authority="iso6523-actorid-upis">    
@@ -163,11 +163,11 @@ Hvis MedCom meddelelsen er af typen FHIR, da altid på følgende form:
         </Identifier>
     </Sender>
 
-<br/>
+<br>
 
 ##### Sender eksempel
 
-<br/>
+<br>
 
 Uanset meddelelsestype vil det altid munde ud i følgende Sender/Identifier, hvor værdien efter 0088: selvfølgelig vil variere.
 
@@ -177,19 +177,19 @@ Uanset meddelelsestype vil det altid munde ud i følgende Sender/Identifier, hvo
         </Identifier>
     </Sender>
 
-<br/>
+<br>
 
 ##### Receiver
 
-<br/>
+<br>
 
 Receiver indeholder i EHMI kun det mandatory element Identifier.
 
-<br/>
+<br>
 
 ##### Identifier
 
-<br/>
+<br>
 
 Indeholder attributten Authority, som jf. [Policy_identifiers], POLICY 6 Numeric Codes for Issuing Agencies, altid har værdien: "iso6523-actorid-upis"
  Identifier repræsenterer GLN for modtager, hvor 
@@ -197,7 +197,7 @@ Indeholder attributten Authority, som jf. [Policy_identifiers], POLICY 6 Numeric
 - Værdien efter 0088: afspejler GLN-nummeret.
 
 
-<br/>
+<br>
 
     <Receiver>
         <Identifier Authority="iso6523-actorid-upis">    
@@ -205,11 +205,11 @@ Indeholder attributten Authority, som jf. [Policy_identifiers], POLICY 6 Numeric
         </Identifier>
     </Receiver>' 
 
-<br/>
+<br>
 
 ##### Hvis MedCom meddelelsen er af typen FHIR 
 
-<br/>
+<br>
 
 Hvis MedCom meddelelsen er af typen FHIR, da altid på følgende form:
 
@@ -219,11 +219,11 @@ Hvis MedCom meddelelsen er af typen FHIR, da altid på følgende form:
         </Identifier>
     </Receiver>
 
-<br/>
+<br>
 
 ##### Receiver eksempel:
 
-<br/>
+<br>
 
 Uanset meddelelsestype vil det altid munde ud i følgende Receiver/Identifier, hvor værdien efter 0088: selvfølgelig vil variere.
 
@@ -231,11 +231,11 @@ Uanset meddelelsestype vil det altid munde ud i følgende Receiver/Identifier, h
         <Identifier Authority="iso6523-actorid-upis">0088:5790000201389    </Identifier>
     </Receiver>
 
-<br/>
+<br>
 
 #### DocumentInformation
 
-<br/>
+<br>
 
 ##### Standard
 
@@ -245,11 +245,11 @@ Vi opererer med 4 type standarder, som har hvert sit prefix ifm. standarden
 - OIOXML (beskrives I en senere version af standarden)
 - Edifact (beskrives I en senere version af standarden)
 
-<br/>
+<br>
 
 ###### Hvis MedCom meddelelsen er af typen FHIR 
 
-<br/>
+<br>
 
 Hvis MedCom meddelelsen er en OIOXML, da altid på følgende form:
 
@@ -259,25 +259,25 @@ Hvis MedCom meddelelsen er en OIOXML, da altid på følgende form:
         </Standard>
     </DocumentInformation>
 
-<br/>
+<br>
 
 Meddelelseseksempel: 
 
-<br/>
+<br>
 
     <DocumentInformation>
         <Standard>homecareobservation-message</Standard>
     </DocumentInformation>
 
-<br/>
+<br>
 
 ###### Hvis MedCom meddelelsen er af typen EHMI EnvelopeReceipt
 
-<br/>
+<br>
 
 Altid 
 
-<br/>
+<br>
 
     <DocumentInformation>
         …
@@ -287,11 +287,11 @@ Altid
         …
     </DocumentInformation>
 
-<br/>
+<br>
 
 SBDH-envelope eksempel:
 
-<br/>
+<br>
 
     <DocumentInformation>
         …
@@ -299,15 +299,15 @@ SBDH-envelope eksempel:
         …
     </DocumentInformation>
 
-<br/>
+<br>
 
 ##### TypeVersion
 
-<br/>
+<br>
 
 Er den indeholdte meddelelses version på formen
 
-<br/>
+<br>
 
     <DocumentInformation>
         …
@@ -315,11 +315,11 @@ Er den indeholdte meddelelses version på formen
         …
     </DocumentInformation>
 
-<br/>
+<br>
 
 ###### Hvis MedCom meddelelsen er af typen FHIR 
 
-<br/>
+<br>
 
 Hvis MedCom meddelelsen er af typen FHIR, da altid på følgende form:
 
@@ -331,11 +331,11 @@ Hvis MedCom meddelelsen er af typen FHIR, da altid på følgende form:
         …
     </DocumentInformation>
 
-<br/>
+<br>
 
 Meddelelseseksempel:
 
-<br/>
+<br>
 
     <DocumentInformation>
 	    …
@@ -343,13 +343,13 @@ Meddelelseseksempel:
         …
     </DocumentInformation>
 
-<br/>
+<br>
 
 Hvis den indeholdte meddelelse er af typen EHMI EnvelopeReceipt 
 
 Altid 
 
-<br/>
+<br>
 
     <DocumentInformation>
         …
@@ -359,11 +359,11 @@ Altid
         …
     </DocumentInformation>
 
-<br/>
+<br>
 
 EHMI EnvelopeReceipt eksempel:
 
-<br/>
+<br>
 
     <DocumentInformation>
         …
@@ -371,11 +371,11 @@ EHMI EnvelopeReceipt eksempel:
         …
     </DocumentInformation>
 
-<br/>
+<br>
 
 ##### InstanceIdentifier 
 
-<br/>
+<br>
 
 InstanceIdentifier vil blive genereret af den afsendende MSH og er uanset om det er en meddelelse eller en EHMI EnvelopeReceipt genereret.
 
@@ -383,7 +383,7 @@ InstanceIdentifier vil blive genereret af den afsendende MSH og er uanset om det
 
 Eksempel:
 
-<br/>
+<br>
 
     <!-- [generated UUID] -->	
     <DocumentInformation>
@@ -392,15 +392,15 @@ Eksempel:
         …
     </DocumentInformation>
 
-<br/>
+<br>
 
 ##### Type
 
-<br/>
+<br>
 
 Meddelelse:
 
-<br/>
+<br>
 
     <DocumentInformation>
         …
@@ -408,11 +408,11 @@ Meddelelse:
         …
     </DocumentInformation>
 
-<br/>
+<br>
 
 ###### Hvis MedCom meddelelsen er af typen FHIR 
 
-<br/>
+<br>
 
 Hvis MedCom meddelelsen er en FHIR, da altid på følgende form:
 
@@ -422,11 +422,11 @@ Hvis MedCom meddelelsen er en FHIR, da altid på følgende form:
         …
     </DocumentInformation>
 
-<br/>
+<br>
 
 Meddelelseseksempel:
 
-<br/>
+<br>
 
     <DocumentInformation>
         …
@@ -434,11 +434,11 @@ Meddelelseseksempel:
         …
     </DocumentInformation>
 
-<br/>
+<br>
 
 ###### Hvis meddelelsen er af typen EHMI EnvelopeReceipt:
 
-<br/>
+<br>
 
     <DocumentInformation>
         …
@@ -446,7 +446,7 @@ Meddelelseseksempel:
         …
     </DocumentInformation>
 
-<br/>
+<br>
 
 Kvitteringstype har følgende udfaldsrum:
 Udfaldsrum for disse ebXML Business Process Signals er:
@@ -454,11 +454,11 @@ Udfaldsrum for disse ebXML Business Process Signals er:
 - ReceiptException
 - AcceptanceAcknowledgement (OBS! bruges ikke i produktionspiloten)
 
-<br/>
+<br>
 
 Envelope Kvitteringseksempel:
 
-<br/>
+<br>
 
     <DocumentInformation>
         …
@@ -466,15 +466,15 @@ Envelope Kvitteringseksempel:
         …
     </DocumentInformation>
 
-<br/>
+<br>
 
 ##### MultipleType
 
-<br/>
+<br>
 
 Altid false: 
 
-<br/>
+<br>
 
     <DocumentInformation>
         …
@@ -482,13 +482,13 @@ Altid false:
         …
     </DocumentInformation>
 
-<br/>
+<br>
 
 ##### CreationDateAndTime
 
 Altid på formen: [YYYY-MM-DD]T[TT-MM-SS]+[offset-to-UTC]
 
-<br/>
+<br>
 
     <DocumentInformation>
         …
@@ -498,11 +498,11 @@ Altid på formen: [YYYY-MM-DD]T[TT-MM-SS]+[offset-to-UTC]
         …
     </DocumentInformation>
 
-<br/>
+<br>
 
 Eksempel:
 
-<br/>
+<br>
 
     <DocumentInformation>
         …
@@ -510,7 +510,7 @@ Eksempel:
         …
     </DocumentInformation>
 
-<br/>
+<br>
 
 ##### DocumentInformation samlet meddelelseseksempel
 
@@ -523,11 +523,11 @@ Eksempel:
 	    <CreationDateAndTime>2024-03-01T16-19-00+01:00</CreationDateAndTime>
     </DocumentIdentification>
 
-<br/>
+<br>
 
 ##### DocumentInformation samlet kvitteringseksempel
 
-<br/>
+<br>
 
     <DocumentIdentification>
         <Standard>ebbp-signals</Standard>
@@ -538,11 +538,11 @@ Eksempel:
 	    <CreationDateAndTime>2024-03-01T16-19-00+01:00</CreationDateAndTime>
     </DocumentIdentification>
 
-<br/>
+<br>
 
 #### Manifest (bevidst udeladt i Produktionspilotversionen) 
 
-<br/>
+<br>
 
 ## SBDH BusinessScopes 
 
@@ -550,35 +550,35 @@ SBDH BusinessScopes er SBDH’s name-value pair konstruktion karakteriseret ved 
 Name er udtrykt ved Type-elementet og value er udtrykt ved InstanceIdentifier. Disse to skifter for hvert scope, mens Identifieren i EHMI sammenhæng altid er den samme: dk-medcom-messaging
 I det følgende gennemgås de i de logiske sammenhænge, som de optræder i.
 
-<br/>
+<br>
 
 ### BusinessScope for generel eDelivery meddelelseskommunikation
 
-<br/>
+<br>
 
 #### Sammenhæng til SMP 
 
 I eDelivery kommunikationen udgør SBDH’ens Scope struktur med de to typer, DOCUMENTID og PROCESSID, den direkte sammenhæng til SMP’ens DOCUMENTID og PROCESSID. Ydermere inkluderer sammenhængen også de allerede gennemgåede elementer i afsnittet om Receiver. I det følgende beskrives netop disse to Type elementer i SBDH’ens overordnede BusinessScope struktur.
 Scopene DOCUMENTID og PROCESSID er i PEPPOL fast definerede scopes, som sikrer en unik relation til SMP. DOCUMENTID og PROCESSID anvendes i EHMI med samme præcision som i PEPPOL, så der sikres en ensartethed i, hvordan man udtrykker værdierne på tværs af PEPPOL og EHMI. DOCUMENTID og PROCESSID bruges af AP’erne sammen med modtagers Receiver/Identifier til at slå modtagers eDelivery adresse op i SMP med et unikt respons som resultat.
 
-<br/>
+<br>
 
-<img src="ehmiSBDH_BusinessScopesPeppol.png" alt="EHMI StandardBusinessDocument" /><br/>
+<img src="ehmiSBDH_BusinessScopesPeppol.png" alt="EHMI StandardBusinessDocument" /><br>
 
-<br/>
+<br>
 
 #### DOCUMENTID
 
-<br/>
+<br>
 
 Værdien i InstanceIdentifier er identisk med den tilsvarende SMP-registrering.
 Værdierne hentes fra MedComs standardkatalog og er her repræsenteret ved de værdier, som angiver typen af meddelelsen. Se bogmærke: [DKEDEL_DT_CodeList]
 
-<br/>
+<br>
 
 ##### DOCUMENTID  for MedCom FHIR Meddelelser
 
-<br/>
+<br>
 
     <Scope> 
         <Type>DOCUMENTID</Type> 
@@ -588,11 +588,11 @@ Værdierne hentes fra MedComs standardkatalog og er her repræsenteret ved de v�
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<br/>
+<br>
 
 MedCom FHIR Meddelelseseksempel 
 
-<br/>
+<br>
 
     <Scope> 
         <Type>DOCUMENTID</Type> 
@@ -602,11 +602,11 @@ MedCom FHIR Meddelelseseksempel
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<br/>
+<br>
 
 ##### DOCUMENTID for EHMI EnvelopeReceipt
 
-<br/>
+<br>
 
     <Scope> 
         <Type>DOCUMENTID</Type> 
@@ -616,11 +616,11 @@ MedCom FHIR Meddelelseseksempel
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<br/>
+<br>
 
 DOCUMENTID EHMI EnvelopeReceipt eksempel:
 
-<br/>
+<br>
 
     <Scope> 
         <Type>DOCUMENTID</Type> 
@@ -630,11 +630,11 @@ DOCUMENTID EHMI EnvelopeReceipt eksempel:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<br/>
+<br>
 
 #### PROCESSID
 
-<br/>
+<br>
 
 Værdien i InstanceIdentifier er identisk med den tilsvarende ProcessId SMP-registrering .
 I 4-corner modellen  sendes SDN-emergence-registreringen med til SMP, så afsenders AP kan slå endelig modtager, også kaldet finalreceipient op korrekt i SMP.
@@ -647,11 +647,11 @@ I 4-corner modellen  sendes SDN-emergence-registreringen med til SMP, så afsend
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<br/>
+<br>
 
 PROCESSID for SDN Eksempel
 
-<br/>
+<br>
 
 Altid
 
@@ -661,25 +661,25 @@ Altid
 	    <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<br/>
+<br>
 
 ### SBDH BusinessScope – sundhedsmeddelelseskommunikation
 
-<br/>
+<br>
 
 #### Scope – message metadata - who
 
-<br/>
+<br>
 
-<img src="ehmiSBDH_BusinessScopesMetadata.png" alt="EHMI StandardBusinessDocument" /><br/>
+<img src="ehmiSBDH_BusinessScopesMetadata.png" alt="EHMI StandardBusinessDocument" /><br>
 
-<br/>
+<br>
 
 ##### PATIENTID
 
 Patientens CPR nummer indgår som identifier til brug for EDS Forsendelsesstatus og XDS-metadata. 
 
-<br/>
+<br>
 
     <Scope>
         <Type>PATIENTID</Type>
@@ -699,7 +699,7 @@ PATIENTID for MedCom FHIR meddelelser - eksempel:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<br/>
+<br>
 
 ##### SENDERID 
 
@@ -722,7 +722,7 @@ SENDERID for MedCom FHIR meddelelser - eksempel:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<br/>
+<br>
 
 ##### RECEIVERID 
 
@@ -745,15 +745,15 @@ RECEIVERID for MedCom FHIR meddelelser - eksempel:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<br/>
+<br>
 
 #### Scope – message metadata - what
 
-<br/>
+<br>
 
-<img src="ehmiSBDH_BusinessScopesMetadata.png" alt="EHMI StandardBusinessDocument" /><br/>
+<img src="ehmiSBDH_BusinessScopesMetadata.png" alt="EHMI StandardBusinessDocument" /><br>
 
-<br/>
+<br>
 
 ##### MESSAGEIDENTIFIER
 
@@ -776,7 +776,7 @@ MESSAGEIDENTIFIER eksempel:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<br/>
+<br>
 
 ###### Hvis MedCom meddelelsen er af typen EHMI EnvelopeReceipt
 
@@ -799,7 +799,7 @@ MESSAGEIDENTIFIER eksempel:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<br/>
+<br>
 
 ###### MESSAGEENVELOPEIDENTIFIER
 
@@ -823,7 +823,7 @@ MESSAGEENVELOPEIDENTIFIER eksempel:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<br/>
+<br>
 
 ##### ORIGINALMESSAGEIDENTIFIER
 
@@ -850,7 +850,7 @@ ORIGINALMESSAGEIDENTIFIER eksempel:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<br/>
+<br>
 
 ##### ORIGINALMESSAGEENVELOPEIDENTIFIER
 
@@ -876,7 +876,7 @@ ORIGINALMESSAGEENVELOPEIDENTIFIER eksempel:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<br/>
+<br>
 
 ##### ORIGINALMESSAGESTANDARD
 
@@ -900,7 +900,7 @@ ORIGINALMESSAGESTANDARD eksempel:
      <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<br/>
+<br>
 
 ##### ORIGINALMESSAGEVERSION
 
@@ -927,7 +927,7 @@ ORIGINALMESSAGEVERSION eksempel:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<br/>
+<br>
 
 ##### ORIGINALENVELOPEIDENTIFIER
 
@@ -954,15 +954,15 @@ ORIGINALENVELOPEIDENTIFIER eksempel:
     </Scope>
 
 
-<br/>
+<br>
 
 ### SBDH BusinessScope – XDS-Metadata
 
-<br/>
+<br>
 
-<img src="ehmiSBDH_BusinessScopesXdsMetadata.png" alt="EHMI StandardBusinessDocument" /><br/>
+<img src="ehmiSBDH_BusinessScopesXdsMetadata.png" alt="EHMI StandardBusinessDocument" /><br>
 
-<br/>
+<br>
 
 #### Dokumentdeling XDS-Metadata
 
@@ -972,7 +972,7 @@ Dette scope gælder kun for MedCom meddelelser ikke MedCom kvitteringer, da de i
 
 Dette scope gælder ikke for den primære udveksling mellem Afsender og Modtager. 
 
-<br/>
+<br>
 
 #### SBDH BusinessScope/Scope for XDS-Metadata
 
@@ -986,13 +986,13 @@ Altid FHIR DocumentReference for den pågældende meddelelsestype med tilhørend
 	    <Identifier>dk-medcom-DocumentReference</Identifier>
     </Scope>
 
-<br/>
+<br>
 
 #### XDS-Metadata (eksempel på encoded value)
 
 [TBD]
 
-<br/>
+<br>
 
 ### SBDH BusinessScope – Reliable messaging 
 
@@ -1015,19 +1015,19 @@ I forbindelse med krav ifm. om Reliable messaging anvendes strukturen i Business
 
 CorrelationInformation bruges til at binde meddelelse og kvittering sammen. I piloten genereres alle elementer i CorrelationInformation af afsendende SBDH-MSH. Modtager af SBDH og afsender af SBDH ReceiptAcknowledgement skal kvittere med angivelse af CorrelationInformation elementerne RequestingDocumentCreationDateTime og RequestingDocumentInstanceIdentifier. Der kvitteres aldrig på en kvittering.
 
-<br/>
+<br>
 
 #### Reliable messaging - BusinessService Request
 
-<br/>
+<br>
 
-<img src="ehmiSBDH_ReceiptAckowledgementRequest.png" alt="EHMI StandardBusinessDocument" /><br/>
+<img src="ehmiSBDH_ReceiptAckowledgementRequest.png" alt="EHMI StandardBusinessDocument" /><br>
 
-<br/>
+<br>
 
 I det følgende er dette sat op som det ønskes i piloten.
 
-<br/>
+<br>
 
 ##### EHMI-SBDH-ReceiptAcknowledgement- - Request
 
@@ -1038,13 +1038,13 @@ I et EHMI-SBDH-ReceiptAcknowledgement- - Request er scope altid dette:
  	    <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<br/>
+<br>
 
 ##### CorrelationInformation 
 
 Ifm. reliable messaging bruges SBDH’ens CorrelationInformation til at binde original SBDH og kvitterings SBDH sammen. Her anvendes specielt RequestingDocument InstanceIdentifier
 
-<br/>
+<br>
 
 ###### CorrelationInformation RequestingDocumentCreationDateTime
 
@@ -1066,7 +1066,7 @@ Eksempel:
         …
     <CorrelationInformation>
 
-<br/>
+<br>
 
 ###### CorrelationInformation RequestingDocumentInstanceIdentifier
 
@@ -1090,7 +1090,7 @@ Eksempel:
         …
     <CorrelationInformation>
 
-<br/>
+<br>
 
 ###### CorrelationInformation ExpectedResponseDateTime
 
@@ -1112,7 +1112,7 @@ Eksempel:
         </ExpectedResponseDateTime>
     <CorrelationInformation>
 
-<br/>
+<br>
 
 ##### CorrelationInformation samlet eksempel
 
@@ -1128,11 +1128,11 @@ Eksempel:
         </ExpectedResponseDateTime>
     </CorrelationInformation>
 
-<br/>
+<br>
 
 ##### SBDH BusinessServices - Request
 
-<br/>
+<br>
 
 ###### BusinessServiceName
 
@@ -1142,67 +1142,67 @@ Altid
         EHMI-SBDH-ReceiptAcknowledgement-Request
     </BusinessServiceName>
 
-<br/>
+<br>
 
 ###### ServiceTransaction – TypeOfServiceTransaction
 
     TypeOfServiceTransaction=”RequestingServiceTransaction”
 
-<br/>
+<br>
 
 ###### ServiceTransaction – IsNonRepudiationRequired
 
     IsNonRepudiationRequired=”false” 
 
-<br/>
+<br>
 
 ###### ServiceTransaction – IsAuthenticationRequired
 
     IsAuthenticationRequired=”false” 
 
-<br/>
+<br>
 
 ###### ServiceTransaction – IsNonRepudiationOfReceiptRequired
 
     IsNonRepudiationOfReceiptRequired=”false” 
 
-<br/>
+<br>
 
 ###### ServiceTransaction – IsIntelligibleCheckRequired
 
     IsIntelligibleCheckRequired=”false” 
 
-<br/>
+<br>
 
 ###### ServiceTransaction – IsApplicationErrorResponseRequested
     
     IsApplicationErrorResponseRequested=”false” 
 
-<br/>
+<br>
 
 ###### ServiceTransaction – TimeToAcknowledgeReceipt
 
     TimeToAcknowledgeReceipt=”600000” (ms)
 
-<br/>
+<br>
 
 ###### ServiceTransaction – TimeToAcknowledgeAcceptance
 
     TimeToAcknowledgeAcceptance=”0” (=bruges pt ikke)
 
-<br/>
+<br>
 
 ###### 0	ServiceTransaction – TimeToPerform
 
     TimeToPerform=”0” (=bruges pt ikke)
 
-<br/>
+<br>
 
 ###### ServiceTransaction – Recurrence
 
     Recurrence=”0” (=bruges pt ikke)
 
-<br/>
+<br>
 
 ##### SBDH BusinessServices - Request eksempel
 
@@ -1223,7 +1223,7 @@ Altid
             Recurrence=”0”/>
     </BusinessService>
 
-<br/>
+<br>
 
 ##### Reliable messaging - BusinessService Request samlet eksempel
 
@@ -1263,19 +1263,19 @@ Altid
         …
     </BusinessScope>
  
-<br/>
+<br>
 
 #### Reliable messaging - BusinessService Response
 
-<br/>
+<br>
 
-<img src="ehmiSBDH_ReceiptAckowledgementResponse.png" alt="EHMI StandardBusinessDocument" /><br/>
+<img src="ehmiSBDH_ReceiptAckowledgementResponse.png" alt="EHMI StandardBusinessDocument" /><br>
 
-<br/>
+<br>
 
 I det følgende er dette sat op som det ønskes i piloten.
 
-<br/>
+<br>
 
 ##### EHMI-SBDH-ReceiptAcknowledgement - Response
 
@@ -1287,13 +1287,13 @@ I et EHMI-SBDH-ReceiptAcknowledgement - Response er scope altid dette:
  	    <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<br/>
+<br>
 
 ##### CorrelationInformation 
 
 Ifm. reliable messaging bruges SBDH’ens CorrelationInformation til at binde original SBDH og kvitterings SBDH sammen. Her anvendes specielt RequestingDocumentInstanceIdentifier
 
-<br/>
+<br>
 
 ##### CorrelationInformation RequestingDocumentCreationDateTime
 
@@ -1306,7 +1306,7 @@ RequestingDocumentCreationDateTime er tidspunktet for originalkuvertens afsendel
     …
     <CorrelationInformation>
 
-<br/>
+<br>
 
 ##### RequestingDocumentCreationDateTime eksempel
 
@@ -1317,7 +1317,7 @@ RequestingDocumentCreationDateTime er tidspunktet for originalkuvertens afsendel
 …
     <CorrelationInformation>
 
-<br/>
+<br>
 
 ##### CorrelationInformation RequestingDocumentInstanceIdentifier
 
@@ -1331,7 +1331,7 @@ RequestingSBDH/RequestingDocumentInstanceIdentifier
 …
     <CorrelationInformation>
 
-<br/>
+<br>
 
 ##### RequestingDocumentInstanceIdentifier eksempel
 
@@ -1343,13 +1343,13 @@ RequestingSBDH/RequestingDocumentInstanceIdentifier
 …
     <CorrelationInformation>
 
-<br/>
+<br>
 
 ##### CorrelationInformation ExpectedResponseDateTime
 
 ExpectedResponseDateTime udelades i en SBDH ReceiptAcknowledgement
 
-<br/>
+<br>
 
 ##### CorrelationInformation samlet eksempel
 
@@ -1362,11 +1362,11 @@ ExpectedResponseDateTime udelades i en SBDH ReceiptAcknowledgement
         </RequestingDocumentInstanceIdentifier>
     </CorrelationInformation>
 
-<br/>
+<br>
 
 ##### SBDH BusinessServices - Response
 
-<br/>
+<br>
 
 ###### BusinessServiceName
 
@@ -1376,14 +1376,14 @@ Altid
         EHMI-SBDH-ReceiptAcknowledgement-Response
     </BusinessServiceName>
 
-<br/>
+<br>
 
 ###### ServiceTransaction – TypeOfServiceTransaction
 
 Altid
     TypeOfServiceTransaction=”RespondingServiceTransaction”
 
-<br/>
+<br>
 
 ###### ServiceTransaction – IsNonRepudiationRequired
 
@@ -1391,7 +1391,7 @@ Altid
 
     IsNonRepudiationRequired=”false” 
 
-<br/>
+<br>
 
 ###### ServiceTransaction – IsAuthenticationRequired
 
@@ -1399,7 +1399,7 @@ Altid
 
     IsAuthenticationRequired=”false” 
 
-<br/>
+<br>
 
 ###### ServiceTransaction – IsNonRepudiationOfReceiptRequired
 
@@ -1407,28 +1407,28 @@ Altid
 
     IsNonRepudiationOfReceiptRequired=”false” 
 
-<br/>
+<br>
 
 ###### ServiceTransaction – IsIntelligibleCheckRequired
 
 Altid
     IsIntelligibleCheckRequired=”false” 
 
-<br/>
+<br>
 
 ###### ServiceTransaction – IsApplicationErrorResponseRequested
 
 Altid
     IsApplicationErrorResponseRequested=”false” 
 
-<br/>
+<br>
 
 ###### ServiceTransaction – TimeToAcknowledgeReceipt
 
 Altid
     TimeToAcknowledgeReceipt=”0” (ms)
 
-<br/>
+<br>
 
 ###### ServiceTransaction – TimeToAcknowledgeAcceptance
 
@@ -1436,21 +1436,21 @@ Altid
 
     TimeToAcknowledgeAcceptance=”0” (=bruges pt ikke)
 
-<br/>
+<br>
 
 ###### 0	ServiceTransaction – TimeToPerform
 
 Altid
     TimeToPerform=”0” (=bruges pt ikke)
 
-<br/>
+<br>
 
 ###### ServiceTransaction - Recurrence
 
 Altid
     Recurrence=”0” (=bruges pt ikke)
 
-<br/>
+<br>
 
 ###### SBDH BusinessServices - Response eksempel
 
@@ -1466,7 +1466,7 @@ Altid
             Recurrence=”0”/>
     </BusinessService>
 
-<br/>
+<br>
 
 ###### Reliable messaging - BusinessService Response samlet eksempel
     
@@ -1498,11 +1498,11 @@ Altid
         …
     </BusinessScope>
 
-<br/>
+<br>
 
 #### SBDH ReceiptAcknowledgement
 
-<br/>
+<br>
 
 SBDH ReceiptAcknowledgement anvendes som positiv transportkvittering, og for at modtager af kvitteringen nemt kan korrelere meddelelse med originalkuverten, kan modtager checke på hhv. 
 •	Sender
@@ -1518,15 +1518,15 @@ SBDH ReceiptAcknowledgement anvendes som positiv transportkvittering, og for at 
 
 Indlejret i en SBDH ReceiptAcknowledgement er også en ebBP-signal, som i princippet indeholder de samme informationer, men som det ikke er nødvendigt at checke, når det er en ReceiptAcknowledgement.
 
-<br/>
+<br>
 
-<img src="ehmiSBDH_ReceiptAckowledgement.png" alt="EHMI StandardBusinessDocument" /><br/>
+<img src="ehmiSBDH_ReceiptAckowledgement.png" alt="EHMI StandardBusinessDocument" /><br>
 
-<br/>
+<br>
 
 The Receipt Acknowledgement Business Signal signals that a message has been properly received by the Receiver MSH software component. Legible means that it has passed structure/schema validity check. The content of the receipt and the legibility of a business message MUST be reviewed prior to the processing of the Requesting or Responding Business Document or the evaluation of condition expressions in the message's Business Documents or Document Envelope. Condition Expressions are expressions that evaluate to true or false. [ebXMLbp] 
 
-<br/>
+<br>
 
 ###### OriginalMessageIdentifier
 
@@ -1542,7 +1542,7 @@ OriginalMessageIdentifier eksempel
         9a6ff822-08de-5a6f-9670-9fa4b9d2f0dc
     </bpssignal:OriginalMessageIdentifier>		
 
-<br/>
+<br>
 
 ###### OriginalDocumentIdentifier
 
@@ -1558,7 +1558,7 @@ OriginalDocumentIdentifier eksempel
         urn:dk:healthcare:prod:messaging:medcom: fhir:structuredefinition:[Bundle/MessageHeader/eventCoding/code.value ]#urn:dk:medcom:fhir:[Bundle/MessageHeader/definition/[value of MessageDefinition version-part]]
     </bpssignal:OriginalDocumentIdentifier>
 
-<br/>
+<br>
 
 ###### OriginalMessageDateTime
 
@@ -1574,7 +1574,7 @@ OriginalMessageDateTime eksempel
         2024-03-01T16:19:00+01:00
     </bpssignal:OriginalMessageDateTime>
 
-<br/>
+<br>
 
 ###### ThisMessageDateTime
 
@@ -1590,7 +1590,7 @@ ThisMessageDateTime eksempel
         2024-03-01T16:19:10+01.00
     </bpssignal:ThisMessageDateTime>
 
-<br/>
+<br>
 
 ###### FromPartyInfo
  
@@ -1604,7 +1604,7 @@ FromPartyInfo eksempel
         0088:5790000201389
     </bpssignal:FromPartyInfo>
 
-<br/>
+<br>
 
 ###### ToPartyInfo
 
@@ -1619,7 +1619,7 @@ ToPartyInfo eksempel
     </bpssignal:ToPartyInfo>
 
  
-<br/>
+<br>
 
 ##### Samlet SBDH ReceiptAcknowledgement eksempel
 
@@ -1648,11 +1648,11 @@ ToPartyInfo eksempel
     </bpssignal:ReceiptAcknowledgement>
 
 
-<br/>
+<br>
 
 #### Receipt Exception
 
-<br/>
+<br>
 
 A  Receipt Exception signals an error condition in the management of a Business Transaction. This Business Signal is returned to the initiating activity that originated the request. This exception MUST terminate the Business Transaction. These errors deal with the mechanisms of message exchange such as verification, validation, authentication, and authorization and will occur up to message acceptance. Typically, the rules and constraints applied to the message will have only dealt with the well-formedness of the message.
 
@@ -1664,49 +1664,49 @@ A receipt exception terminates the Business Transaction. The following are recei
 
 A Receipt Exception typical signals an error condition in a Business Activity which requires a transaction to be terminated, i.e. receipt of a business message with a Business Document that has failed. (From [ebXMLbp] page 77)
 
-<br/>
+<br>
 
-<img src="ehmiSBDH_ReceiptAckowledgementException.png" alt="EHMI StandardBusinessDocument" /><br/>
+<img src="ehmiSBDH_ReceiptAckowledgementException.png" alt="EHMI StandardBusinessDocument" /><br>
 
-<br/>
+<br>
 
 ###### OriginalMessageIdentifier
 
-<br/>
+<br>
 
 Som 7.4.3.1.1
 
-<br/>
+<br>
 
 ###### OriginalDocumentIdentifier
 
 Som 7.4.3.1.2
 
-<br/>
+<br>
 
 ###### OriginalMessageDateTime
 
 Som 7.4.3.1.3 
 
-<br/>
+<br>
 
 ###### ThisMessageDateTime
 
 Som 7.4.3.1.4 
 
-<br/>
+<br>
 
 ###### FromPartyInfo
 
 Som 7.4.3.1.5 
 
-<br/>
+<br>
 
 ###### ToPartyInfo
 
 Som 7.4.3.1.6
 
-<br/>
+<br>
 
 ###### ExceptionType
 
@@ -1726,7 +1726,7 @@ ExceptionType eksempel
         </bpssignal:ReceiptException>
     </bpssignal:ExceptionType>
 
-<br/>
+<br>
 
 ###### Reason
 
@@ -1742,7 +1742,7 @@ Reason eksempel
         Internal error
     </bpssignal:Reason>
 
-<br/>
+<br>
 
 ###### ExceptionMessage
 
@@ -1760,7 +1760,7 @@ ExceptionMessage eksempel
     </bpssignal:ExceptionMessage>
 
  
-<br/>
+<br>
 
 ##### Samlet Receipt Acknowledgement  Exception eksempel
 
@@ -1805,11 +1805,11 @@ ExceptionMessage eksempel
     </bpssignal:Exception>
  
 
-<br/>
+<br>
 
 ## SBDH BinaryContent – den indeholdte meddelelse
 
-<br/>
+<br>
 
 BinaryContent er en SBDH 1.2 udvidelse, der giver mulighed for at wrappe specifikt indhold i SBDH og base64-encode det. MimeType tydeliggør indholdet, og hvad modtager kan forvente af base64-decodingen.
 Udfaldsrum for mimeType er:
@@ -1831,12 +1831,12 @@ Encoding vil i piloten have følgende udfaldsrum for ReceiptAcknowledgement og R
 
 ## SBDH xsd schemas
 
-<br/>
+<br>
 
 Alle SBDH xsd-filer kan findes via [download-siden](downloads.html), men et overblik over, hvad de vigtigst indeholder kan ses her:
 
 (all files opens in new window)
-<br/>
+<br>
 
 - <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_StandardBusinessDocumentHeader.xsd.html" target="_blank">Ehmi SBDH StandardBusinessDocumentHeader Xsd</a>
 - <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_Partner.xsd.html" target="_blank">Ehmi SBDH Partner Xsd</a>
@@ -1845,5 +1845,5 @@ Alle SBDH xsd-filer kan findes via [download-siden](downloads.html), men et over
 - <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_BinaryContentType.xsd.html" target="_blank">Ehmi SBDH BinaryContentType Xsd</a>
 - <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_ebbp-signals-2.0.4.xsd.html" target="_blank">Ehmi SBDH Ebbp-Signals 2.0.4 Xsd</a>
 
-<br/>
+<br>
 
