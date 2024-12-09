@@ -98,7 +98,7 @@ menu:
 #    ehmiSBDH BS - xds-metadata: ehmiSBDH.html#sbdh-businessscope--xds-metadata
 #    ehmiSBDH BS - reliable-messaging: ehmiSBDH.html#sbdh-businessscope--reliable-messaging
 #    ehmiSBDH Binary Content: ehmiSBDH.html#sbdh-binarycontent--den-indeholdte-meddelelse
-    EHMI EnvelopeReceipt: ehmiEnvelopeReceipt.html
+    EHMI EnvelopeReceipt: ehmiSBDHEnvelopeReceipt.html
     Reliable Messaging SBDH: ehmiSBDHReliableMessaging.html
     References: references.html
   ehmiSBDH schemas: 
