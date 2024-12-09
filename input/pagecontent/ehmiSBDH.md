@@ -14,7 +14,7 @@ The StandardBusinessDocumentHeader (SBDH) is an envelope specification issued by
 
 StandardBusinessDocument is, as mentioned, SBDH's surrounding container, and is a wrapper around SBDH, and contains only two elements:
 
-- DefaultBusinessDocumentHeader
+- StandardBusinessDocumentHeader
 - BinaryContent (base64 encoded)
 
 Although the StandardBusinessDocument, as such, is the envelope, the term SBDH is generally used for the entire envelope, since it is this content that is of particular interest in the message exchange. BinaryContent is the element that contains a base64-encoded message or acknowledgment for a sent SBDH.
@@ -1802,7 +1802,7 @@ ExceptionMessage example
  
 <br/>
  -->
- 
+
 ## SBDH BinaryContent – the contained message
 
 <br/>
