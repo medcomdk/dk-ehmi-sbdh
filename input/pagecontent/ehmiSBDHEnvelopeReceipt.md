@@ -1,6 +1,6 @@
-## ehmiEnvelopeReceipt
+## ehmiSBDHEnvelopeReceipt
 
-The ehmiEnvelopeReceipt is the receipt mechanism for the ehmiSBDH.
+The ehmiSBDHEnvelopeReceipt is the receipt mechanism for the ehmiSBDH.
 
 - EHMI ReceiptAcknowledgement
 - EHMI ReceiptException
