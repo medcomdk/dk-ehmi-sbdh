@@ -115,6 +115,15 @@ Usage: #definition
 * group[=].rule[=].source.variable = "SbdhDocumentIdentificationType"
 * group[=].rule[=].source.variable.value = "Bundle"
 //* group[=].rule[=].source.defaultValueCode = #Bundle
+* group[+].name = "SbdhDocumentIdentification"
+* group[=].typeMode = #none
+* group[=].input[0].name = "source"
+* group[=].input[=].type = "Provenance"
+* group[=].input[=].mode = #source
+* group[=].input[+].name = "target"
+* group[=].input[=].type = "DocumentIdentification"
+* group[=].input[=].mode = #target
+* group[=].rule[+].name = "SbdhDocumentIdentificationStandard"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "StandardBusinessDocumentHeader/DocumentIdentification/Type"
