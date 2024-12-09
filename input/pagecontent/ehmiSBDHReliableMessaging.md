@@ -98,11 +98,9 @@ An ehmiSBDHEnvelope's Reliable Messaging part can be found in the ehmiSBDHEnvelo
 </figure-->
 <br>
 
-Reliable Messaging in ehmiSBDHEnvelope is the default mode but can explicitly be turned on and off by leaving out the InstanceIdentifier=Request pointed out by the Scope-Type: ehmiSBDHEnvelope/../BusinessScope/Scope/Type[EHMI-ReceiptAcknowledgement]
+Reliable Messaging in ehmiSBDHEnvelope is the default mode but can explicitly be turned on and off by leaving out the Scope-element pointed out by the Scope-Type: ehmiSBDHEnvelope/StandardBusinessDocumentHeader/BusinessScope/Scope/Type[EHMI-ReceiptAcknowledgement] and the Scope-InstanceIdentifier: ehmiSBDHEnvelope/StandardBusinessDocumentHeader/BusinessScope/Scope/InstanceIdentifier[Request]
 
-Type-element to "reliable" or "unreliable".
-
-In EHMI Messaging, this element **SHALL** be "reliable" or left in default mode.
+In EHMI Messaging, these elements **SHALL** be present together with the underlying structure-parts.
 
 ### ehmiSBDHEnvelope ehmiSBDHEnvelopeReceipt Reliable Messaging Elements
 
