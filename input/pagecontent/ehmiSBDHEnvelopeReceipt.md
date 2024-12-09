@@ -23,12 +23,12 @@ A receipt exception terminates the Business Transaction. The following are recei
 
 A Receipt Exception typical signals an error condition in a Business Activity which requires a transaction to be terminated, i.e. receipt of a business message with a Business Document that has failed. (From [ebXMLbp] page 77)
 
-<br/>
+<br>
 
-<br/>
+<br>
 
 ## EHMI ReceiptAcknowledgement (ebBP signal message)
-<br/>
+<br>
 
 EHMI ReceiptAcknowledgement is used as a positive transport receipt, and so that the recipient of the receipt can easily correlate the message with the original envelope, the recipient can check for the following elements:
 
@@ -45,11 +45,11 @@ EHMI ReceiptAcknowledgement is used as a positive transport receipt, and so that
 
 Contained as a BinaryContent in an EHMI SBDH ReceiptAcknowledgement is also an ebBP signal, which in principle contains the same information, but which does not need to be checked when it is a ReceiptAcknowledgement.
 
-<br/>
+<br>
 
-<img src="ehmiSBDH_ReceiptAckowledgement.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><br/>
+<img src="ehmiSBDH_ReceiptAckowledgement.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><br>
 
-<br/>
+<br>
 
 ##### OriginalMessageIdentifier
 
@@ -65,7 +65,7 @@ OriginalMessageIdentifier example
         9a6ff822-08de-5a6f-9670-9fa4b9d2f0dc
     </bpssignal:OriginalMessageIdentifier>		
 
-<br/>
+<br>
 
 ###### OriginalDocumentIdentifier
 
@@ -81,7 +81,7 @@ OriginalDocumentIdentifier example
         urn:dk:healthcare:prod:messaging:medcom: fhir:structuredefinition:[Bundle/MessageHeader/eventCoding/code.value]#urn:dk:medcom:fhir:[Bundle/MessageHeader/definition/[value of MessageDefinition version-part]]
     </bpssignal:OriginalDocumentIdentifier>
 
-<br/>
+<br>
 
 ###### OriginalMessageDateTime
 
@@ -97,7 +97,7 @@ OriginalMessageDateTime example
         2024-03-01T16:19:00+01:00
     </bpssignal:OriginalMessageDateTime>
 
-<br/>
+<br>
 
 ###### ThisMessageDateTime
 
@@ -113,7 +113,7 @@ ThisMessageDateTime example
         2024-03-01T16:19:10+01.00
     </bpssignal:ThisMessageDateTime>
 
-<br/>
+<br>
 
 ###### FromPartyInfo
  
@@ -127,7 +127,7 @@ FromPartyInfo example
         0088:5790000201389
     </bpssignal:FromPartyInfo>
 
-<br/>
+<br>
 
 ###### ToPartyInfo
 
@@ -141,7 +141,7 @@ ToPartyInfo example
         0088:5790000121526
     </bpssignal:ToPartyInfo>
 
-<br/>
+<br>
 
 ##### Overall EHMI ReceiptAcknowledgement example
 
@@ -170,53 +170,53 @@ ToPartyInfo example
     </bpssignal:ReceiptAcknowledgement>
 
 
-<br/>
+<br>
 
 ### Receipt Exception ()
 
-<br/>
+<br>
 
-<img src="ehmiSBDH_ReceiptAckowledgementException.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><br/>
+<img src="ehmiSBDH_ReceiptAckowledgementException.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><br>
 
-<br/>
+<br>
 
 ###### OriginalMessageIdentifier
 
-<br/>
+<br>
 
 As 7.4.3.1.1
 
-<br/>
+<br>
 
 ###### OriginalDocumentIdentifier
 
 As 7.4.3.1.2
 
-<br/>
+<br>
 
 ###### OriginalMessageDateTime
 
 As 7.4.3.1.3 
 
-<br/>
+<br>
 
 ###### ThisMessageDateTime
 
 As 7.4.3.1.4 
 
-<br/>
+<br>
 
 ###### FromPartyInfo
 
 As 7.4.3.1.5 
 
-<br/>
+<br>
 
 ###### ToPartyInfo
 
 As 7.4.3.1.6
 
-<br/>
+<br>
 
 ###### ExceptionType
 
@@ -236,7 +236,7 @@ ExceptionType example
         </bpssignal:ReceiptException>
     </bpssignal:ExceptionType>
 
-<br/>
+<br>
 
 ###### Reason
 
@@ -252,7 +252,7 @@ Reason example
         Internal error
     </bpssignal:Reason>
 
-<br/>
+<br>
 
 ###### ExceptionMessage
 
@@ -271,7 +271,7 @@ ExceptionMessage example
     </bpssignal:ExceptionMessage>
 
  
-<br/>
+<br>
 
 ##### Overall EHMI Receipt Acknowledgement  Exception example
 
@@ -315,5 +315,5 @@ ExceptionMessage example
         </bpssignal:ExceptionMessage>
     </bpssignal:Exception>
  
-<br/>
+<br>
 
