@@ -1,4 +1,6 @@
-## ehmiSBDHEnvelopeReceipt
+<!-- ## ehmiSBDHEnvelopeReceipt-->
+
+**ehmiSBDHEnvelopeReceipt**
 
 The ehmiSBDHEnvelopeReceipt is the receipt mechanism for the ehmiSBDH.
 
