@@ -1,3 +1,70 @@
+Instance: instanceHomeCareObservationDocumentReference
+InstanceOf: https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/homecare-observation-documentreference
+Usage: #example
+//* meta.profile = "https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/homecare-observation-documentreference"
+* contained[0] = instanceXDSAuthorPerson
+* contained[+] = instanceDkCoreOrganization
+* contained[+] = instanceXDSSourcePatient
+* extension[0].url = "https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/medcom-xds-homecommunityid-extension"
+* extension[=].valueCoding = urn:oid:1.2.208.176.8.1#1.2.208.176.43210.8.20 "TEST2"
+* extension[+].url = "https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/medcom-xds-version-id-extension"
+* extension[=].valueString = "1.1.0"
+* masterIdentifier.system = "urn:ietf:rfc:3986"
+* masterIdentifier.value = "urn:uuid:fe27d893-6b9e-4e3d-91b0-72d033ce5c07"
+* identifier.value = "12c2deaf-389a-4f7d-8133-60b24c75cd7f"
+* status = #current
+* docStatus = #final
+* type = urn:oid:2.16.840.1.113883.6.1#55188-7 "Patient data Document"
+* category = urn:oid:1.2.208.184.100.9#002 "Workflow"
+* subject = Reference(instanceXDSSourcePatient)
+* author = Reference(instanceDkCoreOrganization)
+* authenticator = Reference(instanceXDSAuthorPerson)
+* custodian = Reference(instanceDkCoreOrganization)
+* securityLabel.coding.code = #N
+* content.attachment.contentType = #application/fhir+json
+* content.attachment.language = #da
+* content.attachment.url = "DOC001.XML"
+* content.attachment.size = 3654
+* content.attachment.hash = "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+* content.attachment.title = "Kommunale prøvesvar for 0201919990"
+* content.attachment.creation = "2024-04-01T00:00:00+01:00"
+* content.format = urn:oid:1.2.208.184.100.10#urn:ad:dk:medcom:pdd-v1.0.1:full "DK PDD document"
+* context.event = urn:oid:1.2.208.176.2.4#ALAL02 "Hjertesygdomme"
+* context.facilityType = urn:oid:2.16.840.1.113883.6.96#550621000005101 "hjemmesygeplejeenhed"
+* context.practiceSetting = urn:oid:2.16.840.1.113883.6.96#658161000005107 "hjemmesygepleje"
+* context.sourcePatientInfo = Reference(instanceXDSSourcePatient)
+
+Instance: instanceXDSAuthorPerson
+InstanceOf: http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-practitioner
+Usage: #inline
+//* meta.profile = "https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/xds-author-person"
+* name.family = "Andersen"
+* name.given = "Sidsel"
+
+Instance: instanceDkCoreOrganization
+InstanceOf: http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-organization
+//InstanceOf: Organization
+Usage: #inline
+//* meta.profile = "http://hl7.dk/fhir/core/StructureDefinition/dk-core-organization"
+//* identifier.system = "urn:oid:1.2.208.176.1.1"
+* identifier[SOR-ID].value = "61741000016007"
+* name = "Lægerne Hasseris Bymidte"
+
+Instance: instanceXDSSourcePatient
+//InstanceOf: Patient
+InstanceOf: http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-patient
+Usage: #inline
+//* meta.profile = "https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/xds-source-patient"
+//* identifier.system = "urn:oid:1.2.208.176.1.2"
+* identifier[cpr].value = "0201919990"
+* name[official].use = #official
+* name[official].family = "Lauridsen"
+* name[official].given[0] = "Else"
+* name[official].given[+] = "Test"
+* gender = #female
+* birthDate = "1991-02-02"
+
+/*
 // Metadata instance
 Instance: instanceHomeCareObservationDocumentReference
 //Instance: 77787891-083a-4d19-9e56-423e7a223e31
@@ -12,7 +79,7 @@ Description: "HomeCareObservation DocumentReference Instance containing relevant
 //* contained[+] = 37628912-7816-47a3-acd8-396b610be142
 * masterIdentifier.value = "urn:uuid:fe27d893-6b9e-4e3d-91b0-72d033ce5c07"
 * masterIdentifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "12c2deaf-389a-4f7d-8133-60b24c75cd7f" // = FHIR messageheader.id
+* identifier.valueString = "12c2deaf-389a-4f7d-8133-60b24c75cd7f" // = FHIR messageheader.id
 * docStatus = #final "Final"
 * status = #current "Current"
 * type = $LoincOID#55188-7 "Patient data Document" // Danish XDS typecode must be updated
@@ -43,3 +110,4 @@ Description: "HomeCareObservation DocumentReference Instance containing relevant
 * extension[0].valueCoding = $DanishxdsOID#1.2.208.176.43210.8.20 "TEST2"
 * extension[1].url = "https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/medcom-xds-version-id-extension"
 * extension[1].valueString = "1.1.0"
+*/

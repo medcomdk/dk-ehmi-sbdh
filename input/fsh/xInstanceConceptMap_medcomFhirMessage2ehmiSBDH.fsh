@@ -1,4 +1,38 @@
 /*
+Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
+
+Instance: example
+InstanceOf: StructureMap
+Usage: #definition
+* url = "http://hl7.org/fhir/StructureMap/example"
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:oid:37843577-95fb-4adb-84c0-8837188a7bf3"
+* version = "0.1"
+* name = "ExampleMap"
+* title = "Example Map"
+* status = #draft
+* date = "2017-03-09"
+* publisher = "HL7 FHIR Standard"
+* contact.telecom.system = #url
+* contact.telecom.value = "http://hl7.org/fhir"
+* description = "Example Structure Map"
+* jurisdiction = $m49.htm#009 "Oceania"
+* group.name = "Examples"
+* group.typeMode = #none
+* group.documentation = "test -> testValue"
+* group.input.name = "test"
+* group.input.mode = #source
+* group.rule.name = "rule1"
+* group.rule.source.context = "Source"
+* group.rule.source.type = "SourceClassA"
+* group.rule.source.element = "test"
+* group.rule.source.variable = "t"
+* group.rule.target.context = "Destination"
+* group.rule.target.contextType = #variable
+* group.rule.target.element = "testValue"
+* group.rule.target.transform = #copy
+
+/*
 Instance: medcomFhirMessage2ehmiSBDH
 InstanceOf: ConceptMap
 Title: "MedComMessagingMapFhirToSorEdi"

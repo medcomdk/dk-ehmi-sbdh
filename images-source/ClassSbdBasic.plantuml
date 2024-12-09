@@ -1,0 +1,31 @@
+@startuml SBD
+
+hide empty members
+
+class StandardBusinessDocument
+{
+}
+
+class StandardBusinessDocumentHeader
+{
+    class HeaderVersion
+    class Sender
+    class Receiver
+    class SenderDocumentInformation
+    class Manifest
+    class BusinessScope
+}
+
+class BinaryContent
+{
+    class BusinessMessage
+}
+
+class "StandardBusinessDocument" as StandardBusinessDocument <<SBD Envelope>>
+class "StandardBusinessDocumentHeader" as StandardBusinessDocumentHeader <<SBD Header (SBDH)>>
+class "BinaryContent" as BinaryContent <<BusinessMessage>>
+
+StandardBusinessDocument *-- StandardBusinessDocumentHeader
+StandardBusinessDocument *-- BinaryContent
+
+@enduml

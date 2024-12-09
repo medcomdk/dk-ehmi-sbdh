@@ -4,12 +4,12 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: dk-ehmi-sbdh
-canonical: http://medcomehmi.dk/ig/ehmi-sbdh
+canonical: http://medcomehmi.dk/ig/dk-ehmi-sbdh
 name: DK EHMI SBDH IG
 title: "DK EHMI SBDH IG"
 description: The DK EHMI SBDH IG
 status: draft # draft | active | retired | unknown
-version: 0.9.0
+version: 0.91.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -26,14 +26,18 @@ publisher:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
+#  hl7.terminology.r4: 5.5.0
   hl7.fhir.dk.core: 2.0.0
   medcom.fhir.dk.core: 2.3.0
   medcom.fhir.dk.messaging: 2.1.0
   medcom.fhir.dk.terminology: 1.5.0
-  dk.ehmi.terminology: current
-  dk.ehmi.eer: current
-  medcom.fhir.dk.xds.metadata: current
-  medcom.fhir.dk.ihe.xds.metadata: current
+  dk.ehmi.terminology: dev
+  dk.ehmi.eer: dev
+  #medcom.fhir.dk.xds.metadata: current
+  #medcom.fhir.dk.ihe.xds.metadata: current
+  medcom.fhir.dk.xdsmetadata: current
+  medcom.fhir.dk.document: current
+  medcom.fhir.dk.ihe.xds.metadata: dev
 #
 #     id: mcode
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
@@ -94,14 +98,23 @@ menu:
 #    ehmiSBDH BS - xds-metadata: ehmiSBDH.html#sbdh-businessscope--xds-metadata
 #    ehmiSBDH BS - reliable-messaging: ehmiSBDH.html#sbdh-businessscope--reliable-messaging
 #    ehmiSBDH Binary Content: ehmiSBDH.html#sbdh-binarycontent--den-indeholdte-meddelelse
+    EHMI EnvelopeReceipt: ehmiSBDHEnvelopeReceipt.html
+    Reliable Messaging SBDH: ehmiSBDHReliableMessaging.html
     References: references.html
-  sbdh xsd schemas: 
+  ehmiSBDH schemas: 
     StandardBusinessDocumentHeader: ehmiSBDH_StandardBusinessDocumentHeader.xsd.html
     Partner: ehmiSBDH_Partner.xsd.html
     DocumentIdentification: ehmiSBDH_DocumentIdentification.xsd.html
     BusinessScope: ehmiSBDH_BusinessScope.xsd.html
-    BinaryContentType: ehmiSBDH_BinaryContentType.xsd.html
+    BinaryContentType: ehmiSBDH_EDN-Business-Message-Envelope-1.2.xsd.html
     ebbp-signals-2.0.4: ehmiSBDH_ebbp-signals-2.0.4.xsd.html
+  SBDH original schemas: 
+    StandardBusinessDocumentHeader: SBDH_StandardBusinessDocumentHeader.xsd.html
+    Partner: SBDH_Partner.xsd.html
+    DocumentIdentification: SBDH_DocumentIdentification.xsd.html
+    BusinessScope: SBDH_BusinessScope.xsd.html
+#    BinaryContentType: SBDH_BinaryContentType.xsd.html
+#    ebbp-signals-2.0.4: SBDH_ebbp-signals-2.0.4.xsd.html
   Artifacts: artifacts.html
   Downloads: downloads.html
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮

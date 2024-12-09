@@ -1,23 +1,19 @@
-# ehmiSBDH profile of SBDH Partner
-
-<a href="https://github.com/medcomdk/dk-ehmi-sbdh/blob/v0.90.1-beta.1/input/pagecontent/ehmiSBDH/ehmiPartner.xsd" target="_blank">Link to the raw xsd (opens in a new window)</a>
-
     <?xml version="1.0"?>
     <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
         targetNamespace="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
         xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
         elementFormDefault="qualified" attributeFormDefault="unqualified">
 
-      <xs:complexType name="ehmiPartner">
+      <xs:complexType name="Partner">
         <xs:sequence>
           <xs:element name="Identifier" type="PartnerIdentification"/>
-          <xs:element name="ContactInformation" type="ContactInformation" minOccurs="0" maxOccurs="0"/>
+          <xs:element name="ContactInformation" type="ContactInformation" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="PartnerIdentification">
         <xs:simpleContent>
           <xs:extension base="xs:string">
-            <xs:attribute name="Authority" type="xs:string" fixed="iso6523-actorid-upis"/>
+            <xs:attribute name="Authority" type="xs:string"/>
           </xs:extension>
         </xs:simpleContent>
       </xs:complexType>
