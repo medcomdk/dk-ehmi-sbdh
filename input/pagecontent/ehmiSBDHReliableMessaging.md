@@ -90,7 +90,7 @@ Resubmissions **SHALL** always be done manually.
 </figure-->
 <br>
 
-An ehmiSBDHEnvelope's Reliable Messaging part can be found in the ehmiSBDHEnvelope/-element, which is shown in [ehmiSBDHEnvelope's Reliable Messaging part](ehmiSBDH.md#reliable-messaging) <!--a href="#Fig3"-->Figure 3</a>:
+An ehmiSBDHEnvelope's Reliable Messaging part can be found in the ehmiSBDHEnvelope/-element, which is shown in [ehmiSBDHEnvelope's Reliable Messaging part](ehmiSBDH.html#reliable-messaging) <!--a href="#Fig3"Figure 3</a>:-->
 
 <!--figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="ehmiSBDHEnvelope_schema-reliable-type.png" target="_blank"> <img src="ehmiSBDHEnvelope_schema-reliable-type.png" alt="ehmiSBDHEnvelope_schema-reliable" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig3"></a>
@@ -98,9 +98,11 @@ An ehmiSBDHEnvelope's Reliable Messaging part can be found in the ehmiSBDHEnvelo
 </figure-->
 <br>
 
-Reliable Messaging in ehmiSBDHEnvelope is the default mode but can explicitly be turned on and off by setting the ehmiSBDHEnvelope/Message/MetaInformation/Transport/Type-element to "reliable" or "unreliable".
+Reliable Messaging in ehmiSBDHEnvelope is the default mode but can explicitly be turned on and off by leaving out the InstanceIdentifier=Request pointed out by the Scope-Type: ehmiSBDHEnvelope/../BusinessScope/Scope/Type[EHMI-ReceiptAcknowledgement]
 
-In FHIR Messaging, this element **SHALL** be "reliable" or left in default mode.
+Type-element to "reliable" or "unreliable".
+
+In EHMI Messaging, this element **SHALL** be "reliable" or left in default mode.
 
 ### ehmiSBDHEnvelope ehmiSBDHEnvelopeReceipt Reliable Messaging Elements
 
