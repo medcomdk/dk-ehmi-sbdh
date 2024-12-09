@@ -5,7 +5,7 @@ Reliable Messaging in ehmiSBDHEnvelope follows the principles laid out in <a hre
 The Reliable Messaging Model and how the flow is laid out using ehmiSBDHEnvelope is shown in <a href="#Fig1">Figure 1</a>
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="reliable-messaging-ehmiSBDHEnvelope.png" target="_blank"> <img src="reliable-messaging-ehmiSBDHEnvelope.png" alt="reliable messaging principle" style="width:80%; height:auto; margin-left:5%; margin-right:15%; margin-top:5%; margin-bottom:5%;" id="Fig1"></a>
+<a href="reliable-messaging-ehmiSBDHEnvelope.png" target="_blank"> <img src="reliable-messaging-ehmiSBDHEnvelope.png" alt="reliable messaging principle" style="width:90%; height:auto; margin-left:0%; margin-right:10%; margin-top:5px; margin-bottom:5px;" id="Fig1"></a>
 <figcaption text-align="left"><b>Figure 1: Reliable Messaging - ehmiSBDHEnvelope </b></figcaption>
 </figure>
 <br>
@@ -31,44 +31,44 @@ This section provides a description of the different types of Reliable Messaging
 
 ### Scenario #1 - Normally successful unsolicited ehmiSBDHEnvelope or request ehmiSBDHEnvelope flow with ehmiSBDHEnvelopeReceipt request 
 
-An unsolicited  ehmiSBDHEnvelope is sent with a new request for a positive ehmiSBDHEnvelopeReceipt from the Sending System to a Receiving System.
+An unsolicited  ehmiSBDHEnvelope is sent with a new request for a positive ehmiSBDHEnvelopeReceipt from the Sending MSH to a Receiving MSH.
 
-The Receiving System **SHALL** always send a positive ehmiSBDHEnvelopeReceipt to the Sending System.
+The Receiving MSH **SHALL** always send a positive ehmiSBDHEnvelopeReceipt to the Sending MSH.
 
 ### Scenario #2 - Duplicate of an unchanged ehmiSBDHEnvelope with a positive ehmiSBDHEnvelopeReceipt request 
 
 Duplication of an unchanged ehmiSBDHEnvelope can be done in one of the following ways:
 
-- An error may have occurred in the flow from the Sending System to the Receiving System with subsequent duplication of a ehmiSBDHEnvelope in scenario 1a.
-- The Sending System may inadvertently send a duplicate of ehmiSBDHEnvelope
+- An error may have occurred in the flow from the Sending MSH to the Receiving MSH with subsequent duplication of a ehmiSBDHEnvelope in scenario 1a.
+- The Sending MSH may inadvertently send a duplicate of ehmiSBDHEnvelope
 
-The ehmiSBDHEnvelopes are completely identical and as a consequence, the ehmiSBDHEnvelope with request for positive ehmiSBDHEnvelopeReceipt arrives at the Receiving System more than once.
+The ehmiSBDHEnvelopes are completely identical and as a consequence, the ehmiSBDHEnvelope with request for positive ehmiSBDHEnvelopeReceipt arrives at the Receiving MSH more than once.
 
-The Receiving System **SHALL** ignore the contents of the duplicate instances of the ehmiSBDHEnvelope but **SHALL** acknowledge a duplicate ehmiSBDHEnvelope in the same way as the original ehmiSBDHEnvelope.
+The Receiving MSH **SHALL** ignore the contents of the duplicate instances of the ehmiSBDHEnvelope but **SHALL** acknowledge a duplicate ehmiSBDHEnvelope in the same way as the original ehmiSBDHEnvelope.
 
 A positive ehmiSBDHEnvelopeReceipt may not be sent first and then a negative ehmiSBDHEnvelopeReceipt or vice versa.
 
-The Receiving System **SHALL** never display several instances of a ehmiSBDHEnvelope in a ehmiSBDHEnvelope overview, but **SHALL** log in a system log that reception of a duplicate ehmiSBDHEnvelope has taken place.
+The Receiving MSH **SHALL** never display several instances of a ehmiSBDHEnvelope in a ehmiSBDHEnvelope overview, but **SHALL** log in a system log that reception of a duplicate ehmiSBDHEnvelope has taken place.
 
-If the Sending System of the ehmiSBDHEnvelope has received ehmiSBDHEnvelopeReceipt already after the Receiving System's ehmiSBDHEnvelopeReceipt of a ehmiSBDHEnvelope's first instance, the Sending System **SHALL** similarly ignore the duplicate instances of the ehmiSBDHEnvelopeReceipt.
+If the Sending MSH of the ehmiSBDHEnvelope has received ehmiSBDHEnvelopeReceipt already after the Receiving MSH's ehmiSBDHEnvelopeReceipt of a ehmiSBDHEnvelope's first instance, the Sending MSH **SHALL** similarly ignore the duplicate instances of the ehmiSBDHEnvelopeReceipt.
 
-The Sending System **SHALL** never display multiple instances of the same ehmiSBDHEnvelopeReceipt in a ehmiSBDHEnvelope summary but **SHALL** log in a system log that ehmiSBDHEnvelopeReceipt of a duplicate has taken place.
+The Sending MSH **SHALL** never display multiple instances of the same ehmiSBDHEnvelopeReceipt in a ehmiSBDHEnvelope summary but **SHALL** log in a system log that ehmiSBDHEnvelopeReceipt of a duplicate has taken place.
 
 ### Scenario #3 - (Re) Sending Unchanged ehmiSBDHEnvelope 
 
 Correct retransmission of message A.
 
-The Sending System **SHALL** form a new ehmiSBDHEnvelope with a new ID and time of dispatch.
+The Sending MSH **SHALL** form a new ehmiSBDHEnvelope with a new ID and time of dispatch.
 
 Since there has been no change in the Message content section, the rest of the ehmiSBDHEnvelope **SHALL** remain identical.
 
-The ehmiSBDHEnvelope **SHALL** be sent and ehmiSBDHEnvelopeAcknowledged as a completely new ehmiSBDHEnvelope according to Scenario #1 or # 1b.
+The ehmiSBDHEnvelope **SHALL** be sent and ehmiSBDHEnvelope-Acknowledged as a completely new ehmiSBDHEnvelope according to Scenario #1 or # 1b.
 
 Re-dispatches **SHALL** always be done manually and **SHOULD** be in accordance with the normal response time for the specific ehmiSBDHEnvelope flow.
 
 ### Scenario #4 - ehmiSBDHEnvelope is sent normally, but ehmiSBDHEnvelopeReceipt is lost along the way 
 
-Like in Scenario #1, but where ehmiSBDHEnvelopeReceipt is lost along the way from the Sending System to the Receiving System.
+Like in Scenario #1, but where ehmiSBDHEnvelopeReceipt is lost along the way from the Sending MSH to the Receiving MSH.
 
 The shipping pattern is like Scenario #3.
 
