@@ -146,7 +146,7 @@ Usage: #definition
 * group[=].rule[=].target.transform = #create
 * group[=].rule[+].name = "ScopeDocumentInstanceIdentifier"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "MedComMessagingHeader/id"
+* group[=].rule[=].source.element = "Bundle/id"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[DOCUMENTID]/InstanceIdentifier"
@@ -199,7 +199,7 @@ Usage: #definition
 * group[=].rule[=].target.transform = #create
 * group[=].rule[+].name = "ScopePatientIdInstanceIdentifier"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.entry.resource.ofType(Patient).identifier)"
+* group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.entry.resource.ofType(Patient).identifier"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[PATIENTID]/InstanceIdentifier"
@@ -221,7 +221,7 @@ Usage: #definition
 * group[=].rule[=].target.transform = #create
 * group[=].rule[+].name = "ScopeSenderIdInstanceIdentifier"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.entry.resource.ofType(SenderOrganization).identifier[SOR-ID].value)"
+* group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.entry.resource.ofType(SenderOrganization).identifier[SOR-ID].value"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[SENDERID]/InstanceIdentifier"
@@ -243,7 +243,7 @@ Usage: #definition
 * group[=].rule[=].target.transform = #create
 * group[=].rule[+].name = "ScopeReceiverIdInstanceIdentifier"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.entry.resource.ofType(ReceiverOrganization).identifier[SOR-ID].value)"
+* group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.entry.resource.ofType(ReceiverOrganization).identifier[SOR-ID].value"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[RECEIVERID]/InstanceIdentifier"
@@ -265,7 +265,7 @@ Usage: #definition
 * group[=].rule[=].target.transform = #create
 * group[=].rule[+].name = "ScopeMessageIdentiferInstanceIdentifier"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.entry[0].resource.id)"
+* group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.entry[0].resource.id"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[MESSAGEIDENTIFIER]/InstanceIdentifier"
@@ -287,7 +287,7 @@ Usage: #definition
 * group[=].rule[=].target.transform = #create
 * group[=].rule[+].name = "ScopeMessageEnvelopeIdentiferInstanceIdentifier"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.id)"
+* group[=].rule[=].source.element = "Bundle.id"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[MESSAGEENVELOPEIDENTIFIER]/InstanceIdentifier"
@@ -309,7 +309,7 @@ Usage: #definition
 * group[=].rule[=].target.transform = #create
 * group[=].rule[+].name = "ScopeOriginalMessageIdentiferInstanceIdentifier"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.id)"
+* group[=].rule[=].source.element = "Bundle.id"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[ORIGINALMESSAGEIDENTIFIER]/InstanceIdentifier"
@@ -331,7 +331,7 @@ Usage: #definition
 * group[=].rule[=].target.transform = #create
 * group[=].rule[+].name = "ScopeOriginalEnvelopeIdentiferInstanceIdentifier"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.id)"
+* group[=].rule[=].source.element = "Bundle.id"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[ORIGINALENVELOPEIDENTIFIER]/InstanceIdentifier"
@@ -353,7 +353,7 @@ Usage: #definition
 * group[=].rule[=].target.transform = #create
 * group[=].rule[+].name = "ScopeOriginalMessageStandardInstanceIdentifier"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.id)"
+* group[=].rule[=].source.element = "Bundle.id"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[ORIGINALMESSAGESTANDARD]/InstanceIdentifier"
@@ -375,7 +375,7 @@ Usage: #definition
 * group[=].rule[=].target.transform = #create
 * group[=].rule[+].name = "ScopeOriginalMessageVersionInstanceIdentifier"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.id)"
+* group[=].rule[=].source.element = "Bundle.id"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[ORIGINALMESSAGEVERSION]/InstanceIdentifier"
@@ -405,7 +405,7 @@ Usage: #definition
 * group[=].rule[=].target.transform = #create
 * group[=].rule[+].name = "ScopeXdsMetadataInstanceIdentifier"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "MedComMessagingMessage(Bundle.id)"
+* group[=].rule[=].source.element = "Bundle.id"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[XDS-METADATA]/InstanceIdentifier"
