@@ -10,6 +10,10 @@ The Reliable Messaging Model and how the flow is laid out using ehmiSBDHEnvelope
 </figure>
 <br>
 
+In EHMI Reliable Messaging **SHALL** be *"turned on"* by adding the Scope structure pointed out by the Scope-Type element: ehmiSBDHEnvelope/StandardBusinessDocumentHeader/BusinessScope/Scope/Type[EHMI-ReceiptAcknowledgement] and the Scope-InstanceIdentifier: ehmiSBDHEnvelope/StandardBusinessDocumentHeader/BusinessScope/Scope/InstanceIdentifier[Request]
+
+This is defined as the default mode of Reliable Messaging in EHMI.
+
 When Reliable Messaging is implemented, the Receiver **SHALL** check the incoming StandardBusinessDocumentHeader/DocumentInformation/Identifier (hereafter EnvelopeIdentifier) and the StandardBusinessDocumentHeader/BusinessScope/Scope[Type:DOCUMENTID]/InstanceIdentifier (hereafter MessageIdentifier) against a cache of previously received ehmiSBDHEnvelopes. The correct action to take depends on what is received:
 
 | Case                                                            | Description                |
