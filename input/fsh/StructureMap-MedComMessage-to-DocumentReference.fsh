@@ -15,10 +15,10 @@ Usage: #definition
 * group[0].name = "MedComMessagingMessage2MedComDocumentReference"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
-* group[=].input[=].type = "MedComMessagingMessage"
+* group[=].input[=].type = "Message"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-* group[=].input[=].type = "MedComDocumentReference"
+* group[=].input[=].type = "DocumentReference"
 * group[=].input[=].mode = #target
 * group[=].rule[0].name = "homeCommunityid"
 * group[=].rule[=].source.context = "source"
