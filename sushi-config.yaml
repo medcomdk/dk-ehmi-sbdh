@@ -112,7 +112,7 @@ menu:
     StandardBusinessDocumentHeader: SBDH_StandardBusinessDocumentHeader.xsd.html
     Partner: SBDH_Partner.xsd.html
     DocumentIdentification: SBDH_DocumentIdentification.xsd.html
-#    BusinessScope: SBDH_BusinessScope.xsd.html
+    BusinessScope: SBDH_BusinessScope.xsd.html
 #    BinaryContentType: SBDH_BinaryContentType.xsd.html
 #    ebbp-signals-2.0.4: SBDH_ebbp-signals-2.0.4.xsd.html
   Artifacts: artifacts.html
