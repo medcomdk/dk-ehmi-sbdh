@@ -15,5 +15,5 @@
 | EDS | EHMI Delivery Status | [TBD] | [TBD] |
 | [SMP Specification] | Service Metadata Publisher | [TBD] | [TBD] |
 
-<br/>
+<br>
 
