@@ -15,7 +15,7 @@ Usage: #definition
 * group[0].name = "MedComMessagingMessage2MedComDocumentReference"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
-* group[=].input[=].type = "Message"
+* group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
 * group[=].input[=].type = "DocumentReference"
