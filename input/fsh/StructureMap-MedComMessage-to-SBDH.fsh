@@ -131,7 +131,7 @@ Usage: #definition
 * group[+].name = "BusinessScopeEdeliveryMessageCommunication"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
-* group[=].input[=].type = "MedComMessagingMessage"
+* group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
 * group[=].input[=].type = "sbdhBusinessScope"
@@ -184,7 +184,7 @@ Usage: #definition
 * group[+].name = "BusinessScopeHealthMessageCommunication"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
-* group[=].input[=].type = "MedComMessagingMessage"
+* group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
 * group[=].input[=].type = "sbdhBusinessScope"
@@ -391,7 +391,7 @@ Usage: #definition
 * group[+].name = "BusinessScopeXdsMetadata"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
-* group[=].input[=].type = "MedComMessagingMessage"
+* group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
 * group[=].input[=].type = "sbdhBusinessScope"
@@ -421,7 +421,7 @@ Usage: #definition
 * group[+].name = "BusinessScopeSbdhReliableMessaging"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
-* group[=].input[=].type = "MedComMessagingMessage"
+* group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
 * group[=].input[=].type = "sbdhBusinessScopeReliableMessaging"
@@ -477,7 +477,7 @@ Usage: #definition
 * group[+].name = "BusinessServicesRequest"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
-* group[=].input[=].type = "MedComMessagingMessage"
+* group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
 * group[=].input[=].type = "sbdhBusinessScopeBusinessServices"
