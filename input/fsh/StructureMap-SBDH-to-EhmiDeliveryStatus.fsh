@@ -19,7 +19,7 @@ Usage: #definition
 * group[=].input[=].type = "ehmiSbdh"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-* group[=].input[=].type = "EhmiDeliveryStatus"
+* group[=].input[=].type = "AuditEvent"
 * group[=].input[=].mode = #target
 * group[=].rule[0].name = "HeaderVersion"
 * group[=].rule[=].source.context = "source"
