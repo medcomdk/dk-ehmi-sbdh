@@ -10,7 +10,7 @@ Usage: #definition
 * description = "Transform from a FHIR Messsage to an ehmiSBDH Envelope"
 * structure[+].url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureDefinition/EhmiStandardBusinessDocumentBundle"
 * structure[=].mode = #source
-* structure[0].url = "http://medcomfhir.dk/ig/messaging/StructureDefinition/EhmiDeliveryStatus"
+* structure[0].url = "http://medcomehmi.dk/ig/dk-ehmi-eds/StructureDefinition/EhmiDeliveryStatus"
 * structure[=].mode = #target
 * group[0].name = "HeaderVersion"
 * group[=].typeMode = #none
