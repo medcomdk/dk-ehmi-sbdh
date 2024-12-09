@@ -1835,12 +1835,12 @@ All SBDH xsd files can be found via the [download-page](downloads.html), but an 
 (all files open in new window)
 <br>
 
-- <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_StandardBusinessDocumentHeader.xsd.html" target="_blank">EHMI SBDH StandardBusinessDocumentHeader Xsd</a>
-- <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_Partner.xsd.html" target="_blank">EHMI SBDH Partner Xsd</a>
-- <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_DocumentIdentification.xsd.html" target="_blank">EHMI SBDH DocumentIdentification Xsd</a>
-- <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_BusinessScope.xsd.html" target="_blank">EHMI SBDH BusinessScope Xsd</a>
-- <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_BinaryContentType.xsd.html" target="_blank">EHMI SBDH BinaryContentType Xsd</a>
-- <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_ebbp-signals-2.0.4.xsd.html" target="_blank">EHMI SBDH Ebbp-Signals 2.0.4 Xsd</a>
+- <a href="ehmiSBDH_StandardBusinessDocumentHeader.xsd.html" target="_blank">EHMI SBDH StandardBusinessDocumentHeader Xsd</a>
+- <a href="ehmiSBDH_Partner.xsd.html" target="_blank">EHMI SBDH Partner Xsd</a>
+- <a href="ehmiSBDH_DocumentIdentification.xsd.html" target="_blank">EHMI SBDH DocumentIdentification Xsd</a>
+- <a href="ehmiSBDH_BusinessScope.xsd.html" target="_blank">EHMI SBDH BusinessScope Xsd</a>
+- <a href="ehmiSBDH_BinaryContentType.xsd.html" target="_blank">EHMI SBDH BinaryContentType Xsd</a>
+- <a href="ehmiSBDH_ebbp-signals-2.0.4.xsd.html" target="_blank">EHMI SBDH Ebbp-Signals 2.0.4 Xsd</a>
 
 <br>
 
