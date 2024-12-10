@@ -954,7 +954,7 @@ StatisticalInformation example 1:
     <Scope>
 	    <Type>StatisticalInformation</Type> 
         <InstanceIdentifier>
-            MCM:homecareobservation-message#"+[designated postfix-values from a concrete message]
+            MCM:homecareobservation-message
         </InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
