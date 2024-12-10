@@ -8,7 +8,6 @@ The Reliable Messaging Model and how the flow is laid out using ehmiSBDHEnvelope
 <a href="reliable-messaging-ehmiSBDHEnvelope.png" target="_blank"> <img src="reliable-messaging-ehmiSBDHEnvelope.png" alt="reliable messaging principle" style="width:90%; height:auto; margin-left:0%; margin-right:10%; margin-top:5px; margin-bottom:5px;" id="Fig1"></a>
 <figcaption text-align="left"><b>Figure 1: Reliable Messaging - ehmiSBDHEnvelope </b></figcaption>
 </figure>
-<br>
 
 In EHMI Reliable Messaging **SHALL** be *"turned on"* by adding the Scope structure pointed out by the Scope-Type element: ehmiSBDHEnvelope/StandardBusinessDocumentHeader/BusinessScope/Scope/Type[EHMI-ReceiptAcknowledgement] and the Scope-InstanceIdentifier: ehmiSBDHEnvelope/StandardBusinessDocumentHeader/BusinessScope/Scope/InstanceIdentifier[Request]
 
@@ -92,7 +91,7 @@ Resubmissions **SHALL** always be done manually.
 <a href="ehmiSBDHEnvelope_schema-reliable.png" target="_blank"> <img src="ehmiSBDHEnvelope_schema-reliable.png" alt="ehmiSBDHEnvelope_schema-reliable" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig2"></a>
 <figcaption text-align="left"><b>Figure 2: Reliable Messaging - reliable ehmiSBDHEnvelope tables </b></figcaption>
 </figure-->
-<br>
+
 
 An ehmiSBDHEnvelope's Reliable Messaging part can be found in the ehmiSBDHEnvelope/-element, which is shown in [ehmiSBDHEnvelope's Reliable Messaging part](ehmiSBDH.html#reliable-messaging) <!--a href="#Fig3"Figure 3</a>:-->
 
@@ -100,7 +99,7 @@ An ehmiSBDHEnvelope's Reliable Messaging part can be found in the ehmiSBDHEnvelo
 <a href="ehmiSBDHEnvelope_schema-reliable-type.png" target="_blank"> <img src="ehmiSBDHEnvelope_schema-reliable-type.png" alt="ehmiSBDHEnvelope_schema-reliable" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig3"></a>
 <figcaption text-align="left"><b>Figure 3: Reliable Messaging - reliable ehmiSBDHEnvelope type </b></figcaption>
 </figure-->
-<br>
+
 
 Reliable Messaging in ehmiSBDHEnvelope **SHALL** be the default mode but can explicitly be "turned off" by leaving out the Scope-element pointed out by the Scope-Type: ehmiSBDHEnvelope/StandardBusinessDocumentHeader/BusinessScope/Scope/Type[EHMI-ReceiptAcknowledgement] and the Scope-InstanceIdentifier: ehmiSBDHEnvelope/StandardBusinessDocumentHeader/BusinessScope/Scope/InstanceIdentifier[Request]
 
@@ -110,13 +109,13 @@ In EHMI Messaging, these elements **SHALL** be present together with the underly
 
 When "reliable", the receiver of the ehmiSBDHEnvelope **SHALL** send An ehmiSBDHEnvelopeReceipt return to the original Sender.
 
-An ehmiSBDHEnvelopeReceipt consists of the following elements (see <!--a href="#Fig4"-->Figure 4</a>):
+An ehmiSBDHEnvelopeReceipt consists of the following elements <!--(see a href="#Fig4"Figure 4</a>):-->
 
 <!--figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="ehmiSBDHEnvelope_schema-acknowledgement.png" target="_blank"> <img src="ehmiSBDHEnvelope_schema-acknowledgement.png" alt="ehmiSBDHEnvelope_schema-acknowledgement" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig4"></a>
 <figcaption text-align="left"><b>Figure 4: Reliable Messaging - reliable ehmiSBDHEnvelope acknowledgement </b></figcaption>
 </figure-->
-<br>
+
 
 ## Links for Reliable Messaging|
 <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/FHIRMessages_NetworkEnvelopes_EN.html" target="_blank">MedComs desciption of Reliable Messaging in general in MedComs FHIR governance</a>
