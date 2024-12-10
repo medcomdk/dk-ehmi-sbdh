@@ -55,6 +55,7 @@ In an SBDH for a MedCom Message and a MedCom Acknowledgement, the following meta
 - Metadata for eDelivery general message communications
 - Health Message Communication Metadata
 - XDS Metadata for Document Sharing
+- Metadata for MedCom Statistics
 - Metadata for Reliable messaging - BusinessService Request
 
 <!-- br -->
@@ -66,6 +67,7 @@ In an SBDH for an EHMI EnvelopeReceipt there is the following metadata:
 - General SBDH metadata
 - Metadata for eDelivery general message communications
 - Health Message Communication Metadata
+- Metadata for MedCom Statistics
 - Metadata for Reliable messaging - BusinessService Response
 
 <!-- br -->
@@ -925,6 +927,44 @@ ORIGINALENVELOPEIDENTIFIER example:
 	    <Type>ORIGINALMESSAGEIDENTIFIER</Type> 
         <InstanceIdentifier>
             f06c1ac8-6096-5178-a380-2831d2456986
+        </InstanceIdentifier>
+        <Identifier>dk-medcom-messaging</Identifier>
+    </Scope>
+
+<!-- br -->
+
+#### MedCom Statistics
+
+##### StatisticalInformation
+
+The StatisticalInformation is the designated elements of a MedCom Message that has to be gathered for MedCom to monitoring which messages are sent over the EHMI Network.
+
+The designated elements of a concrete MedCom FHIR Message can be found <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/FHIRMessages_NetworkEnvelopes_EN.html" target="_blank">here</a>
+
+    <Scope>
+	    <Type>StatisticalInformation</Type> 
+	    <InstanceIdentifier>
+            "MCM:"+[SBD/SBDH/DocumentInformation/Standard]+(if designated postfix-value has been made for this message standard, then "#"+[designated postfix-values from a concrete message] else N/A)
+        </InstanceIdentifier>
+        <Identifier>dk-medcom-messaging</Identifier>
+    </Scope>
+
+StatisticalInformation example 1:
+    
+    <Scope>
+	    <Type>StatisticalInformation</Type> 
+        <InstanceIdentifier>
+            MCM:homecareobservation-message#"+[designated postfix-values from a concrete message]
+        </InstanceIdentifier>
+        <Identifier>dk-medcom-messaging</Identifier>
+    </Scope>
+
+StatisticalInformation example 2:
+    
+    <Scope>
+	    <Type>StatisticalInformation</Type> 
+        <InstanceIdentifier>
+            MCM:carecommunication-message#carecoordination
         </InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
