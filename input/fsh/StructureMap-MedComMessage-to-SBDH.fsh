@@ -28,7 +28,7 @@ Usage: #definition
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "HeaderVersion"
-* group[=].rule[=].target.transform = #copy
+* group[=].rule[=].target.transform = #create // Changed
 * group[+].name = "SbdhSender"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
@@ -49,7 +49,7 @@ Usage: #definition
 * group[=].rule[=].source.context = "source"
 //* group[=].rule[=].source.defaultValueCode = #iso6523-actorid-upis
 * group[=].rule[=].source.variable = "SbdhSenderIdentifierAuthority"
-* group[=].rule[=].source.variable.value = "iso6523-actorid-upis"
+* group[=].rule[=].source.variable.value = "iso6523-actorid-upis" 
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "StandardBusinessDocumentHeader/Sender/identifier@Authority"
