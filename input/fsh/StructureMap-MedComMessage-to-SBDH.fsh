@@ -25,13 +25,13 @@ Usage: #definition
 * group[=].input[=].mode = #target
 * group[=].rule[0].name = "HeaderVersion"
 * group[=].rule[=].source.context = "source"
-//* group[=].rule[=].source.variable = "HeaderVersion" // Change to  defaultValueString? see line 156
+* group[=].rule[=].source.variable = "HeaderVersion" // Change to  defaultValueString? see line 156
 //* group[=].rule[=].source.variable.value = "1.0"
 * group[=].rule[=].source.defaultValueString = "1.0"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "HeaderVersion"
-* group[=].rule[=].target.transform = #copy
+* group[=].rule[=].target.transform = #create
 
 * group[+].name = "SbdhSender"
 * group[=].typeMode = #none
@@ -49,11 +49,13 @@ Usage: #definition
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "StandardBusinessDocumentHeader/Sender/identifier"
 * group[=].rule[=].target.transform = #copy
+
 * group[=].rule[+].name = "SbdhSenderIdentifierAuthority"
 * group[=].rule[=].source.context = "source"
 //* group[=].rule[=].source.defaultValueCode = #iso6523-actorid-upis
 * group[=].rule[=].source.variable = "SbdhSenderIdentifierAuthority"
-* group[=].rule[=].source.variable.value = "iso6523-actorid-upis" // Kommer ikke med i unicode
+//* group[=].rule[=].source.variable.value = "iso6523-actorid-upis" // Kommer ikke med i unicode
+* group[=].rule[=].source.defaultValueString = "iso6523-actorid-upis" 
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "StandardBusinessDocumentHeader/Sender/identifier@Authority"
