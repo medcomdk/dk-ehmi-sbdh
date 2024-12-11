@@ -13,6 +13,8 @@ Usage: #definition
 //* structure[+].url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureDefinition/EhmiStandardBusinessDocumentBundle"
 * structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/branches/v0.90.1-beta.1/ehmiSBDH/StandardBusinessDocumentHeader.xsd"
 * structure[=].mode = #target
+
+
 * group[0].name = "HeaderVersion"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
@@ -23,12 +25,14 @@ Usage: #definition
 * group[=].input[=].mode = #target
 * group[=].rule[0].name = "HeaderVersion"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.variable = "HeaderVersion"
-* group[=].rule[=].source.variable.value = "1.0"
+//* group[=].rule[=].source.variable = "HeaderVersion" // Change to  defaultValueString? see line 156
+//* group[=].rule[=].source.variable.value = "1.0"
+* group[=].rule[=].source.defaultValueString = "1.0"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "HeaderVersion"
-* group[=].rule[=].target.transform = #create // Changed
+* group[=].rule[=].target.transform = #copy
+
 * group[+].name = "SbdhSender"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
@@ -49,11 +53,12 @@ Usage: #definition
 * group[=].rule[=].source.context = "source"
 //* group[=].rule[=].source.defaultValueCode = #iso6523-actorid-upis
 * group[=].rule[=].source.variable = "SbdhSenderIdentifierAuthority"
-* group[=].rule[=].source.variable.value = "iso6523-actorid-upis" 
+* group[=].rule[=].source.variable.value = "iso6523-actorid-upis" // Kommer ikke med i unicode
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "StandardBusinessDocumentHeader/Sender/identifier@Authority"
 * group[=].rule[=].target.transform = #copy
+
 * group[+].name = "SbdhReceiver"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
@@ -78,6 +83,7 @@ Usage: #definition
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "StandardBusinessDocumentHeader/Receiver/identifier@Authority"
 * group[=].rule[=].target.transform = #copy
+
 //DocumentIdentification
 * group[+].name = "SbdhDocumentIdentification"
 * group[=].typeMode = #none
@@ -153,6 +159,7 @@ Usage: #definition
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[DOCUMENTID]/Type"
 * group[=].rule[=].target.transform = #create
+
 * group[=].rule[+].name = "ScopeDocumentInstanceIdentifier"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "Bundle.id"
