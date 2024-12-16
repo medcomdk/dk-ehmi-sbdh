@@ -33,19 +33,36 @@ Usage: #definition
 
 
 * group[+].name = "type"
+* group[=].typeMode = #none
 * group[=].input[0].name = "SourceNameForATest"
 * group[=].input[=].type = "ehmiSbdh"
 * group[=].input[=].mode = #source
-* group[=].input[+].name = "EDS_delivery_satus"
+* group[=].input[+].name = "EDSDeliverySatus"
 * group[=].input[=].type = "AuditEvent"
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "SystemType"
 * group[=].rule[=].source.context = "Default"
-* group[=].rule[=].source.contextType = #valueString
+//* group[=].rule[=].source.contextType = #variable
 * group[=].rule[=].source.defaultValueString = "http://terminology.hl7.org/CodeSystem/audit-event-type"
 * group[=].rule[=].target.context = "target"
-* group[=].rule[=].source.element = "type.code.system"
+* group[=].rule[=].source.element = "AuditEvent.type.system"
+
+* group[=].rule[+].name = "code"
+* group[=].rule[=].source.context = "Default"
+* group[=].rule[=].source.defaultValueString = "ehmiMessaging"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].source.element = "AuditEvent.type.code"
+
+* group[=].rule[+].name = "display"
+* group[=].rule[=].source.context = "Default"
+* group[=].rule[=].source.defaultValueString = "EHMI messaging event"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].source.element = "AuditEvent.type.code"
+
+
+
+
 
 
 
