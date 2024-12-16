@@ -21,6 +21,8 @@ Usage: #definition
 * group[=].input[+].name = "target"
 * group[=].input[=].type = "AuditEvent"
 * group[=].input[=].mode = #target
+
+
 * group[=].rule[0].name = "HeaderVersion"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueCode = #iso6523-actorid-upis
@@ -28,3 +30,26 @@ Usage: #definition
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "HeaderVersion"
 * group[=].rule[=].target.transform = #create
+
+
+* group[+].name = "type"
+* group[=].input[0].name = "SourceNameForATest"
+* group[=].input[=].type = "ehmiSbdh"
+* group[=].input[=].mode = #source
+* group[=].input[+].name = "EDS_delivery_satus"
+* group[=].input[=].type = "AuditEvent"
+* group[=].input[=].mode = #target
+
+* group[=].rule[0].name = "SystemType"
+* group[=].rule[=].source.context = "Default"
+* group[=].rule[=].source.contextType = #valueString
+* group[=].rule[=].source.defaultValueString = "http://terminology.hl7.org/CodeSystem/audit-event-type"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].source.element = "type.code.system"
+
+
+
+
+
+
+//* group
