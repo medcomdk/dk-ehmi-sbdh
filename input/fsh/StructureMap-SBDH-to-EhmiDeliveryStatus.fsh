@@ -46,19 +46,19 @@ Usage: #definition
 //* group[=].rule[=].source.contextType = #variable
 * group[=].rule[=].source.defaultValueString = "http://terminology.hl7.org/CodeSystem/audit-event-type"
 * group[=].rule[=].target.context = "target"
-* group[=].rule[=].source.element = "AuditEvent.type.system"
+* group[=].rule[=].target.element = "AuditEvent.type.system"
 
 * group[=].rule[+].name = "code"
 * group[=].rule[=].source.context = "Default"
 * group[=].rule[=].source.defaultValueString = "ehmiMessaging"
 * group[=].rule[=].target.context = "target"
-* group[=].rule[=].source.element = "AuditEvent.type.code"
+* group[=].rule[=].target.element = "AuditEvent.type.code"
 
 * group[=].rule[+].name = "display"
 * group[=].rule[=].source.context = "Default"
 * group[=].rule[=].source.defaultValueString = "EHMI messaging event"
 * group[=].rule[=].target.context = "target"
-* group[=].rule[=].source.element = "AuditEvent.type.code"
+* group[=].rule[=].target.element = "AuditEvent.type.code"
 
 
 
