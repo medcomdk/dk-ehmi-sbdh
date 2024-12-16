@@ -25,14 +25,13 @@ Usage: #definition
 * group[=].input[=].mode = #target
 * group[=].rule[0].name = "HeaderVersion"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.variable = "HeaderVersion" // Change to  defaultValueString? see line 156
+* group[=].rule[=].source.variable = "HeaderVersion" 
 //* group[=].rule[=].source.variable.value = "1.0"
-//* group[=].rule[=].source.defaultValueString = "1.0"
+* group[=].rule[=].source.defaultValueString = "1.0"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "HeaderVersion"
 * group[=].rule[=].target.transform = #create
-* group[=].rule[=].target.parameter.valueString = "1.0"
 
 
 * group[+].name = "SbdhSender"
