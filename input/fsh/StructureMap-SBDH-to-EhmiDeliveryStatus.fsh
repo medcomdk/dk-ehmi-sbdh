@@ -42,28 +42,40 @@ Usage: #definition
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "SystemType"
-* group[=].rule[=].source.context = "Default"
+* group[=].rule[=].source.context = "defaultValue"
 //* group[=].rule[=].source.contextType = #variable
 * group[=].rule[=].source.defaultValueString = "http://terminology.hl7.org/CodeSystem/audit-event-type"
 * group[=].rule[=].target.context = "target"
-* group[=].rule[=].target.element = "AuditEvent.type.system"
+* group[=].rule[=].target.element = "type.system"
 
 * group[=].rule[+].name = "code"
-* group[=].rule[=].source.context = "Default"
+* group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueString = "ehmiMessaging"
 * group[=].rule[=].target.context = "target"
-* group[=].rule[=].target.element = "AuditEvent.type.code"
+* group[=].rule[=].target.element = "type.code"
 
 * group[=].rule[+].name = "display"
-* group[=].rule[=].source.context = "Default"
+* group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueString = "EHMI messaging event"
 * group[=].rule[=].target.context = "target"
-* group[=].rule[=].target.element = "AuditEvent.type.code"
+* group[=].rule[=].target.element = "type.code"
 
+// Try out conditioned rules for the Slicing
 
+* group[+].name = "Subtype"
+* group[=].typeMode = #none
+* group[=].input[0].name = "ehmiSBDH"
+* group[=].input[=].type = "ehmiSBDH"
+* group[=].input[=].mode = #source
+* group[=].input[+].name = "EDSDeliverySatus"
+* group[=].input[=].type = "AuditEvent"
+* group[=].input[=].mode = #target
 
-
-
+* group[=].rule[0].name = "terminologySystem"
+* group[=].rule[=].source.context = "msgSent"
+* group[=].rule[=].source.defaultValueUri = "http://medcomehmi.dk/ig/dk-ehmi-terminology/CodeSystem/ehmi-delivery-status-sub-types"
+* group[=].rule[=].target.context = "subtypeMsgSent"
+* group[=].rule[=].target.element = "subtype.system"
 
 
 
