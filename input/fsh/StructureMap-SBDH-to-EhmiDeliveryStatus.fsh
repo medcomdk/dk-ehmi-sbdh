@@ -73,7 +73,7 @@ Usage: #definition
 
 * group[=].rule[0].name = "terminologySystem"
 * group[=].rule[=].source.context = "msgSent"
-* group[=].rule[=].source.defaultValueUri = "http://medcomehmi.dk/ig/dk-ehmi-terminology/CodeSystem/ehmi-delivery-status-sub-types"
+* group[=].rule[=].source.defaultValueString = "http://medcomehmi.dk/ig/dk-ehmi-terminology/CodeSystem/ehmi-delivery-status-sub-types"
 * group[=].rule[=].target.context = "subtypeMsgSent"
 * group[=].rule[=].target.element = "subtype.system"
 
