@@ -23,14 +23,15 @@ Usage: #definition
 * group[=].input[+].name = "target"
 * group[=].input[=].type = "StandardBusinessDocumentHeader"
 * group[=].input[=].mode = #target
-* group[=].rule[0].name = "HeaderVersion"
+
+* group[=].rule[0].name = "SBDHHeaderVersion"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.variable = "HeaderVersion" 
 //* group[=].rule[=].source.variable.value = "1.0"
 * group[=].rule[=].source.defaultValueString = "1.0"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
-* group[=].rule[=].target.element = "HeaderVersion"
+* group[=].rule[=].target.element = "StandardBusinessDocumentHeader/HeaderVersion"
 * group[=].rule[=].target.transform = #create
 
 
