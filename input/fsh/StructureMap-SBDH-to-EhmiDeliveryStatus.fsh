@@ -13,6 +13,8 @@ Usage: #definition
 * structure[=].mode = #source
 * structure[0].url = "http://medcomehmi.dk/ig/dk-ehmi-eds/StructureDefinition/EhmiDeliveryStatus"
 * structure[=].mode = #target
+
+
 * group[0].name = "HeaderVersion"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
@@ -28,13 +30,13 @@ Usage: #definition
 * group[=].rule[=].source.defaultValueCode = #iso6523-actorid-upis
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
-* group[=].rule[=].target.element = "HeaderVersion"
+* group[=].rule[=].target.element = "StandardBusinessDocumentHeader/HeaderVersion"
 * group[=].rule[=].target.transform = #create
 
 
 * group[+].name = "type"
 * group[=].typeMode = #none
-* group[=].input[0].name = "SourceNameForATest"
+* group[=].input[0].name = "SourceNameForATest" // Depr name when comfortable with syntax
 * group[=].input[=].type = "ehmiSbdh"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "EDSDeliverySatus"
