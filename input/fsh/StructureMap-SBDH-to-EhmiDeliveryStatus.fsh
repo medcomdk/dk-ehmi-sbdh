@@ -94,22 +94,49 @@ Usage: #definition
 * group[=].rule[0].name = "defineSenderTypeCode"
 * group[=].rule[=].source.context = "sender"
 * group[=].rule[=].source.defaultValueString = "ehmiSender"
-* group[=].rule[=].target.context = "agentTypeCode"
+* group[=].rule[=].target.context = "agentType"
 * group[=].rule[=].target.element = "AuditEvent.agent[0].type.coding.code"
 
-* group[=].rule[+].name = "defineSenderTypeSysten"
+* group[=].rule[+].name = "defineSenderTypeSystem"
 * group[=].rule[=].source.context = "sender"
 * group[=].rule[=].source.defaultValueString = " http://medcomehmi.dk/ig/dk-ehmi-terminology/CodeSystem/ehmi-delivery-status-participationroletype"
 * group[=].rule[=].target.context = "agentTypeCode"
 * group[=].rule[=].target.element = "AuditEvent.agent[0].type.coding.system"
 
+* group[=].rule[+].name = "defineReceiverTypeCode"
+* group[=].rule[=].source.context = "target"
+* group[=].rule[=].source.defaultValueString = "ehmiReceiver"
+* group[=].rule[=].target.context = "agentTypeCode"
+* group[=].rule[=].target.element = "AuditEvent.agent[1].type.coding.code"
 
+* group[=].rule[+].name = "defineSenderTypeSystem"
+* group[=].rule[=].source.context = "sender"
+* group[=].rule[=].source.defaultValueString = " http://medcomehmi.dk/ig/dk-ehmi-terminology/CodeSystem/ehmi-delivery-status-participationroletype"
+* group[=].rule[=].target.context = "agentTypeCode"
+* group[=].rule[=].target.element = "AuditEvent.agent[1].type.coding.system"
+
+
+
+// GLN 
 * group[=].rule[+].name = "Sender"
 * group[=].rule[=].source.context = "sbdhSenderGLN"
 * group[=].rule[=].source.element = "StandardBusinessDocumentHeader/Sender/identifier.substring(4)"
 * group[=].rule[=].target.context = "edsStatusSenderGLN"
 * group[=].rule[=].target.element = "AuditEvent.agent.where(type.coding.code = 'ehmiSender').extension.value.value"
-// OBS der skal bruges en substring et sted til at spise de første 4 for at gøre det til en GLN
+
+* group[=].rule[+].name = "Receiver"
+* group[=].rule[=].source.context = "sbdhReceiverGLN"
+* group[=].rule[=].source.element = "StandardBusinessDocumentHeader/Receiver/identifier.substring(4)"
+* group[=].rule[=].target.context = "edsStatusSenderGLN"
+* group[=].rule[=].target.element = "AuditEvent.agent.where(type.coding.code = 'ehmiSender').extension.value.value"
+// ATT: Substring is needed to remove first 4 chars to transform to GLN
+
+
+* group[=].rule[+].name = "MessageType"
+* group[=].rule[=].source.context = "sbdhMessageType"
+* group[=].rule[=].source.element = "SBDH/DocumentIdentification/Standard/[value]"
+* group[=].rule[=].target.context = "edsStatusMessageType"
+* group[=].rule[=].target.element = "AuditEvent.entity.detail.where(type= 'ehmiMessageType').value"
 
 
 
