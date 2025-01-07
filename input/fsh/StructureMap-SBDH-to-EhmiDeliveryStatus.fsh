@@ -4,12 +4,11 @@ Title: "Transformation specification of an ehmiSBDH Envelope to a EHMI Delivery 
 Description: "Transformation specification of an ehmiSBDH Envelope to a EHMI Delivery Status structure"
 Usage: #definition
 * url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/Sbdh2EhmiDeliveryStatus-transform"
-* name = "Transform from a FHIR Messsage to an ehmiSBDH Envelope"
-* title = "Transformation specification of a FHIR Messsage to an ehmiSBDH Envelope"
+* name = "Transform from an ehmiSBDH Envelope to an EhmiDeliveryStatus"
+* title = "Transform from an ehmiSBDH Envelope to an EhmiDeliveryStatus"
 * status = #draft
 * description = "Transform from a FHIR Messsage to an ehmiSBDH Envelope"
 * structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/branches/v0.90.1-beta.1/ehmiSBDH/StandardBusinessDocumentHeader.xsd"
-//* structure[+].url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureDefinition/EhmiStandardBusinessDocumentBundle"
 * structure[=].mode = #source
 * structure[0].url = "http://medcomehmi.dk/ig/dk-ehmi-eds/StructureDefinition/EhmiDeliveryStatus"
 * structure[=].mode = #target
@@ -18,7 +17,7 @@ Usage: #definition
 * group[0].name = "HeaderVersion"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
-* group[=].input[=].type = "ehmiSbdh"
+* group[=].input[=].type = "StandardBusinessDocumentHeader"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
 * group[=].input[=].type = "AuditEvent"
