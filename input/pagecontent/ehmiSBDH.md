@@ -1,7 +1,5 @@
 # EHMI Standard Business Document Header
 
-<!-- br -->
-
 ## EHMI SBDH – General elements
 
 The StandardBusinessDocumentHeader (SBDH) is an envelope specification issued by GS1 and profiled for use in PEPPOL. It is supported by eDelivery's Access Points (AP) according to the AS4 protocol. We follow the EHMI conventions, which are laid out in PEPPOL's profiling, but also extend it to be able to take care of the health area. However, SBDH is nothing without a surrounding container, called StandardBusinessDocument (SBD).
@@ -1871,7 +1869,7 @@ Encoding will have the following outcome space for ReceiptAcknowledgement and Re
 For a number of different mappings to and from SBDH elements, there is developed a number of FHIR Structure Mappings in order for the suppliers to better understand and potentially automate some tasks around mappings.
 
 These are:
-- [Transformation specification of a MedCom FHIR Messsage to an ehmiSBDH Envelope](StructureMap-MedComMessage-to-SBDH.html)
+- [Transformation specification of a MedCom FHIR Messsage to an ehmiSBDH Envelope](StructureMap-MedComMessage2Sbdh-transform.html)
 - [TBD: Transformation specification of a Medcom FHIR Message and an ehmiSBDH Envelope to a DocumentReference](StructureMap-MedComMessagingMessage2MedComDocumentReference-transform.html)
 - [TBD: Transformation specification of an ehmiSBDH Envelope to a EHMI Delivery Status structure](StructureMap-Sbdh2EhmiDeliveryStatus-transform.html)
 
