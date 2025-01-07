@@ -1,2 +1,3 @@
 # DK-EHMI-SBDH
- Core profiles for the EHMI Infrastructure
+
+Core profiles for the EHMI Infrastructure
