@@ -38,7 +38,7 @@ Usage: #definition
 * group[=].input[0].name = "SourceNameForATest" // Depr name when comfortable with syntax
 * group[=].input[=].type = "ehmiSbdh"
 * group[=].input[=].mode = #source
-* group[=].input[+].name = "EDSDeliverySatus"
+* group[=].input[+].name = "EDSDeliveryStatus"
 * group[=].input[=].type = "AuditEvent"
 * group[=].input[=].mode = #target
 
@@ -68,7 +68,7 @@ Usage: #definition
 * group[=].input[0].name = "ehmiSBDH"
 * group[=].input[=].type = "ehmiSBDH"
 * group[=].input[=].mode = #source
-* group[=].input[+].name = "EDSDeliverySatus"
+* group[=].input[+].name = "EDSDeliveryStatus"
 * group[=].input[=].type = "AuditEvent"
 * group[=].input[=].mode = #target
 
@@ -87,7 +87,7 @@ Usage: #definition
 * group[=].input[0].name = "ehmiSBDH"
 * group[=].input[=].type = "ehmiSBDH"
 * group[=].input[=].mode = #source
-* group[=].input[+].name = "EDSDeliverySatus"
+* group[=].input[+].name = "EDSDeliveryStatus"
 * group[=].input[=].type = "AuditEvent"
 * group[=].input[=].mode = #target
 
