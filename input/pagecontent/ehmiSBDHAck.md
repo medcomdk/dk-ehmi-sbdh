@@ -2,260 +2,15 @@
 
 ## ehmiSBDHAck – General elements
 
-The StandardBusinessDocumentHeader (SBDH) is an envelope specification issued by GS1 and profiled for use in PEPPOL. It is supported by eDelivery's Access Points (AP) according to the AS4 protocol. We follow the EHMI conventions, which are laid out in PEPPOL's profiling, but also extend it to be able to take care of the health area. However, SBDH is nothing without a surrounding container, called StandardBusinessDocument (SBD).
-
-<!-- br -->
-
-### StandardBusinessDocument
-
-<!-- br -->
-
-StandardBusinessDocument is, as mentioned, SBDH's surrounding container, and is a wrapper around SBDH, and contains only two elements:
-
-- StandardBusinessDocumentHeader
-- BinaryContent (base64 encoded)
-
-Although the StandardBusinessDocument, as such, is the envelope, the term SBDH is generally used for the entire envelope, since it is this content that is of particular interest in the message exchange. BinaryContent is the element that contains a base64-encoded message or acknowledgment for a sent SBDH.
-
-<!-- br -->
-
-<!--img src="ehmiSBDH_Document.png" alt="EHMI StandardBusinessDocument" /><br/-->
-<img src="ClassSbdBasic.png" alt="EHMI StandardBusinessDocument" style="width:50%;height:auto;margin-left:25%; margin-right:25%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
-
-<!-- br -->
-
-The content of SBDH is largely determined by how
-
-- the same information is registered in EER
-- the same information is registered in SMP
-- the context is to NSP DokumentDelingService, DDS
-- the context is for EHMI EnvelopeReceipt
-- the same information is registered in EDS
-
-<!-- br -->
-
-SBDH has a structure that is generally divided into the following elements:
-
--	HeaderVersion
--	Sender
--	Receiver
--	DocumentInformation
--	Manifest
--	BusinessScope
-
-<!-- br -->
-
-#### SBDH for a MedCom Message and a MedCom Acknowledgement
-
-In an SBDH for a MedCom Message and a MedCom Acknowledgement, the following metadata can be included:
-
-- General SBDH metadata
-- Metadata for eDelivery general message communications
-- Health Message Communication Metadata
-- XDS Metadata for Document Sharing
-- Metadata for MedCom Statistics
-- Metadata for Reliable messaging - BusinessService Request
-
-<!-- br -->
-
 #### SBDH for an EHMI EnvelopeReceipt 
-
-In an SBDH for an EHMI EnvelopeReceipt there is the following metadata:
-
-- General SBDH metadata
-- Metadata for eDelivery general message communications
-- Health Message Communication Metadata
-- Metadata for MedCom Statistics
-- Metadata for Reliable messaging - BusinessService Response
-
-<!-- br -->
-
-### SBDH – general fixed elements
-
-SBDH's general elements are illustrated in the figure below.
-
-<!-- br -->
-
-<!--img src="ehmiSBDH_Header.png" alt="EHMI StandardBusinessDocument" /><br/-->
-<img src="ClassSbdhBasic.png" alt="EHMI StandardBusinessDocument"  style="width:80%;height:auto;margin-left:0%; margin-right:20%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
-
-<!-- br -->
-
-BusinessScope has, however, been given its own chapter, as it differs significantly from the others. In the following, the general SBDH elements are presented for the provisionally 2 message types that EHMI operates with:
-
--	FHIR
--	EHMI EnvelopeReceipt 
-
-Where applicable, the general elements will be divided into subsections that describe the path to the value of that element in the respective message types. Where most elements have a general focus on message exchange in general and the interaction with SMP, BusinessScope in particular gives a health-oriented imprint in the specification.
-
-<!-- br -->
-
-#### HeaderVersion
-
-Always 
-
-    <HeaderVersion>1.0</HeaderVersion>
-
-<!-- br -->
-
-#### Sender
-
-<!-- br -->
-
-ehmiSBDH Sender contains only the mandatory element Identifier.
- 
-<!-- br -->
-
-##### Identifier
-
-<!-- br -->
-
-Contains the attribute Authority, which according to [Policy_identifiers], POLICY 6 Numeric Codes for Issuing Agencies, always has the value: "iso6523-actorid-upis"
-
-Identifier represents GLN of sender where
-
-- The value 0088: reflects that the type is GLN.
-- The value after 0088: reflects the GLN number.
-
-<!-- br -->
-
-    <Sender>
-        <Identifier Authority="iso6523-actorid-upis">    
-            “0088:”+[GLN-number]
-        </Identifier>
-    </Sender>
-
-<!-- br -->
-
-##### If the MedCom message is of type FHIR 
-
-If the MedCom message is of type FHIR, then always in the following format:
-
-<!-- br -->
-
-   <Sender>
-        <Identifier Authority="iso6523-actorid-upis">    
-            Bundle.entry[0].resource.sender.reference.resolve().identifier.where(system = 'https://www.gs1.org/gln').value
-        </Identifier>
-    </Sender>
-
-<!-- br -->
-
-##### Sender example
-
-<!-- br -->
-
-Regardless of the message type, it will always result in the following Sender/Identifier, where the value after 0088: will of course vary.
-
-    <Sender>
-        <Identifier Authority="iso6523-actorid-upis">
-            0088:5790000121526
-        </Identifier>
-    </Sender>
-
-<!-- br -->
-
-##### Receiver
-
-<!-- br -->
-
-ehmiSBDH Receiver contains only the mandatory element Identifier.
-
-<!-- br -->
-
-##### Identifier
-
-<!-- br -->
-
-Contains the attribute Authority, which according to [Policy_identifiers], POLICY 6 Numeric Codes for Issuing Agencies, always has the value: "iso6523-actorid-upis"
-
-Identifier represents GLN of sender where
-
-- The value 0088: reflects that the type is GLN.
-- The value after 0088: reflects the GLN number.
-
-<!-- br -->
-
-    <Receiver>
-        <Identifier Authority="iso6523-actorid-upis">    
-            “0088:”+[GLN-number]
-        </Identifier>
-    </Receiver>' 
-
-<!-- br -->
-
-##### If the MedCom message is of type FHIR 
-
-<!-- br -->
-
-If the MedCom message is of type FHIR, then always in the following format:
-
-    <Receiver>
-        <Identifier Authority="iso6523-actorid-upis">    
-            “0088:”+[Bundle.entry[0].resource.destination.receiver.reference.resolve().identifier.where(system = 'https://www.gs1.org/gln').value]
-        </Identifier>
-    </Receiver>
-
-<!-- br -->
-
-##### Receiver example:
-
-<!-- br -->
-
-Regardless of the message type, it will always result in the following Receiver/Identifier, where the value after 0088: will of course vary.
-
-    <Receiver>
-        <Identifier Authority="iso6523-actorid-upis">0088:5790000201389    </Identifier>
-    </Receiver>
-
-<!-- br -->
 
 #### DocumentInformation
 
-<!-- br -->
-
 ##### Standard
-
-EHMI operates with 4 types of standards, each of which has its own prefix according to the standard
-
-- FHIR 
-- eb
-- OIOXML (described in a later version of the standard)
-- Edifact (described in a later version of the standard)
-
-<!-- br -->
-
-###### If the MedCom message is of type FHIR 
-
-<!-- br -->
-
-If the MedCom message is of type FHIR, then always in the following format:
-
-    <DocumentInformation>
-        <Standard>
-            [Bundle.entry[0].resource.event.as(Coding).code]
-        </Standard>
-    </DocumentInformation>
-
-<!-- br -->
-
-Message example: 
-
-<!-- br -->
-
-    <DocumentInformation>
-        <Standard>homecareobservation-message</Standard>
-    </DocumentInformation>
-
-<!-- br -->
 
 ###### If the MedCom message is of type EHMI EnvelopeReceipt
 
-<!-- br -->
-
 Always 
-
-<!-- br -->
 
     <DocumentInformation>
         …
@@ -265,11 +20,7 @@ Always
         …
     </DocumentInformation>
 
-<!-- br -->
-
 SBDH-envelope example:
-
-<!-- br -->
 
     <DocumentInformation>
         …
@@ -277,55 +28,9 @@ SBDH-envelope example:
         …
     </DocumentInformation>
 
-<!-- br -->
-
 ##### TypeVersion
 
-<!-- br -->
-
-Is the contained message version on the form
-
-<!-- br -->
-
-    <DocumentInformation>
-        …
-        <TypeVersion>[Path to the type version]</TypeVersion>
-        …
-    </DocumentInformation>
-
-<!-- br -->
-
-###### If the MedCom message is of type FHIR 
-
-<!-- br -->
-
-If the MedCom message is of type FHIR, then always in the following format:
-
-    <DocumentInformation>
-        …
-        <TypeVersion>
-            [Bundle.entry[0].resource.MessageHeader.definition[versionssuffiks]]
-        </TypeVersion>
-        …
-    </DocumentInformation>
-
-<!-- br -->
-
-Message example:
-
-<!-- br -->
-
-    <DocumentInformation>
-	    …
-        <TypeVersion>1.0</TypeVersion>
-        …
-    </DocumentInformation>
-
-<!-- br -->
-
 If the contained message is of type EHMI EnvelopeReceipt, always 
-
-<!-- br -->
 
     <DocumentInformation>
         …
@@ -335,11 +40,7 @@ If the contained message is of type EHMI EnvelopeReceipt, always
         …
     </DocumentInformation>
 
-<!-- br -->
-
 EHMI EnvelopeReceipt example:
-
-<!-- br -->
 
     <DocumentInformation>
         …
@@ -347,74 +48,9 @@ EHMI EnvelopeReceipt example:
         …
     </DocumentInformation>
 
-<!-- br -->
-
-##### InstanceIdentifier 
-
-<!-- br -->
-
-The InstanceIdentifier will be generated by the sending MSH and is regardless of whether a message or an EHMI EnvelopeReceipt is generated.
-
-    <InstanceIdentifier>[generated UUID]</InstanceIdentifier>	
-
-example:
-
-<!-- br -->
-
-    <!-- [generated UUID] -->	
-    <DocumentInformation>
-    	…
-        <InstanceIdentifier>b7faca8e-e908-47bb-b323-0eb8a854c558</InstanceIdentifier>
-        …
-    </DocumentInformation>
-
-<!-- br -->
-
 ##### Type
 
-<!-- br -->
-
-Message:
-
-<!-- br -->
-
-    <DocumentInformation>
-        …
-        <Type>[Message-starttag]</Type>
-        …
-    </DocumentInformation>
-
-<!-- br -->
-
-###### If the MedCom message is of type FHIR 
-
-<!-- br -->
-
-If the MedCom message is of type FHIR, then always in the following format:
-
-    <DocumentInformation>
-        …
-        <Type>[Bundle]</Type>
-        …
-    </DocumentInformation>
-
-<!-- br -->
-
-Message example:
-
-<!-- br -->
-
-    <DocumentInformation>
-        …
-        <Type>Bundle</Type>
-        …
-    </DocumentInformation>
-
-<!-- br -->
-
 ###### If the message is of type EHMI EnvelopeReceipt:
-
-<!-- br -->
 
     <DocumentInformation>
         …
@@ -422,19 +58,13 @@ Message example:
         …
     </DocumentInformation>
 
-<!-- br -->
-
 Receipt type has the following scope: Scope for these ebXML Business Process Signals is:
 
 - ReceiptAcknowledgement
 - ReceiptException
 - AcceptanceAcknowledgement (NOTE! not used in the production Production Pilot)
 
-<!-- br -->
-
 EnvelopeReceipt example:
-
-<!-- br -->
 
     <DocumentInformation>
         …
@@ -442,68 +72,7 @@ EnvelopeReceipt example:
         …
     </DocumentInformation>
 
-<!-- br -->
-
-##### MultipleType
-
-<!-- br -->
-
-Always false: 
-
-<!-- br -->
-
-    <DocumentInformation>
-        …
-        <MultipleType>false</MultipleType>
-        …
-    </DocumentInformation>
-
-<!-- br -->
-
-##### CreationDateAndTime
-
-Always in this format: [YYYY-MM-DD]T[TT-MM-SS]+[offset-to-UTC]
-
-<!-- br -->
-
-    <DocumentInformation>
-        …
-        <CreationDateAndTime>
-            [YYYY-MM-DD]T[TT-MM-SS]+[offset-to-UTC] 
-        </CreationDateAndTime>
-        …
-    </DocumentInformation>
-
-<!-- br -->
-
-example:
-
-<!-- br -->
-
-    <DocumentInformation>
-        …
-        <CreationDateAndTime>2024-03-01T16-19-00+01:00</CreationDateAndTime>
-        …
-    </DocumentInformation>
-
-<!-- br -->
-
-##### DocumentInformation - aggregate message example
-
-    <DocumentIdentification>
-	    <Standard>homecareobservation-message</Standard>
-	    <TypeVersion>1.0</TypeVersion>
-        <InstanceIdentifier>9a6ff822-08de-5a6f-9670-9fa4b9d2f0dc</InstanceIdentifier>
-	    <Type>Bundle</Type>
-	    <MultipleType>false</MultipleType>
-	    <CreationDateAndTime>2024-03-01T16-19-00+01:00</CreationDateAndTime>
-    </DocumentIdentification>
-
-<!-- br -->
-
 ##### DocumentInformation - aggregate EnvelopeReceipt example
-
-<!-- br -->
 
     <DocumentIdentification>
         <Standard>ebbp-signals</Standard>
@@ -514,72 +83,21 @@ example:
 	    <CreationDateAndTime>2024-03-01T16-19-00+01:00</CreationDateAndTime>
     </DocumentIdentification>
 
-<!-- br -->
-
-#### Manifest (deliberately omitted in the Production Pilot version) 
-
-<!-- br -->
-
 ## SBDH BusinessScopes 
 
-SBDH BusinessScopes is the SBDH's name-value pair construction characterized by an identifier. Name is expressed by the Type element and value is expressed by the InstanceIdentifier. These two change for each scope, while the Identifier in the EHMI context is always the same: dk-medcom-messaging. In the following, they are reviewed in the logical contexts in which they appear.
-<!-- br -->
-
-<img src="ClassSbdhBusinessScopeBasic.png" alt="ehmiSBDHAck BusinessScope"  style="width:30%;height:auto;margin-left:35%; margin-right:35%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
-
 ### eDelivery message communication
-
-<!-- br -->
 
 #### In context of SMP 
 
 In the eDelivery communication, the SBDH's Scope structure with the two types, DOCUMENTID and PROCESSID, is the direct relation to the SMP's DOCUMENTID and PROCESSID. Furthermore, the context also includes the elements already reviewed in the section on Receiver. In the following, precisely these two types of elements in the SBDH's overall BusinessScope structure are described. The scopes, DOCUMENTID and PROCESSID, are permanently defined scopes by PEPPOL, which ensure a unique relationship to SMP. DOCUMENTID and PROCESSID are used in EHMI with the same precision as in PEPPOL, so that consistency is ensured in how the values ​​are expressed across PEPPOL and EHMI. DOCUMENTID and PROCESSID are used by the APs together with recipient's Receiver/Identifier to look up recipient's eDelivery address in SMP with a unique response as a result.
 
-<!-- br -->
-
 <img src="ehmiSBDH_BusinessScopesPeppol.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
-
-<!-- br -->
 
 #### DOCUMENTID
 
-<!-- br -->
-
 The value in InstanceIdentifier is identical to the corresponding SMP record. The values ​​are taken from MedCom's standard catalog and are here represented by the values ​​that indicate the type of message. See bookmark: [DKEDEL_DT_CodeList]
 
-<!-- br -->
-
-##### DOCUMENTID for MedCom FHIR Messages
-
-<!-- br -->
-
-    <Scope> 
-        <Type>DOCUMENTID</Type> 
-        <InstanceIdentifier>
-            urn:dk:healthcare:prod:messaging:medcom:fhir:structuredefinition:[Bundle/MessageHeader/eventCoding/code.value]#urn:dk:medcom:fhir:[Bundle/MessageHeader/definition/[value of MessageDefinition version-part]]
-        </InstanceIdentifier>
-        <Identifier>dk-medcom-messaging</Identifier>
-    </Scope>
-
-<!-- br -->
-
-MedCom FHIR Message example 
-
-<!-- br -->
-
-    <Scope> 
-        <Type>DOCUMENTID</Type> 
-        <InstanceIdentifier>
-            urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:3.0
-        </InstanceIdentifier>
-        <Identifier>dk-medcom-messaging</Identifier>
-    </Scope>
-
-<!-- br -->
-
 ##### DOCUMENTID for EHMI EnvelopeReceipt
-
-<!-- br -->
 
     <Scope> 
         <Type>DOCUMENTID</Type> 
@@ -589,11 +107,7 @@ MedCom FHIR Message example
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<!-- br -->
-
 DOCUMENTID EHMI EnvelopeReceipt example:
-
-<!-- br -->
 
     <Scope> 
         <Type>DOCUMENTID</Type> 
@@ -603,77 +117,9 @@ DOCUMENTID EHMI EnvelopeReceipt example:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<!-- br -->
-
-#### PROCESSID
-
-<!-- br -->
-
-The value in InstanceIdentifier is identical to the corresponding ProcessId SMP record. In the 4-corner model, the SDN emergency registration is also sent to the SMP, so that the sender's AP can look up the final receiver, also called the final recipient, correctly in the SMP.
-
-    <Scope> 
-        <Type>PROCESSID</Type> 
-        <InstanceIdentifier>
-            [Process Identifier value] 
-        </InstanceIdentifier>
-        <Identifier>dk-medcom-messaging</Identifier>
-    </Scope>
-
-<!-- br -->
-
-PROCESSID for SDN example
-
-sdn-emergence is the InstanceIdentifier used to relate a message's emergence on SDN, SundhedsDataNettet.
-
-<!-- br -->
-
-Always
-
-    <Scope> 
-	    <Type>PROCESSID</Type> 
-        <InstanceIdentifier>sdn-emergence</InstanceIdentifier>
-	    <Identifier>dk-medcom-messaging</Identifier>
-    </Scope>
-
-<!-- br -->
-
 ### Health message communication
 
-<!-- br -->
-
 #### Scope – message metadata - who
-
-<!-- br -->
-
-<img src="ehmiSBDH_BusinessScopesMetadata.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
-
-<!-- br -->
-
-##### PATIENTID
-
-The patient's Civil Registration Number, CPR, is included as an identifier for use in EDS Shipment status and XDS metadata.
-
-<!-- br -->
-
-    <Scope>
-        <Type>PATIENTID</Type>
-        <InstanceIdentifier>
-            [Bundle.entry.resource.ofType(Patient).identifier.where(system=’urn:oid:1.2.208.176.1.2’).value]
-        </InstanceIdentifier>
-        <Identifier>dk-medcom-messaging</Identifier>
-    </Scope>
-
-PATIENTID for MedCom FHIR messages - example:
-
-    <Scope>
-        <Type>PATIENTID</Type>
-        <InstanceIdentifier>
-            0101010227
-        </InstanceIdentifier>
-        <Identifier>dk-medcom-messaging</Identifier>
-    </Scope>
-
-<!-- br -->
 
 ##### SENDERID 
 
