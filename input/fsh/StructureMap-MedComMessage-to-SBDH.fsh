@@ -24,7 +24,7 @@ Usage: #definition
 * group[=].input[=].type = "StandardBusinessDocumentHeader"
 * group[=].input[=].mode = #target
 
-* group[=].rule[0].name = "SBDHHeaderVersion"
+* group[=].rule[0].name = "HeaderVersion"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.variable = "HeaderVersion" 
 //* group[=].rule[=].source.variable.value = "1.0"
@@ -56,7 +56,7 @@ Usage: #definition
 * group[=].rule[=].source.context = "source"
 //* group[=].rule[=].source.defaultValueCode = #iso6523-actorid-upis
 * group[=].rule[=].source.variable = "SbdhSenderIdentifierAuthority"
-//* group[=].rule[=].source.variable.value = "iso6523-actorid-upis" // Kommer ikke med i unicode
+//* group[=].rule[=].source.variable.value = "iso6523-actorid-upis" // Won't Appear in Unicode and JSON
 * group[=].rule[=].source.defaultValueString = "iso6523-actorid-upis" 
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
