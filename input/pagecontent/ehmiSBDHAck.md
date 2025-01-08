@@ -1,6 +1,6 @@
-# EHMI Standard Business Document Header for ehmiSBDHAck
+# ehmiSBDHAck profile of Standard Business Document Header 
 
-## EHMI SBDH – General elements
+## ehmiSBDHAck – General elements
 
 The StandardBusinessDocumentHeader (SBDH) is an envelope specification issued by GS1 and profiled for use in PEPPOL. It is supported by eDelivery's Access Points (AP) according to the AS4 protocol. We follow the EHMI conventions, which are laid out in PEPPOL's profiling, but also extend it to be able to take care of the health area. However, SBDH is nothing without a surrounding container, called StandardBusinessDocument (SBD).
 
@@ -525,7 +525,7 @@ example:
 SBDH BusinessScopes is the SBDH's name-value pair construction characterized by an identifier. Name is expressed by the Type element and value is expressed by the InstanceIdentifier. These two change for each scope, while the Identifier in the EHMI context is always the same: dk-medcom-messaging. In the following, they are reviewed in the logical contexts in which they appear.
 <!-- br -->
 
-<img src="ClassSbdhBusinessScopeBasic.png" alt="EHMI SBDH BusinessScope"  style="width:30%;height:auto;margin-left:35%; margin-right:35%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
+<img src="ClassSbdhBusinessScopeBasic.png" alt="ehmiSBDHAck BusinessScope"  style="width:30%;height:auto;margin-left:35%; margin-right:35%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
 
 ### eDelivery message communication
 
@@ -1039,7 +1039,7 @@ CorrelationInformation is used to tie a message and its receipt together. All el
 
 <!-- br -->
 
-<img src="ClassSbdhBusinessScopeComplex.png" alt="EHMI SBDH BusinessScope Complex"  style="width:60%;height:auto;margin-left:5%; margin-right:35%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
+<img src="ClassSbdhBusinessScopeComplex.png" alt="ehmiSBDHAck BusinessScope Complex"  style="width:60%;height:auto;margin-left:5%; margin-right:35%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
 
 #### Reliable messaging - BusinessService Request
 
@@ -1885,12 +1885,12 @@ All SBDH xsd files can be found via the [download-page](downloads.html), but an 
 (all files open in new window)
 <!-- br -->
 
-- <a href="ehmiSBDH_StandardBusinessDocumentHeader.xsd.html" target="_blank">EHMI SBDH StandardBusinessDocumentHeader Xsd</a>
-- <a href="ehmiSBDH_Partner.xsd.html" target="_blank">EHMI SBDH Partner Xsd</a>
-- <a href="ehmiSBDH_DocumentIdentification.xsd.html" target="_blank">EHMI SBDH DocumentIdentification Xsd</a>
-- <a href="ehmiSBDH_BusinessScope.xsd.html" target="_blank">EHMI SBDH BusinessScope Xsd</a>
-- <a href="ehmiSBDH_EDN-Business-Message-Envelope-1.2.xsd.html" target="_blank">EHMI SBDH BinaryContentType Xsd</a>
-- <a href="ehmiSBDH_ebbp-signals-2.0.4.xsd.html" target="_blank">EHMI SBDH Ebbp-Signals 2.0.4 Xsd</a>
+- <a href="ehmiSBDH_StandardBusinessDocumentHeader.xsd.html" target="_blank">ehmiSBDHAck StandardBusinessDocumentHeader Xsd</a>
+- <a href="ehmiSBDH_Partner.xsd.html" target="_blank">ehmiSBDHAck Partner Xsd</a>
+- <a href="ehmiSBDH_DocumentIdentification.xsd.html" target="_blank">ehmiSBDHAck DocumentIdentification Xsd</a>
+- <a href="ehmiSBDH_BusinessScope.xsd.html" target="_blank">ehmiSBDHAck BusinessScope Xsd</a>
+- <a href="ehmiSBDH_EDN-Business-Message-Envelope-1.2.xsd.html" target="_blank">ehmiSBDHAck BinaryContentType Xsd</a>
+- <a href="ehmiSBDH_ebbp-signals-2.0.4.xsd.html" target="_blank">ehmiSBDHAck Ebbp-Signals 2.0.4 Xsd</a>
 
 <!-- br -->
 
