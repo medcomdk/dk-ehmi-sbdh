@@ -14,7 +14,7 @@ Usage: #definition
 * structure[=].mode = #target
 
 
-* group[0].name = "HeaderVersion"
+* group[0].name = "HeaderVersion1"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
 * group[=].input[=].type = "StandardBusinessDocumentHeader"
