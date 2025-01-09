@@ -47,7 +47,7 @@ Usage: #definition
 * group[=].rule[=].source.context = "defaultValue"
 //* group[=].rule[=].source.contextType = #variable
 * group[=].rule[=].source.defaultValueString = "http://terminology.hl7.org/CodeSystem/audit-event-type"
-* group[=].rule[=].target.context = "target"
+//* group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "[AuditEvent.type.system]"
 
 * group[=].rule[+].name = "code"
@@ -67,7 +67,7 @@ Usage: #definition
 * group[+].name = "Subtype"
 * group[=].typeMode = #none
 * group[=].input[0].name = "ehmiSBDH"
-* group[=].input[=].type = "ehmiSBDH"
+* group[=].input[=].type = "ehmiSBDHeader"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "EDSDeliverySatus"
 * group[=].input[=].type = "AuditEvent"
@@ -79,16 +79,12 @@ Usage: #definition
 * group[=].rule[=].target.context = "subtypeMsgSent"
 * group[=].rule[=].target.element = "[AuditEvent.subtype.system]"
 
-
-
-
-
 * group[+].name = "agents"
 * group[=].typeMode = #none
-* group[=].input[0].name = "ehmiSBDH"
-* group[=].input[=].type = "ehmiSBDH"
-* group[=].input[=].mode = #source
-* group[=].input[+].name = "EDSDeliverySatus"
+//* group[=].input[0].name = "ehmiSBDH"
+//* group[=].input[=].type = "ehmiSBDH"
+//* group[=].input[=].mode = #source
+* group[=].input[0].name = "EDSDeliverySatus"
 * group[=].input[=].type = "AuditEvent"
 * group[=].input[=].mode = #target
 
@@ -101,7 +97,7 @@ Usage: #definition
 
 * group[=].rule[+].name = "defineSenderTypeSystem"
 * group[=].rule[=].source.context = "sender"
-* group[=].rule[=].source.defaultValueString = " http://medcomehmi.dk/ig/dk-ehmi-terminology/CodeSystem/ehmi-delivery-status-participationroletype"
+* group[=].rule[=].source.defaultValueString = "http://medcomehmi.dk/ig/dk-ehmi-terminology/CodeSystem/ehmi-delivery-status-participationroletype"
 * group[=].rule[=].target.context = "agentTypeCode"
 * group[=].rule[=].target.element = "AuditEvent.agent[0].type.coding.system"
 
@@ -120,6 +116,16 @@ Usage: #definition
 
 
 // GLN 
+* group[+].name = "GLN"
+* group[=].typeMode = #none
+* group[=].input[0].name = "ehmiSBDH"
+* group[=].input[=].type = "ehmiSBDH"
+* group[=].input[=].mode = #source
+* group[=].input[+].name = "EDSDeliverySatus"
+* group[=].input[=].type = "AuditEvent"
+* group[=].input[=].mode = #target
+
+
 * group[=].rule[+].name = "Sender"
 * group[=].rule[=].source.context = "sbdhSenderGLN"
 * group[=].rule[=].source.element = "StandardBusinessDocumentHeader/Sender/identifier.substring(4)"
@@ -139,8 +145,3 @@ Usage: #definition
 * group[=].rule[=].source.element = "SBDH/DocumentIdentification/Standard/[value]"
 * group[=].rule[=].target.context = "edsStatusMessageType"
 * group[=].rule[=].target.element = "AuditEvent.entity.detail.where(type= 'ehmiMessageType').value"
-
-
-
-
-//* group
