@@ -81,10 +81,10 @@ Usage: #definition
 
 * group[+].name = "agents"
 * group[=].typeMode = #none
-//* group[=].input[0].name = "ehmiSBDH"
-//* group[=].input[=].type = "ehmiSBDH"
-//* group[=].input[=].mode = #source
-* group[=].input[0].name = "EDSDeliverySatus"
+* group[=].input[0].name = "ehmiSBDH"
+* group[=].input[=].type = "ehmiSBDH"
+* group[=].input[=].mode = #source
+* group[=].input[+].name = "EDSDeliverySatus"
 * group[=].input[=].type = "AuditEvent"
 * group[=].input[=].mode = #target
 
