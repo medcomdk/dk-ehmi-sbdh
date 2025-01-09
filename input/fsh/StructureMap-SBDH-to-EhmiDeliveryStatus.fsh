@@ -24,7 +24,7 @@ Usage: #definition
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "HeaderVersion"
-* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueCode = #iso6523-actorid-upis
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
@@ -42,7 +42,7 @@ Usage: #definition
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "typeSystem"
-* group[=].rule[=].source.context = "default"
+* group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueString = "http://terminology.hl7.org/CodeSystem/audit-event-type"
 * group[=].rule[=].target.context = "AuditEvent.type"
 * group[=].rule[=].target.element = "system"
@@ -71,41 +71,41 @@ Usage: #definition
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "terminologySystem"
-* group[=].rule[=].source.context = "msgSent"
+* group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueString = "http://medcomehmi.dk/ig/dk-ehmi-terminology/CodeSystem/ehmi-delivery-status-sub-types"
 * group[=].rule[=].target.context = "AuditEvent.subtype"
 * group[=].rule[=].target.element = "system"
 
 * group[+].name = "agents"
 * group[=].typeMode = #none
-* group[=].input[0].name = "ehmiSBDH"
-* group[=].input[=].type = "ehmiSBDH"
-* group[=].input[=].mode = #source
-* group[=].input[+].name = "EDSDeliverySatus"
+//* group[=].input[0].name = "ehmiSBDH"
+//* group[=].input[=].type = "ehmiSBDH"
+//* group[=].input[=].mode = #source
+* group[=].input[0].name = "EDSDeliverySatus"
 * group[=].input[=].type = "AuditEvent"
 * group[=].input[=].mode = #target
 
 
 * group[=].rule[0].name = "defineSenderTypeCode"
-* group[=].rule[=].source.context = "sender"
+* group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueString = "ehmiSender"
 * group[=].rule[=].target.context = "agentType"
 * group[=].rule[=].target.element = "AuditEvent.agent[0].type.coding.code"
 
 * group[=].rule[+].name = "defineSenderTypeSystem"
-* group[=].rule[=].source.context = "sender"
+* group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueString = "http://medcomehmi.dk/ig/dk-ehmi-terminology/CodeSystem/ehmi-delivery-status-participationroletype"
 * group[=].rule[=].target.context = "agentTypeCode"
 * group[=].rule[=].target.element = "AuditEvent.agent[0].type.coding.system"
 
 * group[=].rule[+].name = "defineReceiverTypeCode"
-* group[=].rule[=].source.context = "target"
+* group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueString = "ehmiReceiver"
 * group[=].rule[=].target.context = "agentTypeCode"
 * group[=].rule[=].target.element = "AuditEvent.agent[1].type.coding.code"
 
 * group[=].rule[+].name = "defineSenderTypeSystem"
-* group[=].rule[=].source.context = "sender"
+* group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueString = " http://medcomehmi.dk/ig/dk-ehmi-terminology/CodeSystem/ehmi-delivery-status-participationroletype"
 * group[=].rule[=].target.context = "agentTypeCode"
 * group[=].rule[=].target.element = "AuditEvent.agent[1].type.coding.system"
@@ -121,23 +121,22 @@ Usage: #definition
 * group[=].input[=].type = "AuditEvent"
 * group[=].input[=].mode = #target
 
-
 * group[=].rule[+].name = "Sender"
-* group[=].rule[=].source.context = "sbdhSenderGLN"
-* group[=].rule[=].source.element = "StandardBusinessDocumentHeader/Sender/identifier.substring(4)"
+* group[=].rule[=].source.context = "StandardBusinessDocumentHeader.Sender.identifier"
+* group[=].rule[=].source.element = "substring(4)"
 * group[=].rule[=].target.context = "AuditEvent"
 * group[=].rule[=].target.element = "agent.where(type.coding.code = 'ehmiSender').extension.value.value"
 
 * group[=].rule[+].name = "Receiver"
-* group[=].rule[=].source.context = "sbdhReceiverGLN"
-* group[=].rule[=].source.element = "StandardBusinessDocumentHeader/Receiver/identifier.substring(4)"
+* group[=].rule[=].source.context = "StandardBusinessDocumentHeader.Receiver.identifier"
+* group[=].rule[=].source.element = "substring(4)"
 * group[=].rule[=].target.context = "AuditEvent"
 * group[=].rule[=].target.element = "agent.where(type.coding.code = 'ehmiReceiver').extension.value.value"
 // ATT: Substring is needed to remove first 4 chars to transform to GLN
 
 
 * group[=].rule[+].name = "MessageType"
-* group[=].rule[=].source.context = "sbdhMessageType"
-* group[=].rule[=].source.element = "SBDH/DocumentIdentification/Standard/[value]"
+* group[=].rule[=].source.context = "StandardBusinessDocumentHeader.DocumentIdentification.Standard"
+//* group[=].rule[=].source.element = "/[value]"
 * group[=].rule[=].target.context = "edsStatusMessageType"
 * group[=].rule[=].target.element = "AuditEvent.entity.detail.where(type= 'ehmiMessageType').value"
