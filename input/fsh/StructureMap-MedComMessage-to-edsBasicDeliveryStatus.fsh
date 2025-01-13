@@ -1,13 +1,13 @@
 Instance: MedComMessage2edsBasicDeliveryStatus-transform
 InstanceOf: StructureMap
-Title: "Transformation specification of an MedComMessage to a EHMI Delivery Status structure (edsBasicDeliveryStatus)"
-Description: "Transformation specification of an MedComMessage to a EHMI Delivery Status structure (edsBasicDeliveryStatus)"
+Title: "Transformation specification of a MedComMessage to an EHMI Delivery Status structure (edsBasicDeliveryStatus)"
+Description: "Transformation specification of a MedComMessage to an EHMI Delivery Status structure (edsBasicDeliveryStatus)"
 Usage: #definition
 * url = "http://medcomehmi.dk/ig/dk-ehmi-MedComMessage/StructureMap/MedComMessage2edsBasicDeliveryStatus-transform"
-* name = "Transform from an MedComMessage to an edsBasicDeliveryStatus"
-* title = "Transform from an MedComMessage to an edsBasicDeliveryStatus"
+* name = "Transform from a MedComMessage to an edsBasicDeliveryStatus"
+* title = "Transform from a MedComMessage to an edsBasicDeliveryStatus"
 * status = #draft
-* description = "Transform from a FHIR Messsage to an MedComMessage"
+* description = "Transform from a FHIR Messsage to a MedComMessage"
 * structure[+].url = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-message"
 * structure[=].mode = #source
 * structure[0].url = "http://medcomehmi.dk/ig/dk-ehmi-eds/StructureDefinition/edsBasicDeliveryStatus"

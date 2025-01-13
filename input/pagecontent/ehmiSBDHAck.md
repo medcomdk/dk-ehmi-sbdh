@@ -1317,7 +1317,7 @@ For a number of different mappings to and from SBDH elements, there is developed
 These are:
 - [Transformation specification of a MedCom FHIR Messsage to an ehmiSBDH Envelope](StructureMap-MedComMessage2Sbdh-transform.html)
 - [TBD: Transformation specification of a Medcom FHIR Message and an ehmiSBDH Envelope to a DocumentReference](StructureMap-MedComMessagingMessage2MedComDocumentReference-transform.html)
-- [TBD: Transformation specification of an ehmiSBDH Envelope to a EHMI Delivery Status structure](StructureMap-Sbdh2EhmiDeliveryStatus-transform.html)
+- [TBD: Transformation specification of an ehmiSBDH Envelope to an EHMI Delivery Status structure](StructureMap-Sbdh2EhmiDeliveryStatus-transform.html)
 
 <!-- br -->
 

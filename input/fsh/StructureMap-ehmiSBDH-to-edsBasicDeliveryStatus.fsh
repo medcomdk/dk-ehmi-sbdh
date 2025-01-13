@@ -1,7 +1,7 @@
 Instance: Sbdh2edsBasicDeliveryStatus-transform
 InstanceOf: StructureMap
-Title: "Transformation specification of an ehmiSBDH Envelope to a EHMI Delivery Status structure (edsBasicDeliveryStatus)"
-Description: "Transformation specification of an ehmiSBDH Envelope to a EHMI Delivery Status structure (edsBasicDeliveryStatus)"
+Title: "Transformation specification of an ehmiSBDH Envelope to an EHMI Delivery Status structure (edsBasicDeliveryStatus)"
+Description: "Transformation specification of an ehmiSBDH Envelope to an EHMI Delivery Status structure (edsBasicDeliveryStatus)"
 Usage: #definition
 * url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/Sbdh2edsBasicDeliveryStatus-transform"
 * name = "Transform from an ehmiSBDH Envelope to an edsBasicDeliveryStatus"

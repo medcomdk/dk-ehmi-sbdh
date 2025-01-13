@@ -1,13 +1,13 @@
 Instance: MedComMessage2MedComMessageAck-transform
 InstanceOf: StructureMap
-Title: "Transformation specification of a MedCom Messaging Message to an MedComMessageAck"
-Description: "Transformation specification of a MedCom Messaging Message to an MedComMessageAck"
+Title: "Transformation specification of a MedCom Messaging Message to a MedComMessageAck"
+Description: "Transformation specification of a MedCom Messaging Message to a MedComMessageAck"
 Usage: #definition
 * url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedComMessage2MedComMessageAck-transform"
 * name = "MedComMessage2MedComMessageAckTransform"
-* title = "Transformation specification of a MedCom Messaging Message to an MedComMessageAck"
+* title = "Transformation specification of a MedCom Messaging Message to a MedComMessageAck"
 * status = #draft
-* description = "Transform from a MedCom Messaging Message to an MedComMessageAck"
+* description = "Transform from a MedCom Messaging Message to a MedComMessageAck"
 * structure[0].url = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-message"
 * structure[=].mode = #source
 * structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/branches/v0.90.1-beta.1/ehmiSBDH/StandardBusinessDocumentHeader.xsd"

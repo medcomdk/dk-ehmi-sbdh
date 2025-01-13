@@ -1,7 +1,7 @@
 Instance: ehmiSbdh2ehmiSbdhAck-transform
 InstanceOf: StructureMap
-Title: "Transformation specification of an ehmiSbdh Envelope to a EHMI Delivery Status structure (ehmiSbdhAck)"
-Description: "Transformation specification of an ehmiSbdh Envelope to a EHMI Delivery Status structure (ehmiSbdhAck)"
+Title: "Transformation specification of an ehmiSbdh Envelope to an EHMI Delivery Status structure (ehmiSbdhAck)"
+Description: "Transformation specification of an ehmiSbdh Envelope to an EHMI Delivery Status structure (ehmiSbdhAck)"
 Usage: #definition
 * url = "http://medcomehmi.dk/ig/dk-ehmi-ehmiSbdh/StructureMap/ehmiSbdh2ehmiSbdhAck-transform"
 * name = "Transform from an ehmiSbdh Envelope to an ehmiSbdhAck"
