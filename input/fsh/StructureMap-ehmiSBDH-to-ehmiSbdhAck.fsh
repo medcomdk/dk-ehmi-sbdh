@@ -1,16 +1,16 @@
 Instance: ehmiSbdh2ehmiSbdhAck-transform
 InstanceOf: StructureMap
-Title: "Transformation specification of an ehmiSbdh Envelope to an EHMI Delivery Status structure (ehmiSbdhAck)"
-Description: "Transformation specification of an ehmiSbdh Envelope to an EHMI Delivery Status structure (ehmiSbdhAck)"
+Title: "Transformation specification of an ehmiSbdh Envelope to an ehmiSbdhAck "
+Description: "Transformation specification of an ehmiSbdh Envelope to an ehmiSbdhAck "
 Usage: #definition
 * url = "http://medcomehmi.dk/ig/dk-ehmi-ehmiSbdh/StructureMap/ehmiSbdh2ehmiSbdhAck-transform"
 * name = "Transform from an ehmiSbdh Envelope to an ehmiSbdhAck"
 * title = "Transform from an ehmiSbdh Envelope to an ehmiSbdhAck"
 * status = #draft
 * description = "Transform from a FHIR Messsage to an ehmiSbdh Envelope"
-* structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-ehmiSbdh/branches/v0.90.1-beta.1/ehmiSbdh/StandardBusinessDocumentHeader.xsd"
+* structure[0].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-ehmiSbdh/branches/v0.90.1-beta.1/ehmiSbdh/StandardBusinessDocumentHeader.xsd"
 * structure[=].mode = #source
-* structure[0].url = "http://medcomehmi.dk/ig/dk-ehmi-eds/StructureDefinition/ehmiSbdhAck"
+* structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-ehmiSbdh/branches/v0.90.1-beta.1/ehmiSbdh/StandardBusinessDocumentHeader.xsd"
 * structure[=].mode = #target
 
 
