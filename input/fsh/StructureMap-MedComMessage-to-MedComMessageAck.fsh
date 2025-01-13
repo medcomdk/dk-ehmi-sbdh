@@ -10,7 +10,7 @@ Usage: #definition
 * description = "Transform from a MedCom Messaging Message to a MedComMessageAck"
 * structure[0].url = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-message"
 * structure[=].mode = #source
-* structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/branches/v0.90.1-beta.1/ehmiSBDH/StandardBusinessDocumentHeader.xsd"
+* structure[+].url = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-message"
 * structure[=].mode = #target
 * group[0].name = "HeaderVersion"
 * group[=].typeMode = #none
