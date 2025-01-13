@@ -39,7 +39,7 @@ For a number of different mappings to and from ehmiSBDH and/or MedCom Messaging 
 These are:
 - **MedCom Messaging Message**
   - [Transformation specification of a MedCom Messaging Message to an ehmiSBDH Envelope](StructureMap-MedComMessage2ehmiSbdh-transform.html)
-  - [Transformation specification of a MedCom Messaging Message to a MedCom Messaging Ack](StructureMap-MedComMessage2MedComMessageAck-transform.html)
+  - [Transformation specification of a MedCom Messaging Message to a MedCom Messaging Ack](StructureMap-MedComMessageAck2ehmiSbdh-transform.html)
   - [Transformation specification of a MedCom Messaging Ack to an ehmiSBDH Envelope](StructureMap-MedComMessageAck2ehmiSbdh-transform.html)
   - [Transformation specification of a Medcom Messaging Message and an ehmiSBDH Envelope to a DocumentReference](StructureMap-MedComMessagingMessage2MedComDocumentReference-transform.html)
 
