@@ -1,9 +1,9 @@
-Instance: MedComMessageAck2Sbdh-transform
+Instance: MedComMessageAck2ehmiSbdh-transform
 InstanceOf: StructureMap
 Title: "Transformation specification of a MedCom Message Ack to an ehmiSBDH Envelope"
 Description: "Transformation specification of a MedCom Message Ack to an ehmiSBDH Envelope"
 Usage: #definition
-* url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedComMessageAck2Sbdh-transform"
+* url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedComMessageAck2ehmiSbdh-transform"
 * name = "MedComMessageAck2SbdhTransform"
 * title = "Transformation specification of a MedCom Message Ack to an ehmiSBDH Envelope"
 * status = #draft

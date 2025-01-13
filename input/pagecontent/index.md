@@ -31,3 +31,19 @@ ehmiSBDH wraps the bidirectional message with clinical content between the Messa
 
 - serve EDS with metadata in use cases where non-patient related messages are exchanged like in message acknowledgements and SBDH acknowledgements
 - serve EDS with metadata in use cases where patient related messages are exchanged like in the FHIR message HomeCareObservation and messages alike in OIOXml and Edifact. 
+
+## Structure Mappings
+
+For a number of different mappings to and from ehmiSBDH and/or MedCom Messaging Message, there is developed a number of FHIR Structure Mappings in order for the suppliers to better understand and potentially automate some tasks around mappings.
+
+These are:
+- **MedCom Messaging Message**
+  - [Transformation specification of a MedCom Messaging Message to an ehmiSBDH Envelope](StructureMap-MedComMessage2ehmiSbdh-transform.html)
+  - [Transformation specification of a MedCom Messaging Message to a MedCom Messaging Ack](StructureMap-MedComMessage2MedComMessageAck-transform.html)
+  - [Transformation specification of a MedCom Messaging Ack to an ehmiSBDH Envelope](StructureMap-MedComMessageAck2ehmiSbdh-transform.html)
+  - [Transformation specification of a Medcom Messaging Message and an ehmiSBDH Envelope to a DocumentReference](StructureMap-MedComMessagingMessage2MedComDocumentReference-transform.html)
+
+- **ehmiSBDH Envelope**
+  - [Transformation specification of an ehmiSBDH Envelope with a patient to an EHMI Delivery Status structure](StructureMap-ehmiSbdh2edsPatientDeliveryStatus-transform.html)
+  - [Transformation specification of an ehmiSBDH Envelope without a patient to an EHMI Delivery Status structure](StructureMap-Sbdh2edsBasicDeliveryStatus-transform.html)
+  

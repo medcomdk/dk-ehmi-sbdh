@@ -1732,25 +1732,7 @@ Encoding in the pilot will be the following for all the MedCom FHIR messages:
 Encoding will have the following outcome space for ReceiptAcknowledgement and ReceiptException in the pilot:
 - "UTF-8"
 
-## SBDH Structure Mappings
-
-For a number of different mappings to and from SBDH elements, there is developed a number of FHIR Structure Mappings in order for the suppliers to better understand and potentially automate some tasks around mappings.
-
-These are:
-- **MedCom Messaging Message**
-  - [Transformation specification of a MedCom Messaging Message to an ehmiSBDH Envelope](StructureMap-MedComMessage2Sbdh-transform.html)
-  - [TBD: Transformation specification of a Medcom Messaging Message and an ehmiSBDH Envelope to a DocumentReference](StructureMap-MedComMessagingMessage2MedComDocumentReference-transform.html)
-
-- **ehmiSBDH Envelope**
-  - [TBD: Transformation specification of an ehmiSBDH Envelope to an EHMI Delivery Status structure](StructureMap-Sbdh2edsBasicDeliveryStatus-transform.html)
-  - [TBD: Transformation specification of an ehmiSBDH Envelope to an EHMI Delivery Status structure](StructureMap-ehmiSbdh2edsPatientDeliveryStatus-transform.html)
-
-<!-- br -->
-
-
 ## SBDH xsd schemas
-
-<!-- br -->
 
 All SBDH xsd files can be found via the [download-page](downloads.html), but an overview of what they most importantly contain can be seen here:
 
