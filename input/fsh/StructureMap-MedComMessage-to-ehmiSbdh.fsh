@@ -1,5 +1,5 @@
 
-Instance: MedComMessage2Sbdh-transform
+Instance: MedComMessagingMessage2ehmiSbdh-transform
 InstanceOf: StructureMap
 Title: "Transformation specification of a MedCom Messaging Message to an ehmiSBDH Envelope "
 Description: "Transformation specification of a MedCom Messaging Message to an ehmiSBDH Envelope "
