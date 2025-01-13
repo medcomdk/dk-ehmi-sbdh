@@ -8,7 +8,8 @@ Usage: #definition
 * title = "Transformation specification of a MedCom Message Ack to an ehmiSBDH Envelope"
 * status = #draft
 * description = "Transform from a MedCom Message Ack to an ehmiSBDH Envelope"
-* structure[0].url = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-message"
+* structure[0].url = http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgement
+//* structure[0].url = http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-message
 * structure[=].mode = #source
 * structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/branches/v0.90.1-beta.1/ehmiSBDH/StandardBusinessDocumentHeader.xsd"
 * structure[=].mode = #target
