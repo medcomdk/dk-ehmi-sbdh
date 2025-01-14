@@ -13,6 +13,7 @@ Usage: #definition
 * structure[=].mode = #source
 * structure[+].url = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-message"
 * structure[=].mode = #target
+
 * group[0].name = "HeaderVersion"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
@@ -29,6 +30,7 @@ Usage: #definition
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "HeaderVersion"
 * group[=].rule[=].target.transform = #copy
+
 * group[+].name = "SbdhSender"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
@@ -54,6 +56,7 @@ Usage: #definition
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "StandardBusinessDocumentHeader/Sender/identifier@Authority"
 * group[=].rule[=].target.transform = #copy
+
 * group[+].name = "SbdhReceiver"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
@@ -78,6 +81,7 @@ Usage: #definition
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "StandardBusinessDocumentHeader/Receiver/identifier@Authority"
 * group[=].rule[=].target.transform = #copy
+
 //DocumentIdentification
 * group[+].name = "SbdhDocumentIdentification"
 * group[=].typeMode = #none
@@ -119,6 +123,7 @@ Usage: #definition
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "StandardBusinessDocumentHeader/DocumentIdentification/Type"
 * group[=].rule[=].target.transform = #copy
+
 //DocumentIdentification
 * group[+].name = "SbdhDocumentIdentificationCreationDateAndTime"
 * group[=].typeMode = #none
@@ -136,6 +141,7 @@ Usage: #definition
 * group[=].rule[=].target.element = "StandardBusinessDocumentHeader/DocumentIdentification/CreationDateAndTime"
 * group[=].rule[=].target.transform = #copy
 //BusinessScopes
+
 //BusinessScopeEdeliveryMessageCommunication
 * group[+].name = "BusinessScopeEdeliveryMessageCommunication"
 * group[=].typeMode = #none
@@ -189,6 +195,7 @@ Usage: #definition
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[PROCESSID]/Identifier"
 * group[=].rule[=].target.transform = #create
+
 //BusinessScope - Health message communication
 * group[+].name = "BusinessScopeHealthMessageCommunication"
 * group[=].typeMode = #none
@@ -396,6 +403,7 @@ Usage: #definition
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[ORIGINALMESSAGEVERSION]/Identifier"
 * group[=].rule[=].target.transform = #create
+
 //BusinessScope - XDS-METADATA 
 * group[+].name = "BusinessScopeXdsMetadata"
 * group[=].typeMode = #none
@@ -426,6 +434,7 @@ Usage: #definition
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "Scope[XDS-METADATA]/Identifier"
 * group[=].rule[=].target.transform = #create
+
 //Group: Reliable messaging
 * group[+].name = "BusinessScopeSbdhReliableMessaging"
 * group[=].typeMode = #none
