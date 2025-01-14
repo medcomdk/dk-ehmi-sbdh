@@ -1,13 +1,13 @@
-Instance: MedComMessage2MedComMessageAck-transform
+Instance: StructureMap-MedComMessagingMessage2MedComAcknowledgementMessage-transform
 InstanceOf: StructureMap
-Title: "Transformation specification of a MedCom Messaging Message to a MedComMessageAck"
-Description: "Transformation specification of a MedCom Messaging Message to a MedComMessageAck"
+Title: "Transformation specification of a MedCom Messaging Message to a MedComAcknowledgementMessage"
+Description: "Transformation specification of a MedCom Messaging Message to a MedComAcknowledgementMessage"
 Usage: #definition
-* url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedComMessage2MedComMessageAck-transform"
-* name = "MedComMessage2MedComMessageAckTransform"
-* title = "Transformation specification of a MedCom Messaging Message to a MedComMessageAck"
+* url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedComMessage2MedComAcknowledgementMessage-transform"
+* name = "MedComMessage2MedComAcknowledgementMessageTransform"
+* title = "Transformation specification of a MedCom Messaging Message to a MedComAcknowledgementMessage"
 * status = #draft
-* description = "Transform from a MedCom Messaging Message to a MedComMessageAck"
+* description = "Transform from a MedCom Messaging Message to a MedComAcknowledgementMessage"
 * structure[0].url = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-message"
 * structure[=].mode = #source
 * structure[+].url = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-message"

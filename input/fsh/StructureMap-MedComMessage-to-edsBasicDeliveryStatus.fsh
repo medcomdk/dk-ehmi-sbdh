@@ -1,4 +1,4 @@
-Instance: MedComMessage2edsBasicDeliveryStatus-transform
+Instance: StructureMap-MedComMessagingMessage2edsBasicDeliveryStatus-transform
 InstanceOf: StructureMap
 Title: "Transformation specification of a MedComMessage to an EHMI Delivery Status structure (edsBasicDeliveryStatus)"
 Description: "Transformation specification of a MedComMessage to an EHMI Delivery Status structure (edsBasicDeliveryStatus)"

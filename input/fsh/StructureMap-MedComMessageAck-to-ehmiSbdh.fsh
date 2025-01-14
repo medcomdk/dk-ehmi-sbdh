@@ -1,10 +1,10 @@
-Instance: MedComMessageAck2ehmiSbdh-transform
+Instance: MedComAcknowledgementMessage2ehmiSbdh-transform
 InstanceOf: StructureMap
 Title: "Transformation specification of a MedCom Acknowledgement Message to an ehmiSBDH Envelope"
 Description: "Transformation specification of a MedCom Acknowledgement Message to an ehmiSBDH Envelope"
 Usage: #definition
-* url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedComMessageAck2ehmiSbdh-transform"
-* name = "MedComMessageAck2SbdhTransform"
+* url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedComAcknowledgementMessage2ehmiSbdh-transform"
+* name = "MedComAcknowledgementMessage2SbdhTransform"
 * title = "Transformation specification of a MedCom Acknowledgement Message to an ehmiSBDH Envelope"
 * status = #draft
 * description = "Transform from a MedCom Acknowledgement Message to an ehmiSBDH Envelope"
