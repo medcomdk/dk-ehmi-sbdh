@@ -3,6 +3,7 @@ InstanceOf: StructureMap
 Title: "Transformation specification of a MedComMessage to an EHMI Delivery Status structure (edsPatientDeliveryStatus)"
 Description: "Transformation specification of a MedComMessage to an EHMI Delivery Status structure (edsPatientDeliveryStatus)"
 Usage: #definition
+* id = "StrMap-MedComMessagingMessage2edsPatientDeliveryStatus-transform"
 * url = "http://medcomehmi.dk/ig/dk-ehmi-MedComMessage/StructureMap/MedComMessage2edsPatientDeliveryStatus-transform"
 * name = "Transform from a MedComMessage to an edsPatientDeliveryStatus"
 * title = "Transform from a MedComMessage to an edsPatientDeliveryStatus"
