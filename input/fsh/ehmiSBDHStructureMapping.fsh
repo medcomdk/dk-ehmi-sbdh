@@ -1,11 +1,11 @@
 /*
 Alias: Bundle = http://hl7.org/fhir/StructureDefinition/Bundle
-Alias: SBDH = http://example.org/StructureDefinition/SBDH
+Alias: ehmiSbdh= http://example.org/StructureDefinition/SBDH
 
 Instance: ehmiSBDBundleToSBDH
 InstanceOf: StructureMap
 Title: "Mapping ehmiSBDBundle to SBDH"
-Description: "StructureMap for transforming ehmiSBDBundle to SBDH format."
+Description: "StructureMap for transforming ehmiSBDBundle to ehmiSbdhformat."
 
 * url = "http://example.org/StructureMap/ehmiSBDBundleToSBDH"
 * name = "ehmiSBDBundleToSBDH"

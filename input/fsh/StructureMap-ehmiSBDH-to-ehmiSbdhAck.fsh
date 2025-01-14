@@ -591,7 +591,7 @@ Usage: #definition
 * group[=].rule[=].target.transform = #create
 
 /*
-//SBDH BusinessServices - Request
+//ehmiSbdhBusinessServices - Request
 BusinessServiceName
 ServiceTransaction – TypeOfServiceTransaction
 IsNonRepudiationRequired
@@ -609,7 +609,7 @@ Recurrence
 CorrelationInformation - RequestingDocumentCreationDateTime
 CorrelationInformation - RequestingDocumentInstanceIdentifier
 CorrelationInformation - ExpectedResponseDateTime
-//SBDH BusinessServices - Response
+//ehmiSbdhBusinessServices - Response
 BusinessServiceName
 ServiceTransaction – TypeOfServiceTransaction
 IsNonRepudiationRequired

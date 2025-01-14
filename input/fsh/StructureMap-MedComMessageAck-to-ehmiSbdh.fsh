@@ -1,13 +1,13 @@
 Instance: MedComAcknowledgementMessage2ehmiSbdh-transform
 InstanceOf: StructureMap
-Title: "Transformation specification of a MedCom Acknowledgement Message to an ehmiSBDH Envelope"
-Description: "Transformation specification of a MedCom Acknowledgement Message to an ehmiSBDH Envelope"
+Title: "Transformation specification of a MedCom Acknowledgement Message to an ehmiSbdhEnvelope"
+Description: "Transformation specification of a MedCom Acknowledgement Message to an ehmiSbdhEnvelope"
 Usage: #definition
 * url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedComAcknowledgementMessage2ehmiSbdh-transform"
 * name = "MedComAcknowledgementMessage2SbdhTransform"
-* title = "Transformation specification of a MedCom Acknowledgement Message to an ehmiSBDH Envelope"
+* title = "Transformation specification of a MedCom Acknowledgement Message to an ehmiSbdhEnvelope"
 * status = #draft
-* description = "Transform from a MedCom Acknowledgement Message to an ehmiSBDH Envelope"
+* description = "Transform from a MedCom Acknowledgement Message to an ehmiSbdhEnvelope"
 * structure[0].url = "http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgement.html"
 //* structure[0].url = http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-message
 * structure[=].mode = #source
@@ -581,7 +581,7 @@ Usage: #definition
 * group[=].rule[=].target.transform = #create
 
 /*
-//SBDH BusinessServices - Request
+//ehmiSbdhBusinessServices - Request
 BusinessServiceName
 ServiceTransaction – TypeOfServiceTransaction
 IsNonRepudiationRequired
@@ -599,7 +599,7 @@ Recurrence
 CorrelationInformation - RequestingDocumentCreationDateTime
 CorrelationInformation - RequestingDocumentInstanceIdentifier
 CorrelationInformation - ExpectedResponseDateTime
-//SBDH BusinessServices - Response
+//ehmiSbdhBusinessServices - Response
 BusinessServiceName
 ServiceTransaction – TypeOfServiceTransaction
 IsNonRepudiationRequired

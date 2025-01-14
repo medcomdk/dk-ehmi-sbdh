@@ -73,7 +73,7 @@ Description: "Profile for EHMI Standard Business Document Header Bundle"
 Instance: ehmiSBDHBundle
 InstanceOf: EhmiStandardBusinessDocumentHeaderBundle
 Title: "EHMI Standard Business Document Header Bundle"
-Description: "Profile for EHMI SBDH Bundle"
+Description: "Profile for EHMI ehmiSbdhBundle"
 * id = "EhmiStandardBusinessDocumentHeaderBundle"
 //* entry[EhmiSbdhHeaderVersion].fullUrl = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/Endpoint/ehmiSbdhHeaderVersion"
 * entry[EhmiSbdhHeaderVersion].resource = ehmiSbdhHeaderVersion
@@ -91,7 +91,7 @@ Description: "Profile for EHMI SBDH Bundle"
 Instance: ehmiSbdhHeaderVersion
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for HeaderVersion"
-Description: "Profile for EHMI SBDH Scope structure"
+Description: "Profile for EHMI ehmiSbdhScope structure"
 * code = #transfer
 * code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.type.coding.code = #HeaderVersion
@@ -125,7 +125,7 @@ Description: "SbdhSender Partner information"
 Instance: ehmiSbdhSender
 InstanceOf: EhmiSbdhSender
 Title: "EHMI Standard Business Document Header EhmiSbdhSender"
-Description: "Profile for EHMI SBDH EhmiSbdhSender"
+Description: "Profile for EHMI ehmiSbdhSender"
 * status = #active
 * identifier.type = #iso6523-actorid-upis
 * identifier.system = "http://gs1.org/gln"
@@ -143,7 +143,7 @@ Description: "SbdhReceiver Partner information"
 Instance: ehmiSbdhReceiver
 InstanceOf: EhmiSbdhReceiver
 Title: "EHMI Standard Business Document Header EhmiSbdhReceiver"
-Description: "Profile for EHMI SBDH EhmiSbdhReceiver"
+Description: "Profile for EHMI ehmiSbdhReceiver"
 * status = #active
 * identifier.type = #iso6523-actorid-upis
 * identifier.system = "http://gs1.org/gln"
@@ -156,7 +156,7 @@ Description: "Profile for EHMI SBDH EhmiSbdhReceiver"
 Profile: EhmiStandardBusinessDocumentHeaderDocumentInformationBundle
 Parent: Bundle
 Title: "EHMI Standard Business Document Header DocumentInformation Bundle"
-Description: "Profile for EHMI SBDH DocumentInformation Bundle"
+Description: "Profile for EHMI ehmiSbdhDocumentInformation Bundle"
 * id = "EhmiStandardBusinessDocumentHeaderDocumentInformationBundle"
 * type = #collection
 * entry ^slicing.discriminator.type = #value
@@ -171,7 +171,7 @@ Description: "Profile for EHMI SBDH DocumentInformation Bundle"
 Instance: ehmiSBDHDocumentInformationBundle
 InstanceOf: EhmiStandardBusinessDocumentHeaderDocumentInformationBundle
 Title: "EHMI Standard Business Document Header DocumentInformation Bundle"
-Description: "Profile for EHMI SBDH DocumentInformation Bundle"
+Description: "Profile for EHMI ehmiSbdhDocumentInformation Bundle"
 //* entry[EhmiSBDHDocumentInformation].fullUrl = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/Basic/ehmiSBDHDocumentInformation"
 * entry[+].fullUrl = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/Basic/ehmiSBDHDocumentInformation"
 * entry[=].resource = ehmiSBDHDocumentInformation
@@ -179,7 +179,7 @@ Description: "Profile for EHMI SBDH DocumentInformation Bundle"
 Profile: EhmiSBDHDocumentInformation
 Parent: Basic
 Title: "EHMI Standard Business Document Header DocumentInformation structure"
-Description: "Profile for EHMI SBDH DocumentInformation structure"
+Description: "Profile for EHMI ehmiSbdhDocumentInformation structure"
 * identifier.type MS SU
 * identifier.value MS SU
 * code.coding.code MS SU
@@ -193,7 +193,7 @@ Description: "Profile for EHMI SBDH DocumentInformation structure"
 Instance: ehmiSBDHDocumentInformation
 InstanceOf: EhmiSBDHDocumentInformation
 Title: "EHMI Standard Business Document Header Scope structure for DocumentInformation"
-Description: "Profile for EHMI SBDH DocumentInformation structure"
+Description: "Profile for EHMI ehmiSbdhDocumentInformation structure"
 * code = #HomeCareObservation
 * code.coding.display = "HomeCareObservation|2.0"
 * code.coding.version = "2.0"
@@ -207,7 +207,7 @@ Description: "Profile for EHMI SBDH DocumentInformation structure"
 Profile: EhmiStandardBusinessDocumentHeaderBusinessScopeBundle
 Parent: EhmiSbdBundleTemplate
 Title: "EHMI Standard Business Document Header BusinessScope Bundle"
-Description: "Profile for EHMI SBDH BusinessScope Bundle"
+Description: "Profile for EHMI ehmiSbdhBusinessScope Bundle"
 * id = "EhmiStandardBusinessDocumentHeaderBusinessScopeBundle"
 * type = #collection
 * entry ^slicing.discriminator.type = #value
@@ -230,7 +230,7 @@ Description: "Profile for EHMI SBDH BusinessScope Bundle"
 Profile: EhmiSBDHScope
 Parent: Basic
 Title: "EHMI Standard Business Document Header Scope structure"
-Description: "Profile for EHMI SBDH Scope structure"
+Description: "Profile for EHMI ehmiSbdhScope structure"
 * identifier.type.coding.code 1..1
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 * identifier.value 1..1 MS
@@ -243,7 +243,7 @@ Description: "Profile for EHMI SBDH Scope structure"
 Instance: ehmiSBDHBusinessScopeBundle
 InstanceOf: EhmiStandardBusinessDocumentHeaderBusinessScopeBundle
 Title: "EHMI Standard Business Document Header BusinessScope Bundle"
-Description: "Profile for EHMI SBDH BusinessScope Bundle"
+Description: "Profile for EHMI ehmiSbdhBusinessScope Bundle"
 // Peppol scopes
 * entry[+].fullUrl = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/Basic/ehmiSBDHScopeDocumentId"
 * entry[=].resource = ehmiSBDHScopeDocumentId
@@ -276,7 +276,7 @@ Description: "Profile for EHMI SBDH BusinessScope Bundle"
 Instance: ehmiSBDHScopeDocumentId
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for DOCUMENTID"
-Description: "Profile for EHMI SBDH Scope structure"
+Description: "Profile for EHMI ehmiSbdhScope structure"
 * code = #transfer
 * code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.type.coding.code = #DOCUMENTID
@@ -286,7 +286,7 @@ Description: "Profile for EHMI SBDH Scope structure"
 Instance: ehmiSBDHScopeProcessId
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for PROCESSID"
-Description: "Profile for EHMI SBDH Scope structure"
+Description: "Profile for EHMI ehmiSbdhScope structure"
 * code = #transfer
 * code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.value = "sdn-emergence"
@@ -298,7 +298,7 @@ Description: "Profile for EHMI SBDH Scope structure"
 Instance: ehmiSBDHScopePatientId
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for PATIENTID"
-Description: "Profile for EHMI SBDH Scope structure"
+Description: "Profile for EHMI ehmiSbdhScope structure"
 * code = #transfer
 * code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.value = "0101910227"
@@ -308,7 +308,7 @@ Description: "Profile for EHMI SBDH Scope structure"
 Instance: ehmiSBDHScopeSenderId
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for SENDERID"
-Description: "Profile for EHMI SBDH Scope structure"
+Description: "Profile for EHMI ehmiSbdhScope structure"
 * code = #transfer
 * code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.value = "SOR1170101"
@@ -318,7 +318,7 @@ Description: "Profile for EHMI SBDH Scope structure"
 Instance: ehmiSBDHScopeReceiverId
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for RECEIVERID"
-Description: "Profile for EHMI SBDH Scope structure"
+Description: "Profile for EHMI ehmiSbdhScope structure"
 * code = #transfer
 * code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.value = "SOR1170102"
@@ -328,7 +328,7 @@ Description: "Profile for EHMI SBDH Scope structure"
 Instance: ehmiSBDHScopeMessageIdentifier
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for MESSAGEIDENTIFIER"
-Description: "Profile for EHMI SBDH Scope structure"
+Description: "Profile for EHMI ehmiSbdhScope structure"
 * code = #transfer
 * code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.value = "Msg1234567890"
@@ -338,7 +338,7 @@ Description: "Profile for EHMI SBDH Scope structure"
 Instance: ehmiSBDHScopeMessageEnvelopeIdentifier
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for MESSAGEENVELOPEIDENTIFIER"
-Description: "Profile for EHMI SBDH Scope structure"
+Description: "Profile for EHMI ehmiSbdhScope structure"
 * code = #transfer
 * code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.value = "Env12345678901"
@@ -348,7 +348,7 @@ Description: "Profile for EHMI SBDH Scope structure"
 Instance: ehmiSBDHScopeOriginalMessageIdentifier
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for ORIGINALMESSAGEIDENTIFIER"
-Description: "Profile for EHMI SBDH Scope structure"
+Description: "Profile for EHMI ehmiSbdhScope structure"
 * code = #transfer
 * code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.value = "Msg1234567890"
@@ -358,7 +358,7 @@ Description: "Profile for EHMI SBDH Scope structure"
 Instance: ehmiSBDHScopeOriginalMessageEnvelopeIdentifier
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for ORIGINALMESSAGEENVELOPEIDENTIFIER"
-Description: "Profile for EHMI SBDH Scope structure"
+Description: "Profile for EHMI ehmiSbdhScope structure"
 * code = #transfer
 * code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.value = "Env12345678901"
@@ -368,7 +368,7 @@ Description: "Profile for EHMI SBDH Scope structure"
 Instance: ehmiSBDHScopeOriginalMessageStandard
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for ORIGINALMESSAGESTANDARD"
-Description: "Profile for EHMI SBDH Scope structure"
+Description: "Profile for EHMI ehmiSbdhScope structure"
 * code = #transfer
 * code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.value = "HomeCareObservation"
@@ -378,7 +378,7 @@ Description: "Profile for EHMI SBDH Scope structure"
 Instance: ehmiSBDHScopeOriginalMessageVersion
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for ORIGINALMESSAGEVERSION"
-Description: "Profile for EHMI SBDH Scope structure"
+Description: "Profile for EHMI ehmiSbdhScope structure"
 * code = #transfer
 * code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.value = "2.0"
@@ -389,7 +389,7 @@ Description: "Profile for EHMI SBDH Scope structure"
 Instance: ehmiSBDHScopeXdsMetadata
 InstanceOf: EhmiSBDHScope
 Title: "EHMI Standard Business Document Header Scope structure for XDS-Metadata"
-Description: "Profile for EHMI SBDH Scope structure"
+Description: "Profile for EHMI ehmiSbdhScope structure"
 * code = #transfer
 * code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.value = "CDATA:DocumentReference-structure"

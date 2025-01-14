@@ -1,13 +1,13 @@
 Instance: MedComMessagingMessage2MedComDocumentReference-transform
 InstanceOf: StructureMap
-Title: "Transformation specification of a MedComMessagingMessage and an ehmiSBDH Envelope to a DocumentReference"
-Description: "Transformation specification of a MedComMessagingMessage and an ehmiSBDH Envelope to a DocumentReference"
+Title: "Transformation specification of a MedComMessagingMessage and an ehmiSbdhEnvelope to a DocumentReference"
+Description: "Transformation specification of a MedComMessagingMessage and an ehmiSbdhEnvelope to a DocumentReference"
 Usage: #definition
 * url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedComMessagingMessage2MedComDocumentReference-transform"
-* name = "Transformation specification of a MedComMessagingMessage and an ehmiSBDH Envelope to a DocumentReference"
-* title = "Transformation specification of a MedComMessagingMessage and an ehmiSBDH Envelope to a DocumentReference"
+* name = "Transformation specification of a MedComMessagingMessage and an ehmiSbdhEnvelope to a DocumentReference"
+* title = "Transformation specification of a MedComMessagingMessage and an ehmiSbdhEnvelope to a DocumentReference"
 * status = #draft
-* description = "Transformation specification of a MedComMessagingMessage and an ehmiSBDH Envelope to a DocumentReference"
+* description = "Transformation specification of a MedComMessagingMessage and an ehmiSbdhEnvelope to a DocumentReference"
 * structure[+].url = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-message"
 * structure[=].mode = #source
 * structure[+].url = "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-documentreference"

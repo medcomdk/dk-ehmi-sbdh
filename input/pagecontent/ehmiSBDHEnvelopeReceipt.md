@@ -38,7 +38,7 @@ EHMI ReceiptAcknowledgement is used as a positive transport receipt, and so that
 
 #### RequestingDocumentInstanceIdentifier
 
-Contained as a BinaryContent in an EHMI SBDH ReceiptAcknowledgement is also an ebBP signal, which in principle contains the same information, but which does not need to be checked when it is a ReceiptAcknowledgement.
+Contained as a BinaryContent in an EHMI ehmiSbdhReceiptAcknowledgement is also an ebBP signal, which in principle contains the same information, but which does not need to be checked when it is a ReceiptAcknowledgement.
 
 <img src="ehmiSBDH_ReceiptAckowledgement.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><br>
 

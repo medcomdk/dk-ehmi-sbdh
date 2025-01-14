@@ -13,7 +13,7 @@ class Scope
     String Identifier
 }
 
-class "BusinessScope" as BusinessScope <<SBDH Element>>
+class "BusinessScope" as BusinessScope <<ehmiSbdhElement>>
 class "Scope" as Scope <<BusinessScope Element>>
 
 BusinessScope "1" *-- "0..*" Scope

@@ -92,9 +92,9 @@ menu:
     ehmiSBDH: ehmiSBDH.html
     ehmiSBDHAck: ehmiSBDHAck.html
     EHMI EnvelopeReceipt: ehmiSBDHEnvelopeReceipt.html
-    ehmiSBDH Reliable Messaging: ehmiSBDHReliableMessaging.html
+    ehmiSbdhReliable Messaging: ehmiSBDHReliableMessaging.html
     References: references.html
-  ehmiSBDH schemas: 
+  ehmiSbdhschemas: 
     StandardBusinessDocumentHeader: ehmiSBDH_StandardBusinessDocumentHeader.xsd.html
     Partner: ehmiSBDH_Partner.xsd.html
     DocumentIdentification: ehmiSBDH_DocumentIdentification.xsd.html

@@ -1,13 +1,13 @@
 Instance: Sbdh2edsBasicDeliveryStatus-transform
 InstanceOf: StructureMap
-Title: "Transformation specification of an ehmiSBDH Envelope to an EHMI Delivery Status structure (edsBasicDeliveryStatus)"
-Description: "Transformation specification of an ehmiSBDH Envelope to an EHMI Delivery Status structure (edsBasicDeliveryStatus)"
+Title: "Transformation specification of an ehmiSbdhEnvelope to an EHMI Delivery Status structure (edsBasicDeliveryStatus)"
+Description: "Transformation specification of an ehmiSbdhEnvelope to an EHMI Delivery Status structure (edsBasicDeliveryStatus)"
 Usage: #definition
 * url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/Sbdh2edsBasicDeliveryStatus-transform"
-* name = "Transform from an ehmiSBDH Envelope to an edsBasicDeliveryStatus"
-* title = "Transform from an ehmiSBDH Envelope to an edsBasicDeliveryStatus"
+* name = "Transform from an ehmiSbdhEnvelope to an edsBasicDeliveryStatus"
+* title = "Transform from an ehmiSbdhEnvelope to an edsBasicDeliveryStatus"
 * status = #draft
-* description = "Transform from a FHIR Messsage to an ehmiSBDH Envelope"
+* description = "Transform from a FHIR Messsage to an ehmiSbdhEnvelope"
 * structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/branches/v0.90.1-beta.1/ehmiSBDH/StandardBusinessDocumentHeader.xsd"
 * structure[=].mode = #source
 * structure[0].url = "http://medcomehmi.dk/ig/dk-ehmi-eds/StructureDefinition/edsBasicDeliveryStatus"

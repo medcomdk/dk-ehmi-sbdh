@@ -20,13 +20,13 @@ It is developed to
 
 <br>
 
-## SBDH – Generelle elementer 
+## ehmiSbdh– Generelle elementer 
 
 ### Generelt
 
 <br>
 
-StandardBusinessDocumentHeader (SBDH) er en konvolutspecifikation udstedt af GS1 og profileret til anvendelse i PEPPOL. Den understøttes af eDelivery's Access Points (AP) ift. AS4 protokollen. Vi følger i EHMI konventionerne, som er udlagt i PEPPOLs profilering, men udvider den også til at kunne passe på sundhedsområdet. SBDH er dog ingenting uden en omgivende container, kaldet StandardBusinessDocument (SBD).
+StandardBusinessDocumentHeader (SBDH) er en konvolutspecifikation udstedt af GS1 og profileret til anvendelse i PEPPOL. Den understøttes af eDelivery's Access Points (AP) ift. AS4 protokollen. Vi følger i EHMI konventionerne, som er udlagt i PEPPOLs profilering, men udvider den også til at kunne passe på sundhedsområdet. ehmiSbdher dog ingenting uden en omgivende container, kaldet StandardBusinessDocument (SBD).
 
 <br>
 
@@ -38,7 +38,7 @@ StandardBusinessDocument er som nævnt SBDHs omgivende container, og er en wrapp
 -	StandardBusinessDocumentHeader
 -	BinaryContent (base64-encodet)
 
-Selvom StandardBusinessDocument, som sådan er konvolutten, bruges termen SBDH generelt om hele konvolutten, da det er dette indhold som er særligt interessant i meddelelsesudvekslingen.
+Selvom StandardBusinessDocument, som sådan er konvolutten, bruges termen ehmiSbdhgenerelt om hele konvolutten, da det er dette indhold som er særligt interessant i meddelelsesudvekslingen.
 BinaryContent er elementet som indeholder en base64-encodet meddelelse eller kvittering for en afsendt SBDH.
 
 <br>
@@ -47,7 +47,7 @@ BinaryContent er elementet som indeholder en base64-encodet meddelelse eller kvi
 
 <br>
 
-Indholdet i SBDH er for en stor dels vedkommende bestemt af hvorledes
+Indholdet i ehmiSbdher for en stor dels vedkommende bestemt af hvorledes
 -	de samme informationer registreres i EER
 -	de samme informationer registreres i SMP
 -	sammenhængen er til DokumentDelingServicen DDS 
@@ -56,7 +56,7 @@ Indholdet i SBDH er for en stor dels vedkommende bestemt af hvorledes
 
 <br>
 
-SBDH har en struktur, der overordnet er delt ind i følgende elementer:
+ehmiSbdhhar en struktur, der overordnet er delt ind i følgende elementer:
 -	HeaderVersion
 -	Sender
 -	Receiver
@@ -66,12 +66,12 @@ SBDH har en struktur, der overordnet er delt ind i følgende elementer:
 
 <br>
 
-#### ehmiSBDH for en MedCom meddelelse og en MedCom kvittering
+#### ehmiSbdhfor en MedCom meddelelse og en MedCom kvittering
 
 <br>
 
-I en SBDH for en MedCom meddelelse og en MedCom kvittering kan følgende metadata indgå:
--	Generelle SBDH metadata
+I en ehmiSbdhfor en MedCom meddelelse og en MedCom kvittering kan følgende metadata indgå:
+-	Generelle ehmiSbdhmetadata
 -	Metadata for eDelivery generel meddelelseskommunikation
 -	Metadata for sundhedsmeddelelseskommunikation
 -	XDS Metadata for Dokumentdeling
@@ -79,19 +79,19 @@ I en SBDH for en MedCom meddelelse og en MedCom kvittering kan følgende metadat
 
 <br>
 
-#### ehmiSBDH for en EHMI EnvelopeReceipt 
+#### ehmiSbdhfor en EHMI EnvelopeReceipt 
 
 <br>
 
-I en SBDH for en EHMI EnvelopeReceipt er der følgende metadata:
--	Generelle SBDH metadata
+I en ehmiSbdhfor en EHMI EnvelopeReceipt er der følgende metadata:
+-	Generelle ehmiSbdhmetadata
 -	Metadata for eDelivery generel meddelelseskommunikation
 -	Metadata for sundhedsmeddelelseskommunikation
 -	Metadata for Reliable messaging - BusinessService Response
 
 <br>
 
-### SBDH – Fast definerede generelle elementer
+### ehmiSbdh– Fast definerede generelle elementer
 
 <br>
 
@@ -104,7 +104,7 @@ SBDH’s generelle elementer er illustreret i nedenstående figur.
 <br>
 
 BusinessScope har dog fået sit eget kapitel, da det afviger markant fra de øvrige.
-I det følgende præsenteres de generelle SBDH elementer for de foreløbigt 2 meddelelsestyper, som EHMI opererer med:
+I det følgende præsenteres de generelle ehmiSbdhelementer for de foreløbigt 2 meddelelsestyper, som EHMI opererer med:
 -	FHIR
 -	EHMI EnvelopeReceipt 
 
@@ -544,9 +544,9 @@ Eksempel:
 
 <br>
 
-## SBDH BusinessScopes 
+## ehmiSbdhBusinessScopes 
 
-SBDH BusinessScopes er SBDH’s name-value pair konstruktion karakteriseret ved identifier. 
+ehmiSbdhBusinessScopes er SBDH’s name-value pair konstruktion karakteriseret ved identifier. 
 Name er udtrykt ved Type-elementet og value er udtrykt ved InstanceIdentifier. Disse to skifter for hvert scope, mens Identifieren i EHMI sammenhæng altid er den samme: dk-medcom-messaging
 I det følgende gennemgås de i de logiske sammenhænge, som de optræder i.
 
@@ -663,7 +663,7 @@ Altid
 
 <br>
 
-### SBDH BusinessScope – sundhedsmeddelelseskommunikation
+### ehmiSbdhBusinessScope – sundhedsmeddelelseskommunikation
 
 <br>
 
@@ -931,7 +931,7 @@ ORIGINALMESSAGEVERSION eksempel:
 
 ##### ORIGINALENVELOPEIDENTIFIER
 
-ORIGINALENVELOPEIDENTIFIER er den originale SBDH envelopes InstanceIdentifier, bl.a. til brug for forsendelsesstatus opsamling. 
+ORIGINALENVELOPEIDENTIFIER er den originale ehmiSbdhenvelopes InstanceIdentifier, bl.a. til brug for forsendelsesstatus opsamling. 
 
 Er kun relevant når SBD/SBDH/DocumentInformation/Standard.value = “ebbp-signals”
 
@@ -956,7 +956,7 @@ ORIGINALENVELOPEIDENTIFIER eksempel:
 
 <br>
 
-### SBDH BusinessScope – XDS-Metadata
+### ehmiSbdhBusinessScope – XDS-Metadata
 
 <br>
 
@@ -974,7 +974,7 @@ Dette scope gælder ikke for den primære udveksling mellem Afsender og Modtager
 
 <br>
 
-#### ehmiSBDH BusinessScope/Scope for XDS-Metadata
+#### ehmiSbdhBusinessScope/Scope for XDS-Metadata
 
 Altid FHIR DocumentReference for den pågældende meddelelsestype med tilhørende variable for at kunne identificere f.eks. patient og organisation
 
@@ -994,7 +994,7 @@ Altid FHIR DocumentReference for den pågældende meddelelsestype med tilhørend
 
 <br>
 
-### SBDH BusinessScope – Reliable messaging 
+### ehmiSbdhBusinessScope – Reliable messaging 
 
 Reliable messaging udløses af et request for hvilken grad af reliable messaging, der ønskes fra afsender, hvilket gøres vha. SBDHs BusinessService i BusinessScope elementet.
 
@@ -1013,7 +1013,7 @@ Begge er bygget op omkring SBDHs BusinessScope/Scope element.
 
 I forbindelse med krav ifm. om Reliable messaging anvendes strukturen i BusinessScope kaldet BusinessService til at udforme, hvilken type af SBDH-transaktioner, som modtager af SBDH-originalkuverten skal opfylde.
 
-CorrelationInformation bruges til at binde meddelelse og kvittering sammen. I piloten genereres alle elementer i CorrelationInformation af afsendende SBDH-MSH. Modtager af SBDH og afsender af SBDH ReceiptAcknowledgement skal kvittere med angivelse af CorrelationInformation elementerne RequestingDocumentCreationDateTime og RequestingDocumentInstanceIdentifier. Der kvitteres aldrig på en kvittering.
+CorrelationInformation bruges til at binde meddelelse og kvittering sammen. I piloten genereres alle elementer i CorrelationInformation af afsendende SBDH-MSH. Modtager af ehmiSbdhog afsender af ehmiSbdhReceiptAcknowledgement skal kvittere med angivelse af CorrelationInformation elementerne RequestingDocumentCreationDateTime og RequestingDocumentInstanceIdentifier. Der kvitteres aldrig på en kvittering.
 
 <br>
 
@@ -1042,7 +1042,7 @@ I et EHMI-SBDH-ReceiptAcknowledgement- - Request er scope altid dette:
 
 ##### CorrelationInformation 
 
-Ifm. reliable messaging bruges SBDH’ens CorrelationInformation til at binde original SBDH og kvitterings SBDH sammen. Her anvendes specielt RequestingDocument InstanceIdentifier
+Ifm. reliable messaging bruges SBDH’ens CorrelationInformation til at binde original ehmiSbdhog kvitterings ehmiSbdhsammen. Her anvendes specielt RequestingDocument InstanceIdentifier
 
 <br>
 
@@ -1094,7 +1094,7 @@ Eksempel:
 
 ###### CorrelationInformation ExpectedResponseDateTime
 
-ExpectedResponseDateTime udtrykker den forventede tid, der max går indtil en SBDH  response modtages. I piloten giver den 10 min, dvs. RequestingDocumentCreationDateTime + 10 min
+ExpectedResponseDateTime udtrykker den forventede tid, der max går indtil en ehmiSbdh response modtages. I piloten giver den 10 min, dvs. RequestingDocumentCreationDateTime + 10 min
 
     <CorrelationInformation>
         …
@@ -1130,7 +1130,7 @@ Eksempel:
 
 <br>
 
-##### ehmiSBDH BusinessServices - Request
+##### ehmiSbdhBusinessServices - Request
 
 <br>
 
@@ -1204,7 +1204,7 @@ Altid
 
 <br>
 
-##### ehmiSBDH BusinessServices - Request eksempel
+##### ehmiSbdhBusinessServices - Request eksempel
 
     <BusinessService>
         <BusinessServiceName>
@@ -1291,7 +1291,7 @@ I et EHMI-SBDH-ReceiptAcknowledgement - Response er scope altid dette:
 
 ##### CorrelationInformation 
 
-Ifm. reliable messaging bruges SBDH’ens CorrelationInformation til at binde original SBDH og kvitterings SBDH sammen. Her anvendes specielt RequestingDocumentInstanceIdentifier
+Ifm. reliable messaging bruges SBDH’ens CorrelationInformation til at binde original ehmiSbdhog kvitterings ehmiSbdhsammen. Her anvendes specielt RequestingDocumentInstanceIdentifier
 
 <br>
 
@@ -1347,7 +1347,7 @@ RequestingSBDH/RequestingDocumentInstanceIdentifier
 
 ##### CorrelationInformation ExpectedResponseDateTime
 
-ExpectedResponseDateTime udelades i en SBDH ReceiptAcknowledgement
+ExpectedResponseDateTime udelades i en ehmiSbdhReceiptAcknowledgement
 
 <br>
 
@@ -1364,7 +1364,7 @@ ExpectedResponseDateTime udelades i en SBDH ReceiptAcknowledgement
 
 <br>
 
-##### ehmiSBDH BusinessServices - Response
+##### ehmiSbdhBusinessServices - Response
 
 <br>
 
@@ -1452,7 +1452,7 @@ Altid
 
 <br>
 
-###### ehmiSBDH BusinessServices - Response eksempel
+###### ehmiSbdhBusinessServices - Response eksempel
 
     <BusinessService>
         <BusinessServiceName>
@@ -1500,11 +1500,11 @@ Altid
 
 <br>
 
-#### ehmiSBDH ReceiptAcknowledgement
+#### ehmiSbdhReceiptAcknowledgement
 
 <br>
 
-SBDH ReceiptAcknowledgement anvendes som positiv transportkvittering, og for at modtager af kvitteringen nemt kan korrelere meddelelse med originalkuverten, kan modtager checke på hhv. 
+ehmiSbdhReceiptAcknowledgement anvendes som positiv transportkvittering, og for at modtager af kvitteringen nemt kan korrelere meddelelse med originalkuverten, kan modtager checke på hhv. 
 •	Sender
     - Identifier (GLN-nummer for afsender) 
 •	Receiver
@@ -1516,7 +1516,7 @@ SBDH ReceiptAcknowledgement anvendes som positiv transportkvittering, og for at 
 
 	RequestingDocumentInstanceIdentifier
 
-Indlejret i en SBDH ReceiptAcknowledgement er også en ebBP-signal, som i princippet indeholder de samme informationer, men som det ikke er nødvendigt at checke, når det er en ReceiptAcknowledgement.
+Indlejret i en ehmiSbdhReceiptAcknowledgement er også en ebBP-signal, som i princippet indeholder de samme informationer, men som det ikke er nødvendigt at checke, når det er en ReceiptAcknowledgement.
 
 <br>
 
@@ -1621,7 +1621,7 @@ ToPartyInfo eksempel
  
 <br>
 
-##### Samlet SBDH ReceiptAcknowledgement eksempel
+##### Samlet ehmiSbdhReceiptAcknowledgement eksempel
 
     <bpssignal:ReceiptAcknowledgement xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bpssignal="http://docs.oasis-open.org/ebxml-bp/ebbp-signals-2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/ebxml-bp/ebbp-signals-2.0 http://docs.oasis-open.org/ebxml-bp/2.0.4/ebbp-signals-2.0.4.xsd">
         <bpssignal:OriginalMessageIdentifier>
@@ -1807,11 +1807,11 @@ ExceptionMessage eksempel
 
 <br>
 
-## SBDH BinaryContent – den indeholdte meddelelse
+## ehmiSbdhBinaryContent – den indeholdte meddelelse
 
 <br>
 
-BinaryContent er en SBDH 1.2 udvidelse, der giver mulighed for at wrappe specifikt indhold i SBDH og base64-encode det. MimeType tydeliggør indholdet, og hvad modtager kan forvente af base64-decodingen.
+BinaryContent er en ehmiSbdh1.2 udvidelse, der giver mulighed for at wrappe specifikt indhold i ehmiSbdhog base64-encode det. MimeType tydeliggør indholdet, og hvad modtager kan forvente af base64-decodingen.
 Udfaldsrum for mimeType er:
 -	text/xml
 -	text/edi
@@ -1829,21 +1829,21 @@ Encoding vil i piloten have følgende udfaldsrum for MedCom meddelelserne, som a
 Encoding vil i piloten have følgende udfaldsrum for ReceiptAcknowledgement og ReceiptException:
 -	"UTF-8"
 
-## SBDH xsd schemas
+## ehmiSbdhxsd schemas
 
 <br>
 
-Alle SBDH xsd-filer kan findes via [download-siden](downloads.html), men et overblik over, hvad de vigtigst indeholder kan ses her:
+Alle ehmiSbdhxsd-filer kan findes via [download-siden](downloads.html), men et overblik over, hvad de vigtigst indeholder kan ses her:
 
 (all files opens in new window)
 <br>
 
-- <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_StandardBusinessDocumentHeader.xsd.html" target="_blank">Ehmi SBDH StandardBusinessDocumentHeader Xsd</a>
-- <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_Partner.xsd.html" target="_blank">Ehmi SBDH Partner Xsd</a>
-- <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_DocumentIdentification.xsd.html" target="_blank">Ehmi SBDH DocumentIdentification Xsd</a>
-- <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_BusinessScope.xsd.html" target="_blank">Ehmi SBDH BusinessScope Xsd</a>
-- <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_BinaryContentType.xsd.html" target="_blank">Ehmi SBDH BinaryContentType Xsd</a>
-- <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_ebbp-signals-2.0.4.xsd.html" target="_blank">Ehmi SBDH Ebbp-Signals 2.0.4 Xsd</a>
+- <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_StandardBusinessDocumentHeader.xsd.html" target="_blank">Ehmi ehmiSbdhStandardBusinessDocumentHeader Xsd</a>
+- <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_Partner.xsd.html" target="_blank">Ehmi ehmiSbdhPartner Xsd</a>
+- <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_DocumentIdentification.xsd.html" target="_blank">Ehmi ehmiSbdhDocumentIdentification Xsd</a>
+- <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_BusinessScope.xsd.html" target="_blank">Ehmi ehmiSbdhBusinessScope Xsd</a>
+- <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_BinaryContentType.xsd.html" target="_blank">Ehmi ehmiSbdhBinaryContentType Xsd</a>
+- <a href="https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH_ebbp-signals-2.0.4.xsd.html" target="_blank">Ehmi ehmiSbdhEbbp-Signals 2.0.4 Xsd</a>
 
 <br>
 
