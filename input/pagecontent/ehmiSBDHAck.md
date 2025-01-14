@@ -125,7 +125,7 @@ DOCUMENTID EHMI EnvelopeReceipt example:
 
 Sender's SOR identifier is used for EDS Shipment status. 
 
-SENDERID for MedCom FHIR messages:
+SENDERID for MedComMessagingMessages:
 
     <Scope>
 	    <Type>SENDERID</Type> 
@@ -135,7 +135,7 @@ SENDERID for MedCom FHIR messages:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-SENDERID for MedCom FHIR messages - example:
+SENDERID for MedComMessagingMessages - example:
 
     <Scope>
 	    <Type>SENDERID</Type> 
@@ -149,7 +149,7 @@ SENDERID for MedCom FHIR messages - example:
 
 Recipient's SOR identifier is used for EDS Shipment status. 
 
-RECEIVERID for MedCom FHIR messages:
+RECEIVERID for MedComMessagingMessages:
 
     <Scope>
 	    <Type>RECEIVERID</Type> 
@@ -159,7 +159,7 @@ RECEIVERID for MedCom FHIR messages:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-RECEIVERID for MedCom FHIR messages - example:
+RECEIVERID for MedComMessagingMessages - example:
 
     <Scope>
 	    <Type>RECEIVERID</Type> 
@@ -1304,7 +1304,7 @@ Outcome space for mimeType is:
             [base64-encoded indhold]
         <BinaryContent>
 
-Encoding in the pilot will be the following for all the MedCom FHIR messages:
+Encoding in the pilot will be the following for all the MedComMessagingMessages:
 - "UTF-8"
 
 Encoding will have the following outcome space for ReceiptAcknowledgement and ReceiptException in the pilot:
@@ -1316,7 +1316,7 @@ For a number of different mappings to and from SBDH elements, there is developed
 
 These are:
 - [Transformation specification of a MedCom Messaging Message to an ehmiSBDH Envelope](MedComMessagingMessage2ehmiSbdh-transform.html)
-- [TBD: Transformation specification of a Medcom FHIR Message and an ehmiSBDH Envelope to a DocumentReference](StructureMap-MedComMessagingMessage2MedComDocumentReference-transform.html)
+- [TBD: Transformation specification of a MedComMessagingMessage and an ehmiSBDH Envelope to a DocumentReference](StructureMap-MedComMessagingMessage2MedComDocumentReference-transform.html)
 - [TBD: Transformation specification of an ehmiSBDH Envelope to an EHMI Delivery Status structure](StructureMap-Sbdh2EhmiDeliveryStatus-transform.html)
 
 <!-- br -->

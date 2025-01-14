@@ -663,7 +663,7 @@ The patient's Civil Registration Number, CPR, is included as an identifier for u
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-PATIENTID for MedCom FHIR messages - example:
+PATIENTID for MedComMessagingMessages - example:
 
     <Scope>
         <Type>PATIENTID</Type>
@@ -679,7 +679,7 @@ PATIENTID for MedCom FHIR messages - example:
 
 Sender's SOR identifier is used for EDS Shipment status. 
 
-SENDERID for MedCom FHIR messages:
+SENDERID for MedComMessagingMessages:
 
     <Scope>
 	    <Type>SENDERID</Type> 
@@ -689,7 +689,7 @@ SENDERID for MedCom FHIR messages:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-SENDERID for MedCom FHIR messages - example:
+SENDERID for MedComMessagingMessages - example:
 
     <Scope>
 	    <Type>SENDERID</Type> 
@@ -703,7 +703,7 @@ SENDERID for MedCom FHIR messages - example:
 
 Recipient's SOR identifier is used for EDS Shipment status. 
 
-RECEIVERID for MedCom FHIR messages:
+RECEIVERID for MedComMessagingMessages:
 
     <Scope>
 	    <Type>RECEIVERID</Type> 
@@ -713,7 +713,7 @@ RECEIVERID for MedCom FHIR messages:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-RECEIVERID for MedCom FHIR messages - example:
+RECEIVERID for MedComMessagingMessages - example:
 
     <Scope>
 	    <Type>RECEIVERID</Type> 
@@ -1726,7 +1726,7 @@ Outcome space for mimeType is:
             [base64-encoded indhold]
         <BinaryContent>
 
-Encoding in the pilot will be the following for all the MedCom FHIR messages:
+Encoding in the pilot will be the following for all the MedComMessagingMessages:
 - "UTF-8"
 
 Encoding will have the following outcome space for ReceiptAcknowledgement and ReceiptException in the pilot:
