@@ -127,9 +127,9 @@ Identifier represents GLN of sender where
 
 <!-- br -->
 
-##### If the MedCom message is of type FHIR 
+##### If the MedCom Message is of type FHIR 
 
-If the MedCom message is of type FHIR, then always in the following format:
+If the MedCom Message is of type FHIR, then always in the following format:
 
 <!-- br -->
 
@@ -184,11 +184,11 @@ Identifier represents GLN of sender where
 
 <!-- br -->
 
-##### If the MedCom message is of type FHIR 
+##### If the MedCom Message is of type FHIR 
 
 <!-- br -->
 
-If the MedCom message is of type FHIR, then always in the following format:
+If the MedCom Message is of type FHIR, then always in the following format:
 
     <Receiver>
         <Identifier Authority="iso6523-actorid-upis">    
@@ -225,11 +225,11 @@ EHMI operates with 4 types of standards, each of which has its own prefix accord
 
 <!-- br -->
 
-###### If the MedCom message is of type FHIR 
+###### If the MedCom Message is of type FHIR 
 
 <!-- br -->
 
-If the MedCom message is of type FHIR, then always in the following format:
+If the MedCom Message is of type FHIR, then always in the following format:
 
     <DocumentInformation>
         <Standard>
@@ -249,7 +249,7 @@ Message example:
 
 <!-- br -->
 
-###### If the MedCom message is of type EHMI EnvelopeReceipt
+###### If the MedCom Message is of type EHMI EnvelopeReceipt
 
 <!-- br -->
 
@@ -295,11 +295,11 @@ Is the contained message version on the form
 
 <!-- br -->
 
-###### If the MedCom message is of type FHIR 
+###### If the MedCom Message is of type FHIR 
 
 <!-- br -->
 
-If the MedCom message is of type FHIR, then always in the following format:
+If the MedCom Message is of type FHIR, then always in the following format:
 
     <DocumentInformation>
         …
@@ -386,11 +386,11 @@ Message:
 
 <!-- br -->
 
-###### If the MedCom message is of type FHIR 
+###### If the MedCom Message is of type FHIR 
 
 <!-- br -->
 
-If the MedCom message is of type FHIR, then always in the following format:
+If the MedCom Message is of type FHIR, then always in the following format:
 
     <DocumentInformation>
         …
@@ -549,7 +549,7 @@ The value in InstanceIdentifier is identical to the corresponding SMP record. Th
 
 <!-- br -->
 
-##### DOCUMENTID for MedCom FHIR Messages
+##### DOCUMENTID for MedCom Messaging Messages
 
 <!-- br -->
 
@@ -563,7 +563,7 @@ The value in InstanceIdentifier is identical to the corresponding SMP record. Th
 
 <!-- br -->
 
-MedCom FHIR Message example 
+MedCom Messaging Message example 
 
 <!-- br -->
 
@@ -754,7 +754,7 @@ MESSAGEIDENTIFIER example:
 
 <!-- br -->
 
-###### If the MedCom message is of type EHMI EnvelopeReceipt
+###### If the MedCom Message is of type EHMI EnvelopeReceipt
 
     <Scope>
 	    <Type>MESSAGEIDENTIFIER</Type> 
@@ -805,7 +805,7 @@ MESSAGEENVELOPEIDENTIFIER example:
 
 The StatisticalInformation is the designated elements of a MedCom Message that has to be gathered for MedCom to monitoring which messages are sent over the EHMI Network.
 
-The designated elements of a concrete MedCom FHIR Message can be found <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/FHIRMessages_NetworkEnvelopes_EN.html" target="_blank">here</a>
+The designated elements of a concrete MedCom Messaging Message can be found <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/FHIRMessages_NetworkEnvelopes_EN.html" target="_blank">here</a>
 
     <Scope>
 	    <Type>StatisticalInformation</Type> 
@@ -849,7 +849,7 @@ StatisticalInformation example 2:
 
 The following reflects the DokumentDelingsServicen on NSP's needs for XDS metadata. This scope type is set on the exchange with the document sharing services.
 
-This scope only applies to MedCom messages, not MedCom receipts, as they are not shared via the Document Sharing Service.
+This scope only applies to MedCom Messages, not MedCom receipts, as they are not shared via the Document Sharing Service.
 
 This scope does not apply to the primary exchange between Sender and Receiver.
 
