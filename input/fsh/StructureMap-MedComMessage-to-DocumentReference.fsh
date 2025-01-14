@@ -3,6 +3,7 @@ InstanceOf: StructureMap
 Title: "Transformation specification of a MedComMessagingMessage and an ehmiSbdhEnvelope to a DocumentReference"
 Description: "Transformation specification of a MedComMessagingMessage and an ehmiSbdhEnvelope to a DocumentReference"
 Usage: #definition
+* id = "MedComMessagingMessage2MedComDocumentReference-transform"
 * url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedComMessagingMessage2MedComDocumentReference-transform"
 * name = "Transformation specification of a MedComMessagingMessage and an ehmiSbdhEnvelope to a DocumentReference"
 * title = "Transformation specification of a MedComMessagingMessage and an ehmiSbdhEnvelope to a DocumentReference"

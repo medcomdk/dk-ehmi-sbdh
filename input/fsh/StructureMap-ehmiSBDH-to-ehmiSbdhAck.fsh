@@ -3,6 +3,7 @@ InstanceOf: StructureMap
 Title: "Transformation specification of an ehmiSbdh Envelope to an ehmiSbdhAck "
 Description: "Transformation specification of an ehmiSbdh Envelope to an ehmiSbdhAck "
 Usage: #definition
+* id = "ehmiSbdh2ehmiSbdhAck-transform"
 * url = "http://medcomehmi.dk/ig/dk-ehmi-ehmiSbdh/StructureMap/ehmiSbdh2ehmiSbdhAck-transform"
 * name = "Transform from an ehmiSbdh Envelope to an ehmiSbdhAck"
 * title = "Transform from an ehmiSbdh Envelope to an ehmiSbdhAck"

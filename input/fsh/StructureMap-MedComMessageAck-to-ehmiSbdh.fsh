@@ -3,6 +3,7 @@ InstanceOf: StructureMap
 Title: "Transformation specification of a MedComAcknowledgementMessage to an ehmiSbdhEnvelope"
 Description: "Transformation specification of a MedComAcknowledgementMessage to an ehmiSbdhEnvelope"
 Usage: #definition
+* id = "MedComAcknowledgementMessage2ehmiSbdh-transform"
 * url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedComAcknowledgementMessage2ehmiSbdh-transform"
 * name = "MedComAcknowledgementMessage2SbdhTransform"
 * title = "Transformation specification of a MedComAcknowledgementMessage to an ehmiSbdhEnvelope"
