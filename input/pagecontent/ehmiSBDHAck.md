@@ -383,7 +383,7 @@ ORIGINALENVELOPEIDENTIFIER example:
 
 The StatisticalInformation is the designated elements of a MedCom Message that has to be gathered for MedCom to monitoring which messages are sent over the EHMI Network.
 
-The designated elements of a concrete MedCom Messaging Message can be found <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/FHIRMessages_NetworkEnvelopes_EN.html" target="_blank">here</a>
+The designated elements of a concrete MedcomMessagingMessage can be found <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/FHIRMessages_NetworkEnvelopes_EN.html" target="_blank">here</a>
 
     <Scope>
 	    <Type>StatisticalInformation</Type> 
@@ -1315,7 +1315,7 @@ Encoding will have the following outcome space for ReceiptAcknowledgement and Re
 For a number of different mappings to and from ehmiSbdhelements, there is developed a number of FHIR Structure Mappings in order for the suppliers to better understand and potentially automate some tasks around mappings.
 
 These are:
-- [Transformation specification of a MedCom Messaging Message to an ehmiSbdhEnvelope](MedComMessagingMessage2ehmiSbdh-transform.html)
+- [Transformation specification of a MedcomMessagingMessage to an ehmiSbdhEnvelope](MedComMessagingMessage2ehmiSbdh-transform.html)
 - [TBD: Transformation specification of a MedComMessagingMessage and an ehmiSbdhEnvelope to a DocumentReference](StructureMap-MedComMessagingMessage2MedComDocumentReference-transform.html)
 - [TBD: Transformation specification of an ehmiSbdhEnvelope to an EHMI Delivery Status structure](StructureMap-Sbdh2EhmiDeliveryStatus-transform.html)
 

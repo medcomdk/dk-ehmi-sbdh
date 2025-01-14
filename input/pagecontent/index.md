@@ -38,10 +38,10 @@ For a number of different mappings to and from ehmiSbdhand/or MedCom Messaging M
 
 These are:
 - **MedCom Messaging Message**
-  - [Transformation specification of a MedCom Messaging Message to an ehmiSbdhEnvelope](MedComMessagingMessage2ehmiSbdh-transform.html)
-  - [Transformation specification of a MedCom Messaging Message to a MedCom Messaging Ack](StructureMap-MedComAcknowledgementMessage2ehmiSbdh-transform.html)
+  - [Transformation specification of a MedcomMessagingMessage to an ehmiSbdhEnvelope](MedComMessagingMessage2ehmiSbdh-transform.html)
+  - [Transformation specification of a MedcomMessagingMessage to a MedCom Messaging Ack](StructureMap-MedComAcknowledgementMessage2ehmiSbdh-transform.html)
   - [Transformation specification of a MedCom Messaging Ack to an ehmiSbdhEnvelope](StructureMap-MedComAcknowledgementMessage2ehmiSbdh-transform.html)
-  - [Transformation specification of a Medcom Messaging Message and an ehmiSbdhEnvelope to a DocumentReference](StructureMap-MedComMessagingMessage2MedComDocumentReference-transform.html)
+  - [Transformation specification of a MedcomMessagingMessage and an ehmiSbdhEnvelope to a DocumentReference](StructureMap-MedComMessagingMessage2MedComDocumentReference-transform.html)
 
 - **ehmiSbdhEnvelope**
   - [Transformation specification of an ehmiSbdhEnvelope with a patient to an EHMI Delivery Status structure](StructureMap-ehmiSbdh2edsPatientDeliveryStatus-transform.html)

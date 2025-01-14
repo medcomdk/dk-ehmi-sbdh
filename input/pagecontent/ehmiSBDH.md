@@ -45,7 +45,7 @@ ehmiSbdhhas a structure that is generally divided into the following elements:
 
 <!-- br -->
 
-#### ehmiSbdhfor a MedCom Messaging Message and a MedCom Acknowledgement
+#### ehmiSbdhfor a MedcomMessagingMessage and a MedCom Acknowledgement
 
 In an ehmiSbdhfor a MedCom Message and a MedCom Acknowledgement, the following metadata can be included:
 
@@ -563,7 +563,7 @@ The value in InstanceIdentifier is identical to the corresponding SMP record. Th
 
 <!-- br -->
 
-MedCom Messaging Message example 
+MedcomMessagingMessage example 
 
 <!-- br -->
 
@@ -805,7 +805,7 @@ MESSAGEENVELOPEIDENTIFIER example:
 
 The StatisticalInformation is the designated elements of a MedCom Message that has to be gathered for MedCom to monitoring which messages are sent over the EHMI Network.
 
-The designated elements of a concrete MedCom Messaging Message can be found <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/FHIRMessages_NetworkEnvelopes_EN.html" target="_blank">here</a>
+The designated elements of a concrete MedcomMessagingMessage can be found <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/FHIRMessages_NetworkEnvelopes_EN.html" target="_blank">here</a>
 
     <Scope>
 	    <Type>StatisticalInformation</Type> 
