@@ -66,7 +66,7 @@ SBDH har en struktur, der overordnet er delt ind i følgende elementer:
 
 <br>
 
-#### SBDH for en MedCom meddelelse og en MedCom kvittering
+#### ehmiSBDH for en MedCom meddelelse og en MedCom kvittering
 
 <br>
 
@@ -79,7 +79,7 @@ I en SBDH for en MedCom meddelelse og en MedCom kvittering kan følgende metadat
 
 <br>
 
-#### SBDH for en EHMI EnvelopeReceipt 
+#### ehmiSBDH for en EHMI EnvelopeReceipt 
 
 <br>
 
@@ -974,7 +974,7 @@ Dette scope gælder ikke for den primære udveksling mellem Afsender og Modtager
 
 <br>
 
-#### SBDH BusinessScope/Scope for XDS-Metadata
+#### ehmiSBDH BusinessScope/Scope for XDS-Metadata
 
 Altid FHIR DocumentReference for den pågældende meddelelsestype med tilhørende variable for at kunne identificere f.eks. patient og organisation
 
@@ -1130,7 +1130,7 @@ Eksempel:
 
 <br>
 
-##### SBDH BusinessServices - Request
+##### ehmiSBDH BusinessServices - Request
 
 <br>
 
@@ -1204,7 +1204,7 @@ Altid
 
 <br>
 
-##### SBDH BusinessServices - Request eksempel
+##### ehmiSBDH BusinessServices - Request eksempel
 
     <BusinessService>
         <BusinessServiceName>
@@ -1364,7 +1364,7 @@ ExpectedResponseDateTime udelades i en SBDH ReceiptAcknowledgement
 
 <br>
 
-##### SBDH BusinessServices - Response
+##### ehmiSBDH BusinessServices - Response
 
 <br>
 
@@ -1452,7 +1452,7 @@ Altid
 
 <br>
 
-###### SBDH BusinessServices - Response eksempel
+###### ehmiSBDH BusinessServices - Response eksempel
 
     <BusinessService>
         <BusinessServiceName>
@@ -1500,7 +1500,7 @@ Altid
 
 <br>
 
-#### SBDH ReceiptAcknowledgement
+#### ehmiSBDH ReceiptAcknowledgement
 
 <br>
 

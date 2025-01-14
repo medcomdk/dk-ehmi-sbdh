@@ -2,7 +2,7 @@
 
 ## ehmiSBDHAck – General elements
 
-#### SBDH for an EHMI EnvelopeReceipt 
+#### ehmiSBDH for an EHMI EnvelopeReceipt 
 
 #### DocumentInformation
 
@@ -433,7 +433,7 @@ This scope does not apply to the primary exchange between Sender and Receiver.
 
 <!-- br -->
 
-#### SBDH BusinessScope/Scope for XDS-Metadata
+#### ehmiSBDH BusinessScope/Scope for XDS-Metadata
 
 Always FHIR DocumentReference for the relevant message type with associated variables to be able to identify e.g. patient and organization
 
@@ -601,7 +601,7 @@ example:
 
 <!-- br -->
 
-##### SBDH BusinessServices - Request
+##### ehmiSBDH BusinessServices - Request
 
 <!-- br -->
 
@@ -675,7 +675,7 @@ Always
 
 <!-- br -->
 
-##### SBDH BusinessServices - Request example
+##### ehmiSBDH BusinessServices - Request example
 
     <BusinessService>
         <BusinessServiceName>
@@ -835,7 +835,7 @@ ExpectedResponseDateTime is omitted in an EHMI ReceiptAcknowledgement
 
 <!-- br -->
 
-##### SBDH BusinessServices - Response
+##### ehmiSBDH BusinessServices - Response
 
 <!-- br -->
 
@@ -929,7 +929,7 @@ Always
 
 <!-- br -->
 
-###### SBDH BusinessServices - Response example
+###### ehmiSBDH BusinessServices - Response example
 
     <BusinessService>
         <BusinessServiceName>

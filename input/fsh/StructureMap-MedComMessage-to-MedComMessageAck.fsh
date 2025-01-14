@@ -1,13 +1,13 @@
 Instance: StructureMap-MedComMessagingMessage2MedComAcknowledgementMessage-transform
 InstanceOf: StructureMap
-Title: "Transformation specification of a MedCom Messaging Message to a MedComAcknowledgementMessage"
-Description: "Transformation specification of a MedCom Messaging Message to a MedComAcknowledgementMessage"
+Title: "Transformation specification of a MedComMessagingMessage to a MedComAcknowledgementMessage"
+Description: "Transformation specification of a MedComMessagingMessage to a MedComAcknowledgementMessage"
 Usage: #definition
 * url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedComMessage2MedComAcknowledgementMessage-transform"
-* name = "MedComMessage2MedComAcknowledgementMessageTransform"
-* title = "Transformation specification of a MedCom Messaging Message to a MedComAcknowledgementMessage"
+* name = "MedComMessagingMessage2MedComAcknowledgementMessageTransform"
+* title = "Transformation specification of a MedComMessagingMessage to a MedComAcknowledgementMessage"
 * status = #draft
-* description = "Transform from a MedCom Messaging Message to a MedComAcknowledgementMessage"
+* description = "Transform from a MedComMessagingMessage to a MedComAcknowledgementMessage"
 * structure[0].url = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-message"
 * structure[=].mode = #source
 * structure[+].url = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-message"
