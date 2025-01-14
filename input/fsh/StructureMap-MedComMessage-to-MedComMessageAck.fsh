@@ -4,7 +4,7 @@ Title: "Transformation specification of a MedComMessagingMessage to a MedComAckn
 Description: "Transformation specification of a MedComMessagingMessage to a MedComAcknowledgementMessage"
 Usage: #definition
 * id = "StrMap-MedComMessagingMessage2MedComAcknowledgementMsg-transform"
-* url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedComMessage2MedComAcknowledgementMessage-transform"
+* url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedcomMessagingMessage2MedComAcknowledgementMessage-transform"
 * name = "MedComMessagingMessage2MedComAcknowledgementMessageTransform"
 * title = "Transformation specification of a MedComMessagingMessage to a MedComAcknowledgementMessage"
 * status = #draft
