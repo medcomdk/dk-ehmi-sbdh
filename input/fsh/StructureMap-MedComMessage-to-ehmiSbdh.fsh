@@ -11,8 +11,8 @@ Usage: #definition
 * description = "Transform from a MedCom Messaging Messsage to an ehmiSbdhEnvelope"
 * structure[0].url = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-message"
 * structure[=].mode = #source
-//* structure[+].url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureDefinition/EhmiStandardBusinessDocumentBundle"
-* structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/branches/v0.90.1-beta.1/ehmiSBDH/StandardBusinessDocumentHeader.xsd"
+//* structure[+].url = "https://medcomehmi.dk/ig/dk-ehmi-sbdh/ehmiSBDH/StandardBusinessDocumentHeader.xsd"
+* structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH/StandardBusinessDocumentHeader.xsd"
 * structure[=].mode = #target
 
 
