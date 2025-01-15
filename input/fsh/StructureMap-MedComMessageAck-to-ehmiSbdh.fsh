@@ -1,14 +1,16 @@
-Instance: MedComMessage2Sbdh-transform
+Instance: MedComAcknowledgementMessage2ehmiSbdh-transform
 InstanceOf: StructureMap
-Title: "Transformation specification of a MedCom FHIR Messsage to an ehmiSBDH Envelope"
-Description: "Transformation specification of a MedCom FHIR Messsage to an ehmiSBDH Envelope"
+Title: "Transformation specification of a MedComAcknowledgementMessage to an ehmiSbdhEnvelope"
+Description: "Transformation specification of a MedComAcknowledgementMessage to an ehmiSbdhEnvelope"
 Usage: #definition
-* url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedComMessage2Sbdh-transform"
-* name = "MedComMessage2SbdhTransform"
-* title = "Transformation specification of a MedCom FHIR Messsage to an ehmiSBDH Envelope"
+* id = "MedComAcknowledgementMessage2ehmiSbdh-transform"
+* url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedComAcknowledgementMessage2ehmiSbdh-transform"
+* name = "MedComAcknowledgementMessage2SbdhTransform"
+* title = "Transformation specification of a MedComAcknowledgementMessage to an ehmiSbdhEnvelope"
 * status = #draft
-* description = "Transform from a MedCom FHIR Messsage to an ehmiSBDH Envelope"
-* structure[0].url = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-message"
+* description = "Transform from a MedComAcknowledgementMessage to an ehmiSbdhEnvelope"
+* structure[0].url = "http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgement.html"
+//* structure[0].url = http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-message
 * structure[=].mode = #source
 * structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/branches/v0.90.1-beta.1/ehmiSBDH/StandardBusinessDocumentHeader.xsd"
 * structure[=].mode = #target
@@ -580,7 +582,7 @@ Usage: #definition
 * group[=].rule[=].target.transform = #create
 
 /*
-//SBDH BusinessServices - Request
+//ehmiSbdhBusinessServices - Request
 BusinessServiceName
 ServiceTransaction – TypeOfServiceTransaction
 IsNonRepudiationRequired
@@ -598,7 +600,7 @@ Recurrence
 CorrelationInformation - RequestingDocumentCreationDateTime
 CorrelationInformation - RequestingDocumentInstanceIdentifier
 CorrelationInformation - ExpectedResponseDateTime
-//SBDH BusinessServices - Response
+//ehmiSbdhBusinessServices - Response
 BusinessServiceName
 ServiceTransaction – TypeOfServiceTransaction
 IsNonRepudiationRequired

@@ -32,19 +32,19 @@ class BusinessScope
     Class Scope
 }
 
-class "StandardBusinessDocumentHeader" as SBDH <<SBD Header (SBDH)>>
-class "HeaderVersion" as HeaderVersion <<SBDH element>>
-class "Sender" as Sender <<SBDH element>>
-class "Receiver" as Receiver <<SBDH element>>
-class "DocumentInformation" as DocumentInformation <<SBDH element>>
-class "BusinessScope" as BusinessScope <<SBDH element>>
+class "StandardBusinessDocumentHeader" as ehmiSbdh<<SBD Header (SBDH)>>
+class "HeaderVersion" as HeaderVersion <<ehmiSbdhelement>>
+class "Sender" as Sender <<ehmiSbdhelement>>
+class "Receiver" as Receiver <<ehmiSbdhelement>>
+class "DocumentInformation" as DocumentInformation <<ehmiSbdhelement>>
+class "BusinessScope" as BusinessScope <<ehmiSbdhelement>>
 
 
-SBDH "1" *-- "1" HeaderVersion 
-SBDH "1" *-- "1" Sender 
-SBDH "1" *-- "1" Receiver 
-SBDH "1" *-- "1" DocumentInformation 
-SBDH "1" *-- "1" BusinessScope 
+ehmiSbdh"1" *-- "1" HeaderVersion 
+ehmiSbdh"1" *-- "1" Sender 
+ehmiSbdh"1" *-- "1" Receiver 
+ehmiSbdh"1" *-- "1" DocumentInformation 
+ehmiSbdh"1" *-- "1" BusinessScope 
 
 
 @enduml

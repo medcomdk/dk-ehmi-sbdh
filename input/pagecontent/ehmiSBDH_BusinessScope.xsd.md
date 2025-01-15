@@ -1,4 +1,4 @@
-# ehmiSBDH profile of SBDH BusinessScope
+# ehmiSbdhprofile of ehmiSbdhBusinessScope
 
 <a href="https://github.com/medcomdk/dk-ehmi-sbdh/blob/v0.90.1-beta.1/input/pagecontent/ehmiSBDH/ehmiBusinessScope.xsd" target="_blank">Link to the raw xsd (opens in a new window)</a>
 

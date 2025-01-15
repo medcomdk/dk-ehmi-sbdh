@@ -1,8 +1,8 @@
-# ehmiSBDH profile of Standard Business Document Header 
+# ehmiSbdhprofile of Standard Business Document Header 
 
-## ehmiSBDH – General elements
+## ehmiSbdh– General elements
 
-The StandardBusinessDocumentHeader (SBDH) is an envelope specification issued by GS1 and profiled for use in PEPPOL. It is supported by eDelivery's Access Points (AP) according to the AS4 protocol. We follow the conventions, which are laid out in PEPPOL's profiling, but also we are extending it to be able to take care of the health area. However, SBDH is nothing without a surrounding container, called StandardBusinessDocument (SBD).
+The StandardBusinessDocumentHeader (SBDH) is an envelope specification issued by GS1 and profiled for use in PEPPOL. It is supported by eDelivery's Access Points (AP) according to the AS4 protocol. We follow the conventions, which are laid out in PEPPOL's profiling, but also we are extending it to be able to take care of the health area. However, ehmiSbdhis nothing without a surrounding container, called StandardBusinessDocument (SBD).
 
 <!-- br -->
 
@@ -15,7 +15,7 @@ StandardBusinessDocument is, as mentioned, SBDH's surrounding container, and is 
 - StandardBusinessDocumentHeader
 - BinaryContent (base64 encoded)
 
-Although the StandardBusinessDocument, as such, is the envelope, the term SBDH is generally used for the entire envelope, since it is this content that is of particular interest in the message exchange. BinaryContent is the element that contains a base64-encoded message or acknowledgment for a sent SBDH.
+Although the StandardBusinessDocument, as such, is the envelope, the term ehmiSbdhis generally used for the entire envelope, since it is this content that is of particular interest in the message exchange. BinaryContent is the element that contains a base64-encoded message or acknowledgment for a sent SBDH.
 
 <!-- br -->
 
@@ -24,7 +24,7 @@ Although the StandardBusinessDocument, as such, is the envelope, the term SBDH i
 
 <!-- br -->
 
-The content of SBDH is largely determined by how
+The content of ehmiSbdhis largely determined by how
 
 - the same information is registered in EER
 - the same information is registered in SMP
@@ -34,7 +34,7 @@ The content of SBDH is largely determined by how
 
 <!-- br -->
 
-SBDH has a structure that is generally divided into the following elements:
+ehmiSbdhhas a structure that is generally divided into the following elements:
 
 -	HeaderVersion
 -	Sender
@@ -45,11 +45,11 @@ SBDH has a structure that is generally divided into the following elements:
 
 <!-- br -->
 
-#### SBDH for a MedCom Message and a MedCom Acknowledgement
+#### ehmiSbdhfor a MedcomMessagingMessage and a MedCom Acknowledgement
 
-In an SBDH for a MedCom Message and a MedCom Acknowledgement, the following metadata can be included:
+In an ehmiSbdhfor a MedCom Message and a MedCom Acknowledgement, the following metadata can be included:
 
-- General SBDH metadata
+- General ehmiSbdhmetadata
 - Metadata for eDelivery general message communications
 - Health Message Communication Metadata
 - XDS Metadata for Document Sharing
@@ -58,11 +58,11 @@ In an SBDH for a MedCom Message and a MedCom Acknowledgement, the following meta
 
 <!-- br -->
 
-#### SBDH for an EHMI EnvelopeReceipt 
+#### ehmiSbdhfor an EHMI EnvelopeReceipt 
 
-In an SBDH for an EHMI EnvelopeReceipt there is the following metadata:
+In an ehmiSbdhfor an EHMI EnvelopeReceipt there is the following metadata:
 
-- General SBDH metadata
+- General ehmiSbdhmetadata
 - Metadata for eDelivery general message communications
 - Health Message Communication Metadata
 - Metadata for MedCom Statistics
@@ -70,7 +70,7 @@ In an SBDH for an EHMI EnvelopeReceipt there is the following metadata:
 
 <!-- br -->
 
-### SBDH – general fixed elements
+### ehmiSbdh– general fixed elements
 
 SBDH's general elements are illustrated in the figure below.
 
@@ -81,7 +81,7 @@ SBDH's general elements are illustrated in the figure below.
 
 <!-- br -->
 
-BusinessScope has, however, been given its own chapter, as it differs significantly from the others. In the following, the general SBDH elements are presented for the provisionally 2 message types that EHMI operates with:
+BusinessScope has, however, been given its own chapter, as it differs significantly from the others. In the following, the general ehmiSbdhelements are presented for the provisionally 2 message types that EHMI operates with:
 
 -	FHIR
 -	EHMI EnvelopeReceipt 
@@ -102,7 +102,7 @@ Always
 
 <!-- br -->
 
-ehmiSBDH Sender contains only the mandatory element Identifier.
+ehmiSbdhSender contains only the mandatory element Identifier.
  
 <!-- br -->
 
@@ -127,9 +127,9 @@ Identifier represents GLN of sender where
 
 <!-- br -->
 
-##### If the MedCom message is of type FHIR 
+##### If the MedCom Message is of type FHIR 
 
-If the MedCom message is of type FHIR, then always in the following format:
+If the MedCom Message is of type FHIR, then always in the following format:
 
 <!-- br -->
 
@@ -159,7 +159,7 @@ Regardless of the message type, it will always result in the following Sender/Id
 
 <!-- br -->
 
-ehmiSBDH Receiver contains only the mandatory element Identifier.
+ehmiSbdhReceiver contains only the mandatory element Identifier.
 
 <!-- br -->
 
@@ -184,11 +184,11 @@ Identifier represents GLN of sender where
 
 <!-- br -->
 
-##### If the MedCom message is of type FHIR 
+##### If the MedCom Message is of type FHIR 
 
 <!-- br -->
 
-If the MedCom message is of type FHIR, then always in the following format:
+If the MedCom Message is of type FHIR, then always in the following format:
 
     <Receiver>
         <Identifier Authority="iso6523-actorid-upis">    
@@ -225,11 +225,11 @@ EHMI operates with 4 types of standards, each of which has its own prefix accord
 
 <!-- br -->
 
-###### If the MedCom message is of type FHIR 
+###### If the MedCom Message is of type FHIR 
 
 <!-- br -->
 
-If the MedCom message is of type FHIR, then always in the following format:
+If the MedCom Message is of type FHIR, then always in the following format:
 
     <DocumentInformation>
         <Standard>
@@ -249,7 +249,7 @@ Message example:
 
 <!-- br -->
 
-###### If the MedCom message is of type EHMI EnvelopeReceipt
+###### If the MedCom Message is of type EHMI EnvelopeReceipt
 
 <!-- br -->
 
@@ -295,11 +295,11 @@ Is the contained message version on the form
 
 <!-- br -->
 
-###### If the MedCom message is of type FHIR 
+###### If the MedCom Message is of type FHIR 
 
 <!-- br -->
 
-If the MedCom message is of type FHIR, then always in the following format:
+If the MedCom Message is of type FHIR, then always in the following format:
 
     <DocumentInformation>
         …
@@ -386,11 +386,11 @@ Message:
 
 <!-- br -->
 
-###### If the MedCom message is of type FHIR 
+###### If the MedCom Message is of type FHIR 
 
 <!-- br -->
 
-If the MedCom message is of type FHIR, then always in the following format:
+If the MedCom Message is of type FHIR, then always in the following format:
 
     <DocumentInformation>
         …
@@ -520,12 +520,12 @@ example:
 
 <!-- br -->
 
-## SBDH BusinessScopes 
+## ehmiSbdhBusinessScopes 
 
-SBDH BusinessScopes is the SBDH's name-value pair construction characterized by an identifier. Name is expressed by the Type element and value is expressed by the InstanceIdentifier. These two change for each scope, while the Identifier in the EHMI context is always the same: dk-medcom-messaging. In the following, they are reviewed in the logical contexts in which they appear.
+ehmiSbdhBusinessScopes is the SBDH's name-value pair construction characterized by an identifier. Name is expressed by the Type element and value is expressed by the InstanceIdentifier. These two change for each scope, while the Identifier in the EHMI context is always the same: dk-medcom-messaging. In the following, they are reviewed in the logical contexts in which they appear.
 <!-- br -->
 
-<img src="ClassSbdhBusinessScopeBasic.png" alt="ehmiSBDH BusinessScope"  style="width:30%;height:auto;margin-left:35%; margin-right:35%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
+<img src="ClassSbdhBusinessScopeBasic.png" alt="ehmiSbdhBusinessScope"  style="width:30%;height:auto;margin-left:35%; margin-right:35%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
 
 ### eDelivery message communication
 
@@ -549,7 +549,7 @@ The value in InstanceIdentifier is identical to the corresponding SMP record. Th
 
 <!-- br -->
 
-##### DOCUMENTID for MedCom FHIR Messages
+##### DOCUMENTID for MedCom Messaging Messages
 
 <!-- br -->
 
@@ -563,7 +563,7 @@ The value in InstanceIdentifier is identical to the corresponding SMP record. Th
 
 <!-- br -->
 
-MedCom FHIR Message example 
+MedcomMessagingMessage example 
 
 <!-- br -->
 
@@ -663,7 +663,7 @@ The patient's Civil Registration Number, CPR, is included as an identifier for u
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-PATIENTID for MedCom FHIR messages - example:
+PATIENTID for MedComMessagingMessages - example:
 
     <Scope>
         <Type>PATIENTID</Type>
@@ -679,7 +679,7 @@ PATIENTID for MedCom FHIR messages - example:
 
 Sender's SOR identifier is used for EDS Shipment status. 
 
-SENDERID for MedCom FHIR messages:
+SENDERID for MedComMessagingMessages:
 
     <Scope>
 	    <Type>SENDERID</Type> 
@@ -689,7 +689,7 @@ SENDERID for MedCom FHIR messages:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-SENDERID for MedCom FHIR messages - example:
+SENDERID for MedComMessagingMessages - example:
 
     <Scope>
 	    <Type>SENDERID</Type> 
@@ -703,7 +703,7 @@ SENDERID for MedCom FHIR messages - example:
 
 Recipient's SOR identifier is used for EDS Shipment status. 
 
-RECEIVERID for MedCom FHIR messages:
+RECEIVERID for MedComMessagingMessages:
 
     <Scope>
 	    <Type>RECEIVERID</Type> 
@@ -713,7 +713,7 @@ RECEIVERID for MedCom FHIR messages:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-RECEIVERID for MedCom FHIR messages - example:
+RECEIVERID for MedComMessagingMessages - example:
 
     <Scope>
 	    <Type>RECEIVERID</Type> 
@@ -754,7 +754,7 @@ MESSAGEIDENTIFIER example:
 
 <!-- br -->
 
-###### If the MedCom message is of type EHMI EnvelopeReceipt
+###### If the MedCom Message is of type EHMI EnvelopeReceipt
 
     <Scope>
 	    <Type>MESSAGEIDENTIFIER</Type> 
@@ -805,7 +805,7 @@ MESSAGEENVELOPEIDENTIFIER example:
 
 The StatisticalInformation is the designated elements of a MedCom Message that has to be gathered for MedCom to monitoring which messages are sent over the EHMI Network.
 
-The designated elements of a concrete MedCom FHIR Message can be found <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/FHIRMessages_NetworkEnvelopes_EN.html" target="_blank">here</a>
+The designated elements of a concrete MedcomMessagingMessage can be found <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/FHIRMessages_NetworkEnvelopes_EN.html" target="_blank">here</a>
 
     <Scope>
 	    <Type>StatisticalInformation</Type> 
@@ -849,13 +849,13 @@ StatisticalInformation example 2:
 
 The following reflects the DokumentDelingsServicen on NSP's needs for XDS metadata. This scope type is set on the exchange with the document sharing services.
 
-This scope only applies to MedCom messages, not MedCom receipts, as they are not shared via the Document Sharing Service.
+This scope only applies to MedCom Messages, not MedCom receipts, as they are not shared via the Document Sharing Service.
 
 This scope does not apply to the primary exchange between Sender and Receiver.
 
 <!-- br -->
 
-#### SBDH BusinessScope/Scope for XDS-Metadata
+#### ehmiSbdhBusinessScope/Scope for XDS-Metadata
 
 Always FHIR DocumentReference for the relevant message type with associated variables to be able to identify e.g. patient and organization
 
@@ -901,13 +901,13 @@ Two structures are used
 
 Both are built around SBDH's BusinessScope/Scope element.
 
-In connection with requirements related to on Reliable messaging, the structure in BusinessScope called BusinessService is used to design which type of SBDH transactions the recipient of the original SBDH envelope must fulfill.
+In connection with requirements related to on Reliable messaging, the structure in BusinessScope called BusinessService is used to design which type of ehmiSbdhtransactions the recipient of the original ehmiSbdhenvelope must fulfill.
 
-CorrelationInformation is used to tie a message and its receipt together. All elements of CorrelationInformation are generated by the sending SBDH-MSH. Recipient of SBDH and sender of EHMI ReceiptAcknowledgement must acknowledge the elements RequestingDocumentCreationDateTime and RequestingDocumentInstanceIdentifier by indicating the CorrelationInformation. An EHMI EnvelopeReceipt is never acknowledged.
+CorrelationInformation is used to tie a message and its receipt together. All elements of CorrelationInformation are generated by the sending SBDH-MSH. Recipient of ehmiSbdhand sender of EHMI ReceiptAcknowledgement must acknowledge the elements RequestingDocumentCreationDateTime and RequestingDocumentInstanceIdentifier by indicating the CorrelationInformation. An EHMI EnvelopeReceipt is never acknowledged.
 
 <!-- br -->
 
-<img src="ClassSbdhBusinessScopeComplex.png" alt="ehmiSBDH BusinessScope Complex"  style="width:60%;height:auto;margin-left:5%; margin-right:35%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
+<img src="ClassSbdhBusinessScopeComplex.png" alt="ehmiSbdhBusinessScope Complex"  style="width:60%;height:auto;margin-left:5%; margin-right:35%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
 
 #### Reliable messaging - BusinessService Request
 
@@ -935,7 +935,7 @@ In an EHMI-ReceiptAcknowledgement - Request, the scope is always like this:
 
 ##### CorrelationInformation - 
 
-Reliable messaging uses the SBDH's CorrelationInformation to tie the original SBDH and the EHMI EnvelopeReceipt together. The RequestingDocument InstanceIdentifier is specifically used here.
+Reliable messaging uses the SBDH's CorrelationInformation to tie the original ehmiSbdhand the EHMI EnvelopeReceipt together. The RequestingDocument InstanceIdentifier is specifically used here.
 
 <!-- br -->
 
@@ -987,7 +987,7 @@ example:
 
 ###### CorrelationInformation - ExpectedResponseDateTime
 
-ExpectedResponseDateTime expresses the expected maximum time until an SBDH response is received. In the Production Pilot this is a 10 min response time, i.e. RequestingDocumentCreationDateTime + 10 min
+ExpectedResponseDateTime expresses the expected maximum time until an ehmiSbdhresponse is received. In the Production Pilot this is a 10 min response time, i.e. RequestingDocumentCreationDateTime + 10 min
 
     <CorrelationInformation>
         …
@@ -1023,7 +1023,7 @@ example:
 
 <!-- br -->
 
-##### SBDH BusinessServices - Request
+##### ehmiSbdhBusinessServices - Request
 
 <!-- br -->
 
@@ -1097,7 +1097,7 @@ Always
 
 <!-- br -->
 
-##### SBDH BusinessServices - Request example
+##### ehmiSbdhBusinessServices - Request example
 
     <BusinessService>
         <BusinessServiceName>
@@ -1184,7 +1184,7 @@ In an EHMI-ReceiptAcknowledgement - Response scope is always like this:
 
 ##### CorrelationInformation - 
 
-Reliable messaging uses the SBDH’s CorrelationInformation to tie the original SBDH and the acknowledgment SBDH together. The RequestingDocumentInstanceIdentifier is specifically used here
+Reliable messaging uses the SBDH’s CorrelationInformation to tie the original ehmiSbdhand the acknowledgment ehmiSbdhtogether. The RequestingDocumentInstanceIdentifier is specifically used here
 
 <!-- br -->
 
@@ -1257,7 +1257,7 @@ ExpectedResponseDateTime is omitted in an EHMI ReceiptAcknowledgement
 
 <!-- br -->
 
-##### SBDH BusinessServices - Response
+##### ehmiSbdhBusinessServices - Response
 
 <!-- br -->
 
@@ -1351,7 +1351,7 @@ Always
 
 <!-- br -->
 
-###### SBDH BusinessServices - Response example
+###### ehmiSbdhBusinessServices - Response example
 
     <BusinessService>
         <BusinessServiceName>
@@ -1418,7 +1418,7 @@ EHMI ReceiptAcknowledgement is used as a positive transport receipt, and so that
 
 ##### RequestingDocumentInstanceIdentifier
 
-Embedded in an SBDH ReceiptAcknowledgement is also an ebBP signal, which in principle contains the same information, but which does not need to be checked when it is a ReceiptAcknowledgement.
+Embedded in an ehmiSbdhReceiptAcknowledgement is also an ebBP signal, which in principle contains the same information, but which does not need to be checked when it is a ReceiptAcknowledgement.
 
 <!-- br -->
 
@@ -1709,11 +1709,11 @@ ExceptionMessage example
 <!-- br -->
  -->
 
-## SBDH BinaryContent – the contained message
+## ehmiSbdhBinaryContent – the contained message
 
 <!-- br -->
 
-BinaryContent is an SBDH 1.2 extension that allows to wrap specific content in SBDH and base64-encode it. MimeType clarifies the content and what the recipient can expect from the base64 decoding. 
+BinaryContent is an ehmiSbdh1.2 extension that allows to wrap specific content in ehmiSbdhand base64-encode it. MimeType clarifies the content and what the recipient can expect from the base64 decoding. 
 
 Outcome space for mimeType is:
 
@@ -1726,39 +1726,25 @@ Outcome space for mimeType is:
             [base64-encoded indhold]
         <BinaryContent>
 
-Encoding in the pilot will be the following for all the MedCom FHIR messages:
+Encoding in the pilot will be the following for all the MedComMessagingMessages:
 - "UTF-8"
 
 Encoding will have the following outcome space for ReceiptAcknowledgement and ReceiptException in the pilot:
 - "UTF-8"
 
-## SBDH Structure Mappings
+## ehmiSbdhxsd schemas
 
-For a number of different mappings to and from SBDH elements, there is developed a number of FHIR Structure Mappings in order for the suppliers to better understand and potentially automate some tasks around mappings.
-
-These are:
-- [Transformation specification of a MedCom FHIR Messsage to an ehmiSBDH Envelope](StructureMap-MedComMessage2Sbdh-transform.html)
-- [TBD: Transformation specification of a Medcom FHIR Message and an ehmiSBDH Envelope to a DocumentReference](StructureMap-MedComMessagingMessage2MedComDocumentReference-transform.html)
-- [TBD: Transformation specification of an ehmiSBDH Envelope to a EHMI Delivery Status structure](StructureMap-Sbdh2EhmiDeliveryStatus-transform.html)
-
-<!-- br -->
-
-
-## SBDH xsd schemas
-
-<!-- br -->
-
-All SBDH xsd files can be found via the [download-page](downloads.html), but an overview of what they most importantly contain can be seen here:
+All ehmiSbdhxsd files can be found via the [download-page](downloads.html), but an overview of what they most importantly contain can be seen here:
 
 (all files open in new window)
 <!-- br -->
 
-- <a href="ehmiSBDH_StandardBusinessDocumentHeader.xsd.html" target="_blank">ehmiSBDH StandardBusinessDocumentHeader Xsd</a>
-- <a href="ehmiSBDH_Partner.xsd.html" target="_blank">ehmiSBDH Partner Xsd</a>
-- <a href="ehmiSBDH_DocumentIdentification.xsd.html" target="_blank">ehmiSBDH DocumentIdentification Xsd</a>
-- <a href="ehmiSBDH_BusinessScope.xsd.html" target="_blank">ehmiSBDH BusinessScope Xsd</a>
-- <a href="ehmiSBDH_EDN-Business-Message-Envelope-1.2.xsd.html" target="_blank">ehmiSBDH BinaryContentType Xsd</a>
-- <a href="ehmiSBDH_ebbp-signals-2.0.4.xsd.html" target="_blank">ehmiSBDH Ebbp-Signals 2.0.4 Xsd</a>
+- <a href="ehmiSBDH_StandardBusinessDocumentHeader.xsd.html" target="_blank">ehmiSbdhStandardBusinessDocumentHeader Xsd</a>
+- <a href="ehmiSBDH_Partner.xsd.html" target="_blank">ehmiSbdhPartner Xsd</a>
+- <a href="ehmiSBDH_DocumentIdentification.xsd.html" target="_blank">ehmiSbdhDocumentIdentification Xsd</a>
+- <a href="ehmiSBDH_BusinessScope.xsd.html" target="_blank">ehmiSbdhBusinessScope Xsd</a>
+- <a href="ehmiSBDH_EDN-Business-Message-Envelope-1.2.xsd.html" target="_blank">ehmiSbdhBinaryContentType Xsd</a>
+- <a href="ehmiSBDH_ebbp-signals-2.0.4.xsd.html" target="_blank">ehmiSbdhEbbp-Signals 2.0.4 Xsd</a>
 
 <!-- br -->
 

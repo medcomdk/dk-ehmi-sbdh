@@ -15,19 +15,35 @@ In relation to EHMI Core:
 In relation to EDS Delivery Status:
 - serve the ground for EDS Delivery Status
 
-SBDH is in EHMI called ehmiSBDH due to constraints EHMI lay upon the GS1 and PEPPOL specifications, none of which is breaking to a validation through the original specification with the PEPPOL extensions
+ehmiSbdhis in EHMI called ehmiSbdhdue to constraints EHMI lay upon the GS1 and PEPPOL specifications, none of which is breaking to a validation through the original specification with the PEPPOL extensions
 
-ehmiSBDH can therefore be send and delivered through the eDelivery Network in EHMI Core in all use cases, where ehmiSBDH serves the entire EHMI ecosystem.
+ehmiSbdhcan therefore be send and delivered through the eDelivery Network in EHMI Core in all use cases, where ehmiSbdhserves the entire EHMI ecosystem.
 
-## ehmiSBDH in relation to EHMI Core
+## ehmiSbdhin relation to EHMI Core
 
-ehmiSBDH wraps the bidirectional message with clinical content between the Message Service Handlers (MSH) and serve as a neutral container for whatever MedCom Message, that is being send. If it is a FHIR, OIOXml or Edifact message, SBDH can wrap it and due to extensive extraction of metadata from the message also serve the ground for 
-- handling ehmiSBDH Acknowledgements
+ehmiSbdhwraps the bidirectional message with clinical content between the Message Service Handlers (MSH) and serve as a neutral container for whatever MedCom Message, that is being send. If it is a FHIR, OIOXml or Edifact message, ehmiSbdhcan wrap it and due to extensive extraction of metadata from the message also serve the ground for 
+- handling ehmiSbdhAcknowledgements
 - handling of the secondary exchange of data through the national Danish XDS Framework
 
-### ehmiSBDH Acknowledgements
+### ehmiSbdhAcknowledgements
 
-## ehmiSBDH in relation to EDS Delivery Status:
+## ehmiSbdhin relation to EDS Delivery Status:
 
-- serve EDS with metadata in use cases where non-patient related messages are exchanged like in message acknowledgements and SBDH acknowledgements
+- serve EDS with metadata in use cases where non-patient related messages are exchanged like in message acknowledgements and ehmiSbdhacknowledgements
 - serve EDS with metadata in use cases where patient related messages are exchanged like in the FHIR message HomeCareObservation and messages alike in OIOXml and Edifact. 
+
+## Structure Mappings
+
+For a number of different mappings to and from ehmiSbdhand/or MedCom Messaging Message, there is developed a number of FHIR Structure Mappings in order for the suppliers to better understand and potentially automate some tasks around mappings.
+
+These are:
+- **MedCom Messaging Message**
+  - [Transformation specification of a MedcomMessagingMessage to an ehmiSbdhEnvelope](MedComMessagingMessage2ehmiSbdh-transform.html)
+  - [Transformation specification of a MedcomMessagingMessage to a MedCom Messaging Ack](StructureMap-MedComAcknowledgementMessage2ehmiSbdh-transform.html)
+  - [Transformation specification of a MedCom Messaging Ack to an ehmiSbdhEnvelope](StructureMap-MedComAcknowledgementMessage2ehmiSbdh-transform.html)
+  - [Transformation specification of a MedcomMessagingMessage and an ehmiSbdhEnvelope to a DocumentReference](StructureMap-MedComMessagingMessage2MedComDocumentReference-transform.html)
+
+- **ehmiSbdhEnvelope**
+  - [Transformation specification of an ehmiSbdhEnvelope with a patient to an EHMI Delivery Status structure](StructureMap-ehmiSbdh2edsPatientDeliveryStatus-transform.html)
+  - [Transformation specification of an ehmiSbdhEnvelope without a patient to an EHMI Delivery Status structure](StructureMap-Sbdh2edsBasicDeliveryStatus-transform.html)
+  

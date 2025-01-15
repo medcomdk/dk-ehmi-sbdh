@@ -6,7 +6,7 @@ Alias: $EhmiSbdhMedComMessagingVS = dk-medcom-messaging-vs
 
 CodeSystem: EhmiSbdhEmdpointPayloadTypeCS
 Id: ehmi-sbdh-endpoint-payloadType
-Title: "EHMI SBDH Messaging Types CS"
+Title: "EHMI ehmiSbdhMessaging Types CS"
 Description: "ehmi-sbdh for the EHMI Messaging Infrastructure"
 * ^version  =  "1.0.0"
 * ^status  =  #active
@@ -17,8 +17,8 @@ Description: "ehmi-sbdh for the EHMI Messaging Infrastructure"
 
 ValueSet: EhmiSbdhEmdpointPayloadTypeVS
 Id: ehmi-sbdh-endpoint-payloadType-vs
-Title: "EHMI SBDH Messaging Types VS"
-Description: "VS containing codes for EHMI SBDH Messaging Types"
+Title: "EHMI ehmiSbdhMessaging Types VS"
+Description: "VS containing codes for EHMI ehmiSbdhMessaging Types"
 * ^version  =  "1.0.0"
 * ^status  =  #active
 * ^date  =  "2024-11-01"
@@ -30,7 +30,7 @@ Description: "VS containing codes for EHMI SBDH Messaging Types"
 
 CodeSystem: EhmiSbdhMedComMessagingCS
 Id: dk-medcom-messaging
-Title: "EHMI Messaging Codes for SBDH CS"
+Title: "EHMI Messaging Codes for ehmiSbdhCS"
 Description: "dk-medcom-messaging for the EHMI Messaging Infrastructure"
 * ^version  =  "1.0.0"
 * ^status  =  #active
@@ -54,8 +54,8 @@ Description: "dk-medcom-messaging for the EHMI Messaging Infrastructure"
 
 ValueSet: EhmiSbdhMedComMessagingVS
 Id: dk-medcom-messaging-vs
-Title: "EHMI SBDH Messaging Types VS"
-Description: "VS containing codes for EHMI SBDH Messaging Types"
+Title: "EHMI ehmiSbdhMessaging Types VS"
+Description: "VS containing codes for EHMI ehmiSbdhMessaging Types"
 * ^version  =  "1.0.0"
 * ^status  =  #active
 * ^date  =  "2024-11-01"

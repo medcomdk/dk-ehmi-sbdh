@@ -2,7 +2,7 @@
 Profile: EhmiSbdhPartner
 Parent: Basic
 Title: "EHMI Standard Business Document Header Partner"
-Description: "Profile for EHMI SBDH Partner"
+Description: "Profile for EHMI ehmiSbdhPartner"
 * extension contains PartnerIdentification 1..1 MS 
 * extension contains contactInformation 1..1 MS 
 
@@ -149,8 +149,8 @@ Description: "UUID instance identifier"
 
 Extension: SbdhDateAndTime
 Id: sbdh-date-and-time
-Title: "SBDH Date And Time"
-Description: "SBDH date and time"
+Title: "ehmiSbdhDate And Time"
+Description: "ehmiSbdhdate and time"
 //* value[x] only string
 * value[x] only dateTime
 
