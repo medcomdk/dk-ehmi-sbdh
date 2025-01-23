@@ -120,22 +120,64 @@ Usage: #definition
 
 * group[=].rule[+].name = "code"
 * group[=].rule[=].source.context = "defaultValue"
-* group[=].rule[=].source.defaultValueString = "HomeCareObservation"  // Kan ikke se hvor den kan kopieres fra bundle? 
+* group[=].rule[=].source.defaultValueString = "HomeCareObservation"  // Kan ikke se hvor den kan kopieres fra bundle så sat som defaul value? 
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "type.coding.code"
 
 * group[=].rule[+].name = "display"
 * group[=].rule[=].source.context = "defaultValue"
-* group[=].rule[=].source.defaultValueString = "HomeCareObservation"  // Kan ikke se hvor den kan kopieres fra bundle? 
+* group[=].rule[=].source.defaultValueString = "HomeCareObservation"  // Kan ikke se hvor den kan kopieres fra bundle så sat som defaul value? 
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "type.coding.display"
 
 
 
 //Group category [DocumentEntry.classcode] Categorization of document 
-// CodeSystem:$codeSystem = ” 1.2.208.184.100.9” eller http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-classcode-VS
+* group[+].name = "category"
+* group[=].typeMode = #none
+* group[=].input[0].name = "source"
+* group[=].input[=].type = "Bundle"
+* group[=].input[=].mode = #source
+* group[=].input[+].name = "target"
+* group[=].input[=].type = "MedComMessageDocumentReference"
+* group[=].input[=].mode = #target
+
+* group[=].rule[0].name = "system"
+* group[=].rule[=].source.context = "defaultValue"
+* group[=].rule[=].source.defaultValueString = "1.2.208.184.100.9"  // Hvilket kodesystem? CodeSystem:$codeSystem = ” 1.2.208.184.100.9” eller http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-classcode-VS
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.element = "type.coding.system"
+
+* group[=].rule[+].name = "code"
+* group[=].rule[=].source.context = "defaultValue"
+* group[=].rule[=].source.defaultValueString = "001" // Skulle det være noget andet ved medd.?
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.element = "type.coding.code"
+
+* group[=].rule[+].name = "display"
+* group[=].rule[=].source.context = "defaultValue"
+* group[=].rule[=].source.defaultValueString = "Klinisk rapport"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.element = "type.coding.display"
+
 
 //Group subject [DocumentEntry.sourcePatientInfo, DocumentEntry.sourcePatientId] Who/what is the subject of the document
+* group[+].name = "subject"
+* group[=].typeMode = #none
+* group[=].input[0].name = "source"
+* group[=].input[=].type = "Bundle"
+* group[=].input[=].mode = #source
+* group[=].input[+].name = "target"
+* group[=].input[=].type = "MedComMessageDocumentReference"
+* group[=].input[=].mode = #target
+
+* group[=].rule[0].name = "subject"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.element = "bundle.subjet"  // skal rettes til rette path der peger på subject/target for homecareobservation
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.element = "subject"
+
+
 
 //Group author.institution [DocumentEntry.author] Who and/or what authored the document
 
@@ -148,7 +190,13 @@ Usage: #definition
 //Group securityLabel - [DocumentEntry.confidentialityCode] Document security-tags
 
 //Group content
+  //rule attachment.contentType [DocumentEntry.mimeType]
+  //rule attachment.language [DocumentEntry.languageCode]
 
+//GRoup context 
+
+
+  //rule: format 	[DocumentEntry.formatCode] Format/content rules for the document
 
 
 
