@@ -173,32 +173,48 @@ Usage: #definition
 
 * group[=].rule[0].name = "subject"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "bundle.subjet"  // skal rettes til rette path der peger på subject/target for homecareobservation
+* group[=].rule[=].source.element = "bundle.subjet"  // skal rettes til rette path der peger på subject/Id for homecareobservation
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "subject"
 
 
+//RUN: Herunder har jeg tegnet struklturen for resten af structuremappet ift. mandatory elementer i MedComMessageDocumentRefererence.
+// Jeg er ikke nået helt i mål med at beskrive/foreslå source for alle ellementer 
 
-//Group author.institution [DocumentEntry.author] Who and/or what authored the document
+//Group author [DocumentEntry.author] Who and/or what authored the document
+  //rule author.institution 
+  // source: HomeCareDiagnosticReport/performer[typen Organization] 
 
-//Group author.person [DocumentEntry.author] Who and/or what authored the document
-// optional
+  //rule author.person
+  // Er optional
+  // source: HomeCareDiagnosticReport/performer[typen PractitionerRole]
 
-//Group authenticator [DocumentEntry.legalAuthenticator] Who authenticated the document
-// Optional
+
+//Group authenticator [DocumentEntry.legalAuthenticator] 
+ //rule authenticator: // Er optional i DocumentReferenc, men "required" i XDS-metadata. Ved ikke om vi kan angive en authenticator når det er en medd. 
+ // source: evt. HomeCareDiagnosticReport/performer ??
 
 //Group securityLabel - [DocumentEntry.confidentialityCode] Document security-tags
+ //rule securityLabel
+ // Ved cda stammer det fra dokumentet ClinicalDocument/confidentialityCode/@code, men kan ikke lige lure om der er tilsvarende i en medd.
+
 
 //Group content
   //rule attachment.contentType [DocumentEntry.mimeType]
   //rule attachment.language [DocumentEntry.languageCode]
-
-//GRoup context 
-
-
   //rule: format 	[DocumentEntry.formatCode] Format/content rules for the document
 
+//Group context.facilitytype [DocumentEntry.healthcareFacilityTypeCode] 
+  //rule facilitytype.coding
+  //rule facilitytype.code
+  //rule facilitytype.display 
 
+//Group context.practiceSetting 	[DocumentEntry.practiceSettingCode]
+  //rule practiceSetting.coding
+  //rule practiceSetting.code
+  //rule practiceSetting.display 
 
+//Group sourcePatientInfo [DocumentEntry.sourcePatientId and DocumentEntry.sourcePatientInfo]
+// Som subject
 
 
