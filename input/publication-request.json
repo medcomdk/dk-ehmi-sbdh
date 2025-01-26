@@ -1,0 +1,15 @@
+{
+    "package-id": "dk-ehmi-sbdh",
+    "version": "1.0.0",
+    "path": "http://medcomehmi.dk/ig/dk-ehmi-sbdh/1.0.0",
+    "status": "release",
+    "sequence": "Release",
+    "first" : true,
+    "ci-build" : "https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh",
+    "milestone" : true,
+    "title": "DK EHMI SBDH IG",
+    "category": "ehmiSBDH",
+    "introduction": "The DK EHMI SBDH IG",
+    "descmd": "@release-notes.md"
+}
+  
