@@ -56,12 +56,12 @@ For a number of different mappings to and from ehmiSBDH and/or MedCom Messaging 
 
 These are:
 - **MedCom Messaging Message**
-  - [Transformation specification of a MedcomMessagingMessage to an ehmiSbdhEnvelope](MedComMessagingMessage2ehmiSbdh-transform.html)
+  - [Transformation specification of a MedcomMessagingMessage to an ehmiSBDH Envelope](MedComMessagingMessage2ehmiSbdh-transform.html)
   - [Transformation specification of a MedcomMessagingMessage to a MedCom Messaging Ack](StructureMap-MedComAcknowledgementMessage2ehmiSbdh-transform.html)
-  - [Transformation specification of a MedCom Messaging Ack to an ehmiSbdhEnvelope](StructureMap-MedComAcknowledgementMessage2ehmiSbdh-transform.html)
-  - [Transformation specification of a MedcomMessagingMessage and an ehmiSbdhEnvelope to a DocumentReference](StructureMap-MedComMessagingMessage2MedComDocumentReference-transform.html)
+  - [Transformation specification of a MedCom Messaging Ack to an ehmiSBDH Envelope](StructureMap-MedComAcknowledgementMessage2ehmiSbdh-transform.html)
+  - [Transformation specification of a MedcomMessagingMessage and an ehmiSBDH Envelope to a DocumentReference](StructureMap-MedComMessagingMessage2MedComDocumentReference-transform.html)
 
-- **ehmiSbdhEnvelope**
-  - [Transformation specification of an ehmiSbdhEnvelope with a patient to an EHMI Delivery Status structure](StructureMap-ehmiSbdh2edsPatientDeliveryStatus-transform.html)
-  - [Transformation specification of an ehmiSbdhEnvelope without a patient to an EHMI Delivery Status structure](StructureMap-Sbdh2edsBasicDeliveryStatus-transform.html)
+- **ehmiSBDH Envelope**
+  - [Transformation specification of an ehmiSBDH Envelope with a patient to an EHMI Delivery Status structure](StructureMap-ehmiSbdh2edsPatientDeliveryStatus-transform.html)
+  - [Transformation specification of an ehmiSBDH Envelope without a patient to an EHMI Delivery Status structure](StructureMap-Sbdh2edsBasicDeliveryStatus-transform.html)
   
