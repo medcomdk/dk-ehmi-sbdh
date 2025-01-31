@@ -24,7 +24,6 @@ Usage: #definition
 * group[=].input[=].type = "AuditEvent"
 * group[=].input[=].mode = #target
 
-
 * group[=].rule[0].name = "HeaderVersion"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueCode = #iso6523-actorid-upis
@@ -33,7 +32,7 @@ Usage: #definition
 * group[=].rule[=].target.element = "StandardBusinessDocumentHeader/HeaderVersion"
 * group[=].rule[=].target.transform = #create
 
-
+/*
 * group[+].name = "type"
 * group[=].typeMode = #none
 * group[=].input[0].name = "SourceNameForATest" // Depr name when comfortable with syntax
@@ -139,8 +138,4 @@ Usage: #definition
 * group[=].rule[=].source.element = "SBDH/DocumentIdentification/Standard/[value]"
 * group[=].rule[=].target.context = "edsStatusMessageType"
 * group[=].rule[=].target.element = "AuditEvent.entity.detail.where(type= 'ehmiMessageType').value"
-
-
-
-
-//* group
+*/
