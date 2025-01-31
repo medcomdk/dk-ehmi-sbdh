@@ -110,7 +110,10 @@ menu:
 #    BinaryContentType: SBDH_BinaryContentType.xsd.html
 #    ebbp-signals-2.0.4: SBDH_ebbp-signals-2.0.4.xsd.html
   Artifacts: artifacts.html
-  Downloads: downloads.html
+  More:
+    Table of Contents: toc.html
+    Downloads: downloads.html
+    Dependencies: dependencies.html
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
 # │  resource. These properties are less commonly needed than those above.                         │
