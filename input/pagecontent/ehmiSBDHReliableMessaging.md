@@ -14,6 +14,11 @@ This is defined as the default mode of Reliable Messaging in EHMI.
 </figure>
 
 When Reliable Messaging is implemented, the Receiver **SHALL** check the incoming StandardBusinessDocumentHeader/DocumentInformation/Identifier (hereafter EnvelopeIdentifier) and the StandardBusinessDocumentHeader/BusinessScope/Scope[Type:DOCUMENTID]/InstanceIdentifier (hereafter MessageIdentifier) against a cache of previously received ehmiSBDH Envelopes. The correct action to take depends on what is received:
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
 
 | Case                                                            | Description                |
 |:----------------------------------------------------------------|:---------------------------|
