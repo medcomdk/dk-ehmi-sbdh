@@ -1,3 +1,4 @@
+/*
 Instance: ehmiSbdh2edsPatientDeliveryStatus-transform
 InstanceOf: StructureMap
 Title: "Transformation specification of an ehmiSBDH-Envelope to an EHMI Delivery Status structure (edsPatientDeliveryStatus)"
