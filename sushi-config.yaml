@@ -30,12 +30,10 @@ dependencies:
   hl7.fhir.dk.core: 2.0.0
   medcom.fhir.dk.core: 2.4.0
   medcom.fhir.dk.messaging: dev #3.0.0
-  medcom.fhir.dk.terminology: dev #1.8.1
-  dk.ehmi.terminology: dev
-  dk.ehmi.eer: dev
-  #medcom.fhir.dk.xds.metadata: current
-  #medcom.fhir.dk.ihe.xds.metadata: current
-  medcom.fhir.dk.xdsmetadata: dev #1.0.0
+  medcom.fhir.dk.terminology: 1.8.0
+  dk.ehmi.terminology: dev #1.0.0
+  dk.ehmi.eer:  dev #1.0.0
+  medcom.fhir.dk.xdsmetadata: 1.0.0
   medcom.fhir.dk.coredocument: dev #1.0.0
   medcom.fhir.dk.xdsdocuments: dev #1.0.0
   # medcom.fhir.dk.ihe.xds.metadata: dev
