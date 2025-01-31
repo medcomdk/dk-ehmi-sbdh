@@ -1,3 +1,4 @@
+/*
 Instance: Sbdh2edsBasicDeliveryStatus-transform
 InstanceOf: StructureMap
 Title: "Transformation specification of an ehmiSBDH-Envelope to an EHMI Delivery Status structure (edsBasicDeliveryStatus)"
@@ -32,7 +33,6 @@ Usage: #definition
 * group[=].rule[=].target.element = "StandardBusinessDocumentHeader/HeaderVersion"
 * group[=].rule[=].target.transform = #create
 
-/*
 * group[+].name = "type"
 * group[=].typeMode = #none
 * group[=].input[0].name = "SourceNameForATest" // Depr name when comfortable with syntax
