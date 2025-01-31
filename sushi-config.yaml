@@ -89,7 +89,7 @@ menu:
   ehmiSBDH: 
     ehmiSBDH: ehmiSBDH.html
     ehmiSBDH Acknowledgement: ehmiSBDHAck.html
-    EHMI EnvelopeReceipt: ehmiSBDHEnvelopeReceipt.html
+    ehmiSBDH EnvelopeReceipt: ehmiSBDHEnvelopeReceipt.html
     ehmiSbdhReliable Messaging: ehmiSBDHReliableMessaging.html
     References: references.html
   ehmiSbdhschemas: 

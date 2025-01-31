@@ -19,43 +19,43 @@ When Reliable Messaging is implemented, the Receiver **SHALL** check the incomin
 |:----------------------------------------------------------------|:---------------------------|
 | Both EnvelopeIdentifier and MessageIdentifier have not been received       | This is the normal case, and the message **SHALL** be processed            |
 | Both EnvelopeIdentifier and MessageIdentifier have already been received   | The original ehmiSBDHEnvelope server may either reprocess the message, or reject the message|
-| MessageIdentifier has already been received, but EnvelopeIdentifier is new | The original ehmiSBDHEnvelopeReceipt has been lost (failed to return to the request issuer) and thus the previously received Message in An ehmiSBDHEnvelope has been resubmitted with a new EnvelopeIdentifier for processing again. The original ehmiSBDHEnvelopeReceipt **SHALL** be resent|
-| The EnvelopeIdentifier has already been received, but the MessageIdentifier is new | This is an error - EnvelopeIdentifier values **SHALL** never be reused. Receiver **MAY** return a Negative ehmiSBDHEnvelopeReceipt|
+| MessageIdentifier has already been received, but EnvelopeIdentifier is new | The original ehmiSBDH-EnvelopeReceipt has been lost (failed to return to the request issuer) and thus the previously received Message in An ehmiSBDHEnvelope has been resubmitted with a new EnvelopeIdentifier for processing again. The original ehmiSBDH-EnvelopeReceipt **SHALL** be resent|
+| The EnvelopeIdentifier has already been received, but the MessageIdentifier is new | This is an error - EnvelopeIdentifier values **SHALL** never be reused. Receiver **MAY** return a Negative ehmiSBDH-EnvelopeReceipt|
 
 ## Different Reliable Messaging scenarios using ehmiSBDHEnvelope
 
 This section provides a description of the different types of Reliable Messaging scenarios.
 
-- Scenario #1 - Normally successful unsolicited  ehmiSBDHEnvelope or request message flow with ehmiSBDHEnvelopeReceipt request
-- Scenario #2 - Duplicate of an unchanged ehmiSBDHEnvelope with a positive ehmiSBDHEnvelopeReceipt request
+- Scenario #1 - Normally successful unsolicited  ehmiSBDHEnvelope or request message flow with ehmiSBDH-EnvelopeReceipt request
+- Scenario #2 - Duplicate of an unchanged ehmiSBDHEnvelope with a positive ehmiSBDH-EnvelopeReceipt request
 - Scenario #3 - (Re-)Sending Unchanged ehmiSBDHEnvelope
-- Scenario #4 - ehmiSBDHEnvelope is sent normally, ehmiSBDHEnvelopeReceipt is lost along the way
+- Scenario #4 - ehmiSBDHEnvelope is sent normally, ehmiSBDH-EnvelopeReceipt is lost along the way
 - Scenario #5 - (Re-)Sending Modified ehmiSBDHEnvelope
 
-### Scenario #1 - Normally successful unsolicited ehmiSBDHEnvelope or request ehmiSBDHEnvelope flow with ehmiSBDHEnvelopeReceipt request 
+### Scenario #1 - Normally successful unsolicited ehmiSBDHEnvelope or request ehmiSBDHEnvelope flow with ehmiSBDH-EnvelopeReceipt request 
 
-An unsolicited  ehmiSBDHEnvelope is sent with a new request for a positive ehmiSBDHEnvelopeReceipt from the Sending MSH to a Receiving MSH.
+An unsolicited  ehmiSBDHEnvelope is sent with a new request for a positive ehmiSBDH-EnvelopeReceipt from the Sending MSH to a Receiving MSH.
 
-The Receiving MSH **SHALL** always send a positive ehmiSBDHEnvelopeReceipt to the Sending MSH.
+The Receiving MSH **SHALL** always send a positive ehmiSBDH-EnvelopeReceipt to the Sending MSH.
 
-### Scenario #2 - Duplicate of an unchanged ehmiSBDHEnvelope with a positive ehmiSBDHEnvelopeReceipt request 
+### Scenario #2 - Duplicate of an unchanged ehmiSBDHEnvelope with a positive ehmiSBDH-EnvelopeReceipt request 
 
 Duplication of an unchanged ehmiSBDHEnvelope can be done in one of the following ways:
 
 - An error may have occurred in the flow from the Sending MSH to the Receiving MSH with subsequent duplication of An ehmiSBDHEnvelope in scenario 1a.
 - The Sending MSH may inadvertently send a duplicate of ehmiSBDHEnvelope
 
-The ehmiSBDHEnvelopes are completely identical and as a consequence, the ehmiSBDHEnvelope with request for positive ehmiSBDHEnvelopeReceipt arrives at the Receiving MSH more than once.
+The ehmiSBDHEnvelopes are completely identical and as a consequence, the ehmiSBDHEnvelope with request for positive ehmiSBDH-EnvelopeReceipt arrives at the Receiving MSH more than once.
 
 The Receiving MSH **SHALL** ignore the contents of the duplicate instances of the ehmiSBDHEnvelope but **SHALL** acknowledge a duplicate ehmiSBDHEnvelope in the same way as the original ehmiSBDHEnvelope.
 
-A positive ehmiSBDHEnvelopeReceipt may not be sent first and then a negative ehmiSBDHEnvelopeReceipt or vice versa.
+A positive ehmiSBDH-EnvelopeReceipt may not be sent first and then a negative ehmiSBDH-EnvelopeReceipt or vice versa.
 
 The Receiving MSH **SHALL** never display several instances of An ehmiSBDHEnvelope in An ehmiSBDHEnvelope overview, but **SHALL** log in a system log that reception of a duplicate ehmiSBDHEnvelope has taken place.
 
-If the Sending MSH of the ehmiSBDHEnvelope has received ehmiSBDHEnvelopeReceipt already after the Receiving MSH's ehmiSBDHEnvelopeReceipt of An ehmiSBDHEnvelope's first instance, the Sending MSH **SHALL** similarly ignore the duplicate instances of the ehmiSBDHEnvelopeReceipt.
+If the Sending MSH of the ehmiSBDHEnvelope has received ehmiSBDH-EnvelopeReceipt already after the Receiving MSH's ehmiSBDH-EnvelopeReceipt of An ehmiSBDHEnvelope's first instance, the Sending MSH **SHALL** similarly ignore the duplicate instances of the ehmiSBDH-EnvelopeReceipt.
 
-The Sending MSH **SHALL** never display multiple instances of the same ehmiSBDHEnvelopeReceipt in An ehmiSBDHEnvelope summary but **SHALL** log in a system log that ehmiSBDHEnvelopeReceipt of a duplicate has taken place.
+The Sending MSH **SHALL** never display multiple instances of the same ehmiSBDH-EnvelopeReceipt in An ehmiSBDHEnvelope summary but **SHALL** log in a system log that ehmiSBDH-EnvelopeReceipt of a duplicate has taken place.
 
 ### Scenario #3 - (Re) Sending Unchanged ehmiSBDHEnvelope 
 
@@ -69,9 +69,9 @@ The ehmiSBDHEnvelope **SHALL** be sent and ehmiSBDHEnvelope-Acknowledged as a co
 
 Re-dispatches **SHALL** always be done manually and **SHOULD** be in accordance with the normal response time for the specific ehmiSBDHEnvelope flow.
 
-### Scenario #4 - ehmiSBDHEnvelope is sent normally, but ehmiSBDHEnvelopeReceipt is lost along the way 
+### Scenario #4 - ehmiSBDHEnvelope is sent normally, but ehmiSBDH-EnvelopeReceipt is lost along the way 
 
-Like in Scenario #1, but where ehmiSBDHEnvelopeReceipt is lost along the way from the Sending MSH to the Receiving MSH.
+Like in Scenario #1, but where ehmiSBDH-EnvelopeReceipt is lost along the way from the Sending MSH to the Receiving MSH.
 
 The shipping pattern is like Scenario #3.
 
@@ -105,11 +105,11 @@ Reliable Messaging in ehmiSBDHEnvelope **SHALL** be the default mode but can exp
 
 In EHMI Messaging, these elements **SHALL** be present together with the underlying structure-parts.
 
-### ehmiSBDHEnvelope ehmiSBDHEnvelopeReceipt Reliable Messaging Elements
+### ehmiSBDHEnvelope ehmiSBDH-EnvelopeReceipt Reliable Messaging Elements
 
-When "reliable", the receiver of the ehmiSBDHEnvelope **SHALL** send An ehmiSBDHEnvelopeReceipt return to the original Sender.
+When "reliable", the receiver of the ehmiSBDHEnvelope **SHALL** send An ehmiSBDH-EnvelopeReceipt return to the original Sender.
 
-An ehmiSBDHEnvelopeReceipt consists of the following elements <!--(see a href="#Fig4"Figure 4</a>):-->
+An ehmiSBDH-EnvelopeReceipt consists of the following elements <!--(see a href="#Fig4"Figure 4</a>):-->
 
 <!--figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="ehmiSBDHEnvelope_schema-acknowledgement.png" target="_blank"> <img src="ehmiSBDHEnvelope_schema-acknowledgement.png" alt="ehmiSBDHEnvelope_schema-acknowledgement" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig4"></a>

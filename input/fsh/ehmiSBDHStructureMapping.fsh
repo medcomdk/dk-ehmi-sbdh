@@ -5,7 +5,7 @@ Alias: ehmiSbdh= http://example.org/StructureDefinition/SBDH
 Instance: ehmiSBDBundleToSBDH
 InstanceOf: StructureMap
 Title: "Mapping ehmiSBDBundle to SBDH"
-Description: "StructureMap for transforming ehmiSBDBundle to ehmiSbdhformat."
+Description: "StructureMap for transforming ehmiSBDBundle to ehmiSBDH format."
 
 * url = "http://example.org/StructureMap/ehmiSBDBundleToSBDH"
 * name = "ehmiSBDBundleToSBDH"

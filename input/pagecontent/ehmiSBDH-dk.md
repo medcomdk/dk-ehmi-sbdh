@@ -26,7 +26,7 @@ It is developed to
 
 <br>
 
-StandardBusinessDocumentHeader (SBDH) er en konvolutspecifikation udstedt af GS1 og profileret til anvendelse i PEPPOL. Den understøttes af eDelivery's Access Points (AP) ift. AS4 protokollen. Vi følger i EHMI konventionerne, som er udlagt i PEPPOLs profilering, men udvider den også til at kunne passe på sundhedsområdet. ehmiSbdher dog ingenting uden en omgivende container, kaldet StandardBusinessDocument (SBD).
+StandardBusinessDocumentHeader (SBDH) er en konvolutspecifikation udstedt af GS1 og profileret til anvendelse i PEPPOL. Den understøttes af eDelivery's Access Points (AP) ift. AS4 protokollen. Vi følger i EHMI konventionerne, som er udlagt i PEPPOLs profilering, men udvider den også til at kunne passe på sundhedsområdet. ehmiSBDH er dog ingenting uden en omgivende container, kaldet StandardBusinessDocument (SBD).
 
 <br>
 
@@ -47,16 +47,16 @@ BinaryContent er elementet som indeholder en base64-encodet meddelelse eller kvi
 
 <br>
 
-Indholdet i ehmiSbdher for en stor dels vedkommende bestemt af hvorledes
+Indholdet i ehmiSBDH er for en stor dels vedkommende bestemt af hvorledes
 -	de samme informationer registreres i EER
 -	de samme informationer registreres i SMP
 -	sammenhængen er til DokumentDelingServicen DDS 
--	sammenhængen er til EHMI EnvelopeReceipt
+-	sammenhængen er til ehmiSBDH EnvelopeReceipt
 -	de samme informationer registreres i EDS
 
 <br>
 
-ehmiSbdhhar en struktur, der overordnet er delt ind i følgende elementer:
+ehmiSBDH har en struktur, der overordnet er delt ind i følgende elementer:
 -	HeaderVersion
 -	Sender
 -	Receiver
@@ -66,12 +66,12 @@ ehmiSbdhhar en struktur, der overordnet er delt ind i følgende elementer:
 
 <br>
 
-#### ehmiSbdhfor en MedCom meddelelse og en MedCom kvittering
+#### ehmiSBDH for en MedCom meddelelse og en MedCom kvittering
 
 <br>
 
-I en ehmiSbdhfor en MedCom meddelelse og en MedCom kvittering kan følgende metadata indgå:
--	Generelle ehmiSbdhmetadata
+I en ehmiSBDH for en MedCom meddelelse og en MedCom kvittering kan følgende metadata indgå:
+-	Generelle ehmiSBDH metadata
 -	Metadata for eDelivery generel meddelelseskommunikation
 -	Metadata for sundhedsmeddelelseskommunikation
 -	XDS Metadata for Dokumentdeling
@@ -79,12 +79,12 @@ I en ehmiSbdhfor en MedCom meddelelse og en MedCom kvittering kan følgende meta
 
 <br>
 
-#### ehmiSbdhfor en EHMI EnvelopeReceipt 
+#### ehmiSBDH for en ehmiSBDH EnvelopeReceipt 
 
 <br>
 
-I en ehmiSbdhfor en EHMI EnvelopeReceipt er der følgende metadata:
--	Generelle ehmiSbdhmetadata
+I en ehmiSBDH for en ehmiSBDH EnvelopeReceipt er der følgende metadata:
+-	Generelle ehmiSBDH metadata
 -	Metadata for eDelivery generel meddelelseskommunikation
 -	Metadata for sundhedsmeddelelseskommunikation
 -	Metadata for Reliable messaging - BusinessService Response
@@ -104,9 +104,9 @@ SBDH’s generelle elementer er illustreret i nedenstående figur.
 <br>
 
 BusinessScope har dog fået sit eget kapitel, da det afviger markant fra de øvrige.
-I det følgende præsenteres de generelle ehmiSbdhelementer for de foreløbigt 2 meddelelsestyper, som EHMI opererer med:
+I det følgende præsenteres de generelle ehmiSBDH-elementer for de foreløbigt 2 meddelelsestyper, som EHMI opererer med:
 -	FHIR
--	EHMI EnvelopeReceipt 
+-	ehmiSBDH EnvelopeReceipt 
 
 Hvor det er relevant, vil de generelle elementer være opdelt i underafsnit, der beskriver stien til værdien for det pågældende element i de respektive meddelelsestyper.
 Hvor de fleste elementer har almindeligt fokus på meddelelsesudveksling generelt og samspillet med SMP, giver særligt BusinessScope et sundhedsorienteret aftryk i specifikationen.
@@ -271,7 +271,7 @@ Meddelelseseksempel:
 
 <br>
 
-###### Hvis MedCom meddelelsen er af typen EHMI EnvelopeReceipt
+###### Hvis MedCom meddelelsen er af typen ehmiSBDH EnvelopeReceipt
 
 <br>
 
@@ -345,7 +345,7 @@ Meddelelseseksempel:
 
 <br>
 
-Hvis den indeholdte meddelelse er af typen EHMI EnvelopeReceipt 
+Hvis den indeholdte meddelelse er af typen ehmiSBDH EnvelopeReceipt 
 
 Altid 
 
@@ -361,7 +361,7 @@ Altid
 
 <br>
 
-EHMI EnvelopeReceipt eksempel:
+ehmiSBDH EnvelopeReceipt eksempel:
 
 <br>
 
@@ -377,7 +377,7 @@ EHMI EnvelopeReceipt eksempel:
 
 <br>
 
-InstanceIdentifier vil blive genereret af den afsendende MSH og er uanset om det er en meddelelse eller en EHMI EnvelopeReceipt genereret.
+InstanceIdentifier vil blive genereret af den afsendende MSH og er uanset om det er en meddelelse eller en ehmiSBDH EnvelopeReceipt genereret.
 
     <InstanceIdentifier>[generated UUID]</InstanceIdentifier>	
 
@@ -436,7 +436,7 @@ Meddelelseseksempel:
 
 <br>
 
-###### Hvis meddelelsen er af typen EHMI EnvelopeReceipt:
+###### Hvis meddelelsen er af typen ehmiSBDH EnvelopeReceipt:
 
 <br>
 
@@ -604,7 +604,7 @@ MedCom FHIR Meddelelseseksempel
 
 <br>
 
-##### DOCUMENTID for EHMI EnvelopeReceipt
+##### DOCUMENTID for ehmiSBDH EnvelopeReceipt
 
 <br>
 
@@ -618,7 +618,7 @@ MedCom FHIR Meddelelseseksempel
 
 <br>
 
-DOCUMENTID EHMI EnvelopeReceipt eksempel:
+DOCUMENTID ehmiSBDH EnvelopeReceipt eksempel:
 
 <br>
 
@@ -778,7 +778,7 @@ MESSAGEIDENTIFIER eksempel:
 
 <br>
 
-###### Hvis MedCom meddelelsen er af typen EHMI EnvelopeReceipt
+###### Hvis MedCom meddelelsen er af typen ehmiSBDH EnvelopeReceipt
 
     <Scope>
 	    <Type>MESSAGEIDENTIFIER</Type> 
@@ -931,7 +931,7 @@ ORIGINALMESSAGEVERSION eksempel:
 
 ##### ORIGINALENVELOPEIDENTIFIER
 
-ORIGINALENVELOPEIDENTIFIER er den originale ehmiSbdhenvelopes InstanceIdentifier, bl.a. til brug for forsendelsesstatus opsamling. 
+ORIGINALENVELOPEIDENTIFIER er den originale ehmiSBDH-envelopes InstanceIdentifier, bl.a. til brug for forsendelsesstatus opsamling. 
 
 Er kun relevant når SBD/SBDH/DocumentInformation/Standard.value = “ebbp-signals”
 

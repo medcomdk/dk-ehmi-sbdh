@@ -40,7 +40,7 @@ Class ServiceTransaction
   
 }
 
-class "BusinessScope" as BusinessScope <<ehmiSbdhElement>>
+class "BusinessScope" as BusinessScope <<ehmiSBDH-element>>
 class "Scope" as Scope <<BusinessScope Element>>
 class "CorrelationInformation" as CorrelationInformation <<Scope Element>>
 class "BusinessService" as BusinessService <<Scope Element>>

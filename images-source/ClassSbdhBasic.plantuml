@@ -33,11 +33,11 @@ class BusinessScope
 }
 
 class "StandardBusinessDocumentHeader" as ehmiSbdh<<SBD Header (SBDH)>>
-class "HeaderVersion" as HeaderVersion <<ehmiSbdhelement>>
-class "Sender" as Sender <<ehmiSbdhelement>>
-class "Receiver" as Receiver <<ehmiSbdhelement>>
-class "DocumentInformation" as DocumentInformation <<ehmiSbdhelement>>
-class "BusinessScope" as BusinessScope <<ehmiSbdhelement>>
+class "HeaderVersion" as HeaderVersion <<ehmiSBDH-element>>
+class "Sender" as Sender <<ehmiSBDH-element>>
+class "Receiver" as Receiver <<ehmiSBDH-element>>
+class "DocumentInformation" as DocumentInformation <<ehmiSBDH-element>>
+class "BusinessScope" as BusinessScope <<ehmiSBDH-element>>
 
 
 ehmiSbdh"1" *-- "1" HeaderVersion 
