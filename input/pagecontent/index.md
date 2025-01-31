@@ -19,7 +19,7 @@ ehmiSbdhis in EHMI called ehmiSbdhdue to constraints EHMI lay upon the GS1 and P
 
 ehmiSbdhcan therefore be send and delivered through the eDelivery Network in EHMI Core in all use cases, where ehmiSbdhserves the entire EHMI ecosystem.
 
-## ehmiSbdhin relation to EHMI Core
+## ehmiSBDH in relation to EHMI Core
 
 ehmiSbdhwraps the bidirectional message with clinical content between the Message Service Handlers (MSH) and serve as a neutral container for whatever MedCom Message, that is being send. If it is a FHIR, OIOXml or Edifact message, ehmiSbdhcan wrap it and due to extensive extraction of metadata from the message also serve the ground for 
 - handling ehmiSbdhAcknowledgements
@@ -27,7 +27,7 @@ ehmiSbdhwraps the bidirectional message with clinical content between the Messag
 
 ### ehmiSbdhAcknowledgements
 
-## ehmiSbdhin relation to EDS Delivery Status:
+## ehmiSBDH in relation to EDS Delivery Status:
 
 - serve EDS with metadata in use cases where non-patient related messages are exchanged like in message acknowledgements and ehmiSbdhacknowledgements
 - serve EDS with metadata in use cases where patient related messages are exchanged like in the FHIR message HomeCareObservation and messages alike in OIOXml and Edifact. 
