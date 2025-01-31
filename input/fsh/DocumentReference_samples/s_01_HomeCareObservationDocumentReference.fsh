@@ -1,5 +1,5 @@
 Instance: instanceHomeCareObservationDocumentReference
-InstanceOf: https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/homecare-observation-documentreference
+InstanceOf: https://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/homecare-observation-documentreference
 Usage: #example
 //* meta.profile = "https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/homecare-observation-documentreference"
 * contained[0] = instanceXDSAuthorPerson
