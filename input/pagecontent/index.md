@@ -12,8 +12,8 @@ In relation to EHMI Core:
 - handle the XDS Metadata that is needed when MedCom Messages are exchanged as “documents” in the national Danish XDS Framework
 - serve the ground for EHMI Statistics of message exchange
 
-In relation to EDS Delivery Status:
-- serve the ground for EDS Delivery Status
+In relation to EHMI Delivery Status:
+- serve the ground for EHMI Delivery Status
 
 ehmiSBDH is in EHMI called ehmiSbdh due to constraints EHMI lay upon the GS1 and PEPPOL specifications, none of which is breaking to a validation through the original specification with the PEPPOL extensions
 
@@ -27,7 +27,7 @@ ehmiSBDH wraps the bidirectional message with clinical content between the Messa
 
 #### ehmiSBDH Acknowledgements
 
-### ehmiSBDH in relation to EDS Delivery Status:
+### ehmiSBDH in relation to EHMI Delivery Status:
 
 - serve EDS with metadata in use cases where non-patient related messages are exchanged like in message acknowledgements and ehmiSBDH Acknowledgements
 - serve EDS with metadata in use cases where patient related messages are exchanged like in the FHIR message HomeCareObservation and messages alike in OIOXml and Edifact. 
