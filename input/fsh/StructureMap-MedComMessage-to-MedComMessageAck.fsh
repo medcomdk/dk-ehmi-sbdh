@@ -1,7 +1,9 @@
-Instance: StructureMap-MedComMessagingMessage2MedComAcknowledgementMessage-transform
+/*Instance: StructureMap-MedComMessagingMessage2MedComAcknowledgementMessage-transform
 InstanceOf: StructureMap
-Title: "Transformation specification of a MedComMessagingMessage to a MedComAcknowledgementMessage"
+Title: "Transform a MedComMessagingMessage to a MedComAcknowledgementMessage"
 Description: "Transformation specification of a MedComMessagingMessage to a MedComAcknowledgementMessage"
+Description: "Transformation specification of a MedcomMessagingMessage to a MedComAcknowledgementMessage. This specification is 
+not even started but aims at indicating how a transformation from a MedCom FHIR format to the ehmiSBDH Envelope can be done"
 Usage: #definition
 * id = "StrMap-MedComMessagingMessage2MedComAcknowledgementMsg-transform"
 * url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedcomMessagingMessage2MedComAcknowledgementMessage-transform"
