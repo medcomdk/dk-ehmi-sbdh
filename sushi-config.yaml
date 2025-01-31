@@ -91,7 +91,7 @@ menu:
   Home: index.html
   ehmiSBDH: 
     ehmiSBDH: ehmiSBDH.html
-    ehmiSBDHAck: ehmiSBDHAck.html
+    ehmiSBDH Acknowledgement: ehmiSBDHAck.html
     EHMI EnvelopeReceipt: ehmiSBDHEnvelopeReceipt.html
     ehmiSbdhReliable Messaging: ehmiSBDHReliableMessaging.html
     References: references.html
