@@ -1,6 +1,6 @@
-# EHMI Standard Business Document Header (ehmiSBDH)
+## EHMI Standard Business Document Header (ehmiSBDH)
 
-## Introduction
+### Introduction
 
 The EHMI Standard Business Document Header (ehmiSBDH) is a customized version of the PEPPOL SBDH, which again is an esxtension of the original GS1 SBDH.
 
@@ -19,20 +19,20 @@ ehmiSbdhis in EHMI called ehmiSbdhdue to constraints EHMI lay upon the GS1 and P
 
 ehmiSbdhcan therefore be send and delivered through the eDelivery Network in EHMI Core in all use cases, where ehmiSbdhserves the entire EHMI ecosystem.
 
-## ehmiSBDH in relation to EHMI Core
+### ehmiSBDH in relation to EHMI Core
 
 ehmiSbdhwraps the bidirectional message with clinical content between the Message Service Handlers (MSH) and serve as a neutral container for whatever MedCom Message, that is being send. If it is a FHIR, OIOXml or Edifact message, ehmiSbdhcan wrap it and due to extensive extraction of metadata from the message also serve the ground for 
 - handling ehmiSBDH Acknowledgements
 - handling of the secondary exchange of data through the national Danish XDS Framework
 
-### ehmiSBDH Acknowledgements
+#### ehmiSBDH Acknowledgements
 
-## ehmiSBDH in relation to EDS Delivery Status:
+### ehmiSBDH in relation to EDS Delivery Status:
 
 - serve EDS with metadata in use cases where non-patient related messages are exchanged like in message acknowledgements and ehmiSBDH Acknowledgements
 - serve EDS with metadata in use cases where patient related messages are exchanged like in the FHIR message HomeCareObservation and messages alike in OIOXml and Edifact. 
 
-## ehmiSbdh xsd-schemas
+### ehmiSbdh xsd-schemas
 
 <!-- br -->
 
@@ -50,7 +50,7 @@ All ehmiSbdh xsd-files can be found via the [download-page](downloads.html), but
 
 <!-- br -->
 
-## Structure Mappings
+### Structure Mappings
 
 For a number of different mappings to and from ehmiSbdh and/or MedCom Messaging Message, there is developed a number of FHIR Structure Mappings in order for the suppliers to better understand and potentially automate some tasks around mappings.
 
