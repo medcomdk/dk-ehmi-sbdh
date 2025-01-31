@@ -2,7 +2,7 @@
 
 ## ehmiSbdh– General elements
 
-The StandardBusinessDocumentHeader (SBDH) is an envelope specification issued by GS1 and profiled for use in PEPPOL. It is supported by eDelivery's Access Points (AP) according to the AS4 protocol. We follow the conventions, which are laid out in PEPPOL's profiling, but also we are extending it to be able to take care of the health area. However, ehmiSbdhis nothing without a surrounding container, called StandardBusinessDocument (SBD).
+The StandardBusinessDocumentHeader (SBDH) is an envelope specification issued by GS1 and profiled for use in PEPPOL. It is supported by eDelivery's Access Points (AP) according to the AS4 protocol. We follow the conventions, which are laid out in PEPPOL's profiling, but also we are extending it to be able to take care of the health area. However, ehmiSBDH is nothing without a surrounding container, called StandardBusinessDocument (SBD).
 
 <!-- br -->
 
@@ -15,7 +15,7 @@ StandardBusinessDocument is, as mentioned, SBDH's surrounding container, and is 
 - StandardBusinessDocumentHeader
 - BinaryContent (base64 encoded)
 
-Although the StandardBusinessDocument, as such, is the envelope, the term ehmiSbdhis generally used for the entire envelope, since it is this content that is of particular interest in the message exchange. BinaryContent is the element that contains a base64-encoded message or acknowledgment for a sent SBDH.
+Although the StandardBusinessDocument, as such, is the envelope, the term ehmiSBDH is generally used for the entire envelope, since it is this content that is of particular interest in the message exchange. BinaryContent is the element that contains a base64-encoded message or acknowledgment for a sent SBDH.
 
 <!-- br -->
 
@@ -24,7 +24,7 @@ Although the StandardBusinessDocument, as such, is the envelope, the term ehmiSb
 
 <!-- br -->
 
-The content of ehmiSbdhis largely determined by how
+The content of ehmiSBDH is largely determined by how
 
 - the same information is registered in EER
 - the same information is registered in SMP
