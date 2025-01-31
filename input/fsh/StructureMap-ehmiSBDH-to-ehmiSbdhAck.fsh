@@ -1,19 +1,19 @@
 Instance: ehmiSbdh2ehmiSbdhAck-transform
 InstanceOf: StructureMap
-Title: "Transformation specification of an ehmiSbdh Envelope to an ehmiSbdhAck "
-Description: "Transformation specification of an ehmiSbdh Envelope to an ehmiSbdhAck "
+Title: "Transformation specification of an ehmiSBDH Envelope to an ehmiSbdh Acknowledgement "
+Description: "Transformation specification of an ehmiSBDH Envelope to an ehmiSbdh Acknowledgement "
 Usage: #definition
 * id = "ehmiSbdh2ehmiSbdhAck-transform"
 * url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/ehmiSbdh2ehmiSbdhAck-transform"
-* name = "Transform from an ehmiSbdh Envelope to an ehmiSbdhAck"
-* title = "Transform from an ehmiSbdh Envelope to an ehmiSbdhAck"
+* name = "Transform from an ehmiSBDH Envelope to an ehmiSbdh Acknowledgement"
+* title = "Transform from an ehmiSBDH Envelope to an ehmiSbdh Acknowledgement"
 * status = #draft
-* description = "Transform from an ehmiSbdh Envelope to an ehmiSbdhAck. Be aware that these are the evry same structures"
+* description = "Transform from an ehmiSBDH Envelope to an ehmiSbdh Acknowledgement. Be aware that these are the evry same structures"
 * structure[0].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSbdh/StandardBusinessDocumentHeader.xsd"
 * structure[=].mode = #source
 * structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSbdh/StandardBusinessDocumentHeader.xsd"
 * structure[=].mode = #target
-* group[0].name = "HeaderVersion"
+* group[0].name = "ehmiSbdh2ehmiSbdhAck"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
 * group[=].input[=].type = "Bundle"
