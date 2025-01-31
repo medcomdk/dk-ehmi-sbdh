@@ -1,3 +1,4 @@
+/*
 Instance: MedComAcknowledgementMessage2ehmiSbdh-transform
 InstanceOf: StructureMap
 Title: "Transformation specification of a MedCom Acknowledgement Message  to an ehmiSBDH-Envelope"
