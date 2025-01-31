@@ -1,3 +1,4 @@
+/*
 Instance: StructureMap-MedComMessagingMessage2edsPatientDeliveryStatus-transform
 InstanceOf: StructureMap
 Title: "Transformation specification of a MedcomMessagingMessage to an EHMI Delivery Status structure (edsPatientDeliveryStatus)"
