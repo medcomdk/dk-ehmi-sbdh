@@ -8,11 +8,6 @@ In EHMI Reliable Messaging **SHALL** be *"turned on"* by adding the Scope struct
 
 This is defined as the default mode of Reliable Messaging in EHMI.
 
-<figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="reliable-messaging-ehmiSBDHEnvelope.png" target="_blank"> <img src="reliable-messaging-ehmiSBDHEnvelope.png" alt="reliable messaging principle" style="width:90%; height:auto; margin-left:0%; margin-right:10%; margin-top:5px; margin-bottom:5px;" id="Fig1"></a>
-<figcaption text-align="left"><b>Figure 1: Reliable Messaging - ehmiSBDH Envelope </b></figcaption>
-</figure>
-
 When Reliable Messaging is implemented, the Receiver **SHALL** check the incoming StandardBusinessDocumentHeader/DocumentInformation/Identifier (hereafter EnvelopeIdentifier) and the StandardBusinessDocumentHeader/BusinessScope/Scope[Type:DOCUMENTID]/InstanceIdentifier (hereafter MessageIdentifier) against a cache of previously received ehmiSBDH Envelopes. The correct action to take depends on what is received:
 <style>
 table, th, td {
@@ -26,6 +21,11 @@ table, th, td {
 | Both EnvelopeIdentifier and MessageIdentifier have already been received   | The original ehmiSBDH Envelope server may either reprocess the message, or reject the message|
 | MessageIdentifier has already been received, but EnvelopeIdentifier is new | The original ehmiSBDH-EnvelopeReceipt has been lost (failed to return to the request issuer) and thus the previously received Message in An ehmiSBDH Envelope has been resubmitted with a new EnvelopeIdentifier for processing again. The original ehmiSBDH-EnvelopeReceipt **SHALL** be resent|
 | The EnvelopeIdentifier has already been received, but the MessageIdentifier is new | This is an error - EnvelopeIdentifier values **SHALL** never be reused. Receiver **MAY** return a Negative ehmiSBDH-EnvelopeReceipt|
+
+<figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
+<a href="reliable-messaging-ehmiSBDHEnvelope.png" target="_blank"> <img src="reliable-messaging-ehmiSBDHEnvelope.png" alt="reliable messaging principle" style="width:90%; height:auto; margin-left:0%; margin-right:10%; margin-top:5px; margin-bottom:5px;" id="Fig1"></a>
+<figcaption text-align="left"><b>Figure 1: Reliable Messaging - ehmiSBDH Envelope </b></figcaption>
+</figure>
 
 ## Different Reliable Messaging scenarios using ehmiSBDH Envelope
 
