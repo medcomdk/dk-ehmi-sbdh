@@ -1,15 +1,15 @@
 Instance: ehmiSbdh2edsPatientDeliveryStatus-transform
 InstanceOf: StructureMap
-Title: "Transformation specification of an ehmiSbdhEnvelope to an EHMI Delivery Status structure (edsPatientDeliveryStatus)"
-Description: "Transformation specification of an ehmiSbdhEnvelope to an EHMI Delivery Status structure (edsPatientDeliveryStatus)"
+Title: "Transformation specification of an ehmiSBDH-Envelope to an EHMI Delivery Status structure (edsPatientDeliveryStatus)"
+Description: "Transformation specification of an ehmiSBDH-Envelope to an EHMI Delivery Status structure (edsPatientDeliveryStatus)"
 Usage: #definition
 * id = "ehmiSbdh2edsPatientDeliveryStatus-transform"
 * url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/ehmiSbdh2edsPatientDeliveryStatus-transform"
-* name = "Transform from an ehmiSbdhEnvelope to an edsPatientDeliveryStatus"
-* title = "Transform from an ehmiSbdhEnvelope to an edsPatientDeliveryStatus"
+* name = "Transform from an ehmiSBDH-Envelope to an edsPatientDeliveryStatus"
+* title = "Transform from an ehmiSBDH-Envelope to an edsPatientDeliveryStatus"
 * status = #draft
-* description = "Transform from a FHIR Messsage to an ehmiSbdhEnvelope"
-* structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/branches/v0.90.1-beta.1/ehmiSBDH/StandardBusinessDocumentHeader.xsd"
+* description = "Transform from a FHIR Messsage to an ehmiSBDH-Envelope"
+* structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH/StandardBusinessDocumentHeader.xsd"
 * structure[=].mode = #source
 * structure[0].url = "http://medcomehmi.dk/ig/dk-ehmi-eds/StructureDefinition/edsPatientDeliveryStatus"
 * structure[=].mode = #target

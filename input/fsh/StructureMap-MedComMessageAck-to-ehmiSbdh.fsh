@@ -1,18 +1,18 @@
 Instance: MedComAcknowledgementMessage2ehmiSbdh-transform
 InstanceOf: StructureMap
-Title: "Transformation specification of a MedCom Acknowledgement Message  to an ehmiSbdhEnvelope"
-Description: "Transformation specification of a MedCom Acknowledgement Message  to an ehmiSbdhEnvelope"
+Title: "Transformation specification of a MedCom Acknowledgement Message  to an ehmiSBDH-Envelope"
+Description: "Transformation specification of a MedCom Acknowledgement Message  to an ehmiSBDH-Envelope"
 Usage: #definition
 * id = "MedComAcknowledgementMessage2ehmiSbdh-transform"
 * url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedComAcknowledgementMessage2ehmiSbdh-transform"
 * name = "MedComAcknowledgementMessage2SbdhTransform"
-* title = "Transformation specification of a MedCom Acknowledgement Message  to an ehmiSbdhEnvelope"
+* title = "Transformation specification of a MedCom Acknowledgement Message  to an ehmiSBDH-Envelope"
 * status = #draft
-* description = "Transform from a MedCom Acknowledgement Message  to an ehmiSbdhEnvelope"
+* description = "Transform from a MedCom Acknowledgement Message  to an ehmiSBDH-Envelope"
 * structure[0].url = "http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgement.html"
 //* structure[0].url = http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-message
 * structure[=].mode = #source
-* structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/branches/v0.90.1-beta.1/ehmiSBDH/StandardBusinessDocumentHeader.xsd"
+* structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSBDH/StandardBusinessDocumentHeader.xsd"
 * structure[=].mode = #target
 * group[0].name = "HeaderVersion"
 * group[=].typeMode = #none

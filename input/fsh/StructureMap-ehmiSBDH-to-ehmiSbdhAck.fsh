@@ -9,9 +9,9 @@ Usage: #definition
 * title = "Transform from an ehmiSbdh Envelope to an ehmiSbdhAck"
 * status = #draft
 * description = "Transform from an ehmiSbdh Envelope to an ehmiSbdhAck. Be aware that these are the evry same structures"
-* structure[0].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-ehmiSbdh/branches/v0.90.1-beta.1/ehmiSbdh/StandardBusinessDocumentHeader.xsd"
+* structure[0].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-ehmiSbdh/ehmiSbdh/StandardBusinessDocumentHeader.xsd"
 * structure[=].mode = #source
-* structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-ehmiSbdh/branches/v0.90.1-beta.1/ehmiSbdh/StandardBusinessDocumentHeader.xsd"
+* structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-ehmiSbdh/ehmiSbdh/StandardBusinessDocumentHeader.xsd"
 * structure[=].mode = #target
 
 * group[0].name = "HeaderVersion"

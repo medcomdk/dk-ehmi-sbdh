@@ -1,14 +1,14 @@
 
 Instance: MedComMessagingMessage2ehmiSbdh-transform
 InstanceOf: StructureMap
-Title: "Transformation specification of a MedcomMessagingMessage to an ehmiSbdhEnvelope "
-Description: "Transformation specification of a MedcomMessagingMessage to an ehmiSbdhEnvelope "
+Title: "Transformation specification of a MedcomMessagingMessage to an ehmiSBDH-Envelope "
+Description: "Transformation specification of a MedcomMessagingMessage to an ehmiSBDH-Envelope "
 Usage: #definition
 * url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedcomMessagingMessage2Sbdh-transform"
 * name = "MedcomMessagingMessage2SbdhTransform"
-* title = "Transformation specification of a MedcomMessagingMessage to an ehmiSbdhEnvelope "
+* title = "Transformation specification of a MedcomMessagingMessage to an ehmiSBDH-Envelope "
 * status = #draft
-* description = "Transform from a MedCom Messaging Messsage to an ehmiSbdhEnvelope"
+* description = "Transform from a MedCom Messaging Messsage to an ehmiSBDH-Envelope"
 * structure[0].url = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-message"
 * structure[=].mode = #source
 //* structure[+].url = "https://medcomehmi.dk/ig/dk-ehmi-sbdh/ehmiSBDH/StandardBusinessDocumentHeader.xsd"
