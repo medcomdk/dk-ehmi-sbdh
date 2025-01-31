@@ -66,7 +66,7 @@ For a number of different mappings to and from ehmiSBDH and/or MedCom Messaging 
 There has already been developed one in its initial phase, which is:
 
 - **MedCom Messaging Message StructureMappings**
-  - [Transformation specification of a MedcomMessagingMessage to an ehmiSBDH Envelope](MedComMessagingMessage2ehmiSbdh-transform.html)
+  - [Transformation specification of a MedcomMessagingMessage to an ehmiSBDH Envelope](StructureMap-MedComMessagingMessage2ehmiSbdh-transform.html)
 
 The StructureMappings in the pipeline are:
 
