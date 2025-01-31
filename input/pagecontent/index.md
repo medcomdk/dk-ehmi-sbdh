@@ -25,7 +25,9 @@ ehmiSBDH wraps the bidirectional message with clinical content between the Messa
 - handling ehmiSBDH Acknowledgements
 - handling of the secondary exchange of data through the national Danish XDS Framework
 
-#### ehmiSBDH Acknowledgements
+#### ehmiSBDH Acknowledgement
+
+An ehmiSBDH Acknowledgement is basically just a ehmiSBDH wrapping the [ehmiSBDH EnvelopeReceipt](ehmiSBDHEnvelopeReceipt.html) like it would wrap any MedCom Message. The configuration of especially the BusinessScopes is a little different, but technically it is 
 
 ### ehmiSBDH in relation to EHMI Delivery Status:
 
@@ -50,18 +52,31 @@ All ehmiSBDH xsd-files can be found via the [download-page](downloads.html), but
 
 <!-- br -->
 
-### Structure Mappings
+### Supporting work in progress
 
-For a number of different mappings to and from ehmiSBDH and/or MedCom Messaging Message, there is developed a number of FHIR Structure Mappings in order for the suppliers to better understand and potentially automate some tasks around mappings.
+This specification of ehmiSBDH covers what is needed to understand and work with for EHMI Core and its stations of MSHs.
+But there is still room for more service and it is planned to deliver more huidance on how to map from one format to another in the MSHs. 
+FHIR StructureMappings delivers a useful tool to do that and as this IG lives over time more and more FHIR StructureMappings will find their way into this IG.
+FHIR StructureMappings are not limited to handle resources of FHIR profiles, but can handle practically all kinds of formats.
 
-These are:
-- **MedCom Messaging Message**
+#### Structure Mappings
+
+For a number of different mappings to and from ehmiSBDH and/or MedCom Messaging Message, there will be developed a number of FHIR StructureMappings in order for the suppliers to better understand and potentially automate some tasks around mappings.
+
+There has already been developed one in its initial phase, which is:
+
+- **MedCom Messaging Message StructureMappings**
   - [Transformation specification of a MedcomMessagingMessage to an ehmiSBDH Envelope](MedComMessagingMessage2ehmiSbdh-transform.html)
-  - [Transformation specification of a MedcomMessagingMessage to a MedCom Messaging Ack](StructureMap-MedComAcknowledgementMessage2ehmiSbdh-transform.html)
-  - [Transformation specification of a MedCom Messaging Ack to an ehmiSBDH Envelope](StructureMap-MedComAcknowledgementMessage2ehmiSbdh-transform.html)
-  - [Transformation specification of a MedcomMessagingMessage and an ehmiSBDH Envelope to a DocumentReference](StructureMap-MedComMessagingMessage2MedComDocumentReference-transform.html)
+
+The StructureMappings in the pipeline are:
+
+- **Further MedCom Messaging Message StructureMappings**
+  - Transformation of a MedcomMessagingMessage to a MedCom Messaging Ack
+  - Transformation of a MedCom Messaging Ack to an ehmiSBDH Envelope
+  - Transformation of a MedcomMessagingMessage and an ehmiSBDH Envelope to a MedCom DocumentReference
 
 - **ehmiSBDH Envelope**
-  - [Transformation specification of an ehmiSBDH Envelope with a patient to an EHMI Delivery Status structure](StructureMap-ehmiSbdh2edsPatientDeliveryStatus-transform.html)
-  - [Transformation specification of an ehmiSBDH Envelope without a patient to an EHMI Delivery Status structure](StructureMap-Sbdh2edsBasicDeliveryStatus-transform.html)
-  
+  - Transformation of an ehmiSBDH Envelope with a patient to an EHMI Delivery Status structure, edsPatientDeliveryStatus
+  - Transformation of an ehmiSBDH Envelope without a patient to an EHMI Delivery Status structure, edsBasicDeliveryStatus
+  - Transformation of a MedcomMessagingMessage and an ehmiSBDH Envelope to a MedCom DocumentReference
+
