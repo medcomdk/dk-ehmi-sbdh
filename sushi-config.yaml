@@ -88,10 +88,10 @@ menu:
   Home: index.html
   ehmiSBDH: 
     ehmiSBDH: ehmiSBDH.html
-    ehmiSBDH Acknowledgement: ehmiSBDHAck.html
-    ehmiSBDH EnvelopeReceipt: ehmiSBDHEnvelopeReceipt.html
+    #ehmiSBDH Acknowledgement: ehmiSBDHAck.html
+    #ehmiSBDH EnvelopeReceipt: ehmiSBDHEnvelopeReceipt.html
     ehmiSbdhReliable Messaging: ehmiSBDHReliableMessaging.html
-    References: references.html
+    #References: references.html
   ehmiSbdhschemas: 
     StandardBusinessDocumentHeader: ehmiSBDH_StandardBusinessDocumentHeader.xsd.html
     Partner: ehmiSBDH_Partner.xsd.html
