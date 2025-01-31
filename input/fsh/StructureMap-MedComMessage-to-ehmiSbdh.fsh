@@ -1,4 +1,3 @@
-/*
 Instance: MedComMessagingMessage2ehmiSbdh-transform
 InstanceOf: StructureMap
 Title: "Transform a MedcomMessagingMessage to an ehmiSBDH-Envelope "
