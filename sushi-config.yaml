@@ -36,7 +36,6 @@ dependencies:
   medcom.fhir.dk.xdsmetadata: 1.0.0
   medcom.fhir.dk.coredocument: dev #1.0.0
   medcom.fhir.dk.xdsdocuments: dev #1.0.0
-  # medcom.fhir.dk.ihe.xds.metadata: dev
 #
 #     id: mcode
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
