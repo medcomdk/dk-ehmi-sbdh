@@ -1,4 +1,4 @@
-Instance: MedComMessagingMessage2MedComDocumentReference-transform
+/*Instance: MedComMessagingMessage2MedComDocumentReference-transform
 InstanceOf: StructureMap
 Title: "Transformation specification of a MedComMessagingMessage and an ehmiSBDH-Envelope to a DocumentReference"
 Description: "Transformation specification of a MedComMessagingMessage and an ehmiSBDH-Envelope to a DocumentReference"
