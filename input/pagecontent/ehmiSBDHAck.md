@@ -1,6 +1,6 @@
-# ehmiSBDHAck profile of Standard Business Document Header 
+# ehmiSBDH-Acknowledgements profile of Standard Business Document Header 
 
-## ehmiSBDHAck – General elements
+## ehmiSBDH-Acknowledgements – General elements
 
 #### ehmiSBDH for an ehmiSBDH EnvelopeReceipt 
 
@@ -485,7 +485,7 @@ CorrelationInformation is used to tie a message and its receipt together. All el
 
 <!-- br -->
 
-<img src="ClassSbdhBusinessScopeComplex.png" alt="ehmiSBDHAck BusinessScope Complex"  style="width:60%;height:auto;margin-left:5%; margin-right:35%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
+<img src="ClassSbdhBusinessScopeComplex.png" alt="ehmiSBDH-Acknowledgements BusinessScope Complex"  style="width:60%;height:auto;margin-left:5%; margin-right:35%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
 
 #### Reliable messaging - BusinessService Request
 
