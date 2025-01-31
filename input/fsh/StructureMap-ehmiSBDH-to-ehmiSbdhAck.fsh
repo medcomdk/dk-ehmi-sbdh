@@ -4,16 +4,15 @@ Title: "Transformation specification of an ehmiSbdh Envelope to an ehmiSbdhAck "
 Description: "Transformation specification of an ehmiSbdh Envelope to an ehmiSbdhAck "
 Usage: #definition
 * id = "ehmiSbdh2ehmiSbdhAck-transform"
-* url = "http://medcomehmi.dk/ig/dk-ehmi-ehmiSbdh/StructureMap/ehmiSbdh2ehmiSbdhAck-transform"
+* url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/ehmiSbdh2ehmiSbdhAck-transform"
 * name = "Transform from an ehmiSbdh Envelope to an ehmiSbdhAck"
 * title = "Transform from an ehmiSbdh Envelope to an ehmiSbdhAck"
 * status = #draft
 * description = "Transform from an ehmiSbdh Envelope to an ehmiSbdhAck. Be aware that these are the evry same structures"
-* structure[0].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-ehmiSbdh/ehmiSbdh/StandardBusinessDocumentHeader.xsd"
+* structure[0].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSbdh/StandardBusinessDocumentHeader.xsd"
 * structure[=].mode = #source
-* structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-ehmiSbdh/ehmiSbdh/StandardBusinessDocumentHeader.xsd"
+* structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh/ehmiSbdh/StandardBusinessDocumentHeader.xsd"
 * structure[=].mode = #target
-
 * group[0].name = "HeaderVersion"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
@@ -31,6 +30,7 @@ Usage: #definition
 * group[=].rule[=].target.element = "HeaderVersion"
 * group[=].rule[=].target.transform = #copy
 
+/*
 
 //Sender
 * group[+].name = "SbdhSender"
