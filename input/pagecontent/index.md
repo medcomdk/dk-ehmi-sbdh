@@ -15,7 +15,7 @@ In relation to EHMI Core:
 In relation to EDS Delivery Status:
 - serve the ground for EDS Delivery Status
 
-ehmiSBDH is in EHMI called ehmiSbdhdue to constraints EHMI lay upon the GS1 and PEPPOL specifications, none of which is breaking to a validation through the original specification with the PEPPOL extensions
+ehmiSBDH is in EHMI called ehmiSbdh due to constraints EHMI lay upon the GS1 and PEPPOL specifications, none of which is breaking to a validation through the original specification with the PEPPOL extensions
 
 ehmiSBDH can therefore be send and delivered through the eDelivery Network in EHMI Core in all use cases, where ehmiSbdhserves the entire EHMI ecosystem.
 
@@ -41,12 +41,12 @@ All ehmiSbdh xsd-files can be found via the [download-page](downloads.html), but
 (all files open in new window)
 <!-- br -->
 
-- <a href="ehmiSBDH_StandardBusinessDocumentHeader.xsd.html" target="_blank">ehmiSBDHAck StandardBusinessDocumentHeader Xsd</a>
-- <a href="ehmiSBDH_Partner.xsd.html" target="_blank">ehmiSBDHAck Partner Xsd</a>
-- <a href="ehmiSBDH_DocumentIdentification.xsd.html" target="_blank">ehmiSBDHAck DocumentIdentification Xsd</a>
-- <a href="ehmiSBDH_BusinessScope.xsd.html" target="_blank">ehmiSBDHAck BusinessScope Xsd</a>
-- <a href="ehmiSBDH_EDN-Business-Message-Envelope-1.2.xsd.html" target="_blank">ehmiSBDHAck BinaryContentType Xsd</a>
-- <a href="ehmiSBDH_ebbp-signals-2.0.4.xsd.html" target="_blank">ehmiSBDHAck Ebbp-Signals 2.0.4 Xsd</a>
+- <a href="ehmiSBDH_StandardBusinessDocumentHeader.xsd.html" target="_blank">ehmiSBDH StandardBusinessDocumentHeader Xsd</a>
+- <a href="ehmiSBDH_Partner.xsd.html" target="_blank">ehmiSBDH Partner Xsd</a>
+- <a href="ehmiSBDH_DocumentIdentification.xsd.html" target="_blank">ehmiSBDH DocumentIdentification Xsd</a>
+- <a href="ehmiSBDH_BusinessScope.xsd.html" target="_blank">ehmiSBDH BusinessScope Xsd</a>
+- <a href="ehmiSBDH_EDN-Business-Message-Envelope-1.2.xsd.html" target="_blank">ehmiSBDH BinaryContentType Xsd</a>
+- <a href="ehmiSBDH_ebbp-signals-2.0.4.xsd.html" target="_blank">ehmiSBDH Ebbp-Signals 2.0.4 Xsd</a>
 
 <!-- br -->
 
