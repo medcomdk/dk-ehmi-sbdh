@@ -31,6 +31,7 @@ Usage: #definition
 * group[=].rule[=].target.element = "HeaderVersion"
 * group[=].rule[=].target.transform = #copy
 
+/*
 * group[+].name = "SbdhSender"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
