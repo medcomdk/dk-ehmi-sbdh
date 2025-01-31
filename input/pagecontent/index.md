@@ -52,7 +52,7 @@ All ehmiSbdh xsd-files can be found via the [download-page](downloads.html), but
 
 ## Structure Mappings
 
-For a number of different mappings to and from ehmiSbdhand/or MedCom Messaging Message, there is developed a number of FHIR Structure Mappings in order for the suppliers to better understand and potentially automate some tasks around mappings.
+For a number of different mappings to and from ehmiSbdh and/or MedCom Messaging Message, there is developed a number of FHIR Structure Mappings in order for the suppliers to better understand and potentially automate some tasks around mappings.
 
 These are:
 - **MedCom Messaging Message**
