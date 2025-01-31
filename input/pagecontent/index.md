@@ -15,13 +15,13 @@ In relation to EHMI Core:
 In relation to EDS Delivery Status:
 - serve the ground for EDS Delivery Status
 
-ehmiSbdhis in EHMI called ehmiSbdhdue to constraints EHMI lay upon the GS1 and PEPPOL specifications, none of which is breaking to a validation through the original specification with the PEPPOL extensions
+ehmiSBDH is in EHMI called ehmiSbdhdue to constraints EHMI lay upon the GS1 and PEPPOL specifications, none of which is breaking to a validation through the original specification with the PEPPOL extensions
 
-ehmiSbdhcan therefore be send and delivered through the eDelivery Network in EHMI Core in all use cases, where ehmiSbdhserves the entire EHMI ecosystem.
+ehmiSBDH can therefore be send and delivered through the eDelivery Network in EHMI Core in all use cases, where ehmiSbdhserves the entire EHMI ecosystem.
 
 ### ehmiSBDH in relation to EHMI Core
 
-ehmiSbdhwraps the bidirectional message with clinical content between the Message Service Handlers (MSH) and serve as a neutral container for whatever MedCom Message, that is being send. If it is a FHIR, OIOXml or Edifact message, ehmiSbdhcan wrap it and due to extensive extraction of metadata from the message also serve the ground for 
+ehmiSBDH wraps the bidirectional message with clinical content between the Message Service Handlers (MSH) and serve as a neutral container for whatever MedCom Message, that is being send. If it is a FHIR, OIOXml or Edifact message, ehmiSBDH can wrap it and due to extensive extraction of metadata from the message also serve the ground for 
 - handling ehmiSBDH Acknowledgements
 - handling of the secondary exchange of data through the national Danish XDS Framework
 
