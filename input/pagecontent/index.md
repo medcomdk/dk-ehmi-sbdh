@@ -32,6 +32,24 @@ ehmiSbdhwraps the bidirectional message with clinical content between the Messag
 - serve EDS with metadata in use cases where non-patient related messages are exchanged like in message acknowledgements and ehmiSbdhacknowledgements
 - serve EDS with metadata in use cases where patient related messages are exchanged like in the FHIR message HomeCareObservation and messages alike in OIOXml and Edifact. 
 
+## ehmiSbdh xsd-schemas
+
+<!-- br -->
+
+All ehmiSbdh xsd-files can be found via the [download-page](downloads.html), but an overview of what they most importantly contain can be seen here:
+
+(all files open in new window)
+<!-- br -->
+
+- <a href="ehmiSBDH_StandardBusinessDocumentHeader.xsd.html" target="_blank">ehmiSBDHAck StandardBusinessDocumentHeader Xsd</a>
+- <a href="ehmiSBDH_Partner.xsd.html" target="_blank">ehmiSBDHAck Partner Xsd</a>
+- <a href="ehmiSBDH_DocumentIdentification.xsd.html" target="_blank">ehmiSBDHAck DocumentIdentification Xsd</a>
+- <a href="ehmiSBDH_BusinessScope.xsd.html" target="_blank">ehmiSBDHAck BusinessScope Xsd</a>
+- <a href="ehmiSBDH_EDN-Business-Message-Envelope-1.2.xsd.html" target="_blank">ehmiSBDHAck BinaryContentType Xsd</a>
+- <a href="ehmiSBDH_ebbp-signals-2.0.4.xsd.html" target="_blank">ehmiSBDHAck Ebbp-Signals 2.0.4 Xsd</a>
+
+<!-- br -->
+
 ## Structure Mappings
 
 For a number of different mappings to and from ehmiSbdhand/or MedCom Messaging Message, there is developed a number of FHIR Structure Mappings in order for the suppliers to better understand and potentially automate some tasks around mappings.

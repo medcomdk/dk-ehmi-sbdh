@@ -1829,7 +1829,7 @@ Encoding vil i piloten have følgende udfaldsrum for MedCom meddelelserne, som a
 Encoding vil i piloten have følgende udfaldsrum for ReceiptAcknowledgement og ReceiptException:
 -	"UTF-8"
 
-## ehmiSbdhxsd schemas
+## ehmiSbdh xsd-schemas
 
 <br>
 

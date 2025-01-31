@@ -1322,21 +1322,3 @@ These are:
 <!-- br -->
 
 
-## ehmiSbdhxsd schemas
-
-<!-- br -->
-
-All ehmiSbdhxsd files can be found via the [download-page](downloads.html), but an overview of what they most importantly contain can be seen here:
-
-(all files open in new window)
-<!-- br -->
-
-- <a href="ehmiSBDH_StandardBusinessDocumentHeader.xsd.html" target="_blank">ehmiSBDHAck StandardBusinessDocumentHeader Xsd</a>
-- <a href="ehmiSBDH_Partner.xsd.html" target="_blank">ehmiSBDHAck Partner Xsd</a>
-- <a href="ehmiSBDH_DocumentIdentification.xsd.html" target="_blank">ehmiSBDHAck DocumentIdentification Xsd</a>
-- <a href="ehmiSBDH_BusinessScope.xsd.html" target="_blank">ehmiSBDHAck BusinessScope Xsd</a>
-- <a href="ehmiSBDH_EDN-Business-Message-Envelope-1.2.xsd.html" target="_blank">ehmiSBDHAck BinaryContentType Xsd</a>
-- <a href="ehmiSBDH_ebbp-signals-2.0.4.xsd.html" target="_blank">ehmiSBDHAck Ebbp-Signals 2.0.4 Xsd</a>
-
-<!-- br -->
-

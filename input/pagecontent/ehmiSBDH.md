@@ -1732,9 +1732,9 @@ Encoding in the pilot will be the following for all the MedComMessagingMessages:
 Encoding will have the following outcome space for ReceiptAcknowledgement and ReceiptException in the pilot:
 - "UTF-8"
 
-## ehmiSbdhxsd schemas
+## ehmiSbdh xsd-schemas
 
-All ehmiSbdhxsd files can be found via the [download-page](downloads.html), but an overview of what they most importantly contain can be seen here:
+All ehmiSbdh xsd-files can be found via the [download-page](downloads.html), but an overview of what they most importantly contain can be seen here:
 
 (all files open in new window)
 <!-- br -->
