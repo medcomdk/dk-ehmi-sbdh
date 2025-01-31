@@ -15,7 +15,7 @@ In relation to EHMI Core:
 In relation to EHMI Delivery Status:
 - serve the ground for EHMI Delivery Status
 
-ehmiSBDH is in EHMI called ehmiSbdh due to constraints EHMI lay upon the GS1 and PEPPOL specifications, none of which is breaking to a validation through the original specification with the PEPPOL extensions
+ehmiSBDH is in EHMI called ehmiSBDH due to constraints EHMI lay upon the GS1 and PEPPOL specifications, none of which is breaking to a validation through the original specification with the PEPPOL extensions
 
 ehmiSBDH can therefore be send and delivered through the eDelivery Network in EHMI Core in all use cases, where ehmiSbdhserves the entire EHMI ecosystem.
 
@@ -32,11 +32,11 @@ ehmiSBDH wraps the bidirectional message with clinical content between the Messa
 - serve EDS with metadata in use cases where non-patient related messages are exchanged like in message acknowledgements and ehmiSBDH Acknowledgements
 - serve EDS with metadata in use cases where patient related messages are exchanged like in the FHIR message HomeCareObservation and messages alike in OIOXml and Edifact. 
 
-### ehmiSbdh xsd-schemas
+### ehmiSBDH xsd-schemas
 
 <!-- br -->
 
-All ehmiSbdh xsd-files can be found via the [download-page](downloads.html), but an overview of what they most importantly contain can be seen here:
+All ehmiSBDH xsd-files can be found via the [download-page](downloads.html), but an overview of what they most importantly contain can be seen here:
 
 (all files open in new window)
 <!-- br -->
@@ -52,7 +52,7 @@ All ehmiSbdh xsd-files can be found via the [download-page](downloads.html), but
 
 ### Structure Mappings
 
-For a number of different mappings to and from ehmiSbdh and/or MedCom Messaging Message, there is developed a number of FHIR Structure Mappings in order for the suppliers to better understand and potentially automate some tasks around mappings.
+For a number of different mappings to and from ehmiSBDH and/or MedCom Messaging Message, there is developed a number of FHIR Structure Mappings in order for the suppliers to better understand and potentially automate some tasks around mappings.
 
 These are:
 - **MedCom Messaging Message**
