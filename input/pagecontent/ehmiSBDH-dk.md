@@ -1094,7 +1094,7 @@ Eksempel:
 
 ###### CorrelationInformation ExpectedResponseDateTime
 
-ExpectedResponseDateTime udtrykker den forventede tid, der max går indtil en ehmiSbdh response modtages. I piloten giver den 10 min, dvs. RequestingDocumentCreationDateTime + 10 min
+ExpectedResponseDateTime udtrykker den forventede tid, der max går indtil en ehmiSBDH response modtages. I piloten giver den 10 min, dvs. RequestingDocumentCreationDateTime + 10 min
 
     <CorrelationInformation>
         …
@@ -1829,7 +1829,7 @@ Encoding vil i piloten have følgende udfaldsrum for MedCom meddelelserne, som a
 Encoding vil i piloten have følgende udfaldsrum for ReceiptAcknowledgement og ReceiptException:
 -	"UTF-8"
 
-## ehmiSbdh xsd-schemas
+## ehmiSBDH xsd-schemas
 
 <br>
 
