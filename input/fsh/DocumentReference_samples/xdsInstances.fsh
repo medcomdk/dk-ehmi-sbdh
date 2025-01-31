@@ -8,7 +8,7 @@ Usage: #example
 * name.given = "Sidsel"
 * name.family = "Andersen"
 
-Instance: instanceDkCoreOrganization
+Instance: instanceMedComCoreDocumentOrganization
 //Instance: 8fa7df76-bec2-4fe2-9a44-750030a0eda0
 InstanceOf: DkCoreOrganization
 Title: "Author Organization"

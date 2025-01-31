@@ -36,7 +36,7 @@ dependencies:
   #medcom.fhir.dk.xds.metadata: current
   #medcom.fhir.dk.ihe.xds.metadata: current
   medcom.fhir.dk.xdsmetadata: dev
-  medcom.fhir.dk.document: dev
+  medcom.fhir.dk.coredocument: dev
   medcom.fhir.dk.xdsdocuments: dev
   # medcom.fhir.dk.ihe.xds.metadata: dev
 #
