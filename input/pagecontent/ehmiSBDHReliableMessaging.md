@@ -5,7 +5,7 @@ Reliable Messaging in ehmiSBDH Envelope follows the principles laid out in <a hr
 The Reliable Messaging Model and how the flow is laid out using ehmiSBDH Envelope is shown in <a href="#Fig1">Figure 1</a>
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="reliable-messaging-ehmiSBDH Envelope.png" target="_blank"> <img src="reliable-messaging-ehmiSBDH Envelope.png" alt="reliable messaging principle" style="width:90%; height:auto; margin-left:0%; margin-right:10%; margin-top:5px; margin-bottom:5px;" id="Fig1"></a>
+<a href="reliable-messaging-ehmiSBDHEnvelope.png" target="_blank"> <img src="reliable-messaging-ehmiSBDHEnvelope.png" alt="reliable messaging principle" style="width:90%; height:auto; margin-left:0%; margin-right:10%; margin-top:5px; margin-bottom:5px;" id="Fig1"></a>
 <figcaption text-align="left"><b>Figure 1: Reliable Messaging - ehmiSBDH Envelope </b></figcaption>
 </figure>
 
