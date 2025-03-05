@@ -119,7 +119,7 @@ Usage: #definition
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.id = "StandardBusinessDocumentHeader/DocumentIdentification/InstanceIdentifier"
-* group[=].rule[=].target.transform = #copy
+* group[=].rule[=].target.transform = #copy //RUN: info: Der er en "transform = #uuid" der genrerer et random UUID
 
 * group[=].rule[+].name = "SbdhDocumentIdentificationType"
 * group[=].rule[=].source.context = "source"
