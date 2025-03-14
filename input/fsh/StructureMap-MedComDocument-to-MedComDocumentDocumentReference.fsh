@@ -209,19 +209,19 @@ OBS:
 * group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueString = "1.2.208.184.100.9"  // codeSystem ? CodeSystem:$codeSystem = ” 1.2.208.184.100.9” or http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-classcode-VS
 * group[=].rule[=].target.context = "target"
-* group[=].rule[=].target.element = "type.coding.system"
+* group[=].rule[=].target.element = "category.coding.system"
 
 * group[=].rule[+].name = "code"
 * group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueCode = #001 // Skulle det være noget andet ved medd.?
 * group[=].rule[=].target.context = "target"
-* group[=].rule[=].target.element = "type.coding.code"
+* group[=].rule[=].target.element = "category.coding.code"
 
 * group[=].rule[+].name = "display"
 * group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueString = "Klinisk rapport"
 * group[=].rule[=].target.context = "target"
-* group[=].rule[=].target.element = "type.coding.display"
+* group[=].rule[=].target.element = "category.coding.display"
 
 
 
@@ -233,8 +233,7 @@ OBS:
 
 
 /*
-##### APD instance raw json: 
-
+##### source // documentReferece instance (APD-DK ) raw json: 
 link:
 https://build.fhir.org/ig/medcomdk/dk-medcom-xds-documents/DocumentReference-94e65db8-2f0c-4a2c-a7c9-06a160d59a12.json
 
