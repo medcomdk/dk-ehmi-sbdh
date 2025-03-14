@@ -193,7 +193,7 @@ OBS:
 
 //#####################
 //Group: category
-//Comment: XDS metadata standard attribute "classcode"
+//Comment: XDS metadata standard attribute "classCode"
 //#####################
 //RUN: only one entry "001" in value set
 * group[+].name = "category"
@@ -227,16 +227,61 @@ OBS:
 * group[=].rule[=].target.transform = #create
 
 
-
 //#####################
 //Group: subject
-//Comment: XDS metadata standard attribute "xxx"
+//Comment: XDS metadata standard attribute "patientId"
 //#####################
+
+* group[+].name = "subject"
+* group[=].typeMode = #none
+* group[=].input[0].name = "source"
+* group[=].input[=].type = "Bundle"
+* group[=].input[=].mode = #source
+* group[=].input[+].name = "target"
+* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].mode = #target
+
+* group[=].rule[0].name = "subject"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).subject.reference"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.element = "subject.reference"
+* group[=].rule[=].target.transform = #copy
+
+
+//#####################
+//Group: author
+//Comment: XDS metadata standard attribute "author.authorinstitution" and "author.authorperson"
+//#####################
+
+
+* group[+].name = "author"
+* group[=].typeMode = #none
+* group[=].input[0].name = "source"
+* group[=].input[=].type = "Bundle"
+* group[=].input[=].mode = #source
+* group[=].input[+].name = "target"
+* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].mode = #target
+
+* group[=].rule[0].name = "authorinstitution"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).author.reference.where($this.startsWith('Organization'))"
+* group[=].rule[=].target.element = "author.reference"
+* group[=].rule[=].target.transform = #copy
+
+* group[=].rule[0].name = "authorperson"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).author.reference.where($this.startsWith('Practitioner'))"
+* group[=].rule[=].target.element = "author.reference"
+* group[=].rule[=].target.transform = #copy
+
+// ?? why is only practiontioner allowed in author.person? - see https://build.fhir.org/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-documentreference-definitions.html#DocumentReference.author
 
 
 
 /*
-##### source // documentReferece instance (APD-DK ) raw json: 
+##### target // documentReferece  (APD-DK ) raw json: 
 link:
 https://build.fhir.org/ig/medcomdk/dk-medcom-xds-documents/DocumentReference-94e65db8-2f0c-4a2c-a7c9-06a160d59a12.json
 
