@@ -277,11 +277,11 @@ OBS:
 * group[=].rule[=].target.transform = #copy
 
 // ?? why is only practiontioner allowed in author.person? - see https://build.fhir.org/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-documentreference-definitions.html#DocumentReference.author
-
+// OBS på at det kun er Practitioner der kommer med i build. hvorfor?
 
 
 /*
-##### target // documentReferece  (APD-DK ) raw json: 
+##### target instance // documentReferece (APD-DK) raw json: 
 link:
 https://build.fhir.org/ig/medcomdk/dk-medcom-xds-documents/DocumentReference-94e65db8-2f0c-4a2c-a7c9-06a160d59a12.json
 
