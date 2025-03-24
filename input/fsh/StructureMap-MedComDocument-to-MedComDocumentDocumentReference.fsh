@@ -167,21 +167,21 @@ OBS:
 * group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
 
-* group[=].rule[0].name = "system"
+* group[=].rule[0].name = "type-system"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).type.coding.system"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "type.coding.system"
 * group[=].rule[=].target.transform = #copy
 
-* group[=].rule[+].name = "code"
+* group[=].rule[+].name = "type-code"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).type.coding.code"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "type.coding.code"
 * group[=].rule[=].target.transform = #copy
 
-* group[=].rule[+].name = "display"
+* group[=].rule[+].name = "type-display"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).type.coding.display"
 * group[=].rule[=].target.context = "target"
@@ -347,7 +347,7 @@ OBS:
 * group[=].rule[=].target.transform = #create
 
 // DocRef attribute: content.attachment.language == XDS attribute: DocumentEntry.languageCode
-* group[=].rule[0].name = "content-attachment-language"
+* group[=].rule[+].name = "content-attachment-language"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).language"
 * group[=].rule[=].target.element = "content.attachment.language"
@@ -355,7 +355,7 @@ OBS:
 
 // DocRef attribute: content.attachment.url == XDS attribute: DocumentEntry.URI (Optional)
 /*
-* group[=].rule[0].name = "content-attachment-url"
+* group[=].rule[+].name = "content-attachment-url"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "??" 
 * group[=].rule[=].target.element = "content.attachment.url"
@@ -364,7 +364,7 @@ OBS:
 
 // DocRef attribute: content.attachment.size == XDS attribute: DocumentEntry.size (optional)
 /*
-* group[=].rule[0].name = "content-attachment-size"
+* group[=].rule[+].name = "content-attachment-size"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "??"
 * group[=].rule[=].target.element = "content.attachment.size"
@@ -373,7 +373,7 @@ OBS:
 
 // DocRef attribute: content.attachment.hash == XDS attribute: DocumentEntry.hash (optional)
 /*
-* group[=].rule[0].name = "content-attachment-hash"
+* group[=].rule[+].name = "content-attachment-hash"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "??"
 * group[=].rule[=].target.element = "content.attachment.hash"
@@ -381,14 +381,14 @@ OBS:
 */
 
 // DocRef attribute: content.attachment.title == XDS attribute: DocumentEntry.title
-* group[=].rule[0].name = "content-attachment-title"
+* group[=].rule[+].name = "content-attachment-title"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).title"
 * group[=].rule[=].target.element = "content.attachment.title"
 * group[=].rule[=].target.transform = #copy
 
 // DocRef attribute: content.attachment.creation == XDS attribute: DocumentEntry.creationTime
-* group[=].rule[0].name = "content-attachment-creation"
+* group[=].rule[+].name = "content-attachment-creation"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).date"
 * group[=].rule[=].target.element = "content.attachment.creation"
@@ -545,6 +545,10 @@ OBS:
 ### QUESTIONS ###
 
 #1 How to set values provided by system (document provider):
+- extension-homeCommunityid
+- extension-version-id
+- status
+- category
 - content.attachment.contentType
 - content.format 
 - context.facilityType
