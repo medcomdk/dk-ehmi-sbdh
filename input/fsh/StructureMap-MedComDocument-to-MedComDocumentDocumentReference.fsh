@@ -27,7 +27,7 @@ OBS:
 
 
 //OBS!! homeCommunityid sættes af kildesystem, så skal have afklaret hvordan dette defienres.
-* group[+].name = "extension-homeCommunityid"
+* group[+].name = "extension_homeCommunityid"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
 //* group[=].input[=].type = "Bundle"
@@ -37,7 +37,7 @@ OBS:
 * group[=].input[=].mode = #target
 
 //Rule #1: MedComDocumentDocumentReference.extension:homeCommunityid system (Must be fixed to "urn:oid:1.2.208.176.1.2")
-* group[=].rule[0].name = "extension-homeCommunityid-system"
+* group[=].rule[0].name = "extension_homeCommunityid_system"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "urn:oid:1.2.208.176.1.2" // fixed value - OID for danish xds-domain   
 * group[=].rule[=].target.context = "target"
