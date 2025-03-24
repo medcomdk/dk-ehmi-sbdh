@@ -74,7 +74,7 @@ OBS:
 * group[=].input[=].mode = #target
 
 //Rule #1: MedComDocumentDocumentReference.extension:versionid  (MedCom XDS Version ID)
-* group[=].rule[0].name = "extension-versionid"
+* group[=].rule[0].name = "extension.versionid"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "1.0.0" // fixed value - MedCom XDS Version   
 * group[=].rule[=].target.context = "target"
