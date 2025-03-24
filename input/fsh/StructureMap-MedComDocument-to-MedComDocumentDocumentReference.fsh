@@ -66,15 +66,15 @@ OBS:
 //Group: extension.versionNumber
 //Comment: Version of the MedCom XDS-metdatdata standard
 //##################### 
-* group[+].name = "extension.versionid"
+* group[+].name = "extension-versionid"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
 * group[=].input[=].mode = #target
 
-//Rule #1: MedComDocumentDocumentReference.extension:versionid  (MedCom XDS Version ID)
-* group[=].rule[0].name = "extension.versionid"
+//Rule #1: MedComDocumentDocumentReference.extension.versionid  (MedCom XDS Version ID)
+* group[=].rule[0].name = "extension-versionid"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "1.0.0" // fixed value - MedCom XDS Version   
 * group[=].rule[=].target.context = "target"
