@@ -66,7 +66,7 @@ OBS:
 //Group: extension.versionNumber
 //Comment: Version of the MedCom XDS-metdatdata standard
 //##################### 
-* group[+].name = "extension-versionid"
+* group[+].name = "extension.versionid"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
 * group[=].input[=].mode = #source
