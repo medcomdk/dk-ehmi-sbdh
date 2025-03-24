@@ -205,21 +205,21 @@ OBS:
 * group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
 
-* group[=].rule[0].name = "system"
+* group[=].rule[0].name = "category-system"
 * group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueString = "1.2.208.184.100.9"  // codeSystem ? CodeSystem:$codeSystem = ” 1.2.208.184.100.9” or http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-classcode-VS
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "category.coding.system"
 * group[=].rule[=].target.transform = #create
 
-* group[=].rule[+].name = "code"
+* group[=].rule[+].name = "category-code"
 * group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueCode = #001 // Skulle det være noget andet ved medd.?
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "category.coding.code"
 * group[=].rule[=].target.transform = #create
 
-* group[=].rule[+].name = "display"
+* group[=].rule[+].name = "category-display"
 * group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueString = "Klinisk rapport"
 * group[=].rule[=].target.context = "target"
@@ -255,7 +255,7 @@ OBS:
 //#####################
 
 
-* group[+].name = "author"
+* group[+].name = "authorinstitution"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
 * group[=].input[=].type = "Bundle"
@@ -270,14 +270,298 @@ OBS:
 * group[=].rule[=].target.element = "author.reference"
 * group[=].rule[=].target.transform = #copy
 
+* group[+].name = "authorperson"
+* group[=].typeMode = #none
+* group[=].input[0].name = "source"
+* group[=].input[=].type = "Bundle"
+* group[=].input[=].mode = #source
+* group[=].input[+].name = "target"
+* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].mode = #target
+
 * group[=].rule[0].name = "authorperson"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).author.reference.where($this.startsWith('Practitioner'))"
 * group[=].rule[=].target.element = "author.reference"
 * group[=].rule[=].target.transform = #copy
 
-// ?? why is only practiontioner allowed in author.person? - see https://build.fhir.org/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-documentreference-definitions.html#DocumentReference.author
-// OBS på at det kun er Practitioner der kommer med i build. hvorfor?
+//#####################
+//Group: authenticator
+//Comment: XDS metadata standard attribute "authenticator". Optional in documentReference.
+//#####################
+* group[+].name = "authenticator"
+* group[=].typeMode = #none
+* group[=].input[0].name = "source"
+* group[=].input[=].type = "Bundle"
+* group[=].input[=].mode = #source
+* group[=].input[+].name = "target"
+* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].mode = #target
+
+* group[=].rule[0].name = "authenticator"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).authenticator.reference.where($this.startsWith('Practitioner'))"
+//* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).authenticator.reference"  //alternate path
+* group[=].rule[=].target.element = "authenticator.reference"
+* group[=].rule[=].target.transform = #copy
+
+//#####################
+//Group: securityLabel
+//Comment: XDS metadata standard attribute "author.authorinstitution" and "author.authorperson"
+//#####################
+* group[+].name = "securityLabel"
+* group[=].typeMode = #none
+* group[=].input[0].name = "source"
+* group[=].input[=].type = "Bundle"
+* group[=].input[=].mode = #source
+* group[=].input[+].name = "target"
+* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].mode = #target
+
+* group[=].rule[0].name = "securityLabel"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).confidentiality"
+* group[=].rule[=].target.element = "securityLabel.coding.code"
+* group[=].rule[=].target.transform = #copy
+
+
+//#####################
+//Group: content.attachment
+//Comment: XDS metadata standard attributes: mimeType, languageCode, URI, size, hash, title, creationTime
+//#####################
+
+* group[+].name = "content-attachment"
+* group[=].typeMode = #none
+* group[=].input[0].name = "source"
+* group[=].input[=].type = "Bundle"
+* group[=].input[=].mode = #source
+* group[=].input[+].name = "target"
+* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].mode = #target
+ 
+// DocRef attribute: content.attachment.contentType == XDS attribute: DocumentEntry.mimeType
+* group[=].rule[0].name = "content-attachment-contentType"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.defaultValueString = "application/fhir+xml" //ContentType is set by the system providing the document. For FHIR documents: "application/fhir+xml" | "application/fhir+json"
+* group[=].rule[=].target.element = "content.attachment.contentType"
+* group[=].rule[=].target.transform = #create
+
+// DocRef attribute: content.attachment.language == XDS attribute: DocumentEntry.languageCode
+* group[=].rule[0].name = "content-attachment-language"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).language"
+* group[=].rule[=].target.element = "content.attachment.language"
+* group[=].rule[=].target.transform = #copy
+
+// DocRef attribute: content.attachment.url == XDS attribute: DocumentEntry.URI (Optional)
+/*
+* group[=].rule[0].name = "content-attachment-url"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.element = "??" 
+* group[=].rule[=].target.element = "content.attachment.url"
+* group[=].rule[=].target.transform = #copy 
+*/
+
+// DocRef attribute: content.attachment.size == XDS attribute: DocumentEntry.size (optional)
+/*
+* group[=].rule[0].name = "content-attachment-size"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.element = "??"
+* group[=].rule[=].target.element = "content.attachment.size"
+* group[=].rule[=].target.transform = #copy
+*/
+
+// DocRef attribute: content.attachment.hash == XDS attribute: DocumentEntry.hash (optional)
+/*
+* group[=].rule[0].name = "content-attachment-hash"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.element = "??"
+* group[=].rule[=].target.element = "content.attachment.hash"
+* group[=].rule[=].target.transform = #copy
+*/
+
+// DocRef attribute: content.attachment.title == XDS attribute: DocumentEntry.title
+* group[=].rule[0].name = "content-attachment-title"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).title"
+* group[=].rule[=].target.element = "content.attachment.title"
+* group[=].rule[=].target.transform = #copy
+
+// DocRef attribute: content.attachment.creation == XDS attribute: DocumentEntry.creationTime
+* group[=].rule[0].name = "content-attachment-creation"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).date"
+* group[=].rule[=].target.element = "content.attachment.creation"
+* group[=].rule[=].target.transform = #copy
+
+//#####################
+//Group: content-format
+//Comment: XDS metadata standard attribute: DocumentEntry.formatCode
+//#####################
+
+// RUN: Where to find these informations (in source structure)??
+* group[+].name = "content-format"
+* group[=].typeMode = #none
+* group[=].input[0].name = "source"
+* group[=].input[=].type = "Bundle"
+* group[=].input[=].mode = #source
+* group[=].input[+].name = "target"
+* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].mode = #target
+
+* group[=].rule[0].name = "content-format-system"
+* group[=].rule[=].source.context = "defaultValue"
+* group[=].rule[=].source.defaultValueString = "urn:oid:1.2.208.184.100.10"  //??: https://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-plr-formatcode-VS/
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.element = "content.format.system"
+* group[=].rule[=].target.transform = #create
+
+* group[=].rule[+].name = "content-format-code"
+* group[=].rule[=].source.context = "defaultValue"
+* group[=].rule[=].source.defaultValueString = "http://medcomfhir.dk/ig/conditionlist" // ?? 
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.element = "content.format.code"
+* group[=].rule[=].target.transform = #create
+
+* group[=].rule[+].name = "content-format-display"
+* group[=].rule[=].source.context = "defaultValue"
+* group[=].rule[=].source.defaultValueString = "Conditonlist version x.x.x" // ?? 
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.element = "content.format.display"
+* group[=].rule[=].target.transform = #create
+
+//#####################
+//Group: context-event (Optional)
+//Comment: XDS metadata standard attribute: DocumentEntry.eventCodeList
+//#####################
+
+//#####################
+//Group: context-period (Optional)
+//Comment: XDS metadata standard attributes: DocumentEntry.serviceStartTime + DocumentEntry.serviceStopTime
+//#####################
+
+
+
+//#####################
+//Group: context-facilityType
+//Comment: XDS metadata standard attributes: DocumentEntry.healthcareFacilityTypeCode
+//Set by document provider system, must be selected from ValueSet: DK_IHE_HealthcareFacilityTypeCode_VS
+//RUN: Is set by providersystem
+//#####################
+
+* group[+].name = "context-facilityType"
+* group[=].typeMode = #none
+* group[=].input[0].name = "source"
+* group[=].input[=].type = "Bundle"
+* group[=].input[=].mode = #source
+* group[=].input[+].name = "target"
+* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].mode = #target
+
+* group[=].rule[0].name = "context-facilityType-system"
+* group[=].rule[=].source.context = "defaultValue"
+* group[=].rule[=].source.defaultValueString = "urn:oid:2.16.840.1.113883.6.96"  //SNOMED CT
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.element = "context.facilityType.coding.system"
+* group[=].rule[=].target.transform = #create
+
+* group[=].rule[+].name = "context-facilityType-code"
+* group[=].rule[=].source.context = "defaultValue"
+* group[=].rule[=].source.defaultValueCode = #554871000005105 // Set by document provider system, for now hard coded
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.element = "context.facilityType.coding.code"
+* group[=].rule[=].target.transform = #create
+
+* group[=].rule[+].name = "context-facilityType-display"
+* group[=].rule[=].source.context = "defaultValue"
+* group[=].rule[=].source.defaultValueString = "psykiatrienhed" // Set by document provider system, for now hard coded
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.element = "context.facilityType.coding.display"
+* group[=].rule[=].target.transform = #create
+
+
+//#####################
+//Group: context-practiceSetting
+//Comment: XDS metadata standard attributes: DocumentEntry.practiceSettingCode
+//Set by document provider system, must be selected from ValueSet: DK_IHE_practiceSettingCode_VS
+
+//RUN: Is set by providersystem
+//#####################
+
+* group[+].name = "context-practiceSetting"
+* group[=].typeMode = #none
+* group[=].input[0].name = "source"
+* group[=].input[=].type = "Bundle"
+* group[=].input[=].mode = #source
+* group[=].input[+].name = "target"
+* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].mode = #target
+
+* group[=].rule[0].name = "context-practiceSetting-system"
+* group[=].rule[=].source.context = "defaultValue"
+* group[=].rule[=].source.defaultValueString = "urn:oid:2.16.840.1.113883.6.96"  //SNOMED CT
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.element = "context.practiceSetting.coding.system"
+* group[=].rule[=].target.transform = #create
+
+* group[=].rule[+].name = "context-practiceSetting-code"
+* group[=].rule[=].source.context = "defaultValue"
+* group[=].rule[=].source.defaultValueCode = #394588006 // Set by document provider system, for now hard coded
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.element = "context.practiceSetting.coding.code"
+* group[=].rule[=].target.transform = #create
+
+* group[=].rule[+].name = "context-practiceSetting-display"
+* group[=].rule[=].source.context = "defaultValue"
+* group[=].rule[=].source.defaultValueString = "børne- og ungdomspsykiatri" // Set by document provider system, for now hard coded
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.element = "context.practiceSetting.coding.display"
+* group[=].rule[=].target.transform = #create
+
+
+//#####################
+//Group: context-sourcePatientInfo
+//Comment: XDS metadata standard attribute "DocumentEntry.sourcePatientId and DocumentEntry.sourcePatientInfo"
+//#####################
+
+* group[+].name = "context-sourcePatientInfo"
+* group[=].typeMode = #none
+* group[=].input[0].name = "source"
+* group[=].input[=].type = "Bundle"
+* group[=].input[=].mode = #source
+* group[=].input[+].name = "target"
+* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].mode = #target
+
+* group[=].rule[0].name = "context-sourcePatientInfo"
+* group[=].rule[=].source.context = "source"
+* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).subject.reference"
+* group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.element = "context.sourcePatientInfo.reference"
+* group[=].rule[=].target.transform = #copy
+
+
+/*
+### QUESTIONS ###
+
+#1 How to set values provided by system (document provider):
+- content.attachment.contentType
+- content.format 
+- context.facilityType
+- context-practiceSetting
+
+#2 Difference between references with/without types eg: "- Patient/d65cd8db-4520-4264-87be-a5fd01fb9762" and - '#37628912-7816-47a3-acd8-396b610be142'
+
+
+#3 why is only practiontioner allowed in author.person? 
+- see https://build.fhir.org/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-documentreference-definitions.html#DocumentReference.author
+
+
+
+*/
+
+
+
 
 
 /*
