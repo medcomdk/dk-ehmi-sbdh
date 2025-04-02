@@ -21,13 +21,13 @@ OBS:
 */
 
 //#####################
-//Group: extension.homeCommunityid
+//Group #1: extension.homeCommunityid
 //Comment: the repository OID, where the document is placed
 //#####################
 * group[+].name = "extension-homeCommunityid"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
-//* group[=].input[=].type = "Bundle"
+* group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
 //* group[=].input[=].type = "MedComDocumentDocumentReference"
@@ -60,7 +60,7 @@ OBS:
 * group[=].rule[=].target.transform = #create
 
 //#####################
-//Group: extension.versionNumber
+//Group #2: extension.versionNumber
 //Comment: Version of the MedCom XDS-metdatdata standard
 //##################### 
 * group[+].name = "extension-versionid"
@@ -81,7 +81,7 @@ OBS:
 
 
 //#####################
-//Group: masterIdentifier
+//Group #3 masterIdentifier
 //Comment: XDS metadata standard: "uniqueId".
 //#####################
 
@@ -91,7 +91,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-* group[=].input[=].type = "MedComDocumentDocumentReference"
+//* group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[+].name = "masterIdentifier"
@@ -104,7 +104,7 @@ OBS:
 
 
 //#####################
-//Group: identifier
+//Group #4: identifier
 //Comment: XDS metadata standard: "entryUUID". UUID is created during mapping.
 //#####################
 
@@ -114,7 +114,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-* group[=].input[=].type = "MedComDocumentDocumentReference"
+//* group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[+].name = "identifier"
@@ -139,7 +139,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-* group[=].input[=].type = "MedComDocumentDocumentReference"
+//* group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[+].name = "status"
@@ -151,7 +151,7 @@ OBS:
 
 
 //#####################
-//Group: type
+//Group #5: type
 //Comment: XDS metadata standard attribute "typeCode"
 //#####################
 
@@ -161,7 +161,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-* group[=].input[=].type = "MedComDocumentDocumentReference"
+//* group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "type-system"
@@ -189,7 +189,7 @@ OBS:
 
 
 //#####################
-//Group: category
+//Group #6: category
 //Comment: XDS metadata standard attribute "classCode"
 //#####################
 //RUN: only one entry "001" in value set
@@ -199,7 +199,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-* group[=].input[=].type = "MedComDocumentDocumentReference"
+//* group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "category-system"
@@ -225,7 +225,7 @@ OBS:
 
 
 //#####################
-//Group: subject
+//Group #7: subject
 //Comment: XDS metadata standard attribute "patientId"
 //#####################
 
@@ -235,7 +235,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-* group[=].input[=].type = "MedComDocumentDocumentReference"
+//* group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "subject"
@@ -247,7 +247,7 @@ OBS:
 
 
 //#####################
-//Group: author
+//Group #8: author
 //Comment: XDS metadata standard attribute "author.authorinstitution" and "author.authorperson"
 //#####################
 
@@ -258,7 +258,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-* group[=].input[=].type = "MedComDocumentDocumentReference"
+//* group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "author-institution"
@@ -284,7 +284,7 @@ OBS:
 * group[=].rule[=].target.transform = #copy
 
 //#####################
-//Group: authenticator
+//Group #9: authenticator
 //Comment: XDS metadata standard attribute "authenticator". Optional in documentReference.
 //#####################
 * group[+].name = "authenticator"
@@ -293,7 +293,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-* group[=].input[=].type = "MedComDocumentDocumentReference"
+//* group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "authenticator"
@@ -314,7 +314,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-* group[=].input[=].type = "MedComDocumentDocumentReference"
+//* group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "securityLabel"
@@ -336,7 +336,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-* group[=].input[=].type = "MedComDocumentDocumentReference"
+//* group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
  
 // DocRef attribute: content.attachment.contentType == XDS attribute: DocumentEntry.mimeType
@@ -411,7 +411,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-* group[=].input[=].type = "MedComDocumentDocumentReference"
+//* group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "content-format-system"
@@ -460,7 +460,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-* group[=].input[=].type = "MedComDocumentDocumentReference"
+//* group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "context-facilityType-system"
@@ -499,7 +499,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-* group[=].input[=].type = "MedComDocumentDocumentReference"
+//* group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "context-practiceSetting-system"
@@ -535,7 +535,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-* group[=].input[=].type = "MedComDocumentDocumentReference"
+//* group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "context-sourcePatientInfo"
