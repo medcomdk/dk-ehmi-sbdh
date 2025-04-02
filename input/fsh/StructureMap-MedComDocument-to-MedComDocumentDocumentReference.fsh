@@ -166,21 +166,24 @@ OBS:
 
 * group[=].rule[0].name = "type-system"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).type.coding.system"
+* group[=].rule[=].source.element = "entry.resource.ofType(Composition).type.coding.system"
+//* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).type.coding.system"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "type.coding.system"
 * group[=].rule[=].target.transform = #copy
 
 * group[=].rule[+].name = "type-code"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).type.coding.code"
+* group[=].rule[=].source.element = "entry.resource.ofType(Composition).type.coding.code"
+//* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).type.coding.code"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "type.coding.code"
 * group[=].rule[=].target.transform = #copy
 
 * group[=].rule[+].name = "type-display"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).type.coding.display"
+* group[=].rule[=].source.element = "entry.resource.ofType(Composition).type.coding.display"
+//* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).type.coding.display"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "type.coding.display"
 * group[=].rule[=].target.transform = #copy
@@ -240,7 +243,8 @@ OBS:
 
 * group[=].rule[0].name = "subject"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).subject.reference"
+* group[=].rule[=].source.element = "entry.resource.ofType(Composition).subject.reference"
+//* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).subject.reference"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "subject.reference"
 * group[=].rule[=].target.transform = #copy
@@ -263,7 +267,8 @@ OBS:
 
 * group[=].rule[0].name = "author-institution"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).author.reference.where($this.startsWith('Organization'))"
+* group[=].rule[=].source.element = "entry.resource.ofType(Composition).author.reference.where($this.startsWith('Organization'))"
+//* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).author.reference.where($this.startsWith('Organization'))"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "author.reference"
 * group[=].rule[=].target.transform = #copy
@@ -274,12 +279,13 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-* group[=].input[=].type = "MedComDocumentDocumentReference"
+//* group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "author-person"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).author.reference.where($this.startsWith('Practitioner'))"
+* group[=].rule[=].source.element = "entry.resource.ofType(Composition).author.reference.where($this.startsWith('Practitioner'))"
+//* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).author.reference.where($this.startsWith('Practitioner'))"
 * group[=].rule[=].target.element = "author.reference"
 * group[=].rule[=].target.transform = #copy
 
@@ -298,7 +304,7 @@ OBS:
 
 * group[=].rule[0].name = "authenticator"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).authenticator.reference.where($this.startsWith('Practitioner'))"
+* group[=].rule[=].source.element = "entry.resource.ofType(Composition).authenticator.reference.where($this.startsWith('Practitioner'))"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).authenticator.reference"  //alternate path
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "authenticator.reference"
@@ -319,7 +325,8 @@ OBS:
 
 * group[=].rule[0].name = "securityLabel"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).confidentiality"
+* group[=].rule[=].source.element = "entry.resource.ofType(Composition).confidentiality"
+//* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).confidentiality"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "securityLabel.coding.code"
 * group[=].rule[=].target.transform = #copy
@@ -350,7 +357,8 @@ OBS:
 // DocRef attribute: content.attachment.language == XDS attribute: DocumentEntry.languageCode
 * group[=].rule[+].name = "content-attachment-language"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).language"
+* group[=].rule[=].source.element = "entry.resource.ofType(Composition).language"
+//* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).language"
 * group[=].rule[=].target.element = "content.attachment.language"
 * group[=].rule[=].target.transform = #copy
 
@@ -387,14 +395,16 @@ OBS:
 // DocRef attribute: content.attachment.title == XDS attribute: DocumentEntry.title
 * group[=].rule[+].name = "content-attachment-title"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).title"
+* group[=].rule[=].source.element = "entry.resource.ofType(Composition).title"
+//* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).title"
 * group[=].rule[=].target.element = "content.attachment.title"
 * group[=].rule[=].target.transform = #copy
 
 // DocRef attribute: content.attachment.creation == XDS attribute: DocumentEntry.creationTime
 * group[=].rule[+].name = "content-attachment-creation"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).date"
+* group[=].rule[=].source.element = "entry.resource.ofType(Composition).date"
+//* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).date"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "content.attachment.creation"
 * group[=].rule[=].target.transform = #copy
@@ -540,7 +550,8 @@ OBS:
 
 * group[=].rule[0].name = "context-sourcePatientInfo"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).subject.reference"
+* group[=].rule[=].source.element = "entry.resource.ofType(Composition).subject.reference"
+//* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).subject.reference"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "context.sourcePatientInfo.reference"
 * group[=].rule[=].target.transform = #copy
