@@ -118,7 +118,7 @@ OBS:
 * group[=].input[=].mode = #target
 
 * group[=].rule[+].name = "identifier"
-//* group[=].rule[=].source.context = "uuid"
+* group[=].rule[=].source.context = "source"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "DocumentReference.identifier"
