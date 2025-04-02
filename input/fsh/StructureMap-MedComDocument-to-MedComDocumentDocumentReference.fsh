@@ -24,9 +24,6 @@ OBS:
 //Group: extension.homeCommunityid
 //Comment: the repository OID, where the document is placed
 //#####################
-
-
-//OBS!! homeCommunityid sættes af kildesystem, så skal have afklaret hvordan dette defienres.
 * group[+].name = "extension-homeCommunityid"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
@@ -39,7 +36,7 @@ OBS:
 //Rule #1: MedComDocumentDocumentReference.extension:homeCommunityid system (Must be fixed to "urn:oid:1.2.208.176.1.2")
 * group[=].rule[0].name = "extension-homeCommunityid-system"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.defaultValueString = "urn:oid:1.2.208.176.1.2" // fixed value - OID for danish xds-domain   
+* group[=].rule[=].source.defaultValueString = "urn:oid:1.2.208.176.8.1" // fixed value - OID for danish xds-domain   
 * group[=].rule[=].target.context = "target"
 //* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "DocumentReference.extension.where(url='https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/medcom-xds-homecommunityid-extension').valueCoding.system"
@@ -48,7 +45,7 @@ OBS:
 //Rule #2: MedComDocumentDocumentReference.extension:homeCommunityid code (OID for the repository eg. "1.2.208.176.43210.8.20")
 * group[=].rule[+].name = "extension-homeCommunityid-code"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.defaultValueString = "[REPOSITORY OID: 1.2.208.176.43210.8.20|?]" // Source system must provide xds repository OID
+* group[=].rule[=].source.defaultValueString = "1.2.208.176.8.1" // Source system must provide xds repository OID
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "DocumentReference.extension.where(url='https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/medcom-xds-homecommunityid-extension').valueCoding.code"
 * group[=].rule[=].target.transform = #create
@@ -56,7 +53,7 @@ OBS:
 //Rule #2: MedComDocumentDocumentReference.extension:homeCommunityid display (displayname for repository eg. "TEST2")
 * group[=].rule[+].name = "extension-homeCommunityid-display"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.defaultValueString = "[REPOSITORY NAME: TEST1|TEST2]" // Source system must provide xds repository name 
+* group[=].rule[=].source.defaultValueString = "Common Danish IHE XDS domain" // Source system must provide xds repository name 
 * group[=].rule[=].target.context = "target"
 //* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "DocumentReference.extension.where(url='https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/medcom-xds-homecommunityid-extension').valueCoding.display"
@@ -521,7 +518,7 @@ OBS:
 
 //#####################
 //Group: context-sourcePatientInfo
-//Comment: XDS metadata standard attribute "DocumentEntry.sourcePatientId and DocumentEntry.sourcePatientInfo"
+//Comment: XDS  metadata standard attribute "DocumentEntry.sourcePatientId and DocumentEntry.sourcePatientInfo"
 //#####################
 
 * group[+].name = "context-sourcePatientInfo"
