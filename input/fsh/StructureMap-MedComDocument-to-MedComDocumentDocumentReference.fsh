@@ -206,21 +206,21 @@ OBS:
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "categorysystem"
-* group[=].rule[=].source.context = "defaultValue"
+* group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "1.2.208.184.100.9"  // codeSystem ? CodeSystem:$codeSystem = ” 1.2.208.184.100.9” or http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-classcode-VS
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "category.coding.system"
 * group[=].rule[=].target.transform = #create
 
 * group[=].rule[+].name = "categorycode"
-* group[=].rule[=].source.context = "defaultValue"
+* group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueCode = #001 // Skulle det være noget andet ved medd.?
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "category.coding.code"
 * group[=].rule[=].target.transform = #create
 
 * group[=].rule[+].name = "categorydisplay"
-* group[=].rule[=].source.context = "defaultValue"
+* group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "Klinisk rapport"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "category.coding.display"
