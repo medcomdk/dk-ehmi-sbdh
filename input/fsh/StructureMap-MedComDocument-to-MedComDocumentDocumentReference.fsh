@@ -5,7 +5,7 @@ Description: "Transformation specification of a MedComDocumentBundle to a MedCom
 Usage: #definition
 * id = "MedComDocumentBundle2MedComDocumentDocumentReference-transform"
 * url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedComDocumentBundle2MedComDocumentDocumentReference-transform"
-* name = "Transformation specification of a MedComDocumentBundle to a MedComDocumentDocumentReference"
+* name = "MedComDocumentBundle2MedComDocumentDocumentReference-transform"
 * title = "Transformation specification of a MedComDocumentBundle to a MedComDocumentDocumentReference"
 * status = #draft
 * description = "Transformation specification of a MedComDocumentBundle to a MedComDocumentDocumentReference"
@@ -264,6 +264,7 @@ OBS:
 * group[=].rule[0].name = "author-institution"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).author.reference.where($this.startsWith('Organization'))"
+* group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "author.reference"
 * group[=].rule[=].target.transform = #copy
 
@@ -299,6 +300,7 @@ OBS:
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).authenticator.reference.where($this.startsWith('Practitioner'))"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).authenticator.reference"  //alternate path
+* group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "authenticator.reference"
 * group[=].rule[=].target.transform = #copy
 
@@ -318,6 +320,7 @@ OBS:
 * group[=].rule[0].name = "securityLabel"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).confidentiality"
+* group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "securityLabel.coding.code"
 * group[=].rule[=].target.transform = #copy
 
@@ -340,6 +343,7 @@ OBS:
 * group[=].rule[0].name = "content-attachment-contentType"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "application/fhir+xml" //ContentType is set by the system providing the document. For FHIR documents: "application/fhir+xml" | "application/fhir+json"
+* group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "content.attachment.contentType"
 * group[=].rule[=].target.transform = #create
 
@@ -355,6 +359,7 @@ OBS:
 * group[=].rule[+].name = "content-attachment-url"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "??" 
+* group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "content.attachment.url"
 * group[=].rule[=].target.transform = #copy 
 */
@@ -364,6 +369,7 @@ OBS:
 * group[=].rule[+].name = "content-attachment-size"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "??"
+* group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "content.attachment.size"
 * group[=].rule[=].target.transform = #copy
 */
@@ -373,6 +379,7 @@ OBS:
 * group[=].rule[+].name = "content-attachment-hash"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "??"
+* group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "content.attachment.hash"
 * group[=].rule[=].target.transform = #copy
 */
@@ -388,6 +395,7 @@ OBS:
 * group[=].rule[+].name = "content-attachment-creation"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).date"
+* group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "content.attachment.creation"
 * group[=].rule[=].target.transform = #copy
 
