@@ -63,7 +63,7 @@ OBS:
 //Group #2: extension.versionNumber
 //Comment: Version of the MedCom XDS-metdatdata standard
 //##################### 
-* group[+].name = "extension-versionid"
+* group[+].name = "extensionversionid"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
 * group[=].input[=].mode = #source
@@ -71,7 +71,7 @@ OBS:
 * group[=].input[=].mode = #target
 
 //Rule #1: MedComDocumentDocumentReference.extension.versionid  (MedCom XDS Version ID)
-* group[=].rule[0].name = "extension-versionid"
+* group[=].rule[0].name = "extensionversionid"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "1.0.0" // fixed value - MedCom XDS Version   
 * group[=].rule[=].target.context = "target"
@@ -164,7 +164,7 @@ OBS:
 //* group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
 
-* group[=].rule[0].name = "type-system"
+* group[=].rule[0].name = "typesystem"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "entry.resource.ofType(Composition).type.coding.system"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).type.coding.system"
@@ -172,7 +172,7 @@ OBS:
 * group[=].rule[=].target.element = "type.coding.system"
 * group[=].rule[=].target.transform = #copy
 
-* group[=].rule[+].name = "type-code"
+* group[=].rule[+].name = "typecode"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "entry.resource.ofType(Composition).type.coding.code"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).type.coding.code"
@@ -180,7 +180,7 @@ OBS:
 * group[=].rule[=].target.element = "type.coding.code"
 * group[=].rule[=].target.transform = #copy
 
-* group[=].rule[+].name = "type-display"
+* group[=].rule[+].name = "typedisplay"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "entry.resource.ofType(Composition).type.coding.display"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).type.coding.display"
@@ -205,21 +205,21 @@ OBS:
 //* group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
 
-* group[=].rule[0].name = "category-system"
+* group[=].rule[0].name = "categorysystem"
 * group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueString = "1.2.208.184.100.9"  // codeSystem ? CodeSystem:$codeSystem = ” 1.2.208.184.100.9” or http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-classcode-VS
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "category.coding.system"
 * group[=].rule[=].target.transform = #create
 
-* group[=].rule[+].name = "category-code"
+* group[=].rule[+].name = "categorycode"
 * group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueCode = #001 // Skulle det være noget andet ved medd.?
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "category.coding.code"
 * group[=].rule[=].target.transform = #create
 
-* group[=].rule[+].name = "category-display"
+* group[=].rule[+].name = "categorydisplay"
 * group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueString = "Klinisk rapport"
 * group[=].rule[=].target.context = "target"
@@ -256,7 +256,7 @@ OBS:
 //#####################
 
 
-* group[+].name = "author-institution"
+* group[+].name = "authorinstitution"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
 * group[=].input[=].type = "Bundle"
@@ -265,7 +265,7 @@ OBS:
 //* group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
 
-* group[=].rule[0].name = "author-institution"
+* group[=].rule[0].name = "authorinstitution"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "entry.resource.ofType(Composition).author.reference.where($this.startsWith('Organization'))"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).author.reference.where($this.startsWith('Organization'))"
@@ -273,7 +273,7 @@ OBS:
 * group[=].rule[=].target.element = "author.reference"
 * group[=].rule[=].target.transform = #copy
 
-* group[+].name = "author-person"
+* group[+].name = "authorperson"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
 * group[=].input[=].type = "Bundle"
@@ -282,7 +282,7 @@ OBS:
 //* group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
 
-* group[=].rule[0].name = "author-person"
+* group[=].rule[0].name = "authorperson"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "entry.resource.ofType(Composition).author.reference.where($this.startsWith('Practitioner'))"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).author.reference.where($this.startsWith('Practitioner'))"
@@ -337,7 +337,7 @@ OBS:
 //Comment: XDS metadata standard attributes: mimeType, languageCode, URI, size, hash, title, creationTime
 //#####################
 
-* group[+].name = "content-attachment"
+* group[+].name = "contentattachment"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
 * group[=].input[=].type = "Bundle"
@@ -347,7 +347,7 @@ OBS:
 * group[=].input[=].mode = #target
  
 // DocRef attribute: content.attachment.contentType == XDS attribute: DocumentEntry.mimeType
-* group[=].rule[0].name = "content-attachment-contentType"
+* group[=].rule[0].name = "contentattachmentcontentType"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "application/fhir+xml" //ContentType is set by the system providing the document. For FHIR documents: "application/fhir+xml" | "application/fhir+json"
 * group[=].rule[=].target.context = "target"
@@ -355,7 +355,7 @@ OBS:
 * group[=].rule[=].target.transform = #create
 
 // DocRef attribute: content.attachment.language == XDS attribute: DocumentEntry.languageCode
-* group[=].rule[+].name = "content-attachment-language"
+* group[=].rule[+].name = "contentattachmentlanguage"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "entry.resource.ofType(Composition).language"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).language"
@@ -364,7 +364,7 @@ OBS:
 
 // DocRef attribute: content.attachment.url == XDS attribute: DocumentEntry.URI (Optional)
 /*
-* group[=].rule[+].name = "content-attachment-url"
+* group[=].rule[+].name = "contentattachmenturl"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "??" 
 * group[=].rule[=].target.context = "target"
@@ -374,7 +374,7 @@ OBS:
 
 // DocRef attribute: content.attachment.size == XDS attribute: DocumentEntry.size (optional)
 /*
-* group[=].rule[+].name = "content-attachment-size"
+* group[=].rule[+].name = "contentattachmentsize"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "??"
 * group[=].rule[=].target.context = "target"
@@ -384,7 +384,7 @@ OBS:
 
 // DocRef attribute: content.attachment.hash == XDS attribute: DocumentEntry.hash (optional)
 /*
-* group[=].rule[+].name = "content-attachment-hash"
+* group[=].rule[+].name = "contentattachmenthash"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "??"
 * group[=].rule[=].target.context = "target"
@@ -393,7 +393,7 @@ OBS:
 */
 
 // DocRef attribute: content.attachment.title == XDS attribute: DocumentEntry.title
-* group[=].rule[+].name = "content-attachment-title"
+* group[=].rule[+].name = "contentattachmenttitle"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "entry.resource.ofType(Composition).title"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).title"
@@ -401,7 +401,7 @@ OBS:
 * group[=].rule[=].target.transform = #copy
 
 // DocRef attribute: content.attachment.creation == XDS attribute: DocumentEntry.creationTime
-* group[=].rule[+].name = "content-attachment-creation"
+* group[=].rule[+].name = "contentattachmentcreation"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "entry.resource.ofType(Composition).date"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).date"
@@ -415,7 +415,7 @@ OBS:
 //#####################
 
 // RUN: Where to find these informations (in source structure)??
-* group[+].name = "content-format"
+* group[+].name = "contentformat"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
 * group[=].input[=].type = "Bundle"
@@ -424,21 +424,21 @@ OBS:
 //* group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
 
-* group[=].rule[0].name = "content-format-system"
+* group[=].rule[0].name = "contentformatsystem"
 * group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueString = "urn:oid:1.2.208.184.100.10"  //??: https://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-plr-formatcode-VS/
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "content.format.system"
 * group[=].rule[=].target.transform = #create
 
-* group[=].rule[+].name = "content-format-code"
+* group[=].rule[+].name = "contentformatcode"
 * group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueString = "http://medcomfhir.dk/ig/conditionlist" // ?? 
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "content.format.code"
 * group[=].rule[=].target.transform = #create
 
-* group[=].rule[+].name = "content-format-display"
+* group[=].rule[+].name = "contentformatdisplay"
 * group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueString = "Conditonlist version x.x.x" // ?? 
 * group[=].rule[=].target.context = "target"
@@ -451,7 +451,7 @@ OBS:
 //#####################
 
 //#####################
-//Group: context-period (Optional)
+//Group: contextperiod (Optional)
 //Comment: XDS metadata standard attributes: DocumentEntry.serviceStartTime + DocumentEntry.serviceStopTime
 //#####################
 
@@ -464,7 +464,7 @@ OBS:
 //RUN: Is set by providersystem
 //#####################
 
-* group[+].name = "context-facilityType"
+* group[+].name = "contextfacilityType"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
 * group[=].input[=].type = "Bundle"
@@ -473,21 +473,21 @@ OBS:
 //* group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
 
-* group[=].rule[0].name = "context-facilityType-system"
+* group[=].rule[0].name = "contextfacilityTypesystem"
 * group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueString = "urn:oid:2.16.840.1.113883.6.96"  //SNOMED CT
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "context.facilityType.coding.system"
 * group[=].rule[=].target.transform = #create
 
-* group[=].rule[+].name = "context-facilityType-code"
+* group[=].rule[+].name = "contextfacilityTypecode"
 * group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueCode = #554871000005105 // Set by document provider system, for now hard coded
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "context.facilityType.coding.code"
 * group[=].rule[=].target.transform = #create
 
-* group[=].rule[+].name = "context-facilityType-display"
+* group[=].rule[+].name = "contextfacilityTypedisplay"
 * group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueString = "psykiatrienhed" // Set by document provider system, for now hard coded
 * group[=].rule[=].target.context = "target"
@@ -503,7 +503,7 @@ OBS:
 //RUN: Is set by providersystem
 //#####################
 
-* group[+].name = "context-practiceSetting"
+* group[+].name = "contextpracticeSetting"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
 * group[=].input[=].type = "Bundle"
@@ -512,21 +512,21 @@ OBS:
 //* group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
 
-* group[=].rule[0].name = "context-practiceSetting-system"
+* group[=].rule[0].name = "contextpracticeSettingsystem"
 * group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueString = "urn:oid:2.16.840.1.113883.6.96"  //SNOMED CT
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "context.practiceSetting.coding.system"
 * group[=].rule[=].target.transform = #create
 
-* group[=].rule[+].name = "context-practiceSetting-code"
+* group[=].rule[+].name = "contextpracticeSettingcode"
 * group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueCode = #394588006 // Set by document provider system, for now hard coded
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "context.practiceSetting.coding.code"
 * group[=].rule[=].target.transform = #create
 
-* group[=].rule[+].name = "context-practiceSetting-display"
+* group[=].rule[+].name = "contextpracticeSettingdisplay"
 * group[=].rule[=].source.context = "defaultValue"
 * group[=].rule[=].source.defaultValueString = "børne- og ungdomspsykiatri" // Set by document provider system, for now hard coded
 * group[=].rule[=].target.context = "target"
@@ -539,7 +539,7 @@ OBS:
 //Comment: XDS  metadata standard attribute "DocumentEntry.sourcePatientId and DocumentEntry.sourcePatientInfo"
 //#####################
 
-* group[+].name = "context-sourcePatientInfo"
+* group[+].name = "contextsourcePatientInfo"
 * group[=].typeMode = #none
 * group[=].input[0].name = "source"
 * group[=].input[=].type = "Bundle"
@@ -548,7 +548,7 @@ OBS:
 //* group[=].input[=].type = "MedComDocumentDocumentReference"
 * group[=].input[=].mode = #target
 
-* group[=].rule[0].name = "context-sourcePatientInfo"
+* group[=].rule[0].name = "contextsourcePatientInfo"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "entry.resource.ofType(Composition).subject.reference"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).subject.reference"
