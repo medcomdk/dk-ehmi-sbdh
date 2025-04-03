@@ -428,21 +428,21 @@ OBS:
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "contentformatsystem"
-* group[=].rule[=].source.context = "defaultValue"
+* group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "urn:oid:1.2.208.184.100.10"  //??: https://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-plr-formatcode-VS/
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "content.format.system"
 * group[=].rule[=].target.transform = #create
 
 * group[=].rule[+].name = "contentformatcode"
-* group[=].rule[=].source.context = "defaultValue"
+* group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "http://medcomfhir.dk/ig/conditionlist" // ?? 
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "content.format.code"
 * group[=].rule[=].target.transform = #create
 
 * group[=].rule[+].name = "contentformatdisplay"
-* group[=].rule[=].source.context = "defaultValue"
+* group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "Conditonlist version x.x.x" // ?? 
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "content.format.display"
@@ -477,21 +477,21 @@ OBS:
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "contextfacilityTypesystem"
-* group[=].rule[=].source.context = "defaultValue"
+* group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "urn:oid:2.16.840.1.113883.6.96"  //SNOMED CT
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "context.facilityType.coding.system"
 * group[=].rule[=].target.transform = #create
 
 * group[=].rule[+].name = "contextfacilityTypecode"
-* group[=].rule[=].source.context = "defaultValue"
+* group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueCode = #554871000005105 // Set by document provider system, for now hard coded
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "context.facilityType.coding.code"
 * group[=].rule[=].target.transform = #create
 
 * group[=].rule[+].name = "contextfacilityTypedisplay"
-* group[=].rule[=].source.context = "defaultValue"
+* group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "psykiatrienhed" // Set by document provider system, for now hard coded
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "context.facilityType.coding.display"
@@ -516,21 +516,21 @@ OBS:
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "contextpracticeSettingsystem"
-* group[=].rule[=].source.context = "defaultValue"
+* group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "urn:oid:2.16.840.1.113883.6.96"  //SNOMED CT
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "context.practiceSetting.coding.system"
 * group[=].rule[=].target.transform = #create
 
 * group[=].rule[+].name = "contextpracticeSettingcode"
-* group[=].rule[=].source.context = "defaultValue"
+* group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueCode = #394588006 // Set by document provider system, for now hard coded
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "context.practiceSetting.coding.code"
 * group[=].rule[=].target.transform = #create
 
 * group[=].rule[+].name = "contextpracticeSettingdisplay"
-* group[=].rule[=].source.context = "defaultValue"
+* group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "børne- og ungdomspsykiatri" // Set by document provider system, for now hard coded
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "context.practiceSetting.coding.display"
