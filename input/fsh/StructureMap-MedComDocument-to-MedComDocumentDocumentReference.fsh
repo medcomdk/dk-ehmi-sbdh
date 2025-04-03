@@ -286,6 +286,7 @@ OBS:
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "entry.resource.ofType(Composition).author.reference.where($this.startsWith('Practitioner'))"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).author.reference.where($this.startsWith('Practitioner'))"
+* group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "author.reference"
 * group[=].rule[=].target.transform = #copy
 
@@ -359,6 +360,7 @@ OBS:
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "entry.resource.ofType(Composition).language"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).language"
+* group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "content.attachment.language"
 * group[=].rule[=].target.transform = #copy
 
@@ -397,6 +399,7 @@ OBS:
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.element = "entry.resource.ofType(Composition).title"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).title"
+* group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "content.attachment.title"
 * group[=].rule[=].target.transform = #copy
 
