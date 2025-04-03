@@ -30,7 +30,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-//* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].type = "DocumentReference"
 * group[=].input[=].mode = #target
 
 //Rule #1: MedComDocumentDocumentReference.extension:homeCommunityid system (Must be fixed to "urn:oid:1.2.208.176.1.2")
@@ -91,7 +91,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-//* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].type = "DocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[+].name = "masterIdentifier"
@@ -114,7 +114,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-//* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].type = "DocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[+].name = "identifier"
@@ -139,7 +139,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-//* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].type = "DocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[+].name = "status"
@@ -161,7 +161,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-//* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].type = "DocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "typesystem"
@@ -202,7 +202,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-//* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].type = "DocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "categorysystem"
@@ -238,7 +238,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-//* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].type = "DocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "subject"
@@ -262,7 +262,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-//* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].type = "DocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "authorinstitution"
@@ -279,7 +279,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-//* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].type = "DocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "authorperson"
@@ -321,7 +321,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-//* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].type = "DocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "securityLabel"
@@ -344,7 +344,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-//* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].type = "DocumentReference"
 * group[=].input[=].mode = #target
  
 // DocRef attribute: content.attachment.contentType == XDS attribute: DocumentEntry.mimeType
@@ -424,7 +424,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-//* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].type = "DocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "contentformatsystem"
@@ -443,7 +443,7 @@ OBS:
 
 * group[=].rule[+].name = "contentformatdisplay"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.defaultValueString = "Conditonlist version x.x.x" // ?? 
+* group[=].rule[=].source.defaultValueString = "1.0.0" // ?? 
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "content.format.display"
 * group[=].rule[=].target.transform = #create
@@ -473,7 +473,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-//* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].type = "DocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "contextfacilityTypesystem"
@@ -512,7 +512,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-//* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].type = "DocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "contextpracticeSettingsystem"
@@ -548,7 +548,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-//* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].type = "DocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "contextsourcePatientInfo"
