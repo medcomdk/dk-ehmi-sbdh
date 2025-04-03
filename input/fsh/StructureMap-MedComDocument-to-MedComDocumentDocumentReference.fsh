@@ -300,7 +300,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-//* group[=].input[=].type = "MedComDocumentDocumentReference"
+* group[=].input[=].type = "DocumentReference"
 * group[=].input[=].mode = #target
 
 * group[=].rule[0].name = "authenticator"
