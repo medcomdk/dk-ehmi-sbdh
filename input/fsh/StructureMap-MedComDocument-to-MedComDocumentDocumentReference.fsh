@@ -524,14 +524,14 @@ OBS:
 
 * group[=].rule[+].name = "contextpracticeSettingcode"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.defaultValueCode = #394588006 // Set by document provider system, for now hard coded
+* group[=].rule[=].source.defaultValueCode = #394588006 // Set b y document provider system, for now hard coded
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "context.practiceSetting.coding.code"
 * group[=].rule[=].target.transform = #create
 
 * group[=].rule[+].name = "contextpracticeSettingdisplay"
 * group[=].rule[=].source.context = "source"
-* group[=].rule[=].source.defaultValueString = "børne- og ungdomspsykiatri" // Set by document provider system, for now hard coded
+* group[=].rule[=].source.defaultValueString = "boerne- og ungdomspsykiatri" // Set by document provider system, for now hard coded
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.element = "context.practiceSetting.coding.display"
 * group[=].rule[=].target.transform = #create
