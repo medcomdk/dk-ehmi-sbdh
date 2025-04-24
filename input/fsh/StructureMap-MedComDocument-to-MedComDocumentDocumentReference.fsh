@@ -538,7 +538,7 @@ OBS:
 
 
 //#####################
-//Group: context-sourcePatientInfo
+//Group: context-sourcePatientInfo..
 //Comment: XDS  metadata standard attribute "DocumentEntry.sourcePatientId and DocumentEntry.sourcePatientInfo"
 //#####################
 
