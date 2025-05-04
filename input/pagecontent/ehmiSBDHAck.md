@@ -80,7 +80,7 @@ EnvelopeReceipt example:
 	    <InstanceIdentifier>9a6ff822-08de-5a6f-9670-9fa4b9d2f0dx</InstanceIdentifier>
 	    <Type>ReceiptAcknowledgement</Type>
 	    <MultipleType>false</MultipleType>
-	    <CreationDateAndTime>2024-03-01T16-19-00+01:00</CreationDateAndTime>
+	    <CreationDateAndTime>2025-04-01T16-19-00+01:00</CreationDateAndTime>
     </DocumentIdentification>
 
 ## ehmiSbdhBusinessScopes 
@@ -1051,7 +1051,7 @@ Always in this format: [YYYY-MM-DD]T[tt:mm:ss]+[offset-to-UTC]
 OriginalMessageDateTime example
 
     <bpssignal:OriginalMessageDateTime>
-        2024-03-01T16:19:00+01:00
+        2025-04-01T16:19:00+01:00
     </bpssignal:OriginalMessageDateTime>
 
 <!-- br -->
@@ -1067,7 +1067,7 @@ Always in this format: [YYYY-MM-DD]T[tt:mm:ss]+[offset-to-UTC]
 ThisMessageDateTime example
 
     <bpssignal:ThisMessageDateTime>
-        2024-03-01T16:19:10+01.00
+        2025-04-01T16:19:10+01.00
     </bpssignal:ThisMessageDateTime>
 
 <!-- br -->
@@ -1110,10 +1110,10 @@ ToPartyInfo example
             urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:3.0
         </bpssignal:OriginalDocumentIdentifier>
         <bpssignal:OriginalMessageDateTime>
-            2024-03-01T16:19:00+01:00
+            2025-04-01T16:19:00+01:00
         </bpssignal:OriginalMessageDateTime>
         <bpssignal:ThisMessageDateTime>
-            2024-03-01T16:19:10+01:00
+            2025-04-01T16:19:10+01:00
         </bpssignal:ThisMessageDateTime>
         <bpssignal:FromPartyInfo type=”iso6523-actorid-upis”>
             0088:5790000201389
@@ -1257,10 +1257,10 @@ ExceptionMessage example
             urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:3.0
         </bpssignal:OriginalDocumentIdentifier>
         <bpssignal:OriginalMessageDateTime>
-            2024-03-01T16:19:00+01:00
+            2025-04-01T16:19:00+01:00
         </bpssignal:OriginalMessageDateTime>
         <bpssignal:ThisMessageDateTime>
-            2024-03-01T16:19:10+01:00
+            2025-04-01T16:19:10+01:00
         </bpssignal:ThisMessageDateTime>
         <bpssignal:FromPartyInfo type=”iso6523-actorid-upis”>
             0088:5790000201389

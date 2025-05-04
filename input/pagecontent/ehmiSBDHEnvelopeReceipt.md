@@ -81,7 +81,7 @@ Always in this format: [YYYY-MM-DD]T[tt:mm:ss]+[offset-to-UTC]
 OriginalMessageDateTime example
 
     <bpssignal:OriginalMessageDateTime>
-        2024-03-01T16:19:00+01:00
+        2025-04-01T16:19:00+01:00
     </bpssignal:OriginalMessageDateTime>
 
 ###### ThisMessageDateTime
@@ -95,7 +95,7 @@ Always in this format: [YYYY-MM-DD]T[tt:mm:ss]+[offset-to-UTC]
 ThisMessageDateTime example
 
     <bpssignal:ThisMessageDateTime>
-        2024-03-01T16:19:10+01.00
+        2025-04-01T16:19:10+01.00
     </bpssignal:ThisMessageDateTime>
 
 ###### FromPartyInfo
@@ -132,10 +132,10 @@ ToPartyInfo example
             urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:3.0
         </bpssignal:OriginalDocumentIdentifier>
         <bpssignal:OriginalMessageDateTime>
-            2024-03-01T16:19:00+01:00
+            2025-04-01T16:19:00+01:00
         </bpssignal:OriginalMessageDateTime>
         <bpssignal:ThisMessageDateTime>
-            2024-03-01T16:19:10+01:00
+            2025-04-01T16:19:10+01:00
         </bpssignal:ThisMessageDateTime>
         <bpssignal:FromPartyInfo type=”iso6523-actorid-upis”>
             0088:5790000201389
@@ -239,10 +239,10 @@ ExceptionMessage example
             urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:3.0
         </bpssignal:OriginalDocumentIdentifier>
         <bpssignal:OriginalMessageDateTime>
-            2024-03-01T16:19:00+01:00
+            2025-04-01T16:19:00+01:00
         </bpssignal:OriginalMessageDateTime>
         <bpssignal:ThisMessageDateTime>
-            2024-03-01T16:19:10+01:00
+            2025-04-01T16:19:10+01:00
         </bpssignal:ThisMessageDateTime>
         <bpssignal:FromPartyInfo type=”iso6523-actorid-upis”>
             0088:5790000201389
