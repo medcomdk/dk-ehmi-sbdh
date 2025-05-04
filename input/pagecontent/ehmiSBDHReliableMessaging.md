@@ -19,7 +19,7 @@ table, th, td {
 |:----------------------------------------------------------------|:---------------------------|
 | Both EnvelopeIdentifier and MessageIdentifier have not been received       | This is the normal case, and the message **SHALL** be processed            |
 | Both EnvelopeIdentifier and MessageIdentifier have already been received   | The original ehmiSBDH Envelope server may either reprocess the message, or reject the message|
-| MessageIdentifier has already been received, but EnvelopeIdentifier is new | The original ehmiSBDH-EnvelopeReceipt has been lost (failed to return to the request issuer) and thus the previously received Message in An ehmiSBDH Envelope has been resubmitted with a new EnvelopeIdentifier for processing again. The original ehmiSBDH-EnvelopeReceipt **SHALL** be resent|
+| MessageIdentifier has already been received, but EnvelopeIdentifier is new | The original ehmiSBDH-EnvelopeReceipt has been lost (failed to return to the request issuer) and thus the previously received Message in An ehmiSBDH Envelope has been resubmitted with a new EnvelopeIdentifier for processing again. The original content of the first ehmiSBDH-EnvelopeReceipt **SHALL** be resent with new EnvelopeIdentifier and timestamp|
 | The EnvelopeIdentifier has already been received, but the MessageIdentifier is new | This is an error - EnvelopeIdentifier values **SHALL** never be reused. Receiver **MAY** return a Negative ehmiSBDH-EnvelopeReceipt|
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
