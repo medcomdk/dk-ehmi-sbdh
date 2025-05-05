@@ -1557,11 +1557,12 @@ ToPartyInfo example
 
 A  Receipt Exception signals an error condition in the management of a Business Transaction. This Business Signal is returned to the initiating activity that originated the request. This exception MUST terminate the Business Transaction. These errors deal with the mechanisms of message exchange such as verification, validation, authentication, and authorization and will occur up to message acceptance. Typically, the rules and constraints applied to the message will have only dealt with the well-formedness of the message.
 
-A receipt exception terminates the Business Transaction. The following are receipt exceptions:
-•	Syntax exceptions. There is invalid punctuation, vocabulary or grammar in the Business Document or Business Signal. 
-•	Authorization exceptions. Roles are not authorized to participate in the BTA. Note that the receiving BSI can only identify this exception.
-•	Signature exceptions. Business Documents are not signed for non-repudiation when required.
-•	Sequence exceptions. The order or type of a Business Document or Business Signal is incorrect.
+A receipt exeption terminates the Business Transaction. The following are receipt exceptions:
+
+- Syntax exceptions. There is invalid punctuation, vocabulary or grammar in the Business Document or Business Signal. 
+- Authorization exceptions. Roles are not authorized to participate in the BTA. Note that the receiving BSI can only identify this exception.
+- Signature exceptions. Business Documents are not signed for non-repudiation when required.
+- Sequence exceptions. The order or type of a Business Document or Business Signal is incorrect.
 
 A Receipt Exception typical signals an error condition in a Business Activity which requires a transaction to be terminated, i.e. receipt of a business message with a Business Document that has failed. (From [ebXMLbp] page 77)
 
