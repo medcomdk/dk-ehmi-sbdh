@@ -1559,8 +1559,8 @@ A  Receipt Exception signals an error condition in the management of a Business 
 
 A receipt exeption terminates the Business Transaction. The following are receipt exceptions:
 
-- Syntax exceptions. There is invalid punctuation, vocabulary or grammar in the Business Document or Business Signal. 
-- Authorization exceptions. Roles are not authorized to participate in the BTA. Note that the receiving BSI can only identify this exception.
+- Syntax exceptions. There is invalid punctuation, vocabulary or grammar in the Business Document or Business Signal. (the expected most common in a Business Transaction)
+- Authorization exceptions. Roles are not authorized to participate in the Business Transaction. Note that the receiving Business Service Interface can only identify this exception.
 - Signature exceptions. Business Documents are not signed for non-repudiation when required.
 - Sequence exceptions. The order or type of a Business Document or Business Signal is incorrect.
 
