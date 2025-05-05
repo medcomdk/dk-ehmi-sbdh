@@ -123,6 +123,7 @@ menu:
 # contact directly and follow the format outlined in the ImplementationGuide resource and
 # ContactDetail.
 #
+
 # contact:
 #   - name: Bob Smith
 #     telecom:
