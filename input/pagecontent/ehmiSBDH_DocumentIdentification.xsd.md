@@ -1,6 +1,6 @@
 # ehmiSbdhprofile of ehmiSbdhDocumentIdentification
 
-<a href="https://github.com/medcomdk/dk-ehmi-sbdh/blob/input/pagecontent/ehmiSBDH/ehmiDocumentIdentification.xsd" target="_blank">Link to the raw xsd (opens in a new window)</a>
+<a href="./ehmiSBDH/ehmiSBDH/ehmiDocumentIdentification.xsd" target="_blank">Link to the raw xsd (opens in a new window)</a>
 
     <?xml version="1.0"?>
     <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"

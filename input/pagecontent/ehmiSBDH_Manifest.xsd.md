@@ -2,7 +2,7 @@
 
 Please note that this xsd is only included for compliance reasons, it is not used as part of the ehmiSBDH due to the cardinaliy of the elements in ehmiSBDH.
 
-<a href="https://github.com/medcomdk/dk-ehmi-sbdh/ehmiSBDH/Manifest.xsd" target="_blank">Link to the raw xsd (opens in a new window)</a>
+<a href="./ehmiSBDH/Manifest.xsd" target="_blank">Link to the raw xsd (opens in a new window)</a>
 
     <?xml version="1.0"?>
     <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
