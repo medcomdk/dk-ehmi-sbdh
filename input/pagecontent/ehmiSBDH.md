@@ -1612,7 +1612,7 @@ As 7.4.3.1.6
 
 ###### ExceptionType
 
-The content is generally defined as a ReceiptException, but beyond that it is the logic of the receiver's error handling mechanism that determines the content. Here exemplified from MedCom's Gateway service. Reason and ExceptionMessage follow the same logic.
+The content is generally defined as a ReceiptException, but beyond that it is the logic of the receiver's error handling mechanism that determines the content. Here exemplified from DDS MSH service. Reason and ExceptionMessage follow the same logic.
 
     <bpssignal:ExceptionType>
         <bpssignal:ReceiptException>
