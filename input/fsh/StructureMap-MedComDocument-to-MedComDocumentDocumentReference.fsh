@@ -566,7 +566,7 @@ OBS:
 #1 How to set values provided by system (document provider):
 - extension-homeCommunityid
 - extension-version-id
-- status
+- status dd
 - category
 - content.attachment.contentType
 - content.format 
