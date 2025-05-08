@@ -9,7 +9,7 @@ name: DK EHMI SBDH IG
 title: "DK EHMI SBDH IG"
 description: The DK EHMI SBDH IG
 status: active # draft | active | retired | unknown
-version: 1.0.0
+version: 1.0.1
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
