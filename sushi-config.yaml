@@ -98,7 +98,10 @@ menu:
     DocumentIdentification: ehmiSBDH_DocumentIdentification.xsd.html
     BusinessScope: ehmiSBDH_BusinessScope.xsd.html
     BinaryContentType: ehmiSBDH_EDN-Business-Message-Envelope-1.2.xsd.html
+    BasicTypes: ehmiSBDH_BasicTypes.xsd.html
+    Manifest: ehmiSBDH_Manifest.xsd.html
     ebbp-signals-2.0.4: ehmiSBDH_ebbp-signals-2.0.4.xsd.html
+    ehmisbdh_sample.xml: ehmisbdh_fullsample.xml.html
   SBDH original schemas: 
     StandardBusinessDocumentHeader: SBDH_StandardBusinessDocumentHeader.xsd.html
     Partner: SBDH_Partner.xsd.html

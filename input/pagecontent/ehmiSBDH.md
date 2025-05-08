@@ -482,7 +482,7 @@ example:
 
     <DocumentInformation>
         …
-        <CreationDateAndTime>2024-03-01T16-19-00+01:00</CreationDateAndTime>
+        <CreationDateAndTime>2025-04-01T16-19-00+01:00</CreationDateAndTime>
         …
     </DocumentInformation>
 
@@ -496,7 +496,7 @@ example:
         <InstanceIdentifier>9a6ff822-08de-5a6f-9670-9fa4b9d2f0dc</InstanceIdentifier>
 	    <Type>Bundle</Type>
 	    <MultipleType>false</MultipleType>
-	    <CreationDateAndTime>2024-03-01T16-19-00+01:00</CreationDateAndTime>
+	    <CreationDateAndTime>2025-04-01T16-19-00+01:00</CreationDateAndTime>
     </DocumentIdentification>
 
 <!-- br -->
@@ -511,7 +511,7 @@ example:
 	    <InstanceIdentifier>9a6ff822-08de-5a6f-9670-9fa4b9d2f0dx</InstanceIdentifier>
 	    <Type>ReceiptAcknowledgement</Type>
 	    <MultipleType>false</MultipleType>
-	    <CreationDateAndTime>2024-03-01T16-19-00+01:00</CreationDateAndTime>
+	    <CreationDateAndTime>2025-04-01T16-19-00+01:00</CreationDateAndTime>
     </DocumentIdentification>
 
 <!-- br -->
@@ -1473,7 +1473,7 @@ Always in this format: [YYYY-MM-DD]T[tt:mm:ss]+[offset-to-UTC]
 OriginalMessageDateTime example
 
     <bpssignal:OriginalMessageDateTime>
-        2024-03-01T16:19:00+01:00
+        2025-04-01T16:19:00+01:00
     </bpssignal:OriginalMessageDateTime>
 
 <!-- br -->
@@ -1489,7 +1489,7 @@ Always in this format: [YYYY-MM-DD]T[tt:mm:ss]+[offset-to-UTC]
 ThisMessageDateTime example
 
     <bpssignal:ThisMessageDateTime>
-        2024-03-01T16:19:10+01.00
+        2025-04-01T16:19:10+01.00
     </bpssignal:ThisMessageDateTime>
 
 <!-- br -->
@@ -1532,10 +1532,10 @@ ToPartyInfo example
             urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:3.0
         </bpssignal:OriginalDocumentIdentifier>
         <bpssignal:OriginalMessageDateTime>
-            2024-03-01T16:19:00+01:00
+            2025-04-01T16:19:00+01:00
         </bpssignal:OriginalMessageDateTime>
         <bpssignal:ThisMessageDateTime>
-            2024-03-01T16:19:10+01:00
+            2025-04-01T16:19:10+01:00
         </bpssignal:ThisMessageDateTime>
         <bpssignal:FromPartyInfo type=”iso6523-actorid-upis”>
             0088:5790000201389
@@ -1557,11 +1557,12 @@ ToPartyInfo example
 
 A  Receipt Exception signals an error condition in the management of a Business Transaction. This Business Signal is returned to the initiating activity that originated the request. This exception MUST terminate the Business Transaction. These errors deal with the mechanisms of message exchange such as verification, validation, authentication, and authorization and will occur up to message acceptance. Typically, the rules and constraints applied to the message will have only dealt with the well-formedness of the message.
 
-A receipt exception terminates the Business Transaction. The following are receipt exceptions:
-•	Syntax exceptions. There is invalid punctuation, vocabulary or grammar in the Business Document or Business Signal. 
-•	Authorization exceptions. Roles are not authorized to participate in the BTA. Note that the receiving BSI can only identify this exception.
-•	Signature exceptions. Business Documents are not signed for non-repudiation when required.
-•	Sequence exceptions. The order or type of a Business Document or Business Signal is incorrect.
+A receipt exeption terminates the Business Transaction. The following are receipt exceptions:
+
+- Syntax exceptions. There is invalid punctuation, vocabulary or grammar in the Business Document or Business Signal. (the expected most common in a Business Transaction)
+- Authorization exceptions. Roles are not authorized to participate in the Business Transaction. Note that the receiving Business Service Interface can only identify this exception.
+- Signature exceptions. Business Documents are not signed for non-repudiation when required.
+- Sequence exceptions. The order or type of a Business Document or Business Signal is incorrect.
 
 A Receipt Exception typical signals an error condition in a Business Activity which requires a transaction to be terminated, i.e. receipt of a business message with a Business Document that has failed. (From [ebXMLbp] page 77)
 
@@ -1611,7 +1612,7 @@ As 7.4.3.1.6
 
 ###### ExceptionType
 
-The content is generally defined as a ReceiptException, but beyond that it is the logic of the receiver's error handling mechanism that determines the content. Here exemplified from MedCom's Gateway service. Reason and ExceptionMessage follow the same logic.
+The content is generally defined as a ReceiptException, but beyond that it is the logic of the receiver's error handling mechanism that determines the content. Here exemplified from DDS MSH service. Reason and ExceptionMessage follow the same logic.
 
     <bpssignal:ExceptionType>
         <bpssignal:ReceiptException>
@@ -1679,10 +1680,10 @@ ExceptionMessage example
             urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:3.0
         </bpssignal:OriginalDocumentIdentifier>
         <bpssignal:OriginalMessageDateTime>
-            2024-03-01T16:19:00+01:00
+            2025-04-01T16:19:00+01:00
         </bpssignal:OriginalMessageDateTime>
         <bpssignal:ThisMessageDateTime>
-            2024-03-01T16:19:10+01:00
+            2025-04-01T16:19:10+01:00
         </bpssignal:ThisMessageDateTime>
         <bpssignal:FromPartyInfo type=”iso6523-actorid-upis”>
             0088:5790000201389

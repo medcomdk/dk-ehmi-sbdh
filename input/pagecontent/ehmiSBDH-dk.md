@@ -506,7 +506,7 @@ Eksempel:
 
     <DocumentInformation>
         …
-        <CreationDateAndTime>2024-03-01T16-19-00+01:00</CreationDateAndTime>
+        <CreationDateAndTime>2025-04-01T16-19-00+01:00</CreationDateAndTime>
         …
     </DocumentInformation>
 
@@ -520,7 +520,7 @@ Eksempel:
         <InstanceIdentifier>9a6ff822-08de-5a6f-9670-9fa4b9d2f0dc</InstanceIdentifier>
 	    <Type>Bundle</Type>
 	    <MultipleType>false</MultipleType>
-	    <CreationDateAndTime>2024-03-01T16-19-00+01:00</CreationDateAndTime>
+	    <CreationDateAndTime>2025-04-01T16-19-00+01:00</CreationDateAndTime>
     </DocumentIdentification>
 
 <br>
@@ -535,7 +535,7 @@ Eksempel:
 	    <InstanceIdentifier>9a6ff822-08de-5a6f-9670-9fa4b9d2f0dx</InstanceIdentifier>
 	    <Type>ReceiptAcknowledgement</Type>
 	    <MultipleType>false</MultipleType>
-	    <CreationDateAndTime>2024-03-01T16-19-00+01:00</CreationDateAndTime>
+	    <CreationDateAndTime>2025-04-01T16-19-00+01:00</CreationDateAndTime>
     </DocumentIdentification>
 
 <br>
@@ -1571,7 +1571,7 @@ Altid på formen: [YYYY-MM-DD]T[tt:mm:ss]+[offset-to-UTC]
 OriginalMessageDateTime eksempel
 
     <bpssignal:OriginalMessageDateTime>
-        2024-03-01T16:19:00+01:00
+        2025-04-01T16:19:00+01:00
     </bpssignal:OriginalMessageDateTime>
 
 <br>
@@ -1587,7 +1587,7 @@ Altid på formen: [YYYY-MM-DD]T[tt:mm:ss]+[offset-to-UTC]
 ThisMessageDateTime eksempel
 
     <bpssignal:ThisMessageDateTime>
-        2024-03-01T16:19:10+01.00
+        2025-04-01T16:19:10+01.00
     </bpssignal:ThisMessageDateTime>
 
 <br>
@@ -1631,10 +1631,10 @@ ToPartyInfo eksempel
             urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation# urn:dk:medcom:fhir:homecareobservation:3.0
         </bpssignal:OriginalDocumentIdentifier>
         <bpssignal:OriginalMessageDateTime>
-            2024-03-01T16:19:00+01:00
+            2025-04-01T16:19:00+01:00
         </bpssignal:OriginalMessageDateTime>
         <bpssignal:ThisMessageDateTime>
-            2024-03-01T16:19:10+01:00
+            2025-04-01T16:19:10+01:00
         </bpssignal:ThisMessageDateTime>
         <bpssignal:FromPartyInfo type=”iso6523-actorid-upis”>
             0088:5790000201389
@@ -1777,10 +1777,10 @@ ExceptionMessage eksempel
             urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation# urn:dk:medcom:fhir:homecareobservation:3.0
         </bpssignal:OriginalDocumentIdentifier>
         <bpssignal:OriginalMessageDateTime>
-            2024-03-01T16:19:00+01:00
+            2025-04-01T16:19:00+01:00
         </bpssignal:OriginalMessageDateTime>
         <bpssignal:ThisMessageDateTime>
-            2024-03-01T16:19:10+01:00
+            2025-04-01T16:19:10+01:00
         </bpssignal:ThisMessageDateTime>
         <bpssignal:FromPartyInfo type=”iso6523-actorid-upis”>
             0088:5790000201389
