@@ -18,10 +18,20 @@ Usage: #definition
 /*
 OBS:
  structure[+].url bør senre rettes til http://medcomfhir.dk/ig/.... når det er udgivet på medcoms server
+
+Fejl i QA rapport: 
+Se på referencer som de peger på det rigtige sted. Spørg AI om referecererne.
+Prøv at kommenter alle fejl ud, så det er det der virker der er tilbage. 
+Prøv at kører mapping. 
+
+
+
 */
 
+
+
 //#####################
-//Group #1: extension.homeCommunityid
+//Group #0: extension.homeCommunityid
 //Comment: the repository OID, where the document is placed
 //#####################
 * group[+].name = "extensionhomeCommunityid"
@@ -33,13 +43,14 @@ OBS:
 * group[=].input[=].type = "DocumentReference"
 * group[=].input[=].mode = #target
 
-//Rule #1: MedComDocumentDocumentReference.extension:homeCommunityid system (Must be fixed to "urn:oid:1.2.208.176.1.2")
+//Rule #1: MedComDocumentDocumentReference.extension:homeCommunityid system (homeCommunityid depends on usecase)
 * group[=].rule[0].name = "extensionhomeCommunityidsystem"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "urn:oid:1.2.208.176.8.1" // fixed value - OID for danish xds-domain   
 * group[=].rule[=].target.context = "target"
 //* group[=].rule[=].target.contextType = #variable
-* group[=].rule[=].target.element = "DocumentReference.extension.where(url='https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/medcom-xds-homecommunityid-extension').valueCoding.system"
+//* group[=].rule[=].target.element = "DocumentReference.extension.where(url='https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/medcom-xds-homecommunityid-extension').valueCoding.system"
+* group[=].rule[=].target.element = "extension.where(url='https://build.fhir.org/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-core-document-homecommunityid-extension').valueCoding.system"
 * group[=].rule[=].target.transform = #create
 
 //Rule #2: MedComDocumentDocumentReference.extension:homeCommunityid code (OID for the repository eg. "1.2.208.176.43210.8.20")
@@ -47,20 +58,26 @@ OBS:
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "1.2.208.176.8.1" // Source system must provide xds repository OID
 * group[=].rule[=].target.context = "target"
-* group[=].rule[=].target.element = "DocumentReference.extension.where(url='https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/medcom-xds-homecommunityid-extension').valueCoding.code"
+//* group[=].rule[=].target.element = "DocumentReference.extension.where(url='https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/medcom-xds-homecommunityid-extension').valueCoding.code"
+* group[=].rule[=].target.element = "extension.where(url='https://build.fhir.org/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-core-document-homecommunityid-extension').valueCoding.code"
 * group[=].rule[=].target.transform = #create
 
-//Rule #2: MedComDocumentDocumentReference.extension:homeCommunityid display (displayname for repository eg. "TEST2")
+//Rule #3: MedComDocumentDocumentReference.extension:homeCommunityid display (displayname for repository eg. "TEST2")
 * group[=].rule[+].name = "extensionhomeCommunityiddisplay"
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "Common Danish IHE XDS domain" // Source system must provide xds repository name 
 * group[=].rule[=].target.context = "target"
 //* group[=].rule[=].target.contextType = #variable
-* group[=].rule[=].target.element = "DocumentReference.extension.where(url='https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/medcom-xds-homecommunityid-extension').valueCoding.display"
+//* group[=].rule[=].target.element = "DocumentReference.extension.where(url='https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/medcom-xds-homecommunityid-extension').valueCoding.display"
+* group[=].rule[=].target.element = "DocumentReference.extension.where(url='https://build.fhir.org/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-core-document-homecommunityid-extension').valueCoding.display"
 * group[=].rule[=].target.transform = #create
 
+
+
+
+
 //#####################
-//Group #2: extension.versionNumber
+//Group #1: extension.versionNumber
 //Comment: Version of the MedCom XDS-metdatdata standard
 //##################### 
 * group[+].name = "extensionversionid"
@@ -75,13 +92,14 @@ OBS:
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "1.0.0" // fixed value - MedCom XDS Version   
 * group[=].rule[=].target.context = "target"
-* group[=].rule[=].target.element = "DocumentReference.extension.where(url='https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/medcom-xds-version-id-extension').valueString"
+//* group[=].rule[=].target.element = "DocumentReference.extension.where(url='https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/medcom-xds-version-id-extension').valueString"
+* group[=].rule[=].target.element = "DocumentReference.extension.where(url='https://build.fhir.org/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-core-document-version-id-extension').valueString"
 * group[=].rule[=].target.transform = #create
 
 
 
 //#####################
-//Group #3 masterIdentifier
+//Group #2 masterIdentifier
 //Comment: XDS metadata standard: "uniqueId".
 //#####################
 
@@ -99,12 +117,12 @@ OBS:
 * group[=].rule[=].source.element = "id"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
-* group[=].rule[=].target.element = "DocumentReference.masterIdentifier"
+* group[=].rule[=].target.element = "masterIdentifier"
 * group[=].rule[=].target.transform = #copy
 
 
 //#####################
-//Group #4: identifier
+//Group #3: identifier
 //Comment: XDS metadata standard: "entryUUID". UUID is created during mapping.
 //#####################
 
@@ -121,11 +139,11 @@ OBS:
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].target.context = "target"
 * group[=].rule[=].target.contextType = #variable
-* group[=].rule[=].target.element = "DocumentReference.identifier"
+* group[=].rule[=].target.element = "identifier"
 * group[=].rule[=].target.transform = #uuid
 
 //#####################
-//Group: status
+//Group: #4 status
 //Comment: XDS metadata standard attribute "availabilityStatus": set by system upon upload.
 //#####################
 
@@ -146,7 +164,7 @@ OBS:
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueCode = #current // fixed value - MedCom XDS Version   
 * group[=].rule[=].target.context = "target"
-* group[=].rule[=].target.element = "DocumentReference.status"
+* group[=].rule[=].target.element = "status"
 * group[=].rule[=].target.transform = #create
 
 
@@ -169,6 +187,7 @@ OBS:
 * group[=].rule[=].source.element = "entry.resource.ofType(Composition).type.coding.system"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).type.coding.system"
 * group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "type.coding.system"
 * group[=].rule[=].target.transform = #copy
 
@@ -177,6 +196,7 @@ OBS:
 * group[=].rule[=].source.element = "entry.resource.ofType(Composition).type.coding.code"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).type.coding.code"
 * group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "type.coding.code"
 * group[=].rule[=].target.transform = #copy
 
@@ -185,6 +205,7 @@ OBS:
 * group[=].rule[=].source.element = "entry.resource.ofType(Composition).type.coding.display"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).type.coding.display"
 * group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "type.coding.display"
 * group[=].rule[=].target.transform = #copy
 
@@ -209,6 +230,7 @@ OBS:
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "1.2.208.184.100.9"  // codeSystem ? CodeSystem:$codeSystem = ” 1.2.208.184.100.9” or http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-classcode-VS
 * group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "category.coding.system"
 * group[=].rule[=].target.transform = #create
 
@@ -216,6 +238,7 @@ OBS:
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueCode = #001 // Skulle det være noget andet ved medd.?
 * group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "category.coding.code"
 * group[=].rule[=].target.transform = #create
 
@@ -223,6 +246,7 @@ OBS:
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "Klinisk rapport"
 * group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "category.coding.display"
 * group[=].rule[=].target.transform = #create
 
@@ -238,6 +262,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].input[=].type = "DocumentReference"
 * group[=].input[=].mode = #target
 
@@ -246,6 +271,7 @@ OBS:
 * group[=].rule[=].source.element = "entry.resource.ofType(Composition).subject.reference"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).subject.reference"
 * group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "subject.reference"
 * group[=].rule[=].target.transform = #copy
 
@@ -270,6 +296,7 @@ OBS:
 * group[=].rule[=].source.element = "entry.resource.ofType(Composition).author.reference.where($this.startsWith('Organization'))"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).author.reference.where($this.startsWith('Organization'))"
 * group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "author.reference"
 * group[=].rule[=].target.transform = #copy
 
@@ -287,6 +314,7 @@ OBS:
 * group[=].rule[=].source.element = "entry.resource.ofType(Composition).author.reference.where($this.startsWith('Practitioner'))"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).author.reference.where($this.startsWith('Practitioner'))"
 * group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "author.reference"
 * group[=].rule[=].target.transform = #copy
 
@@ -308,11 +336,12 @@ OBS:
 * group[=].rule[=].source.element = "entry.resource.ofType(Composition).authenticator.reference.where($this.startsWith('Practitioner'))"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).authenticator.reference"  //alternate path
 * group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "authenticator.reference"
 * group[=].rule[=].target.transform = #copy
 
 //#####################
-//Group: securityLabel
+//Group: #10 securityLabel
 //Comment: XDS metadata standard attribute "author.authorinstitution" and "author.authorperson"
 //#####################
 * group[+].name = "securityLabel"
@@ -321,6 +350,7 @@ OBS:
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].input[=].type = "DocumentReference"
 * group[=].input[=].mode = #target
 
@@ -329,6 +359,7 @@ OBS:
 * group[=].rule[=].source.element = "entry.resource.ofType(Composition).confidentiality"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).confidentiality"
 * group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "securityLabel.coding.code"
 * group[=].rule[=].target.transform = #copy
 
@@ -352,6 +383,7 @@ OBS:
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "application/fhir+xml" //ContentType is set by the system providing the document. For FHIR documents: "application/fhir+xml" | "application/fhir+json"
 * group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "content.attachment.contentType"
 * group[=].rule[=].target.transform = #create
 
@@ -361,6 +393,7 @@ OBS:
 * group[=].rule[=].source.element = "entry.resource.ofType(Composition).language"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).language"
 * group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "content.attachment.language"
 * group[=].rule[=].target.transform = #copy
 
@@ -400,6 +433,7 @@ OBS:
 * group[=].rule[=].source.element = "entry.resource.ofType(Composition).title"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).title"
 * group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "content.attachment.title"
 * group[=].rule[=].target.transform = #copy
 
@@ -409,6 +443,7 @@ OBS:
 * group[=].rule[=].source.element = "entry.resource.ofType(Composition).date"
 //* group[=].rule[=].source.element = "Bundle.entry.resource.ofType(Composition).date"
 * group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "content.attachment.creation"
 * group[=].rule[=].target.transform = #copy
 
@@ -431,6 +466,7 @@ OBS:
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "urn:oid:1.2.208.184.100.10"  //??: https://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-plr-formatcode-VS/
 * group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "content.format.system"
 * group[=].rule[=].target.transform = #create
 
@@ -438,6 +474,7 @@ OBS:
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "http://medcomfhir.dk/ig/conditionlist" // ?? 
 * group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "content.format.code"
 * group[=].rule[=].target.transform = #create
 
@@ -445,6 +482,7 @@ OBS:
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "1.0.0" // ?? 
 * group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "content.format.display"
 * group[=].rule[=].target.transform = #create
 
@@ -480,6 +518,7 @@ OBS:
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "urn:oid:2.16.840.1.113883.6.96"  //SNOMED CT
 * group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "context.facilityType.coding.system"
 * group[=].rule[=].target.transform = #create
 
@@ -487,6 +526,7 @@ OBS:
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueCode = #554871000005105 // Set by document provider system, for now hard coded
 * group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "context.facilityType.coding.code"
 * group[=].rule[=].target.transform = #create
 
@@ -494,6 +534,7 @@ OBS:
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "psykiatrienhed" // Set by document provider system, for now hard coded
 * group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "context.facilityType.coding.display"
 * group[=].rule[=].target.transform = #create
 
@@ -519,6 +560,7 @@ OBS:
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueString = "urn:oid:2.16.840.1.113883.6.96"  //SNOMED CT
 * group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "context.practiceSetting.coding.system"
 * group[=].rule[=].target.transform = #create
 
@@ -526,6 +568,7 @@ OBS:
 * group[=].rule[=].source.context = "source"
 * group[=].rule[=].source.defaultValueCode = #394588006 // Set b y document provider system, for now hard coded
 * group[=].rule[=].target.context = "target"
+* group[=].rule[=].target.contextType = #variable
 * group[=].rule[=].target.element = "context.practiceSetting.coding.code"
 * group[=].rule[=].target.transform = #create
 
