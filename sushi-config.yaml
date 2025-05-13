@@ -101,7 +101,9 @@ menu:
     BasicTypes: ehmiSBDH_BasicTypes.xsd.html
     Manifest: ehmiSBDH_Manifest.xsd.html
     ebbp-signals-2.0.4: ehmiSBDH_ebbp-signals-2.0.4.xsd.html
-    ehmisbdh_sample.xml: ehmisbdh_fullsample.xml.html
+    samples:
+      ehmisbdh_sample.xml: ehmisbdh_fullsample.xml.html
+      ehmisbdh_ack_sample.xml: ehmisbdh_fullsample_ack.xml.html
   SBDH original schemas: 
     StandardBusinessDocumentHeader: SBDH_StandardBusinessDocumentHeader.xsd.html
     Partner: SBDH_Partner.xsd.html
