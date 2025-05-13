@@ -278,7 +278,7 @@ Prøv at kører mapping.
 
 //#####################
 //Group #8: author
-//Comment: XDS metadata standard attribute "author.authorinstitution" and "author.authorperson"
+//Comment: XDS metadata standard attribute "author.authorinstitution"  and "author.authorperson"
 //#####################
 
 
