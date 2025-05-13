@@ -1,5 +1,7 @@
 # Example of a full ehmiMEssage profile
 
+Sample:
+
         <?xml version="1.0" encoding="UTF-8"?>
 
         <Bundle xmlns="http://hl7.org/fhir">
