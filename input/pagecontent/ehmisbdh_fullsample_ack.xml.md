@@ -1,6 +1,6 @@
 # Example of a full Sbdh Ack profile
 
-    <!--a href="./ehmiSBDH/20250429_ehmisbdh_sample.xml" target="_blank">Link to the raw xsd (opens in a new window)</a-->
+<!--a href="./ehmiSBDH/20250429_ehmisbdh_sample.xml" target="_blank">Link to the raw xsd (opens in a new window)</a-->
 
         <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
         <StandardBusinessDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
