@@ -263,7 +263,6 @@ Prøv at kører mapping.
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-* group[=].rule[=].target.contextType = #variable
 * group[=].input[=].type = "DocumentReference"
 * group[=].input[=].mode = #target
 
@@ -351,7 +350,6 @@ Prøv at kører mapping.
 * group[=].input[=].type = "Bundle"
 * group[=].input[=].mode = #source
 * group[=].input[+].name = "target"
-* group[=].rule[=].target.contextType = #variable
 * group[=].input[=].type = "DocumentReference"
 * group[=].input[=].mode = #target
 
