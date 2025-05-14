@@ -2,6 +2,8 @@
 
 <!--a href="./ehmiSBDH/20250429_ehmisbdh_sample.xml" target="_blank">Link to the raw xsd (opens in a new window)</a-->
 
+<a href="https://github.com/medcomdk/dk-ehmi-sbdh/blob/49184406606ba2ba5c526aa1021d0753d8b27745/input/pagecontent/ehmiSBDH/ehmiMessage_Ack.xml" target="_blank">Link to the raw xml (opens in a new window)</a>
+
         <?xml version="1.0" encoding="UTF-8"?>
 
         <Bundle xmlns="http://hl7.org/fhir">
