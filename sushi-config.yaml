@@ -101,6 +101,7 @@ menu:
     BasicTypes: ehmiSBDH_BasicTypes.xsd.html
     Manifest: ehmiSBDH_Manifest.xsd.html
     ebbp-signals-2.0.4: ehmiSBDH_ebbp-signals-2.0.4.xsd.html
+  sample xmls:
     ehmiMessage_sample.xml: ehmiMessage_fullsample.xml.html
     ehmiMessage_ack_sample.xml: ehmiMessage_fullsample_Ack.xml.html
     ehmisbdh_sample.xml: ehmisbdh_fullsample.xml.html
