@@ -1,18 +1,19 @@
-Instance: MedComDocumentBundle2MedComDocumentDocumentReference-transform
+Instance: MedComDocumentBundle2MedComDocumentDocumentReferencetransform
 InstanceOf: StructureMap
 Title: "Transformation specification of a MedComDocumentBundle to a MedComDocumentDocumentReference"
 Description: "Transformation specification of a MedComDocumentBundle to a MedComDocumentDocumentReference"
 Usage: #definition
-* id = "MedComDocumentBundle2MedComDocumentDocumentReference-transform"
-* url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedComDocumentBundle2MedComDocumentDocumentReference-transform"
-* name = "MedComDocumentBundle2MedComDocumentDocumentReference-transform"
+* id = "MedComDocumentBundle2MedComDocumentDocumentReferencetransform"
+* url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedComDocumentBundle2MedComDocumentDocumentReferencetransform"
+* name = "MedComDocumentBundle2MedComDocumentDocumentReferencetransform"
 * title = "Transformation specification of a MedComDocumentBundle to a MedComDocumentDocumentReference"
 * status = #draft
 * description = "Transformation specification of a MedComDocumentBundle to a MedComDocumentDocumentReference"
-* structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-document-bundle"
-//* structure[+].url = "http://medcomfhir.dk/ig/document/StructureDefinition-medcom-document-bundle"
+//* structure[+].url = "http://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-document-bundle"
+* structure[+].url = "https://medcomfhir.dk/ig/document/StructureDefinition-medcom-document-bundle"
+                   
 * structure[=].mode = #source
-* structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-documentreference"
+* structure[+].url = "http://build.fhir.org/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-documentreference"
 //* structure[+].url = "http://medcomfhir.dk/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-documentreference"
 * structure[=].mode = #target
 
