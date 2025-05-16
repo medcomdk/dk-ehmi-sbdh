@@ -13,8 +13,10 @@ Usage: #definition
 //* structure[+].url = "https://medcomfhir.dk/ig/document/StructureDefinition-medcom-document-bundle"
                    
 * structure[=].mode = #source
-* structure[+].url = "http://build.fhir.org/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-documentreference"
+* structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-documentreference"
+//* structure[+].url = "http://build.fhir.org/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-documentreference"
 //* structure[+].url = "http://medcomfhir.dk/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-documentreference"
+//https://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-documentreference
 * structure[=].mode = #target
 
 /*
@@ -54,6 +56,7 @@ Prøv at kører mapping.
 //* group[=].rule[=].target.element = "DocumentReference.extension.where(url='https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/medcom-xds-homecommunityid-extension').valueCoding.system"
 //* group[=].rule[=].target.element = "extension.where(url='http://build.fhir.org/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-document-homecommunityid-extension').valueCoding.system"
 * group[=].rule[=].target.element = "extension.where(url='http://medcomfhir.dk/ig/coredocument/StructureDefinition/medcom-core-document-homecommunityid-extension').valueCoding.system"
+http://build.fhir.org/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-core-document-homecommunityid-extension
 * group[=].rule[=].target.transform = #create
 
 //Rule #2: MedComDocumentDocumentReference.extension:homeCommunityid code (OID for the repository eg. "1.2.208.176.43210.8.20")
