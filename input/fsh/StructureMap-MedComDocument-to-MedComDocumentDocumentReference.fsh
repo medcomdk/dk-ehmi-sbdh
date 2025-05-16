@@ -429,6 +429,8 @@ Prøv at kører mapping.
 * group[=].rule[=].target.transform = #copy
 */
 
+
+/*
 // DocRef attribute: content.attachment.title == XDS attribute: DocumentEntry.title
 * group[=].rule[+].name = "contentattachmenttitle"
 * group[=].rule[=].source.context = "source"
@@ -606,7 +608,6 @@ Prøv at kører mapping.
 
 
 
-*/
 
 /*
 ### QUESTIONS ###
