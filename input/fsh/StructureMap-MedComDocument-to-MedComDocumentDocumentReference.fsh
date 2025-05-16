@@ -170,6 +170,8 @@ Prøv at kører mapping.
 * group[=].rule[=].target.transform = #create
 
 
+/*
+
 //#####################
 //Group #5: type
 //Comment: XDS metadata standard attribute "typeCode"
@@ -602,6 +604,9 @@ Prøv at kører mapping.
 * group[=].rule[=].target.element = "context.sourcePatientInfo.reference"
 * group[=].rule[=].target.transform = #copy
 
+
+
+*/
 
 /*
 ### QUESTIONS ###
