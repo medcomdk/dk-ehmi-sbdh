@@ -75,6 +75,7 @@
 			<xs:enumeration value="MESSAGEIDENTIFIER"/>
 			<xs:enumeration value="MESSAGEENVELOPEIDENTIFIER"/>
 			<xs:enumeration value="StatisticalInformation"/>
+			<xs:enumeration value="XDS-METADATA"/>
 			<xs:enumeration value="EHMI-ReceiptAcknowledgement"/>
 			</xs:restriction>
 	</xs:simpleType>
