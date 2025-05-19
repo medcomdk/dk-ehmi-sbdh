@@ -76,6 +76,11 @@
 			<xs:enumeration value="MESSAGEENVELOPEIDENTIFIER"/>
 			<xs:enumeration value="StatisticalInformation"/>
 			<xs:enumeration value="XDS-METADATA"/>
+			<xs:enumeration value="ORIGINALMESSAGEIDENTIFIER"/>
+			<xs:enumeration value="ORIGINALMESSAGEENVELOPEIDENTIFIER"/>
+			<xs:enumeration value="ORIGINALMESSAGESTANDARD"/>
+			<xs:enumeration value="ORIGINALMESSAGEVERSION"/>
+			<xs:enumeration value="ORIGINALENVELOPEIDENTIFIER"/>
 			<xs:enumeration value="EHMI-ReceiptAcknowledgement"/>
 			</xs:restriction>
 	</xs:simpleType>
