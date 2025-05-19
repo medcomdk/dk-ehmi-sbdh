@@ -1,6 +1,6 @@
 # ehmiSbdhprofile of ehmiSbdhBusinessScope
 
-<a href="https://github.com/medcomdk/dk-ehmi-sbdh/blob/1ee2ed7b4a2459cb7553f5aba4227f5837b4a0db/input/pagecontent/ehmiSBDH/ehmiBusinessScope.xsd" target="_blank">Link to the raw xsd (opens in a new window)</a>
+<a href="https://github.com/medcomdk/dk-ehmi-sbdh/blob/d0973a86558f3ba0a3ce162408a0569727d77e11/input/pagecontent/ehmiSBDH/ehmiBusinessScope.xsd" target="_blank">Link to the raw xsd (opens in a new window)</a>
 
 	<?xml version="1.0"?>
 	<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Ted Osinski (Uniform Code Council) -->
