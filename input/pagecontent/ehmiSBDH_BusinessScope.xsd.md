@@ -1,13 +1,13 @@
 # ehmiSbdhprofile of ehmiSbdhBusinessScope
 
-<a href="./ehmiSBDH/ehmiBusinessScope.xsd" target="_blank">Link to the raw xsd (opens in a new window)</a>
+<a href="https://github.com/medcomdk/dk-ehmi-sbdh/blob/1ee2ed7b4a2459cb7553f5aba4227f5837b4a0db/input/pagecontent/ehmiSBDH/ehmiBusinessScope.xsd" target="_blank">Link to the raw xsd (opens in a new window)</a>
 
 	<?xml version="1.0"?>
 	<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Ted Osinski (Uniform Code Council) -->
 	<xs:schema targetNamespace="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" elementFormDefault="qualified" attributeFormDefault="unqualified">
 		<xs:complexType name="BusinessScope">
 			<xs:sequence>
-				<xs:element name="Scope" type="Scope" minOccurs="0" maxOccurs="6"/>
+				<xs:element name="Scope" type="Scope" minOccurs="0"/>
 			</xs:sequence>
 		</xs:complexType>
 		<xs:complexType name="Scope">
@@ -32,8 +32,8 @@
 				<xs:element name="ExpectedResponseDateTime" type="xs:dateTime" minOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
-		<xs:element name="BusinessService" type="BusinessService" substitutionGroup="ScopeInformation"/>
-		<xs:complexType name="BusinessService">
+		<xs:element name="BusinessService" type="BusinessServiceType" substitutionGroup="ScopeInformation"/>
+		<xs:complexType name="BusinessServiceType">
 			<xs:sequence>
 				<xs:element name="BusinessServiceName" type="BusinessServiceNameType" minOccurs="1"/>
 				<xs:element name="ServiceTransaction" type="ServiceTransaction" minOccurs="1"/>
@@ -46,7 +46,7 @@
 			<xs:attribute name="IsNonRepudiationOfReceiptRequired" type="xs:string" fixed="false"/>
 			<xs:attribute name="IsIntelligibleCheckRequired" type="xs:string" fixed="false"/>
 			<xs:attribute name="IsApplicationErrorResponseRequested" type="xs:string" fixed="false"/>
-			<xs:attribute name="TimeToAcknowledgeReceipt" type="xs:string" fixed="300000"/>
+			<xs:attribute name="TimeToAcknowledgeReceipt" type="xs:string" fixed="600000"/>
 			<xs:attribute name="TimeToAcknowledgeAcceptance" type="xs:string" fixed="0"/>
 			<xs:attribute name="TimeToPerform" type="xs:string" fixed="0"/>
 			<xs:attribute name="Recurrence" type="xs:string" fixed="0"/>
@@ -77,13 +77,9 @@
 				<xs:enumeration value="SENDERID"/>
 				<xs:enumeration value="RECEIVERID"/>
 				<xs:enumeration value="MESSAGEIDENTIFIER"/>
-	<!--
-				<xs:enumeration value="SENDERID"/>
-				<xs:enumeration value="SENDERID"/>
-				<xs:enumeration value="SENDERID"/>
-				<xs:enumeration value="SENDERID"/>
-				<xs:enumeration value="SENDERID"/>
-	-->
+				<xs:enumeration value="MESSAGEENVELOPEIDENTIFIER"/>
+				<xs:enumeration value="StatisticalInformation"/>
+				<xs:enumeration value="EHMI-ReceiptAcknowledgement"/>
 				</xs:restriction>
 		</xs:simpleType>
 	</xs:schema>
