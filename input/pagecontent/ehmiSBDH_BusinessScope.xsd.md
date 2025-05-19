@@ -7,7 +7,7 @@
 	<xs:schema targetNamespace="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" elementFormDefault="qualified" attributeFormDefault="unqualified">
 		<xs:complexType name="BusinessScope">
 			<xs:sequence>
-				<xs:element name="Scope" type="Scope" minOccurs="0"/>
+				<xs:element name="Scope" type="Scope" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
 		</xs:complexType>
 		<xs:complexType name="Scope">
