@@ -82,6 +82,6 @@
 			<xs:enumeration value="ORIGINALMESSAGEVERSION"/>
 			<xs:enumeration value="ORIGINALENVELOPEIDENTIFIER"/>
 			<xs:enumeration value="EHMI-ReceiptAcknowledgement"/>
-			</xs:restriction>
+		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>
