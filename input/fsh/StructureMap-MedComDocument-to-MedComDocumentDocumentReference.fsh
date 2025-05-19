@@ -1,7 +1,7 @@
 Instance: MedComDocumentBundle2MedComDocumentDocumentReference-transform
 InstanceOf: StructureMap
 Title: "Transformation specification of a MedComDocumentBundle to a MedComDocumentDocumentReference"
-Description: "Transformation specification of a MedComDocumentBundle to a MedComDocumentDocumentReference"
+Description: "Transformation specification of a MedComDocumentBundle to a MedComDocumentDocumentReference "
 Usage: #definition
 * id = "MedComDocumentBundle2MedComDocumentDocumentReferencetransform"
 * url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/StructureMap/MedComDocumentBundle2MedComDocumentDocumentReferencetransform"
