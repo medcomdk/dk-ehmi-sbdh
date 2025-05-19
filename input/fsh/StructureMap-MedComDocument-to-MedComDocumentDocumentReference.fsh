@@ -1,4 +1,4 @@
-Instance: MedComDocumentBundle2MedComDocumentDocumentReferencetransform
+Instance: MedComDocumentBundle2MedComDocumentDocumentReference-transform
 InstanceOf: StructureMap
 Title: "Transformation specification of a MedComDocumentBundle to a MedComDocumentDocumentReference"
 Description: "Transformation specification of a MedComDocumentBundle to a MedComDocumentDocumentReference"
@@ -9,11 +9,11 @@ Usage: #definition
 * title = "Transformation specification of a MedComDocumentBundle to a MedComDocumentDocumentReference"
 * status = #draft
 * description = "Transformation specification of a MedComDocumentBundle to a MedComDocumentDocumentReference"
-* structure[+].url = "http://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-document-bundle"
-//* structure[+].url = "https://medcomfhir.dk/ig/document/StructureDefinition-medcom-document-bundle"
-                   
+* structure[+].url = "http://medcomfhir.dk/ig/document/StructureDefinition-medcom-document-bundle"
+//* structure[+].url = "http://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-document-bundle"           
 * structure[=].mode = #source
-* structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-documentreference"
+* structure[+].url = "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-documentreference"
+//* structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-documentreference"
 //* structure[+].url = "http://build.fhir.org/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-documentreference"
 //* structure[+].url = "http://medcomfhir.dk/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-documentreference"
 //https://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-documentreference
