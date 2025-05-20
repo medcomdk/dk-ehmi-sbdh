@@ -1,6 +1,6 @@
 # ehmiSbdhprofile of ehmiSbdhBusinessScope
 
-<a href="https://github.com/medcomdk/dk-ehmi-sbdh/blob/9c3e692688cb2162a6c415f1f738b1bbbc685117/input/pagecontent/ehmiSBDH/ehmiBusinessScope.xsd" target="_blank">Link to the raw xsd (opens in a new window)</a>
+<a href="./ehmiSBDH/ehmiBusinessScope.xsd" target="_blank">Link to the raw xsd (opens in a new window)</a>
 
 <a href="./downloads.html">In order to download all ehmiSBDH schema-files go to the downloads menu</a>
 
