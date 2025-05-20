@@ -2,6 +2,9 @@
 
 <a href="./ehmiSBDH/ehmiEDN-Business-Message-Envelope-1.2.xsd" target="_blank">Link to the raw xsd (opens in a new window)</a>
 
+<a href="./downloads.html">In order to download all ehmiSBDH schema-files go to the downloads menu</a>
+
+
     <?xml version="1.0" encoding="UTF-8"?>
     <xs:schema xmlns="http://peppol.eu/xsd/ticc/envelope/1.0"
       xmlns:xs="http://www.w3.org/2001/XMLSchema"
