@@ -9,7 +9,8 @@ Usage: #definition
 * title = "Transformation specification of a MedComDocumentBundle to a MedComDocumentDocumentReference"
 * status = #draft
 * description = "Transformation specification of a MedComDocumentBundle to a MedComDocumentDocumentReference"
-* structure[+].url = "http://medcomfhir.dk/ig/document/StructureDefinition-medcom-document-bundle"
+//* structure[+].url = "http://medcomfhir.dk/ig/document/StructureDefinition-medcom-document-bundle"
+* structure[+].url = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-message"           
 //* structure[+].url = "http://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-document-bundle"           
 * structure[=].mode = #source
 * structure[+].url = "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-documentreference"
