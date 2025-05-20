@@ -21,7 +21,7 @@ Usage: #definition
 
 /*
 OBS:
- structure[+].url bør senre rettes til http://medcomfhir.dk/ig/.... når det er udgivet på medcoms server
+ structure[+].url bør senre rettes til http://medcomfhir.dk/ig/.... når det er udgivet  på medcoms server
 
 Fejl i QA rapport: 
 Se på referencer som de peger på det rigtige sted. Spørg AI om referecererne.
