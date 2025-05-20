@@ -2,6 +2,7 @@
 
 <a href="./ehmiSBDH/ehmiStandardBusinessDocumentHeader.xsd" target="_blank">Link to the raw xsd (opens in a new window)</a>
 
+<a href="./downloads.html">In order to download all ehmiSBDH schema-files go to the downloads menu</a>
 
 	<?xml version="1.0"?>
 	<xs:schema targetNamespace="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" xmlns:bc="http://peppol.eu/xsd/ticc/envelope/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
