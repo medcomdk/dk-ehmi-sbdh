@@ -9,16 +9,29 @@ Usage: #definition
 * title = "Transformation specification of a MedComDocumentBundle to a MedComDocumentDocumentReference"
 * status = #draft
 * description = "Transformation specification of a MedComDocumentBundle to a MedComDocumentDocumentReference"
-//* structure[+].url = "http://medcomfhir.dk/ig/document/StructureDefinition-medcom-document-bundle"
-* structure[+].url = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-message"           
-//* structure[+].url = "http://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-document-bundle"           
+* structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-core-document-bundle"                    
 * structure[=].mode = #source
-* structure[+].url = "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-documentreference"
-//* structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-documentreference"
-//* structure[+].url = "http://build.fhir.org/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-documentreference"
-//* structure[+].url = "http://medcomfhir.dk/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-documentreference"
-//https://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-documentreference
+* structure[+].url = "https://build.fhir.org/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-core-documentreference"
 * structure[=].mode = #target
+
+
+/* 
+URLS til ressourcer 
+
+build.fhir.org:
+https://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-document-bundle
+https://build.fhir.org/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-core-document-bundle
+
+https://build.fhir.org/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-documentreference
+https://build.fhir.org/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-core-documentreference
+
+medcomfhir.dk - ikke udgivet endnu!!:
+http://medcomfhir.dk/ig/document/StructureDefinition-medcom-document-bundle
+http://medcomfhir.dk/ig/document/StructureDefinition/medcom-documentreference
+
+*/
+
+
 
 /*
 OBS:
