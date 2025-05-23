@@ -16,7 +16,7 @@ Usage: #definition
 
 
 /* 
-URLS til ressourcer 
+URLS til  ressourcer 
 
 build.fhir.org:
 https://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-document-bundle
