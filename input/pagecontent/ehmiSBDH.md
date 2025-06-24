@@ -1008,7 +1008,7 @@ Always FHIR DocumentReference for the relevant message type with associated vari
     </Scope>
 
 <!-- br -->
-* As [DocumentReference-structure] can't be referenced in the above xml-snippet, you can find the example of the structure to be included here: <a href="DocumentReference-instanceHomeCareObservationDocumentReference.xml" target="_blank">[DocumentReference-structure]</a>
+* As [DocumentReference-structure] can't be referenced in the above xml-snippet, you can find the example of the structure to be included here: <a href="[DocumentReference-instanceHomeCareObservationDocumentReference.xml](https://build.fhir.org/ig/medcomdk/dk-medcom-xds-documents/DocumentReference-77787891-083a-4d19-9e56-423e7a223e30.html)" target="_blank">[DocumentReference-structure]</a>
 
 ### Reliable messaging 
 
