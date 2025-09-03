@@ -1,0 +1,23 @@
+on:
+  push:
+    tags:
+      - 'ig-release/*'
+
+jobs:
+  get-version:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.extract.outputs.version }}
+    steps:
+      - id: extract
+        run: echo "version=${GITHUB_REF_NAME##*/}" >> "$GITHUB_OUTPUT"
+
+  publish:
+    needs: get-version
+    uses: medcomdk/fhir-publishing/.github/workflows/publish.yaml@main
+    with:
+      RELEASE_VERSION:               ${{ needs.get-version.outputs.version }}
+      FHIR_PUBLICATION_BOT_APP_ID:   ${{ vars.FHIR_PUBLICATION_BOT_APP_ID }}
+      WEBSITE_REPO:                  medcomehmi-website
+    secrets:
+      PUBLISHER_APP_PRIVATE_KEY:     ${{ secrets.PUBLISHER_APP_PRIVATE_KEY }}
