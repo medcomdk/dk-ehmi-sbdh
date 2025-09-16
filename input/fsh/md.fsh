@@ -44,6 +44,7 @@ Title: "Henvisningsmeddelelse v2"
 * status = #active
 * date = "2025-12-01"
 * publisher = "MedCom"
+* replaces = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/MessageDefinition/ReferralMessageV1" 
 * eventCoding.system = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/message-events"
 * eventCoding.code = #referral
 * eventCoding.display = "Henvisning sendt"
@@ -64,9 +65,9 @@ Usage: #example
 Title: "Eksempel Henvisnings-Bundle v1"
 * type = #message
 * id = "example-referral-bundle-v1"
-* entry[0].fullUrl = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/MessageHeader/example-header-v1"
+* entry[0].fullUrl = "/MessageHeader/example-header-v1"
 * entry[0].resource = ExampleReferralHeaderV1
-* entry[1].fullUrl = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/Patient/example-patient"
+* entry[1].fullUrl = "/Patient/example-patient"
 * entry[1].resource = ExamplePatient
 
 Instance: ExampleReferralHeaderV1
@@ -86,11 +87,11 @@ Usage: #example
 Title: "Eksempel Henvisnings-Bundle v2"
 * type = #message
 * id = "example-referral-bundle-v2"
-* entry[0].fullUrl = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/MessageHeader/example-header-v2"
+* entry[0].fullUrl = "/MessageHeader/example-header-v2"
 * entry[0].resource = ExampleReferralHeaderV2
-* entry[1].fullUrl = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/Patient/example-patient"
+* entry[1].fullUrl = "/Patient/example-patient"
 * entry[1].resource = ExamplePatient
-* entry[2].fullUrl = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/ServiceRequest/example-servicerequest"
+* entry[2].fullUrl = "/ServiceRequest/example-servicerequest"
 * entry[2].resource = ExampleServiceRequest
 
 Instance: ExampleReferralHeaderV2
