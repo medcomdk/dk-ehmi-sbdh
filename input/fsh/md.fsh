@@ -16,13 +16,13 @@ Instance: ReferralMessageV1
 InstanceOf: ReferralMessageDefinitionProfile
 Usage: #definition
 Title: "Henvisningsmeddelelse v1"
-* url = "http://medcomehmi.dk/ig/eas/MessageDefinition/ReferralMessageV1"
+* url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/MessageDefinition/ReferralMessageV1"
 * version = "1.0.0"
 * name = "ReferralMessage"
 * status = #active
 * date = "2025-06-01"
 * publisher = "MedCom"
-* eventCoding.system = "http://medcom.dk/fhir/message-events"
+* eventCoding.system = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/message-events"
 * eventCoding.code = #referral
 * eventCoding.display = "Henvisning sendt"
 * category = #consequence
@@ -38,13 +38,13 @@ Instance: ReferralMessageV2
 InstanceOf: ReferralMessageDefinitionProfile
 Usage: #definition
 Title: "Henvisningsmeddelelse v2"
-* url = "http://medcomehmi.dk/ig/eas/MessageDefinition/ReferralMessageV2"
+* url = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/MessageDefinition/ReferralMessageV2"
 * version = "2.0.0"
 * name = "ReferralMessage"
 * status = #active
 * date = "2025-12-01"
 * publisher = "MedCom"
-* eventCoding.system = "http://medcom.dk/fhir/message-events"
+* eventCoding.system = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/message-events"
 * eventCoding.code = #referral
 * eventCoding.display = "Henvisning sendt"
 * category = #consequence
@@ -64,9 +64,9 @@ Usage: #example
 Title: "Eksempel Henvisnings-Bundle v1"
 * type = #message
 * id = "example-referral-bundle-v1"
-* entry[0].fullUrl = "MessageHeader/example-header-v1"
+* entry[0].fullUrl = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/MessageHeader/example-header-v1"
 * entry[0].resource = ExampleReferralHeaderV1
-* entry[1].fullUrl = "Patient/example-patient"
+* entry[1].fullUrl = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/Patient/example-patient"
 * entry[1].resource = ExamplePatient
 
 Instance: ExampleReferralHeaderV1
@@ -74,8 +74,8 @@ InstanceOf: MessageHeader
 Usage: #example
 Title: "MessageHeader for ReferralMessage v1"
 * id = "example-header-v1"
-* definition = "http://medcom.dk/fhir/MessageDefinition/ReferralMessage|1.0.0"
-* eventCoding.system = "http://medcom.dk/fhir/message-events"
+* definition = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/MessageDefinition-ReferralMessage|1.0.0"
+* eventCoding.system = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/message-events"
 * eventCoding.code = #referral
 * source.endpoint = "urn:oid:1.2.208.176.1.1"
 * destination[0].endpoint = "urn:oid:1.2.208.176.1.2"
@@ -86,11 +86,11 @@ Usage: #example
 Title: "Eksempel Henvisnings-Bundle v2"
 * type = #message
 * id = "example-referral-bundle-v2"
-* entry[0].fullUrl = "MessageHeader/example-header-v2"
+* entry[0].fullUrl = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/MessageHeader/example-header-v2"
 * entry[0].resource = ExampleReferralHeaderV2
-* entry[1].fullUrl = "Patient/example-patient"
+* entry[1].fullUrl = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/Patient/example-patient"
 * entry[1].resource = ExamplePatient
-* entry[2].fullUrl = "ServiceRequest/example-servicerequest"
+* entry[2].fullUrl = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/ServiceRequest/example-servicerequest"
 * entry[2].resource = ExampleServiceRequest
 
 Instance: ExampleReferralHeaderV2
@@ -98,8 +98,8 @@ InstanceOf: MessageHeader
 Usage: #example
 Title: "MessageHeader for ReferralMessage v2"
 * id = "example-header-v2"
-* definition = "http://medcom.dk/fhir/MessageDefinition/ReferralMessage|2.0.0"
-* eventCoding.system = "http://medcom.dk/fhir/message-events"
+* definition = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/MessageDefinition/referral-message-definition-profile|2.0.0"
+* eventCoding.system = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/message-events"
 * eventCoding.code = #referral
 * source.endpoint = "urn:oid:1.2.208.176.1.1"
 * destination[0].endpoint = "urn:oid:1.2.208.176.1.2"
