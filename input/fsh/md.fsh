@@ -74,7 +74,7 @@ InstanceOf: MessageHeader
 Usage: #example
 Title: "MessageHeader for ReferralMessage v1"
 * id = "example-header-v1"
-* definition = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/MessageDefinition-ReferralMessage|1.0.0"
+* definition = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/MessageDefinition/ReferralMessageV1|1.0.0"
 * eventCoding.system = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/message-events"
 * eventCoding.code = #referral
 * source.endpoint = "urn:oid:1.2.208.176.1.1"
@@ -98,7 +98,7 @@ InstanceOf: MessageHeader
 Usage: #example
 Title: "MessageHeader for ReferralMessage v2"
 * id = "example-header-v2"
-* definition = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/MessageDefinition/referral-message-definition-profile|2.0.0"
+* definition = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/MessageDefinition/ReferralMessageV2|2.0.0"
 * eventCoding.system = "http://medcomehmi.dk/ig/dk-ehmi-sbdh/message-events"
 * eventCoding.code = #referral
 * source.endpoint = "urn:oid:1.2.208.176.1.1"
