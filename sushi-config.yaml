@@ -107,7 +107,7 @@ menu:
     ehmisbdh_sample.xml: ehmisbdh_fullsample.xml.html
     ehmisbdh_ack_sample.xml: ehmisbdh_fullsample_ack.xml.html
     ehmiMessage_401cbc36-db1e-4fe0-bf90-6df331dde179_HCO: ehmiMessage_401cbc36-db1e-4fe0-bf90-6df331dde179_HCO.xml.html
-    ehmiSBDH_9a6ff822-08de-5a6f-9670-9fa4b9d2f0dc_HCO_full: ehmiSBDH_9a6ff822-08de-5a6f-9670-9fa4b9d2f0dc_HomeCareObservation_full.xml.html
+    ehmiSBDH_9a6ff822-08de-5a6f-9670-9fa4b9d2f0dc_HCO_full: ehmiSBDH_9a6ff822-08de-5a6f-9670-9fa4b9d2f0dc_HCO_full.xml.html
   SBDH original schemas: 
     StandardBusinessDocumentHeader: SBDH_StandardBusinessDocumentHeader.xsd.html
     Partner: SBDH_Partner.xsd.html
