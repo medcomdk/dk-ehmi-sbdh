@@ -1,0 +1,20 @@
+<bpssignal:ReceiptAcknowledgement xmlns:bpssignal="http://docs.oasis-open.org/ebxml-bp/ebbp-signals-2.0">
+    <!-- original source = ReceivedSBDH: StandardBusinessDocumentHeader/DocumentIdentification/InstanceIdentifier -->
+    <bpssignal:OriginalMessageIdentifier>9a6ff822-08de-5a6f-9670-9fa4b9d2f0dc</bpssignal:OriginalMessageIdentifier>
+    <!-- original source = ReceivedSBDH: StandardBusinessDocumentHeader/BusinessScope/Scope[DOCUMENTID]/InstanceIdentifier -->
+    <bpssignal:OriginalDocumentIdentifier>urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:1.1</bpssignal:OriginalDocumentIdentifier>
+    <!-- original source = ReceivedSBDH: StandardBusinessDocumentHeader/DocumentIdentification/Standard -->
+    <bpssignal:OriginalDocumentIdentifier>homecareobservation-message</bpssignal:OriginalDocumentIdentifier>
+    <!-- original source = ReceivedSBDH: StandardBusinessDocumentHeader/DocumentIdentification/CreationDateAndTime -->
+    <bpssignal:RequestionField>
+        <issuedAt>2025-04-01T16:20:00+01:00</issuedAt>
+    </bpssignal:RequestionField>
+    <!-- generated -->
+    <bpssignal:ThisMessageDateTime>2025-04-01T16:30:00+01:00</bpssignal:ThisMessageDateTime>
+    <!-- original source = ReceivedSBDH: StandardBusinessDocumentHeader/Receiver/Identifier@Authority & StandardBusinessDocumentHeader/Receiver/Identifier -->
+    <bpssignal:FromPartyInfo type="is6523-actorid-upis">0088:5790000201389</bpssignal:FromPartyInfo>
+    <!-- original source = ReceivedSBDH: StandardBusinessDocumentHeader/Sender/Identifier@Authority & StandardBusinessDocumentHeader/Receiver/Identifier -->
+    <bpssignal:ToPartyInfo type="iso6523-actorid-upis">0088:5790000121526</bpssignal:ToPartyInfo>
+    <!-- original source = ReceivedSBDH: StandardBusinessDocumentHeader/BusinessScope/Scope[EHMI-ReceiptAcknowledgement]/CorrelationInformation/RequestingDocumentInstanceIdentifier -->
+    <bpssignal:CollaborationIdentifier>9a6ff822-08de-5a6f-9670-9fa4b9d2f0dc</bpssignal:CollaborationIdentifier>
+</bpssignal:ReceiptAcknowledgement>
