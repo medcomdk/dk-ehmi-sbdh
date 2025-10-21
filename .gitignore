@@ -7,3 +7,6 @@ Thumbs.db
 /template
 *.sh
 *.bat
+_updatePublisher.bat
+*.sh
+*.bat
