@@ -106,6 +106,7 @@ menu:
     ehmiMessage_ack_sample.xml: ehmiMessage_fullsample_Ack.xml.html
     ehmisbdh_sample.xml: ehmisbdh_fullsample.xml.html
     ehmisbdh_ack_sample.xml: ehmisbdh_fullsample_ack.xml.html
+    ehmisbdh_fullsample_sbdhack.xml: ehmisbdh_fullsample_sbdhack.xml.html
     ehmiMessage_401cbc36-db1e-4fe0-bf90-6df331dde179_HCO: sample_ehmiMessage_401cbc36-db1e-4fe0-bf90-6df331dde179_HCO.xml.html
     ehmiSBDH_9a6ff822-08de-5a6f-9670-9fa4b9d2f0dc_HCO_full: sample_ehmiSBDH_9a6ff822-08de-5a6f-9670-9fa4b9d2f0dc_HCO_full.xml.html
   SBDH original schemas: 
