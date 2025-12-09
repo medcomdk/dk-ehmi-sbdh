@@ -18,6 +18,7 @@
             <xs:attribute name="mimeType" use="required">
               <xs:simpleType>
                 <xs:restriction base="xs:string">
+                  <xs:enumeration value="application/xml"/>
                   <xs:enumeration value="application/fhir+json"/>
                   <xs:enumeration value="application/fhir+xml"/>
                 </xs:restriction>

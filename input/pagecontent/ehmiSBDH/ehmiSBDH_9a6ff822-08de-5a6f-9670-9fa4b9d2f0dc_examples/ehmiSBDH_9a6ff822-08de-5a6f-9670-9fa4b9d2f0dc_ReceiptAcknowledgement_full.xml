@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardBusinessDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader https://raw.githubusercontent.com/medcomdk/dk-ehmi-sbdh/refs/heads/main/input/pagecontent/ehmiSBDH/ehmiStandardBusinessDocumentHeader.xsd"
+ xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
+ xmlns:bc="http://peppol.eu/xsd/ticc/envelope/1.0"
+ xmlns:bpssignal="http://docs.oasis-open.org/ebxml-bp/ebbp-signals-2.0"
+ xmlns:sbdh="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+
+  <StandardBusinessDocumentHeader>
+    <!-- ACK header: sender = original receiver, receiver = original sender -->
+    <HeaderVersion>1.0</HeaderVersion>
+
+    <Sender>
+      <!--original receiver-->
+      <Identifier Authority="iso6523-actorid-upis">0088:5790000127092</Identifier>
+    </Sender>
+
+    <Receiver>
+      <!--original sender-->
+      <Identifier Authority="iso6523-actorid-upis">0088:5790000123117</Identifier>
+    </Receiver>
+
+    <DocumentIdentification>
+      <Standard>ebbp-signals</Standard>
+      <TypeVersion>ebbp-signals-2.0</TypeVersion>
+      <InstanceIdentifier>c8792b06-eaa3-48db-a815-3e58b2086ab2</InstanceIdentifier>
+      <Type>ReceiptAcknowledgement</Type>
+      <MultipleType>false</MultipleType>
+      <CreationDateAndTime>2025-04-01T16:20:00+01:00</CreationDateAndTime>
+    </DocumentIdentification>
+
+    <BusinessScope>
+      <!-- refererer tilbage til originalt dokument/meddelelsesmetadata fra dit sample -->
+      <Scope>
+        <Type>DOCUMENTID</Type>
+        <InstanceIdentifier>urn:dk:healthcare:prod:messaging:oasis:ebxml:schema:xsd:SBDHReceiptAcknowledgement</InstanceIdentifier>
+        <Identifier>dk-medcom-messaging</Identifier>
+      </Scope>
+
+      <Scope>
+        <Type>PROCESSID</Type>
+        <InstanceIdentifier>sdn-emergence</InstanceIdentifier>
+        <Identifier>dk-medcom-messaging</Identifier>
+      </Scope>
+
+      <!-- SORID instances of SENDERID og RECEIVERID-->
+      <Scope>
+        <Type>SENDERID</Type>
+        <InstanceIdentifier>52581000016005</InstanceIdentifier>
+        <Identifier>dk-medcom-messaging</Identifier>
+      </Scope>
+
+      <Scope>
+        <Type>RECEIVERID</Type>
+        <InstanceIdentifier>1144561000016002</InstanceIdentifier>
+        <Identifier>dk-medcom-messaging</Identifier>
+      </Scope>
+
+      <!-- MESSAGEIDENTIFIER and ORIGINALMESSAGEIDENTIFIER for the current and original message-->
+      <Scope>
+        <Type>MESSAGEIDENTIFIER</Type>
+        <InstanceIdentifier>c8792b06-eaa3-48db-a815-3e58b2086ab2</InstanceIdentifier>
+        <Identifier>dk-medcom-messaging</Identifier>
+      </Scope>
+
+      <Scope>
+        <Type>ORIGINALMESSAGEIDENTIFIER</Type>
+        <InstanceIdentifier>489de4f2-0d8d-4de2-a7ce-ccb93568799f</InstanceIdentifier>
+        <Identifier>dk-medcom-messaging</Identifier>
+      </Scope>
+
+      <!-- MESSAGEENVELOPEIDENTIFIER and ORIGINALMESSAGEENVELOPEIDENTIFIER for the current and original message-->
+      <Scope>
+        <Type>MESSAGEENVELOPEIDENTIFIER</Type>
+        <InstanceIdentifier>c8792b06-eaa3-48db-a815-3e58b2086ab2</InstanceIdentifier>
+        <Identifier>dk-medcom-messaging</Identifier>
+      </Scope>
+
+      <Scope>
+        <Type>ORIGINALMESSAGEENVELOPEIDENTIFIER</Type>
+        <InstanceIdentifier>401cbc36-db1e-4fe0-bf90-6df331dde179</InstanceIdentifier>
+        <Identifier>dk-medcom-messaging</Identifier>
+      </Scope>
+
+      <!-- ORIGINALMESSAGESTANDARD and ORIGINALMESSAGEVERSION for the original message-->
+      <Scope>
+        <Type>ORIGINALMESSAGESTANDARD</Type> 
+        <InstanceIdentifier>homecareobservation-message</InstanceIdentifier>
+        <Identifier>dk-medcom-messaging</Identifier>
+      </Scope>
+
+      <Scope>
+        <Type>ORIGINALMESSAGEVERSION</Type> 
+        <InstanceIdentifier>1.0</InstanceIdentifier>
+        <Identifier>dk-medcom-messaging</Identifier>
+      </Scope>
+      
+      <!-- ORIGINALENVELOPEIDENTIFIER for the original ehmiSBDH envelope-->
+      <Scope>
+        <Type>ORIGINALENVELOPEIDENTIFIER</Type>
+        <InstanceIdentifier>9a6ff822-08de-5a6f-9670-9fa4b9d2f0dc</InstanceIdentifier>
+        <Identifier>dk-medcom-messaging</Identifier>
+      </Scope>
+
+      <Scope>
+        <Type>StatisticalInformation</Type>
+        <InstanceIdentifier>MCM:homecareobservation-message</InstanceIdentifier>
+        <Identifier>dk-medcom-messaging</Identifier>
+      </Scope>
+
+      <!-- EHMI receipt-scope (request/response correlation) -->
+      <Scope>
+        <Type>EHMI-ReceiptAcknowledgement</Type>
+        <InstanceIdentifier>Response</InstanceIdentifier>
+        <Identifier>dk-medcom-messaging</Identifier>
+        <CorrelationInformation>
+          <!-- Original message creation fandtes i sample som 2025-04-01T16:19:00+01:00 -->
+          <RequestingDocumentCreationDateTime>2025-04-01T16:19:00+01:00</RequestingDocumentCreationDateTime>
+          <RequestingDocumentInstanceIdentifier>9a6ff822-08de-5a6f-9670-9fa4b9d2f0dc</RequestingDocumentInstanceIdentifier>
+          <ExpectedResponseDateTime>2025-04-01T16:29:00+01:00</ExpectedResponseDateTime>
+        </CorrelationInformation>
+        <BusinessService>
+          <BusinessServiceName>EHMI-ReceiptAcknowledgement-Response</BusinessServiceName>
+          <ServiceTransaction
+             TypeOfServiceTransaction="RespondingServiceTransaction"
+             IsNonRepudiationRequired="false"
+             IsAuthenticationRequired="false"
+             IsNonRepudiationOfReceiptRequired="false"
+             IsIntelligibleCheckRequired="false"
+             IsApplicationErrorResponseRequested="false"
+             TimeToAcknowledgeReceipt="600000"
+             TimeToAcknowledgeAcceptance="0"
+             TimeToPerform="0"
+             Recurrence="0"/>
+        </BusinessService>
+      </Scope>
+
+    </BusinessScope>
+  </StandardBusinessDocumentHeader>
+
+  <!-- ebBP ReceiptAcknowledgement indlejret i BinaryContent (base64). 
+       Den indlejrede kvittering peger på original message id f06c1ac8-... 
+       
+<bpssignal:ReceiptAcknowledgement xmlns:bpssignal="http://docs.oasis-open.org/ebxml-bp/ebbp-signals-2.0">
+    <bpssignal:OriginalMessageIdentifier>489de4f2-0d8d-4de2-a7ce-ccb93568799f</bpssignal:OriginalMessageIdentifier>
+    <bpssignal:OriginalDocumentIdentifier>urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:3.0</bpssignal:OriginalDocumentIdentifier>
+    <bpssignal:RequestionField>
+        <issuedAt>2025-04-01T16:20:00+01:00</issuedAt>
+    </bpssignal:RequestionField>
+    <bpssignal:ThisMessageDateTime>2025-04-01T16:20:00+01:00</bpssignal:ThisMessageDateTime>
+    <bpssignal:FromPartyInfo type="is6523-actorid-upis">0088:5790000127092</bpssignal:FromPartyInfo>
+    <bpssignal:ToPartyInfo type="iso6523-actorid-upis">0088:5790000123117</bpssignal:ToPartyInfo>
+    <bpssignal:CollaborationIdentifier>489de4f2-0d8d-4de2-a7ce-ccb93568799f</bpssignal:CollaborationIdentifier>
+</bpssignal:ReceiptAcknowledgement>
+       -->
+  <BinaryContent mimeType="application/xml" encoding="UTF-8">
+    PGJwc3NpZ25hbDpSZWNlaXB0QWNrbm93bGVkZ2VtZW50IHhtbG5zOmJwc3NpZ25hbD0iaHR0cDovL2RvY3Mub2FzaXMtb3Blbi5vcmcvZWJ4bWwtYnAvZWJicC1zaWduYWxzLTIuMCI+CiAgICA8YnBzc2lnbmFsOk9yaWdpbmFsTWVzc2FnZUlkZW50aWZpZXI+NDg5ZGU0ZjItMGQ4ZC00ZGUyLWE3Y2UtY2NiOTM1Njg3OTlmPC9icHNzaWduYWw6T3JpZ2luYWxNZXNzYWdlSWRlbnRpZmllcj4KICAgIDxicHNzaWduYWw6T3JpZ2luYWxEb2N1bWVudElkZW50aWZpZXI+dXJuOmRrOm1lZGNvbTpwcm9kOm1lc3NhZ2luZzpmaGlyOnN0cnVjdHVyZWRlZmluaXRpb246aG9tZWNhcmVvYnNlcnZhdGlvbiN1cm46ZGs6bWVkY29tOmZoaXI6aG9tZWNhcmVvYnNlcnZhdGlvbjozLjA8L2Jwc3NpZ25hbDpPcmlnaW5hbERvY3VtZW50SWRlbnRpZmllcj4KICAgIDxicHNzaWduYWw6UmVxdWVzdGlvbkZpZWxkPgogICAgICAgIDxpc3N1ZWRBdD4yMDI1LTA0LTAxVDE2OjIwOjAwKzAxOjAwPC9pc3N1ZWRBdD4KICAgIDwvYnBzc2lnbmFsOlJlcXVlc3Rpb25GaWVsZD4KICAgIDxicHNzaWduYWw6VGhpc01lc3NhZ2VEYXRlVGltZT4yMDI1LTA0LTAxVDE2OjIwOjAwKzAxOjAwPC9icHNzaWduYWw6VGhpc01lc3NhZ2VEYXRlVGltZT4KICAgIDxicHNzaWduYWw6RnJvbVBhcnR5SW5mbyB0eXBlPSJpczY1MjMtYWN0b3JpZC11cGlzIj4wMDg4OjU3OTAwMDAxMjcwOTI8L2Jwc3NpZ25hbDpGcm9tUGFydHlJbmZvPgogICAgPGJwc3NpZ25hbDpUb1BhcnR5SW5mbyB0eXBlPSJpc282NTIzLWFjdG9yaWQtdXBpcyI+MDA4ODo1NzkwMDAwMTIzMTE3PC9icHNzaWduYWw6VG9QYXJ0eUluZm8+CiAgICA8YnBzc2lnbmFsOkNvbGxhYm9yYXRpb25JZGVudGlmaWVyPjQ4OWRlNGYyLTBkOGQtNGRlMi1hN2NlLWNjYjkzNTY4Nzk5ZjwvYnBzc2lnbmFsOkNvbGxhYm9yYXRpb25JZGVudGlmaWVyPgo8L2Jwc3NpZ25hbDpSZWNlaXB0QWNrbm93bGVkZ2VtZW50Pg==
+  </BinaryContent>
+
+</StandardBusinessDocument>
+

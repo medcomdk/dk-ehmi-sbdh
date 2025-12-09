@@ -57,16 +57,12 @@
             </Scope>
             <Scope>
                 <Type>MESSAGEENVELOPEIDENTIFIER</Type>
-                <InstanceIdentifier>
-                    f06c1ac8-6096-5178-a380-2831d2456986
-                </InstanceIdentifier>
+                <InstanceIdentifier>f06c1ac8-6096-5178-a380-2831d2456986</InstanceIdentifier>
                 <Identifier>dk-medcom-messaging</Identifier>
             </Scope>            
             <Scope>
                 <Type>StatisticalInformation</Type>
-                <InstanceIdentifier>
-                    MCM:homecareobservation-message
-                </InstanceIdentifier>
+                <InstanceIdentifier>MCM:homecareobservation-message</InstanceIdentifier>
                 <Identifier>dk-medcom-messaging</Identifier>
             </Scope>
             <!-- MedCom messaging - Acknowledgment scope -->

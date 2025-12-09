@@ -5,3 +5,8 @@ Thumbs.db
 /output
 /temp
 /template
+*.sh
+*.bat
+_updatePublisher.bat
+*.sh
+*.bat
