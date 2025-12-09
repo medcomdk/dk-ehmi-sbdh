@@ -24,7 +24,7 @@
                     <!--Standard>ReceiptException</Standard-->
                     <TypeVersion>ebbp-signals-2.0</TypeVersion>
                     <InstanceIdentifier>c8792b06-eaa3-48db-a815-3e58b2086ab2</InstanceIdentifier>
-                    <Type>ReceiptAcknowledgement</Type>
+                    <Type>SBDHReceiptAcknowledgement</Type>
                     <MultipleType>false</MultipleType>
                     <CreationDateAndTime>2025-04-01T17:19:00+01:00</CreationDateAndTime>
                 </DocumentIdentification>
@@ -32,7 +32,7 @@
                     <!-- eDelivery scope -->
                     <Scope>
                         <Type>DOCUMENTID</Type>
-                        <InstanceIdentifier>urn:dk:healthcare:prod:messaging:oasis:ebxml:schema:xsd:ReceiptAcknowledgement</InstanceIdentifier>
+                        <InstanceIdentifier>urn:dk:healthcare:prod:messaging:oasis:ebxml:schema:xsd:SBDHReceiptAcknowledgement</InstanceIdentifier>
                         <Identifier>dk-medcom-messaging</Identifier>
                     </Scope>
                     <Scope>
