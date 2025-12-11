@@ -54,6 +54,9 @@ menu:
     DocumentIdentification: SBDH_DocumentIdentification.xsd.html
     BusinessScope: SBDH_BusinessScope.xsd.html
   Artifacts: artifacts.html
+  Test examples:
+    EmbeddedHCO: TestExampleEmbeddedHCO.xml.html
+    SBDHAck: TextExampleSBDHAck.xml.html
   More:
     Table of Contents: toc.html
     Downloads: downloads.html

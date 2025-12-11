@@ -4,7 +4,6 @@
 
         <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
         <StandardBusinessDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="C:\GitHub\ehmi\dk-ehmi-sbdh\input\pagecontent\ehmiSBDH\ehmiStandardBusinessDocumentHeader.xsd"
             xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
             xmlns:ns6="http://www.ean-ucc.org/schemas/1.3/eanucc"
             xmlns:bc="http://peppol.eu/xsd/ticc/envelope/1.0"
@@ -21,7 +20,6 @@
                 </Receiver>
                 <DocumentIdentification>
                     <Standard>ebbp-signals</Standard>
-                    <!--Standard>ReceiptException</Standard-->
                     <TypeVersion>ebbp-signals-2.0</TypeVersion>
                     <InstanceIdentifier>c8792b06-eaa3-48db-a815-3e58b2086ab2</InstanceIdentifier>
                     <Type>SBDHReceiptAcknowledgement</Type>
@@ -62,13 +60,23 @@
                         <Identifier>dk-medcom-messaging</Identifier>
                     </Scope>
                     <Scope>
-                        <Type>MESSAGEENVELOPEIDENTIFIER</Type>
-                        <InstanceIdentifier>f06c1ac8-6096-5178-a380-2831d2456986</InstanceIdentifier>
-                        <Identifier>dk-medcom-messaging</Identifier>
-                    </Scope>            
-                    <Scope>
                         <Type>ORIGINALMESSAGEENVELOPEIDENTIFIER</Type>
                         <InstanceIdentifier>f06c1ac8-6096-5178-a380-2831d2456986</InstanceIdentifier>
+                        <Identifier>dk-medcom-messaging</Identifier>
+                    </Scope>
+                    <Scope>
+                        <Type>ORIGINALMESSAGESTANDARD</Type>
+                        <InstanceIdentifier>homecareobservation-message</InstanceIdentifier>
+                        <Identifier>dk-medcom-messaging</Identifier>
+                    </Scope>
+                    <Scope>
+                        <Type>ORIGINALMESSAGEVERSION</Type>
+                        <InstanceIdentifier>1.1</InstanceIdentifier>
+                        <Identifier>dk-medcom-messaging</Identifier>
+                    </Scope>
+                    <Scope>
+                        <Type>ORIGINALENVELOPEIDENTIFIER</Type>
+                        <InstanceIdentifier>9a6ff822-08de-5a6f-9670-9fa4b9d2f0dc</InstanceIdentifier>
                         <Identifier>dk-medcom-messaging</Identifier>
                     </Scope>            
                     <Scope>
@@ -88,17 +96,14 @@
                             <RequestingDocumentInstanceIdentifier>
                                 9a6ff82208de-5a6f-9670-9fa4b9d2f0dh
                             </RequestingDocumentInstanceIdentifier>
-                            <ExpectedResponseDateTime>
-                                2025-04-01T17:30:10+01:00
-                            </ExpectedResponseDateTime>
                         </CorrelationInformation>
                         <BusinessService>
                             <BusinessServiceName>EHMI-ReceiptAcknowledgement-Response</BusinessServiceName>
                             <ServiceTransaction TypeOfServiceTransaction="RespondingServiceTransaction" IsNonRepudiationRequired="false" IsAuthenticationRequired="false" IsNonRepudiationOfReceiptRequired="false" IsIntelligibleCheckRequired="false"
-                                IsApplicationErrorResponseRequested="false" TimeToAcknowledgeReceipt="600000" TimeToAcknowledgeAcceptance="0" TimeToPerform="0" Recurrence="0"/>
+                                IsApplicationErrorResponseRequested="false" TimeToAcknowledgeReceipt="0" TimeToAcknowledgeAcceptance="0" TimeToPerform="0" Recurrence="0"/>
                         </BusinessService>
                     </Scope>
                 </BusinessScope>
             </StandardBusinessDocumentHeader>
-            <BinaryContent mimeType="application/xml" encoding="ISO-8859-1">PGJwc3NpZ25hbDpSZWNlaXB0QWNrbm93bGVkZ2VtZW50IHhtbG5zOmRzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5L3htbGRzaWcjIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sbnM6YnBzc2lnbmFsPSJodHRwOi8vZG9jcy5vYXNpcy1vcGVuLm9yZy9lYnhtbC1icC9lYmJwLXNpZ25hbHMtMi4wIiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4c2k6c2NoZW1hTG9jYXRpb249Imh0dHA6Ly9kb2NzLm9hc2lzLW9wZW4ub3JnL2VieG1sLWJwL2ViYnAtc2lnbmFscy0yLjAgaHR0cDovL2RvY3Mub2FzaXMtb3Blbi5vcmcvZWJ4bWwtYnAvMi4wLjQvZWJicC1zaWduYWxzLTIuMC40LnhzZCI+CiAgICA8YnBzc2lnbmFsOk9yaWdpbmFsTWVzc2FnZUlkZW50aWZpZXI+CiAgICAgICAgOWE2ZmY4MjIwOGRlLTVhNmYtOTY3MC05ZmE0YjlkMmYwZGgKICAgIDwvYnBzc2lnbmFsOk9yaWdpbmFsTWVzc2FnZUlkZW50aWZpZXI+CiAgICA8YnBzc2lnbmFsOk9yaWdpbmFsRG9jdW1lbnRJZGVudGlmaWVyPgogICAgICAgIHVybjpkazptZWRjb206cHJvZDptZXNzYWdpbmc6ZmhpcjpzdHJ1Y3R1cmVkZWZpbml0aW9uOmhvbWVjYXJlb2JzZXJ2YXRpb24jdXJuOmRrOm1lZGNvbTpmaGlyOmhvbWVjYXJlb2JzZXJ2YXRpb246My4wCiAgICA8L2Jwc3NpZ25hbDpPcmlnaW5hbERvY3VtZW50SWRlbnRpZmllcj4KICAgIDxicHNzaWduYWw6T3JpZ2luYWxNZXNzYWdlRGF0ZVRpbWU+CiAgICAgICAgMjAyNS0wNC0wMVQxNjoxOTowMCswMTowMAogICAgPC9icHNzaWduYWw6T3JpZ2luYWxNZXNzYWdlRGF0ZVRpbWU+CiAgICA8YnBzc2lnbmFsOlRoaXNNZXNzYWdlRGF0ZVRpbWU+CiAgICAgICAgMjAyNS0wNC0wMVQxNjoxOToxMCswMTowMAogICAgPC9icHNzaWduYWw6VGhpc01lc3NhZ2VEYXRlVGltZT4KICAgIDxicHNzaWduYWw6RnJvbVBhcnR5SW5mbyB0eXBlPeKAnWlzbzY1MjMtYWN0b3JpZC11cGlz4oCdPgogICAgICAgIDAwODg6NTc5MDAwMDIwMTM4OQogICAgPC9icHNzaWduYWw6RnJvbVBhcnR5SW5mbz4KICAgIDxicHNzaWduYWw6VG9QYXJ0eUluZm8gdHlwZT3igJ1pc282NTIzLWFjdG9yaWQtdXBpc+KAnT4KICAgICAgICAwMDg4OjU3OTAwMDAxMjE1MjYKICAgIDwvYnBzc2lnbmFsOlRvUGFydHlJbmZvPgogICAgPGJwc3NpZ25hbDpDb2xsYWJvcmF0aW9uSWRlbnRpZmllcj4KICAgICAgICA5YTZmZjgyMjA4ZGUtNWE2Zi05NjcwLTlmYTRiOWQyZjBkaAogICAgPC9icHNzaWduYWw6Q29sbGFib3JhdGlvbklkZW50aWZpZXI+CjwvYnBzc2lnbmFsOlJlY2VpcHRBY2tub3dsZWRnZW1lbnQ+</BinaryContent>
+            <BinaryContent mimeType="application/xml" encoding="ISO-8859-1">PGJwc3NpZ25hbDpSZWNlaXB0QWNrbm93bGVkZ2VtZW50IHhtbG5zOmRzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5L3htbGRzaWcjIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sbnM6YnBzc2lnbmFsPSJodHRwOi8vZG9jcy5vYXNpcy1vcGVuLm9yZy9lYnhtbC1icC9lYmJwLXNpZ25hbHMtMi4wIiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4c2k6c2NoZW1hTG9jYXRpb249Imh0dHA6Ly9kb2NzLm9hc2lzLW9wZW4ub3JnL2VieG1sLWJwL2ViYnAtc2lnbmFscy0yLjAgaHR0cDovL2RvY3Mub2FzaXMtb3Blbi5vcmcvZWJ4bWwtYnAvMi4wLjQvZWJicC1zaWduYWxzLTIuMC40LnhzZCI+CiAgICA8YnBzc2lnbmFsOk9yaWdpbmFsTWVzc2FnZUlkZW50aWZpZXI+CiAgICAgICAgOWE2ZmY4MjIwOGRlLTVhNmYtOTY3MC05ZmE0YjlkMmYwZGgKICAgIDwvYnBzc2lnbmFsOk9yaWdpbmFsTWVzc2FnZUlkZW50aWZpZXI+CiAgICA8YnBzc2lnbmFsOk9yaWdpbmFsRG9jdW1lbnRJZGVudGlmaWVyPgogICAgICAgIHVybjpkazpoZWFsdGhjYXJlOm1lZGNvbTptZXNzYWdpbmc6ZmhpcjpzdHJ1Y3R1cmVkZWZpbml0aW9uOmhvbWVjYXJlb2JzZXJ2YXRpb24tbWVzc2FnZToxLjEKICAgIDwvYnBzc2lnbmFsOk9yaWdpbmFsRG9jdW1lbnRJZGVudGlmaWVyPgogICAgPGJwc3NpZ25hbDpPcmlnaW5hbE1lc3NhZ2VEYXRlVGltZT4KICAgICAgICAyMDI1LTA0LTAxVDE2OjE5OjAwKzAxOjAwCiAgICA8L2Jwc3NpZ25hbDpPcmlnaW5hbE1lc3NhZ2VEYXRlVGltZT4KICAgIDxicHNzaWduYWw6VGhpc01lc3NhZ2VEYXRlVGltZT4KICAgICAgICAyMDI1LTA0LTAxVDE2OjE5OjEwKzAxOjAwCiAgICA8L2Jwc3NpZ25hbDpUaGlzTWVzc2FnZURhdGVUaW1lPgogICAgPGJwc3NpZ25hbDpGcm9tUGFydHlJbmZvIHR5cGU9ImlzbzY1MjMtYWN0b3JpZC11cGlzIj4KICAgICAgICAwMDg4OjU3OTAwMDAyMDEzODkKICAgIDwvYnBzc2lnbmFsOkZyb21QYXJ0eUluZm8+CiAgICA8YnBzc2lnbmFsOlRvUGFydHlJbmZvIHR5cGU9ImlzbzY1MjMtYWN0b3JpZC11cGlzIj4KICAgICAgICAwMDg4OjU3OTAwMDAxMjE1MjYKICAgIDwvYnBzc2lnbmFsOlRvUGFydHlJbmZvPgogICAgPGJwc3NpZ25hbDpDb2xsYWJvcmF0aW9uSWRlbnRpZmllcj4KICAgICAgICA5YTZmZjgyMjA4ZGUtNWE2Zi05NjcwLTlmYTRiOWQyZjBkaAogICAgPC9icHNzaWduYWw6Q29sbGFib3JhdGlvbklkZW50aWZpZXI+CjwvYnBzc2lnbmFsOlJlY2VpcHRBY2tub3dsZWRnZW1lbnQ+</BinaryContent>
         </StandardBusinessDocument>
