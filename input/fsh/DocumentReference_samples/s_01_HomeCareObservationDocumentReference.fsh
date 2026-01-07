@@ -27,7 +27,7 @@ Usage: #example
 * content.attachment.url = "DOC001.XML"
 * content.attachment.title = "Kommunale prøvesvar for 0201919990"
 * content.format = $MedComFormatOID#urn:ad:dk:medcom:pdd-v1.0.1:full "DK PDD document" // Danish XDS typecode must be updated
-* context.event = $SKSOID#ALAL02 "Hjertesygdomme" // Danish XDS typecode must be updated
+//* context.event = $SKSOID#ALAL02 "Hjertesygdomme" // Danish XDS typecode must be updated
 * context.sourcePatientInfo = Reference(37628912-7816-47a3-acd8-396b610be142)
 * context.facilityType = $SnomedctOID#550621000005101 "hjemmesygeplejeenhed" // Danish XDS typecode must be updated
 * context.practiceSetting = $SnomedctOID#658161000005107 "hjemmesygepleje" // Danish XDS typecode must be updated

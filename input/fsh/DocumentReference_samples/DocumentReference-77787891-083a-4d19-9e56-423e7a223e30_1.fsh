@@ -26,7 +26,7 @@ Usage: #example
 * content.attachment.title = "Kommunale prøvesvar for 0201919990"
 * content.attachment.creation = "2023-09-08T13:28:17+01:00"
 * content.format = urn:oid:1.2.208.184.100.10#urn:ad:dk:medcom:pdd-v1.0.1:full "DK PDD document"
-* context.event = urn:oid:1.2.208.176.2.4#ALAL02 "Hjertesygdomme"
+//* context.event = urn:oid:1.2.208.176.2.4#ALAL02 "Hjertesygdomme"
 * context.facilityType = urn:oid:2.16.840.1.113883.6.96#550621000005101 "hjemmesygeplejeenhed"
 * context.practiceSetting = urn:oid:2.16.840.1.113883.6.96#658161000005107 "hjemmesygepleje"
 * context.sourcePatientInfo = Reference(37628912-7816-47a3-acd8-396b610be142)

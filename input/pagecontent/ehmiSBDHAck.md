@@ -1310,6 +1310,7 @@ Encoding in the pilot will be the following for all the MedComMessagingMessages:
 Encoding will have the following outcome space for ReceiptAcknowledgement and ReceiptException in the pilot:
 - "UTF-8"
 
+<!--
 ## ehmiSbdhStructure Mappings
 
 For a number of different mappings to and from ehmiSBDH-elements, there is developed a number of FHIR Structure Mappings in order for the suppliers to better understand and potentially automate some tasks around mappings.
@@ -1318,7 +1319,7 @@ These are:
 - [Transformation specification of a MedcomMessagingMessage to an ehmiSBDH-envelope](MedComMessagingMessage2ehmiSbdh-transform.html)
 - [TBD: Transformation specification of a MedComMessagingMessage and an ehmiSBDH-envelope to a DocumentReference](StructureMap-MedComMessagingMessage2MedComDocumentReference-transform.html)
 - [TBD: Transformation specification of an ehmiSBDH-envelope to an EHMI Delivery Status structure](StructureMap-Sbdh2EhmiDeliveryStatus-transform.html)
-
+-->
 <!-- br -->
 
 
