@@ -55,7 +55,8 @@ menu:
     BusinessScope: SBDH_BusinessScope.xsd.html
   Artifacts: artifacts.html
   Test examples:
-    EmbeddedHCO: TestExampleEmbeddedHCO.xml.html
+    EmbeddedHCO.json: TestExampleHCO.json.html
+    EmbeddedHCO.json.ehmiSBDH: TestExampleEmbeddedHCO.xml.html
     SBDHAck: TextExampleSBDHAck.xml.html
   More:
     Table of Contents: toc.html
