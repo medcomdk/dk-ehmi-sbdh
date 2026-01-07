@@ -1,9 +1,11 @@
-/*
 // Metadata instance
+/*
 Instance: 77787891-083a-4d19-9e56-423e7a223e30
-InstanceOf: HomeCareObservationDocumentReference
+InstanceOf: DocumentReference
 Title: "Instance of HomeCareObservation DocumentReference."
 Description: "Instance of HomeCareObservation DocumentReference containing relevant metadata"
+Usage: #example
+* meta.profile = "https://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/homecare-observation-documentreference"
 //* identifier = 12c2deaf-389a-4f7d-8133-60b24c75cd7f
 * contained[+] = 42cb9200-f421-4d08-8391-7d51a2503cb4
 * contained[+] = 8fa7df76-bec2-4fe2-9a44-750030a0eda0
@@ -29,13 +31,13 @@ Description: "Instance of HomeCareObservation DocumentReference containing relev
 * context.sourcePatientInfo = Reference(37628912-7816-47a3-acd8-396b610be142)
 * context.facilityType = $SnomedctOID#550621000005101 "hjemmesygeplejeenhed" // Danish XDS typecode must be updated
 * context.practiceSetting = $SnomedctOID#658161000005107 "hjemmesygepleje" // Danish XDS typecode must be updated
-* extension[0].url = "https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/medcom-xds-homecommunityid-extension"
+* extension[0].url = "https://medcomfhir.dk/ig/document/StructureDefinition/medcom-xds-homecommunityid-extension"
 * extension[0].valueCoding = $DanishxdsOID#1.2.208.176.43210.8.20 "TEST2"
-* extension[1].url = "https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/medcom-xds-version-id-extension"
+* extension[1].url = "https://medcomfhir.dk/ig/xdsmetadata/StructureDefinition/medcom-xds-version-id-extension"
 * extension[1].valueString = "1.1.0"
 
 Instance: 42cb9200-f421-4d08-8391-7d51a2503cb4
-InstanceOf: MedComCoreDocumentPractitioner
+InstanceOf: MedComDocumentPractitioner
 Title: "XDS document bundled Author Person"
 Description: "Instance of a XDS document bundled  author person"
 Usage: #example
@@ -43,7 +45,7 @@ Usage: #example
 * name.family = "Andersen"
 
 Instance: 8fa7df76-bec2-4fe2-9a44-750030a0eda0
-InstanceOf: MedComCoreDocumentOrganization
+InstanceOf: MedComDocumentOrganization
 Title: "XDS document bundled Author Organization"
 Description: "Instance of a XDS document bundled  author organization"
 Usage: #example
@@ -52,7 +54,7 @@ Usage: #example
 * name = "Lægerne Hasseris Bymidte"
 
 Instance: 37628912-7816-47a3-acd8-396b610be142
-InstanceOf: MedComCoreDocumentPatient
+InstanceOf: MedComDocumentPatient
 Title: "XDS document bundled Source Patient"
 Description: "Instance of a XDS document bundled  source patient"
 Usage: #example

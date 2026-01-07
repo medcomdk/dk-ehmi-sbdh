@@ -67,7 +67,7 @@
                         <InstanceIdentifier>MCM:homecareobservation-message</InstanceIdentifier>
                         <Identifier>dk-medcom-messaging</Identifier>
                     </Scope>
-                    <!-- MedCom messaging - Acknowledgment scope -->
+                    <!-- MedCom messaging - Acknowledgement scope -->
                     <Scope>
                         <Type>EHMI-ReceiptAcknowledgement</Type>
                         <InstanceIdentifier>Request</InstanceIdentifier>

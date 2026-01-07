@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DocumentReference xmlns="http://hl7.org/fhir">
+  <id value="77787891-083a-4d19-9e56-423e7a223e30"/>
+  <meta>
+    <profile value="https://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/homecare-observation-documentreference"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: DocumentReference 77787891-083a-4d19-9e56-423e7a223e30</b></p><a name="77787891-083a-4d19-9e56-423e7a223e30"> </a><a name="hc77787891-083a-4d19-9e56-423e7a223e30"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-homecare-observation-documentreference.html">HCODocumentReference.</a></p></div><p><b>dk/ig/document/StructureDefinition/medcom-xds-homecommunityid-extension</b>: unknown: 1.2.208.176.43210.8.20 (TEST2)</p><p><b>dk/ig/xdsmetadata/StructureDefinition/medcom-xds-version-id-extension</b>: 1.1.0</p><p><b>masterIdentifier</b>: urn:uuid:fe27d893-6b9e-4e3d-91b0-72d033ce5c07</p><p><b>status</b>: Current</p><p><b>type</b>: <span title="Codes:{urn:oid:1.2.208.184.100.1 HCOMsg}">HomeCareObservation Message</span></p><p><b>category</b>: <span title="Codes:">Workflow</span></p><p><b>subject</b>: <a href="#hc77787891-083a-4d19-9e56-423e7a223e30/37628912-7816-47a3-acd8-396b610be142">Else Test Lauridsen (official) Female, DoB: 1991-02-02 ( urn:oid:1.2.208.176.1.2#0201919990)</a></p><p><b>author</b>: <a href="#hc77787891-083a-4d19-9e56-423e7a223e30/8fa7df76-bec2-4fe2-9a44-750030a0eda0">Organization Lægerne Hasseris Bymidte</a></p><p><b>authenticator</b>: <a href="#hc77787891-083a-4d19-9e56-423e7a223e30/42cb9200-f421-4d08-8391-7d51a2503cb4">Practitioner Sidsel Andersen </a></p><p><b>securityLabel</b>: <span title="Codes:">N</span></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ContentType</b></td><td><b>Language</b></td><td><b>Url</b></td><td><b>Size</b></td><td><b>Hash</b></td><td><b>Title</b></td><td><b>Creation</b></td></tr><tr><td style="display: none">*</td><td>text/xml</td><td>Danish</td><td>DOC001.XML</td><td>3654</td><td><code>da39a3ee5e6b4b0d3255bfef95601890afd80709</code></td><td>Kommunale prøvesvar for 0201919990</td><td>2023-09-08 13:28:17+0100</td></tr></table><p><b>format</b>: unknown: urn:ad:dk:medcom:pdd-v1.0.1:full (DK PDD document)</p></blockquote><h3>Contexts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Event</b></td><td><b>FacilityType</b></td><td><b>PracticeSetting</b></td><td><b>SourcePatientInfo</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{urn:oid:1.2.208.176.2.4 ALAL02}">Hjertesygdomme</span></td><td><span title="Codes:{urn:oid:2.16.840.1.113883.6.96 550621000005101}">hjemmesygeplejeenhed</span></td><td><span title="Codes:{urn:oid:2.16.840.1.113883.6.96 658161000005107}">hjemmesygepleje</span></td><td><a href="#hc77787891-083a-4d19-9e56-423e7a223e30/37628912-7816-47a3-acd8-396b610be142">Else Test Lauridsen (official) Female, DoB: 1991-02-02 ( urn:oid:1.2.208.176.1.2#0201919990)</a></td></tr></table><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Practitioner #42cb9200-f421-4d08-8391-7d51a2503cb4</b></p><a name="77787891-083a-4d19-9e56-423e7a223e30/42cb9200-f421-4d08-8391-7d51a2503cb4"> </a><a name="hc77787891-083a-4d19-9e56-423e7a223e30/42cb9200-f421-4d08-8391-7d51a2503cb4"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-document-practitioner.html">MedComDocumentPractitioner</a></p></div><p><b>name</b>: Sidsel Andersen </p></blockquote><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Organization #8fa7df76-bec2-4fe2-9a44-750030a0eda0</b></p><a name="77787891-083a-4d19-9e56-423e7a223e30/8fa7df76-bec2-4fe2-9a44-750030a0eda0"> </a><a name="hc77787891-083a-4d19-9e56-423e7a223e30/8fa7df76-bec2-4fe2-9a44-750030a0eda0"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-document-organization.html">MedComDocumentOrganization</a></p></div><p><b>identifier</b>: <code>urn:oid:1.2.208.176.1.1</code>/61741000016007</p><p><b>name</b>: Lægerne Hasseris Bymidte</p></blockquote><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Patient #37628912-7816-47a3-acd8-396b610be142</b></p><a name="77787891-083a-4d19-9e56-423e7a223e30/37628912-7816-47a3-acd8-396b610be142"> </a><a name="hc77787891-083a-4d19-9e56-423e7a223e30/37628912-7816-47a3-acd8-396b610be142"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-core-document/StructureDefinition-medcom-document-patient.html">MedComDocumentPatient</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Else Test Lauridsen (official) Female, DoB: 1991-02-02 ( urn:oid:1.2.208.176.1.2#0201919990)</p><hr/></blockquote></div>
+  </text>
+  <contained>
+    <Practitioner>
+      <id value="42cb9200-f421-4d08-8391-7d51a2503cb4"/>
+      <meta>
+        <profile value="http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-practitioner"/>
+      </meta>
+      <name>
+        <family value="Andersen"/>
+        <given value="Sidsel"/>
+      </name>
+    </Practitioner>
+  </contained>
+  <contained>
+    <Organization>
+      <id value="8fa7df76-bec2-4fe2-9a44-750030a0eda0"/>
+      <meta>
+        <profile value="http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-organization"/>
+      </meta>
+      <identifier>
+        <system value="urn:oid:1.2.208.176.1.1"/>
+        <value value="61741000016007"/>
+      </identifier>
+      <name value="Lægerne Hasseris Bymidte"/>
+    </Organization>
+  </contained>
+  <contained>
+    <Patient>
+      <id value="37628912-7816-47a3-acd8-396b610be142"/>
+      <meta>
+        <profile value="http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-patient"/>
+      </meta>
+      <identifier>
+        <system value="urn:oid:1.2.208.176.1.2"/>
+        <value value="0201919990"/>
+      </identifier>
+      <name>
+        <use value="official"/>
+        <family value="Lauridsen"/>
+        <given value="Else"/>
+        <given value="Test"/>
+      </name>
+      <gender value="female"/>
+      <birthDate value="1991-02-02"/>
+    </Patient>
+  </contained>
+  <extension url="https://medcomfhir.dk/ig/document/StructureDefinition/medcom-xds-homecommunityid-extension">
+    <valueCoding>
+      <system value="urn:oid:1.2.208.176.8.1"/>
+      <code value="1.2.208.176.43210.8.20"/>
+      <display value="TEST2"/>
+    </valueCoding>
+  </extension>
+  <extension url="https://medcomfhir.dk/ig/xdsmetadata/StructureDefinition/medcom-xds-version-id-extension">
+    <valueString value="1.1.0"/>
+  </extension>
+  <masterIdentifier>
+    <value value="urn:uuid:fe27d893-6b9e-4e3d-91b0-72d033ce5c07"/>
+  </masterIdentifier>
+  <status value="current"/>
+  <type>
+    <coding>
+      <system value="urn:oid:1.2.208.184.100.1"/>
+      <code value="HCOMsg"/>
+      <display value="HomeCareObservation Message"/>
+    </coding>
+  </type>
+  <category>
+    <coding>
+      <code value="Workflow"/>
+    </coding>
+  </category>
+  <subject>
+    <reference value="#37628912-7816-47a3-acd8-396b610be142"/>
+  </subject>
+  <author>
+    <reference value="#8fa7df76-bec2-4fe2-9a44-750030a0eda0"/>
+  </author>
+  <authenticator>
+    <reference value="#42cb9200-f421-4d08-8391-7d51a2503cb4"/>
+  </authenticator>
+  <securityLabel>
+    <coding>
+      <code value="N"/>
+    </coding>
+  </securityLabel>
+  <content>
+    <attachment>
+      <contentType value="text/xml"/>
+      <language value="da"/>
+      <url value="DOC001.XML"/>
+      <size value="3654"/>
+      <hash value="da39a3ee5e6b4b0d3255bfef95601890afd80709"/>
+      <title value="Kommunale prøvesvar for 0201919990"/>
+      <creation value="2023-09-08T13:28:17+01:00"/>
+    </attachment>
+    <format>
+      <system value="urn:oid:1.2.208.184.100.10"/>
+      <code value="urn:ad:dk:medcom:pdd-v1.0.1:full"/>
+      <display value="DK PDD document"/>
+    </format>
+  </content>
+  <context>
+    <event>
+      <coding>
+        <system value="urn:oid:1.2.208.176.2.4"/>
+        <code value="ALAL02"/>
+        <display value="Hjertesygdomme"/>
+      </coding>
+    </event>
+    <facilityType>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.6.96"/>
+        <code value="550621000005101"/>
+        <display value="hjemmesygeplejeenhed"/>
+      </coding>
+    </facilityType>
+    <practiceSetting>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.6.96"/>
+        <code value="658161000005107"/>
+        <display value="hjemmesygepleje"/>
+      </coding>
+    </practiceSetting>
+    <sourcePatientInfo>
+      <reference value="#37628912-7816-47a3-acd8-396b610be142"/>
+    </sourcePatientInfo>
+  </context>
+</DocumentReference>

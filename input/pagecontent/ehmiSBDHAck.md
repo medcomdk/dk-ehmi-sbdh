@@ -762,7 +762,7 @@ In an EHMI-ReceiptAcknowledgement - Response scope is always like this:
 
 ##### CorrelationInformation - 
 
-Reliable messaging uses the SBDH’s CorrelationInformation to tie the original ehmiSBDH and the acknowledgment ehmiSbdhtogether. The RequestingDocumentInstanceIdentifier is specifically used here
+Reliable messaging uses the SBDH’s CorrelationInformation to tie the original ehmiSBDH and the Acknowledgement ehmiSbdh together. The RequestingDocumentInstanceIdentifier is specifically used here
 
 <!-- br -->
 

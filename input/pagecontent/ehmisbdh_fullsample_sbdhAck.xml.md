@@ -84,7 +84,7 @@
                         <InstanceIdentifier>EHMI-ReceiptAcknowledgement</InstanceIdentifier>
                         <Identifier>dk-medcom-messaging</Identifier>
                     </Scope>
-                    <!-- MedCom messaging - Acknowledgment scope -->
+                    <!-- MedCom messaging - Acknowledgement scope -->
                     <Scope>
                         <Type>EHMI-ReceiptAcknowledgement</Type>
                         <InstanceIdentifier>Response</InstanceIdentifier>

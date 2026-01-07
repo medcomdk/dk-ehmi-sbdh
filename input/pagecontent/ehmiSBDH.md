@@ -15,7 +15,7 @@ StandardBusinessDocument is, as mentioned, SBDH's surrounding container, and is 
 - StandardBusinessDocumentHeader
 - BinaryContent (base64 encoded)
 
-Although the StandardBusinessDocument, as such, is the envelope, the term ehmiSBDH is generally used for the entire envelope, since it is this content that is of particular interest in the message exchange. BinaryContent is the element that contains a base64-encoded message or acknowledgment for a sent SBDH.
+Although the StandardBusinessDocument, as such, is the envelope, the term ehmiSBDH is generally used for the entire envelope, since it is this content that is of particular interest in the message exchange. BinaryContent is the element that contains a base64-encoded message or Acknowledgement for a sent SBDH.
 
 <!-- br -->
 
@@ -1312,7 +1312,7 @@ In an EHMI-ReceiptAcknowledgement - Response scope is always like this:
 
 ##### CorrelationInformation - 
 
-Reliable messaging uses the SBDH’s CorrelationInformation to tie the original ehmiSBDH and the acknowledgment ehmiSbdhtogether. The RequestingDocumentInstanceIdentifier is specifically used here
+Reliable messaging uses the SBDH’s CorrelationInformation to tie the original ehmiSBDH and the Acknowledgement ehmiSbdh together. The RequestingDocumentInstanceIdentifier is specifically used here
 
 <!-- br -->
 
