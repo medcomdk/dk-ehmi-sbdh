@@ -57,6 +57,7 @@ menu:
   Test examples:
     EmbeddedHCO.json: TestExampleHCO.json.html
     EmbeddedHCO.json.ehmiSBDH: TestExampleEmbeddedHCO.xml.html
+    EmbeddedHCOforDDS.json.ehmiSBDH: TestExampleEmbeddedHCOforDDS.xml.html
     SBDHAck: TextExampleSBDHAck.xml.html
   More:
     Table of Contents: toc.html
