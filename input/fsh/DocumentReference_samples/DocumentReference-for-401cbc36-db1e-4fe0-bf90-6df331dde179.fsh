@@ -1,3 +1,4 @@
+/*
 Instance: DocumentReferenceBundle-7c4bc126-0fb3-4f98-9e85-98790de415bc
 InstanceOf: Bundle
 Usage: #example
@@ -7,9 +8,11 @@ Usage: #example
 * entry[+].resource = be9f367d-a84a-4815-90a8-c83a03813fd8
 * entry[+].resource = a0330c62-fe29-4719-83fa-a94959084f29
 * entry[+].resource = bbcd4817-1c4b-4089-a712-346f65ec16f9 //Patient
+*/
 
 Instance: 7c4bc126-0fb3-4f98-9e85-98790de415bc
 InstanceOf: DocumentReference
+Description: "DocumentReference for 401cbc36-db1e-4fe0-bf90-6df331dde179"
 Usage: #example
 * meta.profile = "https://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/homecare-observation-documentreference"
 * contained[0] = be9f367d-a84a-4815-90a8-c83a03813fd8
@@ -18,24 +21,23 @@ Usage: #example
 * extension[0].url = "https://medcomfhir.dk/ig/document/StructureDefinition/medcom-xds-homecommunityid-extension"
 * extension[=].valueCoding = urn:oid:1.2.208.176.8.1#1.2.208.176.43210.8.20 "TEST2"
 * extension[+].url = "https://medcomfhir.dk/ig/xdsmetadata/StructureDefinition/medcom-xds-version-id-extension"
-* extension[=].valueString = "1.1.0"
+* extension[=].valueString = "2.0.0"
 * masterIdentifier.value = "urn:uuid:fe27d893-6b9e-4e3d-91b0-72d033ce5c07"
 * status = #current
-* type = urn:oid:1.2.208.184.100.1#HCOMsg "HomeCareObservation Message"
-* category.coding.code = #Workflow
+* type = urn:oid:1.2.208.184.100.1#HCOM "HomeCareObservation message"
+* category.coding.code = #006 "Workflow"
 * subject = Reference(bbcd4817-1c4b-4089-a712-346f65ec16f9)
 * author = Reference(a0330c62-fe29-4719-83fa-a94959084f29)
 * authenticator = Reference(be9f367d-a84a-4815-90a8-c83a03813fd8)
 * securityLabel.coding.code = #N
-* content.attachment.contentType = #text/xml
+* content.attachment.contentType = #application/fhir+json
 * content.attachment.language = #da
-* content.attachment.url = "DOC001.XML"
-* content.attachment.size = 3654
-* content.attachment.hash = "da39a3ee5e6b4b0d3255bfef95601890afd80709"
-* content.attachment.title = "Kommunale prøvesvar for 0201919990"
-* content.attachment.creation = "2023-09-08T13:28:17+01:00"
-* content.format = urn:oid:1.2.208.184.100.10#urn:ad:dk:medcom:pdd-v1.0.1:full "DK PDD document"
-* context.event = urn:oid:1.2.208.176.2.4#ALAL02 "Hjertesygdomme"
+* content.attachment.url = "HCOM-401cbc36-db1e-4fe0-bf90-6df331dde179.XML"
+* content.attachment.size = 3654 // not exact
+* content.attachment.hash = "da39a3ee5e6b4b0d3255bfef95601890afd80709" // not exact
+* content.attachment.title = "Kommunale prøvesvar for 2509479989"
+* content.attachment.creation = "2026-01-01T13:14:15+01:00"
+* content.format = urn:oid:1.2.208.184.100.10#urn:ad:dk:medcom:hcom-v1.2:full "DK HomeCareObservation message"
 * context.facilityType = urn:oid:2.16.840.1.113883.6.96#550621000005101 "hjemmesygeplejeenhed"
 * context.practiceSetting = urn:oid:2.16.840.1.113883.6.96#658161000005107 "hjemmesygepleje"
 * context.sourcePatientInfo = Reference(bbcd4817-1c4b-4089-a712-346f65ec16f9)
