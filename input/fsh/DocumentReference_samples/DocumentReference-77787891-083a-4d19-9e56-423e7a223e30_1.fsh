@@ -1,23 +1,14 @@
-Instance: DocumentReferenceBundle
-InstanceOf: Bundle
-Usage: #example
-* type = #collection
-
-* entry[0].resource = 77787891-083a-4d19-9e56-423e7a223e31
-* entry[+].resource = 42cb9200-f421-4d08-8391-7d51a2503cb4
-* entry[+].resource = 8fa7df76-bec2-4fe2-9a44-750030a0eda0
-* entry[+].resource = 37628912-7816-47a3-acd8-396b610be142
-
 Instance: 77787891-083a-4d19-9e56-423e7a223e31
 InstanceOf: DocumentReference
+Description: "DocumentReference for 401cbc36-db1e-4fe0-bf90-6df331dde179"
 Usage: #example
 * meta.profile = "https://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/homecare-observation-documentreference"
 * contained[0] = 42cb9200-f421-4d08-8391-7d51a2503cb4
 * contained[+] = 8fa7df76-bec2-4fe2-9a44-750030a0eda0
 * contained[+] = 37628912-7816-47a3-acd8-396b610be142
-* extension[0].url = "https://medcomfhir.dk/ig/document/StructureDefinition/medcom-xds-homecommunityid-extension"
-* extension[=].valueCoding = urn:oid:1.2.208.176.8.1#1.2.208.176.43210.8.20 "TEST2"
-* extension[+].url = "https://medcomfhir.dk/ig/xdsmetadata/StructureDefinition/medcom-xds-version-id-extension"
+//* extension[0].url = "https://medcomfhir.dk/ig/document/StructureDefinition/medcom-xds-homecommunityid-extension"
+//* extension[=].valueCoding = urn:oid:1.2.208.176.8.1#1.2.208.176.43210.8.20 "TEST2"
+* extension[+].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.version"
 * extension[=].valueString = "1.1.0"
 * masterIdentifier.value = "urn:uuid:fe27d893-6b9e-4e3d-91b0-72d033ce5c07"
 * status = #current

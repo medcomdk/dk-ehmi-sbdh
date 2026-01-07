@@ -60,7 +60,7 @@
       <display value="TEST2"/>
     </valueCoding>
   </extension>
-  <extension url="https://medcomfhir.dk/ig/xdsmetadata/StructureDefinition/medcom-xds-version-id-extension">
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.version">
     <valueString value="1.1.0"/>
   </extension>
   <masterIdentifier>

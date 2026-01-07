@@ -54,7 +54,7 @@
     }
   },
   {
-    "url" : "https://medcomfhir.dk/ig/xdsmetadata/StructureDefinition/medcom-xds-version-id-extension",
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.version",
     "valueString" : "1.1.0"
   }],
   "masterIdentifier" : {

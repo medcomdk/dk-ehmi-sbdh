@@ -18,11 +18,13 @@ Usage: #example
 * contained[0] = be9f367d-a84a-4815-90a8-c83a03813fd8
 * contained[+] = a0330c62-fe29-4719-83fa-a94959084f29
 * contained[+] = bbcd4817-1c4b-4089-a712-346f65ec16f9
-* extension[0].url = "https://medcomfhir.dk/ig/document/StructureDefinition/medcom-xds-homecommunityid-extension"
-* extension[=].valueCoding = urn:oid:1.2.208.176.8.1#1.2.208.176.43210.8.20 "TEST2"
-* extension[+].url = "https://medcomfhir.dk/ig/xdsmetadata/StructureDefinition/medcom-xds-version-id-extension"
+//* extension[0].url = "https://medcomfhir.dk/ig/document/StructureDefinition/medcom-xds-homecommunityid-extension"
+//* extension[=].valueCoding = urn:oid:1.2.208.176.8.1#1.2.208.176.43210.8.20 "TEST2"
+* extension[+].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.version"
 * extension[=].valueString = "2.0.0"
 * masterIdentifier.value = "urn:uuid:fe27d893-6b9e-4e3d-91b0-72d033ce5c07"
+* masterIdentifier.system = "https://systematic.dk/columna/cura"
+* masterIdentifier.use = #temp
 * status = #current
 * type = urn:oid:1.2.208.184.100.1#HCOM "HomeCareObservation message"
 * category.coding.code = #006 "Workflow"

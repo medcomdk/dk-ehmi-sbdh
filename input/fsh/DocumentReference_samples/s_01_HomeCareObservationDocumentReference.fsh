@@ -31,9 +31,9 @@ Usage: #example
 * context.sourcePatientInfo = Reference(37628912-7816-47a3-acd8-396b610be142)
 * context.facilityType = $SnomedctOID#550621000005101 "hjemmesygeplejeenhed" // Danish XDS typecode must be updated
 * context.practiceSetting = $SnomedctOID#658161000005107 "hjemmesygepleje" // Danish XDS typecode must be updated
-* extension[0].url = "https://medcomfhir.dk/ig/document/StructureDefinition/medcom-xds-homecommunityid-extension"
+//* extension[0].url = "https://medcomfhir.dk/ig/document/StructureDefinition/medcom-xds-homecommunityid-extension"
 * extension[0].valueCoding = $DanishxdsOID#1.2.208.176.43210.8.20 "TEST2"
-* extension[1].url = "https://medcomfhir.dk/ig/xdsmetadata/StructureDefinition/medcom-xds-version-id-extension"
+* extension[1].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.version"
 * extension[1].valueString = "1.1.0"
 
 Instance: 42cb9200-f421-4d08-8391-7d51a2503cb4
