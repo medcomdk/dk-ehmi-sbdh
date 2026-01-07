@@ -8,6 +8,7 @@ Alias: $medcom-core-interpretation-codes = http://medcomfhir.dk/ig/terminology/C
 
 Instance: 401cbc36-db1e-4fe0-bf90-6df331dde179
 InstanceOf: Bundle
+Description: "HCO example - medcom-homecareobservation-message"
 Usage: #example
 * meta.profile = "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"
 * type = #message
