@@ -1,4 +1,4 @@
-# Test example of an SBDH with an embedded homecareobservation message
+# Test example of an SBDH with an embedded homecareobservation message and a DocumentReference
 
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
                             xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
