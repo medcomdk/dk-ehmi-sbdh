@@ -55,8 +55,10 @@ menu:
     BusinessScope: SBDH_BusinessScope.xsd.html
   Artifacts: artifacts.html
   Test examples:
-    EmbeddedHCO: TestExampleEmbeddedHCO.xml.html
+    Embedded HCO: TestExampleEmbeddedHCO.xml.html
+    Embedded HCO XDS-METADATA: TestExampleXDSEmbeddedHCO.xml.html
     SBDHAck: TextExampleSBDHAck.xml.html
+    Embedded FHIR Ack: TestExampleEmbeddedFHIRAckSBDH.xml.html
   More:
     Table of Contents: toc.html
     Downloads: downloads.html
