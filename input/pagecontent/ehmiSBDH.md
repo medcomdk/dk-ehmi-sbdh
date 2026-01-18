@@ -492,7 +492,7 @@ example:
 
     <DocumentIdentification>
 	    <Standard>homecareobservation-message</Standard>
-	    <TypeVersion>1.0</TypeVersion>
+	    <TypeVersion>1.2</TypeVersion>
         <InstanceIdentifier>9a6ff822-08de-5a6f-9670-9fa4b9d2f0dc</InstanceIdentifier>
 	    <Type>Bundle</Type>
 	    <MultipleType>false</MultipleType>
@@ -506,7 +506,7 @@ example:
 <!-- br -->
 
     <DocumentIdentification>
-        <Standard>ebbp-signals</Standard>
+        <Standard>ehmisbdh-acknowledgement</Standard>
 	    <TypeVersion>ebbp-signals-2.0</TypeVersion>
 	    <InstanceIdentifier>9a6ff822-08de-5a6f-9670-9fa4b9d2f0dx</InstanceIdentifier>
 	    <Type>ReceiptAcknowledgement</Type>
@@ -556,7 +556,7 @@ The value in InstanceIdentifier is identical to the corresponding SMP record. Th
     <Scope> 
         <Type>DOCUMENTID</Type> 
         <InstanceIdentifier>
-            urn:dk:healthcare:prod:messaging:medcom:fhir:structuredefinition:[Bundle/MessageHeader/eventCoding/code.value]#urn:dk:medcom:fhir:[Bundle/MessageHeader/definition/[value of MessageDefinition version-part]]
+            urn:dk:healthcare:prod:messaging:medcom:fhir:structuredefinition::[Bundle/MessageHeader/eventCoding/code.value]##urn:dk:medcom:fhir:[Bundle/MessageHeader/eventCoding/code.value]::[Bundle/MessageHeader/definition/[value of MessageDefinition version-part]]
         </InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
@@ -570,7 +570,7 @@ MedcomMessagingMessage example
     <Scope> 
         <Type>DOCUMENTID</Type> 
         <InstanceIdentifier>
-            urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:3.0
+            urn:dk:medcom:prod:messaging:fhir:structuredefinition::homecareobservation##urn:dk:medcom:fhir:homecareobservation::3.0
         </InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
@@ -584,7 +584,7 @@ MedcomMessagingMessage example
     <Scope> 
         <Type>DOCUMENTID</Type> 
         <InstanceIdentifier>
-            urn:dk:healthcare:prod:messaging:oasis:ebxml:schema:xsd:[bpps-signaltype]
+            urn:dk:healthcare:prod:messaging:oasis:ebxml:schema:xsd::[bpps-signaltype]##urn:dk:medcom:[bpps-signaltype]::[version]
         </InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
@@ -598,7 +598,7 @@ DOCUMENTID ehmiSBDH EnvelopeReceipt example:
     <Scope> 
         <Type>DOCUMENTID</Type> 
         <InstanceIdentifier>
-           urn:dk:healthcare:prod:messaging:oasis:ebxml:schema:xsd:SBDHReceiptAcknowledgement
+           urn:dk:healthcare:messaging:oasis:ebxml:schema:xsd::ehmisbdh-acknowledgement##urn:dk:ehmi:sbdh:ehmisbdh-acknowledgement::1.0
         </InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
@@ -631,7 +631,7 @@ Always
 
     <Scope> 
 	    <Type>PROCESSID</Type> 
-        <InstanceIdentifier>sdn-emergence</InstanceIdentifier>
+        <InstanceIdentifier>urn:ehmi:sdn-emergence</InstanceIdentifier>
 	    <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
