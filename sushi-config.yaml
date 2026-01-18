@@ -55,10 +55,11 @@ menu:
     BusinessScope: SBDH_BusinessScope.xsd.html
   Artifacts: artifacts.html
   Test examples:
-    EmbeddedHCO.json: TestExampleHCO.json.html
-    EmbeddedHCO.json.ehmiSBDH: TestExampleEmbeddedHCO.xml.html
-    EmbeddedHCOforDDS.json.ehmiSBDH: TestExampleEmbeddedHCOforDDS.xml.html
-    SBDHAck: TextExampleSBDHAck.xml.html
+    ehmiMessage HCO( json): TestExample_ehmiMessage_HCO.json.html
+    ehmiSBDH HCO Embedded (xml): TestExample_ehmiSBDH_Embedded_HCO.xml.html
+    ehmiSBDH HCO Embedded for DDS (json): TestExample_ehmiSBDH_Embedded_HCO_for_DDS.xml.html
+    ehmiMessage SBDHAck (xml): TestExample_ehmiMessage_SBDHAck.xml_raw.html
+    ehmiSBDH SBDHAck.xml: TestExample_ehmiSBDH_Embedded_SBDHAck.xml.html
   More:
     Table of Contents: toc.html
     Downloads: downloads.html
