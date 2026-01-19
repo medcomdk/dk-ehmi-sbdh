@@ -33,7 +33,7 @@ Please note that this xsd is only included for compliance reasons, it is not use
                     <!-- eDelivery scope -->
                     <Scope>
                         <Type>DOCUMENTID</Type>
-                        <InstanceIdentifier>urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:3.0</InstanceIdentifier>
+                        <InstanceIdentifier>urn:dk:healthcare:medcom:messaging:fhir:structuredefinition::homecareobservation-message##urn:dk:medcom:fhir:homecareobservation-message::1.2</InstanceIdentifier>
                         <Identifier>dk-medcom-messaging</Identifier>
                     </Scope>
                     <Scope>

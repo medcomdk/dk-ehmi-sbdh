@@ -143,7 +143,7 @@
        
 <bpssignal:ReceiptAcknowledgement xmlns:bpssignal="http://docs.oasis-open.org/ebxml-bp/ebbp-signals-2.0">
     <bpssignal:OriginalMessageIdentifier>489de4f2-0d8d-4de2-a7ce-ccb93568799f</bpssignal:OriginalMessageIdentifier>
-    <bpssignal:OriginalDocumentIdentifier>urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:3.0</bpssignal:OriginalDocumentIdentifier>
+    <bpssignal:OriginalDocumentIdentifier>urn:dk:healthcare:medcom:messaging:fhir:structuredefinition::homecareobservation-message##urn:dk:medcom:fhir:homecareobservation-message::1.2</bpssignal:OriginalDocumentIdentifier>
     <bpssignal:RequestionField>
         <issuedAt>2025-04-01T16:20:00+01:00</issuedAt>
     </bpssignal:RequestionField>

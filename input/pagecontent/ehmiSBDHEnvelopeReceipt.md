@@ -129,7 +129,7 @@ ToPartyInfo example
             9a6ff82208de-5a6f-9670-9fa4b9d2f0dh
         </bpssignal:OriginalMessageIdentifier>
         <bpssignal:OriginalDocumentIdentifier>
-            urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:3.0
+            urn:dk:healthcare:medcom:messaging:fhir:structuredefinition::homecareobservation-message##urn:dk:medcom:fhir:homecareobservation-message::1.2
         </bpssignal:OriginalDocumentIdentifier>
         <bpssignal:OriginalMessageDateTime>
             2025-04-01T16:19:00+01:00
@@ -236,7 +236,7 @@ ExceptionMessage example
             9a6ff82208de-5a6f-9670-9fa4b9d2f0dh
         </bpssignal:OriginalMessageIdentifier>
         <bpssignal:OriginalDocumentIdentifier>
-            urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:3.0
+            urn:dk:healthcare:medcom:messaging:fhir:structuredefinition::homecareobservation-message##urn:dk:medcom:fhir:homecareobservation-message::1.2
         </bpssignal:OriginalDocumentIdentifier>
         <bpssignal:OriginalMessageDateTime>
             2025-04-01T16:19:00+01:00
