@@ -5,7 +5,7 @@
             9a6ff822-08de-5a6f-9670-9fa4b9d2f0dc
         </bpssignal:OriginalMessageIdentifier>
         <bpssignal:OriginalDocumentIdentifier>
-            urn:dk:healthcare:medcom:messaging:fhir:structuredefinition:homecareobservation-message:1.1
+            urn:dk:healthcare:medcom:messaging:fhir:structuredefinition::homecareobservation-message##urn:dk:medcom:fhir:homecareobservation-message::1.2
         </bpssignal:OriginalDocumentIdentifier>
         <bpssignal:OriginalMessageDateTime>
             2025-04-01T16:19:00+01:00

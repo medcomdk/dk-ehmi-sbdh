@@ -625,7 +625,7 @@ DOCUMENTID ehmiSBDH EnvelopeReceipt eksempel:
     <Scope> 
         <Type>DOCUMENTID</Type> 
         <InstanceIdentifier>
-           urn:dk:healthcare:prod:messaging:oasis:ebxml:schema:xsd:SBDHReceiptAcknowledgement
+           urn:dk:healthcare:messaging:oasis:ebxml:schema:xsd::ehmisbdh-acknowledgement##urn:dk:ehmi:sbdh:ehmisbdh-acknowledgement::1.0
         </InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
@@ -657,7 +657,7 @@ Altid
 
     <Scope> 
 	    <Type>PROCESSID</Type> 
-        <InstanceIdentifier>sdn-emergence</InstanceIdentifier>
+        <InstanceIdentifier>urn:ehmi:sdn-emergence</InstanceIdentifier>
 	    <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 

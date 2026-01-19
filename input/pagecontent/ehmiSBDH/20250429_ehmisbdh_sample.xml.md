@@ -38,7 +38,7 @@ Please note that this xsd is only included for compliance reasons, it is not use
                     </Scope>
                     <Scope>
                         <Type>PROCESSID</Type>
-                        <InstanceIdentifier>sdn-emergence</InstanceIdentifier>
+                        <InstanceIdentifier>urn:ehmi:sdn-emergence</InstanceIdentifier>
                         <Identifier>dk-medcom-messaging</Identifier>
                     </Scope>
                     <!-- MedCom messaging scope -->

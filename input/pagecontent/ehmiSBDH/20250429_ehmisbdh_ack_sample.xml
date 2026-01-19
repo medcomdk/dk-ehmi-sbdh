@@ -27,12 +27,12 @@
             <!-- eDelivery scope -->
             <Scope>
                 <Type>DOCUMENTID</Type>
-                <InstanceIdentifier>urn:dk:medcom:prod:messaging:fhir:structuredefinition:acknowledgement#urn:dk:medcom:fhir:acknowledgement:2.0</InstanceIdentifier>
+                <InstanceIdentifier>urn:dk:healthcare:medcom:messaging:fhir:structuredefinition::acknowledgement-message##urn:dk:medcom:fhir:acknowledgement-message::2.0</InstanceIdentifier>
                 <Identifier>dk-medcom-messaging</Identifier>
             </Scope>
             <Scope>
                 <Type>PROCESSID</Type>
-                <InstanceIdentifier>sdn-emergence</InstanceIdentifier>
+                <InstanceIdentifier>urn:ehmi:sdn-emergence</InstanceIdentifier>
                 <Identifier>dk-medcom-messaging</Identifier>
             </Scope>
             <!-- MedCom messaging scope -->
