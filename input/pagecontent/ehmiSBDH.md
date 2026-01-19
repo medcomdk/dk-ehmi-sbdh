@@ -608,7 +608,7 @@ DOCUMENTID ehmiSBDH EnvelopeReceipt example:
     <Scope> 
         <Type>DOCUMENTID</Type> 
         <InstanceIdentifier>
-           urn:dk:healthcare:messaging:oasis:ebxml:schema:xsd::ehmisbdh-acknowledgement##urn:dk:ehmi:sbdh:ehmisbdh-acknowledgement::1.0
+           urn:dk:healthcare:medcom:messaging:fhir:structuredefinition::acknowledgement-message##urn:dk:medcom:fhir:acknowledgement-message::2.0
         </InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>

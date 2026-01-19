@@ -596,9 +596,7 @@ MedCom FHIR Meddelelseseksempel
 
     <Scope> 
         <Type>DOCUMENTID</Type> 
-        <InstanceIdentifier>
-            urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation# urn:dk:medcom:fhir:homecareobservation:3.0
-        </InstanceIdentifier>
+        <InstanceIdentifier>urn:dk:healthcare:medcom:messaging:fhir:structuredefinition::homecareobservation-message##urn:dk:medcom:fhir:homecareobservation-message::1.2</InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
@@ -625,7 +623,7 @@ DOCUMENTID ehmiSBDH EnvelopeReceipt eksempel:
     <Scope> 
         <Type>DOCUMENTID</Type> 
         <InstanceIdentifier>
-           urn:dk:healthcare:messaging:oasis:ebxml:schema:xsd:: ehmisbdh-acknowledgement##urn:dk:ehmi:sbdh:ehmisbdh-acknowledgement::1.0
+           urn:dk:healthcare:medcom:messaging:fhir:structuredefinition::acknowledgement-message##urn:dk:medcom:fhir:acknowledgement-message::2.0
         </InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
