@@ -813,7 +813,7 @@ MESSAGEENVELOPEIDENTIFIER example:
 
 ORIGINAL MESSAGE IDENTIFIER is the MESSAGE IDENTIFIER of the original contained message, i.a. for use in collection of EDS shipping status.
 
-Is only relevant when SBD/SBDH/DocumentInformation/Standard.value = “ebbp-signals”
+Is only relevant when SBD/SBDH/DocumentInformation/Standard.value = “ebbp-signals” and SBD/SBDH/DocumentInformation/Standard.value = "acknowledgement-message"
 
     <Scope>
 	    <Type>ORIGINALMESSAGEIDENTIFIER</Type> 
@@ -840,7 +840,7 @@ ORIGINALMESSAGEIDENTIFIER example:
 
 The ORIGINAL MESSAGEENVELOPEIDENTIFIER is the contained message's Bundle.id, i.a. for use in collection of EDS shipping status.
 
-Is only relevant when SBD/SBDH/DocumentInformation/Standard.value = “ebbp-signals”
+Is only relevant when SBD/SBDH/DocumentInformation/Standard.value = “ebbp-signals” and SBD/SBDH/DocumentInformation/Standard.value = "acknowledgement-message"
 
     <Scope>
 	    <Type>ORIGINALMESSAGEENVELOPEIDENTIFIER</Type> 
