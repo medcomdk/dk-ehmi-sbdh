@@ -3,11 +3,11 @@ canonical: http://medcomehmi.dk/ig/dk-ehmi-sbdh
 name: DK EHMI SBDH IG
 title: "DK EHMI SBDH IG"
 description: The DK EHMI SBDH IG
-status: active # draft | active | retired | unknown
-version: 1.0.2
+status: draft # draft | active | retired | unknown
+version: 2.0.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
-releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 jurisdiction: urn:iso:std:iso:3166#DK "Denmark"
 publisher:
@@ -19,12 +19,12 @@ publisher:
 dependencies:
   hl7.fhir.dk.core: 3.4.0
   medcom.fhir.dk.core: 2.4.0
-  medcom.fhir.dk.messaging: dev #3.0.0
-  medcom.fhir.dk.terminology: 1.8.0
-  dk.ehmi.terminology: dev #1.0.0
-  dk.ehmi.eer:  dev #1.0.0
-  medcom.fhir.dk.xdsmetadata: 1.0.0
-  medcom.fhir.dk.document: 1.0.0
+  medcom.fhir.dk.messaging: 4.0.1
+  medcom.fhir.dk.terminology: 2.0.2
+  dk.ehmi.terminology: current #1.0.0
+  dk.ehmi.eer:  current #1.0.0
+  medcom.fhir.dk.xdsmetadata: current #2.0.0
+  medcom.fhir.dk.document: 2.0.0
 
 menu:
   Home: index.html
