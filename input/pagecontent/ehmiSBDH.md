@@ -866,22 +866,32 @@ ORIGINALMESSAGEENVELOPEIDENTIFIER example:
 
 ORIGINAL MESSAGE STANDARD is the original contained message standard, i.a. for use in collection of EDS shipping status.
 
-Is only relevant when SBD/SBDH/DocumentInformation/Standard.value = “ebbp-signals”
+Is only relevant when SBD/SBDH/DocumentInformation/Standard.value = “ebbp-signals” or SBD/SBDH/DocumentInformation/Standard.value = "acknowledgement-message"
 
     <Scope>
 	    <Type>ORIGINALMESSAGESTANDARD</Type> 
 	    <InstanceIdentifier>
-            Den originale meddelelsesstandard [SBD/SBDH/DocumentInformation/Standard.value] 
+            The original message standard [SBD/SBDH/DocumentInformation/Standard.value] 
         </InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-ORIGINALMESSAGESTANDARD example:
+
+ORIGINALMESSAGESTANDARD example for “ebbp-signals”:
 
     <Scope>
 	    <Type>ORIGINALMESSAGESTANDARD</Type> 
-    <InstanceIdentifier>homecareobservation-message</InstanceIdentifier>
-     <Identifier>dk-medcom-messaging</Identifier>
+        <InstanceIdentifier>homecareobservation-message</InstanceIdentifier>
+        <Identifier>dk-medcom-messaging</Identifier>
+    </Scope>
+
+
+ORIGINALMESSAGESTANDARD example for "acknowledgement-message":
+
+    <Scope>
+	    <Type>ORIGINALMESSAGESTANDARD</Type> 
+        <InstanceIdentifier>unknown</InstanceIdentifier>
+        <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
 <!-- br -->
@@ -890,7 +900,7 @@ ORIGINALMESSAGESTANDARD example:
 
 ORIGINAL MESSAGE VERSION is the version of the original contained message, i.a. for use in collection of EDS shipping status. 
 
-Is only relevant when SBD/SBDH/DocumentInformation/Standard.value = “ebbp-signals”
+Is only relevant when SBD/SBDH/DocumentInformation/Standard.value = “ebbp-signals” or SBD/SBDH/DocumentInformation/Standard.value = "acknowledgement-message"
 
     <Scope>
 	    <Type>ORIGINALMESSAGEVERSION</Type> 
@@ -901,13 +911,20 @@ Is only relevant when SBD/SBDH/DocumentInformation/Standard.value = “ebbp-sign
     </Scope>
 
 
-ORIGINALMESSAGEVERSION example:
+ORIGINALMESSAGEVERSION example for “ebbp-signals”:
 
     <Scope>
 	    <Type>ORIGINALMESSAGEVERSION</Type> 
-        <InstanceIdentifier> 
-            [SBD/SBDH/DocumentInformation/TypeVersion.value] 
-        </InstanceIdentifier>
+        <InstanceIdentifier>1.2</InstanceIdentifier>
+        <Identifier>dk-medcom-messaging</Identifier>
+    </Scope>
+
+
+ORIGINALMESSAGEVERSION example for "acknowledgement-message":
+
+    <Scope>
+	    <Type>ORIGINALMESSAGEVERSION</Type> 
+        <InstanceIdentifier>unknown</InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
