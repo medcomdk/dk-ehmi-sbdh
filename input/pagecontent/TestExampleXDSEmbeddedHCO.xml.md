@@ -1,5 +1,6 @@
 # Test example of an SBDH with XDS metadata and an embedded homecareobservation message
-Please note that the XDS metadata scope is not adequate and is still being worked out.
+
+[Link to the embedded file](TestExample_ehmiMessage_HCO.json.html)
 
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <StandardBusinessDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
