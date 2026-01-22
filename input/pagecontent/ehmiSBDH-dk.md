@@ -295,7 +295,7 @@ SBDH-envelope eksempel:
 
     <DocumentInformation>
         …
-        <Standard>ebbp-signals</Standard>
+        <Standard>ehmisbdh-acknowledgement</Standard>
         …
     </DocumentInformation>
 
@@ -530,7 +530,7 @@ Eksempel:
 <br>
 
     <DocumentIdentification>
-        <Standard>ebbp-signals</Standard>
+        <Standard>ehmisbdh-acknowledgement</Standard>
 	    <TypeVersion>ebbp-signals-2.0</TypeVersion>
 	    <InstanceIdentifier>9a6ff822-08de-5a6f-9670-9fa4b9d2f0dx</InstanceIdentifier>
 	    <Type>ReceiptAcknowledgement</Type>
