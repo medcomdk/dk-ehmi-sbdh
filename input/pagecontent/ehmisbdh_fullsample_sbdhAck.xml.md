@@ -19,7 +19,7 @@
                     <Identifier Authority="iso6523-actorid-upis">0088:5790000121526</Identifier>
                 </Receiver>
                 <DocumentIdentification>
-                    <Standard>ebbp-signals</Standard>
+                    <Standard>ehmisbdh-acknowledgement</Standard>
                     <TypeVersion>ebbp-signals-2.0</TypeVersion>
                     <InstanceIdentifier>c8792b06-eaa3-48db-a815-3e58b2086ab2</InstanceIdentifier>
                     <Type>SBDHReceiptAcknowledgement</Type>

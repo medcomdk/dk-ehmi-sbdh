@@ -295,7 +295,7 @@ SBDH-envelope eksempel:
 
     <DocumentInformation>
         …
-        <Standard>ehmisbdh-acknowledgement</Standard>
+        <Standard>ebbp-signals</Standard>
         …
     </DocumentInformation>
 
