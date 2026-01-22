@@ -1,4 +1,4 @@
-# Test example of an SBDH Acknowledgement with embedded ebbp-signals
+# Test example of an ehmiSBDH with an embedded SBDH Acknowledgement 
 
 [Link to the embedded file](TestExample_ehmiMessage_SBDHAck.xml_raw.html)
 
