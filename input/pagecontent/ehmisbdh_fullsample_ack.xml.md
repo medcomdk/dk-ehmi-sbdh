@@ -20,7 +20,7 @@
                     <Identifier Authority="iso6523-actorid-upis">0088:5790000201389</Identifier>
                 </Receiver>
                 <DocumentIdentification>
-                    <Standard>Acknowledgement-message</Standard>
+                    <Standard>acknowledgement-message</Standard>
                     <TypeVersion>2.0</TypeVersion>
                     <InstanceIdentifier>c8792b06-eaa3-48db-a815-3e58b2086ab2</InstanceIdentifier>
                     <Type>Bundle</Type>
