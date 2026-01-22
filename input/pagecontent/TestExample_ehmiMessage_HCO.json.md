@@ -1,6 +1,6 @@
 # Example Bundle: 401cbc36-db1e-4fe0-bf90-6df331dde179
 
-[This example is also represented here more comprehensive in different formats](Bundle-401cbc36-db1e-4fe0-bf90-6df331dde179.json.html)
+[This example is also represented here in more comprehensive in different formats](Bundle-401cbc36-db1e-4fe0-bf90-6df331dde179.json.html)
 
     {
       "resourceType" : "Bundle",
