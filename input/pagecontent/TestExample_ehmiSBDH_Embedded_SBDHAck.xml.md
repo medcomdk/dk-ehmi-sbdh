@@ -1,4 +1,4 @@
-# Test example of an SBDH Acknowledgement
+# Test example of an EHMI SBDH Acknowledgement 
 
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <StandardBusinessDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
