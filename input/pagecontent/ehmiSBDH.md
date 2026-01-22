@@ -4,11 +4,9 @@
 
 The StandardBusinessDocumentHeader (SBDH) is an envelope specification issued by GS1 and profiled for use in PEPPOL. It is supported by eDelivery's Access Points (AP) according to the AS4 protocol. We follow the conventions, which are laid out in PEPPOL's profiling, but also we are extending it to be able to take care of the health area. However, ehmiSBDH is nothing without a surrounding container, called StandardBusinessDocument (SBD).
 
-<!-- br -->
 
 ### StandardBusinessDocument
 
-<!-- br -->
 
 StandardBusinessDocument is, as mentioned, SBDH's surrounding container, and is a wrapper around SBDH, and contains only two elements:
 
@@ -17,12 +15,9 @@ StandardBusinessDocument is, as mentioned, SBDH's surrounding container, and is 
 
 Although the StandardBusinessDocument, as such, is the envelope, the term ehmiSBDH is generally used for the entire envelope, since it is this content that is of particular interest in the message exchange. BinaryContent is the element that contains a base64-encoded message or Acknowledgement for a sent SBDH.
 
-<!-- br -->
 
 <!--img src="ehmiSBDH_Document.png" alt="EHMI StandardBusinessDocument" /><br/-->
-<img src="ClassSbdBasic.png" alt="EHMI StandardBusinessDocument" style="width:50%;height:auto;margin-left:25%; margin-right:25%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
-
-<!-- br -->
+<img src="ClassSbdBasic.png" alt="EHMI StandardBusinessDocument" style="width:50%;height:auto;margin-left:25%; margin-right:25%; margin-top:30px; margin-bottom:30px;"/>
 
 The content of ehmiSBDH is largely determined by how
 
@@ -32,7 +27,6 @@ The content of ehmiSBDH is largely determined by how
 - the context is for ehmiSBDH EnvelopeReceipt
 - the same information is registered in EDS
 
-<!-- br -->
 
 ehmiSBDH has a structure that is generally divided into the following elements:
 
@@ -43,7 +37,6 @@ ehmiSBDH has a structure that is generally divided into the following elements:
 -	Manifest
 -	BusinessScope
 
-<!-- br -->
 
 #### ehmiSBDH for a MedcomMessagingMessage and a MedCom Acknowledgement
 
@@ -56,7 +49,6 @@ In an ehmiSBDH for a MedCom Message and a MedCom Acknowledgement, the following 
 - Metadata for MedCom Statistics
 - Metadata for Reliable messaging - BusinessService Request
 
-<!-- br -->
 
 #### ehmiSBDH for an ehmiSBDH EnvelopeReceipt 
 
@@ -68,18 +60,14 @@ In an ehmiSBDH for an ehmiSBDH EnvelopeReceipt there is the following metadata:
 - Metadata for MedCom Statistics
 - Metadata for Reliable messaging - BusinessService Response
 
-<!-- br -->
 
 ### ehmiSbdh– general fixed elements
 
 SBDH's general elements are illustrated in the figure below.
 
-<!-- br -->
 
 <!--img src="ehmiSBDH_Header.png" alt="EHMI StandardBusinessDocument" /><br/-->
-<img src="ClassSbdhBasic.png" alt="EHMI StandardBusinessDocument"  style="width:80%;height:auto;margin-left:0%; margin-right:20%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
-
-<!-- br -->
+<img src="ClassSbdhBasic.png" alt="EHMI StandardBusinessDocument"  style="width:80%;height:auto;margin-left:0%; margin-right:20%; margin-top:30px; margin-bottom:30px;"/>
 
 BusinessScope has, however, been given its own chapter, as it differs significantly from the others. In the following, the general ehmiSBDH-elements are presented for the provisionally 2 message types that EHMI operates with:
 
@@ -88,7 +76,6 @@ BusinessScope has, however, been given its own chapter, as it differs significan
 
 Where applicable, the general elements will be divided into subsections that describe the path to the value of that element in the respective message types. Where most elements have a general focus on message exchange in general and the interaction with SMP, BusinessScope in particular gives a health-oriented imprint in the specification.
 
-<!-- br -->
 
 #### HeaderVersion
 
@@ -96,19 +83,15 @@ Always
 
     <HeaderVersion>1.0</HeaderVersion>
 
-<!-- br -->
 
 #### Sender
 
-<!-- br -->
 
 ehmiSbdhSender contains only the mandatory element Identifier.
  
-<!-- br -->
 
 ##### Identifier
 
-<!-- br -->
 
 Contains the attribute Authority, which according to [Policy_identifiers], POLICY 6 Numeric Codes for Issuing Agencies, always has the value: "iso6523-actorid-upis"
 
@@ -117,7 +100,6 @@ Identifier represents GLN of sender where
 - The value 0088: reflects that the type is GLN.
 - The value after 0088: reflects the GLN number.
 
-<!-- br -->
 
     <Sender>
         <Identifier Authority="iso6523-actorid-upis">    
@@ -125,13 +107,11 @@ Identifier represents GLN of sender where
         </Identifier>
     </Sender>
 
-<!-- br -->
 
 ##### If the MedCom Message is of type FHIR 
 
 If the MedCom Message is of type FHIR, then always in the following format:
 
-<!-- br -->
 
    <Sender>
         <Identifier Authority="iso6523-actorid-upis">    
@@ -139,11 +119,9 @@ If the MedCom Message is of type FHIR, then always in the following format:
         </Identifier>
     </Sender>
 
-<!-- br -->
 
 ##### Sender example
 
-<!-- br -->
 
 Regardless of the message type, it will always result in the following Sender/Identifier, where the value after 0088: will of course vary.
 
@@ -153,19 +131,15 @@ Regardless of the message type, it will always result in the following Sender/Id
         </Identifier>
     </Sender>
 
-<!-- br -->
 
 ##### Receiver
 
-<!-- br -->
 
 ehmiSbdhReceiver contains only the mandatory element Identifier.
 
-<!-- br -->
 
 ##### Identifier
 
-<!-- br -->
 
 Contains the attribute Authority, which according to [Policy_identifiers], POLICY 6 Numeric Codes for Issuing Agencies, always has the value: "iso6523-actorid-upis"
 
@@ -174,7 +148,6 @@ Identifier represents GLN of sender where
 - The value 0088: reflects that the type is GLN.
 - The value after 0088: reflects the GLN number.
 
-<!-- br -->
 
     <Receiver>
         <Identifier Authority="iso6523-actorid-upis">    
@@ -182,11 +155,9 @@ Identifier represents GLN of sender where
         </Identifier>
     </Receiver>' 
 
-<!-- br -->
 
 ##### If the MedCom Message is of type FHIR 
 
-<!-- br -->
 
 If the MedCom Message is of type FHIR, then always in the following format:
 
@@ -196,11 +167,9 @@ If the MedCom Message is of type FHIR, then always in the following format:
         </Identifier>
     </Receiver>
 
-<!-- br -->
 
 ##### Receiver example:
 
-<!-- br -->
 
 Regardless of the message type, it will always result in the following Receiver/Identifier, where the value after 0088: will of course vary.
 
@@ -208,11 +177,9 @@ Regardless of the message type, it will always result in the following Receiver/
         <Identifier Authority="iso6523-actorid-upis">0088:5790000201389    </Identifier>
     </Receiver>
 
-<!-- br -->
 
 #### DocumentInformation
 
-<!-- br -->
 
 ##### Standard
 
@@ -223,11 +190,9 @@ EHMI operates with 4 types of standards, each of which has its own prefix accord
 - OIOXML (described in a later version of the standard)
 - Edifact (described in a later version of the standard)
 
-<!-- br -->
 
 ###### If the MedCom Message is of type FHIR 
 
-<!-- br -->
 
 If the MedCom Message is of type FHIR, then always in the following format:
 
@@ -237,25 +202,20 @@ If the MedCom Message is of type FHIR, then always in the following format:
         </Standard>
     </DocumentInformation>
 
-<!-- br -->
 
 Message example: 
 
-<!-- br -->
 
     <DocumentInformation>
         <Standard>homecareobservation-message</Standard>
     </DocumentInformation>
 
-<!-- br -->
 
 ###### If the MedCom Message is of type ehmiSBDH EnvelopeReceipt
 
-<!-- br -->
 
 Always 
 
-<!-- br -->
 
     <DocumentInformation>
         …
@@ -265,11 +225,9 @@ Always
         …
     </DocumentInformation>
 
-<!-- br -->
 
 SBDH-envelope example:
 
-<!-- br -->
 
     <DocumentInformation>
         …
@@ -277,15 +235,12 @@ SBDH-envelope example:
         …
     </DocumentInformation>
 
-<!-- br -->
 
 ##### TypeVersion
 
-<!-- br -->
 
 Is the contained message version on the form
 
-<!-- br -->
 
     <DocumentInformation>
         …
@@ -293,11 +248,9 @@ Is the contained message version on the form
         …
     </DocumentInformation>
 
-<!-- br -->
 
 ###### If the MedCom Message is of type FHIR 
 
-<!-- br -->
 
 If the MedCom Message is of type FHIR, then always in the following format:
 
@@ -309,11 +262,9 @@ If the MedCom Message is of type FHIR, then always in the following format:
         …
     </DocumentInformation>
 
-<!-- br -->
 
 Message example:
 
-<!-- br -->
 
     <DocumentInformation>
 	    …
@@ -321,11 +272,9 @@ Message example:
         …
     </DocumentInformation>
 
-<!-- br -->
 
 If the contained message is of type ehmiSBDH EnvelopeReceipt, always 
 
-<!-- br -->
 
     <DocumentInformation>
         …
@@ -335,11 +284,9 @@ If the contained message is of type ehmiSBDH EnvelopeReceipt, always
         …
     </DocumentInformation>
 
-<!-- br -->
 
 ehmiSBDH EnvelopeReceipt example:
 
-<!-- br -->
 
     <DocumentInformation>
         …
@@ -347,11 +294,9 @@ ehmiSBDH EnvelopeReceipt example:
         …
     </DocumentInformation>
 
-<!-- br -->
 
 ##### InstanceIdentifier 
 
-<!-- br -->
 
 The InstanceIdentifier will be generated by the sending MSH and is regardless of whether a message or an ehmiSBDH EnvelopeReceipt is generated.
 
@@ -359,7 +304,6 @@ The InstanceIdentifier will be generated by the sending MSH and is regardless of
 
 example:
 
-<!-- br -->
 
     <!-- [generated UUID] -->	
     <DocumentInformation>
@@ -368,15 +312,12 @@ example:
         …
     </DocumentInformation>
 
-<!-- br -->
 
 ##### Type
 
-<!-- br -->
 
 Message:
 
-<!-- br -->
 
     <DocumentInformation>
         …
@@ -384,11 +325,9 @@ Message:
         …
     </DocumentInformation>
 
-<!-- br -->
 
 ###### If the MedCom Message is of type FHIR 
 
-<!-- br -->
 
 If the MedCom Message is of type FHIR, then always in the following format:
 
@@ -398,11 +337,9 @@ If the MedCom Message is of type FHIR, then always in the following format:
         …
     </DocumentInformation>
 
-<!-- br -->
 
 Message example:
 
-<!-- br -->
 
     <DocumentInformation>
         …
@@ -410,11 +347,9 @@ Message example:
         …
     </DocumentInformation>
 
-<!-- br -->
 
 ###### If the message is of type ehmiSBDH EnvelopeReceipt:
 
-<!-- br -->
 
     <DocumentInformation>
         …
@@ -422,7 +357,6 @@ Message example:
         …
     </DocumentInformation>
 
-<!-- br -->
 
 Receipt type has the following scope: Scope for these ebXML Business Process Signals is:
 
@@ -430,11 +364,9 @@ Receipt type has the following scope: Scope for these ebXML Business Process Sig
 - ReceiptException
 - AcceptanceAcknowledgement (NOTE! not used in the production Production Pilot)
 
-<!-- br -->
 
 EnvelopeReceipt example:
 
-<!-- br -->
 
     <DocumentInformation>
         …
@@ -442,15 +374,12 @@ EnvelopeReceipt example:
         …
     </DocumentInformation>
 
-<!-- br -->
 
 ##### MultipleType
 
-<!-- br -->
 
 Always false: 
 
-<!-- br -->
 
     <DocumentInformation>
         …
@@ -458,13 +387,11 @@ Always false:
         …
     </DocumentInformation>
 
-<!-- br -->
 
 ##### CreationDateAndTime
 
 Always in this format: [YYYY-MM-DD]T[TT-MM-SS]+[offset-to-UTC]
 
-<!-- br -->
 
     <DocumentInformation>
         …
@@ -474,11 +401,9 @@ Always in this format: [YYYY-MM-DD]T[TT-MM-SS]+[offset-to-UTC]
         …
     </DocumentInformation>
 
-<!-- br -->
 
 example:
 
-<!-- br -->
 
     <DocumentInformation>
         …
@@ -486,7 +411,6 @@ example:
         …
     </DocumentInformation>
 
-<!-- br -->
 
 ##### DocumentInformation - aggregate message example
 
@@ -499,14 +423,12 @@ example:
 	    <CreationDateAndTime>2025-04-01T16-19-00+01:00</CreationDateAndTime>
     </DocumentIdentification>
 
-<!-- br -->
 
 ##### DocumentInformation - aggregate EnvelopeReceipt example
 
-<!-- br -->
 
     <DocumentIdentification>
-        <Standard>ebbp-signals</Standard>
+        <Standard>ehmisbdh-acknowledgement</Standard>
 	    <TypeVersion>ebbp-signals-2.0</TypeVersion>
 	    <InstanceIdentifier>9a6ff822-08de-5a6f-9670-9fa4b9d2f0dx</InstanceIdentifier>
 	    <Type>ReceiptAcknowledgement</Type>
@@ -514,44 +436,32 @@ example:
 	    <CreationDateAndTime>2025-04-01T16-19-00+01:00</CreationDateAndTime>
     </DocumentIdentification>
 
-<!-- br -->
 
 #### Manifest (deliberately omitted in the Production Pilot version) 
 
-<!-- br -->
 
 ## ehmiSbdhBusinessScopes 
 
 ehmiSbdhBusinessScopes is the SBDH's name-value pair construction characterized by an identifier. Name is expressed by the Type element and value is expressed by the InstanceIdentifier. These two change for each scope, while the Identifier in the EHMI context is always the same: dk-medcom-messaging. In the following, they are reviewed in the logical contexts in which they appear.
-<!-- br -->
 
-<img src="ClassSbdhBusinessScopeBasic.png" alt="ehmiSbdhBusinessScope"  style="width:30%;height:auto;margin-left:35%; margin-right:35%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
-
+<img src="ClassSbdhBusinessScopeBasic.png" alt="ehmiSbdhBusinessScope"  style="width:30%;height:auto;margin-left:35%; margin-right:35%; margin-top:30px; margin-bottom:30px;"/>
 ### eDelivery message communication
 
-<!-- br -->
 
 #### In context of SMP 
 
 In the eDelivery communication, the SBDH's Scope structure with the two types, DOCUMENTID and PROCESSID, is the direct relation to the SMP's DOCUMENTID and PROCESSID. Furthermore, the context also includes the elements already reviewed in the section on Receiver. In the following, precisely these two types of elements in the SBDH's overall BusinessScope structure are described. The scopes, DOCUMENTID and PROCESSID, are permanently defined scopes by PEPPOL, which ensure a unique relationship to SMP. DOCUMENTID and PROCESSID are used in EHMI with the same precision as in PEPPOL, so that consistency is ensured in how the values ​​are expressed across PEPPOL and EHMI. DOCUMENTID and PROCESSID are used by the APs together with recipient's Receiver/Identifier to look up recipient's eDelivery address in SMP with a unique response as a result.
 
-<!-- br -->
 
-<img src="ehmiSBDH_BusinessScopesPeppol.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
-
-<!-- br -->
+<img src="ehmiSBDH_BusinessScopesPeppol.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/>
 
 #### DOCUMENTID
 
-<!-- br -->
 
 The value in InstanceIdentifier is identical to the corresponding SMP record. The values ​​are taken from MedCom's standard catalog and are here represented by the values ​​that indicate the type of message. See bookmark: [DKEDEL_DT_CodeList]
 
-<!-- br -->
 
 ##### DOCUMENTID for MedCom Messaging Messages
-
-<!-- br -->
 
     <Scope> 
         <Type>DOCUMENTID</Type> 
@@ -561,11 +471,7 @@ The value in InstanceIdentifier is identical to the corresponding SMP record. Th
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<!-- br -->
-
 MedcomMessagingMessage example 
-
-<!-- br -->
 
     <Scope> 
         <Type>DOCUMENTID</Type> 
@@ -576,7 +482,6 @@ MedcomMessagingMessage example
     </Scope>
 
 MedcomMessagingMessage Acknowledgement example 
-
     <Scope> 
         <Type>DOCUMENTID</Type> 
         <InstanceIdentifier>
@@ -585,11 +490,7 @@ MedcomMessagingMessage Acknowledgement example
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<!-- br -->
-
 ##### DOCUMENTID for ehmiSBDH EnvelopeReceipt
-
-<!-- br -->
 
     <Scope> 
         <Type>DOCUMENTID</Type> 
@@ -599,11 +500,7 @@ MedcomMessagingMessage Acknowledgement example
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<!-- br -->
-
 DOCUMENTID ehmiSBDH EnvelopeReceipt example:
-
-<!-- br -->
 
     <Scope> 
         <Type>DOCUMENTID</Type> 
@@ -613,14 +510,10 @@ DOCUMENTID ehmiSBDH EnvelopeReceipt example:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<!-- br -->
-
 #### PROCESSID
 
-<!-- br -->
 
 The value in InstanceIdentifier is identical to the corresponding ProcessId SMP record. In the 4-corner model, the SDN emergency registration is also sent to the SMP, so that the sender's AP can look up the final receiver, also called the final recipient, correctly in the SMP.
-
     <Scope> 
         <Type>PROCESSID</Type> 
         <InstanceIdentifier>
@@ -629,41 +522,30 @@ The value in InstanceIdentifier is identical to the corresponding ProcessId SMP 
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<!-- br -->
-
 PROCESSID for SDN example
 
 sdn-emergence is the InstanceIdentifier used to relate a message's emergence on SDN, SundhedsDataNettet.
 
-<!-- br -->
 
 Always
-
     <Scope> 
 	    <Type>PROCESSID</Type> 
         <InstanceIdentifier>urn:ehmi:sdn-emergence</InstanceIdentifier>
 	    <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<!-- br -->
-
 ### Health message communication
 
-<!-- br -->
 
 #### Scope – message metadata - who
 
-<!-- br -->
 
-<img src="ehmiSBDH_BusinessScopesMetadata.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
-
-<!-- br -->
+<img src="ehmiSBDH_BusinessScopesMetadata.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/>
 
 ##### PATIENTID
 
 The patient's Civil Registration Number, CPR, is included as an identifier for use in EDS Shipment status and XDS metadata.
 
-<!-- br -->
 
     <Scope>
         <Type>PATIENTID</Type>
@@ -682,8 +564,6 @@ PATIENTID for MedComMessagingMessages - example:
         </InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
-
-<!-- br -->
 
 ##### SENDERID 
 
@@ -707,8 +587,6 @@ SENDERID for MedComMessagingMessages - example:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<!-- br -->
-
 ##### RECEIVERID 
 
 Recipient's SOR identifier is used for EDS Shipment status. 
@@ -731,15 +609,10 @@ RECEIVERID for MedComMessagingMessages - example:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<!-- br -->
-
 #### Scope – message metadata - what
 
-<!-- br -->
 
-<img src="ehmiSBDH_BusinessScopesMetadata.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
-
-<!-- br -->
+<img src="ehmiSBDH_BusinessScopesMetadata.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/>
 
 ##### MESSAGEIDENTIFIER
 
@@ -753,7 +626,6 @@ MESSAGEIDENTIFIER is the MessageHeader.id of the contained message, i.a. for use
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-
 MESSAGEIDENTIFIER example:
 
     <Scope>
@@ -761,8 +633,6 @@ MESSAGEIDENTIFIER example:
         <InstanceIdentifier>f06c1ac8-6096-5178-a380-2831d2456986</InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
-
-<!-- br -->
 
 ###### If the MedCom Message is of type ehmiSBDH EnvelopeReceipt
 
@@ -774,7 +644,6 @@ MESSAGEIDENTIFIER example:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-
 MESSAGEIDENTIFIER example:
 
     <Scope>
@@ -784,8 +653,6 @@ MESSAGEIDENTIFIER example:
         </InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
-
-<!-- br -->
 
 ###### MESSAGEENVELOPEIDENTIFIER
 
@@ -834,8 +701,6 @@ ORIGINALMESSAGEIDENTIFIER example:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<!-- br -->
-
 ##### ORIGINALMESSAGEENVELOPEIDENTIFIER
 
 The ORIGINAL MESSAGEENVELOPEIDENTIFIER is the contained message's Bundle.id, i.a. for use in collection of EDS shipping status.
@@ -860,8 +725,6 @@ ORIGINALMESSAGEENVELOPEIDENTIFIER example:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<!-- br -->
-
 ##### ORIGINALMESSAGESTANDARD
 
 ORIGINAL MESSAGE STANDARD is the original contained message standard, i.a. for use in collection of EDS shipping status.
@@ -876,7 +739,6 @@ Is only relevant when SBD/SBDH/DocumentInformation/Standard.value = “ebbp-sign
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-
 ORIGINALMESSAGESTANDARD example for “ebbp-signals”:
 
     <Scope>
@@ -885,7 +747,6 @@ ORIGINALMESSAGESTANDARD example for “ebbp-signals”:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-
 ORIGINALMESSAGESTANDARD example for "acknowledgement-message":
 
     <Scope>
@@ -893,8 +754,6 @@ ORIGINALMESSAGESTANDARD example for "acknowledgement-message":
         <InstanceIdentifier>unknown</InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
-
-<!-- br -->
 
 ##### ORIGINALMESSAGEVERSION
 
@@ -910,7 +769,6 @@ Is only relevant when SBD/SBDH/DocumentInformation/Standard.value = “ebbp-sign
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-
 ORIGINALMESSAGEVERSION example for “ebbp-signals”:
 
     <Scope>
@@ -919,7 +777,6 @@ ORIGINALMESSAGEVERSION example for “ebbp-signals”:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-
 ORIGINALMESSAGEVERSION example for "acknowledgement-message":
 
     <Scope>
@@ -927,8 +784,6 @@ ORIGINALMESSAGEVERSION example for "acknowledgement-message":
         <InstanceIdentifier>unknown</InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
-
-<!-- br -->
 
 ##### ORIGINALENVELOPEIDENTIFIER
 
@@ -990,15 +845,10 @@ StatisticalInformation example 2:
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<!-- br -->
-
 ### XDS-Metadata
 
-<!-- br -->
 
-<img src="ehmiSBDH_BusinessScopesXdsMetadata.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
-
-<!-- br -->
+<img src="ehmiSBDH_BusinessScopesXdsMetadata.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/>
 
 #### Document sharing XDS-Metadata
 
@@ -1008,7 +858,6 @@ This scope only applies to MedCom Messages, not MedCom receipts, as they are not
 
 This scope does not apply to the primary exchange between Sender and Receiver.
 
-<!-- br -->
 
 #### ehmiSbdhBusinessScope/Scope for XDS-Metadata
 
@@ -1022,8 +871,6 @@ Always FHIR DocumentReference for the relevant message type with associated vari
 	    <Identifier>dk-medcom-DocumentReference</Identifier>
     </Scope>
 
-<!-- br -->
-
 #### XDS-Metadata (example på encoded value)
 
     <Scope>
@@ -1034,7 +881,6 @@ Always FHIR DocumentReference for the relevant message type with associated vari
 	    <Identifier>dk-medcom-DocumentReference</Identifier>
     </Scope>
 
-<!-- br -->
 * As [DocumentReference-structure] can't be referenced in the above xml-snippet, you can find the example of the structure to be included here: <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-xds-documents/DocumentReference-77787891-083a-4d19-9e56-423e7a223e30.html" target="_blank">[DocumentReference-structure]</a>
 
 ### Reliable messaging 
@@ -1060,21 +906,15 @@ In connection with requirements related to on Reliable messaging, the structure 
 
 CorrelationInformation is used to tie a message and its receipt together. All elements of CorrelationInformation are generated by the sending SBDH-MSH. Recipient of ehmiSBDH and sender of EHMI ReceiptAcknowledgement must acknowledge the elements RequestingDocumentCreationDateTime and RequestingDocumentInstanceIdentifier by indicating the CorrelationInformation. An ehmiSBDH EnvelopeReceipt is never acknowledged.
 
-<!-- br -->
 
-<img src="ClassSbdhBusinessScopeComplex.png" alt="ehmiSbdhBusinessScope Complex"  style="width:60%;height:auto;margin-left:5%; margin-right:35%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
-
+<img src="ClassSbdhBusinessScopeComplex.png" alt="ehmiSbdhBusinessScope Complex"  style="width:60%;height:auto;margin-left:5%; margin-right:35%; margin-top:30px; margin-bottom:30px;"/>
 #### Reliable messaging - BusinessService Request
 
-<!-- br -->
 
-<img src="ehmiSBDH_ReceiptAckowledgementRequest.png" alt="ehmiSBDH_ReceiptAckowledgementRequest"  style="width:80%;height:auto;margin-left:5%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
-
-<!-- br -->
+<img src="ehmiSBDH_ReceiptAckowledgementRequest.png" alt="ehmiSBDH_ReceiptAckowledgementRequest"  style="width:80%;height:auto;margin-left:5%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/>
 
 The following, is how the setup is desired in the Production Pilot.
 
-<!-- br -->
 
 ##### EHMI-ReceiptAcknowledgement- - Request
 
@@ -1086,13 +926,10 @@ In an EHMI-ReceiptAcknowledgement - Request, the scope is always like this:
 	    <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<!-- br -->
-
 ##### CorrelationInformation - 
 
 Reliable messaging uses the SBDH's CorrelationInformation to tie the original ehmiSBDH and the ehmiSBDH EnvelopeReceipt together. The RequestingDocument InstanceIdentifier is specifically used here.
 
-<!-- br -->
 
 ###### CorrelationInformation - RequestingDocumentCreationDateTime
 
@@ -1114,7 +951,6 @@ example:
         …
     <CorrelationInformation>
 
-<!-- br -->
 
 ###### CorrelationInformation - RequestingDocumentInstanceIdentifier
 
@@ -1138,7 +974,6 @@ example:
         …
     <CorrelationInformation>
 
-<!-- br -->
 
 ###### CorrelationInformation - ExpectedResponseDateTime
 
@@ -1160,7 +995,6 @@ example:
         </ExpectedResponseDateTime>
     <CorrelationInformation>
 
-<!-- br -->
 
 ##### CorrelationInformation - samlet example
 
@@ -1176,11 +1010,9 @@ example:
         </ExpectedResponseDateTime>
     </CorrelationInformation>
 
-<!-- br -->
 
 ##### ehmiSbdhBusinessServices - Request
 
-<!-- br -->
 
 ###### BusinessServiceName
 
@@ -1190,67 +1022,56 @@ Always
         EHMI-ReceiptAcknowledgement-Request
     </BusinessServiceName>
 
-<!-- br -->
 
 ###### ServiceTransaction – TypeOfServiceTransaction
 
     TypeOfServiceTransaction=”RequestingServiceTransaction”
 
-<!-- br -->
 
 ###### ServiceTransaction – IsNonRepudiationRequired
 
     IsNonRepudiationRequired=”false” 
 
-<!-- br -->
 
 ###### ServiceTransaction – IsAuthenticationRequired
 
     IsAuthenticationRequired=”false” 
 
-<!-- br -->
 
 ###### ServiceTransaction – IsNonRepudiationOfReceiptRequired
 
     IsNonRepudiationOfReceiptRequired=”false” 
 
-<!-- br -->
 
 ###### ServiceTransaction – IsIntelligibleCheckRequired
 
     IsIntelligibleCheckRequired=”false” 
 
-<!-- br -->
 
 ###### ServiceTransaction – IsApplicationErrorResponseRequested
     
     IsApplicationErrorResponseRequested=”false” 
 
-<!-- br -->
 
 ###### ServiceTransaction – TimeToAcknowledgeReceipt
 
     TimeToAcknowledgeReceipt=”600000” (ms)
 
-<!-- br -->
 
 ###### ServiceTransaction – TimeToAcknowledgeAcceptance
 
     TimeToAcknowledgeAcceptance=”0” (= is not currently used)
 
-<!-- br -->
 
 ###### 0	ServiceTransaction – TimeToPerform
 
     TimeToPerform=”0” (=is not currently used)
 
-<!-- br -->
 
 ###### ServiceTransaction – Recurrence
 
     Recurrence=”0” (=is not currently used)
 
-<!-- br -->
 
 ##### ehmiSbdhBusinessServices - Request example
 
@@ -1271,7 +1092,6 @@ Always
             Recurrence=”0”/>
     </BusinessService>
 
-<!-- br -->
 
 ##### Reliable messaging - BusinessService Request samlet example
 
@@ -1311,19 +1131,14 @@ Always
         …
     </BusinessScope>
  
-<!-- br -->
 
 #### Reliable messaging - BusinessService Response
 
-<!-- br -->
 
-<img src="ehmiSBDH_ReceiptAckowledgementResponse.png" alt="ehmiSBDH_ReceiptAckowledgementResponse"  style="width:80%;height:auto;margin-left:5%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
-
-<!-- br -->
+<img src="ehmiSBDH_ReceiptAckowledgementResponse.png" alt="ehmiSBDH_ReceiptAckowledgementResponse"  style="width:80%;height:auto;margin-left:5%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/>
 
 The following is the setup desired in the Production Pilot.
 
-<!-- br -->
 
 ##### EHMI-ReceiptAcknowledgement - Response
 
@@ -1335,13 +1150,10 @@ In an EHMI-ReceiptAcknowledgement - Response scope is always like this:
 	    <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
-<!-- br -->
-
 ##### CorrelationInformation - 
 
 Reliable messaging uses the SBDH’s CorrelationInformation to tie the original ehmiSBDH and the Acknowledgement ehmiSbdh together. The RequestingDocumentInstanceIdentifier is specifically used here
 
-<!-- br -->
 
 ##### CorrelationInformation - RequestingDocumentCreationDateTime
 
@@ -1354,7 +1166,6 @@ RequestingDocumentCreationDateTime is the disptach time of original envelope = R
     …
     <CorrelationInformation>
 
-<!-- br -->
 
 ##### RequestingDocumentCreationDateTime example
 
@@ -1365,7 +1176,6 @@ RequestingDocumentCreationDateTime is the disptach time of original envelope = R
         …
     <CorrelationInformation>
 
-<!-- br -->
 
 ##### CorrelationInformation - RequestingDocumentInstanceIdentifier
 
@@ -1379,7 +1189,6 @@ RequestingDocumentInstanceIdentifier is the original envelope's identifier = Req
         …
     <CorrelationInformation>
 
-<!-- br -->
 
 ##### RequestingDocumentInstanceIdentifier example
 
@@ -1391,13 +1200,11 @@ RequestingDocumentInstanceIdentifier is the original envelope's identifier = Req
         …
     <CorrelationInformation>
 
-<!-- br -->
 
 ##### CorrelationInformation - ExpectedResponseDateTime
 
 ExpectedResponseDateTime is omitted in an EHMI ReceiptAcknowledgement
 
-<!-- br -->
 
 ##### CorrelationInformation - samlet example
 
@@ -1410,11 +1217,9 @@ ExpectedResponseDateTime is omitted in an EHMI ReceiptAcknowledgement
         </RequestingDocumentInstanceIdentifier>
     </CorrelationInformation>
 
-<!-- br -->
 
 ##### ehmiSbdhBusinessServices - Response
 
-<!-- br -->
 
 ###### BusinessServiceName
 
@@ -1424,7 +1229,6 @@ Always
         EHMI-ReceiptAcknowledgement-Response
     </BusinessServiceName>
 
-<!-- br -->
 
 ###### ServiceTransaction – TypeOfServiceTransaction
 
@@ -1432,7 +1236,6 @@ Always
     
     TypeOfServiceTransaction=”RespondingServiceTransaction”
 
-<!-- br -->
 
 ###### ServiceTransaction – IsNonRepudiationRequired
 
@@ -1440,7 +1243,6 @@ Always
 
     IsNonRepudiationRequired=”false” 
 
-<!-- br -->
 
 ###### ServiceTransaction – IsAuthenticationRequired
 
@@ -1448,7 +1250,6 @@ Always
 
     IsAuthenticationRequired=”false” 
 
-<!-- br -->
 
 ###### ServiceTransaction – IsNonRepudiationOfReceiptRequired
 
@@ -1456,7 +1257,6 @@ Always
 
     IsNonRepudiationOfReceiptRequired=”false” 
 
-<!-- br -->
 
 ###### ServiceTransaction – IsIntelligibleCheckRequired
 
@@ -1464,7 +1264,6 @@ Always
 
     IsIntelligibleCheckRequired=”false” 
 
-<!-- br -->
 
 ###### ServiceTransaction – IsApplicationErrorResponseRequested
 
@@ -1472,7 +1271,6 @@ Always
 
     IsApplicationErrorResponseRequested=”false” 
 
-<!-- br -->
 
 ###### ServiceTransaction – TimeToAcknowledgeReceipt
 
@@ -1480,7 +1278,6 @@ Always
 
     TimeToAcknowledgeReceipt=”0” (ms)
 
-<!-- br -->
 
 ###### ServiceTransaction – TimeToAcknowledgeAcceptance
 
@@ -1488,7 +1285,6 @@ Always
 
     TimeToAcknowledgeAcceptance=”0” (=is not currently used)
 
-<!-- br -->
 
 ###### 0	ServiceTransaction – TimeToPerform
 
@@ -1496,7 +1292,6 @@ Always
 
     TimeToPerform=”0” (=is not currently used)
 
-<!-- br -->
 
 ###### ServiceTransaction - Recurrence
 
@@ -1504,7 +1299,6 @@ Always
 
     Recurrence=”0” (=is not currently used)
 
-<!-- br -->
 
 ###### ehmiSbdhBusinessServices - Response example
 
@@ -1520,7 +1314,6 @@ Always
             Recurrence=”0”/>
     </BusinessService>
 
-<!-- br -->
 
 ###### Reliable messaging - BusinessService Response overall example
     
@@ -1552,13 +1345,11 @@ Always
         …
     </BusinessScope>
 
-<!-- br -->
 
 <!--
 
 #### EHMI ReceiptAcknowledgement
 
-<!-- br -->
 
 EHMI ReceiptAcknowledgement is used as a positive transport receipt, and so that the recipient of the receipt can easily correlate the message with the original envelope, the recipient can check the
 
@@ -1575,15 +1366,11 @@ EHMI ReceiptAcknowledgement is used as a positive transport receipt, and so that
 
 Embedded in an ehmiSbdhReceiptAcknowledgement is also an ebBP signal, which in principle contains the same information, but which does not need to be checked when it is a ReceiptAcknowledgement.
 
-<!-- br -->
 
-<img src="ehmiSBDH_ReceiptAckowledgement.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
-
-<!-- br -->
+<img src="ehmiSBDH_ReceiptAckowledgement.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/>
 
 The Receipt Acknowledgement Business Signal signals that a message has been properly received by the Receiver MSH software component. Legible means that it has passed structure/schema validity check. The content of the receipt and the legibility of a business message MUST be reviewed prior to the processing of the Requesting or Responding Business Document or the evaluation of condition expressions in the message's Business Documents or Document Envelope. Condition Expressions are expressions that evaluate to true or false. [ebXMLbp] 
 
-<!-- br -->
 
 ###### OriginalMessageIdentifier
 
@@ -1599,7 +1386,6 @@ OriginalMessageIdentifier example
         9a6ff822-08de-5a6f-9670-9fa4b9d2f0dc
     </bpssignal:OriginalMessageIdentifier>		
 
-<!-- br -->
 
 ###### OriginalDocumentIdentifier
 
@@ -1615,7 +1401,6 @@ OriginalDocumentIdentifier example
         urn:dk:healthcare:prod:messaging:medcom: fhir:structuredefinition:[Bundle/MessageHeader/eventCoding/code.value]#urn:dk:medcom:fhir:[Bundle/MessageHeader/definition/[value of MessageDefinition version-part]]
     </bpssignal:OriginalDocumentIdentifier>
 
-<!-- br -->
 
 ###### OriginalMessageDateTime
 
@@ -1631,7 +1416,6 @@ OriginalMessageDateTime example
         2025-04-01T16:19:00+01:00
     </bpssignal:OriginalMessageDateTime>
 
-<!-- br -->
 
 ###### ThisMessageDateTime
 
@@ -1647,7 +1431,6 @@ ThisMessageDateTime example
         2025-04-01T16:19:10+01.00
     </bpssignal:ThisMessageDateTime>
 
-<!-- br -->
 
 ###### FromPartyInfo
  
@@ -1661,7 +1444,6 @@ FromPartyInfo example
         0088:5790000201389
     </bpssignal:FromPartyInfo>
 
-<!-- br -->
 
 ###### ToPartyInfo
 
@@ -1675,7 +1457,6 @@ ToPartyInfo example
         0088:5790000121526
     </bpssignal:ToPartyInfo>
 
-<!-- br -->
 
 ##### Overall EHMI ReceiptAcknowledgement example
 
@@ -1704,11 +1485,9 @@ ToPartyInfo example
     </bpssignal:ReceiptAcknowledgement>
 
 
-<!-- br -->
 
 #### Receipt Exception
 
-<!-- br -->
 
 A  Receipt Exception signals an error condition in the management of a Business Transaction. This Business Signal is returned to the initiating activity that originated the request. This exception MUST terminate the Business Transaction. These errors deal with the mechanisms of message exchange such as verification, validation, authentication, and authorization and will occur up to message acceptance. Typically, the rules and constraints applied to the message will have only dealt with the well-formedness of the message.
 
@@ -1721,49 +1500,39 @@ A receipt exeption terminates the Business Transaction. The following are receip
 
 A Receipt Exception typical signals an error condition in a Business Activity which requires a transaction to be terminated, i.e. receipt of a business message with a Business Document that has failed. (From [ebXMLbp] page 77)
 
-<!-- br -->
 
-<img src="ehmiSBDH_ReceiptAckowledgementException.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/><!-- br -->
-
-<!-- br -->
+<img src="ehmiSBDH_ReceiptAckowledgementException.png" alt="EHMI StandardBusinessDocument"  style="width:70%;height:auto;margin-left:15%; margin-right:15%; margin-top:30px; margin-bottom:30px;"/>
 
 ###### OriginalMessageIdentifier
 
-<!-- br -->
 
 As 7.4.3.1.1
 
-<!-- br -->
 
 ###### OriginalDocumentIdentifier
 
 As 7.4.3.1.2
 
-<!-- br -->
 
 ###### OriginalMessageDateTime
 
 As 7.4.3.1.3 
 
-<!-- br -->
 
 ###### ThisMessageDateTime
 
 As 7.4.3.1.4 
 
-<!-- br -->
 
 ###### FromPartyInfo
 
 As 7.4.3.1.5 
 
-<!-- br -->
 
 ###### ToPartyInfo
 
 As 7.4.3.1.6
 
-<!-- br -->
 
 ###### ExceptionType
 
@@ -1783,7 +1552,6 @@ ExceptionType example
         </bpssignal:ReceiptException>
     </bpssignal:ExceptionType>
 
-<!-- br -->
 
 ###### Reason
 
@@ -1799,7 +1567,6 @@ Reason example
         Internal error
     </bpssignal:Reason>
 
-<!-- br -->
 
 ###### ExceptionMessage
 
@@ -1818,7 +1585,6 @@ ExceptionMessage example
     </bpssignal:ExceptionMessage>
 
  
-<!-- br -->
 
 ##### Overall Receipt Acknowledgement  Exception example
 
@@ -1862,12 +1628,10 @@ ExceptionMessage example
         </bpssignal:ExceptionMessage>
     </bpssignal:Exception>
  
-<!-- br -->
  -->
 
 ## ehmiSbdhBinaryContent – the contained message
 
-<!-- br -->
 
 BinaryContent is an ehmiSbdh1.2 extension that allows to wrap specific content in ehmiSBDH and base64-encode it. MimeType clarifies the content and what the recipient can expect from the base64 decoding. 
 
@@ -1893,7 +1657,6 @@ Encoding will have the following outcome space for ReceiptAcknowledgement and Re
 All ehmiSBDH xsd-files can be found via the [download-page](downloads.html), but an overview of what they most importantly contain can be seen here:
 
 (all files open in new window)
-<!-- br -->
 
 - <a href="ehmiSBDH_StandardBusinessDocumentHeader.xsd.html" target="_blank">ehmiSbdhStandardBusinessDocumentHeader Xsd</a>
 - <a href="ehmiSBDH_Partner.xsd.html" target="_blank">ehmiSbdhPartner Xsd</a>
@@ -1902,5 +1665,4 @@ All ehmiSBDH xsd-files can be found via the [download-page](downloads.html), but
 - <a href="ehmiSBDH_EDN-Business-Message-Envelope-1.2.xsd.html" target="_blank">ehmiSbdhBinaryContentType Xsd</a>
 - <a href="ehmiSBDH_ebbp-signals-2.0.4.xsd.html" target="_blank">ehmiSbdhEbbp-Signals 2.0.4 Xsd</a>
 
-<!-- br -->
 
