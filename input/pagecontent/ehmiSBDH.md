@@ -231,7 +231,7 @@ SBDH-envelope example:
 
     <DocumentInformation>
         …
-        <Standard>ebbp-signals</Standard>
+        <Standard>ehmisbdh-acknowledgement</Standard>
         …
     </DocumentInformation>
 
