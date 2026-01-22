@@ -1,5 +1,7 @@
 # Test example of an SBDH with an embedded homecareobservation message
 
+[Link to the embedded file](TestExample_ehmiMessage_HCO.json.html)
+
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <StandardBusinessDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                             xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
