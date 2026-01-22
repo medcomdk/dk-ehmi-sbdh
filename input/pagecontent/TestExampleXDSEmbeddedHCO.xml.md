@@ -1,4 +1,4 @@
-# Test example of an SBDH with XDS metadata and an embedded homecareobservation message
+# Test example of an ehmiSBDH with XDS metadata and an embedded homecareobservation message
 
 [Link to the embedded file](TestExample_ehmiMessage_HCO.json.html)
 
