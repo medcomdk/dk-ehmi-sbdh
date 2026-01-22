@@ -1,4 +1,4 @@
-# Test Example with an embedded FHIR Acknowledgement
+# Test example of an ehmiSBDH with an embedded FHIR Acknowledgement
 
 [Link to the embedded file](TestExample_ehmiMessage_FHIRAck.json.html)
 
