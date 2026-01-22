@@ -18,7 +18,7 @@
     <xs:restriction base="xs:string">
       <xs:enumeration value="homecareobservation-message"/>
       <xs:enumeration value="acknowledgement-message"/>
-      <xs:enumeration value="ebbp-signals"/>
+      <xs:enumeration value="ehmisbdh-acknowledgement"/>
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>

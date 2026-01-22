@@ -295,7 +295,7 @@ SBDH-envelope eksempel:
 
     <DocumentInformation>
         …
-        <Standard>ebbp-signals</Standard>
+        <Standard>ehmisbdh-acknowledgement</Standard>
         …
     </DocumentInformation>
 
@@ -367,7 +367,7 @@ ehmiSBDH EnvelopeReceipt eksempel:
 
     <DocumentInformation>
         …
-        <Type>ebbp-signals-2.0</Type>
+        <Type>ReceiptAcknowledgement</Type>
         …
     </DocumentInformation>
 
@@ -530,7 +530,7 @@ Eksempel:
 <br>
 
     <DocumentIdentification>
-        <Standard>ebbp-signals</Standard>
+        <Standard>ehmisbdh-acknowledgement</Standard>
 	    <TypeVersion>ebbp-signals-2.0</TypeVersion>
 	    <InstanceIdentifier>9a6ff822-08de-5a6f-9670-9fa4b9d2f0dx</InstanceIdentifier>
 	    <Type>ReceiptAcknowledgement</Type>
@@ -596,9 +596,7 @@ MedCom FHIR Meddelelseseksempel
 
     <Scope> 
         <Type>DOCUMENTID</Type> 
-        <InstanceIdentifier>
-            urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation# urn:dk:medcom:fhir:homecareobservation:3.0
-        </InstanceIdentifier>
+        <InstanceIdentifier>urn:dk:healthcare:medcom:messaging:fhir:structuredefinition::homecareobservation-message##urn:dk:medcom:fhir:homecareobservation-message::1.2</InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 
@@ -625,7 +623,7 @@ DOCUMENTID ehmiSBDH EnvelopeReceipt eksempel:
     <Scope> 
         <Type>DOCUMENTID</Type> 
         <InstanceIdentifier>
-           urn:dk:healthcare:prod:messaging:oasis:ebxml:schema:xsd:SBDHReceiptAcknowledgement
+           urn:dk:healthcare:medcom:messaging:fhir:structuredefinition::acknowledgement-message##urn:dk:medcom:fhir:acknowledgement-message::2.0
         </InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
@@ -657,7 +655,7 @@ Altid
 
     <Scope> 
 	    <Type>PROCESSID</Type> 
-        <InstanceIdentifier>sdn-emergence</InstanceIdentifier>
+        <InstanceIdentifier>urn:ehmi:sdn-emergence</InstanceIdentifier>
 	    <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
 

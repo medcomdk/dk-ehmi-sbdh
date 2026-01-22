@@ -19,7 +19,7 @@
                     <Identifier Authority="iso6523-actorid-upis">0088:5790000121526</Identifier>
                 </Receiver>
                 <DocumentIdentification>
-                    <Standard>ebbp-signals</Standard>
+                    <Standard>ehmisbdh-acknowledgement</Standard>
                     <TypeVersion>ebbp-signals-2.0</TypeVersion>
                     <InstanceIdentifier>c8792b06-eaa3-48db-a815-3e58b2086ab2</InstanceIdentifier>
                     <Type>SBDHReceiptAcknowledgement</Type>
@@ -30,12 +30,12 @@
                     <!-- eDelivery scope -->
                     <Scope>
                         <Type>DOCUMENTID</Type>
-                        <InstanceIdentifier>urn:dk:healthcare:prod:messaging:oasis:ebxml:schema:xsd:SBDHReceiptAcknowledgement</InstanceIdentifier>
+                        <InstanceIdentifier>urn:dk:healthcare:messaging:oasis:ebxml:schema:xsd::ehmisbdh-acknowledgement##urn:dk:ehmi:sbdh:ehmisbdh-acknowledgement::1.0</InstanceIdentifier>
                         <Identifier>dk-medcom-messaging</Identifier>
                     </Scope>
                     <Scope>
                         <Type>PROCESSID</Type>
-                        <InstanceIdentifier>sdn-emergence</InstanceIdentifier>
+                        <InstanceIdentifier>urn:ehmi:sdn-emergence</InstanceIdentifier>
                         <Identifier>dk-medcom-messaging</Identifier>
                     </Scope>
                     <!-- MedCom messaging scope -->
@@ -84,7 +84,7 @@
                         <InstanceIdentifier>EHMI-ReceiptAcknowledgement</InstanceIdentifier>
                         <Identifier>dk-medcom-messaging</Identifier>
                     </Scope>
-                    <!-- MedCom messaging - Acknowledgment scope -->
+                    <!-- MedCom messaging - Acknowledgement scope -->
                     <Scope>
                         <Type>EHMI-ReceiptAcknowledgement</Type>
                         <InstanceIdentifier>Response</InstanceIdentifier>

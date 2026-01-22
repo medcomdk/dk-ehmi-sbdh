@@ -24,7 +24,7 @@ SBDH-envelope example:
 
     <DocumentInformation>
         …
-        <Standard>ebbp-signals</Standard>
+        <Standard>ehmisbdh-acknowledgement</Standard>
         …
     </DocumentInformation>
 
@@ -44,7 +44,7 @@ ehmiSBDH EnvelopeReceipt example:
 
     <DocumentInformation>
         …
-        <Type>ebbp-signals-2.0</Type>
+        <Type>ReceiptAcknowledgement</Type>
         …
     </DocumentInformation>
 
@@ -75,7 +75,7 @@ EnvelopeReceipt example:
 ##### DocumentInformation - aggregate EnvelopeReceipt example
 
     <DocumentIdentification>
-        <Standard>ebbp-signals</Standard>
+        <Standard>ehmisbdh-acknowledgement</Standard>
 	    <TypeVersion>ebbp-signals-2.0</TypeVersion>
 	    <InstanceIdentifier>9a6ff822-08de-5a6f-9670-9fa4b9d2f0dx</InstanceIdentifier>
 	    <Type>ReceiptAcknowledgement</Type>
@@ -112,7 +112,7 @@ DOCUMENTID ehmiSBDH EnvelopeReceipt example:
     <Scope> 
         <Type>DOCUMENTID</Type> 
         <InstanceIdentifier>
-           urn:dk:healthcare:prod:messaging:oasis:ebxml:schema:xsd:SBDHReceiptAcknowledgement
+           urn:dk:healthcare:messaging:oasis:ebxml:schema:xsd::ehmisbdh-acknowledgement##urn:dk:ehmi:sbdh:ehmisbdh-acknowledgement::1.0
         </InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
     </Scope>
@@ -762,7 +762,7 @@ In an EHMI-ReceiptAcknowledgement - Response scope is always like this:
 
 ##### CorrelationInformation - 
 
-Reliable messaging uses the SBDH’s CorrelationInformation to tie the original ehmiSBDH and the acknowledgment ehmiSbdhtogether. The RequestingDocumentInstanceIdentifier is specifically used here
+Reliable messaging uses the SBDH’s CorrelationInformation to tie the original ehmiSBDH and the Acknowledgement ehmiSbdh together. The RequestingDocumentInstanceIdentifier is specifically used here
 
 <!-- br -->
 
@@ -1107,7 +1107,7 @@ ToPartyInfo example
             9a6ff82208de-5a6f-9670-9fa4b9d2f0dh
         </bpssignal:OriginalMessageIdentifier>
         <bpssignal:OriginalDocumentIdentifier>
-            urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:3.0
+            urn:dk:healthcare:medcom:messaging:fhir:structuredefinition::homecareobservation-message##urn:dk:medcom:fhir:homecareobservation-message::1.2
         </bpssignal:OriginalDocumentIdentifier>
         <bpssignal:OriginalMessageDateTime>
             2025-04-01T16:19:00+01:00
@@ -1254,7 +1254,7 @@ ExceptionMessage example
             9a6ff82208de-5a6f-9670-9fa4b9d2f0dh
         </bpssignal:OriginalMessageIdentifier>
         <bpssignal:OriginalDocumentIdentifier>
-            urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:3.0
+            urn:dk:healthcare:medcom:messaging:fhir:structuredefinition::homecareobservation-message##urn:dk:medcom:fhir:homecareobservation-message::1.2
         </bpssignal:OriginalDocumentIdentifier>
         <bpssignal:OriginalMessageDateTime>
             2025-04-01T16:19:00+01:00
@@ -1310,6 +1310,7 @@ Encoding in the pilot will be the following for all the MedComMessagingMessages:
 Encoding will have the following outcome space for ReceiptAcknowledgement and ReceiptException in the pilot:
 - "UTF-8"
 
+<!--
 ## ehmiSbdhStructure Mappings
 
 For a number of different mappings to and from ehmiSBDH-elements, there is developed a number of FHIR Structure Mappings in order for the suppliers to better understand and potentially automate some tasks around mappings.
@@ -1318,7 +1319,7 @@ These are:
 - [Transformation specification of a MedcomMessagingMessage to an ehmiSBDH-envelope](MedComMessagingMessage2ehmiSbdh-transform.html)
 - [TBD: Transformation specification of a MedComMessagingMessage and an ehmiSBDH-envelope to a DocumentReference](StructureMap-MedComMessagingMessage2MedComDocumentReference-transform.html)
 - [TBD: Transformation specification of an ehmiSBDH-envelope to an EHMI Delivery Status structure](StructureMap-Sbdh2EhmiDeliveryStatus-transform.html)
-
+-->
 <!-- br -->
 
 

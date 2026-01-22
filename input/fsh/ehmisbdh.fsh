@@ -280,7 +280,7 @@ Description: "Profile for EHMI ehmiSbdhScope structure"
 * code = #transfer
 * code.coding.system = "http://terminology.hl7.org/CodeSystem/basic-resource-type"
 * identifier.type.coding.code = #DOCUMENTID
-* identifier.value = "urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:3.0"
+* identifier.value = "urn:dk:healthcare:medcom:messaging:fhir:structuredefinition::homecareobservation-message##urn:dk:medcom:fhir:homecareobservation-message::1.2"
 * identifier.type.coding.system = $EhmiSbdhMedComMessagingCS
 
 Instance: ehmiSBDHScopeProcessId

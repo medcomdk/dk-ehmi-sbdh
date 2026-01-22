@@ -1,3 +1,4 @@
+/*
 Profile: ReferralMessageDefinitionProfile
 Parent: MessageDefinition
 Id: referral-message-definition-profile
@@ -124,3 +125,4 @@ Usage: #example
 * intent = #order
 * subject = Reference(ExamplePatient)
 * code.text = "Fysioterapi"
+*/

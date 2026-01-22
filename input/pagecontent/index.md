@@ -63,14 +63,18 @@ FHIR StructureMappings are not limited to handle resources of FHIR profiles, but
 
 For a number of different mappings to and from ehmiSBDH and/or MedCom Messaging Message, there will be developed a number of FHIR StructureMappings in order for the suppliers to better understand and potentially automate some tasks around mappings.
 
+<!--
 There has already been developed one in its initial phase, which is:
 
 - **MedCom Messaging Message StructureMappings**
+
   - [Transformation specification of a MedcomMessagingMessage to an ehmiSBDH Envelope](StructureMap-MedComMessagingMessage2ehmiSbdh-transform.html)
+-->
 
 The StructureMappings in the pipeline are:
 
 - **Further MedCom Messaging Message StructureMappings**
+  - Transformation specification of a MedcomMessagingMessage to an ehmiSBDH Envelope
   - Transformation of a MedcomMessagingMessage to a MedCom Messaging Ack
   - Transformation of a MedCom Messaging Ack to an ehmiSBDH Envelope
   - Transformation of a MedcomMessagingMessage and an ehmiSBDH Envelope to a MedCom DocumentReference

@@ -8,7 +8,7 @@ Usage: #example
 * name.given = "Sidsel"
 * name.family = "Andersen"
 
-Instance: instanceMedComCoreDocumentOrganization
+Instance: instanceMedComDocumentOrganization
 //Instance: 8fa7df76-bec2-4fe2-9a44-750030a0eda0
 InstanceOf: DkCoreOrganization
 Title: "Author Organization"
@@ -21,7 +21,7 @@ Usage: #example
 
 Instance: instanceXDSSourcePatient
 //Instance: 37628912-7816-47a3-acd8-396b610be142
-InstanceOf: https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/xds-source-patient
+InstanceOf: https://medcomfhir.dk/ig/xdsmetadata/StructureDefinition/xds-source-patient
 Title: "Source Patient"
 Description: "Instance of a source patient"
 Usage: #example

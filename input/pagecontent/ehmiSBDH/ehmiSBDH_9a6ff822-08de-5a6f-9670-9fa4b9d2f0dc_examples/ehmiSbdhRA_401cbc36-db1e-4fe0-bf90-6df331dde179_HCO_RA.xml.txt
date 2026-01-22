@@ -2,7 +2,7 @@
     <!-- original source = ReceivedSBDH: StandardBusinessDocumentHeader/DocumentIdentification/InstanceIdentifier -->
     <bpssignal:OriginalMessageIdentifier>9a6ff822-08de-5a6f-9670-9fa4b9d2f0dc</bpssignal:OriginalMessageIdentifier>
     <!-- original source = ReceivedSBDH: StandardBusinessDocumentHeader/BusinessScope/Scope[DOCUMENTID]/InstanceIdentifier -->
-    <bpssignal:OriginalDocumentIdentifier>urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:1.1</bpssignal:OriginalDocumentIdentifier>
+    <bpssignal:OriginalDocumentIdentifier>urn:dk:healthcare:medcom:messaging:fhir:structuredefinition::homecareobservation-message##urn:dk:medcom:fhir:homecareobservation-message::1.2</bpssignal:OriginalDocumentIdentifier>
     <!-- original source = ReceivedSBDH: StandardBusinessDocumentHeader/DocumentIdentification/Standard -->
     <bpssignal:OriginalDocumentIdentifier>homecareobservation-message</bpssignal:OriginalDocumentIdentifier>
     <!-- original source = ReceivedSBDH: StandardBusinessDocumentHeader/DocumentIdentification/CreationDateAndTime -->

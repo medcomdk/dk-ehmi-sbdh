@@ -3,7 +3,7 @@
 <DocumentReference xmlns="http://hl7.org/fhir">
   <id value="instanceHomeCareObservationDocumentReference"/>
   <meta>
-    <profile value="https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/homecare-observation-documentreference"/>
+    <profile value="https://medcomfhir.dk/ig/xdsmetadata/StructureDefinition/homecare-observation-documentreference"/>
   </meta>
   <text>
     <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: DocumentReference instanceHomeCareObservationDocumentReference</b></p><a name="instanceHomeCareObservationDocumentReference"> </a><a name="hcinstanceHomeCareObservationDocumentReference"> </a><a name="instanceHomeCareObservationDocumentReference-da-DK"> </a><p><b>MedCom XDS HomeCommunityID</b>: unknown 1.2.208.176.43210.8.20: TEST2</p><p><b>MedCom XDS Version ID extension</b>: 1.1.0</p><p><b>masterIdentifier</b>: <a href="http://terminology.hl7.org/5.5.0/NamingSystem-uri.html" title="As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt 
@@ -12,7 +12,7 @@ This oid is used as an identifier II.root to indicate the the extension is an ab
 
 Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.
 
-This OID may also be used in CD.codeSystem.">Uniform Resource Identifier (URI)</a>/urn:uuid:fe27d893-6b9e-4e3d-91b0-72d033ce5c07</p><p><b>identifier</b>: 12c2deaf-389a-4f7d-8133-60b24c75cd7f</p><p><b>status</b>: Current</p><p><b>docStatus</b>: Final</p><p><b>type</b>: <span title="Codes:{urn:oid:2.16.840.1.113883.6.1 55188-7}">Patient data Document</span></p><p><b>category</b>: <span title="Codes:{urn:oid:1.2.208.184.100.9 002}">Workflow</span></p><p><b>subject</b>: <a href="#hcinstanceHomeCareObservationDocumentReference/instanceXDSSourcePatient">Else Test Lauridsen (official) Female, DoB: 1991-02-02 ( 0201919990)</a></p><p><b>author</b>: <a href="#hcinstanceHomeCareObservationDocumentReference/instanceMedComCoreDocumentOrganization">Organization Lægerne Hasseris Bymidte</a></p><p><b>authenticator</b>: <a href="#hcinstanceHomeCareObservationDocumentReference/instanceXDSAuthorPerson">Practitioner Sidsel Andersen </a></p><p><b>custodian</b>: <a href="#hcinstanceHomeCareObservationDocumentReference/instanceMedComCoreDocumentOrganization">Organization Lægerne Hasseris Bymidte</a></p><p><b>securityLabel</b>: <span title="Codes:">N</span></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ContentType</b></td><td><b>Language</b></td><td><b>Url</b></td><td><b>Size</b></td><td><b>Hash</b></td><td><b>Title</b></td><td><b>Creation</b></td></tr><tr><td style="display: none">*</td><td>application/fhir+json</td><td>Danish</td><td>DOC001.XML</td><td>3654</td><td><code>da39a3ee5e6b4b0d3255bfef95601890afd80709</code></td><td>Kommunale prøvesvar for 0201919990</td><td>2024-04-01 00:00:00+0100</td></tr></table><p><b>format</b>: unknown urn:ad:dk:medcom:pdd-v1.0.1:full: DK PDD document</p></blockquote><h3>Contexts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Event</b></td><td><b>FacilityType</b></td><td><b>PracticeSetting</b></td><td><b>SourcePatientInfo</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{urn:oid:1.2.208.176.2.4 ALAL02}">Hjertesygdomme</span></td><td><span title="Codes:{urn:oid:2.16.840.1.113883.6.96 550621000005101}">hjemmesygeplejeenhed</span></td><td><span title="Codes:{urn:oid:2.16.840.1.113883.6.96 658161000005107}">hjemmesygepleje</span></td><td><a href="#hcinstanceHomeCareObservationDocumentReference/instanceXDSSourcePatient">Else Test Lauridsen (official) Female, DoB: 1991-02-02 ( 0201919990)</a></td></tr></table><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Practitioner  #instanceXDSAuthorPerson</b></p><a name="instanceHomeCareObservationDocumentReference/instanceXDSAuthorPerson"> </a><a name="hcinstanceHomeCareObservationDocumentReference/instanceXDSAuthorPerson"> </a><a name="instanceHomeCareObservationDocumentReference/instanceXDSAuthorPerson-da-DK"> </a><p><b>name</b>: Sidsel Andersen </p></blockquote><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Organization  #instanceMedComCoreDocumentOrganization</b></p><a name="instanceHomeCareObservationDocumentReference/instanceMedComCoreDocumentOrganization"> </a><a name="hcinstanceHomeCareObservationDocumentReference/instanceMedComCoreDocumentOrganization"> </a><a name="instanceHomeCareObservationDocumentReference/instanceMedComCoreDocumentOrganization-da-DK"> </a><p><b>identifier</b>: 61741000016007</p><p><b>name</b>: Lægerne Hasseris Bymidte</p></blockquote><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Patient  #instanceXDSSourcePatient</b></p><a name="instanceHomeCareObservationDocumentReference/instanceXDSSourcePatient"> </a><a name="hcinstanceHomeCareObservationDocumentReference/instanceXDSSourcePatient"> </a><a name="instanceHomeCareObservationDocumentReference/instanceXDSSourcePatient-da-DK"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Else Test Lauridsen (official) Female, DoB: 1991-02-02 ( 0201919990)</p><hr/></blockquote></div>
+This OID may also be used in CD.codeSystem.">Uniform Resource Identifier (URI)</a>/urn:uuid:fe27d893-6b9e-4e3d-91b0-72d033ce5c07</p><p><b>identifier</b>: 12c2deaf-389a-4f7d-8133-60b24c75cd7f</p><p><b>status</b>: Current</p><p><b>docStatus</b>: Final</p><p><b>type</b>: <span title="Codes:{urn:oid:2.16.840.1.113883.6.1 55188-7}">Patient data Document</span></p><p><b>category</b>: <span title="Codes:{urn:oid:1.2.208.184.100.9 002}">Workflow</span></p><p><b>subject</b>: <a href="#hcinstanceHomeCareObservationDocumentReference/instanceXDSSourcePatient">Else Test Lauridsen (official) Female, DoB: 1991-02-02 ( 0201919990)</a></p><p><b>author</b>: <a href="#hcinstanceHomeCareObservationDocumentReference/instanceMedComDocumentOrganization">Organization Lægerne Hasseris Bymidte</a></p><p><b>authenticator</b>: <a href="#hcinstanceHomeCareObservationDocumentReference/instanceXDSAuthorPerson">Practitioner Sidsel Andersen </a></p><p><b>custodian</b>: <a href="#hcinstanceHomeCareObservationDocumentReference/instanceMedComDocumentOrganization">Organization Lægerne Hasseris Bymidte</a></p><p><b>securityLabel</b>: <span title="Codes:">N</span></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ContentType</b></td><td><b>Language</b></td><td><b>Url</b></td><td><b>Size</b></td><td><b>Hash</b></td><td><b>Title</b></td><td><b>Creation</b></td></tr><tr><td style="display: none">*</td><td>application/fhir+json</td><td>Danish</td><td>DOC001.XML</td><td>3654</td><td><code>da39a3ee5e6b4b0d3255bfef95601890afd80709</code></td><td>Kommunale prøvesvar for 0201919990</td><td>2024-04-01 00:00:00+0100</td></tr></table><p><b>format</b>: unknown urn:ad:dk:medcom:pdd-v1.0.1:full: DK PDD document</p></blockquote><h3>Contexts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Event</b></td><td><b>FacilityType</b></td><td><b>PracticeSetting</b></td><td><b>SourcePatientInfo</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{urn:oid:1.2.208.176.2.4 ALAL02}">Hjertesygdomme</span></td><td><span title="Codes:{urn:oid:2.16.840.1.113883.6.96 550621000005101}">hjemmesygeplejeenhed</span></td><td><span title="Codes:{urn:oid:2.16.840.1.113883.6.96 658161000005107}">hjemmesygepleje</span></td><td><a href="#hcinstanceHomeCareObservationDocumentReference/instanceXDSSourcePatient">Else Test Lauridsen (official) Female, DoB: 1991-02-02 ( 0201919990)</a></td></tr></table><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Practitioner  #instanceXDSAuthorPerson</b></p><a name="instanceHomeCareObservationDocumentReference/instanceXDSAuthorPerson"> </a><a name="hcinstanceHomeCareObservationDocumentReference/instanceXDSAuthorPerson"> </a><a name="instanceHomeCareObservationDocumentReference/instanceXDSAuthorPerson-da-DK"> </a><p><b>name</b>: Sidsel Andersen </p></blockquote><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Organization  #instanceMedComDocumentOrganization</b></p><a name="instanceHomeCareObservationDocumentReference/instanceMedComDocumentOrganization"> </a><a name="hcinstanceHomeCareObservationDocumentReference/instanceMedComDocumentOrganization"> </a><a name="instanceHomeCareObservationDocumentReference/instanceMedComDocumentOrganization-da-DK"> </a><p><b>identifier</b>: 61741000016007</p><p><b>name</b>: Lægerne Hasseris Bymidte</p></blockquote><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Patient  #instanceXDSSourcePatient</b></p><a name="instanceHomeCareObservationDocumentReference/instanceXDSSourcePatient"> </a><a name="hcinstanceHomeCareObservationDocumentReference/instanceXDSSourcePatient"> </a><a name="instanceHomeCareObservationDocumentReference/instanceXDSSourcePatient-da-DK"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Else Test Lauridsen (official) Female, DoB: 1991-02-02 ( 0201919990)</p><hr/></blockquote></div>
   </text>
   <contained>
     <Practitioner>
@@ -25,7 +25,7 @@ This OID may also be used in CD.codeSystem.">Uniform Resource Identifier (URI)</
   </contained>
   <contained>
     <Organization>
-      <id value="instanceMedComCoreDocumentOrganization"/>
+      <id value="instanceMedComDocumentOrganization"/>
       <meta>
         <profile value="http://hl7.dk/fhir/core/StructureDefinition/dk-core-organization"/>
       </meta>
@@ -39,7 +39,7 @@ This OID may also be used in CD.codeSystem.">Uniform Resource Identifier (URI)</
     <Patient>
       <id value="instanceXDSSourcePatient"/>
       <meta>
-        <profile value="https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/xds-source-patient"/>
+        <profile value="https://medcomfhir.dk/ig/xdsmetadata/StructureDefinition/xds-source-patient"/>
       </meta>
       <identifier>
         <value value="0201919990"/>
@@ -54,14 +54,14 @@ This OID may also be used in CD.codeSystem.">Uniform Resource Identifier (URI)</
       <birthDate value="1991-02-02"/>
     </Patient>
   </contained>
-  <extension url="https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/medcom-xds-homecommunityid-extension">
+  <extension url="https://medcomfhir.dk/ig/document/StructureDefinition/medcom-xds-homecommunityid-extension">
     <valueCoding>
       <system value="urn:oid:1.2.208.176.8.1"/>
       <code value="1.2.208.176.43210.8.20"/>
       <display value="TEST2"/>
     </valueCoding>
   </extension>
-  <extension url="https://medcomfhir.dk/ig/ihexdsmetadata/StructureDefinition/medcom-xds-version-id-extension">
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.version">
     <valueString value="1.1.0"/>
   </extension>
   <masterIdentifier>
@@ -91,13 +91,13 @@ This OID may also be used in CD.codeSystem.">Uniform Resource Identifier (URI)</
     <reference value="#instanceXDSSourcePatient"/>
   </subject>
   <author>
-    <reference value="#instanceMedComCoreDocumentOrganization"/>
+    <reference value="#instanceMedComDocumentOrganization"/>
   </author>
   <authenticator>
     <reference value="#instanceXDSAuthorPerson"/>
   </authenticator>
   <custodian>
-    <reference value="#instanceMedComCoreDocumentOrganization"/>
+    <reference value="#instanceMedComDocumentOrganization"/>
   </custodian>
   <securityLabel>
     <coding>

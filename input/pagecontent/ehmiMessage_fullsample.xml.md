@@ -1,4 +1,4 @@
-# Example of a full ehmiMEssage profile
+# Example of a full ehmiMessage profile
 
 <!--a href="./ehmiSBDH/20250429_ehmisbdh_sample.xml" target="_blank">Link to the raw xsd (opens in a new window)</a-->
 

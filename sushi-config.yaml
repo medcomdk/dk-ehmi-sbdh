@@ -4,7 +4,7 @@ name: DK EHMI SBDH IG
 title: "DK EHMI SBDH IG"
 description: The DK EHMI SBDH IG
 status: active # draft | active | retired | unknown
-version: 1.0.2
+version: 2.0.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -19,12 +19,12 @@ publisher:
 dependencies:
   hl7.fhir.dk.core: 3.4.0
   medcom.fhir.dk.core: 2.4.0
-  medcom.fhir.dk.messaging: dev #3.0.0
-  medcom.fhir.dk.terminology: 1.8.0
-  dk.ehmi.terminology: dev #1.0.0
-  dk.ehmi.eer:  dev #1.0.0
-  medcom.fhir.dk.xdsmetadata: 1.0.0
-  medcom.fhir.dk.document: 1.0.0
+  medcom.fhir.dk.messaging: 4.0.1
+  medcom.fhir.dk.terminology: 2.0.2
+  dk.ehmi.terminology: current #1.0.0
+  dk.ehmi.eer:  current #1.0.0
+  medcom.fhir.dk.xdsmetadata: current #2.0.0
+  medcom.fhir.dk.document: 2.0.0
 
 menu:
   Home: index.html
@@ -55,10 +55,17 @@ menu:
     BusinessScope: SBDH_BusinessScope.xsd.html
   Artifacts: artifacts.html
   Test examples:
-    Embedded HCO: TestExampleEmbeddedHCO.xml.html
-    Embedded HCO XDS-METADATA: TestExampleXDSEmbeddedHCO.xml.html
-    SBDHAck: TextExampleSBDHAck.xml.html
-    Embedded FHIR Ack: TestExampleEmbeddedFHIRAckSBDH.xml.html
+    ehmiMessage HCO (json): TestExample_ehmiMessage_HCO.json.html
+    ehmiSBDH HCO Embedded (xml): TestExampleEmbeddedHCO.xml.html # filename should be changed in the future to the following line
+    # ehmiSBDH HCO Embedded (xml): TestExample_ehmiSBDH_Embedded_HCO.xml.html
+    ehmiSBDH HCO Embedded for DDS (json): TestExampleXDSEmbeddedHCO.xml.html # filename should be changed in the future to the following line
+    # ehmiSBDH HCO Embedded for DDS (json): TestExample_ehmiSBDH_Embedded_HCO_for_DDS.xml.html
+    ehmiMessage FHIR Acknowledgement (json): TestExample_ehmiMessage_FHIRAck.json.html 
+    ehmiSBDH FHIR Acknowledgement Embedded (xml): TestExampleEmbeddedFHIRAckSBDH.xml.html # filename should be changed in the future to the following line
+    # ehmiSBDH FHIR Acknowledgement Embedded (xml): TestExample_ehmiSBDH_Embedded_FHIR_Ack.xml.html
+    ehmiMessage ehmiSBDH-Acknowledgement (xml): TestExample_ehmiMessage_SBDHAck.xml_raw.html
+    ehmiSBDH ehmiSBDH-Acknowledgement Embedded (xml): TextExampleSBDHAck.xml.html # filename should be changed in the future to the following line
+    # ehmiSBDH SBDHAck: TestExample_ehmiSBDH_Embedded_SBDHAck.xml.html
   More:
     Table of Contents: toc.html
     Downloads: downloads.html

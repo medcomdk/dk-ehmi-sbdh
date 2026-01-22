@@ -1,0 +1,83 @@
+@startuml
+autonumber
+
+participant C1 as "C1"
+participant C1MSH as "C1 MSH"
+participant C2 as "C2"
+participant C3 as "C3"
+participant C4MSH as "C4 MSH"
+participant C4 as "C4"
+
+note left of C1
+C1 is Sender of
+HomeCareObservation 1.2
+end note
+
+C1 ->> C1MSH : HomeCareObservation 1.2
+C1MSH ->> C2 : ehmiSBDH(HomeCareObservation 1.2)
+C2 ->> C3 : AS4(ehmiSBDH(HomeCareObservation 1.2))
+
+C3 -->> C3 : Check basis format\n(SBDH og xsd)
+C3 -->> C2 : Standard AS4 sync. ack
+
+C3 ->> C4MSH : ehmiSBDH(HomeCareObservation 1.2)
+
+C4MSH -->> C4MSH : Check document\n(schema)
+
+note right of C4MSH
+C4MSH is Sender of
+EHMI SBDH Acknowledgement v1.0
+end note
+
+C4MSH -->> C3 : ehmiSBDH(EHMI SBDH Acknowledgement v1.0)
+C3 -->> C2 : AS4(ehmiSBDH(EHMI SBDH Acknowledgement v1.0))
+C2 -->> C1MSH : ehmiSBDH(EHMI SBDH Acknowledgement v1.0)
+
+note left of C1MSH
+C1MSH is Receiver of
+EHMI SBDH Acknowledgement v1.0
+end note
+
+C4MSH ->> C4 : HomeCareObservation 1.2
+
+note right of C4
+C4 is Receiver of
+HomeCareObservation 1.2
+end note
+
+C4 ->> C4 : Check business document
+
+note right of C4
+C4 is Sender of
+MedCom Acknowledgement v2.0
+end note
+
+C4 -->> C4MSH : MedCom Acknowledgement v2.0
+C4MSH -->> C3 : ehmiSBDH(MedCom Acknowledgement v2.0)
+C3 -->> C2 : AS4(ehmiSBDH(MedCom Acknowledgement v2.0))
+C2 -->> C1MSH : ehmiSBDH(MedCom Acknowledgement v2.0)
+
+C1MSH -->> C1MSH : Check document\n(schema)
+
+note left of C1MSH
+C1MSH is Sender of
+EHMI SBDH Acknowledgement v1.0
+end note
+
+C1MSH -->> C2 : ehmiSBDH(EHMI SBDH Acknowledgement v1.0)
+C2 -->> C3 : AS4(ehmiSBDH(EHMI SBDH Acknowledgement v1.0))
+C3 -->> C4MSH : ehmiSBDH(EHMI SBDH Acknowledgement v1.0)
+
+note right of C4MSH
+C4MSH is Receiver of
+EHMI SBDH Acknowledgement v1.0
+end note
+
+C1MSH -->> C1 : MedCom Acknowledgement v2.0
+
+note left of C1
+C1 is Receiver of
+MedCom Acknowledgement v2.0
+end note
+
+@enduml

@@ -21,7 +21,7 @@
     </Receiver>
 
     <DocumentIdentification>
-      <Standard>ebbp-signals</Standard>
+      <Standard>ehmisbdh-acknowledgement</Standard>
       <TypeVersion>ebbp-signals-2.0</TypeVersion>
       <InstanceIdentifier>c8792b06-eaa3-48db-a815-3e58b2086ab2</InstanceIdentifier>
       <Type>ReceiptAcknowledgement</Type>
@@ -33,13 +33,13 @@
       <!-- refererer tilbage til originalt dokument/meddelelsesmetadata fra dit sample -->
       <Scope>
         <Type>DOCUMENTID</Type>
-        <InstanceIdentifier>urn:dk:healthcare:prod:messaging:oasis:ebxml:schema:xsd:SBDHReceiptAcknowledgement</InstanceIdentifier>
+        <InstanceIdentifier>urn:dk:healthcare:messaging:oasis:ebxml:schema:xsd::ehmisbdh-acknowledgement##urn:dk:ehmi:sbdh:ehmisbdh-acknowledgement::1.0</InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
       </Scope>
 
       <Scope>
         <Type>PROCESSID</Type>
-        <InstanceIdentifier>sdn-emergence</InstanceIdentifier>
+        <InstanceIdentifier>urn:ehmi:sdn-emergence</InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
       </Scope>
 
@@ -143,7 +143,7 @@
        
 <bpssignal:ReceiptAcknowledgement xmlns:bpssignal="http://docs.oasis-open.org/ebxml-bp/ebbp-signals-2.0">
     <bpssignal:OriginalMessageIdentifier>489de4f2-0d8d-4de2-a7ce-ccb93568799f</bpssignal:OriginalMessageIdentifier>
-    <bpssignal:OriginalDocumentIdentifier>urn:dk:medcom:prod:messaging:fhir:structuredefinition:homecareobservation#urn:dk:medcom:fhir:homecareobservation:3.0</bpssignal:OriginalDocumentIdentifier>
+    <bpssignal:OriginalDocumentIdentifier>urn:dk:healthcare:medcom:messaging:fhir:structuredefinition::homecareobservation-message##urn:dk:medcom:fhir:homecareobservation-message::1.2</bpssignal:OriginalDocumentIdentifier>
     <bpssignal:RequestionField>
         <issuedAt>2025-04-01T16:20:00+01:00</issuedAt>
     </bpssignal:RequestionField>
