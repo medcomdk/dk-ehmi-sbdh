@@ -23,7 +23,7 @@ Please note that this xsd is only included for compliance reasons, it is not use
                 </Receiver>
                 <DocumentIdentification>
                     <Standard>homecareobservation-message</Standard>
-                    <TypeVersion>1.0</TypeVersion>
+                    <TypeVersion>1.2</TypeVersion>
                     <InstanceIdentifier>9a6ff822-08de-5a6f-9670-9fa4b9d2f0dc</InstanceIdentifier>
                     <Type>Bundle</Type>
                     <MultipleType>false</MultipleType>
