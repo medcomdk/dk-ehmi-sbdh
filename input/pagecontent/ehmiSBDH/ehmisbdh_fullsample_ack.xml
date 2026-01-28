@@ -21,7 +21,7 @@
             <InstanceIdentifier>c8792b06-eaa3-48db-a815-3e58b2086ab2</InstanceIdentifier>
             <Type>Bundle</Type>
             <MultipleType>false</MultipleType>
-            <CreationDateAndTime>2025-04-01T17:19:00+01:00</CreationDateAndTime>
+            <CreationDateAndTime>2026-01-28T17:19:00+01:00</CreationDateAndTime>
         </DocumentIdentification>
         <BusinessScope>
             <!-- eDelivery scope -->
@@ -84,13 +84,13 @@
                 <Identifier>dk-medcom-messaging</Identifier>
                 <CorrelationInformation>
                     <RequestingDocumentCreationDateTime>
-                        2025-04-01T16:30:10+01:00
+                        2026-01-28T16:30:10+01:00
                     </RequestingDocumentCreationDateTime>
                     <RequestingDocumentInstanceIdentifier>
                         9a6ff82208de-5a6f-9670-9fa4b9d2f0dh
                     </RequestingDocumentInstanceIdentifier>
                     <ExpectedResponseDateTime>
-                        2025-04-01T17:30:10+01:00
+                        2026-01-28T17:30:10+01:00
                     </ExpectedResponseDateTime>
                 </CorrelationInformation>
                 <BusinessService>
