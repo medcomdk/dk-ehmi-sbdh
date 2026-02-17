@@ -65,6 +65,8 @@ menu:
     # ehmiSBDH FHIR Acknowledgement Embedded (xml): TestExample_ehmiSBDH_Embedded_FHIR_Ack.xml.html
     ehmiMessage ehmiSBDH-Acknowledgement (xml): TestExample_ehmiMessage_SBDHAck.xml_raw.html
     ehmiSBDH ehmiSBDH-Acknowledgement Embedded (xml): TextExampleSBDHAck.xml.html # filename should be changed in the future to the following line
+    ehmiMessage ehmiSBDH-Acknowledgement Exception (xml): TestExample_ehmiMessage_SBDHAckException.xml_raw.html
+    ehmiSBDH ehmiSBDH-Acknowledgement Exception Embedded (xml): TestExample_ehmiSBDH_Embedded_SBDHAckException.xml.html # filename should be changed in the future to the following line
     # ehmiSBDH SBDHAck: TestExample_ehmiSBDH_Embedded_SBDHAck.xml.html
   More:
     Table of Contents: toc.html

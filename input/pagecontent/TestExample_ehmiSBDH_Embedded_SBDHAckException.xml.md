@@ -20,7 +20,7 @@
                 <Standard>ehmisbdh-acknowledgement</Standard>
                 <TypeVersion>ebbp-signals-2.0</TypeVersion>
                 <InstanceIdentifier>b8549456-962f-459c-a341-f05cf22e3935</InstanceIdentifier>
-                <Type>ReceiptAcknowledgement</Type>
+                <Type>ReceiptException</Type>
                 <MultipleType>false</MultipleType>
                 <CreationDateAndTime>2025-12-11T13:24:10+02:00</CreationDateAndTime>
             </DocumentIdentification>
@@ -77,7 +77,7 @@
                 </Scope>            
                 <Scope>
                     <Type>StatisticalInformation</Type>
-                    <InstanceIdentifier>ReceiptAcknowledgement</InstanceIdentifier>
+                    <InstanceIdentifier>ReceiptException</InstanceIdentifier>
                     <Identifier>dk-medcom-messaging</Identifier>
                 </Scope>
                 <Scope>
@@ -97,6 +97,6 @@
             </BusinessScope>
         </StandardBusinessDocumentHeader>
         <BinaryContent mimeType="application/xml" encoding="UTF-8">
-            PGJwc3NpZ25hbDpSZWNlaXB0QWNrbm93bGVkZ2VtZW50IHhtbG5zOmRzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5L3htbGRzaWcjIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sbnM6YnBzc2lnbmFsPSJodHRwOi8vZG9jcy5vYXNpcy1vcGVuLm9yZy9lYnhtbC1icC9lYmJwLXNpZ25hbHMtMi4wIiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4c2k6c2NoZW1hTG9jYXRpb249Imh0dHA6Ly9kb2NzLm9hc2lzLW9wZW4ub3JnL2VieG1sLWJwL2ViYnAtc2lnbmFscy0yLjAgaHR0cDovL2RvY3Mub2FzaXMtb3Blbi5vcmcvZWJ4bWwtYnAvMi4wLjQvZWJicC1zaWduYWxzLTIuMC40LnhzZCI+CiAgICA8YnBzc2lnbmFsOk9yaWdpbmFsTWVzc2FnZUlkZW50aWZpZXI+NDAxY2JjMzYtZGIxZS00ZmUwLWJmOTAtNmRmMzMxZGRlMTc5PC9icHNzaWduYWw6T3JpZ2luYWxNZXNzYWdlSWRlbnRpZmllcj4KICAgIDxicHNzaWduYWw6T3JpZ2luYWxEb2N1bWVudElkZW50aWZpZXI+dXJuOmRrOmhlYWx0aGNhcmU6bWVkY29tOm1lc3NhZ2luZzpmaGlyOnN0cnVjdHVyZWRlZmluaXRpb246aG9tZWNhcmVvYnNlcnZhdGlvbi1tZXNzYWdlOjEuMTwvYnBzc2lnbmFsOk9yaWdpbmFsRG9jdW1lbnRJZGVudGlmaWVyPgogICAgPGJwc3NpZ25hbDpPcmlnaW5hbE1lc3NhZ2VEYXRlVGltZT4yMDI1LTEyLTExVDEyOjI0OjEwKzAyOjAwPC9icHNzaWduYWw6T3JpZ2luYWxNZXNzYWdlRGF0ZVRpbWU+CiAgICA8YnBzc2lnbmFsOlRoaXNNZXNzYWdlRGF0ZVRpbWU+MjAyNS0xMi0xMVQxMzoyNDoxMCswMjowMDwvYnBzc2lnbmFsOlRoaXNNZXNzYWdlRGF0ZVRpbWU+CiAgICA8YnBzc2lnbmFsOkZyb21QYXJ0eUluZm8gdHlwZT0iaXNvNjUyMy1hY3RvcmlkLXVwaXMiPjAwODg6NTc5MDAwMDEyNzA5MjwvYnBzc2lnbmFsOkZyb21QYXJ0eUluZm8+CiAgICA8YnBzc2lnbmFsOlRvUGFydHlJbmZvIHR5cGU9ImlzbzY1MjMtYWN0b3JpZC11cGlzIj4wMDg4OjU3OTAwMDAxMjMxMTc8L2Jwc3NpZ25hbDpUb1BhcnR5SW5mbz4KPC9icHNzaWduYWw6UmVjZWlwdEFja25vd2xlZGdlbWVudD4=
+            PGJwc3NpZ25hbDpSZWNlaXB0RXhjZXB0aW9uIHhtbG5zOmRzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5L3htbGRzaWcjIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sbnM6YnBzc2lnbmFsPSJodHRwOi8vZG9jcy5vYXNpcy1vcGVuLm9yZy9lYnhtbC1icC9lYmJwLXNpZ25hbHMtMi4wIiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4c2k6c2NoZW1hTG9jYXRpb249Imh0dHA6Ly9kb2NzLm9hc2lzLW9wZW4ub3JnL2VieG1sLWJwL2ViYnAtc2lnbmFscy0yLjAgaHR0cDovL2RvY3Mub2FzaXMtb3Blbi5vcmcvZWJ4bWwtYnAvMi4wLjQvZWJicC1zaWduYWxzLTIuMC40LnhzZCI+DQogICAgPGJwc3NpZ25hbDpPcmlnaW5hbE1lc3NhZ2VJZGVudGlmaWVyPg0KICAgICAgICA5YTZmZjgyMi0wOGRlLTVhNmYtOTY3MC05ZmE0YjlkMmYwZGMNCiAgICA8L2Jwc3NpZ25hbDpPcmlnaW5hbE1lc3NhZ2VJZGVudGlmaWVyPg0KICAgIDxicHNzaWduYWw6T3JpZ2luYWxEb2N1bWVudElkZW50aWZpZXI+DQogICAgICAgIHVybjpkazpoZWFsdGhjYXJlOm1lZGNvbTptZXNzYWdpbmc6ZmhpcjpzdHJ1Y3R1cmVkZWZpbml0aW9uOjpob21lY2FyZW9ic2VydmF0aW9uLW1lc3NhZ2UjI3VybjpkazptZWRjb206Zmhpcjpob21lY2FyZW9ic2VydmF0aW9uLW1lc3NhZ2U6OjEuMg0KICAgIDwvYnBzc2lnbmFsOk9yaWdpbmFsRG9jdW1lbnRJZGVudGlmaWVyPg0KICAgIDxicHNzaWduYWw6T3JpZ2luYWxNZXNzYWdlRGF0ZVRpbWU+DQogICAgICAgIDIwMjUtMDQtMDFUMTY6MTk6MDArMDE6MDANCiAgICA8L2Jwc3NpZ25hbDpPcmlnaW5hbE1lc3NhZ2VEYXRlVGltZT4NCiAgICA8YnBzc2lnbmFsOlRoaXNNZXNzYWdlRGF0ZVRpbWU+DQogICAgICAgIDIwMjUtMDQtMDFUMTY6MjA6MDArMDE6MDANCiAgICA8L2Jwc3NpZ25hbDpUaGlzTWVzc2FnZURhdGVUaW1lPg0KICAgIDxicHNzaWduYWw6RnJvbVBhcnR5SW5mbyB0eXBlPSJpc282NTIzLWFjdG9yaWQtdXBpcyI+DQogICAgICAgIDAwODg6NTc5MDAwMDIwMTM4OQ0KICAgIDwvYnBzc2lnbmFsOkZyb21QYXJ0eUluZm8+DQogICAgPGJwc3NpZ25hbDpUb1BhcnR5SW5mbyB0eXBlPSJpc282NTIzLWFjdG9yaWQtdXBpcyI+DQogICAgICAgIDAwODg6NTc5MDAwMDEyMTUyNg0KICAgIDwvYnBzc2lnbmFsOlRvUGFydHlJbmZvPg0KICAgIDxicHNzaWduYWw6Q29sbGFib3JhdGlvbklkZW50aWZpZXI+DQogICAgICAgIDlhNmZmODIyMDhkZS01YTZmLTk2NzAtOWZhNGI5ZDJmMGRoDQogICAgPC9icHNzaWduYWw6Q29sbGFib3JhdGlvbklkZW50aWZpZXI+DQogICAgPGJwc3NpZ25hbDpFeGNlcHRpb25UeXBlPg0KICAgICAgICA8YnBzc2lnbmFsOlJlY2VpcHRFeGNlcHRpb24+U3ludGF4PC9icHNzaWduYWw6UmVjZWlwdEV4Y2VwdGlvbj4NCiAgICA8L2Jwc3NpZ25hbDpFeGNlcHRpb25UeXBlPg0KICAgIDxicHNzaWduYWw6UmVhc29uPlhNTCBQYXJzaW5nIEVycm9yOiBub3Qgd2VsbC1mb3JtZWQ8L2Jwc3NpZ25hbDpSZWFzb24+DQogICAgPGJwc3NpZ25hbDpFeGNlcHRpb25NZXNzYWdlPkVsZW1lbnQgdHlwZSAiU3RhbmRhcmRCdXNpbmVzc0RvY3VtZW50SGVhZGVyIiBtdXN0IGJlIGZvbGxvd2VkIGJ5IGVpdGhlciBhdHRyaWJ1dGUgc3BlY2lmaWNhdGlvbnMsICI+IiBvciAiLz4iLjwvYnBzc2lnbmFsOkV4Y2VwdGlvbk1lc3NhZ2U+DQo8L2Jwc3NpZ25hbDpSZWNlaXB0RXhjZXB0aW9uPg==
         </BinaryContent>
     </StandardBusinessDocument>

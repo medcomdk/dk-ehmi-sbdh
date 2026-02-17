@@ -22,7 +22,7 @@
                 <Standard>ehmisbdh-acknowledgement</Standard>
                 <TypeVersion>ebbp-signals-2.0</TypeVersion>
                 <InstanceIdentifier>c8792b06-eaa3-48db-a815-3e58b2086ab2</InstanceIdentifier>
-                <Type>SBDHReceiptAcknowledgement</Type>
+                <Type>ReceiptAcknowledgement</Type>
                 <MultipleType>false</MultipleType>
                 <CreationDateAndTime>2025-04-01T16:20:00+01:00</CreationDateAndTime>
             </DocumentIdentification>
@@ -86,7 +86,7 @@
                 </Scope>
                 <Scope>
                     <Type>StatisticalInformation</Type>
-                    <InstanceIdentifier>EHMI-ReceiptAcknowledgement</InstanceIdentifier>
+                    <InstanceIdentifier>ReceiptAcknowledgement</InstanceIdentifier>
                     <Identifier>dk-medcom-messaging</Identifier>
                 </Scope>
                 <!-- MedCom messaging - Acknowledgment scope -->
