@@ -12,9 +12,9 @@
     <!-- generated -->
     <bpssignal:ThisMessageDateTime>2025-04-01T16:30:00+01:00</bpssignal:ThisMessageDateTime>
     <!-- original source = ReceivedSBDH: StandardBusinessDocumentHeader/Receiver/Identifier@Authority & StandardBusinessDocumentHeader/Receiver/Identifier -->
-    <bpssignal:FromPartyInfo type="is6523-actorid-upis">0088:5790000201389</bpssignal:FromPartyInfo>
+    <bpssignal:FromPartyInfo type="is6523-actorid-upis">0088:5790000120048</bpssignal:FromPartyInfo>
     <!-- original source = ReceivedSBDH: StandardBusinessDocumentHeader/Sender/Identifier@Authority & StandardBusinessDocumentHeader/Receiver/Identifier -->
-    <bpssignal:ToPartyInfo type="iso6523-actorid-upis">0088:5790000121526</bpssignal:ToPartyInfo>
+    <bpssignal:ToPartyInfo type="iso6523-actorid-upis">0088:5790000123117</bpssignal:ToPartyInfo>
     <!-- original source = ReceivedSBDH: StandardBusinessDocumentHeader/BusinessScope/Scope[EHMI-ReceiptAcknowledgement]/CorrelationInformation/RequestingDocumentInstanceIdentifier -->
     <bpssignal:CollaborationIdentifier>9a6ff822-08de-5a6f-9670-9fa4b9d2f0dc</bpssignal:CollaborationIdentifier>
 </bpssignal:ReceiptAcknowledgement>

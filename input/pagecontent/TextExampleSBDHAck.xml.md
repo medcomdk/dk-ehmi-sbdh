@@ -13,10 +13,10 @@
         <StandardBusinessDocumentHeader>
             <HeaderVersion>1.0</HeaderVersion>
             <Sender>
-                <Identifier Authority="iso6523-actorid-upis">0088:5790000201389</Identifier>
+                <Identifier Authority="iso6523-actorid-upis">0088:5790000120048</Identifier>
             </Sender>
             <Receiver>
-                <Identifier Authority="iso6523-actorid-upis">0088:5790000121526</Identifier>
+                <Identifier Authority="iso6523-actorid-upis">0088:5790000123117</Identifier>
             </Receiver>
             <DocumentIdentification>
                 <Standard>ehmisbdh-acknowledgement</Standard>
@@ -41,12 +41,12 @@
                 <!-- MedCom messaging scope -->
                 <Scope>
                     <Type>SENDERID</Type>
-                    <InstanceIdentifier>52581000016005</InstanceIdentifier>
+                    <InstanceIdentifier>323581000016000</InstanceIdentifier>
                     <Identifier>dk-medcom-messaging</Identifier>
                 </Scope>
                 <Scope>
                     <Type>RECEIVERID</Type>
-                    <InstanceIdentifier>1144561000016002</InstanceIdentifier>
+                    <InstanceIdentifier>937961000016000</InstanceIdentifier>
                     <Identifier>dk-medcom-messaging</Identifier>
                 </Scope>
                 <Scope>

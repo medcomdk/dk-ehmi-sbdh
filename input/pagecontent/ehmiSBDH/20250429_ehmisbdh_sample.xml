@@ -10,10 +10,10 @@
     <StandardBusinessDocumentHeader>
         <HeaderVersion>1.0</HeaderVersion>
         <Sender>
-            <Identifier Authority="iso6523-actorid-upis">0088:5790000121526</Identifier>
+            <Identifier Authority="iso6523-actorid-upis">0088:5790000123117</Identifier>
         </Sender>
         <Receiver>
-            <Identifier Authority="iso6523-actorid-upis">0088:5790000201389</Identifier>
+            <Identifier Authority="iso6523-actorid-upis">0088:5790000120048</Identifier>
         </Receiver>
         <DocumentIdentification>
             <Standard>homecareobservation-message</Standard>

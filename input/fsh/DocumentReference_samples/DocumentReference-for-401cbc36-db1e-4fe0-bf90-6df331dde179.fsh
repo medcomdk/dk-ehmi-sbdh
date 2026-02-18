@@ -60,7 +60,7 @@ Usage: #inline
 * identifier[0].system = "https://www.gs1.org/gln"
 * identifier[=].value = "5790000123117"
 * identifier[+].system = "urn:oid:1.2.208.176.1.1"
-* identifier[=].value = "1144561000016002"
+* identifier[=].value = "937961000016000"
 * identifier[+].system = "http://medcomfhir.dk/ig/terminology/CodeSystem/MedComProducentID"
 * identifier[=].value = "KAF"
 * name = "Pleje og Rehabilitering"

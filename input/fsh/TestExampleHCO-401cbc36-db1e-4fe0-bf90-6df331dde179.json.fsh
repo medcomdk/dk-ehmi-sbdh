@@ -49,10 +49,10 @@ Usage: #inline
 * eventCoding = $medcom-messaging-eventCodes#homecareobservation-message
 * destination.extension.url = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension"
 * destination.extension.valueCoding = $medcom-messaging-destinationUse#primary
-* destination.endpoint = "https://sor2.sum.dsdn.dk/#id=52581000016005"
+* destination.endpoint = "https://sor2.sum.dsdn.dk/#id=323581000016000"
 * destination.receiver = Reference(1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1)
 * sender = Reference(a0330c62-fe29-4719-83fa-a94959084f29)
-* source.endpoint = "https://sor2.sum.dsdn.dk/#id=1144561000016002"
+* source.endpoint = "https://sor2.sum.dsdn.dk/#id=937961000016000"
 * focus = Reference(efb1ed12-6a5d-4342-9572-861071644e46)
 * definition = "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComHomeCareObservationMessageDefinition|1.1"
 
@@ -105,7 +105,7 @@ Usage: #inline
 * identifier[0].system = "https://www.gs1.org/gln"
 * identifier[=].value = "5790000127092"
 * identifier[+].system = "urn:oid:1.2.208.176.1.1"
-* identifier[=].value = "52581000016005"
+* identifier[=].value = "323581000016000"
 * identifier[+].system = "urn:oid:1.2.208.176.1.4"
 * identifier[=].value = "061654"
 * name = "Skødstrup Lægepraksis"
@@ -118,7 +118,7 @@ Usage: #inline
 * identifier[0].system = "https://www.gs1.org/gln"
 * identifier[=].value = "5790000123117"
 * identifier[+].system = "urn:oid:1.2.208.176.1.1"
-* identifier[=].value = "1144561000016002"
+* identifier[=].value = "937961000016000"
 * identifier[+].system = "http://medcomfhir.dk/ig/terminology/CodeSystem/MedComProducentID"
 * identifier[=].value = "KAF"
 * name = "Pleje og Rehabilitering"

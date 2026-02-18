@@ -46,13 +46,13 @@
       <!-- SORID instances of SENDERID og RECEIVERID-->
       <Scope>
         <Type>SENDERID</Type>
-        <InstanceIdentifier>52581000016005</InstanceIdentifier>
+        <InstanceIdentifier>323581000016000</InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
       </Scope>
 
       <Scope>
         <Type>RECEIVERID</Type>
-        <InstanceIdentifier>1144561000016002</InstanceIdentifier>
+        <InstanceIdentifier>937961000016000</InstanceIdentifier>
         <Identifier>dk-medcom-messaging</Identifier>
       </Scope>
 

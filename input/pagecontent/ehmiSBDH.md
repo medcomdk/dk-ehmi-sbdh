@@ -127,7 +127,7 @@ Regardless of the message type, it will always result in the following Sender/Id
 
     <Sender>
         <Identifier Authority="iso6523-actorid-upis">
-            0088:5790000121526
+            0088:5790000123117
         </Identifier>
     </Sender>
 
@@ -174,7 +174,7 @@ If the MedCom Message is of type FHIR, then always in the following format:
 Regardless of the message type, it will always result in the following Receiver/Identifier, where the value after 0088: will of course vary.
 
     <Receiver>
-        <Identifier Authority="iso6523-actorid-upis">0088:5790000201389    </Identifier>
+        <Identifier Authority="iso6523-actorid-upis">0088:5790000120048    </Identifier>
     </Receiver>
 
 
@@ -1441,7 +1441,7 @@ ThisMessageDateTime example
 FromPartyInfo example
 
     <bpssignal:FromPartyInfo type=”iso6523-actorid-upis”>
-        0088:5790000201389
+        0088:5790000120048
     </bpssignal:FromPartyInfo>
 
 
@@ -1454,7 +1454,7 @@ FromPartyInfo example
 ToPartyInfo example
 
     <bpssignal:ToPartyInfo type=”iso6523-actorid-upis”>
-        0088:5790000121526
+        0088:5790000123117
     </bpssignal:ToPartyInfo>
 
 
@@ -1474,10 +1474,10 @@ ToPartyInfo example
             2025-04-01T16:19:10+01:00
         </bpssignal:ThisMessageDateTime>
         <bpssignal:FromPartyInfo type=”iso6523-actorid-upis”>
-            0088:5790000201389
+            0088:5790000120048
         </bpssignal:FromPartyInfo>
         <bpssignal:ToPartyInfo type=”iso6523-actorid-upis”>
-            0088:5790000121526
+            0088:5790000123117
         </bpssignal:ToPartyInfo>
         <bpssignal:CollaborationIdentifier>
             9a6ff82208de-5a6f-9670-9fa4b9d2f0dh
@@ -1607,10 +1607,10 @@ ExceptionMessage example
             2025-04-01T16:19:10+01:00
         </bpssignal:ThisMessageDateTime>
         <bpssignal:FromPartyInfo type=”iso6523-actorid-upis”>
-            0088:5790000201389
+            0088:5790000120048
         </bpssignal:FromPartyInfo>
         <bpssignal:ToPartyInfo type=”iso6523-actorid-upis”>
-            0088:5790000121526
+            0088:5790000123117
         </bpssignal:ToPartyInfo>
         <bpssignal:CollaborationIdentifier>
             9a6ff82208de-5a6f-9670-9fa4b9d2f0dh

@@ -14,10 +14,10 @@
             2025-04-01T16:20:00+01:00
         </bpssignal:ThisMessageDateTime>
         <bpssignal:FromPartyInfo type="iso6523-actorid-upis">
-            0088:5790000201389
+            0088:5790000120048
         </bpssignal:FromPartyInfo>
         <bpssignal:ToPartyInfo type="iso6523-actorid-upis">
-            0088:5790000121526
+            0088:5790000123117
         </bpssignal:ToPartyInfo>
         <bpssignal:CollaborationIdentifier>
             9a6ff82208de-5a6f-9670-9fa4b9d2f0dh

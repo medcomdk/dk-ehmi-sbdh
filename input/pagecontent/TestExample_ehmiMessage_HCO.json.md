@@ -20,7 +20,7 @@
           },
           "text" : {
             "status" : "generated",
-            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MessageHeader_489de4f2-0d8d-4de2-a7ce-ccb93568799f\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MessageHeader 489de4f2-0d8d-4de2-a7ce-ccb93568799f</b></p><a name=\"489de4f2-0d8d-4de2-a7ce-ccb93568799f\"> </a><a name=\"hc489de4f2-0d8d-4de2-a7ce-ccb93568799f\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-homecareobservation-messageheader.html\">MedComHomeCareObservationMessageHeader</a></p></div><p><b>event</b>: <a href=\"http://medcomfhir.dk/ig/terminology/2.0.2/CodeSystem-medcom-messaging-eventCodes.html#medcom-messaging-eventCodes-homecareobservation-message\">MedComMessagingEventCodes homecareobservation-message</a>: HomeCare Observation Message</p><h3>Destinations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Endpoint</b></td><td><b>Receiver</b></td></tr><tr><td style=\"display: none\">*</td><td/><td><a href=\"https://sor2.sum.dsdn.dk/#id=52581000016005\">https://sor2.sum.dsdn.dk/#id=52581000016005</a></td><td><a href=\"Organization-1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1.html\">Organization Skødstrup Lægepraksis</a></td></tr></table><p><b>sender</b>: <a href=\"Organization-a0330c62-fe29-4719-83fa-a94959084f29.html\">Organization Pleje og Rehabilitering</a></p><h3>Sources</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Endpoint</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"https://sor2.sum.dsdn.dk/#id=1144561000016002\">https://sor2.sum.dsdn.dk/#id=1144561000016002</a></td></tr></table><p><b>focus</b>: <a href=\"DiagnosticReport-efb1ed12-6a5d-4342-9572-861071644e46.html\">Diagnostic Report for 'HomeCareDiagnosticReport' for '-&gt;Elmer (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.2#2509479989)'</a></p><p><b>definition</b>: <a href=\"http://medcomfhir.dk/ig/messagedefinitions/1.0.1-trial-use/MessageDefinition-MedComHomeCareObservationMessageDefinitionV1.1.html\">http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComHomeCareObservationMessageDefinition|1.1</a></p></div>"
+            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MessageHeader_489de4f2-0d8d-4de2-a7ce-ccb93568799f\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MessageHeader 489de4f2-0d8d-4de2-a7ce-ccb93568799f</b></p><a name=\"489de4f2-0d8d-4de2-a7ce-ccb93568799f\"> </a><a name=\"hc489de4f2-0d8d-4de2-a7ce-ccb93568799f\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-homecareobservation-messageheader.html\">MedComHomeCareObservationMessageHeader</a></p></div><p><b>event</b>: <a href=\"http://medcomfhir.dk/ig/terminology/2.0.2/CodeSystem-medcom-messaging-eventCodes.html#medcom-messaging-eventCodes-homecareobservation-message\">MedComMessagingEventCodes homecareobservation-message</a>: HomeCare Observation Message</p><h3>Destinations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Endpoint</b></td><td><b>Receiver</b></td></tr><tr><td style=\"display: none\">*</td><td/><td><a href=\"https://sor2.sum.dsdn.dk/#id=323581000016000\">https://sor2.sum.dsdn.dk/#id=323581000016000</a></td><td><a href=\"Organization-1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1.html\">Organization Skødstrup Lægepraksis</a></td></tr></table><p><b>sender</b>: <a href=\"Organization-a0330c62-fe29-4719-83fa-a94959084f29.html\">Organization Pleje og Rehabilitering</a></p><h3>Sources</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Endpoint</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"https://sor2.sum.dsdn.dk/#id=937961000016000\">https://sor2.sum.dsdn.dk/#id=937961000016000</a></td></tr></table><p><b>focus</b>: <a href=\"DiagnosticReport-efb1ed12-6a5d-4342-9572-861071644e46.html\">Diagnostic Report for 'HomeCareDiagnosticReport' for '-&gt;Elmer (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.2#2509479989)'</a></p><p><b>definition</b>: <a href=\"http://medcomfhir.dk/ig/messagedefinitions/1.0.1-trial-use/MessageDefinition-MedComHomeCareObservationMessageDefinitionV1.1.html\">http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComHomeCareObservationMessageDefinition|1.1</a></p></div>"
           },
           "eventCoding" : {
             "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes",
@@ -34,7 +34,7 @@
                 "code" : "primary"
               }
             }],
-            "endpoint" : "https://sor2.sum.dsdn.dk/#id=52581000016005",
+            "endpoint" : "https://sor2.sum.dsdn.dk/#id=323581000016000",
             "receiver" : {
               "reference" : "Organization/1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1"
             }
@@ -43,7 +43,7 @@
             "reference" : "Organization/a0330c62-fe29-4719-83fa-a94959084f29"
           },
           "source" : {
-            "endpoint" : "https://sor2.sum.dsdn.dk/#id=1144561000016002"
+            "endpoint" : "https://sor2.sum.dsdn.dk/#id=937961000016000"
           },
           "focus" : [{
             "reference" : "DiagnosticReport/efb1ed12-6a5d-4342-9572-861071644e46"
@@ -177,7 +177,7 @@
           },
           "text" : {
             "status" : "generated",
-            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization 1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1</b></p><a name=\"1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1\"> </a><a name=\"hc1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/messaging/3.0.0/StructureDefinition-medcom-requesterorganization.html\">MedComMessagingRequesterOrganization</a></p></div><p><b>identifier</b>: <code>https://www.gs1.org/gln</code>/5790000127092, <code>urn:oid:1.2.208.176.1.1</code>/52581000016005, <code>urn:oid:1.2.208.176.1.4</code>/061654</p><p><b>name</b>: Skødstrup Lægepraksis</p><h3>Contacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td></tr><tr><td style=\"display: none\">*</td><td>O.K.M. </td></tr></table></div>"
+            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization 1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1</b></p><a name=\"1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1\"> </a><a name=\"hc1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/messaging/3.0.0/StructureDefinition-medcom-requesterorganization.html\">MedComMessagingRequesterOrganization</a></p></div><p><b>identifier</b>: <code>https://www.gs1.org/gln</code>/5790000127092, <code>urn:oid:1.2.208.176.1.1</code>/323581000016000, <code>urn:oid:1.2.208.176.1.4</code>/061654</p><p><b>name</b>: Skødstrup Lægepraksis</p><h3>Contacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td></tr><tr><td style=\"display: none\">*</td><td>O.K.M. </td></tr></table></div>"
           },
           "identifier" : [{
             "system" : "https://www.gs1.org/gln",
@@ -185,7 +185,7 @@
           },
           {
             "system" : "urn:oid:1.2.208.176.1.1",
-            "value" : "52581000016005"
+            "value" : "323581000016000"
           },
           {
             "system" : "urn:oid:1.2.208.176.1.4",
@@ -209,7 +209,7 @@
           },
           "text" : {
             "status" : "generated",
-            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_a0330c62-fe29-4719-83fa-a94959084f29\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization a0330c62-fe29-4719-83fa-a94959084f29</b></p><a name=\"a0330c62-fe29-4719-83fa-a94959084f29\"> </a><a name=\"hca0330c62-fe29-4719-83fa-a94959084f29\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/messaging/3.0.0/StructureDefinition-medcom-producer-organization.html\">MedComCoreProducerOrganization</a></p></div><p><b>identifier</b>: <code>https://www.gs1.org/gln</code>/5790000123117, <code>urn:oid:1.2.208.176.1.1</code>/1144561000016002, <code>http://medcomfhir.dk/ig/terminology/CodeSystem/MedComProducentID</code>/KAF</p><p><b>name</b>: Pleje og Rehabilitering</p></div>"
+            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_a0330c62-fe29-4719-83fa-a94959084f29\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization a0330c62-fe29-4719-83fa-a94959084f29</b></p><a name=\"a0330c62-fe29-4719-83fa-a94959084f29\"> </a><a name=\"hca0330c62-fe29-4719-83fa-a94959084f29\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/messaging/3.0.0/StructureDefinition-medcom-producer-organization.html\">MedComCoreProducerOrganization</a></p></div><p><b>identifier</b>: <code>https://www.gs1.org/gln</code>/5790000123117, <code>urn:oid:1.2.208.176.1.1</code>/937961000016000, <code>http://medcomfhir.dk/ig/terminology/CodeSystem/MedComProducentID</code>/KAF</p><p><b>name</b>: Pleje og Rehabilitering</p></div>"
           },
           "identifier" : [{
             "system" : "https://www.gs1.org/gln",
@@ -217,7 +217,7 @@
           },
           {
             "system" : "urn:oid:1.2.208.176.1.1",
-            "value" : "1144561000016002"
+            "value" : "937961000016000"
           },
           {
             "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/MedComProducentID",

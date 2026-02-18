@@ -27,10 +27,10 @@ Usage: #inline
 * eventCoding = $medcom-messaging-eventCodes#acknowledgement-message
 * destination.extension.url = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension"
 * destination.extension.valueCoding = $medcom-messaging-destinationUse#primary
-* destination.endpoint = "https://sor2.sum.dsdn.dk/#id=1144561000016002"
+* destination.endpoint = "https://sor2.sum.dsdn.dk/#id=937961000016000"
 * destination.receiver = Reference(ef5cb9a6-835f-4d18-a34e-179c578b9a2a)
 * sender = Reference(42541447-b58c-4a1a-9514-02b80494bbd3)
-* source.endpoint = "https://sor2.sum.dsdn.dk/#id=52581000016005"
+* source.endpoint = "https://sor2.sum.dsdn.dk/#id=323581000016000"
 * response.identifier = "8dbf63f4-b784-4d40-8802-c1bdb1ecfa63"
 * response.code = #ok
 * definition = "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComAcknowledgementMessageDefinition|2.0"
@@ -64,7 +64,7 @@ Usage: #inline
 * identifier[0].system = "https://www.gs1.org/gln"
 * identifier[=].value = "5790000123117"
 * identifier[+].system = "urn:oid:1.2.208.176.1.1"
-* identifier[=].value = "1144561000016002"
+* identifier[=].value = "937961000016000"
 * name = "Sender Organization"
 
 Instance: 42541447-b58c-4a1a-9514-02b80494bbd3
@@ -74,5 +74,5 @@ Usage: #inline
 * identifier[0].system = "https://www.gs1.org/gln"
 * identifier[=].value = "5790000127092"
 * identifier[+].system = "urn:oid:1.2.208.176.1.1"
-* identifier[=].value = "52581000016005"
+* identifier[=].value = "323581000016000"
 * name = "Receiver Organization"

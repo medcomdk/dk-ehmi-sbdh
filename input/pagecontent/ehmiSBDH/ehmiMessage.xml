@@ -16,7 +16,7 @@
           <profile value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-MessageHeader"/>
         </meta>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: MessageHeader</b><a name="489de4f2-0d8d-4de2-a7ce-ccb93568799f"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource MessageHeader &quot;489de4f2-0d8d-4de2-a7ce-ccb93568799f&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-medcom-homecareobservation-MessageHeader.html">MedComHomeCareObservationMessageHeader</a></p></div><p><b>event</b>: HomeCare Observation Message (Details: http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes code homecareobservation-message = 'HomeCare Observation Message', stated as 'null')</p><h3>Destinations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Extension</b></td><td><b>Endpoint</b></td><td><b>Receiver</b></td></tr><tr><td style="display: none">*</td><td/><td><a href="https://sor2.sum.dsdn.dk/#id=52581000016005">https://sor2.sum.dsdn.dk/#id=52581000016005</a></td><td><a href="#Organization_1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1">See above (Organization/1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1)</a></td></tr></table><p><b>sender</b>: <a href="#Organization_a0330c62-fe29-4719-83fa-a94959084f29">See above (Organization/a0330c62-fe29-4719-83fa-a94959084f29)</a></p><h3>Sources</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Endpoint</b></td></tr><tr><td style="display: none">*</td><td><a href="https://sor2.sum.dsdn.dk/#id=1144561000016002">https://sor2.sum.dsdn.dk/#id=1144561000016002</a></td></tr></table><p><b>focus</b>: <a href="#DiagnosticReport_efb1ed12-6a5d-4342-9572-861071644e46">See above (DiagnosticReport/efb1ed12-6a5d-4342-9572-861071644e46)</a></p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: MessageHeader</b><a name="489de4f2-0d8d-4de2-a7ce-ccb93568799f"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource MessageHeader &quot;489de4f2-0d8d-4de2-a7ce-ccb93568799f&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-medcom-homecareobservation-MessageHeader.html">MedComHomeCareObservationMessageHeader</a></p></div><p><b>event</b>: HomeCare Observation Message (Details: http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes code homecareobservation-message = 'HomeCare Observation Message', stated as 'null')</p><h3>Destinations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Extension</b></td><td><b>Endpoint</b></td><td><b>Receiver</b></td></tr><tr><td style="display: none">*</td><td/><td><a href="https://sor2.sum.dsdn.dk/#id=323581000016000">https://sor2.sum.dsdn.dk/#id=323581000016000</a></td><td><a href="#Organization_1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1">See above (Organization/1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1)</a></td></tr></table><p><b>sender</b>: <a href="#Organization_a0330c62-fe29-4719-83fa-a94959084f29">See above (Organization/a0330c62-fe29-4719-83fa-a94959084f29)</a></p><h3>Sources</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Endpoint</b></td></tr><tr><td style="display: none">*</td><td><a href="https://sor2.sum.dsdn.dk/#id=937961000016000">https://sor2.sum.dsdn.dk/#id=937961000016000</a></td></tr></table><p><b>focus</b>: <a href="#DiagnosticReport_efb1ed12-6a5d-4342-9572-861071644e46">See above (DiagnosticReport/efb1ed12-6a5d-4342-9572-861071644e46)</a></p></div>
         </text>
         <eventCoding>
           <system value="http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes"/>
@@ -29,7 +29,7 @@
               <code value="primary"/>
             </valueCoding>
           </extension>
-          <endpoint value="https://sor2.sum.dsdn.dk/#id=52581000016005"/>
+          <endpoint value="https://sor2.sum.dsdn.dk/#id=323581000016000"/>
           <receiver>
             <reference value="Organization/1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1"/>
           </receiver>
@@ -38,7 +38,7 @@
           <reference value="Organization/a0330c62-fe29-4719-83fa-a94959084f29"/>
         </sender>
         <source>
-          <endpoint value="https://sor2.sum.dsdn.dk/#id=1144561000016002"/>
+          <endpoint value="https://sor2.sum.dsdn.dk/#id=937961000016000"/>
         </source>
         <focus>
           <reference value="DiagnosticReport/efb1ed12-6a5d-4342-9572-861071644e46"/>
@@ -177,7 +177,7 @@ E.	Temperatur 38,7 Målt rektalt </p></div>
           <profile value="http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-requesterorganization"/>
         </meta>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Organization</b><a name="1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Organization &quot;1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1&quot; </p><p style="margin-bottom: 0px">Profile: <a href="http://medcomfhir.dk/ig/messaging/2.1.0/StructureDefinition-medcom-requesterorganization.html">MedComMessagingRequesterOrganization</a></p></div><p><b>identifier</b>: id: 5790000127092, id: 52581000016005, id: 061654</p><p><b>name</b>: Skødstrup Lægepraksis</p><h3>Contacts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Name</b></td></tr><tr><td style="display: none">*</td><td>O.K.M. </td></tr></table></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Organization</b><a name="1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Organization &quot;1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1&quot; </p><p style="margin-bottom: 0px">Profile: <a href="http://medcomfhir.dk/ig/messaging/2.1.0/StructureDefinition-medcom-requesterorganization.html">MedComMessagingRequesterOrganization</a></p></div><p><b>identifier</b>: id: 5790000127092, id: 323581000016000, id: 061654</p><p><b>name</b>: Skødstrup Lægepraksis</p><h3>Contacts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Name</b></td></tr><tr><td style="display: none">*</td><td>O.K.M. </td></tr></table></div>
         </text>
         <identifier>
           <system value="https://www.gs1.org/gln"/>
@@ -185,7 +185,7 @@ E.	Temperatur 38,7 Målt rektalt </p></div>
         </identifier>
         <identifier>
           <system value="urn:oid:1.2.208.176.1.1"/>
-          <value value="52581000016005"/>
+          <value value="323581000016000"/>
         </identifier>
         <identifier>
           <system value="urn:oid:1.2.208.176.1.4"/>
@@ -209,7 +209,7 @@ E.	Temperatur 38,7 Målt rektalt </p></div>
           <profile value="http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-producer-organization"/>
         </meta>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Organization</b><a name="a0330c62-fe29-4719-83fa-a94959084f29"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Organization &quot;a0330c62-fe29-4719-83fa-a94959084f29&quot; </p><p style="margin-bottom: 0px">Profile: <a href="http://medcomfhir.dk/ig/messaging/2.1.0/StructureDefinition-medcom-producer-organization.html">MedComCoreProducerOrganization</a></p></div><p><b>identifier</b>: id: 5790000123117, id: 1144561000016002, id: KAF</p><p><b>name</b>: Pleje og Rehabilitering</p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Organization</b><a name="a0330c62-fe29-4719-83fa-a94959084f29"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Organization &quot;a0330c62-fe29-4719-83fa-a94959084f29&quot; </p><p style="margin-bottom: 0px">Profile: <a href="http://medcomfhir.dk/ig/messaging/2.1.0/StructureDefinition-medcom-producer-organization.html">MedComCoreProducerOrganization</a></p></div><p><b>identifier</b>: id: 5790000123117, id: 937961000016000, id: KAF</p><p><b>name</b>: Pleje og Rehabilitering</p></div>
         </text>
         <identifier>
           <system value="https://www.gs1.org/gln"/>
@@ -217,7 +217,7 @@ E.	Temperatur 38,7 Målt rektalt </p></div>
         </identifier>
         <identifier>
           <system value="urn:oid:1.2.208.176.1.1"/>
-          <value value="1144561000016002"/>
+          <value value="937961000016000"/>
         </identifier>
         <identifier>
           <system value="http://medcomfhir.dk/ig/terminology/CodeSystem/MedComProducentID"/>
