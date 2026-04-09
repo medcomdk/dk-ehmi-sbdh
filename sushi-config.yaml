@@ -31,6 +31,7 @@ menu:
   ehmiSBDH: 
     ehmiSBDH: ehmiSBDH.html
     ehmiSBDH Reliable Messaging: ehmiSBDHReliableMessaging.html
+    DocumentReference Guideline: Mapping_from_IHE-XDS_metadata_to_FHIR.html
   ehmiSbdhschemas: 
     StandardBusinessDocumentHeader: ehmiSBDH_StandardBusinessDocumentHeader.xsd.html
     Partner: ehmiSBDH_Partner.xsd.html
