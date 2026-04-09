@@ -1,19 +1,20 @@
 # Mapping from IHE XDS metadata to FHIR
 
-This table describes the mapping between the <a href="https://svn.medcom.dk/svn/releases/Standarder/IHE/DK_profil_metadata/" target="_blank">IHE XDS metadata</a> and FHIR DocumentReference, FHIR Composition, and FHIR Bundle of type Document, which are all found in the <a href="https://medcomfhir.dk/ig/document/profiles.html" target="_blank">MedCom Document IG</a>. 
-The purpose of this mapping is to show how information from IHE XDS Metadata corresponds to the elements in a FHIR Document. 
-Mapping to the FHIR resources Composition and Bundle ensures that the requirements are adhered to in the FHIR documents, as the metadata information must also be included in the FHIR document. This ensures consistency and integrity between the two standards. The table illustrates the relevant elements and their corresponding counterparts in FHIR, where such exist.
+This table describes the mapping between the <a href="https://svn.medcom.dk/svn/releases/Standarder/IHE/DK_profil_metadata/" target="_blank">IHE XDS metadata</a> and FHIR DocumentReference, FHIR Messaging resources and FHIR Bundle of type Document, which are all found in the <a href="https://medcomfhir.dk/ig/document/profiles.html" target="_blank">MedCom Document IG</a>. 
+The purpose of this mapping is to show how information from IHE XDS Metadata corresponds to the elements in a MedCom FHIR Message. 
+<!--Mapping to the FHIR resources Composition and Bundle ensures that the requirements are adhered to in the FHIR documents, as the metadata information must also be included in the FHIR document. This ensures consistency and integrity between the two standards. -->
+The table illustrates the relevant elements and their corresponding counterparts in FHIR, where such exist.
 
-The purpose of this table is to help implementers of FHIR. The actual implementation guides, which includes all requirements for the profiles can be found in the <a href="https://medcomfhir.dk/ig/document/profiles.html" target="_blank">MedCom Document IG</a>.
+<!-- The purpose of this table is to help implementers of FHIR. The actual implementation guides, which includes all requirements for the profiles can be found in the <a href="https://medcomfhir.dk/ig/document/profiles.html" target="_blank">MedCom Document IG</a>.-->
 
 > Please notice, not all elements from the FHIR profiles are represented in the mapping and therefore it cannot stand alone for implementation. Attributes which are not used in the IHE XDS metadata standard are not included in the mapping.
 
 The table contains: 
-* 1.: Data elements from the metadata in the <a href="https://svn.medcom.dk/svn/releases/Standarder/IHE/DK_profil_metadata/" target="_blank">IHE XDS metadata standard</a>.
+* 1.: Data elements from the metadata in the <a href="https://svn.medcom.dk/svn/releases/Standarder/IHE/DK_profil_metadata/" target="_blank">IHE XDS metadata standard version 2</a>.
 * 2.: Optionalities for the data elements from the IHE XDS metadata standard.
 * 3.: Data elements from the <a href="https://medcomfhir.dk/ig/document/StructureDefinition-medcom-documentreference.html" target="_blank">MedComDocumentReference profile</a>. This profile is not a part of the standard nor the metadata, but may be used for validation of the metadata.
 * 4.: Optionalities for the data elements from the MedComDocumentReference.
-* 5.: Data elements from the MedComDocumentComposition profile.
+* 5.: Data elements from the MedCom Messaging Resources.
 * 6.: Data elements from the MedComDocumentBundle profile.
 * 7.: Optionalities for the data elements in MedComDocumentComposition and MedComDocumentBundle.
 
@@ -419,17 +420,7 @@ The table contains:
   <td>R</td>
   <td>content.attachment.title</td>
   <td>1..1</td>
-  <td>title</td>
-  <td>N/A</td>
-  <td>1..1</td>
-</tr>
-
-<tr>
-  <td>typeCode</td>
-  <td>R</td>
-  <td>type</td>
-  <td>1..1</td>
-  <td>type</td>
+  <td>Static+Dynamic: "Kommunale prøvesvar for " + Patient.identifier</td>
   <td>N/A</td>
   <td>1..1</td>
 </tr>
@@ -449,7 +440,7 @@ The table contains:
   <td>O</td>
   <td>content.attachment.url</td>
   <td>1..1</td>
-  <td>N/A</td>
+  <td>= title</td>
   <td>N/A</td>
   <td>N/A</td>
 </tr>
