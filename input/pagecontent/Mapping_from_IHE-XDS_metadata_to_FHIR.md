@@ -61,16 +61,16 @@ The table contains:
 </style>
 <div style="overflow-x:auto;">
 <table class="tg" id="Tab1">
-<caption style="font-weight:bold">Table 1: Mapping from IHE-XDS metadata to FHIR DocumentReference, and FHIR MedCom Messaging Bundle.</caption>
+<caption style="font-weight:bold">Table 1: Mapping IHE-XDS metadata to FHIR DocumentReference from FHIR MedComMessaging related resources</caption>
 <thead>
   <tr>
-    <th><span style="font-weight:bold">IHE-XDS metadata</span></th>
+    <th><span style="font-weight:bold">IHE-XDS metadata elements</span></th>
     <th><span style="font-weight:bold">Optionality IHE-XDS metadata</span></th>
     <th><span style="font-weight:bold">MedComDocumentReference specification</span></th>
-    <th><span style="font-weight:bold">Cardinality MedComDocumentReference</span></th>
+    <th><span style="font-weight:bold">Cardinality - MedComDocumentReference</span></th>
     <th><span style="font-weight:bold">MedComDocumentReference - Static/Dynamic metadata not available in a MedCom Message</span></th>
     <th><span style="font-weight:bold">MedComDocumentReference - MedComMessaging related Resources</span></th>
-    <th><span style="font-weight:bold">Cardinality MedComMessaging Resources or MedComMessaging Bundle</span></th> <!-- Sidste kolonne skal vist fjernes? -->
+    <th><span style="font-weight:bold">Cardinality - MedComMessaging related Resources </span></th> <!-- Sidste kolonne skal vist fjernes? -->
   </tr>
 </thead>
 <tbody>
