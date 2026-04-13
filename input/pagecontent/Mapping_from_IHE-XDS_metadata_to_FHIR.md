@@ -1,6 +1,6 @@
 # Mapping from IHE XDS metadata to FHIR
 
-This table describes the mapping between the <a href="https://svn.medcom.dk/svn/releases/Standarder/IHE/DK_profil_metadata/" target="_blank">IHE XDS metadata</a> and FHIR DocumentReference, FHIR Messaging resources and FHIR Bundle of type Document, which are all found in the <a href="https://medcomfhir.dk/ig/document/profiles.html" target="_blank">MedCom Document IG</a>. 
+This table describes the mapping between the <a href="https://svn.medcom.dk/svn/releases/Standarder/IHE/DK_profil_metadata/" target="_blank">IHE XDS metadata</a> and FHIR DocumentReference, FHIR Messaging resources, which are all found in the <a href="https://medcomfhir.dk/ig/messaging/profiles.html" target="_blank">MedCom Messaging IG</a>. 
 The purpose of this mapping is to show how information from IHE XDS Metadata corresponds to the elements in a MedCom FHIR Message. 
 <!--Mapping to the FHIR resources Composition and Bundle ensures that the requirements are adhered to in the FHIR documents, as the metadata information must also be included in the FHIR document. This ensures consistency and integrity between the two standards. -->
 The table illustrates the relevant elements and their corresponding counterparts in FHIR, where such exist.
@@ -15,8 +15,6 @@ The table contains:
 * 3.: Data elements from the <a href="https://medcomfhir.dk/ig/document/StructureDefinition-medcom-documentreference.html" target="_blank">MedComDocumentReference profile</a>. This profile is not a part of the standard nor the metadata, but may be used for validation of the metadata.
 * 4.: Optionalities for the data elements from the MedComDocumentReference.
 * 5.: Data elements from the MedCom Messaging Resources.
-* 6.: Data elements from the MedComDocumentBundle profile.
-* 7.: Optionalities for the data elements in MedComDocumentComposition and MedComDocumentBundle.
 
 
 <style type="text/css">
@@ -63,7 +61,7 @@ The table contains:
 </style>
 <div style="overflow-x:auto;">
 <table class="tg" id="Tab1">
-<caption style="font-weight:bold">Table 1: Mapping from IHE-XDS metadata to FHIR DocumentReference, and FHIR Composition.</caption>
+<caption style="font-weight:bold">Table 1: Mapping from IHE-XDS metadata to FHIR DocumentReference, and FHIR MedCom Messaging Bundle.</caption>
 <thead>
   <tr>
     <th><span style="font-weight:bold">IHE-XDS metadata</span></th>
@@ -72,7 +70,7 @@ The table contains:
     <th><span style="font-weight:bold">Cardinality MedComDocumentReference</span></th>
     <th><span style="font-weight:bold">MedComMessaging Resources</span></th>
     <th><span style="font-weight:bold">MedComMessagingBundle</span></th>
-    <th><span style="font-weight:bold">Cardinality MedComDocumentComposition or MedComDocumentBundle</span></th>
+    <th><span style="font-weight:bold">Cardinality MedComDocumentComposition or MedComDocumentBundle</span></th> <!-- Sidste kolonne skal vist fjernes? -->
   </tr>
 </thead>
 <tbody>
@@ -81,9 +79,9 @@ The table contains:
   <td></td>
   <td></td>
   <td>Contained resources</td>
-  <td>3:3</td>
+  <td>2..3</td>
   <td> 3 contained resources:
-    <br/> - Bundle.Practitioner (Cast to "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-organization")
+    <br/> - Bundle.Practitioner (Cast to "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-practitioner")
     <br/> - Bundle.Organization[Sender] (Cast to "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-organization")
     <br/> - Patient (Cast to "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-patient")
   </td>
@@ -127,7 +125,7 @@ The table contains:
   <td>1..1</td>
 </tr>
 
-<!--tr>
+<!--tr> Hvorfor udgår denne? Practitioner nævnes i første række...?
   <td>author.authorPerson</td>
   <td>R2</td>
   <td>author(MedComDocumentPractitioner | MedComDocumentPractitionerRole | Device | MedComDocumentPatient | DkCoreRelatedPerson)</td>
@@ -293,7 +291,7 @@ The table contains:
   <td>content.attachment.contentType</td>
   <td>1..1</td>
   <td>Static:
-    <br/> - application/fhir+xml eller application/fhir+json
+    <br/> - application/fhir+xml or application/fhir+json
     <br/> - <a target="_blank" href="https://build.fhir.org/ig/medcomdk/dk-medcom-xds-metadata/branches/2.0/ValueSet-MedCom-xds-mimetype-fhir-VS.html">MedCom-xds-mimetype-fhir-valueset</a></td>
   </td>
   <td>N/A</td>
