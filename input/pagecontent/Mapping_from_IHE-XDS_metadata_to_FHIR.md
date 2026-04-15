@@ -66,11 +66,11 @@ The table contains:
   <tr>
     <th><span style="font-weight:bold">IHE-XDS metadata elements</span></th>
     <th><span style="font-weight:bold">Optionality IHE-XDS metadata</span></th>
-    <th><span style="font-weight:bold">MedComDocumentReference specification</span></th>
+    <th><span style="font-weight:bold">MedComDocumentReference element</span></th>
     <th><span style="font-weight:bold">Cardinality - MedComDocumentReference</span></th>
     <th><span style="font-weight:bold">MedComDocumentReference - Static/Dynamic metadata not available in a MedCom Message</span></th>
-    <th><span style="font-weight:bold">MedComDocumentReference - MedComMessaging related Resources</span></th>
-    <th><span style="font-weight:bold">Cardinality - MedComMessaging related Resources </span></th> <!-- Sidste kolonne skal vist fjernes? -->
+    <th><span style="font-weight:bold">MedComDocumentReference - MedComMessaging related Resources and elements</span></th>
+    <th><span style="font-weight:bold">Cardinality - MedComMessaging related Resources and elements</span></th> 
   </tr>
 </thead>
 <tbody>
