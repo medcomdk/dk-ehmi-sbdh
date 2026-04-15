@@ -1,3 +1,65 @@
+# Mapping from IHE XDS metadata to FHIR - copy
+
+This table describes the mapping between the <a href="https://svn.medcom.dk/svn/releases/Standarder/IHE/DK_profil_metadata/" target="_blank">IHE XDS metadata</a> and FHIR DocumentReference, FHIR Messaging resources, which are all found in the <a href="https://medcomfhir.dk/ig/messaging/profiles.html" target="_blank">MedCom Messaging IG</a>. 
+The purpose of this mapping is to show how information from IHE XDS Metadata corresponds to the elements in a MedCom FHIR Message. 
+<!--Mapping to the FHIR resources Composition and Bundle ensures that the requirements are adhered to in the FHIR documents, as the metadata information must also be included in the FHIR document. This ensures consistency and integrity between the two standards. -->
+The table illustrates the relevant elements and their corresponding counterparts in FHIR, where such exist.
+
+<!-- The purpose of this table is to help implementers of FHIR. The actual implementation guides, which includes all requirements for the profiles can be found in the <a href="https://medcomfhir.dk/ig/document/profiles.html" target="_blank">MedCom Document IG</a>.-->
+
+> Please notice, not all elements from the FHIR profiles are represented in the mapping and therefore it cannot stand alone for implementation. Attributes which are not used in the IHE XDS metadata standard are not included in the mapping.
+
+The table contains: 
+* 1.: Data elements from the metadata in the <a href="https://svn.medcom.dk/svn/releases/Standarder/IHE/DK_profil_metadata/" target="_blank">IHE XDS metadata standard version 2</a>.
+* 2.: Optionalities for the data elements from the IHE XDS metadata standard.
+* 3.: Data elements from the <a href="https://medcomfhir.dk/ig/document/StructureDefinition-medcom-documentreference.html" target="_blank">MedComDocumentReference profile</a>. This profile is not a part of the standard nor the metadata, but may be used for validation of the metadata.
+* 4.: Optionalities for the data elements from the MedComDocumentReference.
+* 5.: Data elements from the MedCom Messaging Resources.
+
+
+<style type="text/css">
+/* Tabel – responsiv og læsbar */
+.tg{
+  border-collapse:collapse;
+  border-spacing:0;
+  width:100%;
+  table-layout:auto;
+}
+
+/* Alle celler */
+.tg td,
+.tg th{
+  border:1px solid #000;
+  font-family:Arial, sans-serif;
+  font-size:14px;
+  padding:10px 8px;
+
+  /* KRITISK: forhindrer at overskrifter klippes */
+  overflow:visible;
+  white-space:normal;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+  hyphens:auto;
+
+  vertical-align:top;
+}
+
+/* Overskrifter tydeligere */
+.tg th{
+  font-weight:bold;
+}
+
+/* Bevar dine eksisterende farver/klasser */
+.tg .tg-ippy{color:#2c415c;text-align:left}
+.tg .tg-ztr9{color:#2c415c;font-weight:bold;text-align:left}
+.tg .tg-1ady{background-color:#9dbad7;color:#333;text-align:left}
+.tg .tg-on52{color:#333;text-align:left}
+
+.tg tbody th{
+  font-weight: normal;
+}
+</style>
+<div style="overflow-x:auto;">
 <table class="tg" id="Tab1">
 <caption style="font-weight:bold">Table 1: Mapping IHE-XDS metadata to FHIR DocumentReference from FHIR MedComMessaging related resources</caption>
 <thead>
@@ -160,7 +222,7 @@
   <td>1..1</td>
   <td></td>
   <td></td>
-  <td>Eg. "HCOM-401cbc36-db1e-4fe0-bf90-6df331dde179.XML"</td>
+  <td>E.g. "HCOM-401cbc36-db1e-4fe0-bf90-6df331dde179.XML"</td>
 </tr>
 
 <tr>
@@ -174,11 +236,11 @@
 <tr>
   <td>content.attachment.title</td>
   <td>1..1</td>
-  <td>Static value: <br/> "Kommunale prøvesvar for "</td>
-  <td>+ Dynamic value: 
+  <td>Static value</td>
+  <td>+ Dynamic value, E.g. patient identifier: 
     <br/>Bundle.entry.resource.ofType(Patient).identifier.where(system = 'urn:oid:1.2.208.176.1.2').value
   </td>
-  <td>Eg. "Kommunale prøvesvar for 2509479989"</td>
+  <td>E.g. "Kommunale prøvesvar for 2509479989"</td>
 </tr>
 
 <tr>
@@ -253,7 +315,7 @@
   <td>1..1</td>
   <td></td>
   <td>Bundle.entry.resource.ofType(Patient).identifier.value</td>
-  <td>Eg. "2509479989"</td>
+  <td>E.g. "2509479989"</td>
 </tr>
 
 <tr>
