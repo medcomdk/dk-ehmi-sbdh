@@ -10,56 +10,12 @@ The table illustrates the relevant elements and their corresponding counterparts
 > Please notice, not all elements from the FHIR profiles are represented in the mapping and therefore it cannot stand alone for implementation. Attributes which are not used in the IHE XDS metadata standard are not included in the mapping.
 
 The table contains: 
-* 1.: Data elements from the metadata in the <a href="https://svn.medcom.dk/svn/releases/Standarder/IHE/DK_profil_metadata/" target="_blank">IHE XDS metadata standard version 2</a>.
-* 2.: Optionalities for the data elements from the IHE XDS metadata standard.
-* 3.: Data elements from the <a href="https://medcomfhir.dk/ig/document/StructureDefinition-medcom-documentreference.html" target="_blank">MedComDocumentReference profile</a>. This profile is not a part of the standard nor the metadata, but may be used for validation of the metadata.
-* 4.: Optionalities for the data elements from the MedComDocumentReference.
-* 5.: Data elements from the MedCom Messaging Resources.
+* 1.: Data elements from the <a href="https://medcomfhir.dk/ig/document/StructureDefinition-medcom-documentreference.html" target="_blank">MedComDocumentReference profile</a>. This profile is not a part of the standard nor the metadata, but may be used for validation of the metadata.
+* 2.: Optionalities for the data elements from the MedComDocumentReference.
+* 3.: Static or dynamic data from a ValueSet. This data is not available from the message.
+* 4.: Data element from the MedCom FHIR message, and FHIRPath to the element in the Bundle.
+* 5.: Example of content from the HomeCareObservation message. 
 
-
-<style type="text/css">
-/* Tabel – responsiv og læsbar */
-.tg{
-  border-collapse:collapse;
-  border-spacing:0;
-  width:100%;
-  table-layout:auto;
-}
-
-/* Alle celler */
-.tg td,
-.tg th{
-  border:1px solid #000;
-  font-family:Arial, sans-serif;
-  font-size:14px;
-  padding:10px 8px;
-
-  /* KRITISK: forhindrer at overskrifter klippes */
-  overflow:visible;
-  white-space:normal;
-  overflow-wrap:anywhere;
-  word-break:break-word;
-  hyphens:auto;
-
-  vertical-align:top;
-}
-
-/* Overskrifter tydeligere */
-.tg th{
-  font-weight:bold;
-}
-
-/* Bevar dine eksisterende farver/klasser */
-.tg .tg-ippy{color:#2c415c;text-align:left}
-.tg .tg-ztr9{color:#2c415c;font-weight:bold;text-align:left}
-.tg .tg-1ady{background-color:#9dbad7;color:#333;text-align:left}
-.tg .tg-on52{color:#333;text-align:left}
-
-.tg tbody th{
-  font-weight: normal;
-}
-</style>
-<div style="overflow-x:auto;">
 <table class="tg" id="Tab1">
 <caption style="font-weight:bold">Table 1: Mapping IHE-XDS metadata to FHIR DocumentReference from FHIR MedComMessaging related resources</caption>
 <thead>
