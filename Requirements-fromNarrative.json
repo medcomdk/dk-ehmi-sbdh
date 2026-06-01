@@ -1,7 +1,7 @@
 {
   "resourceType" : "Requirements",
   "id" : "fromNarrative",
-  "url" : "http://medcomehmi.dk/ig/dk-ehmi-sbdh/Requirements/fromNarrative",
+  "url" : "http://medcomefhir.dk/ig/dk-medcom-ref-lm/Requirements/fromNarrative",
   "name" : "FromNarrative",
   "title" : "Narrative Conformance Statements",
   "status" : "active",
