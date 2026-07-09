@@ -390,8 +390,7 @@ Always false:
 
 ##### CreationDateAndTime
 
-Always in this format: [YYYY-MM-DD]T[TT-MM-SS]+[offset-to-UTC]
-
+Always in this format: [YYYY-MM-DD]T[TT-MM-SS]+[offset-to-UTC]. If the standard is a MedCom FHIR message, this timestamp shall represent the date and time at which the ehmiSBDH was generated. If the standard is ehmisbdh-acknowledgement, this timestamp shall represent the date and time at which the ehmiSBDHAcknowledgement was generated.
 
     <DocumentInformation>
         …
@@ -933,7 +932,7 @@ Reliable messaging uses the SBDH's CorrelationInformation to tie the original eh
 
 ###### CorrelationInformation - RequestingDocumentCreationDateTime
 
-RequestingDocumentCreationDateTime is the time of original message sending = DocumentIdentification/CreationDateAndTime
+RequestingDocumentCreationDateTime is the time of original message sending = DocumentIdentification/CreationDateAndTime. 
 
     <CorrelationInformation>
 	    <RequestingDocumentCreationDateTime>
