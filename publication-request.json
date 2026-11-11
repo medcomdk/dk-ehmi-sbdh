@@ -1,0 +1,18 @@
+{
+    "package-id": "dk.ehmi.sbdh",
+    "version": "2.0.2",
+    "path": "http://medcomehmi.dk/ig/sbdh/2.0.2",
+    "status": "release",
+    "sequence": "Release 2.x.x",
+    "mode": "milestone",
+    "descmd": "@release-notes.md",
+    "desc": "First official release of the DK EHMI SBDH IG on medcomehmi.dk.",
+    "first": true,
+    "title": "DK EHMI SBDH IG",
+    "ci-build": "https://build.fhir.org/ig/medcomdk/dk-ehmi-sbdh",
+    "category": "Infrastructure",
+    "introduction": "Implementation guide for the EHMI Standard Business Document Header (ehmiSBDH), defining envelopes, reliable messaging acknowledgements, and metadata for exchanging MedCom messages over eDelivery and sharing documents through the Danish XDS infrastructure.",
+    "registry-description": "Defines the EHMI Standard Business Document Header (ehmiSBDH), including message envelopes, acknowledgements, and metadata for eDelivery messaging and XDS document sharing in Denmark.",
+    "registry-country": "DK",
+    "registry-authority": "MedCom"
+}

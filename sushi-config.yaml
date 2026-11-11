@@ -1,10 +1,10 @@
-id: dk-ehmi-sbdh
-canonical: http://medcomehmi.dk/ig/dk-ehmi-sbdh
+id: dk.ehmi.sbdh
+canonical: http://medcomehmi.dk/ig/sbdh
 name: DK EHMI SBDH IG
 title: "DK EHMI SBDH IG"
 description: The DK EHMI SBDH IG
 status: active
-version: 2.0.1
+version: 2.0.2
 fhirVersion: 4.0.1
 copyrightYear: 2025+
 releaseLabel: release

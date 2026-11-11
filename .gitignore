@@ -10,3 +10,4 @@ Thumbs.db
 _updatePublisher.bat
 *.sh
 *.bat
+/Requirements-fromNarrative.json
