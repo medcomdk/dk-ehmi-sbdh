@@ -1,0 +1,2 @@
+- First official release of the IG on medcomehmi.dk
+- Improved website look and feel
