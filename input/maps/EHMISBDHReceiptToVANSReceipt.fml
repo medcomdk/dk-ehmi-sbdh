@@ -1,0 +1,37 @@
+/*
+map "http://medcomehmi.dk" = "EHMISBDHReceiptToVANSReceipt"
+
+uses "http://medcomehmi.dk" alias SBDHRec as source
+uses "http://medcomehmi.dk" alias VANSRec as target
+
+imports "http://medcomehmi.dk"
+
+group TransformSBDHReceiptToVANS(source src : SBDHRec, target tgt : VANSRec) {
+  src.receiptEnvelope as sRec -> tgt.receipt as vRec then {
+    sRec.header as sHdr -> vRec.metaInformation as vMeta then {
+      sHdr.sender -> vMeta.sender as vSender then {
+        sHdr.sender -> vSender.identifier;
+      };
+      sHdr.receiver -> vMeta.receiver as vReceiver then {
+        sHdr.receiver -> vReceiver.identifier;
+      };
+
+      sHdr.documentIdentification as sDoc -> vMeta.reference as vRef then {
+        sDoc.instanceIdentifier -> vRef.receiptId;
+        sHdr.businessScope.originalEnvelopeId -> vRef.originalMessageId;
+        sDoc.creationDateAndTime -> vRef.timestamp;
+      };
+    };
+
+    sRec.status as sStat -> vRec.status as vStat then {
+      sStat.outcome as out -> vStat.statusCode = translate(out, 'http://medcomehmi.dk', 'code');
+
+      sStat.errorDetails as sErr -> vStat.error as vErr then {
+        sErr.errorCode -> vErr.errorCode;
+        sErr.errorDescription -> vErr.errorMessage;
+        vErr.severity = 'Error';
+      };
+    };
+  };
+}
+*/

@@ -1,0 +1,39 @@
+/*
+map "http://medcomehmi.dk" = "EHMISBDHReceiptToFailureCommunication"
+
+uses "http://medcomehmi.dk" alias SBDHRec as source
+uses "http://medcomehmi.dk" alias FailureComm as target
+
+group TransformToFailureCommunication(source src : SBDHRec, target tgt : FailureComm) {
+  // Ignorer alle positive kvitteringer ('OK')
+  src.receiptEnvelope as sRec where(status.outcome != 'OK') -> tgt.id = uuid(), tgt.status = 'entered-in-error' then {
+    
+    // Sæt kategori = delivery-failure
+    sRec -> tgt.category = cc('http://medcomehmi.dk', 'delivery-failure', 'Leveringsfejl');
+
+    // Korrelation med fallback: Brug originalMessageId hvis tilstede, ellers originalEnvelopeId
+    sRec.header.businessScope as bs -> tgt.identifier as id then {
+      id.system = 'http://medcomehmi.dk';
+      bs.originalMessageId where($this.exists()) as msgId -> id.value = msgId;
+      bs.originalEnvelopeId where(bs.originalMessageId.empty()) as envId -> id.value = envId;
+    };
+
+    // Kopier hele Identifier-objektet direkte til tgt.recipient.identifier
+    sRec.header.receiver as origSender -> tgt.recipient as recRef then {
+      origSender -> recRef.identifier;
+    };
+
+    // Tidspunkt for fejlen
+    sRec.status.timestamp as ts -> tgt.sent = ts;
+
+    // Map fejlkoder til reasonCode og læsbar tekst til payload.contentString
+    sRec.status.errorDetails as err -> tgt.reasonCode as rc, tgt.payload as pl then {
+      err.errorCode as code -> rc.coding as coding then {
+        coding.system = 'http://medcomehmi.dk';
+        coding.code = code;
+      };
+      err.errorDescription as desc -> rc.text = desc, pl.content = append('Levering fejlede i EHMI-netværket: ', desc);
+    };
+  };
+}
+*/
